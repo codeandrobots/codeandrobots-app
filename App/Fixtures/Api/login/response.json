@@ -1,0 +1,11 @@
+{
+  "user": {
+    "id": "c2bb266c-3969-44a1-9589-3b55ab092736",
+    "created_at": "2018-07-30T14:07:46Z",
+    "updated_at": "2018-07-30T14:07:46Z",
+    "email": "me@johndoe.com",
+    "password_digest": null,
+    "name": "John Doe"
+  },
+  "jwt":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiYzJiYjI2NmMtMzk2OS00NGExLTk1ODktM2I1NWFiMDkyNzM2In0.wqeKPVQWLJm2zQs657_JmeMqTO5W42O75ifNxJ-2FE4"
+}

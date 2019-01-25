@@ -1,0 +1,6 @@
+{
+  "rootDir": "../../",
+  "testMatch": ["<rootDir>/Tests/EndToEnd/**/*.js"],
+  "setupTestFrameworkScriptFile": "<rootDir>/Tests/EndToEnd/SetupTestFramework.js",
+  "testPathIgnorePatterns": ["<rootDir>/Tests/EndToEnd/SetupTestFramework.js"]
+}
