@@ -77,7 +77,7 @@ project.ext.react = [
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
-apply from: "../../node_modules/react-native-sentry/sentry.gradle"
+// apply from: "../../node_modules/react-native-sentry/sentry.gradle" // TODO getting bad sentry url
 
 // See https://github.com/luggit/react-native-config#setup
 apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
@@ -173,8 +173,6 @@ dependencies {
     }
     implementation project(':react-native-version-number')
     implementation project(':react-native-splash-screen')
-    implementation project(':react-native-audio')
-    implementation project(':react-native-video')
     implementation project(':react-native-config')
     implementation project(':react-native-i18n')
     implementation project(':react-native-vector-icons')

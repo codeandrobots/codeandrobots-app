@@ -12,8 +12,6 @@ import io.invertase.firebase.messaging.RNFirebaseMessagingPackage;
 import io.invertase.firebase.notifications.RNFirebaseNotificationsPackage;
 import com.apsl.versionnumber.RNVersionNumberPackage;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
-import com.rnim.rn.audio.ReactNativeAudioPackage;
-import com.brentvatne.react.ReactVideoPackage;
 import com.lugg.ReactNativeConfig.ReactNativeConfigPackage;
 import com.i18n.reactnativei18n.ReactNativeI18n;
 import com.oblador.vectoricons.VectorIconsPackage;
@@ -47,8 +45,6 @@ public class MainApplication extends Application implements ReactApplication {
             new RNFirebaseNotificationsPackage(),
             new RNVersionNumberPackage(),
             new SplashScreenReactPackage(),
-            new ReactNativeAudioPackage(),
-            new ReactVideoPackage(),
             new ReactNativeConfigPackage(),
             new ReactNativeI18n(),
             new VectorIconsPackage(),
