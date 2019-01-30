@@ -1,24 +1,15 @@
-import { StyleSheet, Platform } from 'react-native'
+import { StyleSheet } from 'react-native'
 import { Colors } from '../../Themes/'
-
-export const tabBarStyle = {
-  height: 44,
-  paddingVertical: 0,
-  backgroundColor: '#fff',
-  borderTopWidth: (Platform.OS === 'ios') ? 1 : 0,
-  borderTopColor: '#EBEBEB'
-}
 
 export default StyleSheet.create({
   header: {
-    backgroundColor: (Platform.OS === 'ios') ? Colors.navBackgroundIOS : Colors.navBackgroundAndroid,
-    borderBottomWidth: (Platform.OS === 'ios') ? 1 : 0,
-    borderBottomColor: Colors.navBorderBottom
+    backgroundColor: Colors.nav.background,
+    borderBottomWidth: 0
   },
   headerTitleStyle: {
-    color: Colors.navTextColorAndroid
+    color: Colors.nav.text
   },
   headerBackTitleStyle: {
-    color: Colors.navTextColorAndroid
+    color: Colors.nav.text
   }
 })

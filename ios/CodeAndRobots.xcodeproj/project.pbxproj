@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00523F7841D441AE8D5178FB /* libRNSentry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E2FA9064FD4F5CBDEC1D68 /* libRNSentry.a */; };
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
@@ -34,6 +35,8 @@
 		2316F9002108723300B743C8 /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2316F8F72108723300B743C8 /* FirebaseCoreDiagnostics.framework */; };
 		2316F9012108723300B743C8 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2316F8F82108723300B743C8 /* GTMSessionFetcher.framework */; };
 		2316F9022108723300B743C8 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2316F8F92108723300B743C8 /* FirebaseInstanceID.framework */; };
+		239814352201FCBB002CA2F9 /* RobotoBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 239814332201FCBA002CA2F9 /* RobotoBold.ttf */; };
+		239814362201FCBB002CA2F9 /* RobotoMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 239814342201FCBB002CA2F9 /* RobotoMedium.ttf */; };
 		23B42BA5211091C30090D3E6 /* FirebaseMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B42B74211091C30090D3E6 /* FirebaseMessaging.framework */; };
 		23B42BA6211091C30090D3E6 /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B42BA4211091C30090D3E6 /* Protobuf.framework */; };
 		23FAD34E20FD067700ECBF97 /* Helvetica.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 23FAD34B20FD067500ECBF97 /* Helvetica.ttc */; };
@@ -447,7 +450,7 @@
 		117723CE7BB54684B689930C /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* CodeAndRobots Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CodeAndRobots Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* CodeAndRobots Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "CodeAndRobots Dev.app"; path = "Code&Robots Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = CodeAndRobots/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = CodeAndRobots/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = CodeAndRobots/Images.xcassets; sourceTree = "<group>"; };
@@ -466,6 +469,8 @@
 		2316F8F82108723300B743C8 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTMSessionFetcher.framework; path = Firebase/GTMSessionFetcher.framework; sourceTree = "<group>"; };
 		2316F8F92108723300B743C8 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Firebase/FirebaseInstanceID.framework; sourceTree = "<group>"; };
 		2316F9032108724C00B743C8 /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Firebase/Firebase.h; sourceTree = "<group>"; };
+		239814332201FCBA002CA2F9 /* RobotoBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = RobotoBold.ttf; path = ../assets/fonts/RobotoBold.ttf; sourceTree = "<group>"; };
+		239814342201FCBB002CA2F9 /* RobotoMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = RobotoMedium.ttf; path = ../assets/fonts/RobotoMedium.ttf; sourceTree = "<group>"; };
 		23B42B74211091C30090D3E6 /* FirebaseMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseMessaging.framework; path = Firebase/FirebaseMessaging.framework; sourceTree = "<group>"; };
 		23B42BA4211091C30090D3E6 /* Protobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Protobuf.framework; path = Firebase/Protobuf.framework; sourceTree = "<group>"; };
 		23F4B4272108D7AF001BE98B /* CodeAndRobots Dev.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "CodeAndRobots Dev.entitlements"; path = "CodeAndRobots/CodeAndRobots Dev.entitlements"; sourceTree = "<group>"; };
@@ -738,17 +743,11 @@
 				849F76DBA9424526AB3D9046 /* libcxxreact.a */,
 				F825B18C613A440E93F87FF7 /* libjschelpers.a */,
 				4A4FBB52EB724EEB8680F3C2 /* libReactNativeConfig.a */,
-				D43BE0791A3D4C408054C4CC /* libRCTVideo.a */,
-				519E5464EB3045EDB6FADCD0 /* libRNAudio.a */,
 				2AF38BF7740943F8AF722187 /* libSplashScreen.a */,
 				59AAB9A4BCAC43C7ADD55200 /* libRNVersionNumber.a */,
 				8DCE7B9F57D34FC18AA1F0BA /* libRNFirebase.a */,
 				E1E2FA9064FD4F5CBDEC1D68 /* libRNSentry.a */,
 				652F9218FF3D4BD5A956C677 /* libRNOpenAppSettings.a */,
-				6461168FCB8B4ABC817D1057 /* libRCTContacts.a */,
-				33E856BE56174F478CD8F2AD /* libSendSMS.a */,
-				D1D5FFD4C83A4E7CA1760F53 /* libRNSVG.a */,
-				429F2B08DB1440728274AD87 /* libRNSVG-tvOS.a */,
 				1DDB46D021824DD6AF617CBC /* libBVLinearGradient.a */,
 			);
 			name = "Recovered References";
@@ -836,6 +835,8 @@
 		5A84D7D08D724380B39782F9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				239814332201FCBA002CA2F9 /* RobotoBold.ttf */,
+				239814342201FCBB002CA2F9 /* RobotoMedium.ttf */,
 				23FAD35220FD180700ECBF97 /* LatoBold.ttf */,
 				23FAD35120FD180700ECBF97 /* LatoRegular.ttf */,
 				23FAD34B20FD067500ECBF97 /* Helvetica.ttc */,
@@ -1351,13 +1352,6 @@
 			remoteRef = 2396A76921DFA586007C79F2 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		23A194D221B8278800D22AFD /* libRNSVG-tvOS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libRNSVG-tvOS.a";
-			remoteRef = 23A194D121B8278800D22AFD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		23CF45FE212D5D3D0085F0A9 /* libRNSentry.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1535,6 +1529,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				BE9B5CA5219C4FF09A60CB22 /* Entypo.ttf in Resources */,
+				239814362201FCBB002CA2F9 /* RobotoMedium.ttf in Resources */,
 				686178080E9543A6AEE7B1BB /* EvilIcons.ttf in Resources */,
 				421AA6A993D5442F85067637 /* FontAwesome.ttf in Resources */,
 				FC74D31C87254E3692E7F91B /* Foundation.ttf in Resources */,
@@ -1543,6 +1538,7 @@
 				72076B6549534E7682E28AA0 /* MaterialCommunityIcons.ttf in Resources */,
 				21CEDB62D0514764AD075B97 /* MaterialIcons.ttf in Resources */,
 				23FAD35420FD180700ECBF97 /* LatoBold.ttf in Resources */,
+				239814352201FCBB002CA2F9 /* RobotoBold.ttf in Resources */,
 				F97CCD46D3B9427A98096C92 /* Octicons.ttf in Resources */,
 				7CF02086C8534962B98627C8 /* SimpleLineIcons.ttf in Resources */,
 				D59344C07A6B43089A051A76 /* Zocial.ttf in Resources */,
@@ -1688,9 +1684,7 @@
 				INFOPLIST_FILE = CodeAndRobotsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1722,9 +1716,7 @@
 				INFOPLIST_FILE = CodeAndRobotsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1918,9 +1910,7 @@
 				INFOPLIST_FILE = CodeAndRobotsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1957,9 +1947,7 @@
 				);
 				INFOPLIST_FILE = "CodeAndRobots-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1985,9 +1973,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "CodeAndRobots-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.CodeAndRobots-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -2023,9 +2009,7 @@
 				);
 				INFOPLIST_FILE = "CodeAndRobots-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -2065,9 +2049,7 @@
 				);
 				INFOPLIST_FILE = "CodeAndRobots-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -2093,9 +2075,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "CodeAndRobots-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.CodeAndRobots-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -2117,9 +2097,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "CodeAndRobots-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.CodeAndRobots-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;

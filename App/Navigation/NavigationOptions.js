@@ -5,14 +5,16 @@ import styles from './Styles/NavigationStyles'
 const navigationOptions = (Platform.OS === 'ios')
   ? {
     headerStyle: styles.header,
-    headerBackTitle: 'Back'
+    headerBackTitle: 'Back',
+    headerTintColor: 'black',
+    headerTitleStyle: { color: 'black' }
   }
   : {
     headerStyle: styles.header,
     headerBackTitle: 'Back',
     headerTitleStyle: styles.headerTitleStyle,
     headerBackTitleStyle: styles.headerBackTitleStyle,
-    headerTintColor: '#FFFFFF'
+    headerTintColor: 'black'
   }
 
 export default navigationOptions

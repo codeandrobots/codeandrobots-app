@@ -10,7 +10,7 @@ describe('Screen', () => {
 
   beforeEach(() => {
     wrapper = shallow(
-      <Screen />)
+      <Screen onLearnMorePress={() => {}} />)
   })
 
   it('Component renders correctly', () => {

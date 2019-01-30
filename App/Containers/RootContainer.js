@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { AppState, Platform, View, StatusBar } from 'react-native'
+import { AppState, View, StatusBar } from 'react-native'
 import ReduxNavigation from '../Navigation/ReduxNavigation'
 import { connect } from 'react-redux'
 import StartupActions from '../Redux/StartupRedux'
@@ -106,15 +106,9 @@ class RootContainer extends Component {
   }
 
   render () {
-    const statusBarBackgroundColor = (Platform.OS === 'ios')
-      ? Colors.statusBarBackgroundColorIOS
-      : Colors.statusBarBackgroundColorAndroid
-    const statusBarStyle = (Platform.OS === 'ios')
-      ? 'dark-content'
-      : 'light-content'
     return (
       <View style={{flex: 1}}>
-        <StatusBar backgroundColor={statusBarBackgroundColor} barStyle={statusBarStyle} />
+        <StatusBar backgroundColor={Colors.statusBar.background} barStyle={'dark-content'} />
         <ReduxNavigation />
       </View>
     )

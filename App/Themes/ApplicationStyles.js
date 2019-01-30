@@ -2,6 +2,8 @@ import Fonts from './Fonts'
 import Metrics from './Metrics'
 import Colors from './Colors'
 
+import { isIphoneX } from 'App/Services/Properties'
+
 const ApplicationStyles = {
   screen: {
     center: {
@@ -14,7 +16,7 @@ const ApplicationStyles = {
       height: Metrics.screenHeight
     },
     navButton: {
-      marginHorizontal: Metrics.baseMarginX2,
+      marginHorizontal: Metrics.marginX2,
       justifyContent: 'center'
     },
     navButtonText: {
@@ -27,6 +29,59 @@ const ApplicationStyles = {
       left: 0,
       width: '100%',
       height: '120%'
+    },
+    helloImage: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: '100%',
+      marginVertical: Metrics.marginX6
+    },
+    text: {
+      ...Fonts.style.normal,
+      color: Colors.text
+    },
+    button: {
+      backgroundColor: Colors.button.background,
+      borderWidth: Metrics.button.border,
+      borderColor: Colors.button.border,
+      borderRadius: Metrics.button.radius,
+      paddingVertical: Metrics.margin,
+      paddingHorizontal: Metrics.marginX3,
+      minWidth: Metrics.button.minWidth
+    },
+    buttonText: {
+      ...Fonts.style.button,
+      color: Colors.button.text,
+      textAlign: 'center'
+    },
+    footer: {
+      position: 'absolute',
+      bottom: 0,
+      left: 0,
+      width: '100%',
+      minHeight: 80,
+      backgroundColor: Colors.footer.background,
+      paddingBottom: (isIphoneX()) ? Metrics.marginX4 : Metrics.marginX3
+    },
+    footerSection: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: '100%'
+    },
+    footerTitle: {
+      marginTop: Metrics.marginX3
+    },
+    footerSubtitle: {
+      marginTop: Metrics.margin,
+      marginBottom: Metrics.marginX2
+    },
+    footerSubtitleText: {
+      ...Fonts.style.normal,
+      color: Colors.text,
+      textAlign: 'center',
+      marginHorizontal: Metrics.marginX2
     }
   }
 }

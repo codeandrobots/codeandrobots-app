@@ -48,6 +48,13 @@
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
 				<true/>
 			</dict>
+			<key>codeandrobots.com</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
 		</dict>
 	</dict>
 	<key>NSContactsUsageDescription</key>
@@ -75,6 +82,8 @@
 		<string>Octicons.ttf</string>
 		<string>SimpleLineIcons.ttf</string>
 		<string>Zocial.ttf</string>
+		<string>RobotoMedium.ttf</string>
+		<string>RobotoBold.ttf</string>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>

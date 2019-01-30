@@ -39,12 +39,10 @@ const screenTracking = ({ getState }) => next => (action) => {
 
   if (nextScreen !== currentScreen) {
     try {
-      console.tron.log(`NAVIGATING ${currentScreen} to ${nextScreen}`)
-
       trackScreen({user, name: nextScreen})
       trackEvent({user, event: Events.NAVIGATED_TO, properties: {currentScreen, nextScreen}})
     } catch (e) {
-      console.tron.log(e)
+      console.warn(e)
     }
   }
   return result

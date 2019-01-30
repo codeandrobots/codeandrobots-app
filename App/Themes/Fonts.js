@@ -1,7 +1,6 @@
 const type = {
-  base: 'Lato-Regular',
-  bold: 'Lato-Bold',
-  emphasis: 'HelveticaNeue-Italic'
+  base: 'Roboto-Medium',
+  bold: 'Roboto-Bold'
 }
 
 const size = {
@@ -32,6 +31,10 @@ const style = {
     fontFamily: type.bold,
     fontWeight: 'bold',
     fontSize: size.small
+  },
+  button: {
+    fontFamily: type.base,
+    fontSize: size.large
   }
 }
 

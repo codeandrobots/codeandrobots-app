@@ -15,8 +15,7 @@ const Screens = {
   HomeScreen: {
     screen: Home,
     navigationOptions: ({navigation}) => ({
-      header: null,
-      title: 'Back'
+      title: 'Code & Robots'
     })
   }
 }
