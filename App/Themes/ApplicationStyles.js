@@ -55,6 +55,25 @@ const ApplicationStyles = {
       color: Colors.button.text,
       textAlign: 'center'
     },
+    section: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: '100%'
+    },
+    sectionTitle: {
+      marginTop: Metrics.marginX3
+    },
+    sectionSubtitle: {
+      marginTop: Metrics.margin,
+      marginBottom: Metrics.marginX2
+    },
+    sectionSubtitleText: {
+      ...Fonts.style.normal,
+      color: Colors.text,
+      textAlign: 'center',
+      marginHorizontal: Metrics.marginX2
+    },
     footer: {
       position: 'absolute',
       bottom: 0,
@@ -82,6 +101,64 @@ const ApplicationStyles = {
       color: Colors.text,
       textAlign: 'center',
       marginHorizontal: Metrics.marginX2
+    },
+    footerTop: {
+      position: 'absolute',
+      top: 0,
+      width: '100%',
+      height: 58,
+      backgroundColor: Colors.background
+    },
+    footerButtons: {
+      flex: 1,
+      flexDirection: 'row',
+      height: 116,
+      backgroundColor: 'transparent',
+      justifyContent: 'center',
+      alignItems: 'center'
+    },
+    footerButton: {
+      width: 116,
+      height: 116,
+      marginHorizontal: 16
+    },
+    footerButtonSmall: {
+      width: 66,
+      height: 66
+    },
+    footerButtonOutter: {
+      position: 'absolute',
+      paddingTop: 8,
+      paddingLeft: 8,
+      width: 116,
+      height: 116,
+      backgroundColor: 'rgba(255,255,255,0.25)',
+      borderRadius: Metrics.button.radius
+    },
+    footerButtonInner: {
+      position: 'relative',
+      width: 100,
+      height: 100,
+      borderRadius: Metrics.button.radius,
+      backgroundColor: Colors.button.background
+    },
+    footerButtonOutterSmall: {
+      width: 66,
+      height: 66
+    },
+    footerButtonInnerSmall: {
+      position: 'relative',
+      width: 50,
+      height: 50
+    },
+    footerButtonIcon: {
+      backgroundColor: 'transparent',
+      width: '100%',
+      textAlign: 'center',
+      marginTop: 31
+    },
+    footerButtonIconSmall: {
+      marginTop: 14
     }
   }
 }

@@ -3,6 +3,7 @@ export const palette = {
   white: 'white',
   black: 'black',
   offwhite: '#FAFAFA', // Very light grey
+  grey: '#516173', // dark grey
   primary: '#F9BC62', // Orange yellow
   primaryDark: '#354052', // Almost black
   primaryTranslucent: '#FCE2BA' // White on orange yellow with 50% opacity
@@ -21,10 +22,18 @@ const colors = {
   button: {
     background: palette.white,
     text: palette.primaryDark,
-    border: palette.primaryTranslucent
+    border: palette.primaryTranslucent,
+    nav: {
+      background: palette.grey
+    }
   },
   footer: {
-    background: palette.primary
+    background: palette.primary,
+    button: {
+      nav: {
+        background: palette.grey
+      }
+    }
   }
 }
 
