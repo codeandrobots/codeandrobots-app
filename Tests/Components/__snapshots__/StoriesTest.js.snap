@@ -369,13 +369,16 @@ exports[`Storyshots Card Hello 1`] = `
 <View>
   <View
     style={
-      Object {
-        "alignItems": "center",
-        "display": "flex",
-        "justifyContent": "center",
-        "marginVertical": 16,
-        "width": "100%",
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "justifyContent": "center",
+          "marginVertical": 16,
+          "width": "100%",
+        },
+        undefined,
+      ]
     }
   >
     <Image
@@ -396,6 +399,7 @@ exports[`Storyshots Card Hello 1`] = `
           "marginTop": 24,
           "width": "100%",
         },
+        undefined,
       ]
     }
   >
@@ -425,6 +429,7 @@ exports[`Storyshots Card Hello 1`] = `
           "marginTop": 8,
           "width": "100%",
         },
+        undefined,
       ]
     }
   >
@@ -447,12 +452,15 @@ exports[`Storyshots Card Hello 1`] = `
   </View>
   <View
     style={
-      Object {
-        "alignItems": "center",
-        "display": "flex",
-        "justifyContent": "center",
-        "width": "100%",
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "justifyContent": "center",
+          "width": "100%",
+        },
+        undefined,
+      ]
     }
   >
     <View

@@ -15,26 +15,26 @@ export default class Card extends Component {
     onPress: PropTypes.func
   }
   render () {
-    const {image, title, text, button, onPress = () => {}} = this.props
+    const {image, title, text, button, onPress = () => {}, styles = {}} = this.props
     return (
       <View>
         {image && (
-          <View style={s.imageView}>
+          <View style={[s.imageView, styles.imageView]}>
             <Image source={image} />
           </View>
         )}
         {title && (
-          <View style={[s.titleView]}>
+          <View style={[s.titleView, styles.titleView]}>
             <Text style={s.title}>{title}</Text>
           </View>
         )}
         {text && (
-          <View style={[s.textView]}>
+          <View style={[s.textView, styles.textView]}>
             <Text style={s.text}>{text}</Text>
           </View>
         )}
         {button && (
-          <Button containerStyle={s.centered} text={button} onPress={onPress} />
+          <Button containerStyle={[s.centered, styles.buttonView]} text={button} onPress={onPress} />
         )}
       </View>
     )
