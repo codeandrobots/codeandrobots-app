@@ -9,8 +9,8 @@ export default StyleSheet.create({
     borderWidth: Metrics.button.border,
     borderColor: Colors.button.border,
     borderRadius: Metrics.button.radius,
-    paddingVertical: Metrics.margin,
-    paddingHorizontal: Metrics.marginX3,
+    paddingVertical: Metrics.unit,
+    paddingHorizontal: Metrics.unit * 3,
     minWidth: Metrics.button.minWidth
   },
   text: {

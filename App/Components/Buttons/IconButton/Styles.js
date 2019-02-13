@@ -7,7 +7,7 @@ export default StyleSheet.create({
   button: {
     width: 116,
     height: 116,
-    marginHorizontal: 16
+    marginHorizontal: Metrics.unit * 2
   },
   button_small: {
     width: 66,
@@ -15,8 +15,8 @@ export default StyleSheet.create({
   },
   buttonOutter: {
     position: 'absolute',
-    paddingTop: 8,
-    paddingLeft: 8,
+    paddingTop: Metrics.unit,
+    paddingLeft: Metrics.unit,
     width: 116,
     height: 116,
     backgroundColor: 'rgba(255,255,255,0.25)',

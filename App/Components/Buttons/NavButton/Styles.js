@@ -9,7 +9,7 @@ export default StyleSheet.create({
     justifyContent: 'center'
   },
   button: {
-    marginHorizontal: Metrics.marginX2,
+    marginHorizontal: Metrics.unit * 2,
     justifyContent: 'center'
   },
   text: {

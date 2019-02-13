@@ -6,16 +6,16 @@ export default StyleSheet.create({
   ...Styles,
   imageView: {
     ...Styles.centered,
-    marginVertical: Metrics.marginX2
+    marginVertical: Metrics.unit * 2
   },
   titleView: {
     ...Styles.centered,
-    marginTop: Metrics.marginX3
+    marginTop: Metrics.unit * 3
   },
   textView: {
     ...Styles.centered,
-    marginTop: Metrics.margin,
-    marginBottom: Metrics.marginX3
+    marginTop: Metrics.unit,
+    marginBottom: Metrics.unit * 3
   },
   title: {
     ...Styles.text
@@ -23,6 +23,6 @@ export default StyleSheet.create({
   text: {
     ...Styles.text,
     ...Styles.text_center,
-    marginHorizontal: Metrics.marginX2
+    marginHorizontal: Metrics.unit * 2
   }
 })
