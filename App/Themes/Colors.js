@@ -2,6 +2,7 @@
 export const palette = {
   white: 'white',
   black: 'black',
+  red: 'red',
   offwhite: '#FAFAFA', // Very light grey
   grey: '#516173', // dark grey
   primary: '#F9BC62', // Orange yellow
@@ -10,6 +11,7 @@ export const palette = {
 }
 
 const colors = {
+  ...palette,
   background: palette.offwhite,
   statusBar: {
     background: palette.primary

@@ -1,7 +1,8 @@
 import { configure } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
-import { describe, it } from 'storybook-addon-specifications'
+// TODO See below todo
+// import { describe, it } from 'storybook-addon-specifications'
 
 import DebugConfig from 'App/Config/DebugConfig'
 
@@ -10,43 +11,45 @@ DebugConfig.useReactotron = false
 
 configure({ adapter: new Adapter() })
 
-// Will allow the use of Enzyme’s mount function with jest
-jest.mock('react-native', () => {
-  const reactNativeMockRender = require('react-native-mock-render')
-  reactNativeMockRender.I18nManager = {
-    isRTL: false,
-    doLeftAndRightSwapInRTL: true,
-    allowRTL: () => {},
-    forceRTL: () => {},
-    swapLeftAndRightInRTL: () => {}
-  }
-  return reactNativeMockRender
-}, {virtual: true})
-
+// TODO Will allow the use of Enzyme’s mount function with jest,
+// but needs to only be setup for those tests and not other tests
+//
+// jest.mock('react-native', () => {
+//   const reactNativeMockRender = require('react-native-mock-render')
+//   reactNativeMockRender.I18nManager = {
+//     isRTL: false,
+//     doLeftAndRightSwapInRTL: true,
+//     allowRTL: () => {},
+//     forceRTL: () => {},
+//     swapLeftAndRightInRTL: () => {}
+//   }
+//   return reactNativeMockRender
+// }, {virtual: true})
+//
 // Since enzyme's mount API requires a DOM, JSDOM is required in order to use
 // mount if you are not already in a browser environment.
 //
 // See http://airbnb.io/enzyme/docs/guides/jsdom.html
-function copyProps (src, target) {
-  const props = Object.getOwnPropertyNames(src)
-    .filter(prop => typeof target[prop] === 'undefined')
-    .reduce((result, prop) => ({
-      ...result,
-      [prop]: Object.getOwnPropertyDescriptor(src, prop)
-    }), {})
-  Object.defineProperties(target, props)
-}
-const { JSDOM } = require('jsdom')
-const jsdom = new JSDOM('<!doctype html><html><body></body></html>')
-const { window } = jsdom
-global.window = window
-global.document = window.document
-window.describe = describe
-window.it = it
-global.navigator = {
-  userAgent: 'node.js'
-}
-copyProps(window, global)
+// function copyProps (src, target) {
+//   const props = Object.getOwnPropertyNames(src)
+//     .filter(prop => typeof target[prop] === 'undefined')
+//     .reduce((result, prop) => ({
+//       ...result,
+//       [prop]: Object.getOwnPropertyDescriptor(src, prop)
+//     }), {})
+//   Object.defineProperties(target, props)
+// }
+// const { JSDOM } = require('jsdom')
+// const jsdom = new JSDOM('<!doctype html><html><body></body></html>')
+// const { window } = jsdom
+// global.window = window
+// global.document = window.document
+// window.describe = describe
+// window.it = it
+// global.navigator = {
+//   userAgent: 'node.js'
+// }
+// copyProps(window, global)
 
 // Mock your external modules here if needed
 jest.mock('react-native-i18n', () => {

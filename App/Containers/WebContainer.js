@@ -1,8 +1,7 @@
 
 import React, { Component } from 'react'
 
-import Web from 'App/Components/Web'
-import NavButton from 'App/Components/NavButton'
+import { NavButton, Web } from 'App/Components'
 
 export default class WebContainer extends Component {
   static navigationOptions = ({ navigation }) => {

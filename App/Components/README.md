@@ -1,3 +1,3 @@
 ### Components Folder
 
-All common components are stored and organized here
+All common components and their stories are stored and organized here

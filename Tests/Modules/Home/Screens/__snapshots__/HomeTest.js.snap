@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Component renders correctly 1`] = `
+<Container>
+  <Card
+    button="Learn More"
+    image={
+      Object {
+        "process": [Function],
+      }
+    }
+    onPress={[Function]}
+    text="The app is ready! Sorry, almost ready :)
+
+The good news is you can follow along as this Beta version of the app develops over the coming weeks."
+    title="HELLO"
+  />
+  <BottomNav />
+</Container>
+`;

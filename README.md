@@ -64,6 +64,14 @@ Unit and integration tests:
 yarn test
 ```
 
+#### View app stories in Storybook mode
+
+1. Run the app packager `npm start`
+2. Run the app, e.g. `react-native run-ios`
+3. Wait for the app to start then **stop** the app packager from running
+4. Run the storybook `yarn storybook`
+5. Reload the app, e.g. `Cmd-R` in the iOS simulator, choose app stories from the Storybook menu
+
 #### End to End Testing
 
 There are no end to end tests right now as the app development is in flux but it's a good idea to add them in the future. [Detox](https://github.com/wix/detox) is a good end to end testing tool and the project has already been setup to work with it.
