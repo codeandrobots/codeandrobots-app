@@ -885,6 +885,87 @@ exports[`Storyshots NavButton Default 1`] = `
 </View>
 `;
 
+exports[`Storyshots Setting Notifications 1`] = `
+<View
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits={undefined}
+  accessible={true}
+  collapsable={undefined}
+  hasTVPreferredFocus={undefined}
+  hitSlop={undefined}
+  isTVSelectable={true}
+  nativeID={undefined}
+  onLayout={undefined}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "borderBottomColor": "#ECECEC",
+      "borderBottomWidth": 1,
+      "display": "flex",
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "marginHorizontal": 16,
+      "opacity": 1,
+      "paddingVertical": 16,
+    }
+  }
+  testID={undefined}
+  tvParallaxProperties={undefined}
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#354052",
+          "fontFamily": "Roboto-Medium",
+          "fontSize": 16,
+        }
+      }
+    >
+      Notifications
+    </Text>
+  </View>
+  <Text
+    accessible={true}
+    allowFontScaling={false}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#354052",
+          "fontSize": 16,
+        },
+        undefined,
+        Object {
+          "fontFamily": "simple-line-icons",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Object {},
+      ]
+    }
+  >
+    
+  </Text>
+</View>
+`;
+
 exports[`Storyshots Web Code&Robotos 1`] = `
 <View
   style={

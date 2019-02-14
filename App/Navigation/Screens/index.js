@@ -1,5 +1,5 @@
 import { Start, Web } from 'App/Containers'
-import { Home, Rate } from 'App/Modules'
+import { Home, Rate, Settings } from 'App/Modules'
 
 const Screens = {
   StartScreen: {
@@ -21,6 +21,12 @@ const Screens = {
     screen: Rate,
     navigationOptions: ({navigation}) => ({
       title: 'Spread the word'
+    })
+  },
+  SettingsScreen: {
+    screen: Settings,
+    navigationOptions: ({navigation}) => ({
+      title: 'Settings'
     })
   }
 }

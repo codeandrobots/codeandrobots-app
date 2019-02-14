@@ -9,6 +9,7 @@ import LoadingIndicator from './LoadingIndicator'
 import BottomNav from './BottomNav'
 import Web from './Web'
 import Card from './Card'
+import Setting from './Setting'
 
 export {
   TouchableOpacity,
@@ -22,5 +23,6 @@ export {
   LoadingIndicator,
   BottomNav,
   Web,
-  Card
+  Card,
+  Setting
 }

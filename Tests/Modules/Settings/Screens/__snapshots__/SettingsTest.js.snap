@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Settings Component renders correctly 1`] = `
+<Container>
+  <Setting
+    onPress={[Function]}
+    text="Notifications"
+  />
+  <Setting
+    onPress={[Function]}
+    text="Share app with a friend"
+  />
+  <Setting
+    onPress={[Function]}
+    text="Share your ideas with us"
+  />
+  <Footer />
+</Container>
+`;

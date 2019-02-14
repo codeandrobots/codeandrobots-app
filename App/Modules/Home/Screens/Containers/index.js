@@ -17,7 +17,7 @@ export class HomeContainer extends Component {
   onHomePress = () => {}
 
   onSettingsPress = () => {
-    // TODO
+    this.props.navigation.navigate('SettingsScreen')
   }
 
   render () {
