@@ -4,6 +4,7 @@ import {
   TouchableWithoutFeedback } from './Touchable'
 import { Button, IconButton, NavButton } from './Buttons'
 import Container from './Container'
+import Footer from './Footer'
 import LoadingIndicator from './LoadingIndicator'
 import BottomNav from './BottomNav'
 import Web from './Web'
@@ -17,6 +18,7 @@ export {
   IconButton,
   NavButton,
   Container,
+  Footer,
   LoadingIndicator,
   BottomNav,
   Web,

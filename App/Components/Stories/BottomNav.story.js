@@ -7,5 +7,8 @@ import BottomNav from '../BottomNav'
 storiesOf('BottomNav', module)
   .addDecorator(FullScreenDecorator)
   .add('Default', () => (
-    <BottomNav />
+    <BottomNav
+      onRatePress={() => {}}
+      onHomePress={() => {}}
+      onSettingsPress={() => {}} />
   ))

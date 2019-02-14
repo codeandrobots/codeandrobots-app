@@ -46,19 +46,32 @@ exports[`Storyshots BottomNav Default 1`] = `
       }
     >
       <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        collapsable={undefined}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
-          Array [
-            Object {
-              "height": 116,
-              "marginHorizontal": 16,
-              "width": 116,
-            },
-            Object {
-              "height": 66,
-              "width": 66,
-            },
-          ]
+          Object {
+            "height": 66,
+            "marginHorizontal": 16,
+            "opacity": 1,
+            "width": 66,
+          }
         }
+        testID={undefined}
+        tvParallaxProperties={undefined}
       >
         <View
           style={
@@ -137,15 +150,32 @@ exports[`Storyshots BottomNav Default 1`] = `
         </View>
       </View>
       <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        collapsable={undefined}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
-          Array [
-            Object {
-              "height": 116,
-              "marginHorizontal": 16,
-              "width": 116,
-            },
-          ]
+          Object {
+            "height": 116,
+            "marginHorizontal": 16,
+            "opacity": 1,
+            "width": 116,
+          }
         }
+        testID={undefined}
+        tvParallaxProperties={undefined}
       >
         <View
           style={
@@ -215,19 +245,32 @@ exports[`Storyshots BottomNav Default 1`] = `
         </View>
       </View>
       <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        collapsable={undefined}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
-          Array [
-            Object {
-              "height": 116,
-              "marginHorizontal": 16,
-              "width": 116,
-            },
-            Object {
-              "height": 66,
-              "width": 66,
-            },
-          ]
+          Object {
+            "height": 66,
+            "marginHorizontal": 16,
+            "opacity": 1,
+            "width": 66,
+          }
         }
+        testID={undefined}
+        tvParallaxProperties={undefined}
       >
         <View
           style={
@@ -525,19 +568,32 @@ exports[`Storyshots IconButton Heart 1`] = `
   }
 >
   <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    collapsable={undefined}
+    hasTVPreferredFocus={undefined}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    nativeID={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      Array [
-        Object {
-          "height": 116,
-          "marginHorizontal": 16,
-          "width": 116,
-        },
-        Object {
-          "height": 66,
-          "width": 66,
-        },
-      ]
+      Object {
+        "height": 66,
+        "marginHorizontal": 16,
+        "opacity": 1,
+        "width": 66,
+      }
     }
+    testID={undefined}
+    tvParallaxProperties={undefined}
   >
     <View
       style={
@@ -631,15 +687,32 @@ exports[`Storyshots IconButton Large Home 1`] = `
   }
 >
   <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    collapsable={undefined}
+    hasTVPreferredFocus={undefined}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    nativeID={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      Array [
-        Object {
-          "height": 116,
-          "marginHorizontal": 16,
-          "width": 116,
-        },
-      ]
+      Object {
+        "height": 116,
+        "marginHorizontal": 16,
+        "opacity": 1,
+        "width": 116,
+      }
     }
+    testID={undefined}
+    tvParallaxProperties={undefined}
   >
     <View
       style={

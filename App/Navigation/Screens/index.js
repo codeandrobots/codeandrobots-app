@@ -1,6 +1,5 @@
-import Start from 'App/Containers/StartContainer'
-import Web from 'App/Containers/WebContainer'
-import { Home } from 'App/Modules/Home'
+import { Start, Web } from 'App/Containers'
+import { Home, Rate } from 'App/Modules'
 
 const Screens = {
   StartScreen: {
@@ -16,6 +15,12 @@ const Screens = {
     screen: Home,
     navigationOptions: ({navigation}) => ({
       title: 'Code & Robots'
+    })
+  },
+  RateScreen: {
+    screen: Rate,
+    navigationOptions: ({navigation}) => ({
+      title: 'Spread the word'
     })
   }
 }

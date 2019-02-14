@@ -1,5 +1,5 @@
 
-import { Home } from './Screens'
+import Home from './Screens/Containers'
 
 export {
   Home

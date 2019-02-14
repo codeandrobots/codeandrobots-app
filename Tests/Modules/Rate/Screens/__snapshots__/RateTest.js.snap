@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rate Component renders correctly 1`] = `
+<Container>
+  <Footer>
+    <Card
+      button="Rate"
+      onPress={[Function]}
+      text="Every rating means the world to us.
+
+★★★★★"
+      title="LOVING THE APP?"
+    />
+  </Footer>
+</Container>
+`;

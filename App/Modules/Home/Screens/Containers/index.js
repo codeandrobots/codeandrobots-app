@@ -10,6 +10,16 @@ export class HomeContainer extends Component {
     })
   }
 
+  onRatePress = () => {
+    this.props.navigation.navigate('RateScreen')
+  }
+
+  onHomePress = () => {}
+
+  onSettingsPress = () => {
+    // TODO
+  }
+
   render () {
     return (
       <Screen
@@ -18,6 +28,9 @@ export class HomeContainer extends Component {
         }}
         {...this.props}
         onLearnMorePress={this.onLearnMorePress}
+        onRatePress={this.onRatePress}
+        onHomePress={this.onHomePress}
+        onSettingsPress={this.onSettingsPress}
       />
     )
   }

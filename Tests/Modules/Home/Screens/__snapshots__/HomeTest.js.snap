@@ -15,6 +15,10 @@ exports[`Home Component renders correctly 1`] = `
 The good news is you can follow along as this Beta version of the app develops over the coming weeks."
     title="HELLO"
   />
-  <BottomNav />
+  <BottomNav
+    onHomePress={[Function]}
+    onRatePress={[Function]}
+    onSettingsPress={[Function]}
+  />
 </Container>
 `;

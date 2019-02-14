@@ -3,18 +3,14 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 
-import Home from 'App/Modules/Home/Screens/Components'
+import Rate from 'App/Modules/Rate/Screens/Components'
 
-describe('Home', () => {
+describe('Rate', () => {
   let wrapper
 
   beforeEach(() => {
     wrapper = shallow(
-      <Home
-        onLearnMorePress={() => {}}
-        onRatePress={() => {}}
-        onHomePress={() => {}}
-        onSettingsPress={() => {}} />)
+      <Rate onRatePress={() => {}} />)
   })
 
   it('Component renders correctly', () => {
