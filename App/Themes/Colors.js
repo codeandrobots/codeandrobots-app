@@ -11,7 +11,7 @@ export const palette = {
   primaryTranslucent: '#FCE2BA' // White on orange yellow with 50% opacity
 }
 
-const colors = {
+export default {
   ...palette,
   background: palette.offwhite,
   statusBar: {
@@ -46,5 +46,3 @@ const colors = {
     }
   }
 }
-
-export default colors

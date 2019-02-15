@@ -1,6 +1,3 @@
-
-import API from './Api'
-import FixtureAPI from './FixtureApi'
-import { setAuth, getLoggedInUser } from './sagas'
-
-export { API, FixtureAPI, setAuth, getLoggedInUser }
+export { default as API } from './Api'
+export { default as FixtureAPI } from './FixtureApi'
+export { setAuth, getLoggedInUser } from './sagas'

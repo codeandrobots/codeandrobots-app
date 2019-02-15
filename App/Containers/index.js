@@ -1,7 +1,2 @@
-import Start from './StartContainer'
-import Web from './WebContainer'
-
-export {
-  Start,
-  Web
-}
+export { default as Start } from './StartContainer'
+export { default as Web } from './WebContainer'

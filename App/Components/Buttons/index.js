@@ -1,9 +1,3 @@
-import Button from './Button'
-import IconButton from './IconButton'
-import NavButton from './NavButton'
-
-export {
-  Button,
-  IconButton,
-  NavButton
-}
+export { default as Button } from './Button'
+export { default as IconButton } from './IconButton'
+export { default as NavButton } from './NavButton'

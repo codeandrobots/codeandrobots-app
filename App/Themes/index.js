@@ -1,7 +1,5 @@
-import Colors from './Colors'
-import Fonts from './Fonts'
-import Metrics from './Metrics'
-import Images from './Images'
-import Styles from './Styles'
-
-export { Colors, Fonts, Metrics, Images, Styles }
+export { default as Colors } from './Colors'
+export { default as Fonts } from './Fonts'
+export { default as Metrics } from './Metrics'
+export { default as Images } from './Images'
+export { default as Styles } from './Styles'

@@ -1,6 +1,1 @@
-
-import Home from './Screens/Containers'
-
-export {
-  Home
-}
+export { default as Home } from './Screens/Containers'

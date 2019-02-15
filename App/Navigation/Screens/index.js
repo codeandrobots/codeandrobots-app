@@ -1,7 +1,7 @@
 import { Start, Web } from 'App/Containers'
 import { Home, Rate, Settings } from 'App/Modules'
 
-const Screens = {
+export default {
   StartScreen: {
     screen: Start,
     navigationOptions: ({navigation}) => ({
@@ -30,5 +30,3 @@ const Screens = {
     })
   }
 }
-
-export default Screens

@@ -1,4 +1,3 @@
-
 import Config from 'react-native-config'
 import { Sentry, SentrySeverity } from 'react-native-sentry'
 

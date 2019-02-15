@@ -1,9 +1,3 @@
-import TouchableOpacity from './TouchableOpacity'
-import TouchableHighlight from './TouchableHighlight'
-import TouchableWithoutFeedback from './TouchableWithoutFeedback'
-
-export {
-  TouchableOpacity,
-  TouchableHighlight,
-  TouchableWithoutFeedback
-}
+export { default as TouchableOpacity } from './TouchableOpacity'
+export { default as TouchableHighlight } from './TouchableHighlight'
+export { default as TouchableWithoutFeedback } from './TouchableWithoutFeedback'

@@ -1,6 +1,1 @@
-
-import Settings from './Screens/Containers'
-
-export {
-  Settings
-}
+export { default as Settings } from './Screens/Containers'

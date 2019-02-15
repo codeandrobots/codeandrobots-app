@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { View } from 'react-native'
 
-import Link from './Link'
-
 import s from './Styles'
 
-class Links extends Component {
+export { default as Link } from './Link'
+
+export class Links extends Component {
   render () {
     const { containerStyle = undefined } = this.props
     const children = React.Children.map(this.props.children, child => {
@@ -19,9 +19,4 @@ class Links extends Component {
       </View>
     )
   }
-}
-
-export {
-  Links,
-  Link
 }

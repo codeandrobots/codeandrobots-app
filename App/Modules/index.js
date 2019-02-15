@@ -1,9 +1,3 @@
-import { Home } from './Home'
-import { Rate } from './Rate'
-import { Settings } from './Settings'
-
-export {
-  Home,
-  Rate,
-  Settings
-}
+export { Home } from './Home'
+export { Rate } from './Rate'
+export { Settings } from './Settings'

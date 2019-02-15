@@ -4,7 +4,7 @@ const { width, height } = Dimensions.get('window')
 
 const unit = 8
 
-const metrics = {
+export default {
   unit,
   screenWidth: width < height ? width : height,
   screenHeight: width < height ? height : width,
@@ -15,5 +15,3 @@ const metrics = {
     border: 8
   }
 }
-
-export default metrics

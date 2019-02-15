@@ -1,6 +1,1 @@
-
-import Rate from './Screens/Containers'
-
-export {
-  Rate
-}
+export { default as Rate } from './Screens/Containers'
