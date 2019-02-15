@@ -15,6 +15,34 @@ exports[`Settings Component renders correctly 1`] = `
     text="Share your ideas with us"
   />
   <Footer>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "display": "flex",
+          "justifyContent": "center",
+          "position": "absolute",
+          "top": -48,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#9B9B9B",
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 14,
+          }
+        }
+      >
+        App Version N/A (N/A)
+      </Text>
+    </View>
     <Links>
       <Link
         onPress={[Function]}

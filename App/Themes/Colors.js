@@ -4,7 +4,8 @@ export const palette = {
   black: 'black',
   red: 'red',
   offwhite: '#FAFAFA',
-  grey: '#516173',
+  grey: '#9B9B9B',
+  darkgrey: '#516173',
   lightgrey: '#ECECEC',
   primary: '#F9BC62', // Orange yellow
   primaryDark: '#354052', // Almost black
@@ -25,10 +26,7 @@ export default {
   button: {
     background: palette.white,
     text: palette.primaryDark,
-    border: palette.primaryTranslucent,
-    nav: {
-      background: palette.grey
-    }
+    border: palette.primaryTranslucent
   },
   link: {
     text: palette.primaryDark
@@ -40,9 +38,7 @@ export default {
   footer: {
     background: palette.primary,
     button: {
-      nav: {
-        background: palette.grey
-      }
+      icon: palette.darkgrey
     }
   }
 }

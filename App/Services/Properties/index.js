@@ -3,9 +3,9 @@ import VersionNumber from 'react-native-version-number'
 import DeviceInfo from 'react-native-device-info'
 import Config from 'react-native-config'
 
-export const appVersion = () => VersionNumber.appVersion
+export const appVersion = () => (VersionNumber.appVersion != null) ? VersionNumber.appVersion : 'N/A'
 
-export const appBuild = () => VersionNumber.buildVersion
+export const appBuild = () => (VersionNumber.buildVersion != null) ? VersionNumber.buildVersion : 'N/A'
 
 export const manufacturer = () => DeviceInfo.getManufacturer()
 

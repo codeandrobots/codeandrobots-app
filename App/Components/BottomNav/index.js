@@ -26,21 +26,21 @@ export default class BottomNav extends Component {
           <IconButton onPress={onRatePress}>
             <FontAwesomeIcon
               name='heart'
-              color={Colors.footer.button.nav.background}
+              color={Colors.footer.button.icon}
               size={24}
               style={{marginTop: 2}} />
           </IconButton>
           <IconButton size='large' onPress={onHomePress}>
             <MaterialIcon
               name='home'
-              color={Colors.footer.button.nav.background}
+              color={Colors.footer.button.icon}
               size={38}
               style={{marginTop: 4}} />
           </IconButton>
           <IconButton onPress={onSettingsPress}>
             <MaterialIcon
               name='dots-horizontal'
-              color={Colors.footer.button.nav.background}
+              color={Colors.footer.button.icon}
               size={32}
               style={{marginTop: 4}} />
           </IconButton>
