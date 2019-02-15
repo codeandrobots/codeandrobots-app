@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { View } from 'react-native'
 
-import s from './Styles'
+import { StyleSheet as s } from 'App/Themes'
 
 export default class Footer extends Component {
   render () {

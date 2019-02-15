@@ -1,10 +1,12 @@
+import { StyleSheet as StyleSheetRN } from 'react-native'
+
 import Metrics from './Metrics'
 import Colors from './Colors'
 import Fonts from './Fonts'
 
 import { isIphoneX } from 'App/Services/Properties'
 
-export default {
+export const Styles = {
   // Layout
   container: {
     flex: 1,
@@ -37,3 +39,5 @@ export default {
     textAlign: 'center'
   }
 }
+
+export const StyleSheet = StyleSheetRN.create(Styles)
