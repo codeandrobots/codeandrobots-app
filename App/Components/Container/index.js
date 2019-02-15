@@ -5,9 +5,9 @@ import s from './Styles'
 
 export default class Container extends Component {
   render () {
-    const {containerStyle = undefined} = this.props
+    const {style = undefined} = this.props
     return (
-      <View style={[s.container, containerStyle]}>
+      <View style={[s.container, style]}>
         {this.props.children}
       </View>
     )

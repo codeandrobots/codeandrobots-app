@@ -28,7 +28,7 @@ export default class Web extends Component {
           style={s.webView}
           source={{uri: this.props.source}} />
         {this.state.loading && (
-          <LoadingIndicator containerStyle={s.loadingView} size='large' />
+          <LoadingIndicator style={s.loadingView} size='large' />
         )}
       </View>
     )

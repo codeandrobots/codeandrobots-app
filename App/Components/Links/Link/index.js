@@ -15,9 +15,9 @@ export default class Link extends Component {
   }
 
   render () {
-    const { containerStyle = undefined, text, onPress, uppercase = true, centered = false } = this.props
+    const { style = undefined, text, onPress, uppercase = true, centered = false } = this.props
     return (
-      <View style={(centered) ? [s.centered, containerStyle] : containerStyle}>
+      <View style={(centered) ? [s.centered, style] : style}>
         <TouchableOpacity onPress={onPress}>
           <Text style={s.text}>{(uppercase) ? text.toUpperCase() : text}</Text>
         </TouchableOpacity>

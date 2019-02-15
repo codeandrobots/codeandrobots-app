@@ -13,27 +13,27 @@ export default class IconButton extends Component {
   }
 
   render () {
-    const {size = 'small', onPress, styles: propStyles = {}} = this.props
+    const {size = 'small', onPress, style = {}} = this.props
     const isSmall = (size === 'small')
     const styles = {
       button: [
         s.button,
         ...((isSmall) ? [s.button_small] : []),
-        ...((propStyles.button) ? [propStyles.button] : [])
+        ...((style.button) ? [style.button] : [])
       ],
       buttonOutter: [
         s.buttonOutter,
         ...((isSmall) ? [s.buttonOutter_small] : []),
-        ...((propStyles.buttonOutter) ? [propStyles.buttonOutter] : [])
+        ...((style.buttonOutter) ? [style.buttonOutter] : [])
       ],
       buttonInner: [
         s.buttonInner,
         ...((isSmall) ? [s.buttonInner_small] : []),
-        ...((propStyles.buttonInner) ? [propStyles.buttonInner] : [])
+        ...((style.buttonInner) ? [style.buttonInner] : [])
       ],
       buttonIcon: [
         s.buttonIcon,
-        ...((propStyles.buttonIcon) ? [propStyles.buttonIcon] : [])
+        ...((style.buttonIcon) ? [style.buttonIcon] : [])
       ]
     }
     return (

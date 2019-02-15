@@ -13,7 +13,7 @@ storiesOf('IconButton', module)
   .addDecorator(CenterDecorator)
   .add('Heart', () => (
     <IconButton
-      styles={{buttonOutter: {backgroundColor: Colors.red}}}
+      style={{buttonOutter: {backgroundColor: Colors.red}}}
       onPress={() => {}}>
       <FontAwesomeIcon
         name='heart'
@@ -25,7 +25,7 @@ storiesOf('IconButton', module)
   .add('Large Home', () => (
     <IconButton
       size='large'
-      styles={{buttonOutter: {backgroundColor: Colors.black}}}
+      style={{buttonOutter: {backgroundColor: Colors.black}}}
       onPress={() => {}}>
       <MaterialIcon
         name='home'

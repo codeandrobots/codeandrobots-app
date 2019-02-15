@@ -5,9 +5,9 @@ import s from './Styles'
 
 export default class Footer extends Component {
   render () {
-    const {containerStyle = undefined} = this.props
+    const {style = undefined} = this.props
     return (
-      <View style={[s.footer, containerStyle]}>
+      <View style={[s.footer, style]}>
         {this.props.children}
       </View>
     )
