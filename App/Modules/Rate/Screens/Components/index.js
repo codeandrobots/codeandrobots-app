@@ -17,7 +17,8 @@ export default class Screen extends Component {
             title='LOVING THE APP?'
             text={'Every rating means the world to us.\n\n★★★★★'}
             button='Rate'
-            onPress={onRatePress} />
+            onPress={onRatePress}
+            styles={{titleView: {marginTop: 0}}} />
         </Footer>
       </Container>
     )

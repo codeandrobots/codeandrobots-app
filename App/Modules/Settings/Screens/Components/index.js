@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import { Container, Footer, Setting } from 'App/Components'
+import { Container, Footer, Setting, Links, Link } from 'App/Components'
 
 export default class Screen extends Component {
   static propTypes = {
@@ -20,7 +20,13 @@ export default class Screen extends Component {
         <Setting text='Notifications' onPress={onNotificationsPress} />
         <Setting text='Share app with a friend' onPress={onShareAppPress} />
         <Setting text='Share your ideas with us' onPress={onFeedbackPress} />
-        <Footer />
+        <Footer>
+          <Links>
+            <Link text='FAQ' onPress={() => {}} />
+            <Link text='Support' onPress={() => {}} />
+            <Link text='About' onPress={() => {}} />
+          </Links>
+        </Footer>
       </Container>
     )
   }

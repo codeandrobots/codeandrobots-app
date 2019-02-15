@@ -6,11 +6,11 @@ export default StyleSheet.create({
   ...Styles,
   imageView: {
     ...Styles.centered,
-    marginVertical: Metrics.unit * 2
+    marginVertical: Metrics.unit * 3
   },
   titleView: {
     ...Styles.centered,
-    marginTop: Metrics.unit * 3
+    marginTop: Metrics.unit * 2
   },
   textView: {
     ...Styles.centered,

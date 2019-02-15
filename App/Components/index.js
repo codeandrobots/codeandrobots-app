@@ -3,6 +3,7 @@ import {
   TouchableHighlight,
   TouchableWithoutFeedback } from './Touchable'
 import { Button, IconButton, NavButton } from './Buttons'
+import { Links, Link } from './Links'
 import Container from './Container'
 import Footer from './Footer'
 import LoadingIndicator from './LoadingIndicator'
@@ -18,6 +19,8 @@ export {
   Button,
   IconButton,
   NavButton,
+  Links,
+  Link,
   Container,
   Footer,
   LoadingIndicator,

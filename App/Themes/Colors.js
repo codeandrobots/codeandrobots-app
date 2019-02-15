@@ -30,6 +30,9 @@ const colors = {
       background: palette.grey
     }
   },
+  link: {
+    text: palette.primaryDark
+  },
   list: {
     separator: palette.lightgrey,
     icon: palette.primaryDark

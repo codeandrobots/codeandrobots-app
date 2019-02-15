@@ -6,6 +6,13 @@ exports[`Rate Component renders correctly 1`] = `
     <Card
       button="Rate"
       onPress={[Function]}
+      styles={
+        Object {
+          "titleView": Object {
+            "marginTop": 0,
+          },
+        }
+      }
       text="Every rating means the world to us.
 
 ★★★★★"

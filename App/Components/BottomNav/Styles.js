@@ -1,9 +1,14 @@
 import { StyleSheet } from 'react-native'
 
-import { Styles, Colors } from 'App/Themes'
+import { Styles, Colors, Metrics } from 'App/Themes'
 
 export default StyleSheet.create({
   ...Styles,
+  footer: {
+    ...Styles.footer,
+    paddingTop: 0,
+    paddingBottom: Metrics.unit * 4
+  },
   top: {
     position: 'absolute',
     top: 0,

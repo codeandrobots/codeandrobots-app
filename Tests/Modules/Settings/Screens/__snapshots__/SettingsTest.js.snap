@@ -14,6 +14,21 @@ exports[`Settings Component renders correctly 1`] = `
     onPress={[Function]}
     text="Share your ideas with us"
   />
-  <Footer />
+  <Footer>
+    <Links>
+      <Link
+        onPress={[Function]}
+        text="FAQ"
+      />
+      <Link
+        onPress={[Function]}
+        text="Support"
+      />
+      <Link
+        onPress={[Function]}
+        text="About"
+      />
+    </Links>
+  </Footer>
 </Container>
 `;

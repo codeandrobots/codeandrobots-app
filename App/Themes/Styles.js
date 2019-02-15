@@ -24,7 +24,8 @@ export default {
     width: '100%',
     minHeight: 80,
     backgroundColor: Colors.footer.background,
-    paddingBottom: (isIphoneX()) ? Metrics.unit * 4 : Metrics.unit * 3
+    paddingTop: Metrics.unit * 4,
+    paddingBottom: (isIphoneX()) ? Metrics.unit * 5 : Metrics.unit * 4
   },
 
   // Typography
