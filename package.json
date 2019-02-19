@@ -49,7 +49,7 @@
     "react-native-app-settings": "^2.0.0",
     "react-native-config": "^0.10.0",
     "react-native-country-picker-modal": "^0.6.2",
-    "react-native-device-info": "0.11.0",
+    "react-native-device-info": "0.26.3",
     "react-native-firebase": "4.1.0",
     "react-native-i18n": "1.0.0",
     "react-native-linear-gradient": "^2.5.3",

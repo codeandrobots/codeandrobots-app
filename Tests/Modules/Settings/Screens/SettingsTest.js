@@ -11,9 +11,11 @@ describe('Settings', () => {
   beforeEach(() => {
     wrapper = shallow(
       <Settings
-        onNotificationsPress={() => {}}
         onShareAppPress={() => {}}
-        onFeedbackPress={() => {}} />)
+        onFeedbackPress={() => {}}
+        onFAQPress={() => {}}
+        onSupportPress={() => {}}
+        onAboutPress={() => {}} />)
   })
 
   it('Component renders correctly', () => {

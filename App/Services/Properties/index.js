@@ -3,6 +3,8 @@ import VersionNumber from 'react-native-version-number'
 import DeviceInfo from 'react-native-device-info'
 import Config from 'react-native-config'
 
+export const appName = () => DeviceInfo.getApplicationName()
+
 export const appVersion = () => (VersionNumber.appVersion != null) ? VersionNumber.appVersion : 'N/A'
 
 export const appBuild = () => (VersionNumber.buildVersion != null) ? VersionNumber.buildVersion : 'N/A'
@@ -20,6 +22,8 @@ export const country = () => DeviceInfo.getDeviceCountry()
 export const appInfo = () => `${appVersion()} (${appBuild()})`
 
 export const deviceInfo = () => `${manufacturer()} ${OS()} ${model()} ${OSVersion()}`
+
+export const bundleId = () => DeviceInfo.getBundleId()
 
 export const isSimulator = () => DeviceInfo.isEmulator()
 

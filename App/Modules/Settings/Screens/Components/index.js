@@ -10,29 +10,32 @@ import s from './Styles'
 
 export default class Screen extends Component {
   static propTypes = {
-    onNotificationsPress: PropTypes.func.isRequired,
     onShareAppPress: PropTypes.func.isRequired,
-    onFeedbackPress: PropTypes.func.isRequired
+    onFeedbackPress: PropTypes.func.isRequired,
+    onFAQPress: PropTypes.func.isRequired,
+    onSupportPress: PropTypes.func.isRequired,
+    onAboutPress: PropTypes.func.isRequired
   }
 
   render () {
     const {
-      onNotificationsPress,
       onShareAppPress,
-      onFeedbackPress} = this.props
+      onFeedbackPress,
+      onFAQPress,
+      onSupportPress,
+      onAboutPress} = this.props
     return (
       <Container>
-        <Setting text='Notifications' onPress={onNotificationsPress} />
         <Setting text='Share app with a friend' onPress={onShareAppPress} />
         <Setting text='Share your ideas with us' onPress={onFeedbackPress} />
+        <View style={s.appVersionView}>
+          <Text style={s.appVersion}>{`App Version ${appInfo()}`}</Text>
+        </View>
         <Footer>
-          <View style={s.appVersionView}>
-            <Text style={s.appVersion}>{`App Version ${appInfo()}`}</Text>
-          </View>
           <Links>
-            <Link text='FAQ' onPress={() => {}} />
-            <Link text='Support' onPress={() => {}} />
-            <Link text='About' onPress={() => {}} />
+            <Link text='FAQ' onPress={onFAQPress} />
+            <Link text='Support' onPress={onSupportPress} />
+            <Link text='About' onPress={onAboutPress} />
           </Links>
         </Footer>
       </Container>
