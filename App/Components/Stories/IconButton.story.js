@@ -2,9 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react-native'
 import { CenterDecorator } from './Decorators'
 
-import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome'
-import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons'
-
+import { Icon } from 'App/Components'
 import { Colors } from 'App/Themes'
 
 import { IconButton } from '../Buttons'
@@ -15,7 +13,7 @@ storiesOf('IconButton', module)
     <IconButton
       style={{buttonOutter: {backgroundColor: Colors.red}}}
       onPress={() => {}}>
-      <FontAwesomeIcon
+      <Icon
         name='heart'
         color={Colors.red}
         size={24}
@@ -27,7 +25,8 @@ storiesOf('IconButton', module)
       size='large'
       style={{buttonOutter: {backgroundColor: Colors.black}}}
       onPress={() => {}}>
-      <MaterialIcon
+      <Icon
+        set='Material'
         name='home'
         color={Colors.black}
         size={38}
@@ -36,10 +35,10 @@ storiesOf('IconButton', module)
   ))
   .add('Disabled', () => (
     <IconButton disabled onPress={() => {}}>
-      <FontAwesomeIcon
+      <Icon
         name='lock'
-        color={Colors.icon_disabled}
         size={24}
+        disabled
         style={{marginTop: 2}} />
     </IconButton>
   ))

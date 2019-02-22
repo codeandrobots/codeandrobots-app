@@ -2,12 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { View, Text, Image } from 'react-native'
 
-import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome'
-import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons'
-import SimpleLineIcon from 'react-native-vector-icons/SimpleLineIcons'
-import IonIcon from 'react-native-vector-icons/Ionicons'
-
-import { TouchableOpacity, Button, IconButton } from 'App/Components'
+import { TouchableOpacity, Button, Icon, IconButton } from 'App/Components'
 
 import { Colors } from 'App/Themes'
 
@@ -27,32 +22,11 @@ export default class ListItem extends Component {
     onPress: PropTypes.func.isRequired
   }
 
-  renderIcon (defaultIconSize = 18, defaultIconColor = Colors.icon) {
-    const { iconStyle = undefined, icon, iconSet, iconSize = defaultIconSize, disabled = false } = this.props
-    const iconProps = {
-      name: icon,
-      color: (!disabled) ? defaultIconColor : Colors.icon_disabled,
-      size: iconSize,
-      style: iconStyle
-    }
-    switch (iconSet) {
-      case 'Material':
-        return (<MaterialIcon {...iconProps} />)
-      case 'Ion':
-        return (<IonIcon {...iconProps} />)
-      case 'SimpleLine':
-        return (<SimpleLineIcon {...iconProps} />)
-      default:
-        return (<FontAwesomeIcon {...iconProps} />)
-    }
-  }
-
   renderDefault () {
-    const { style = undefined, image, icon, title, text, button, disabled = false, onPress } = this.props
+    const { style = undefined, iconStyle = undefined, image, iconSet, icon, title, text, button, disabled = false, onPress } = this.props
 
     const itemViewStyle = (!disabled) ? [s.itemView, style] : [s.itemView, s.itemView_disabled, style]
     const textStyle = (!disabled) ? s.text : [s.text, s.text_disabled]
-    const buttonIconColor = (!disabled) ? Colors.icon : Colors.icon_disabled
 
     return (
       <TouchableOpacity style={itemViewStyle} disabled={disabled} onPress={onPress}>
@@ -63,7 +37,7 @@ export default class ListItem extends Component {
         )}
         {!image && icon && (
           <View style={s.imageView}>
-            {this.renderIcon(48)}
+            <Icon set={iconSet} name={icon} size={48} disabled={disabled} style={iconStyle} />
           </View>
         )}
         <View style={s.textView}>
@@ -78,11 +52,7 @@ export default class ListItem extends Component {
         {!button && (
           <View style={s.buttonView}>
             <IconButton disabled={disabled} onPress={onPress}>
-              <FontAwesomeIcon
-                name='chevron-right'
-                color={buttonIconColor}
-                size={18}
-                style={{marginTop: 2}} />
+              <Icon name='chevron-right' disabled={disabled} style={{marginTop: 2}} />
             </IconButton>
           </View>
         )}
@@ -91,11 +61,10 @@ export default class ListItem extends Component {
   }
 
   renderSquare () {
-    const { style = undefined, image, icon, title, text, button, disabled = false, onPress } = this.props
+    const { style = undefined, iconStyle = undefined, image, iconSet, icon, title, text, button, disabled = false, onPress } = this.props
 
     const itemViewStyle = (!disabled) ? [s.itemView, s.itemView_square, style] : [s.itemView, s.itemView_square, s.itemView_disabled, style]
     const textStyle = (!disabled) ? s.text : [s.text, s.text_disabled]
-    const buttonIconColor = (!disabled) ? Colors.icon : Colors.icon_disabled
 
     return (
       <TouchableOpacity style={itemViewStyle} disabled={disabled} onPress={onPress}>
@@ -116,18 +85,14 @@ export default class ListItem extends Component {
         {!button && !image && icon && (
           <View style={[s.buttonView, s.buttonView_square]}>
             <IconButton disabled={disabled} onPress={onPress}>
-              {this.renderIcon()}
+              <Icon set={iconSet} name={icon} disabled={disabled} style={iconStyle} />
             </IconButton>
           </View>
         )}
         {!button && !image && !icon && (
           <View style={[s.buttonView, s.buttonView_square]}>
             <IconButton disabled={disabled} onPress={onPress}>
-              <FontAwesomeIcon
-                name='chevron-right'
-                color={buttonIconColor}
-                size={18}
-                style={{marginTop: 2}} />
+              <Icon name='chevron-right' disabled={disabled} style={{marginTop: 2}} />
             </IconButton>
           </View>
         )}
@@ -136,9 +101,10 @@ export default class ListItem extends Component {
   }
 
   renderCompact () {
-    const { style = undefined, image, icon, title, disabled = false, onPress } = this.props
+    const { style = undefined, iconStyle = undefined, image, iconSet, icon, title, disabled = false, onPress } = this.props
 
     const textStyle = (!disabled) ? s.text : [s.text, s.text_disabled]
+    const primaryButtonIconColor = (!disabled) ? Colors.icon_primary : Colors.icon_disabled
     const buttonIconColor = (!disabled) ? Colors.icon_dark : Colors.icon_disabled
 
     return (
@@ -150,17 +116,14 @@ export default class ListItem extends Component {
         )}
         {!image && icon && (
           <View style={[s.buttonView, s.buttonView_compact]}>
-            {this.renderIcon(24, Colors.icon_primary)}
+            <Icon set={iconSet} name={icon} size={24} color={primaryButtonIconColor} style={iconStyle} />
           </View>
         )}
         <View style={[s.itemView, s.itemView_compact, style]}>
           <View style={[s.textView, s.textView_compact]}>
             <Text style={textStyle}>{title}</Text>
           </View>
-          <SimpleLineIcon
-            name='arrow-right'
-            color={buttonIconColor}
-            size={16} />
+          <Icon set='SimpleLine' name='arrow-right' size={16} color={buttonIconColor} />
         </View>
       </TouchableOpacity>
     )
