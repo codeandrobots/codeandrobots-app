@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react-native'
 
 import { Images } from 'App/Themes'
 
-import { ListItem } from '../ListItems'
+import { ListItem, SquareListItem, CompactListItem } from '../ListItems'
 
 storiesOf('ListItem', module)
   .add('Default', () => (
@@ -19,17 +19,17 @@ storiesOf('ListItem', module)
     <ListItem title='Pro Level' text='Go up a level' button='Locked' disabled onPress={() => {}} />
   ))
   .add('Square', () => (
-    <ListItem format='square' icon='play' iconStyle={{marginLeft: 4}} title='Dance' text='Let’s boogie' onPress={() => {}} />
+    <SquareListItem icon='play' iconStyle={{marginLeft: 4}} title='Dance' text='Let’s boogie' onPress={() => {}} />
   ))
   .add('Square Disabled', () => (
-    <ListItem format='square' icon='lock' title='Pro Level' text='Go up a level' disabled onPress={() => {}} />
+    <SquareListItem icon='lock' title='Pro Level' text='Go up a level' disabled onPress={() => {}} />
   ))
   .add('Compact', () => (
-    <ListItem format='compact' icon='circle-o' title='Play a game' onPress={() => {}} />
+    <CompactListItem icon='circle-o' title='Play a game' onPress={() => {}} />
   ))
   .add('Compact No Icon', () => (
-    <ListItem format='compact' title='Task #1' onPress={() => {}} />
+    <CompactListItem title='Task #1' onPress={() => {}} />
   ))
   .add('Compact Disabled', () => (
-    <ListItem format='compact' icon='lock' title='Level 2 (Locked)' disabled onPress={() => {}} />
+    <CompactListItem icon='lock' title='Level 2 (Locked)' disabled onPress={() => {}} />
   ))
