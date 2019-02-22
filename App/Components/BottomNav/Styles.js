@@ -23,5 +23,8 @@ export default StyleSheet.create({
     backgroundColor: 'transparent',
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  iconButton: {
+    marginHorizontal: Metrics.unit * 2
   }
 })

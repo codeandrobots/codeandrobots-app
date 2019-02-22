@@ -35,6 +35,9 @@ export const Styles = {
     ...Fonts.style.normal,
     color: Colors.text
   },
+  text_disabled: {
+    color: Colors.text_disabled
+  },
   text_center: {
     textAlign: 'center'
   }

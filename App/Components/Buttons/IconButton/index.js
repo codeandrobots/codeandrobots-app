@@ -9,11 +9,12 @@ import s from './Styles'
 export default class IconButton extends Component {
   static propTypes = {
     size: PropTypes.oneOf(['small', 'large']),
+    disabled: PropTypes.bool,
     onPress: PropTypes.func.isRequired
   }
 
   render () {
-    const {size = 'small', onPress, style = {}} = this.props
+    const {size = 'small', disabled = false, onPress, style = {}} = this.props
     const isSmall = (size === 'small')
     const styles = {
       button: [
@@ -22,7 +23,7 @@ export default class IconButton extends Component {
         ...((style.button) ? [style.button] : [])
       ],
       buttonOutter: [
-        s.buttonOutter,
+        ...((!disabled) ? [s.buttonOutter] : [s.buttonOutter, s.buttonOutter_disabled]),
         ...((isSmall) ? [s.buttonOutter_small] : []),
         ...((style.buttonOutter) ? [style.buttonOutter] : [])
       ],
@@ -37,7 +38,7 @@ export default class IconButton extends Component {
       ]
     }
     return (
-      <TouchableOpacity style={styles.button} onPress={onPress}>
+      <TouchableOpacity style={styles.button} disabled={disabled} onPress={onPress}>
         <View style={styles.buttonOutter}>
           <View style={styles.buttonInner}>
             <View style={styles.buttonIcon}>

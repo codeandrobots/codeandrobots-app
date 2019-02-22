@@ -1,4 +1,5 @@
 // leave off @2x/@3x
 export default {
-  Hello: require('App/Images/Hello.png')
+  hello: require('App/Images/Hello/hello.png'),
+  controls: require('App/Images/Controls/controls.png')
 }

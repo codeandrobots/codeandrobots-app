@@ -34,3 +34,12 @@ storiesOf('IconButton', module)
         style={{marginTop: 4}} />
     </IconButton>
   ))
+  .add('Disabled', () => (
+    <IconButton disabled onPress={() => {}}>
+      <FontAwesomeIcon
+        name='lock'
+        color={Colors.icon_disabled}
+        size={24}
+        style={{marginTop: 2}} />
+    </IconButton>
+  ))

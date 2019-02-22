@@ -13,6 +13,9 @@ export default StyleSheet.create({
     paddingHorizontal: Metrics.unit * 3,
     minWidth: Metrics.button.minWidth
   },
+  button_disabled: {
+    borderColor: Colors.button.border_disabled
+  },
   text: {
     ...Fonts.style.button,
     ...Styles.text_center,

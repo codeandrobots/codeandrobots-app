@@ -6,8 +6,7 @@ export default StyleSheet.create({
   ...Styles,
   button: {
     width: 116,
-    height: 116,
-    marginHorizontal: Metrics.unit * 2
+    height: 116
   },
   button_small: {
     width: 66,
@@ -21,6 +20,9 @@ export default StyleSheet.create({
     height: 116,
     backgroundColor: 'rgba(255,255,255,0.25)',
     borderRadius: Metrics.button.radius
+  },
+  buttonOutter_disabled: {
+    backgroundColor: Colors.button.border_disabled
   },
   buttonInner: {
     position: 'relative',

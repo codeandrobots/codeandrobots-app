@@ -24,7 +24,7 @@ export default class Setting extends Component {
         </View>
         <SimpleLineIcon
           name='arrow-right'
-          color={Colors.list.icon}
+          color={Colors.icon_dark}
           size={16} />
       </TouchableOpacity>
     )

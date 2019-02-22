@@ -22,7 +22,7 @@ export default class Screen extends Component {
     return (
       <Container>
         <Card
-          image={Images.Hello}
+          image={Images.hello}
           title='HELLO'
           text={'The app is ready! Sorry, almost ready :)\n\nThe good news is you can follow along as this Beta version of the app develops over the coming weeks.'}
           button='Learn More'

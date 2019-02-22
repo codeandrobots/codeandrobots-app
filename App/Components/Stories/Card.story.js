@@ -8,7 +8,7 @@ import Card from '../Card'
 storiesOf('Card', module)
   .add('Hello', () => (
     <Card
-      image={Images.Hello}
+      image={Images.hello}
       title='HELLO'
       text='Welcome to Code&Robots'
       button='Learn More'

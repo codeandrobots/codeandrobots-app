@@ -5,6 +5,7 @@ export const palette = {
   red: 'red',
   offwhite: '#FAFAFA',
   grey: '#9B9B9B',
+  greyTranslucent: '#DFDFDF',
   darkgrey: '#516173',
   lightgrey: '#ECECEC',
   primary: '#F9BC62', // Orange yellow
@@ -15,6 +16,7 @@ export const palette = {
 export default {
   ...palette,
   background: palette.offwhite,
+  background_disabled: palette.lightgrey,
   statusBar: {
     background: palette.primary
   },
@@ -23,22 +25,23 @@ export default {
     text: palette.black
   },
   text: palette.primaryDark,
+  text_disabled: palette.grey,
+  icon: palette.darkgrey,
+  icon_dark: palette.primaryDark,
+  icon_disabled: palette.grey,
   button: {
     background: palette.white,
     text: palette.primaryDark,
-    border: palette.primaryTranslucent
+    border: palette.primaryTranslucent,
+    border_disabled: palette.greyTranslucent
   },
   link: {
     text: palette.primaryDark
   },
   list: {
-    separator: palette.lightgrey,
-    icon: palette.primaryDark
+    separator: palette.lightgrey
   },
   footer: {
-    background: palette.primary,
-    button: {
-      icon: palette.darkgrey
-    }
+    background: palette.primary
   }
 }

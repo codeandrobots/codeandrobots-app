@@ -9,15 +9,20 @@ import s from './Styles'
 export default class Button extends Component {
   static propTypes = {
     text: PropTypes.string.isRequired,
+    disabled: PropTypes.bool,
     onPress: PropTypes.func.isRequired
   }
 
   render () {
-    const { style = undefined, text, onPress } = this.props
+    const { style = undefined, text, disabled = false, onPress } = this.props
+
+    const textStyle = (!disabled) ? s.text : [s.text, s.text_disabled]
+    const buttonStyle = (!disabled) ? s.button : [s.button, s.button_disabled]
+
     return (
       <View style={style}>
-        <TouchableOpacity style={s.button} onPress={onPress}>
-          <Text style={s.text}>{text}</Text>
+        <TouchableOpacity style={buttonStyle} disabled={disabled} onPress={onPress}>
+          <Text style={textStyle}>{text}</Text>
         </TouchableOpacity>
       </View>
     )

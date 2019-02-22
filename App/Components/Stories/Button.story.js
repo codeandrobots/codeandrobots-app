@@ -7,3 +7,6 @@ storiesOf('Button', module)
   .add('Default', () => (
     <Button text='Click Me' onPress={() => {}} />
   ))
+  .add('Disabled', () => (
+    <Button text='Locked' disabled onPress={() => {}} />
+  ))
