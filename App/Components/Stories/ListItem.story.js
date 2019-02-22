@@ -24,3 +24,12 @@ storiesOf('ListItem', module)
   .add('Square Disabled', () => (
     <ListItem format='square' icon='lock' title='Pro Level' text='Go up a level' disabled onPress={() => {}} />
   ))
+  .add('Compact', () => (
+    <ListItem format='compact' icon='circle-o' title='Play a game' onPress={() => {}} />
+  ))
+  .add('Compact No Icon', () => (
+    <ListItem format='compact' title='Task #1' onPress={() => {}} />
+  ))
+  .add('Compact Disabled', () => (
+    <ListItem format='compact' icon='lock' title='Level 2 (Locked)' disabled onPress={() => {}} />
+  ))

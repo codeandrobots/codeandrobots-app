@@ -1,5 +1,6 @@
 
 export const palette = {
+  transparent: 'transparent',
   white: 'white',
   black: 'black',
   red: 'red',
@@ -27,6 +28,7 @@ export default {
   text: palette.primaryDark,
   text_disabled: palette.grey,
   icon: palette.darkgrey,
+  icon_primary: palette.primary,
   icon_dark: palette.primaryDark,
   icon_disabled: palette.grey,
   button: {

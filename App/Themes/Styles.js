@@ -8,6 +8,12 @@ import { isIphoneX } from 'App/Services/Properties'
 
 export const Styles = {
   // Layout
+  row: {
+    flexDirection: 'row'
+  },
+  column: {
+    flexDirection: 'column'
+  },
   container: {
     flex: 1,
     backgroundColor: Colors.background,

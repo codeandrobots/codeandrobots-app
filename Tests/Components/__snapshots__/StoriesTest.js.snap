@@ -1354,6 +1354,415 @@ exports[`Storyshots ListItem Beep 1`] = `
 </View>
 `;
 
+exports[`Storyshots ListItem Compact 1`] = `
+<View
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits={undefined}
+  accessible={true}
+  collapsable={undefined}
+  hasTVPreferredFocus={undefined}
+  hitSlop={undefined}
+  isTVSelectable={true}
+  nativeID={undefined}
+  onLayout={undefined}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "flexDirection": "row",
+      "opacity": 1,
+    }
+  }
+  testID={undefined}
+  tvParallaxProperties={undefined}
+>
+  <View
+    style={
+      Array [
+        Object {
+          "justifyContent": "center",
+          "margin": 8,
+        },
+        Object {
+          "margin": 0,
+          "marginLeft": 8,
+        },
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={false}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#F9BC62",
+            "fontSize": 24,
+          },
+          undefined,
+          Object {
+            "fontFamily": "FontAwesome",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#F9BC62",
+          "borderRadius": 8,
+          "flexDirection": "row",
+          "margin": 8,
+          "padding": 8,
+        },
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "borderBottomColor": "#ECECEC",
+          "borderBottomWidth": 1,
+          "borderRadius": 0,
+          "flex": 1,
+          "justifyContent": "center",
+          "marginRight": 16,
+          "marginVertical": 0,
+          "paddingHorizontal": 0,
+          "paddingVertical": 16,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "flexDirection": "column",
+            "justifyContent": "center",
+            "margin": 8,
+          },
+          Object {
+            "margin": 0,
+          },
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#354052",
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 16,
+          }
+        }
+      >
+        Play a game
+      </Text>
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={false}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#354052",
+            "fontSize": 16,
+          },
+          undefined,
+          Object {
+            "fontFamily": "simple-line-icons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Storyshots ListItem Compact Disabled 1`] = `
+<View
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits={undefined}
+  accessible={true}
+  collapsable={undefined}
+  hasTVPreferredFocus={undefined}
+  hitSlop={undefined}
+  isTVSelectable={true}
+  nativeID={undefined}
+  onLayout={undefined}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "flexDirection": "row",
+      "opacity": 1,
+    }
+  }
+  testID={undefined}
+  tvParallaxProperties={undefined}
+>
+  <View
+    style={
+      Array [
+        Object {
+          "justifyContent": "center",
+          "margin": 8,
+        },
+        Object {
+          "margin": 0,
+          "marginLeft": 8,
+        },
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={false}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#9B9B9B",
+            "fontSize": 24,
+          },
+          undefined,
+          Object {
+            "fontFamily": "FontAwesome",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#F9BC62",
+          "borderRadius": 8,
+          "flexDirection": "row",
+          "margin": 8,
+          "padding": 8,
+        },
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "borderBottomColor": "#ECECEC",
+          "borderBottomWidth": 1,
+          "borderRadius": 0,
+          "flex": 1,
+          "justifyContent": "center",
+          "marginRight": 16,
+          "marginVertical": 0,
+          "paddingHorizontal": 0,
+          "paddingVertical": 16,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "flexDirection": "column",
+            "justifyContent": "center",
+            "margin": 8,
+          },
+          Object {
+            "margin": 0,
+          },
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#354052",
+              "fontFamily": "Roboto-Medium",
+              "fontSize": 16,
+            },
+            Object {
+              "color": "#9B9B9B",
+            },
+          ]
+        }
+      >
+        Level 2 (Locked)
+      </Text>
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={false}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#9B9B9B",
+            "fontSize": 16,
+          },
+          undefined,
+          Object {
+            "fontFamily": "simple-line-icons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Storyshots ListItem Compact No Icon 1`] = `
+<View
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits={undefined}
+  accessible={true}
+  collapsable={undefined}
+  hasTVPreferredFocus={undefined}
+  hitSlop={undefined}
+  isTVSelectable={true}
+  nativeID={undefined}
+  onLayout={undefined}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "flexDirection": "row",
+      "opacity": 1,
+    }
+  }
+  testID={undefined}
+  tvParallaxProperties={undefined}
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#F9BC62",
+          "borderRadius": 8,
+          "flexDirection": "row",
+          "margin": 8,
+          "padding": 8,
+        },
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "borderBottomColor": "#ECECEC",
+          "borderBottomWidth": 1,
+          "borderRadius": 0,
+          "flex": 1,
+          "justifyContent": "center",
+          "marginRight": 16,
+          "marginVertical": 0,
+          "paddingHorizontal": 0,
+          "paddingVertical": 16,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "flexDirection": "column",
+            "justifyContent": "center",
+            "margin": 8,
+          },
+          Object {
+            "margin": 0,
+          },
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#354052",
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 16,
+          }
+        }
+      >
+        Task #1
+      </Text>
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={false}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#354052",
+            "fontSize": 16,
+          },
+          undefined,
+          Object {
+            "fontFamily": "simple-line-icons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+  </View>
+</View>
+`;
+
 exports[`Storyshots ListItem Default 1`] = `
 <View
   accessibilityComponentType={undefined}
