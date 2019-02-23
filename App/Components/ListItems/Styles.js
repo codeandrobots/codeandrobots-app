@@ -12,8 +12,9 @@ export default StyleSheet.create({
     backgroundColor: Colors.primary
   },
   itemView_square: {
+    flex: 0,
     flexDirection: 'column',
-    width: (Metrics.screenWidth / 2) - Metrics.unit
+    width: (Metrics.screenWidth / 2) - (Metrics.unit * 3)
   },
   itemView_compact: {
     flex: 1,

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 import { appInfo } from 'App/Services/Properties'
 
-import { Container, Footer, Setting, Links, Link } from 'App/Components'
+import { Container, Footer, CompactListItem, Links, Link } from 'App/Components'
 
 import s from './Styles'
 
@@ -26,8 +26,8 @@ export default class Screen extends Component {
       onAboutPress} = this.props
     return (
       <Container>
-        <Setting text='Share app with a friend' onPress={onShareAppPress} />
-        <Setting text='Share your ideas with us' onPress={onFeedbackPress} />
+        <CompactListItem title='Share app with a friend' onPress={onShareAppPress} />
+        <CompactListItem title='Share your ideas with us' onPress={onFeedbackPress} />
         <View style={s.appVersionView}>
           <Text style={s.appVersion}>{`App Version ${appInfo()}`}</Text>
         </View>

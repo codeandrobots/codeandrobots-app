@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import { View, Text, Image } from 'react-native'
+import PropTypes from 'prop-types'
 
 import { TouchableOpacity, Button, Icon, IconButton } from 'App/Components'
 
 import s from './Styles'
 
-export default class DefaultListItem extends Component {
+export default class SquareListItem extends Component {
   static propTypes = {
     image: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
     icon: PropTypes.string,

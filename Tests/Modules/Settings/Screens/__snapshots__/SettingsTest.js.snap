@@ -2,13 +2,13 @@
 
 exports[`Settings Component renders correctly 1`] = `
 <Container>
-  <Setting
+  <CompactListItem
     onPress={[Function]}
-    text="Share app with a friend"
+    title="Share app with a friend"
   />
-  <Setting
+  <CompactListItem
     onPress={[Function]}
-    text="Share your ideas with us"
+    title="Share your ideas with us"
   />
   <View
     style={

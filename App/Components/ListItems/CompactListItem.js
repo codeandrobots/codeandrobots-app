@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import { View, Text, Image } from 'react-native'
+import PropTypes from 'prop-types'
 
 import { TouchableOpacity, Icon } from 'App/Components'
 
@@ -8,7 +8,7 @@ import { Colors } from 'App/Themes'
 
 import s from './Styles'
 
-export default class DefaultListItem extends Component {
+export default class CompactListItem extends Component {
   static propTypes = {
     image: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
     iconSet: PropTypes.string,
@@ -36,7 +36,7 @@ export default class DefaultListItem extends Component {
     const buttonIconColor = (!disabled) ? Colors.icon_dark : Colors.icon_disabled
 
     return (
-      <TouchableOpacity style={s.row} disabled={disabled} onPress={onPress}>
+      <TouchableOpacity style={[s.row, style]} disabled={disabled} onPress={onPress}>
         {image && (
           <View style={[s.imageView, s.imageView_compact]}>
             <Image style={[s.image, s.image_compact]} source={image} />
@@ -47,7 +47,7 @@ export default class DefaultListItem extends Component {
             <Icon set={iconSet} name={icon} size={iconSize} color={primaryButtonIconColor} style={iconStyle} />
           </View>
         )}
-        <View style={[s.itemView, s.itemView_compact, style]}>
+        <View style={[s.itemView, s.itemView_compact]}>
           <View style={[s.textView, s.textView_compact]}>
             <Text style={textStyle}>{title}</Text>
           </View>
