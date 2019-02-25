@@ -24,8 +24,9 @@ export default class SquareListItem extends Component {
       style = undefined,
       iconStyle = undefined,
       image,
-      iconSet,
       icon,
+      iconSet,
+      iconSize = 18,
       title,
       text,
       button,
@@ -54,7 +55,7 @@ export default class SquareListItem extends Component {
         {!button && !image && icon && (
           <View style={[s.buttonView, s.buttonView_square]}>
             <IconButton disabled={disabled} onPress={onPress}>
-              <Icon set={iconSet} name={icon} disabled={disabled} style={iconStyle} />
+              <Icon set={iconSet} name={icon} size={iconSize} disabled={disabled} style={iconStyle} />
             </IconButton>
           </View>
         )}

@@ -13,6 +13,7 @@ export default class Icon extends Component {
     set: PropTypes.string,
     name: PropTypes.string.isRequired,
     size: PropTypes.number,
+    color: PropTypes.string,
     disabled: PropTypes.bool
   }
 

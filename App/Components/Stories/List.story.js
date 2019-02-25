@@ -1,11 +1,15 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react-native'
 
-import { Images } from 'App/Themes'
+import { Images, Colors } from 'App/Themes'
 
 import List from '../Lists'
 import ListHeader from '../ListHeaders'
-import { ListItem, SquareListItem, CompactListItem } from '../ListItems'
+import {
+  ListItem,
+  SquareListItem,
+  CompactListItem,
+  FeaturedListItem } from '../ListItems'
 
 storiesOf('List', module)
   .add('Default', () => (
@@ -27,5 +31,12 @@ storiesOf('List', module)
       <CompactListItem icon='check-circle-o' title='Get started' onPress={() => {}} />
       <CompactListItem icon='circle-o' title='Play a game' onPress={() => {}} />
       <CompactListItem icon='circle-o' title='Code Remix' disabled onPress={() => {}} />
+    </List>
+  ))
+  .add('Featured', () => (
+    <List title='Featured' cols={2}>
+      <FeaturedListItem image={Images.featured.led} title='Blink' onPress={() => {}} />
+      <FeaturedListItem icon='rocket' iconColor={Colors.black} title='Fly' onPress={() => {}} />
+      <FeaturedListItem icon={'heartbeat'} iconColor={Colors.red} title='Heart Beat' onPress={() => {}} />
     </List>
   ))

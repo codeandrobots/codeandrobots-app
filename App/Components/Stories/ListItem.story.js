@@ -3,7 +3,11 @@ import { storiesOf } from '@storybook/react-native'
 
 import { Images } from 'App/Themes'
 
-import { ListItem, SquareListItem, CompactListItem } from '../ListItems'
+import {
+  ListItem,
+  SquareListItem,
+  CompactListItem,
+  FeaturedListItem } from '../ListItems'
 
 storiesOf('ListItem', module)
   .add('Default', () => (
@@ -32,4 +36,10 @@ storiesOf('ListItem', module)
   ))
   .add('Compact Disabled', () => (
     <CompactListItem icon='lock' title='Level 2 (Locked)' disabled onPress={() => {}} />
+  ))
+  .add('Featured', () => (
+    <FeaturedListItem image={Images.featured.led} title='Blink' onPress={() => {}} />
+  ))
+  .add('Featured Disabled', () => (
+    <FeaturedListItem icon='lock' title='Pro Level' disabled onPress={() => {}} />
   ))
