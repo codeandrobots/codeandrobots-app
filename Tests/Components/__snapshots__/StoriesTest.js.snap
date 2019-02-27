@@ -469,20 +469,284 @@ exports[`Storyshots Button Disabled 1`] = `
 </View>
 `;
 
+exports[`Storyshots Card Atlas 1`] = `
+<View>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    collapsable={undefined}
+    hasTVPreferredFocus={undefined}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    nativeID={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "center",
+        "marginVertical": 24,
+        "opacity": 1,
+        "width": "100%",
+      }
+    }
+    testID={undefined}
+    tvParallaxProperties={undefined}
+  >
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      collapsable={undefined}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "height": 66,
+          "opacity": 1,
+          "position": "absolute",
+          "width": 66,
+          "zIndex": 9999,
+        }
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(255,255,255,0.25)",
+              "borderRadius": 100,
+              "height": 116,
+              "paddingLeft": 8,
+              "paddingTop": 8,
+              "position": "absolute",
+              "width": 116,
+            },
+            Object {
+              "height": 66,
+              "width": 66,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "white",
+                "borderRadius": 100,
+                "height": 100,
+                "position": "relative",
+                "width": 100,
+              },
+              Object {
+                "height": 50,
+                "position": "relative",
+                "width": 50,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "justifyContent": "center",
+                },
+              ]
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={false}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "#516173",
+                    "fontSize": 24,
+                  },
+                  Object {
+                    "marginLeft": 4,
+                  },
+                  Object {
+                    "fontFamily": "FontAwesome",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+    <react-native-video
+      ignoreSilentSwitch="ignore"
+      onEnd={[Function]}
+      onError={[Function]}
+      paused={true}
+      progressUpdateInterval={100}
+      resizeMode="cover"
+      source={
+        Object {
+          "process": [Function],
+        }
+      }
+      style={
+        Object {
+          "borderRadius": 8,
+          "height": 403.8749994951562,
+          "marginHorizontal": 16,
+          "width": 718,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "center",
+        "marginTop": 16,
+        "width": "100%",
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#354052",
+          "fontFamily": "Roboto-Medium",
+          "fontSize": 16,
+        }
+      }
+    >
+      🤖⬆️
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "center",
+        "marginBottom": 24,
+        "marginTop": 8,
+        "width": "100%",
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#354052",
+          "fontFamily": "Roboto-Medium",
+          "fontSize": 16,
+          "marginHorizontal": 16,
+          "textAlign": "center",
+        }
+      }
+    >
+      Jump, Atlas, Jump!
+    </Text>
+  </View>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    collapsable={undefined}
+    hasTVPreferredFocus={undefined}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    nativeID={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "center",
+        "opacity": 1,
+        "width": "100%",
+      }
+    }
+    testID={undefined}
+    tvParallaxProperties={undefined}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#354052",
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 18,
+            "textDecorationLine": "underline",
+          },
+          Object {
+            "fontSize": undefined,
+          },
+        ]
+      }
+    >
+      Atlas on Wikipedia
+    </Text>
+  </View>
+</View>
+`;
+
 exports[`Storyshots Card Hello 1`] = `
 <View>
   <View
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "display": "flex",
-          "justifyContent": "center",
-          "marginVertical": 24,
-          "width": "100%",
-        },
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "center",
+        "marginVertical": 24,
+        "width": "100%",
+      }
     }
   >
     <Image
@@ -495,16 +759,13 @@ exports[`Storyshots Card Hello 1`] = `
   </View>
   <View
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "display": "flex",
-          "justifyContent": "center",
-          "marginTop": 16,
-          "width": "100%",
-        },
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "center",
+        "marginTop": 16,
+        "width": "100%",
+      }
     }
   >
     <Text
@@ -524,17 +785,14 @@ exports[`Storyshots Card Hello 1`] = `
   </View>
   <View
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "display": "flex",
-          "justifyContent": "center",
-          "marginBottom": 24,
-          "marginTop": 8,
-          "width": "100%",
-        },
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "center",
+        "marginBottom": 24,
+        "marginTop": 8,
+        "width": "100%",
+      }
     }
   >
     <Text
@@ -1091,128 +1349,54 @@ exports[`Storyshots Links Multiple 1`] = `
   style={undefined}
 >
   <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    collapsable={undefined}
+    hasTVPreferredFocus={undefined}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    nativeID={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       Object {
         "alignItems": "center",
         "display": "flex",
         "justifyContent": "center",
         "marginVertical": 8,
+        "opacity": 1,
         "width": "100%",
       }
     }
+    testID={undefined}
+    tvParallaxProperties={undefined}
   >
-    <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
+    <Text
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
-      isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
-        Object {
-          "opacity": 1,
-        }
-      }
-      testID={undefined}
-      tvParallaxProperties={undefined}
-    >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
+        Array [
           Object {
             "color": "#354052",
             "fontFamily": "Roboto-Medium",
             "fontSize": 18,
             "textDecorationLine": "underline",
-          }
-        }
-      >
-        LINK 1
-      </Text>
-    </View>
-  </View>
-  <View
-    style={
-      Object {
-        "alignItems": "center",
-        "display": "flex",
-        "justifyContent": "center",
-        "marginVertical": 8,
-        "width": "100%",
+          },
+          undefined,
+        ]
       }
-    }
-  >
-    <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
-      accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
-      isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "color": "#354052",
-            "fontFamily": "Roboto-Medium",
-            "fontSize": 18,
-            "textDecorationLine": "underline",
-          }
-        }
-      >
-        LINK 2
-      </Text>
-    </View>
+      LINK 1
+    </Text>
   </View>
-</View>
-`;
-
-exports[`Storyshots Links Single 1`] = `
-<View
-  style={
-    Array [
-      Object {
-        "alignItems": "center",
-        "display": "flex",
-        "justifyContent": "center",
-        "width": "100%",
-      },
-      undefined,
-    ]
-  }
->
   <View
     accessibilityComponentType={undefined}
     accessibilityLabel={undefined}
@@ -1232,7 +1416,12 @@ exports[`Storyshots Links Single 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "center",
+        "marginVertical": 8,
         "opacity": 1,
+        "width": "100%",
       }
     }
     testID={undefined}
@@ -1243,17 +1432,71 @@ exports[`Storyshots Links Single 1`] = `
       allowFontScaling={true}
       ellipsizeMode="tail"
       style={
+        Array [
+          Object {
+            "color": "#354052",
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 18,
+            "textDecorationLine": "underline",
+          },
+          undefined,
+        ]
+      }
+    >
+      LINK 2
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Storyshots Links Single 1`] = `
+<View
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits={undefined}
+  accessible={true}
+  collapsable={undefined}
+  hasTVPreferredFocus={undefined}
+  hitSlop={undefined}
+  isTVSelectable={true}
+  nativeID={undefined}
+  onLayout={undefined}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "justifyContent": "center",
+      "opacity": 1,
+      "width": "100%",
+    }
+  }
+  testID={undefined}
+  tvParallaxProperties={undefined}
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
         Object {
           "color": "#354052",
           "fontFamily": "Roboto-Medium",
           "fontSize": 18,
           "textDecorationLine": "underline",
-        }
-      }
-    >
-      CLICK ME
-    </Text>
-  </View>
+        },
+        undefined,
+      ]
+    }
+  >
+    CLICK ME
+  </Text>
 </View>
 `;
 

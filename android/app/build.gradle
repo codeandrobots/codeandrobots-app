@@ -165,6 +165,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-video')
     compile project(':react-native-linear-gradient')
     compile project(':react-native-app-settings')
     compile project(':react-native-sentry')

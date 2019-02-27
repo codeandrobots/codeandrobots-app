@@ -124,6 +124,8 @@ jest.mock('react-native-firebase', () => {
   }
 })
 
+jest.mock('react-native-video', () => 'react-native-video')
+
 global.requestAnimationFrame = function (callback) {
   setTimeout(callback, 0)
 }

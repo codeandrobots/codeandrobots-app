@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { View, Text } from 'react-native'
+import { Text } from 'react-native'
 
 import { TouchableOpacity } from 'App/Components'
 
@@ -15,13 +15,11 @@ export default class Link extends Component {
   }
 
   render () {
-    const { style = undefined, text, onPress, uppercase = true, centered = false } = this.props
+    const { style = {}, text, onPress, uppercase = true, centered = false } = this.props
     return (
-      <View style={(centered) ? [s.centered, style] : style}>
-        <TouchableOpacity onPress={onPress}>
-          <Text style={s.text}>{(uppercase) ? text.toUpperCase() : text}</Text>
-        </TouchableOpacity>
-      </View>
+      <TouchableOpacity style={(centered) ? [s.centered, style.view] : style} onPress={onPress}>
+        <Text style={[s.text, style.text]}>{(uppercase) ? text.toUpperCase() : text}</Text>
+      </TouchableOpacity>
     )
   }
 }
