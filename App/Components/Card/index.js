@@ -6,6 +6,8 @@ import Video from 'react-native-video'
 
 import { TouchableOpacity, Button, Link, IconButton, Icon } from 'App/Components'
 
+import { Metrics } from 'App/Themes'
+
 import s from './Styles'
 
 export default class Card extends Component {
@@ -22,7 +24,26 @@ export default class Card extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      paused: true
+      paused: true,
+      imageWidth: 0,
+      imageHeight: 0
+    }
+  }
+
+  componentWillMount () {
+    const { image } = this.props
+    if (image && image.uri) {
+      Image.getSize(image.uri, (width, height) => {
+        const maxWidth = Metrics.screenWidth - (Metrics.unit * 4)
+        if (maxWidth < width) {
+          this.setState({
+            imageWidth: maxWidth,
+            imageHeight: height * (maxWidth / width)
+          })
+        } else {
+          this.setState({ imageWidth: width, imageHeight: height })
+        }
+      })
     }
   }
 
@@ -43,12 +64,13 @@ export default class Card extends Component {
 
   render () {
     const { image, video, title, text, button, link, onPress = () => {}, style = {} } = this.props
-    const { paused } = this.state
+    const { paused, imageWidth, imageHeight } = this.state
+    const imageStyle = (imageWidth > 0) ? {width: imageWidth, height: imageHeight} : undefined
     return (
       <View>
         {image && (
           <View style={s.imageView}>
-            <Image source={image} />
+            <Image style={imageStyle} source={image} />
           </View>
         )}
         {!image && video && (

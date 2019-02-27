@@ -43,6 +43,10 @@ export default {
   list: {
     separator: palette.lightgrey
   },
+  carousel: {
+    bubble: palette.white,
+    bubble_active: palette.primaryDark
+  },
   footer: {
     background: palette.primary
   }

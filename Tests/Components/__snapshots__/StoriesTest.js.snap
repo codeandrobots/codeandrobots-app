@@ -755,6 +755,7 @@ exports[`Storyshots Card Hello 1`] = `
           "process": [Function],
         }
       }
+      style={undefined}
     />
   </View>
   <View
@@ -872,6 +873,399 @@ exports[`Storyshots Card Hello 1`] = `
       >
         Learn More
       </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Storyshots Carousel Default 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "height": "100%",
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "justifyContent": "center",
+            "marginTop": 16,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#354052",
+              "fontFamily": "Roboto-Medium",
+              "fontSize": 16,
+            }
+          }
+        >
+          Page 1
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#F9BC62",
+        "bottom": 0,
+        "justifyContent": "center",
+        "left": 0,
+        "minHeight": 80,
+        "paddingBottom": 0,
+        "paddingTop": 0,
+        "position": "absolute",
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "marginHorizontal": 32,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignSelf": "center",
+              "backgroundColor": "white",
+              "borderRadius": 16,
+              "height": 8,
+              "marginHorizontal": 4,
+              "width": 8,
+            },
+            Object {
+              "backgroundColor": "#354052",
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignSelf": "center",
+            "backgroundColor": "white",
+            "borderRadius": 16,
+            "height": 8,
+            "marginHorizontal": 4,
+            "width": 8,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignSelf": "center",
+            "backgroundColor": "white",
+            "borderRadius": 16,
+            "height": 8,
+            "marginHorizontal": 4,
+            "width": 8,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignSelf": "center",
+            "backgroundColor": "white",
+            "borderRadius": 16,
+            "height": 8,
+            "marginHorizontal": 4,
+            "width": 8,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      />
+      <View
+        style={undefined}
+      >
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          collapsable={undefined}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          nativeID={undefined}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "white",
+              "borderColor": "#FCE2BA",
+              "borderRadius": 100,
+              "borderWidth": 8,
+              "minWidth": 112,
+              "opacity": 1,
+              "paddingHorizontal": 24,
+              "paddingVertical": 8,
+            }
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#354052",
+                "fontFamily": "Roboto-Medium",
+                "fontSize": 18,
+                "textAlign": "center",
+              }
+            }
+          >
+            Next
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Storyshots Carousel Dilbert 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "height": "100%",
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "justifyContent": "center",
+            "marginVertical": 24,
+            "width": "100%",
+          }
+        }
+      >
+        <Image
+          source={
+            Object {
+              "uri": "https://i.imgur.com/eMuml0e.png",
+            }
+          }
+          style={undefined}
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "justifyContent": "center",
+            "marginTop": 16,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#354052",
+              "fontFamily": "Roboto-Medium",
+              "fontSize": 16,
+            }
+          }
+        >
+          Dilbert.com
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "justifyContent": "center",
+            "marginBottom": 24,
+            "marginTop": 8,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#354052",
+              "fontFamily": "Roboto-Medium",
+              "fontSize": 16,
+              "marginHorizontal": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+          by @ScottAdamSays
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#F9BC62",
+        "bottom": 0,
+        "justifyContent": "center",
+        "left": 0,
+        "minHeight": 80,
+        "paddingBottom": 0,
+        "paddingTop": 0,
+        "position": "absolute",
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "marginHorizontal": 32,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignSelf": "center",
+              "backgroundColor": "white",
+              "borderRadius": 16,
+              "height": 8,
+              "marginHorizontal": 4,
+              "width": 8,
+            },
+            Object {
+              "backgroundColor": "#354052",
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignSelf": "center",
+            "backgroundColor": "white",
+            "borderRadius": 16,
+            "height": 8,
+            "marginHorizontal": 4,
+            "width": 8,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignSelf": "center",
+            "backgroundColor": "white",
+            "borderRadius": 16,
+            "height": 8,
+            "marginHorizontal": 4,
+            "width": 8,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      />
+      <View
+        style={undefined}
+      >
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          collapsable={undefined}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          nativeID={undefined}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "white",
+              "borderColor": "#FCE2BA",
+              "borderRadius": 100,
+              "borderWidth": 8,
+              "minWidth": 112,
+              "opacity": 1,
+              "paddingHorizontal": 24,
+              "paddingVertical": 8,
+            }
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#354052",
+                "fontFamily": "Roboto-Medium",
+                "fontSize": 18,
+                "textAlign": "center",
+              }
+            }
+          >
+            Next
+          </Text>
+        </View>
+      </View>
     </View>
   </View>
 </View>
