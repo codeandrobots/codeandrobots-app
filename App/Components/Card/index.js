@@ -30,21 +30,33 @@ export default class Card extends Component {
     }
   }
 
-  componentWillMount () {
+  async componentDidMount () {
+    this._isMounted = true
     const { image } = this.props
     if (image && image.uri) {
-      Image.getSize(image.uri, (width, height) => {
-        const maxWidth = Metrics.screenWidth - (Metrics.unit * 4)
-        if (maxWidth < width) {
-          this.setState({
-            imageWidth: maxWidth,
-            imageHeight: height * (maxWidth / width)
-          })
-        } else {
-          this.setState({ imageWidth: width, imageHeight: height })
-        }
-      })
+      const { width, height } = await this.getImageSize(image.uri)
+      if (this._isMounted) {
+        this.setState({ imageWidth: width, imageHeight: height })
+      }
     }
+  }
+
+  componentWillUnmount () {
+    this._isMounted = false
+  }
+
+  getImageSize (imageUri) {
+    return new Promise((resolve, reject) => {
+      Image.getSize(imageUri,
+        (width, height) => {
+          const maxWidth = Metrics.screenWidth - (Metrics.unit * 4)
+          const size = (maxWidth < width)
+            ? { width: maxWidth, height: height * (maxWidth / width) }
+            : { width, height }
+          resolve(size)
+        },
+        reject)
+    })
   }
 
   onVideoToggle = () => {
