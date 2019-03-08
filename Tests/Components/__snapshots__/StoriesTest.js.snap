@@ -356,115 +356,131 @@ exports[`Storyshots BottomNav Default 1`] = `
 
 exports[`Storyshots Button Default 1`] = `
 <View
-  style={undefined}
+  style={
+    Object {
+      "margin": 16,
+    }
+  }
 >
   <View
-    accessibilityComponentType={undefined}
-    accessibilityLabel={undefined}
-    accessibilityTraits={undefined}
-    accessible={true}
-    collapsable={undefined}
-    hasTVPreferredFocus={undefined}
-    hitSlop={undefined}
-    isTVSelectable={true}
-    nativeID={undefined}
-    onLayout={undefined}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "backgroundColor": "white",
-        "borderColor": "#FCE2BA",
-        "borderRadius": 100,
-        "borderWidth": 8,
-        "minWidth": 112,
-        "opacity": 1,
-        "paddingHorizontal": 24,
-        "paddingVertical": 8,
-      }
-    }
-    testID={undefined}
-    tvParallaxProperties={undefined}
+    style={undefined}
   >
-    <Text
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
       accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
+      collapsable={undefined}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "color": "#354052",
-          "fontFamily": "Roboto-Medium",
-          "fontSize": 18,
-          "textAlign": "center",
+          "backgroundColor": "white",
+          "borderColor": "#FCE2BA",
+          "borderRadius": 100,
+          "borderWidth": 8,
+          "minWidth": 112,
+          "opacity": 1,
+          "paddingHorizontal": 24,
+          "paddingVertical": 8,
         }
       }
+      testID={undefined}
+      tvParallaxProperties={undefined}
     >
-      Click Me
-    </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#354052",
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 18,
+            "textAlign": "center",
+          }
+        }
+      >
+        Click Me
+      </Text>
+    </View>
   </View>
 </View>
 `;
 
 exports[`Storyshots Button Disabled 1`] = `
 <View
-  style={undefined}
+  style={
+    Object {
+      "margin": 16,
+    }
+  }
 >
   <View
-    accessibilityComponentType={undefined}
-    accessibilityLabel={undefined}
-    accessibilityTraits={undefined}
-    accessible={true}
-    collapsable={undefined}
-    hasTVPreferredFocus={undefined}
-    hitSlop={undefined}
-    isTVSelectable={true}
-    nativeID={undefined}
-    onLayout={undefined}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "backgroundColor": "white",
-        "borderColor": "#DFDFDF",
-        "borderRadius": 100,
-        "borderWidth": 8,
-        "minWidth": 112,
-        "opacity": 1,
-        "paddingHorizontal": 24,
-        "paddingVertical": 8,
-      }
-    }
-    testID={undefined}
-    tvParallaxProperties={undefined}
+    style={undefined}
   >
-    <Text
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
       accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
+      collapsable={undefined}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
-        Array [
-          Object {
-            "color": "#354052",
-            "fontFamily": "Roboto-Medium",
-            "fontSize": 18,
-            "textAlign": "center",
-          },
-          Object {
-            "color": "#9B9B9B",
-          },
-        ]
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "#DFDFDF",
+          "borderRadius": 100,
+          "borderWidth": 8,
+          "minWidth": 112,
+          "opacity": 1,
+          "paddingHorizontal": 24,
+          "paddingVertical": 8,
+        }
       }
+      testID={undefined}
+      tvParallaxProperties={undefined}
     >
-      Locked
-    </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#354052",
+              "fontFamily": "Roboto-Medium",
+              "fontSize": 18,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#9B9B9B",
+            },
+          ]
+        }
+      >
+        Locked
+      </Text>
+    </View>
   </View>
 </View>
 `;
@@ -6744,7 +6760,7 @@ exports[`Storyshots NavButton Default 1`] = `
 </View>
 `;
 
-exports[`Storyshots Web Code&Robotos 1`] = `
+exports[`Storyshots Web Code&Robots 1`] = `
 <View
   style={
     Object {
