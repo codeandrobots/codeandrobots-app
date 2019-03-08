@@ -4,13 +4,15 @@ import { View, Modal as RNModal } from 'react-native'
 import PropTypes from 'prop-types'
 
 import { TouchableOpacity, TouchableWithoutFeedback, Icon } from 'App/Components'
+import NotReady from './NotReady'
 
 import s from './Styles'
 
 export default class Modal extends Component {
   static propTypes = {
     show: PropTypes.bool.isRequired,
-    onHidePress: PropTypes.func
+    onHidePress: PropTypes.func,
+    template: PropTypes.string
   }
 
   constructor (props) {
@@ -27,7 +29,7 @@ export default class Modal extends Component {
   }
 
   render () {
-    const { style = undefined } = this.props
+    const { style = undefined, template } = this.props
     const { show } = this.state
     return (
       <RNModal
@@ -41,7 +43,10 @@ export default class Modal extends Component {
                 <TouchableOpacity style={s.close} onPress={this.onHidePress}>
                   <Icon name='close' />
                 </TouchableOpacity>
-                {this.props.children}
+                {!template && this.props.children}
+                {template && template === 'NotReady' && (
+                  <NotReady />
+                )}
               </View>
             </TouchableWithoutFeedback>
           </View>
