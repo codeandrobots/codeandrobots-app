@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 
-import { Styles, Metrics, Colors } from 'App/Themes'
+import { Styles, Metrics, Colors, Fonts } from 'App/Themes'
 
 export default StyleSheet.create({
   ...Styles,
@@ -30,6 +30,13 @@ export default StyleSheet.create({
     backgroundColor: Colors.transparent
   },
   itemView_featured: {
+    flex: 0,
+    flexDirection: 'column',
+    padding: 0,
+    width: (Metrics.screenWidth / 2) - (Metrics.unit * 3),
+    backgroundColor: Colors.transparent
+  },
+  itemView_stat: {
     flex: 0,
     flexDirection: 'column',
     padding: 0,
@@ -113,5 +120,20 @@ export default StyleSheet.create({
   buttonView_featured: {
     flex: 1,
     alignItems: 'center'
+  },
+  statView: {
+    ...Styles.row
+  },
+  stat: {
+    ...Styles.column,
+    marginLeft: Metrics.unit / 2
+  },
+  statTitle: {
+    ...Styles.text,
+    color: Colors.primary
+  },
+  statValue: {
+    ...Styles.text,
+    fontSize: Fonts.size.large
   }
 })

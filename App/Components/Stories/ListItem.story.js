@@ -7,7 +7,8 @@ import {
   ListItem,
   SquareListItem,
   CompactListItem,
-  FeaturedListItem } from '../ListItems'
+  FeaturedListItem,
+  StatListItem } from '../ListItems'
 
 storiesOf('ListItem', module)
   .add('Default', () => (
@@ -42,4 +43,7 @@ storiesOf('ListItem', module)
   ))
   .add('Featured Disabled', () => (
     <FeaturedListItem icon='lock' title='Pro Level' disabled onPress={() => {}} />
+  ))
+  .add('Stat', () => (
+    <StatListItem icon='bluetooth' title='bluetooth' value='Connected' />
   ))

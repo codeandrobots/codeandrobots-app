@@ -4010,6 +4010,602 @@ exports[`Storyshots List Lessons 1`] = `
 </View>
 `;
 
+exports[`Storyshots List Stats 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "margin": 8,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#F9BC62",
+            "borderRadius": 8,
+            "flexDirection": "row",
+            "margin": 8,
+            "padding": 8,
+          },
+          Object {
+            "backgroundColor": "transparent",
+            "flex": 0,
+            "flexDirection": "column",
+            "padding": 0,
+            "width": 351,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#354052",
+                "fontSize": 24,
+              },
+              undefined,
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "column",
+                "marginLeft": 4,
+              },
+            ]
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#354052",
+                "fontFamily": "Roboto-Medium",
+                "fontSize": 18,
+              }
+            }
+          >
+            Connected
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#F9BC62",
+                "fontFamily": "Roboto-Medium",
+                "fontSize": 16,
+              }
+            }
+          >
+            bluetooth
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#F9BC62",
+            "borderRadius": 8,
+            "flexDirection": "row",
+            "margin": 8,
+            "padding": 8,
+          },
+          Object {
+            "backgroundColor": "transparent",
+            "flex": 0,
+            "flexDirection": "column",
+            "padding": 0,
+            "width": 351,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#354052",
+                "fontSize": 24,
+              },
+              undefined,
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "column",
+                "marginLeft": 4,
+              },
+            ]
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#354052",
+                "fontFamily": "Roboto-Medium",
+                "fontSize": 18,
+              }
+            }
+          >
+            85%
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#F9BC62",
+                "fontFamily": "Roboto-Medium",
+                "fontSize": 16,
+              }
+            }
+          >
+            battery
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#F9BC62",
+            "borderRadius": 8,
+            "flexDirection": "row",
+            "margin": 8,
+            "padding": 8,
+          },
+          Object {
+            "backgroundColor": "transparent",
+            "flex": 0,
+            "flexDirection": "column",
+            "padding": 0,
+            "width": 351,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#354052",
+                "fontSize": 24,
+              },
+              undefined,
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "column",
+                "marginLeft": 4,
+              },
+            ]
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#354052",
+                "fontFamily": "Roboto-Medium",
+                "fontSize": 18,
+              }
+            }
+          >
+            4.8h
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#F9BC62",
+                "fontFamily": "Roboto-Medium",
+                "fontSize": 16,
+              }
+            }
+          >
+            playtime
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#F9BC62",
+            "borderRadius": 8,
+            "flexDirection": "row",
+            "margin": 8,
+            "padding": 8,
+          },
+          Object {
+            "backgroundColor": "transparent",
+            "flex": 0,
+            "flexDirection": "column",
+            "padding": 0,
+            "width": 351,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#354052",
+                "fontSize": 24,
+              },
+              undefined,
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "column",
+                "marginLeft": 4,
+              },
+            ]
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#354052",
+                "fontFamily": "Roboto-Medium",
+                "fontSize": 18,
+              }
+            }
+          >
+            5
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#F9BC62",
+                "fontFamily": "Roboto-Medium",
+                "fontSize": 16,
+              }
+            }
+          >
+            remixes
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#F9BC62",
+            "borderRadius": 8,
+            "flexDirection": "row",
+            "margin": 8,
+            "padding": 8,
+          },
+          Object {
+            "backgroundColor": "transparent",
+            "flex": 0,
+            "flexDirection": "column",
+            "padding": 0,
+            "width": 351,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#354052",
+                "fontSize": 24,
+              },
+              undefined,
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "column",
+                "marginLeft": 4,
+              },
+            ]
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#354052",
+                "fontFamily": "Roboto-Medium",
+                "fontSize": 18,
+              }
+            }
+          >
+            2
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#F9BC62",
+                "fontFamily": "Roboto-Medium",
+                "fontSize": 16,
+              }
+            }
+          >
+            lessons
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#F9BC62",
+            "borderRadius": 8,
+            "flexDirection": "row",
+            "margin": 8,
+            "padding": 8,
+          },
+          Object {
+            "backgroundColor": "transparent",
+            "flex": 0,
+            "flexDirection": "column",
+            "padding": 0,
+            "width": 351,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#354052",
+                "fontSize": 24,
+              },
+              undefined,
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "column",
+                "marginLeft": 4,
+              },
+            ]
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#354052",
+                "fontFamily": "Roboto-Medium",
+                "fontSize": 18,
+              }
+            }
+          >
+            1
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#F9BC62",
+                "fontFamily": "Roboto-Medium",
+                "fontSize": 16,
+              }
+            }
+          >
+            level
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
 exports[`Storyshots ListHeader Default 1`] = `
 <View
   style={
@@ -5949,6 +6545,102 @@ exports[`Storyshots ListItem Square Disabled 1`] = `
           </View>
         </View>
       </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Storyshots ListItem Stat 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#F9BC62",
+        "borderRadius": 8,
+        "flexDirection": "row",
+        "margin": 8,
+        "padding": 8,
+      },
+      Object {
+        "backgroundColor": "transparent",
+        "flex": 0,
+        "flexDirection": "column",
+        "padding": 0,
+        "width": 351,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+        },
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={false}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#354052",
+            "fontSize": 24,
+          },
+          undefined,
+          Object {
+            "fontFamily": "FontAwesome",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "column",
+            "marginLeft": 4,
+          },
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#354052",
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 18,
+          }
+        }
+      >
+        Connected
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#F9BC62",
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 16,
+          }
+        }
+      >
+        bluetooth
+      </Text>
     </View>
   </View>
 </View>

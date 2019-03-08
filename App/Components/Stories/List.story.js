@@ -9,7 +9,8 @@ import {
   ListItem,
   SquareListItem,
   CompactListItem,
-  FeaturedListItem } from '../ListItems'
+  FeaturedListItem,
+  StatListItem } from '../ListItems'
 
 storiesOf('List', module)
   .add('Default', () => (
@@ -38,5 +39,15 @@ storiesOf('List', module)
       <FeaturedListItem image={Images.featured.led} title='Blink' onPress={() => {}} />
       <FeaturedListItem icon='rocket' iconColor={Colors.black} title='Fly' onPress={() => {}} />
       <FeaturedListItem icon={'heartbeat'} iconColor={Colors.red} title='Heart Beat' onPress={() => {}} />
+    </List>
+  ))
+  .add('Stats', () => (
+    <List cols={2}>
+      <StatListItem icon='bluetooth' title='bluetooth' value='Connected' />
+      <StatListItem icon='battery' title='battery' value='85%' />
+      <StatListItem icon='play' title='playtime' value='4.8h' />
+      <StatListItem icon='code' title='remixes' value='5' />
+      <StatListItem icon='book' title='lessons' value='2' />
+      <StatListItem icon='gamepad' title='level' value='1' />
     </List>
   ))
