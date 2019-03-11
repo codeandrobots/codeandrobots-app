@@ -70,6 +70,10 @@ export class SettingsContainer extends Component {
     this.props.navigation.navigate('WebScreen', { source: Config.ABOUT_URL })
   }
 
+  onPrivacyPress = () => {
+    this.props.navigation.navigate('WebScreen', { source: Config.PRIVACY_URL })
+  }
+
   render () {
     return (
       <Screen
@@ -82,6 +86,7 @@ export class SettingsContainer extends Component {
         onFAQPress={this.onFAQPress}
         onSupportPress={this.onSupportPress}
         onAboutPress={this.onAboutPress}
+        onPrivacyPress={this.onPrivacyPress}
       />
     )
   }

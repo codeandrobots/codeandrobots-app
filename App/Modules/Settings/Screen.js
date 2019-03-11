@@ -14,7 +14,8 @@ export default class Screen extends Component {
     onFeedbackPress: PropTypes.func.isRequired,
     onFAQPress: PropTypes.func.isRequired,
     onSupportPress: PropTypes.func.isRequired,
-    onAboutPress: PropTypes.func.isRequired
+    onAboutPress: PropTypes.func.isRequired,
+    onPrivacyPress: PropTypes.func.isRequired
   }
 
   render () {
@@ -23,7 +24,8 @@ export default class Screen extends Component {
       onFeedbackPress,
       onFAQPress,
       onSupportPress,
-      onAboutPress} = this.props
+      onAboutPress,
+      onPrivacyPress} = this.props
     return (
       <Container>
         <CompactListItem title='Share app with a friend' onPress={onShareAppPress} />
@@ -36,6 +38,7 @@ export default class Screen extends Component {
             <Link text='FAQ' onPress={onFAQPress} />
             <Link text='Support' onPress={onSupportPress} />
             <Link text='About' onPress={onAboutPress} />
+            <Link text='Privacy' onPress={onPrivacyPress} />
           </Links>
         </Footer>
       </Container>

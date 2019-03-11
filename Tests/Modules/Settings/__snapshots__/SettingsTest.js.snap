@@ -14,7 +14,7 @@ exports[`Settings Component renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "bottom": 224,
+        "bottom": 256,
         "display": "flex",
         "justifyContent": "center",
         "position": "absolute",
@@ -50,6 +50,10 @@ exports[`Settings Component renders correctly 1`] = `
       <Link
         onPress={[Function]}
         text="About"
+      />
+      <Link
+        onPress={[Function]}
+        text="Privacy"
       />
     </Links>
   </Footer>

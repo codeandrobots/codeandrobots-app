@@ -15,7 +15,8 @@ describe('Settings', () => {
         onFeedbackPress={() => {}}
         onFAQPress={() => {}}
         onSupportPress={() => {}}
-        onAboutPress={() => {}} />)
+        onAboutPress={() => {}}
+        onPrivacyPress={() => {}} />)
   })
 
   it('Component renders correctly', () => {
