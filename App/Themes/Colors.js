@@ -19,10 +19,10 @@ export default {
   background: palette.offwhite,
   background_disabled: palette.lightgrey,
   statusBar: {
-    background: palette.primary
+    background: palette.offwhite
   },
   nav: {
-    background: palette.primary,
+    background: palette.offwhite,
     text: palette.black
   },
   text: palette.primaryDark,

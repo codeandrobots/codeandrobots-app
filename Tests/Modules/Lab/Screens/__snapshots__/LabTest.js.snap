@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lab Component renders correctly 1`] = `
+<Container>
+  <List
+    cols={2}
+    style={
+      Object {
+        "margin": 16,
+      }
+    }
+  >
+    <SquareListItem
+      icon="bluetooth"
+      title="bluetooth"
+      value="Connected"
+    />
+    <SquareListItem
+      icon="battery"
+      title="battery"
+      value="85%"
+    />
+    <SquareListItem
+      icon="play"
+      title="playtime"
+      value="4.8h"
+    />
+    <SquareListItem
+      icon="code"
+      title="remixes"
+      value="5"
+    />
+    <SquareListItem
+      icon="book"
+      title="lessons"
+      value="2"
+    />
+    <SquareListItem
+      icon="gamepad"
+      title="level"
+      value="1"
+    />
+  </List>
+  <Modal
+    onHidePress={[Function]}
+    show={false}
+    template="NotReady"
+  />
+  <Footer>
+    <Links>
+      <Link
+        onPress={[Function]}
+        text="Shop"
+      />
+      <Link
+        onPress={[Function]}
+        text="Customize"
+      />
+      <Link
+        onPress={[Function]}
+        text="Add a buddy"
+      />
+      <Link
+        onPress={[Function]}
+        text="View logs"
+      />
+    </Links>
+  </Footer>
+</Container>
+`;

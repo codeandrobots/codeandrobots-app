@@ -486,7 +486,9 @@ exports[`Storyshots Button Disabled 1`] = `
 `;
 
 exports[`Storyshots Card Atlas 1`] = `
-<View>
+<View
+  style={undefined}
+>
   <View
     accessibilityComponentType={undefined}
     accessibilityLabel={undefined}
@@ -646,13 +648,18 @@ exports[`Storyshots Card Atlas 1`] = `
   </View>
   <View
     style={
-      Object {
-        "alignItems": "center",
-        "display": "flex",
-        "justifyContent": "center",
-        "marginTop": 16,
-        "width": "100%",
-      }
+      Array [
+        Object {
+          "marginTop": 16,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "justifyContent": "center",
+          "width": "100%",
+        },
+        undefined,
+      ]
     }
   >
     <Text
@@ -660,11 +667,16 @@ exports[`Storyshots Card Atlas 1`] = `
       allowFontScaling={true}
       ellipsizeMode="tail"
       style={
-        Object {
-          "color": "#354052",
-          "fontFamily": "Roboto-Medium",
-          "fontSize": 16,
-        }
+        Array [
+          Object {
+            "color": "#354052",
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 16,
+          },
+          Object {
+            "textAlign": "center",
+          },
+        ]
       }
     >
       🤖⬆️
@@ -672,14 +684,19 @@ exports[`Storyshots Card Atlas 1`] = `
   </View>
   <View
     style={
-      Object {
-        "alignItems": "center",
-        "display": "flex",
-        "justifyContent": "center",
-        "marginBottom": 24,
-        "marginTop": 8,
-        "width": "100%",
-      }
+      Array [
+        Object {
+          "marginBottom": 24,
+          "marginTop": 8,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "justifyContent": "center",
+          "width": "100%",
+        },
+        undefined,
+      ]
     }
   >
     <Text
@@ -687,13 +704,16 @@ exports[`Storyshots Card Atlas 1`] = `
       allowFontScaling={true}
       ellipsizeMode="tail"
       style={
-        Object {
-          "color": "#354052",
-          "fontFamily": "Roboto-Medium",
-          "fontSize": 16,
-          "marginHorizontal": 16,
-          "textAlign": "center",
-        }
+        Array [
+          Object {
+            "color": "#354052",
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 16,
+          },
+          Object {
+            "textAlign": "center",
+          },
+        ]
       }
     >
       Jump, Atlas, Jump!
@@ -753,7 +773,9 @@ exports[`Storyshots Card Atlas 1`] = `
 `;
 
 exports[`Storyshots Card Hello 1`] = `
-<View>
+<View
+  style={undefined}
+>
   <View
     style={
       Object {
@@ -776,13 +798,18 @@ exports[`Storyshots Card Hello 1`] = `
   </View>
   <View
     style={
-      Object {
-        "alignItems": "center",
-        "display": "flex",
-        "justifyContent": "center",
-        "marginTop": 16,
-        "width": "100%",
-      }
+      Array [
+        Object {
+          "marginTop": 16,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "justifyContent": "center",
+          "width": "100%",
+        },
+        undefined,
+      ]
     }
   >
     <Text
@@ -790,11 +817,16 @@ exports[`Storyshots Card Hello 1`] = `
       allowFontScaling={true}
       ellipsizeMode="tail"
       style={
-        Object {
-          "color": "#354052",
-          "fontFamily": "Roboto-Medium",
-          "fontSize": 16,
-        }
+        Array [
+          Object {
+            "color": "#354052",
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 16,
+          },
+          Object {
+            "textAlign": "center",
+          },
+        ]
       }
     >
       HELLO
@@ -802,14 +834,19 @@ exports[`Storyshots Card Hello 1`] = `
   </View>
   <View
     style={
-      Object {
-        "alignItems": "center",
-        "display": "flex",
-        "justifyContent": "center",
-        "marginBottom": 24,
-        "marginTop": 8,
-        "width": "100%",
-      }
+      Array [
+        Object {
+          "marginBottom": 24,
+          "marginTop": 8,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "justifyContent": "center",
+          "width": "100%",
+        },
+        undefined,
+      ]
     }
   >
     <Text
@@ -817,13 +854,16 @@ exports[`Storyshots Card Hello 1`] = `
       allowFontScaling={true}
       ellipsizeMode="tail"
       style={
-        Object {
-          "color": "#354052",
-          "fontFamily": "Roboto-Medium",
-          "fontSize": 16,
-          "marginHorizontal": 16,
-          "textAlign": "center",
-        }
+        Array [
+          Object {
+            "color": "#354052",
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 16,
+          },
+          Object {
+            "textAlign": "center",
+          },
+        ]
       }
     >
       Welcome to Code&Robots
@@ -900,19 +940,27 @@ exports[`Storyshots Carousel Default 1`] = `
     style={
       Object {
         "height": "100%",
+        "marginHorizontal": 8,
       }
     }
   >
-    <View>
+    <View
+      style={undefined}
+    >
       <View
         style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "justifyContent": "center",
-            "marginTop": 16,
-            "width": "100%",
-          }
+          Array [
+            Object {
+              "marginTop": 16,
+            },
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "justifyContent": "center",
+              "width": "100%",
+            },
+            undefined,
+          ]
         }
       >
         <Text
@@ -920,11 +968,16 @@ exports[`Storyshots Carousel Default 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Object {
-              "color": "#354052",
-              "fontFamily": "Roboto-Medium",
-              "fontSize": 16,
-            }
+            Array [
+              Object {
+                "color": "#354052",
+                "fontFamily": "Roboto-Medium",
+                "fontSize": 16,
+              },
+              Object {
+                "textAlign": "center",
+              },
+            ]
           }
         >
           Page 1
@@ -1078,10 +1131,13 @@ exports[`Storyshots Carousel Dilbert 1`] = `
     style={
       Object {
         "height": "100%",
+        "marginHorizontal": 8,
       }
     }
   >
-    <View>
+    <View
+      style={undefined}
+    >
       <View
         style={
           Object {
@@ -1104,13 +1160,18 @@ exports[`Storyshots Carousel Dilbert 1`] = `
       </View>
       <View
         style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "justifyContent": "center",
-            "marginTop": 16,
-            "width": "100%",
-          }
+          Array [
+            Object {
+              "marginTop": 16,
+            },
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "justifyContent": "center",
+              "width": "100%",
+            },
+            undefined,
+          ]
         }
       >
         <Text
@@ -1118,11 +1179,16 @@ exports[`Storyshots Carousel Dilbert 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Object {
-              "color": "#354052",
-              "fontFamily": "Roboto-Medium",
-              "fontSize": 16,
-            }
+            Array [
+              Object {
+                "color": "#354052",
+                "fontFamily": "Roboto-Medium",
+                "fontSize": 16,
+              },
+              Object {
+                "textAlign": "center",
+              },
+            ]
           }
         >
           Dilbert.com
@@ -1130,14 +1196,19 @@ exports[`Storyshots Carousel Dilbert 1`] = `
       </View>
       <View
         style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "justifyContent": "center",
-            "marginBottom": 24,
-            "marginTop": 8,
-            "width": "100%",
-          }
+          Array [
+            Object {
+              "marginBottom": 24,
+              "marginTop": 8,
+            },
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "justifyContent": "center",
+              "width": "100%",
+            },
+            undefined,
+          ]
         }
       >
         <Text
@@ -1145,13 +1216,16 @@ exports[`Storyshots Carousel Dilbert 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Object {
-              "color": "#354052",
-              "fontFamily": "Roboto-Medium",
-              "fontSize": 16,
-              "marginHorizontal": 16,
-              "textAlign": "center",
-            }
+            Array [
+              Object {
+                "color": "#354052",
+                "fontFamily": "Roboto-Medium",
+                "fontSize": 16,
+              },
+              Object {
+                "textAlign": "center",
+              },
+            ]
           }
         >
           by @ScottAdamSays
@@ -1915,7 +1989,7 @@ exports[`Storyshots List Default 1`] = `
   style={
     Array [
       Object {
-        "margin": 8,
+        "marginBottom": 8,
       },
       undefined,
     ]
@@ -2384,7 +2458,7 @@ exports[`Storyshots List Featured 1`] = `
   style={
     Array [
       Object {
-        "margin": 8,
+        "marginBottom": 8,
       },
       undefined,
     ]
@@ -2821,7 +2895,7 @@ exports[`Storyshots List Games 1`] = `
   style={
     Array [
       Object {
-        "margin": 8,
+        "marginBottom": 8,
       },
       undefined,
     ]
@@ -3465,7 +3539,7 @@ exports[`Storyshots List Lessons 1`] = `
   style={
     Array [
       Object {
-        "margin": 8,
+        "marginBottom": 8,
       },
       undefined,
     ]
@@ -4031,7 +4105,7 @@ exports[`Storyshots List Stats 1`] = `
   style={
     Array [
       Object {
-        "margin": 8,
+        "marginBottom": 8,
       },
       undefined,
     ]
@@ -6978,7 +7052,9 @@ exports[`Storyshots Modal Not Ready 1`] = `
             
           </Text>
         </View>
-        <View>
+        <View
+          style={undefined}
+        >
           <View
             style={
               Object {
@@ -7001,14 +7077,19 @@ exports[`Storyshots Modal Not Ready 1`] = `
           </View>
           <View
             style={
-              Object {
-                "alignItems": "center",
-                "display": "flex",
-                "justifyContent": "center",
-                "marginBottom": 24,
-                "marginTop": 8,
-                "width": "100%",
-              }
+              Array [
+                Object {
+                  "marginBottom": 24,
+                  "marginTop": 8,
+                },
+                Object {
+                  "alignItems": "center",
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "width": "100%",
+                },
+                undefined,
+              ]
             }
           >
             <Text
@@ -7016,13 +7097,16 @@ exports[`Storyshots Modal Not Ready 1`] = `
               allowFontScaling={true}
               ellipsizeMode="tail"
               style={
-                Object {
-                  "color": "#354052",
-                  "fontFamily": "Roboto-Medium",
-                  "fontSize": 16,
-                  "marginHorizontal": 16,
-                  "textAlign": "center",
-                }
+                Array [
+                  Object {
+                    "color": "#354052",
+                    "fontFamily": "Roboto-Medium",
+                    "fontSize": 16,
+                  },
+                  Object {
+                    "textAlign": "center",
+                  },
+                ]
               }
             >
               Sorry, that feature is still under construction 🚧

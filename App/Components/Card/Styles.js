@@ -13,13 +13,17 @@ export default StyleSheet.create({
     marginVertical: Metrics.unit * 3
   },
   titleView: {
-    ...Styles.centered,
     marginTop: Metrics.unit * 2
   },
+  titleView_padded: {
+    paddingHorizontal: Metrics.unit * 2
+  },
   textView: {
-    ...Styles.centered,
     marginTop: Metrics.unit,
     marginBottom: Metrics.unit * 3
+  },
+  textView_padded: {
+    paddingHorizontal: Metrics.unit * 2
   },
   videoPlayer: {
     marginHorizontal: Metrics.unit * 2,
@@ -30,14 +34,6 @@ export default StyleSheet.create({
   videoButton: {
     position: 'absolute',
     zIndex: 9999
-  },
-  title: {
-    ...Styles.text
-  },
-  text: {
-    ...Styles.text,
-    ...Styles.text_center,
-    marginHorizontal: Metrics.unit * 2
   },
   link: {
     fontSize: Fonts.medium

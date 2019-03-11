@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Discover Component renders correctly 1`] = `
+<Container>
+  <ScrollView
+    style={
+      Object {
+        "marginBottom": 210,
+      }
+    }
+  >
+    <List
+      cols={2}
+      title="Featured"
+    >
+      <SquareListItem
+        image={
+          Object {
+            "process": [Function],
+          }
+        }
+        onPress={[Function]}
+        title="Blink"
+      />
+      <SquareListItem
+        icon="heartbeat"
+        iconColor="red"
+        onPress={[Function]}
+        title="Heart Beat"
+      />
+    </List>
+    <List
+      title="Projects"
+    >
+      <CompactListItem
+        icon="circle-o"
+        onPress={[Function]}
+        title="Hello World"
+      />
+      <CompactListItem
+        icon="circle-o"
+        onPress={[Function]}
+        title="Dance Show"
+      />
+    </List>
+  </ScrollView>
+  <Modal
+    onHidePress={[Function]}
+    show={false}
+    template="NotReady"
+  />
+  <Footer
+    style={
+      Object {
+        "paddingTop": 0,
+      }
+    }
+  >
+    <Card
+      button="Code Lab"
+      onPress={[Function]}
+      style={
+        Object {
+          "textView": Object {
+            "marginBottom": 8,
+          },
+        }
+      }
+      text="Get inspired by what you can create. Build your own creations or remix others to jumpstart your ideas."
+      textAlign="left"
+      title="DISCOVER"
+    />
+  </Footer>
+</Container>
+`;

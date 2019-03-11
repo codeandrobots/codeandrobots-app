@@ -1,36 +1,43 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import { Container, Card, BottomNav } from 'App/Components'
-
-import { Images } from 'App/Themes'
+import { Container, List, ListItem, BottomNav } from 'App/Components'
 
 export default class Screen extends Component {
   static propTypes = {
-    onLearnMorePress: PropTypes.func.isRequired,
-    onRatePress: PropTypes.func.isRequired,
-    onHomePress: PropTypes.func.isRequired,
-    onSettingsPress: PropTypes.func.isRequired
+    onNavigatePress: PropTypes.func.isRequired
   }
 
   render () {
-    const {
-      onLearnMorePress,
-      onRatePress,
-      onHomePress,
-      onSettingsPress} = this.props
+    const { onNavigatePress } = this.props
     return (
       <Container>
-        <Card
-          image={Images.hello}
-          title='HELLO'
-          text={'The app is ready! Sorry, almost ready :)\n\nThe good news is you can follow along as this Beta version of the app develops over the coming weeks.'}
-          button='Learn More'
-          onPress={onLearnMorePress} />
+        <List>
+          <ListItem
+            title='Play & Explore'
+            text='Let’s play'
+            button='Play'
+            onPress={() => { onNavigatePress('PlayScreen') }} />
+          <ListItem
+            title='Discover'
+            text='Let’s see what you can do'
+            button='Discover'
+            onPress={() => { onNavigatePress('DiscoverScreen') }} />
+          <ListItem
+            title='Learn Mode'
+            text='You’ll be a guru in no time'
+            button='Learn'
+            onPress={() => { onNavigatePress('LearnScreen') }} />
+          <ListItem
+            title='Lab'
+            text='Get under the hood'
+            button='Lab'
+            onPress={() => { onNavigatePress('LabScreen') }} />
+        </List>
         <BottomNav
-          onRatePress={onRatePress}
-          onHomePress={onHomePress}
-          onSettingsPress={onSettingsPress} />
+          onRatePress={() => { onNavigatePress('RateScreen') }}
+          onHomePress={() => {}}
+          onSettingsPress={() => { onNavigatePress('SettingsScreen') }} />
       </Container>
     )
   }

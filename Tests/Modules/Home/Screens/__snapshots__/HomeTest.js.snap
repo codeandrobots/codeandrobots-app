@@ -2,19 +2,32 @@
 
 exports[`Home Component renders correctly 1`] = `
 <Container>
-  <Card
-    button="Learn More"
-    image={
-      Object {
-        "process": [Function],
-      }
-    }
-    onPress={[Function]}
-    text="The app is ready! Sorry, almost ready :)
-
-The good news is you can follow along as this Beta version of the app develops over the coming weeks."
-    title="HELLO"
-  />
+  <List>
+    <DefaultListItem
+      button="Play"
+      onPress={[Function]}
+      text="Let’s play"
+      title="Play & Explore"
+    />
+    <DefaultListItem
+      button="Discover"
+      onPress={[Function]}
+      text="Let’s see what you can do"
+      title="Discover"
+    />
+    <DefaultListItem
+      button="Learn"
+      onPress={[Function]}
+      text="You’ll be a guru in no time"
+      title="Learn Mode"
+    />
+    <DefaultListItem
+      button="Lab"
+      onPress={[Function]}
+      text="Get under the hood"
+      title="Lab"
+    />
+  </List>
   <BottomNav
     onHomePress={[Function]}
     onRatePress={[Function]}

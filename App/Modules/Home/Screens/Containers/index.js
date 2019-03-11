@@ -4,20 +4,8 @@ import { connect } from 'react-redux'
 import Screen from '../Components'
 
 export class HomeContainer extends Component {
-  onLearnMorePress = () => {
-    this.props.navigation.navigate('WebScreen', {
-      source: 'http://www.codeandrobots.com'
-    })
-  }
-
-  onRatePress = () => {
-    this.props.navigation.navigate('RateScreen')
-  }
-
-  onHomePress = () => {}
-
-  onSettingsPress = () => {
-    this.props.navigation.navigate('SettingsScreen')
+  onNavigatePress = (screen) => {
+    this.props.navigation.navigate(screen)
   }
 
   render () {
@@ -27,10 +15,7 @@ export class HomeContainer extends Component {
           this.screen = ref
         }}
         {...this.props}
-        onLearnMorePress={this.onLearnMorePress}
-        onRatePress={this.onRatePress}
-        onHomePress={this.onHomePress}
-        onSettingsPress={this.onSettingsPress}
+        onNavigatePress={this.onNavigatePress}
       />
     )
   }

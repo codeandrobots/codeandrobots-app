@@ -18,16 +18,18 @@ export default class ListHeader extends Component {
       count,
       completed } = this.props
 
-    const progress = (count > 0 && completed > 0) ? completed / count : 1
+    const progress = (count != null && completed != null)
+      ? (count > 0 && completed > 0) ? completed / count : 0
+      : 1
 
     return (
       <View style={[s.listHeaderView, style]}>
         <View style={s.listHeader}>
           <Text style={s.title}>{title.toUpperCase()}</Text>
-          {count && !completed && (
+          {count && completed === null && (
             <Text style={s.text}>{count}</Text>
           )}
-          {count && completed && (
+          {count && completed !== null && (
             <Text style={s.text}>{`${completed}/${count} COMPLETE`}</Text>
           )}
         </View>

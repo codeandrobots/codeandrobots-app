@@ -5,7 +5,7 @@ import { Styles, Metrics } from 'App/Themes'
 export default StyleSheet.create({
   ...Styles,
   listView: {
-    margin: Metrics.unit
+    marginBottom: Metrics.unit
   },
   title: {
     ...Styles.text,

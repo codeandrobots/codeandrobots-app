@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lessons Component renders correctly 1`] = `
+<Container>
+  <ScrollView
+    style={
+      Object {
+        "marginBottom": 210,
+      }
+    }
+  >
+    <List>
+      <ListHeader
+        title="Lessons"
+      />
+      <CompactListItem
+        icon="circle-o"
+        onPress={[Function]}
+        title="Get Started"
+      />
+      <CompactListItem
+        icon="circle-o"
+        onPress={[Function]}
+        title="Play Time"
+      />
+      <CompactListItem
+        icon="circle-o"
+        onPress={[Function]}
+        title="Customize"
+      />
+      <CompactListItem
+        icon="circle-o"
+        onPress={[Function]}
+        title="Code Remix"
+      />
+    </List>
+  </ScrollView>
+  <Modal
+    onHidePress={[Function]}
+    show={false}
+    template="NotReady"
+  />
+  <Footer
+    style={
+      Object {
+        "paddingTop": 0,
+      }
+    }
+  >
+    <Card
+      button="Start"
+      onPress={[Function]}
+      style={
+        Object {
+          "textView": Object {
+            "marginBottom": 8,
+          },
+        }
+      }
+      text="Learn them skills!"
+      textAlign="left"
+      title="START YOUR NEXT LESSON"
+    />
+  </Footer>
+</Container>
+`;

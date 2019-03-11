@@ -10,7 +10,8 @@ export default class Carousel extends Component {
   static propTypes = {
     buttons: PropTypes.arrayOf(PropTypes.string),
     onPress: PropTypes.func,
-    onPageChange: PropTypes.func
+    onPageChange: PropTypes.func,
+    onDone: PropTypes.func
   }
 
   constructor (props) {
@@ -35,9 +36,11 @@ export default class Carousel extends Component {
 
   nextPage = () => {
     const { page } = this.state
-    const { children, onPageChange = () => {} } = this.props
+    const { children, onPageChange = () => {}, onDone = () => {} } = this.props
     if (page < children.length - 1) {
       this.setState({ page: page + 1 }, () => { onPageChange() })
+    } else {
+      onDone()
     }
   }
 

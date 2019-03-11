@@ -3,14 +3,17 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 
-import Home from 'App/Modules/Home/Screens/Components'
+import Discover from 'App/Modules/Discover/Screens/Components'
 
-describe('Home', () => {
+describe('Discover', () => {
   let wrapper
 
   beforeEach(() => {
     wrapper = shallow(
-      <Home onNavigatePress={() => {}} />)
+      <Discover
+        showNotReadyModal={false}
+        onHideNotReadyModal={() => {}}
+        onPress={() => {}} />)
   })
 
   it('Component renders correctly', () => {

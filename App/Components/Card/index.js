@@ -18,6 +18,7 @@ export default class Card extends Component {
     text: PropTypes.string,
     button: PropTypes.string,
     link: PropTypes.string,
+    textAlign: PropTypes.string,
     onPress: PropTypes.func
   }
 
@@ -75,11 +76,23 @@ export default class Card extends Component {
   }
 
   render () {
-    const { image, video, title, text, button, link, onPress = () => {}, style = {} } = this.props
+    const {
+      style = {},
+      image,
+      video,
+      title,
+      text,
+      button,
+      link,
+      textAlign = 'center',
+      onPress = () => {}
+    } = this.props
     const { paused, imageWidth, imageHeight } = this.state
-    const imageStyle = (imageWidth > 0) ? {width: imageWidth, height: imageHeight} : undefined
+    const imageStyle = (imageWidth > 0)
+      ? {width: imageWidth, height: imageHeight}
+      : undefined
     return (
-      <View>
+      <View style={style.view}>
         {image && (
           <View style={s.imageView}>
             <Image style={imageStyle} source={image} />
@@ -110,13 +123,13 @@ export default class Card extends Component {
           </TouchableOpacity>
         )}
         {title && (
-          <View style={s.titleView}>
-            <Text style={s.title}>{title}</Text>
+          <View style={[s.titleView, (textAlign === 'center') ? s.centered : s.titleView_padded, style.titleView]}>
+            <Text style={[s.text, (textAlign === 'center') ? s.text_center : null]}>{title}</Text>
           </View>
         )}
         {text && (
-          <View style={s.textView}>
-            <Text style={s.text}>{text}</Text>
+          <View style={[s.textView, (textAlign === 'center') ? s.centered : s.textView_padded, style.textView]}>
+            <Text style={[s.text, (textAlign === 'center') ? s.text_center : null]}>{text}</Text>
           </View>
         )}
         {button && (

@@ -3,14 +3,14 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 
-import Home from 'App/Modules/Home/Screens/Components'
+import GetStarted from 'App/Modules/Learn/GetStarted/Components'
 
-describe('Home', () => {
+describe('GetStarted', () => {
   let wrapper
 
   beforeEach(() => {
     wrapper = shallow(
-      <Home onNavigatePress={() => {}} />)
+      <GetStarted />)
   })
 
   it('Component renders correctly', () => {

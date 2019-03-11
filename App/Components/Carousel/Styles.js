@@ -5,7 +5,8 @@ import { Styles, Colors, Metrics } from 'App/Themes'
 export default StyleSheet.create({
   ...Styles,
   page: {
-    height: '100%'
+    height: '100%',
+    marginHorizontal: Metrics.unit
   },
   footer: {
     ...Styles.footer,

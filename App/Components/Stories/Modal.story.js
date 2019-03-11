@@ -11,12 +11,12 @@ import Modal from '../Modal'
 storiesOf('Modal', module)
   .addDecorator(FullScreenDecorator)
   .add('Default', () => (
-    <Modal show onHidePress={() => {}}>
+    <Modal show>
       <View style={s.centered}>
         <Text style={s.text}>I am a modal popup 👋</Text>
       </View>
     </Modal>
   ))
   .add('Not Ready', () => (
-    <Modal show onHidePress={() => {}} template='NotReady' />
+    <Modal show template='NotReady' />
   ))

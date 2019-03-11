@@ -22,15 +22,18 @@ export default class Modal extends Component {
   }
 
   onHidePress = () => {
-    this.setState({ show: false })
     if (this.props.onHidePress) {
       this.props.onHidePress()
+    } else {
+      this.setState({ show: false })
     }
   }
 
   render () {
     const { style = undefined, template } = this.props
-    const { show } = this.state
+    const { show } = (this.props.onHidePress)
+      ? this.props
+      : this.state
     return (
       <RNModal
         transparent

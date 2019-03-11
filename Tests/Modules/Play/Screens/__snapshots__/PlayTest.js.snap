@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Play Component renders correctly 1`] = `
+<Container
+  scrollable={true}
+>
+  <List>
+    <ListHeader
+      completed={0}
+      count={3}
+      title="Level 1"
+    />
+    <CompactListItem
+      icon="circle-o"
+      onPress={[Function]}
+      title="Get Started"
+    />
+    <CompactListItem
+      icon="circle-o"
+      onPress={[Function]}
+      title="Explore"
+    />
+    <CompactListItem
+      icon="circle-o"
+      onPress={[Function]}
+      title="Play a game"
+    />
+  </List>
+  <List
+    title="Explore"
+  >
+    <DefaultListItem
+      image={
+        Object {
+          "process": [Function],
+        }
+      }
+      onPress={[Function]}
+      text="Let’s get moving"
+      title="Drive Mode"
+    />
+    <DefaultListItem
+      icon="message-text"
+      iconSet="Material"
+      iconStyle={
+        Object {
+          "marginTop": 4,
+        }
+      }
+      onPress={[Function]}
+      text="Beep bop boopity beep"
+      title="Beep beep"
+    />
+  </List>
+  <List
+    cols={2}
+    title="Games"
+  >
+    <SquareListItem
+      icon="play"
+      iconStyle={
+        Object {
+          "marginLeft": 4,
+        }
+      }
+      onPress={[Function]}
+      text="Vroom vroom"
+      title="Drive"
+    />
+    <SquareListItem
+      icon="play"
+      iconStyle={
+        Object {
+          "marginLeft": 4,
+        }
+      }
+      onPress={[Function]}
+      text="Let’s boogie"
+      title="Dance"
+    />
+    <SquareListItem
+      disabled={true}
+      icon="play"
+      iconStyle={
+        Object {
+          "marginLeft": 4,
+        }
+      }
+      onPress={[Function]}
+      text="Humans are nice"
+      title="Find a friend"
+    />
+  </List>
+  <Modal
+    onHidePress={[Function]}
+    show={false}
+    template="NotReady"
+  />
+</Container>
+`;

@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GetStarted Component renders correctly 1`] = `
+<Container>
+  <Carousel
+    onDone={[Function]}
+  >
+    <Card
+      image={
+        Object {
+          "process": [Function],
+        }
+      }
+      title="Hi there 👋"
+    />
+    <Card
+      button="Learn More"
+      image={
+        Object {
+          "process": [Function],
+        }
+      }
+      onPress={[Function]}
+      text="Sorry, the app is still under construction 🚧
+
+The good news is you can follow along as this Beta version of the app develops over the coming weeks."
+    />
+  </Carousel>
+</Container>
+`;
