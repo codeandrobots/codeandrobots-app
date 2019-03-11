@@ -5,5 +5,5 @@ import Web from '../Web'
 
 storiesOf('Web', module)
   .add('Code&Robots', () => (
-    <Web source='http://codeandrobots.com' />
+    <Web source='http://codeandrobots.com' title='Code & Robots' />
   ))

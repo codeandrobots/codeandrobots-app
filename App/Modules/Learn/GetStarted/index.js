@@ -10,7 +10,8 @@ export class GetStartedContainer extends Component {
 
   onLearnMorePress = () => {
     this.props.navigation.navigate('WebScreen', {
-      source: 'http://www.codeandrobots.com'
+      source: 'http://www.codeandrobots.com',
+      title: 'Code & Robots'
     })
   }
 

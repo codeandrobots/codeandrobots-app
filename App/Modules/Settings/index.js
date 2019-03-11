@@ -48,7 +48,7 @@ export class SettingsContainer extends Component {
   }
 
   onFAQPress = () => {
-    this.props.navigation.navigate('WebScreen', { source: Config.FAQ_URL })
+    this.props.navigation.navigate('WebScreen', { source: Config.FAQ_URL, title: 'FAQ' })
   }
 
   onSupportPress = () => {
@@ -67,11 +67,11 @@ export class SettingsContainer extends Component {
   }
 
   onAboutPress = () => {
-    this.props.navigation.navigate('WebScreen', { source: Config.ABOUT_URL })
+    this.props.navigation.navigate('WebScreen', { source: Config.ABOUT_URL, title: 'About' })
   }
 
   onPrivacyPress = () => {
-    this.props.navigation.navigate('WebScreen', { source: Config.PRIVACY_URL })
+    this.props.navigation.navigate('WebScreen', { source: Config.PRIVACY_URL, title: 'Privacy Policy' })
   }
 
   render () {

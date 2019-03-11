@@ -8,7 +8,14 @@ import s from './Styles'
 
 export default class Web extends Component {
   static propTypes = {
-    source: PropTypes.string.isRequired
+    source: PropTypes.string.isRequired,
+    title: PropTypes.string
+  }
+
+  static navigationOptions = ({ navigation }) => {
+    const { params = {} } = navigation.state
+    const { title } = params
+    return (title) ? { title } : {}
   }
 
   constructor (props) {
@@ -18,6 +25,13 @@ export default class Web extends Component {
 
   loadingDone = () => {
     this.setState({ loading: false })
+  }
+
+  componentWillUnmount (props) {
+    if (props) {
+      const { title } = props
+      this.props.navigation.setParams({ title })
+    }
   }
 
   render () {
