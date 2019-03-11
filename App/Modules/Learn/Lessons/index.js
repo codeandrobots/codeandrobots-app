@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import Screen from '../Components'
+import Screen from './Screen'
 
-export class LearnContainer extends Component {
+export class LessonsContainer extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -48,4 +48,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(LearnContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(LessonsContainer)

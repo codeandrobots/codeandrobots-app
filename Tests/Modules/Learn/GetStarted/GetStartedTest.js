@@ -3,14 +3,16 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 
-import GetStarted from 'App/Modules/Learn/GetStarted/Components'
+import Screen from 'App/Modules/Learn/GetStarted/Screen'
 
 describe('GetStarted', () => {
   let wrapper
 
   beforeEach(() => {
     wrapper = shallow(
-      <GetStarted />)
+      <Screen
+        onDone={() => {}}
+        onLearnMorePress={() => {}} />)
   })
 
   it('Component renders correctly', () => {

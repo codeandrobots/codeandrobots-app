@@ -3,14 +3,14 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 
-import Lessons from 'App/Modules/Learn/Lessons/Components'
+import Screen from 'App/Modules/Learn/Lessons/Screen'
 
 describe('Lessons', () => {
   let wrapper
 
   beforeEach(() => {
     wrapper = shallow(
-      <Lessons
+      <Screen
         showNotReadyModal={false}
         onHideNotReadyModal={() => {}}
         onPress={() => {}} />)

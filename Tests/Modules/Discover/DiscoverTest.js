@@ -3,14 +3,17 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 
-import Rate from 'App/Modules/Rate/Screens/Components'
+import Screen from 'App/Modules/Discover/Screen'
 
-describe('Rate', () => {
+describe('Discover', () => {
   let wrapper
 
   beforeEach(() => {
     wrapper = shallow(
-      <Rate onRatePress={() => {}} />)
+      <Screen
+        showNotReadyModal={false}
+        onHideNotReadyModal={() => {}}
+        onPress={() => {}} />)
   })
 
   it('Component renders correctly', () => {

@@ -5,7 +5,7 @@ import {
   Settings,
   Play,
   Discover,
-  Learn,
+  Lessons,
   GetStarted,
   Lab} from 'App/Modules'
 
@@ -50,7 +50,7 @@ export default {
     })
   },
   LearnScreen: {
-    screen: Learn,
+    screen: Lessons,
     navigationOptions: ({navigation}) => ({
       title: 'Learn'
     })

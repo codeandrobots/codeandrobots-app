@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 import {
   Container,
@@ -8,26 +9,22 @@ import {
 import { Images } from 'App/Themes'
 
 export default class Screen extends Component {
-  onDone = () => {
-    this.props.navigation.goBack()
-  }
-
-  onLearnMorePress = () => {
-    this.props.navigation.navigate('WebScreen', {
-      source: 'http://www.codeandrobots.com'
-    })
+  static propTypes = {
+    onDone: PropTypes.func.isRequired,
+    onLearnMorePress: PropTypes.func.isRequired
   }
 
   render () {
+    const { onDone, onLearnMorePress } = this.props
     return (
       <Container>
-        <Carousel onDone={this.onDone}>
+        <Carousel onDone={onDone}>
           <Card image={Images.hello} title='Hi there 👋' />
           <Card
             image={Images.hello}
             text={'Sorry, the app is still under construction 🚧\n\nThe good news is you can follow along as this Beta version of the app develops over the coming weeks.'}
             button='Learn More'
-            onPress={this.onLearnMorePress} />
+            onPress={onLearnMorePress} />
         </Carousel>
       </Container>
     )

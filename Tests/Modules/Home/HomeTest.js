@@ -3,17 +3,14 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 
-import Lab from 'App/Modules/Lab/Screens/Components'
+import Screen from 'App/Modules/Home/Screen'
 
-describe('Lab', () => {
+describe('Home', () => {
   let wrapper
 
   beforeEach(() => {
     wrapper = shallow(
-      <Lab
-        showNotReadyModal={false}
-        onHideNotReadyModal={() => {}}
-        onPress={() => {}} />)
+      <Screen onNavigatePress={() => {}} />)
   })
 
   it('Component renders correctly', () => {

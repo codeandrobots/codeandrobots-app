@@ -3,14 +3,14 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 
-import Settings from 'App/Modules/Settings/Screens/Components'
+import Screen from 'App/Modules/Settings/Screen'
 
 describe('Settings', () => {
   let wrapper
 
   beforeEach(() => {
     wrapper = shallow(
-      <Settings
+      <Screen
         onShareAppPress={() => {}}
         onFeedbackPress={() => {}}
         onFAQPress={() => {}}

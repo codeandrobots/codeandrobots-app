@@ -3,7 +3,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 
-import Play from 'App/Modules/Play/Screens/Components'
+import Screen from 'App/Modules/Play/Screen'
 
 describe('Play', () => {
   let wrapper
@@ -19,7 +19,7 @@ describe('Play', () => {
       findAFriend: () => {}
     }
     wrapper = shallow(
-      <Play
+      <Screen
         showNotReadyModal={false}
         onHideNotReadyModal={() => {}}
         onPress={onPress} />)
