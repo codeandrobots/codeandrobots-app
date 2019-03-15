@@ -1828,6 +1828,42 @@ exports[`Storyshots IconButton Large Home 1`] = `
 </View>
 `;
 
+exports[`Storyshots Joystick Default 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={undefined}
+  >
+    <Image
+      source={
+        Object {
+          "process": [Function],
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "#F9BC62",
+          "borderRadius": 30,
+          "height": 60,
+          "left": 50,
+          "position": "absolute",
+          "top": 50,
+          "width": 60,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
 exports[`Storyshots Links Multiple 1`] = `
 <View
   style={undefined}
