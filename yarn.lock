@@ -5685,6 +5685,10 @@ jest@22.4.3:
     import-local "^1.0.0"
     jest-cli "^22.4.3"
 
+joystick-component-lib@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/joystick-component-lib/-/joystick-component-lib-0.1.2.tgz#821445668d511e1a2ea438d7a30a31f64d04a4dd"
+
 js-base64@^2.1.9:
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.4.3.tgz#2e545ec2b0f2957f41356510205214e98fad6582"

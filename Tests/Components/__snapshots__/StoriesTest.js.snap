@@ -1850,13 +1850,82 @@ exports[`Storyshots Joystick Default 1`] = `
     <View
       style={
         Object {
-          "backgroundColor": "#F9BC62",
+          "left": 50,
+          "position": "absolute",
+          "top": 50,
+          "zIndex": 9999,
+        }
+      }
+    >
+      <View>
+        <View
+          style={
+            Array [
+              Object {
+                "borderColor": "black",
+                "borderRadius": 50,
+                "borderWidth": 1,
+                "height": 100,
+                "left": NaN,
+                "position": "absolute",
+                "top": NaN,
+                "width": 100,
+              },
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+            ]
+          }
+        />
+        <View
+          style={
+            Object {
+              "left": NaN,
+              "position": "absolute",
+              "top": NaN,
+            }
+          }
+        >
+          <View
+            collapsable={undefined}
+            onMoveShouldSetResponder={[Function]}
+            onMoveShouldSetResponderCapture={[Function]}
+            onResponderEnd={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderReject={[Function]}
+            onResponderRelease={[Function]}
+            onResponderStart={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onStartShouldSetResponderCapture={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#F9BC62",
+                "borderRadius": 30,
+                "height": 60,
+                "left": 0,
+                "top": 0,
+                "width": 60,
+              }
+            }
+          />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#FCE2BA",
           "borderRadius": 30,
           "height": 60,
           "left": 50,
           "position": "absolute",
           "top": 50,
           "width": 60,
+          "zIndex": 9998,
         }
       }
     />

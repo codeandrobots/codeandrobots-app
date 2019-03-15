@@ -8,5 +8,8 @@ import Joystick from '../Joystick'
 storiesOf('Joystick', module)
   .addDecorator(CenterDecorator)
   .add('Default', () => (
-    <Joystick onChange={() => {}} />
+    <Joystick
+      onDraggableMove={(touch) => {}}
+      onDraggableRelease={(touch) => {}}
+      onDraggableStart={() => {}} />
   ))
