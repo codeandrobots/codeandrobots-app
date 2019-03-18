@@ -1850,9 +1850,11 @@ exports[`Storyshots Joystick Default 1`] = `
     <View
       style={
         Object {
-          "left": 50,
+          "height": 160,
+          "left": 0,
           "position": "absolute",
-          "top": 50,
+          "top": 0,
+          "width": 160,
           "zIndex": 9999,
         }
       }
@@ -1866,9 +1868,9 @@ exports[`Storyshots Joystick Default 1`] = `
                 "borderRadius": 50,
                 "borderWidth": 1,
                 "height": 100,
-                "left": NaN,
+                "left": 30,
                 "position": "absolute",
-                "top": NaN,
+                "top": 30,
                 "width": 100,
               },
               Object {
@@ -1881,9 +1883,9 @@ exports[`Storyshots Joystick Default 1`] = `
         <View
           style={
             Object {
-              "left": NaN,
+              "left": 50,
               "position": "absolute",
-              "top": NaN,
+              "top": 50,
             }
           }
         >

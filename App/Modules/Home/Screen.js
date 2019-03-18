@@ -24,7 +24,7 @@ export default class Screen extends Component {
             button='Discover'
             onPress={() => { onNavigatePress('DiscoverScreen') }} />
           <ListItem
-            title='Learn Mode'
+            title='Learn'
             text='You’ll be a guru in no time'
             button='Learn'
             onPress={() => { onNavigatePress('LearnScreen') }} />

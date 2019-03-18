@@ -4,6 +4,7 @@ import {
   Rate,
   Settings,
   Play,
+  Drive,
   Discover,
   Lessons,
   GetStarted,
@@ -41,6 +42,12 @@ export default {
     screen: Play,
     navigationOptions: ({navigation}) => ({
       title: 'Play & Explore'
+    })
+  },
+  DriveScreen: {
+    screen: Drive,
+    navigationOptions: ({navigation}) => ({
+      title: 'Drive'
     })
   },
   DiscoverScreen: {

@@ -6,8 +6,10 @@ export default StyleSheet.create({
   ...Styles,
   thumbstickView: {
     position: 'absolute',
-    top: 50,
-    left: 50,
+    top: 0,
+    left: 0,
+    width: 160,
+    height: 160,
     zIndex: 9999
   },
   thumbstickShadow: {

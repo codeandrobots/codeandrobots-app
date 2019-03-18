@@ -19,7 +19,7 @@ exports[`Home Component renders correctly 1`] = `
       button="Learn"
       onPress={[Function]}
       text="You’ll be a guru in no time"
-      title="Learn Mode"
+      title="Learn"
     />
     <DefaultListItem
       button="Lab"

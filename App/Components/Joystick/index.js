@@ -27,6 +27,8 @@ export default class Joystick extends Component {
         <Image source={Images.joystick.arrows} />
         <View style={s.thumbstickView}>
           <JoystickThumbstick
+            neutralPointX={80}
+            neutralPointY={80}
             length={50}
             shape='circular'
             isSticky

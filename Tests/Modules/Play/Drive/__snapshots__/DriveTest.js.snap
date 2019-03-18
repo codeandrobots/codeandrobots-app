@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Drive Component renders correctly 1`] = `
+<Container>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+        "marginBottom": 200,
+      }
+    }
+  >
+    <Joystick
+      onDraggableMove={[Function]}
+      onDraggableRelease={[Function]}
+      onDraggableStart={[Function]}
+    />
+  </View>
+  <Footer>
+    <Card
+      text="Use joystick to drive"
+    />
+  </Footer>
+</Container>
+`;

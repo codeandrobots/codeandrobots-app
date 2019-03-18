@@ -1,7 +1,7 @@
 export { default as Home } from './Home'
 export { default as Rate } from './Rate'
 export { default as Settings } from './Settings'
-export { default as Play } from './Play'
+export { default as Play, Drive } from './Play'
 export { default as Discover } from './Discover'
 export { Lessons, GetStarted } from './Learn'
 export { default as Lab } from './Lab'
