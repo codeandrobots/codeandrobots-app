@@ -46,6 +46,9 @@ export const Styles = {
     ...Fonts.style.normal,
     color: Colors.text
   },
+  text_bold: {
+    ...Fonts.style.normalBold
+  },
   text_disabled: {
     color: Colors.text_disabled
   },

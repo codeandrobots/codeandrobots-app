@@ -2,6 +2,7 @@
 export const palette = {
   transparent: 'transparent',
   white: 'white',
+  white_translucent: 'rgba(255, 255, 255, 0.8)',
   black: 'black',
   red: 'red',
   offwhite: '#FAFAFA',
@@ -46,6 +47,12 @@ export default {
   carousel: {
     bubble: palette.white,
     bubble_active: palette.primaryDark
+  },
+  codeLab: {
+    action: '#4EBD64',
+    sensor: '#B55ADA',
+    control: '#EE4444',
+    data: '#273C4A'
   },
   footer: {
     background: palette.primary
