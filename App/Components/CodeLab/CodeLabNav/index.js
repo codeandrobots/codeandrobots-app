@@ -64,22 +64,22 @@ export default class CodeLabNav extends Component {
             <View style={s.instructionsView}>
               <TouchableOpacity style={s.instructionView} onPress={() => {}}>
                 <Icon name='arrow-up' size={24} color={Colors.white} style={s.icon} />
-                <Text style={s.instruction}>Move Forward</Text>
+                <Text style={s.instruction}>Move Up</Text>
               </TouchableOpacity>
               <View style={s.separator} />
               <TouchableOpacity style={s.instructionView} onPress={() => {}}>
                 <Icon name='arrow-left' size={24} color={Colors.white} style={s.icon} />
-                <Text style={s.instruction}>Turn Left</Text>
+                <Text style={s.instruction}>Move Left</Text>
               </TouchableOpacity>
               <View style={s.separator} />
               <TouchableOpacity style={s.instructionView} onPress={() => {}}>
                 <Icon name='arrow-right' size={24} color={Colors.white} style={s.icon} />
-                <Text style={s.instruction}>Turn Right</Text>
+                <Text style={s.instruction}>Move Right</Text>
               </TouchableOpacity>
               <View style={s.separator} />
               <TouchableOpacity style={s.instructionView} onPress={() => {}}>
                 <Icon name='arrow-down' size={24} color={Colors.white} style={s.icon} />
-                <Text style={s.instruction}>Move Back</Text>
+                <Text style={s.instruction}>Move Down</Text>
               </TouchableOpacity>
             </View>
           </ScrollView>

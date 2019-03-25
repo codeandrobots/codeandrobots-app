@@ -5,8 +5,17 @@ const user = PropTypes.shape({
   name: PropTypes.string.isRequired
 })
 
+const instruction = {
+  type: PropTypes.string,
+  iconSet: PropTypes.string,
+  icon: PropTypes.string,
+  iconSize: PropTypes.number,
+  title: PropTypes.string.isRequired
+}
+
 const Types = {
-  user
+  user,
+  instruction
 }
 
 export default Types

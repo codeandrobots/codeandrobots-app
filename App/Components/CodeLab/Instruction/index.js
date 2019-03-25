@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import { View, Text } from 'react-native'
+import PropTypes from 'prop-types'
 
 import { TouchableOpacity, Icon } from 'App/Components'
+
+import Types from 'App/Services/PropTypes'
 
 import { Colors } from 'App/Themes'
 
@@ -10,11 +12,7 @@ import s from './Styles'
 
 export default class Instruction extends Component {
   static propTypes = {
-    type: PropTypes.string,
-    iconSet: PropTypes.string,
-    icon: PropTypes.string,
-    iconSize: PropTypes.number,
-    title: PropTypes.string.isRequired,
+    ...Types.instruction,
     onClose: PropTypes.func.isRequired
   }
 

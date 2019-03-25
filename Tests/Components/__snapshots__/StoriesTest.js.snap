@@ -2113,7 +2113,7 @@ exports[`Storyshots Instruction Action 1`] = `
       }
     }
   >
-    Move Forward
+    Move Up
   </Text>
   <View
     accessibilityComponentType={undefined}
@@ -2517,6 +2517,27 @@ exports[`Storyshots Instruction Sensor 1`] = `
       
     </Text>
   </View>
+</View>
+`;
+
+exports[`Storyshots Instructions Default 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "opacity": 0,
+      }
+    }
+  />
 </View>
 `;
 

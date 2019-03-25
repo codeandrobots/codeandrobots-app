@@ -5,7 +5,7 @@ import { Instruction } from '../CodeLab'
 
 storiesOf('Instruction', module)
   .add('Action', () => (
-    <Instruction icon='arrow-up' title='Move Forward' onClose={() => {}} />
+    <Instruction icon='arrow-up' title='Move Up' onClose={() => {}} />
   ))
   .add('Sensor', () => (
     <Instruction type='sensor' icon='thermometer' title='Read Temperature' onClose={() => {}} />
