@@ -6,6 +6,7 @@ import {
   Play,
   Drive,
   Discover,
+  CodeLab,
   Lessons,
   GetStarted,
   Lab} from 'App/Modules'
@@ -54,6 +55,12 @@ export default {
     screen: Discover,
     navigationOptions: ({navigation}) => ({
       title: 'Discover'
+    })
+  },
+  CodeLabScreen: {
+    screen: CodeLab,
+    navigationOptions: ({navigation}) => ({
+      title: 'Code Lab'
     })
   },
   LearnScreen: {

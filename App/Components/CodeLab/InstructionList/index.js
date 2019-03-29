@@ -12,25 +12,47 @@ import Row from './Row'
 
 import s from './Styles'
 
-export default class Instructions extends Component {
+export default class InstructionList extends Component {
   static propTypes = {
     instructions: PropTypes.arrayOf(PropTypes.shape({
       ...Types.instruction
     })).isRequired,
-    onChangeOrder: PropTypes.func.isRequired
+    onChangeOrder: PropTypes.func.isRequired,
+    onClose: PropTypes.func.isRequired
   }
 
   constructor (props) {
     super(props)
+    this.nextOrder = null
+    this.state = { data: this.dataFromProps(props) }
+  }
+
+  componentWillReceiveProps (nextProps) {
+    this.nextOrder = null
+    this.setState({ data: this.dataFromProps(nextProps) })
+  }
+
+  renderRow = ({data, active}) => {
+    const { onClose } = this.props
+    return <Row data={data} active={active} onClose={onClose} />
+  }
+
+  dataFromProps = (props) => {
     const data = {}
     for (const [index, instruction] of props.instructions.entries()) {
       data[index] = {...instruction}
     }
-    this.state = { data }
+    return data
   }
 
-  renderRow = ({data, active}) => {
-    return <Row data={data} active={active} />
+  onChangeOrder = (nextOrder) => {
+    this.nextOrder = nextOrder
+  }
+
+  onReleaseRow = (key) => {
+    if (this.nextOrder != null) {
+      this.props.onChangeOrder(this.nextOrder)
+    }
   }
 
   render () {
@@ -41,7 +63,8 @@ export default class Instructions extends Component {
           contentContainerStyle={s.contentContainer}
           data={this.state.data}
           renderRow={this.renderRow}
-          onChangeOrder={this.props.onChangeOrder} />
+          onChangeOrder={this.onChangeOrder}
+          onReleaseRow={this.onReleaseRow} />
       </View>
     )
   }

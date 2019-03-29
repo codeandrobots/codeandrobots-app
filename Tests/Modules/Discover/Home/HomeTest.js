@@ -3,7 +3,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 
-import Screen from 'App/Modules/Discover/Screen'
+import Screen from 'App/Modules/Discover/Home/Screen'
 
 describe('Discover', () => {
   let wrapper

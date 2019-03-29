@@ -5,5 +5,5 @@ import { CodeLabNav } from '../CodeLab'
 
 storiesOf('CodeLab Nav', module)
   .add('Default', () => (
-    <CodeLabNav />
+    <CodeLabNav onPress={(instruction) => {}} onRun={() => {}} />
   ))

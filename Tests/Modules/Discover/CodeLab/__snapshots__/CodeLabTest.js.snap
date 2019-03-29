@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CodeLab Component renders correctly 1`] = `
+<Container>
+  <InstructionList
+    instructions={Array []}
+    onChangeOrder={[Function]}
+    onClose={[Function]}
+  />
+  <CodeLabNav
+    onPress={[Function]}
+    onRun={[Function]}
+  />
+</Container>
+`;

@@ -1363,7 +1363,6 @@ exports[`Storyshots Carousel Dilbert 1`] = `
 
 exports[`Storyshots CodeLab Nav Default 1`] = `
 <View
-  onPress={[Function]}
   style={
     Array [
       Object {
@@ -1571,6 +1570,70 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
       >
         DATA
       </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#F9BC62",
+        "minHeight": 80,
+        "paddingBottom": 32,
+        "paddingTop": 32,
+      }
+    }
+  >
+    <View
+      style={undefined}
+    >
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        collapsable={undefined}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#FCE2BA",
+            "borderRadius": 100,
+            "borderWidth": 8,
+            "minWidth": 112,
+            "opacity": 1,
+            "paddingHorizontal": 24,
+            "paddingVertical": 8,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#354052",
+              "fontFamily": "Roboto-Medium",
+              "fontSize": 18,
+              "textAlign": "center",
+            }
+          }
+        >
+          Run
+        </Text>
+      </View>
     </View>
   </View>
 </View>
@@ -2520,7 +2583,7 @@ exports[`Storyshots Instruction Sensor 1`] = `
 </View>
 `;
 
-exports[`Storyshots Instructions Default 1`] = `
+exports[`Storyshots InstructionList Default 1`] = `
 <View
   style={
     Object {

@@ -34,13 +34,13 @@ export default class Row extends Component {
   }
 
   render () {
-    const { data } = this.props
+    const { data, onClose } = this.props
     return (
       <Animated.View style={[
         s.row,
         this._style
       ]}>
-        <Instruction {...data} onClose={() => {}} />
+        <Instruction {...data} onClose={() => { onClose(data) }} />
       </Animated.View>
     )
   }

@@ -2,6 +2,8 @@ import { StyleSheet } from 'react-native'
 
 import { Styles, Metrics, Colors, Fonts } from 'App/Themes'
 
+import { isIphoneX } from 'App/Services/Properties'
+
 export default StyleSheet.create({
   ...Styles,
   view: {
@@ -67,5 +69,12 @@ export default StyleSheet.create({
     height: '100%',
     backgroundColor: Colors.white_translucent,
     margin: Metrics.unit
+  },
+  footer: {
+    alignItems: 'center',
+    minHeight: 80,
+    backgroundColor: Colors.footer.background,
+    paddingTop: Metrics.unit * 4,
+    paddingBottom: (isIphoneX()) ? Metrics.unit * 5 : Metrics.unit * 4
   }
 })
