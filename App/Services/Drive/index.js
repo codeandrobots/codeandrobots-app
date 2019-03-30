@@ -19,13 +19,13 @@ export default class Drive {
 
   direction = (touch) => {
     if (touch.dy <= -40) {
-      return 'Up'
+      return 'up'
     } else if (touch.dy >= 40) {
-      return 'Down'
+      return 'down'
     } else if (touch.dx <= -40) {
-      return 'Left'
+      return 'left'
     } else if (touch.dx >= 40) {
-      return 'Right'
+      return 'right'
     } else {
       return null
     }
@@ -36,5 +36,15 @@ export default class Drive {
     if (this.socket && direction) {
       this.socket.emit('go', direction)
     }
+  }
+
+  run = (instructions) => {
+    let delay = 0
+    instructions.forEach((instruction) => {
+      setTimeout(() => {
+        this.socket.emit('go', instruction)
+      }, delay)
+      delay += 500
+    })
   }
 }

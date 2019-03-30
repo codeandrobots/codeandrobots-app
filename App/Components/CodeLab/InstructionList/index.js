@@ -3,6 +3,7 @@
 import React, { Component } from 'react'
 import { View } from 'react-native'
 import PropTypes from 'prop-types'
+import uuid from 'react-native-uuid'
 
 import SortableList from 'react-native-sortable-list'
 
@@ -40,7 +41,7 @@ export default class InstructionList extends Component {
   dataFromProps = (props) => {
     const data = {}
     for (const [index, instruction] of props.instructions.entries()) {
-      data[index] = {...instruction}
+      data[index] = {...instruction, key: instruction.key + '-' + uuid.v4()}
     }
     return data
   }

@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-
 import uuid from 'react-native-uuid'
+
+import Drive from 'App/Services/Drive'
 
 import Screen from './Screen'
 
 export class CodeLabContainer extends Component {
   constructor (props) {
     super(props)
+    this.drive = Drive.getInstance()
     this.order = null
     this.state = {
       instructions: []
@@ -36,19 +38,20 @@ export class CodeLabContainer extends Component {
 
   onClose = (instructionToRemove) => {
     const instructions = this.sortInstructions().filter(
-      (instruction) => instruction.key !== instructionToRemove.key
+      (instruction) => instruction.id !== instructionToRemove.id
     )
     this.setState({ instructions })
   }
 
   onNavPress = (instruction) => {
     const instructions = this.sortInstructions()
-    instructions.push({...instruction, key: instruction.key + '-' + uuid.v4()})
+    instructions.push({...instruction, id: uuid.v4()})
     this.setState({ instructions })
   }
 
   onRun = () => {
-    // TODO
+    const instructions = this.sortInstructions()
+    this.drive.run(instructions.map(instruction => instruction.key))
   }
 
   render () {

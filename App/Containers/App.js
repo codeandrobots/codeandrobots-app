@@ -4,6 +4,10 @@ import { Provider } from 'react-redux'
 import RootContainer from './RootContainer'
 import createStore from '../Redux'
 
+// See https://stackoverflow.com/a/52644367
+global.Symbol = require('core-js/es6/symbol')
+require('core-js/fn/symbol/iterator')
+
 // create our store
 const store = createStore()
 
