@@ -46,11 +46,20 @@ export const Styles = {
     ...Fonts.style.normal,
     color: Colors.text
   },
+  text_medium: {
+    fontSize: Fonts.size.medium
+  },
+  text_small: {
+    fontSize: Fonts.size.small
+  },
   text_bold: {
     ...Fonts.style.normalBold
   },
   text_disabled: {
     color: Colors.text_disabled
+  },
+  text_error: {
+    color: Colors.text_error
   },
   text_center: {
     textAlign: 'center'

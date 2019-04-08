@@ -11,8 +11,9 @@ describe('GetStarted', () => {
   beforeEach(() => {
     wrapper = shallow(
       <Screen
+        connected={false}
         onDone={() => {}}
-        onLearnMorePress={() => {}} />)
+        onConnectPress={() => {}} />)
   })
 
   it('Component renders correctly', () => {

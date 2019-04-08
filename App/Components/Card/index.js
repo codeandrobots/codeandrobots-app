@@ -17,9 +17,11 @@ export default class Card extends Component {
     title: PropTypes.string,
     text: PropTypes.string,
     button: PropTypes.string,
+    loading: PropTypes.bool,
     link: PropTypes.string,
     textAlign: PropTypes.string,
-    onPress: PropTypes.func
+    onPress: PropTypes.func,
+    onLinkPress: PropTypes.func
   }
 
   constructor (props) {
@@ -83,14 +85,18 @@ export default class Card extends Component {
       title,
       text,
       button,
+      loading = false,
       link,
       textAlign = 'center',
-      onPress = () => {}
+      onPress = () => {},
+      onLinkPress = () => {}
     } = this.props
+
     const { paused, imageWidth, imageHeight } = this.state
     const imageStyle = (imageWidth > 0)
       ? {width: imageWidth, height: imageHeight}
       : undefined
+
     return (
       <View style={style.view}>
         {image && (
@@ -133,10 +139,14 @@ export default class Card extends Component {
           </View>
         )}
         {button && (
-          <Button style={[s.centered, style.buttonView]} text={button} onPress={onPress} />
+          <Button style={[s.centered, style.buttonView]} loading={loading} text={button} onPress={onPress} />
         )}
-        {!button && link && (
-          <Link style={{text: StyleSheet.flatten(s.link)}} text={link} centered uppercase={false} onPress={onPress} />
+        {link && (
+          <Link
+            style={{view: (button) ? {marginTop: Metrics.unit} : null, text: StyleSheet.flatten(s.link)}}
+            text={link}
+            centered uppercase={false}
+            onPress={onLinkPress} />
         )}
       </View>
     )

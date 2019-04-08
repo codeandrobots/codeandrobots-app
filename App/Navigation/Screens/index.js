@@ -3,6 +3,7 @@ import {
   Home,
   Rate,
   Settings,
+  Connect,
   Play,
   Drive,
   Discover,
@@ -37,6 +38,12 @@ export default {
     screen: Settings,
     navigationOptions: ({navigation}) => ({
       title: 'Settings'
+    })
+  },
+  ConnectScreen: {
+    screen: Connect,
+    navigationOptions: ({navigation}) => ({
+      title: 'Connect'
     })
   },
   PlayScreen: {

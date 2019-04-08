@@ -10,21 +10,37 @@ import { Images } from 'App/Themes'
 
 export default class Screen extends Component {
   static propTypes = {
+    connected: PropTypes.bool.isRequired,
     onDone: PropTypes.func.isRequired,
-    onLearnMorePress: PropTypes.func.isRequired
+    onConnectPress: PropTypes.func.isRequired
   }
 
   render () {
-    const { onDone, onLearnMorePress } = this.props
+    const { connected, onDone, onConnectPress } = this.props
+
+    const connectButton = (!connected)
+      ? {title: 'Connect', onPress: onConnectPress}
+      : {title: 'Next', onPress: null}
+
+    const connectCard = (!connected)
+      ? {title: 'Get connected', text: 'Let’s get you connected & ready to start playing'}
+      : {title: 'Nice work, you`re connected', text: null}
+
     return (
       <Container>
-        <Carousel onDone={onDone}>
+        <Carousel
+          buttons={['Next', connectButton.title, 'Done']}
+          onPress={[null, connectButton.onPress, null]}
+          onDone={onDone}>
           <Card image={Images.hello} title='Hi there 👋' />
           <Card
-            image={Images.hello}
-            text={'Sorry, the app is still under construction 🚧\n\nThe good news is you can follow along as this Beta version of the app develops over the coming weeks.'}
-            button='Learn More'
-            onPress={onLearnMorePress} />
+            image={Images.bluetooth}
+            title={connectCard.title}
+            text={connectCard.text} />
+          <Card
+            image={Images.done}
+            title='Woot woot 🎉'
+            text='You’re all setup & ready to play' />
         </Carousel>
       </Container>
     )

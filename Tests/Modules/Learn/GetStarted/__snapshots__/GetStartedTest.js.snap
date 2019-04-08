@@ -3,7 +3,21 @@
 exports[`GetStarted Component renders correctly 1`] = `
 <Container>
   <Carousel
+    buttons={
+      Array [
+        "Next",
+        "Connect",
+        "Done",
+      ]
+    }
     onDone={[Function]}
+    onPress={
+      Array [
+        null,
+        [Function],
+        null,
+      ]
+    }
   >
     <Card
       image={
@@ -14,16 +28,22 @@ exports[`GetStarted Component renders correctly 1`] = `
       title="Hi there 👋"
     />
     <Card
-      button="Learn More"
       image={
         Object {
           "process": [Function],
         }
       }
-      onPress={[Function]}
-      text="Sorry, the app is still under construction 🚧
-
-The good news is you can follow along as this Beta version of the app develops over the coming weeks."
+      text="Let’s get you connected & ready to start playing"
+      title="Get connected"
+    />
+    <Card
+      image={
+        Object {
+          "process": [Function],
+        }
+      }
+      text="You’re all setup & ready to play"
+      title="Woot woot 🎉"
     />
   </Carousel>
 </Container>

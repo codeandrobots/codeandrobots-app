@@ -2984,11 +2984,16 @@ exports[`Storyshots List Default 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Object {
-              "color": "#354052",
-              "fontFamily": "Roboto-Medium",
-              "fontSize": 16,
-            }
+            Array [
+              Object {
+                "color": "#354052",
+                "fontFamily": "Roboto-Medium",
+                "fontSize": 16,
+              },
+              Object {
+                "fontSize": 14,
+              },
+            ]
           }
         >
           Let’s get moving
@@ -3209,11 +3214,16 @@ exports[`Storyshots List Default 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Object {
-              "color": "#354052",
-              "fontFamily": "Roboto-Medium",
-              "fontSize": 16,
-            }
+            Array [
+              Object {
+                "color": "#354052",
+                "fontFamily": "Roboto-Medium",
+                "fontSize": 16,
+              },
+              Object {
+                "fontSize": 14,
+              },
+            ]
           }
         >
           Beep bop boopity beep
@@ -4608,7 +4618,7 @@ exports[`Storyshots List Lessons 1`] = `
               "borderRadius": 0,
               "flex": 1,
               "justifyContent": "center",
-              "marginRight": 16,
+              "marginRight": 8,
               "marginVertical": 0,
               "paddingHorizontal": 0,
               "paddingVertical": 16,
@@ -4760,7 +4770,7 @@ exports[`Storyshots List Lessons 1`] = `
               "borderRadius": 0,
               "flex": 1,
               "justifyContent": "center",
-              "marginRight": 16,
+              "marginRight": 8,
               "marginVertical": 0,
               "paddingHorizontal": 0,
               "paddingVertical": 16,
@@ -4912,7 +4922,7 @@ exports[`Storyshots List Lessons 1`] = `
               "borderRadius": 0,
               "flex": 1,
               "justifyContent": "center",
-              "marginRight": 16,
+              "marginRight": 8,
               "marginVertical": 0,
               "paddingHorizontal": 0,
               "paddingVertical": 16,
@@ -5827,11 +5837,16 @@ exports[`Storyshots ListItem Beep 1`] = `
       allowFontScaling={true}
       ellipsizeMode="tail"
       style={
-        Object {
-          "color": "#354052",
-          "fontFamily": "Roboto-Medium",
-          "fontSize": 16,
-        }
+        Array [
+          Object {
+            "color": "#354052",
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 16,
+          },
+          Object {
+            "fontSize": 14,
+          },
+        ]
       }
     >
       Beep bop boopity beep
@@ -6034,7 +6049,7 @@ exports[`Storyshots ListItem Compact 1`] = `
           "borderRadius": 0,
           "flex": 1,
           "justifyContent": "center",
-          "marginRight": 16,
+          "marginRight": 8,
           "marginVertical": 0,
           "paddingHorizontal": 0,
           "paddingVertical": 16,
@@ -6180,7 +6195,7 @@ exports[`Storyshots ListItem Compact Disabled 1`] = `
           "borderRadius": 0,
           "flex": 1,
           "justifyContent": "center",
-          "marginRight": 16,
+          "marginRight": 8,
           "marginVertical": 0,
           "paddingHorizontal": 0,
           "paddingVertical": 16,
@@ -6294,7 +6309,7 @@ exports[`Storyshots ListItem Compact No Icon 1`] = `
           "borderRadius": 0,
           "flex": 1,
           "justifyContent": "center",
-          "marginRight": 16,
+          "marginRight": 8,
           "marginVertical": 0,
           "paddingHorizontal": 0,
           "paddingVertical": 16,
@@ -6418,11 +6433,16 @@ exports[`Storyshots ListItem Default 1`] = `
       allowFontScaling={true}
       ellipsizeMode="tail"
       style={
-        Object {
-          "color": "#354052",
-          "fontFamily": "Roboto-Medium",
-          "fontSize": 16,
-        }
+        Array [
+          Object {
+            "color": "#354052",
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 16,
+          },
+          Object {
+            "fontSize": 14,
+          },
+        ]
       }
     >
       Let’s play
@@ -6558,13 +6578,18 @@ exports[`Storyshots ListItem Disabled 1`] = `
       ellipsizeMode="tail"
       style={
         Array [
+          Array [
+            Object {
+              "color": "#354052",
+              "fontFamily": "Roboto-Medium",
+              "fontSize": 16,
+            },
+            Object {
+              "color": "#9B9B9B",
+            },
+          ],
           Object {
-            "color": "#354052",
-            "fontFamily": "Roboto-Medium",
-            "fontSize": 16,
-          },
-          Object {
-            "color": "#9B9B9B",
+            "fontSize": 14,
           },
         ]
       }
@@ -6724,11 +6749,16 @@ exports[`Storyshots ListItem Drive 1`] = `
       allowFontScaling={true}
       ellipsizeMode="tail"
       style={
-        Object {
-          "color": "#354052",
-          "fontFamily": "Roboto-Medium",
-          "fontSize": 16,
-        }
+        Array [
+          Object {
+            "color": "#354052",
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 16,
+          },
+          Object {
+            "fontSize": 14,
+          },
+        ]
       }
     >
       Let’s get moving

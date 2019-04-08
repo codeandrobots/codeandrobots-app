@@ -21,7 +21,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginVertical: 0,
-    marginRight: Metrics.unit * 2,
+    marginRight: Metrics.unit,
     paddingVertical: Metrics.unit * 2,
     paddingHorizontal: 0,
     borderBottomWidth: 1,

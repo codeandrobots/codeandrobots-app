@@ -2061,7 +2061,7 @@ buffer-xor@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/buffer-xor/-/buffer-xor-1.0.3.tgz#26e61ed1422fb70dd42e6e36729ed51d855fe8d9"
 
-buffer@^4.3.0:
+buffer@^4.3.0, buffer@^4.6.0:
   version "4.9.1"
   resolved "https://registry.yarnpkg.com/buffer/-/buffer-4.9.1.tgz#6d1bb601b07a4efced97094132093027c95bc298"
   dependencies:
@@ -8074,6 +8074,12 @@ react-native-actionsheet@^2.4.2:
 react-native-app-settings@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/react-native-app-settings/-/react-native-app-settings-2.0.0.tgz#d2dbcf88dbb40d7261599fc373b35bd0f9fd886e"
+
+"react-native-bluetooth-serial@git+https://github.com/chico/react-native-bluetooth-serial.git#master":
+  version "1.0.0-rc1"
+  resolved "git+https://github.com/chico/react-native-bluetooth-serial.git#a859e6ccb0fd1ea4521669c764a63d7871f9ff56"
+  dependencies:
+    buffer "^4.6.0"
 
 react-native-compat@^1.0.0:
   version "1.0.0"

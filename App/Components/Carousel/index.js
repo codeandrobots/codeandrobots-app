@@ -9,7 +9,7 @@ import s from './Styles'
 export default class Carousel extends Component {
   static propTypes = {
     buttons: PropTypes.arrayOf(PropTypes.string),
-    onPress: PropTypes.func,
+    onPress: PropTypes.arrayOf(PropTypes.func),
     onPageChange: PropTypes.func,
     onDone: PropTypes.func
   }
@@ -36,9 +36,27 @@ export default class Carousel extends Component {
 
   nextPage = () => {
     const { page } = this.state
-    const { children, onPageChange = () => {}, onDone = () => {} } = this.props
+    const { children, onPageChange = () => {} } = this.props
+
     if (page < children.length - 1) {
       this.setState({ page: page + 1 }, () => { onPageChange() })
+    }
+  }
+
+  onPress = () => {
+    const { page } = this.state
+    const {
+      children,
+      onPress = [],
+      onDone = () => {}
+    } = this.props
+
+    const onPressPage = (page < onPress.length - 1) ? onPress[page] : null
+
+    if (onPressPage != null) {
+      onPressPage()
+    } else if (page < children.length - 1) {
+      this.nextPage()
     } else {
       onDone()
     }
@@ -46,7 +64,7 @@ export default class Carousel extends Component {
 
   renderControls = () => {
     const { page } = this.state
-    const { children, buttons = [], onPress = this.nextPage } = this.props
+    const { children, buttons = [] } = this.props
 
     let bubbles = []
     for (var i = 0; i < children.length; i++) {
@@ -62,7 +80,7 @@ export default class Carousel extends Component {
       <View style={s.controls}>
         {bubbles}
         <View style={{flex: 1}} />
-        <Button text={button} onPress={onPress} />
+        <Button text={button} onPress={this.onPress} />
       </View>
     )
   }

@@ -14,6 +14,7 @@ export default class CompactListItem extends Component {
     iconSet: PropTypes.string,
     icon: PropTypes.string,
     iconSize: PropTypes.number,
+    iconColor: PropTypes.string,
     title: PropTypes.string.isRequired,
     disabled: PropTypes.bool,
     onPress: PropTypes.func.isRequired
@@ -27,12 +28,13 @@ export default class CompactListItem extends Component {
       iconSet,
       icon,
       iconSize = 24,
+      iconColor = Colors.icon_primary,
       title,
       disabled = false,
       onPress } = this.props
 
     const textStyle = (!disabled) ? s.text : [s.text, s.text_disabled]
-    const primaryButtonIconColor = (!disabled) ? Colors.icon_primary : Colors.icon_disabled
+    const primaryButtonIconColor = (!disabled) ? iconColor : Colors.icon_disabled
     const buttonIconColor = (!disabled) ? Colors.icon_dark : Colors.icon_disabled
 
     return (

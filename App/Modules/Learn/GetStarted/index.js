@@ -1,29 +1,48 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
+import Bluetooth from 'App/Services/Bluetooth'
+
 import Screen from './Screen'
 
 export class GetStartedContainer extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      connected: false
+    }
+  }
+
+  componentWillMount () {
+    this.updateBluetoothStatus()
+  }
+
+  updateBluetoothStatus = async () => {
+    const connected = await Bluetooth.isConnected()
+    this.setState({connected})
+  }
+
   onDone = () => {
     this.props.navigation.goBack()
   }
 
-  onLearnMorePress = () => {
-    this.props.navigation.navigate('WebScreen', {
-      source: 'http://www.codeandrobots.com',
-      title: 'Code & Robots'
+  onConnectPress = () => {
+    this.props.navigation.navigate('ConnectScreen', {
+      onBack: this.updateBluetoothStatus
     })
   }
 
   render () {
+    const { connected } = this.state
     return (
       <Screen
         ref={(ref) => {
           this.screen = ref
         }}
         {...this.props}
+        connected={connected}
         onDone={this.onDone}
-        onLearnMorePress={this.onLearnMorePress}
+        onConnectPress={this.onConnectPress}
       />
     )
   }

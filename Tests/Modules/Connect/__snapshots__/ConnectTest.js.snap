@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Connect Component renders correctly when bluetooth is enabled 1`] = `
+<Container>
+  <Footer
+    style={
+      Object {
+        "paddingTop": 0,
+      }
+    }
+  >
+    <Card
+      button="Scan"
+      link="Problems Connecting?"
+      loading={false}
+      onLinkPress={[Function]}
+      onPress={[Function]}
+      style={
+        Object {
+          "textView": Object {
+            "marginBottom": 16,
+          },
+        }
+      }
+      text="Tap on a bluetooth device above to connect or scan to find other devices nearby."
+      textAlign="left"
+      title="GET CONNECTED"
+    />
+  </Footer>
+  <ScrollView
+    style={
+      Object {
+        "marginBottom": 210,
+      }
+    }
+  >
+    <List>
+      <DefaultListItem
+        buttonIcon="bluetooth-b"
+        buttonIconSize={22}
+        key="1"
+        onPress={[Function]}
+        text={null}
+        title="HC-06"
+      />
+      <DefaultListItem
+        buttonIcon="bluetooth-b"
+        buttonIconSize={22}
+        key="2"
+        onPress={[Function]}
+        text={null}
+        title="Laptop"
+      />
+    </List>
+  </ScrollView>
+</Container>
+`;
+
+exports[`Connect Component renders correctly when bluetooth is not enabled 1`] = `
+<Container>
+  <Card
+    image={
+      Object {
+        "process": [Function],
+      }
+    }
+  />
+  <Footer
+    style={
+      Object {
+        "paddingTop": 0,
+      }
+    }
+  >
+    <Card
+      button="Turn on Bluetooth"
+      link="Problems Connecting?"
+      onLinkPress={[Function]}
+      onPress={[Function]}
+      style={
+        Object {
+          "textView": Object {
+            "marginBottom": 16,
+          },
+        }
+      }
+      text="You need to turn on Bluetooth before connecting"
+      textAlign="left"
+      title="BLUETOOTH IS TURNED OFF"
+    />
+  </Footer>
+</Container>
+`;
+
+exports[`Connect Component renders correctly when scanning 1`] = `
+<Container>
+  <Footer
+    style={
+      Object {
+        "paddingTop": 0,
+      }
+    }
+  >
+    <Card
+      button="Scan"
+      link="Problems Connecting?"
+      loading={true}
+      onLinkPress={[Function]}
+      onPress={[Function]}
+      style={
+        Object {
+          "textView": Object {
+            "marginBottom": 16,
+          },
+        }
+      }
+      text="Scanning for nearby bluetooth devices...
+"
+      textAlign="left"
+      title="GET CONNECTED"
+    />
+  </Footer>
+  <ScrollView
+    style={
+      Object {
+        "marginBottom": 210,
+      }
+    }
+  >
+    <List>
+      <DefaultListItem
+        buttonIcon="bluetooth-b"
+        buttonIconSize={22}
+        key="1"
+        onPress={[Function]}
+        text={null}
+        title="HC-06"
+      />
+      <DefaultListItem
+        buttonIcon="bluetooth-b"
+        buttonIconSize={22}
+        key="2"
+        onPress={[Function]}
+        text={null}
+        title="Laptop"
+      />
+    </List>
+  </ScrollView>
+</Container>
+`;

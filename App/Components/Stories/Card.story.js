@@ -21,7 +21,7 @@ storiesOf('Card', module)
       title='🤖⬆️'
       text='Jump, Atlas, Jump!'
       link='Atlas on Wikipedia'
-      onPress={() => {
+      onLinkPress={() => {
         Linking.openURL('https://en.wikipedia.org/wiki/Atlas_(robot)')
       }} />
   ))

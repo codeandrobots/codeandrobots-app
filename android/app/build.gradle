@@ -165,6 +165,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-bluetooth-serial')
     compile project(':react-native-video')
     compile project(':react-native-linear-gradient')
     compile project(':react-native-app-settings')
@@ -183,7 +184,7 @@ dependencies {
     implementation "com.facebook.react:react-native:+"  // From node_modules
     implementation "com.google.android.gms:play-services-base:15.0.1"
     implementation "com.google.android.gms:play-services-gcm:15.0.1"
-    implementation "com.google.firebase:firebase-core:15.0.2"
+    implementation "com.google.firebase:firebase-core:16.0.0"
     implementation "com.google.firebase:firebase-auth:16.0.2"
     implementation ("com.google.firebase:firebase-messaging:15.0.2") {
       force = true

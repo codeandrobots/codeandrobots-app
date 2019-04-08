@@ -49,6 +49,7 @@
     "react-native": "0.51.0",
     "react-native-actionsheet": "^2.4.2",
     "react-native-app-settings": "^2.0.0",
+    "react-native-bluetooth-serial": "git+https://github.com/chico/react-native-bluetooth-serial.git#master",
     "react-native-config": "^0.10.0",
     "react-native-country-picker-modal": "^0.6.2",
     "react-native-device-info": "0.26.3",

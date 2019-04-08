@@ -15,6 +15,9 @@ export default class DefaultListItem extends Component {
     title: PropTypes.string.isRequired,
     text: PropTypes.string,
     button: PropTypes.string,
+    buttonIcon: PropTypes.string,
+    buttonIconSet: PropTypes.string,
+    buttonIconSize: PropTypes.number,
     disabled: PropTypes.bool,
     onPress: PropTypes.func.isRequired
   }
@@ -23,11 +26,16 @@ export default class DefaultListItem extends Component {
     const {
       style = undefined,
       iconStyle = undefined,
-      image, iconSet,
+      buttonIconStyle = {marginTop: 2},
+      image,
+      iconSet,
       icon,
       title,
       text,
       button,
+      buttonIconSet,
+      buttonIcon = 'chevron-right',
+      buttonIconSize = 18,
       disabled = false,
       onPress } = this.props
 
@@ -48,7 +56,7 @@ export default class DefaultListItem extends Component {
         )}
         <View style={s.textView}>
           <Text style={textStyle}>{title.toUpperCase()}</Text>
-          <Text style={textStyle}>{text}</Text>
+          {text && <Text style={[textStyle, s.text_medium]}>{text}</Text>}
         </View>
         {button && (
           <View style={s.buttonView}>
@@ -58,7 +66,7 @@ export default class DefaultListItem extends Component {
         {!button && (
           <View style={s.buttonView}>
             <IconButton disabled={disabled} onPress={onPress}>
-              <Icon name='chevron-right' disabled={disabled} style={{marginTop: 2}} />
+              <Icon set={buttonIconSet} name={buttonIcon} size={buttonIconSize} disabled={disabled} style={buttonIconStyle} />
             </IconButton>
           </View>
         )}

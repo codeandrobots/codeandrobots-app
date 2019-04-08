@@ -12,7 +12,8 @@ export const palette = {
   lightgrey: '#ECECEC',
   primary: '#F9BC62', // Orange yellow
   primaryDark: '#354052', // Almost black
-  primaryTranslucent: '#FCE2BA' // White on orange yellow with 50% opacity
+  primaryTranslucent: '#FCE2BA', // White on orange yellow with 50% opacity
+  error: '#E62117' // red
 }
 
 export default {
@@ -28,6 +29,7 @@ export default {
   },
   text: palette.primaryDark,
   text_disabled: palette.grey,
+  text_error: palette.error,
   icon: palette.darkgrey,
   icon_primary: palette.primary,
   icon_dark: palette.primaryDark,
