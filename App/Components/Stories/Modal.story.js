@@ -8,15 +8,20 @@ import { StyleSheet as s } from 'App/Themes'
 
 import Modal from '../Modal'
 
+const navigation = {navigate: () => {}}
+
 storiesOf('Modal', module)
   .addDecorator(FullScreenDecorator)
   .add('Default', () => (
-    <Modal show>
+    <Modal navigation={navigation} show>
       <View style={s.centered}>
         <Text style={s.text}>I am a modal popup 👋</Text>
       </View>
     </Modal>
   ))
   .add('Not Ready', () => (
-    <Modal show template='NotReady' />
+    <Modal navigation={navigation} show template='NotReady' />
+  ))
+  .add('Problems Connecting', () => (
+    <Modal navigation={navigation} show template='ProblemsConnecting' />
   ))

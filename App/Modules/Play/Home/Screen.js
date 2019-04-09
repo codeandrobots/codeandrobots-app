@@ -77,6 +77,7 @@ export default class Screen extends Component {
             onPress={onPress.findAFriend} />
         </List>
         <Modal
+          navigation={this.props.navigation}
           show={showNotReadyModal}
           onHidePress={onHideNotReadyModal}
           template='NotReady' />

@@ -13,7 +13,8 @@ export class ConnectContainer extends Component {
       enabled: false,
       scanning: false,
       devices: [],
-      activeDevice: null
+      activeDevice: null,
+      showProblemsConnectingModal: false
     }
   }
 
@@ -84,7 +85,11 @@ export class ConnectContainer extends Component {
   }
 
   onProblemsConnecting = () => {
-    // TODO
+    this.setState({showProblemsConnectingModal: true})
+  }
+
+  onHideProblemsConnectingModal = () => {
+    this.setState({showProblemsConnectingModal: false})
   }
 
   render () {
@@ -94,7 +99,8 @@ export class ConnectContainer extends Component {
       scanning,
       connecting,
       devices,
-      activeDevice} = this.state
+      activeDevice,
+      showProblemsConnectingModal} = this.state
     return (
       <Screen
         ref={(ref) => {
@@ -107,12 +113,14 @@ export class ConnectContainer extends Component {
         connecting={connecting}
         devices={devices}
         activeDevice={activeDevice}
+        showProblemsConnectingModal={showProblemsConnectingModal}
         onEnableBluetooth={this.onEnableBluetooth}
         onScan={this.onScan}
         onConnect={this.onConnect}
         onDisconnect={this.onDisconnect}
         onDone={this.onDone}
         onProblemsConnecting={this.onProblemsConnecting}
+        onHideProblemsConnectingModal={this.onHideProblemsConnectingModal}
       />
     )
   }

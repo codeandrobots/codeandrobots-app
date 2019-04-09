@@ -51,6 +51,7 @@ export default class Screen extends Component {
           </List>
         </ScrollView>
         <Modal
+          navigation={this.props.navigation}
           show={showNotReadyModal}
           onHidePress={onHideNotReadyModal}
           template='NotReady' />

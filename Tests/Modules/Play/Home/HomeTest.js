@@ -20,6 +20,7 @@ describe('Play', () => {
     }
     wrapper = shallow(
       <Screen
+        navigation={{navigate: () => {}}}
         showNotReadyModal={false}
         onHideNotReadyModal={() => {}}
         onPress={onPress} />)

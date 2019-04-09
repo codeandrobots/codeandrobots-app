@@ -1,12 +1,22 @@
 import React, { Component } from 'react'
 
+import PropTypes from 'prop-types'
+
 import { Card } from 'App/Components'
 
 import { Images } from 'App/Themes'
 
 export default class NotReady extends Component {
+  static propTypes = {
+    onHidePress: PropTypes.func
+  }
+
   onLearnMorePress = () => {
-    this.props.navigation.navigate('WebScreen', {
+    const { navigation, onHidePress } = this.props
+    if (onHidePress) {
+      onHidePress()
+    }
+    navigation.navigate('WebScreen', {
       source: 'http://www.codeandrobots.com',
       title: 'Code & Robots'
     })

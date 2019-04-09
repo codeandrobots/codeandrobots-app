@@ -53,6 +53,16 @@ exports[`Connect Component renders correctly when bluetooth is enabled 1`] = `
       />
     </List>
   </ScrollView>
+  <Modal
+    navigation={
+      Object {
+        "navigate": [Function],
+      }
+    }
+    onHidePress={[Function]}
+    show={false}
+    template="ProblemsConnecting"
+  />
 </Container>
 `;
 
@@ -64,6 +74,16 @@ exports[`Connect Component renders correctly when bluetooth is not enabled 1`] =
         "process": [Function],
       }
     }
+  />
+  <Modal
+    navigation={
+      Object {
+        "navigate": [Function],
+      }
+    }
+    onHidePress={[Function]}
+    show={false}
+    template="ProblemsConnecting"
   />
   <Footer
     style={
@@ -146,5 +166,15 @@ exports[`Connect Component renders correctly when scanning 1`] = `
       />
     </List>
   </ScrollView>
+  <Modal
+    navigation={
+      Object {
+        "navigate": [Function],
+      }
+    }
+    onHidePress={[Function]}
+    show={false}
+    template="ProblemsConnecting"
+  />
 </Container>
 `;

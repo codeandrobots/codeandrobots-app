@@ -36,6 +36,11 @@ exports[`Lessons Component renders correctly 1`] = `
     </List>
   </ScrollView>
   <Modal
+    navigation={
+      Object {
+        "navigate": [Function],
+      }
+    }
     onHidePress={[Function]}
     show={false}
     template="NotReady"

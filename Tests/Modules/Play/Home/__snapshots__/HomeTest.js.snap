@@ -92,6 +92,11 @@ exports[`Play Component renders correctly 1`] = `
     />
   </List>
   <Modal
+    navigation={
+      Object {
+        "navigate": [Function],
+      }
+    }
     onHidePress={[Function]}
     show={false}
     template="NotReady"

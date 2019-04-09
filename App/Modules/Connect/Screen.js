@@ -9,7 +9,8 @@ import {
   Footer,
   Card,
   List,
-  ListItem } from 'App/Components'
+  ListItem,
+  Modal } from 'App/Components'
 
 import { Metrics, Images } from 'App/Themes'
 
@@ -20,12 +21,14 @@ export default class Screen extends Component {
     scanning: PropTypes.bool.isRequired,
     devices: PropTypes.arrayOf(Types.bluetoothDevice).isRequired,
     activeDevice: Types.bluetoothDevice,
+    showProblemsConnectingModal: PropTypes.bool.isRequired,
     onEnableBluetooth: PropTypes.func.isRequired,
     onScan: PropTypes.func.isRequired,
     onConnect: PropTypes.func.isRequired,
     onDisconnect: PropTypes.func.isRequired,
     onDone: PropTypes.func.isRequired,
-    onProblemsConnecting: PropTypes.func.isRequired
+    onProblemsConnecting: PropTypes.func.isRequired,
+    onHideProblemsConnectingModal: PropTypes.func.isRequired
   }
 
   renderTurnOnBluetooth = () => {
@@ -33,6 +36,7 @@ export default class Screen extends Component {
     return (
       <Container>
         <Card image={Images.bluetooth} />
+        {this.renderProblemsConnectingModal()}
         <Footer style={{paddingTop: 0}}>
           <Card
             title='BLUETOOTH IS TURNED OFF'
@@ -133,8 +137,20 @@ export default class Screen extends Component {
             </List>
           </ScrollView>
         )}
+        {this.renderProblemsConnectingModal()}
       </Container>
     )
+  }
+
+  renderProblemsConnectingModal = () => {
+    const {
+      showProblemsConnectingModal,
+      onHideProblemsConnectingModal } = this.props
+    return <Modal
+      navigation={this.props.navigation}
+      show={showProblemsConnectingModal}
+      onHidePress={onHideProblemsConnectingModal}
+      template='ProblemsConnecting' />
   }
 
   render () {

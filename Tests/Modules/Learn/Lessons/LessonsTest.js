@@ -11,6 +11,7 @@ describe('Lessons', () => {
   beforeEach(() => {
     wrapper = shallow(
       <Screen
+        navigation={{navigate: () => {}}}
         showNotReadyModal={false}
         onHideNotReadyModal={() => {}}
         onPress={() => {}} />)

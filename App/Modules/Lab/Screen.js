@@ -35,6 +35,7 @@ export default class Screen extends Component {
           <StatListItem icon='gamepad' title='level' value='1' />
         </List>
         <Modal
+          navigation={this.props.navigation}
           show={showNotReadyModal}
           onHidePress={onHideNotReadyModal}
           template='NotReady' />

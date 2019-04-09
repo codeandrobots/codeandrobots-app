@@ -5,11 +5,15 @@ import PropTypes from 'prop-types'
 
 import { TouchableOpacity, TouchableWithoutFeedback, Icon } from 'App/Components'
 import NotReady from './NotReady'
+import ProblemsConnecting from './ProblemsConnecting'
 
 import s from './Styles'
 
 export default class Modal extends Component {
   static propTypes = {
+    navigation: PropTypes.shape({
+      navigate: PropTypes.func.isRequired
+    }).isRequired,
     show: PropTypes.bool.isRequired,
     onHidePress: PropTypes.func,
     template: PropTypes.string
@@ -48,7 +52,14 @@ export default class Modal extends Component {
                 </TouchableOpacity>
                 {!template && this.props.children}
                 {template && template === 'NotReady' && (
-                  <NotReady />
+                  <NotReady
+                    navigation={this.props.navigation}
+                    onHidePress={this.onHidePress} />
+                )}
+                {template && template === 'ProblemsConnecting' && (
+                  <ProblemsConnecting
+                    navigation={this.props.navigation}
+                    onHidePress={this.onHidePress} />
                 )}
               </View>
             </TouchableWithoutFeedback>
