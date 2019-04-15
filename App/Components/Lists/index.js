@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text } from 'react-native'
+import { View, ScrollView, Text } from 'react-native'
 import PropTypes from 'prop-types'
 
 import uuid from 'react-native-uuid'
@@ -9,11 +9,12 @@ import s from './Styles'
 export default class List extends Component {
   static propTypes = {
     title: PropTypes.string,
-    cols: PropTypes.number
+    cols: PropTypes.number,
+    scrollable: PropTypes.bool
   }
 
   render () {
-    const { style = undefined, cols = 1, title } = this.props
+    const { style = undefined, cols = 1, title, scrollable = false } = this.props
 
     const rowStyle = (cols === 1) ? {flex: 1} : undefined
 
@@ -26,8 +27,10 @@ export default class List extends Component {
       rows.push(children.splice(0, cols))
     }
 
+    const ListView = (scrollable) ? ScrollView : View
+
     return (
-      <View style={[s.listView, style]}>
+      <ListView style={[s.listView, style]}>
         {title && (
           <Text style={s.title}>{title}</Text>
         )}
@@ -36,7 +39,7 @@ export default class List extends Component {
             <View key={uuid.v4()} style={s.row}>{row}</View>
           )
         })}
-      </View>
+      </ListView>
     )
   }
 }

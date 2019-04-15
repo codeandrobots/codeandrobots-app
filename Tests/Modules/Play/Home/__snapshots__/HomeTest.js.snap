@@ -40,7 +40,7 @@ exports[`Play Component renders correctly 1`] = `
       title="Drive Mode"
     />
     <DefaultListItem
-      icon="message-text"
+      icon="music"
       iconSet="Material"
       iconStyle={
         Object {

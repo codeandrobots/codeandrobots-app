@@ -22,11 +22,17 @@ const bluetoothDevice = PropTypes.shape({
   name: PropTypes.string
 })
 
+const sound = PropTypes.shape({
+  key: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired
+})
+
 const Types = {
   error,
   user,
   instruction,
-  bluetoothDevice
+  bluetoothDevice,
+  sound
 }
 
 export default Types

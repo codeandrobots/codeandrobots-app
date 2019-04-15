@@ -14,7 +14,7 @@ export default StyleSheet.create({
   itemView_square: {
     flex: 0,
     flexDirection: 'column',
-    width: (Metrics.screenWidth / 2) - (Metrics.unit * 3)
+    width: (Metrics.screenWidth / 2) - (Metrics.unit * 2)
   },
   itemView_compact: {
     flex: 1,

@@ -4,7 +4,9 @@ import { View, Modal as RNModal } from 'react-native'
 import PropTypes from 'prop-types'
 
 import { TouchableOpacity, TouchableWithoutFeedback, Icon } from 'App/Components'
+
 import NotReady from './NotReady'
+import NotConnected from './NotConnected'
 import ProblemsConnecting from './ProblemsConnecting'
 
 import s from './Styles'
@@ -53,6 +55,11 @@ export default class Modal extends Component {
                 {!template && this.props.children}
                 {template && template === 'NotReady' && (
                   <NotReady
+                    navigation={this.props.navigation}
+                    onHidePress={this.onHidePress} />
+                )}
+                {template && template === 'NotConnected' && (
+                  <NotConnected
                     navigation={this.props.navigation}
                     onHidePress={this.onHidePress} />
                 )}

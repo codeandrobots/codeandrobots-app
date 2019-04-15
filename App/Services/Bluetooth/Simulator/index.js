@@ -50,6 +50,10 @@ const disconnect = async () => {
   return {error: null}
 }
 
+const write = async (s) => {
+  return { ok: true }
+}
+
 export default {
   isEnabled,
   isConnected,
@@ -58,5 +62,6 @@ export default {
   list,
   scan,
   connect,
-  disconnect
+  disconnect,
+  write
 }

@@ -19,6 +19,10 @@ export class PlayContainer extends Component {
     this.props.navigation.navigate('DriveScreen')
   }
 
+  onBeepPress = () => {
+    this.props.navigation.navigate('BeepScreen')
+  }
+
   notReady = () => {
     this.setState({ showNotReadyModal: true })
   }
@@ -34,7 +38,7 @@ export class PlayContainer extends Component {
       explore: this.notReady,
       playGame: this.notReady,
       drive: this.onDrivePress,
-      message: this.notReady,
+      beep: this.onBeepPress,
       dance: this.notReady,
       findAFriend: this.notReady
     }

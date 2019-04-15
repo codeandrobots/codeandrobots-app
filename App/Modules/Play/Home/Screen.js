@@ -48,12 +48,12 @@ export default class Screen extends Component {
             text='Let’s get moving'
             onPress={onPress.drive} />
           <ListItem
-            icon='message-text'
+            icon='music'
             iconSet='Material'
             iconStyle={{marginTop: 4}}
             title='Beep beep'
             text='Beep bop boopity beep'
-            onPress={onPress.message} />
+            onPress={onPress.beep} />
         </List>
         <List title='Games' cols={2}>
           <SquareListItem

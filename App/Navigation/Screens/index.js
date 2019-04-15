@@ -6,6 +6,7 @@ import {
   Connect,
   Play,
   Drive,
+  Beep,
   Discover,
   CodeLab,
   Lessons,
@@ -56,6 +57,12 @@ export default {
     screen: Drive,
     navigationOptions: ({navigation}) => ({
       title: 'Drive'
+    })
+  },
+  BeepScreen: {
+    screen: Beep,
+    navigationOptions: ({navigation}) => ({
+      title: 'Beep Beep'
     })
   },
   DiscoverScreen: {

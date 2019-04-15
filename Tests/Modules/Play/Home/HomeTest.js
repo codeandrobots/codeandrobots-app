@@ -14,7 +14,7 @@ describe('Play', () => {
       explore: () => {},
       playGame: () => {},
       drive: () => {},
-      message: () => {},
+      beep: () => {},
       dance: () => {},
       findAFriend: () => {}
     }

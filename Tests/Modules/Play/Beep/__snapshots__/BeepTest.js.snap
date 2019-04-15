@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Beep Component renders correctly 1`] = `
+<Container>
+  <List
+    cols={2}
+    scrollable={true}
+  >
+    <SquareListItem
+      icon="play"
+      iconStyle={
+        Object {
+          "marginLeft": 4,
+        }
+      }
+      key="1"
+      onPress={[Function]}
+      title="Beep"
+    />
+    <SquareListItem
+      icon="play"
+      iconStyle={
+        Object {
+          "marginLeft": 4,
+        }
+      }
+      key="2"
+      onPress={[Function]}
+      title="Bop"
+    />
+  </List>
+  <Modal
+    navigation={
+      Object {
+        "navigate": [Function],
+      }
+    }
+    onHidePress={[Function]}
+    show={false}
+    template="NotConnected"
+  />
+</Container>
+`;

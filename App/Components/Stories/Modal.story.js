@@ -22,6 +22,9 @@ storiesOf('Modal', module)
   .add('Not Ready', () => (
     <Modal navigation={navigation} show template='NotReady' />
   ))
+  .add('Not Connected', () => (
+    <Modal navigation={navigation} show template='NotConnected' />
+  ))
   .add('Problems Connecting', () => (
     <Modal navigation={navigation} show template='ProblemsConnecting' />
   ))

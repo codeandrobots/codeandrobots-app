@@ -3843,7 +3843,7 @@ exports[`Storyshots List Games 1`] = `
           "margin": 8,
           "opacity": 1,
           "padding": 8,
-          "width": 351,
+          "width": 359,
         }
       }
       testID={undefined}
@@ -4038,7 +4038,7 @@ exports[`Storyshots List Games 1`] = `
           "margin": 8,
           "opacity": 1,
           "padding": 8,
-          "width": 351,
+          "width": 359,
         }
       }
       testID={undefined}
@@ -4241,7 +4241,7 @@ exports[`Storyshots List Games 1`] = `
           "margin": 8,
           "opacity": 1,
           "padding": 8,
-          "width": 351,
+          "width": 359,
         }
       }
       testID={undefined}
@@ -7173,7 +7173,7 @@ exports[`Storyshots ListItem Square 1`] = `
       "margin": 8,
       "opacity": 1,
       "padding": 8,
-      "width": 351,
+      "width": 359,
     }
   }
   testID={undefined}
@@ -7371,7 +7371,7 @@ exports[`Storyshots ListItem Square Disabled 1`] = `
       "margin": 8,
       "opacity": 1,
       "padding": 8,
-      "width": 351,
+      "width": 359,
     }
   }
   testID={undefined}
@@ -7835,6 +7835,258 @@ exports[`Storyshots Modal Default 1`] = `
           >
             I am a modal popup 👋
           </Text>
+        </View>
+      </View>
+    </View>
+  </Modal>
+</View>
+`;
+
+exports[`Storyshots Modal Not Connected 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#FAFAFA",
+      "height": "100%",
+    }
+  }
+>
+  <Modal
+    hardwareAccelerated={false}
+    onRequestClose={[Function]}
+    transparent={true}
+    visible={true}
+  >
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hitSlop={undefined}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(0, 0, 0, 0.8)",
+            "bottom": 0,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          undefined,
+        ]
+      }
+      testID={undefined}
+    >
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        hitSlop={undefined}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "white",
+            "borderRadius": 6,
+            "marginHorizontal": 32,
+            "padding": 32,
+          }
+        }
+        testID={undefined}
+      >
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          collapsable={undefined}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          nativeID={undefined}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "margin": 16,
+              "opacity": 1,
+              "position": "absolute",
+              "right": 0,
+              "zIndex": 9999,
+            }
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#516173",
+                  "fontSize": 18,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <View
+          style={undefined}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "justifyContent": "center",
+                "marginVertical": 24,
+                "width": "100%",
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "process": [Function],
+                }
+              }
+              style={undefined}
+            />
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "marginBottom": 24,
+                  "marginTop": 8,
+                },
+                Object {
+                  "alignItems": "center",
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "width": "100%",
+                },
+                undefined,
+              ]
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "#354052",
+                    "fontFamily": "Roboto-Medium",
+                    "fontSize": 16,
+                  },
+                  Object {
+                    "textAlign": "center",
+                  },
+                ]
+              }
+            >
+              Whoops, you need to connect first.
+            </Text>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "width": "100%",
+                },
+                undefined,
+              ]
+            }
+          >
+            <View
+              accessibilityComponentType={undefined}
+              accessibilityLabel={undefined}
+              accessibilityTraits={undefined}
+              accessible={true}
+              collapsable={undefined}
+              hasTVPreferredFocus={undefined}
+              hitSlop={undefined}
+              isTVSelectable={true}
+              nativeID={undefined}
+              onLayout={undefined}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "white",
+                  "borderColor": "#FCE2BA",
+                  "borderRadius": 100,
+                  "borderWidth": 8,
+                  "minWidth": 112,
+                  "opacity": 1,
+                  "paddingHorizontal": 24,
+                  "paddingVertical": 8,
+                }
+              }
+              testID={undefined}
+              tvParallaxProperties={undefined}
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#354052",
+                    "fontFamily": "Roboto-Medium",
+                    "fontSize": 18,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                Connect
+              </Text>
+            </View>
+          </View>
         </View>
       </View>
     </View>

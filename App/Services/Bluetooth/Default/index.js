@@ -67,6 +67,10 @@ const scan = async () => {
 const connect = async (device) => {
   try {
     await BluetoothSerial.connect(device.id)
+
+    // TODO Good idea to send ? command after connecting?
+    await write('?')
+
     connectedDevice.device = device
     return {connected: true, error: null}
   } catch (error) {
@@ -83,6 +87,11 @@ const disconnect = async () => {
   }
 }
 
+const write = async (s) => {
+  const ok = await BluetoothSerial.write(s + '\r')
+  return { ok }
+}
+
 export default {
   isEnabled,
   isConnected,
@@ -91,5 +100,6 @@ export default {
   list,
   scan,
   connect,
-  disconnect
+  disconnect,
+  write
 }
