@@ -15,6 +15,12 @@ export default class Joystick extends Component {
     onDraggableStart: PropTypes.func
   }
 
+  copy = (touch) => {
+    // Note: Creating shallow copy of touch since it might be updated
+    // by the joystick lib as the rest of the app logic is happening
+    return Object.assign({}, touch)
+  }
+
   render () {
     const {
       style = undefined,
@@ -34,8 +40,20 @@ export default class Joystick extends Component {
             isSticky
             draggableStyle={s.thumbstick}
             backgroundStyle={s.thumbstickBackground}
-            onDraggableMove={onDraggableMove}
-            onDraggableRelease={onDraggableRelease}
+            onDraggableMove={
+              (touch) => {
+                if (onDraggableMove) {
+                  onDraggableMove(this.copy(touch))
+                }
+              }
+            }
+            onDraggableRelease={
+              (touch) => {
+                if (onDraggableRelease) {
+                  onDraggableRelease(this.copy(touch))
+                }
+              }
+            }
             onDraggableStart={onDraggableStart} />
         </View>
         <View style={s.thumbstickShadow} />

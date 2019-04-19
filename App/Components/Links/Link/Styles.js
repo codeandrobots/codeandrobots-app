@@ -7,6 +7,7 @@ export default StyleSheet.create({
   text: {
     ...Fonts.style.button,
     color: Colors.button.text,
-    textDecorationLine: 'underline'
+    textDecorationLine: 'underline',
+    textAlign: 'center'
   }
 })

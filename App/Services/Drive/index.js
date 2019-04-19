@@ -1,22 +1,8 @@
-import Config from 'react-native-config'
+import WebSocket from 'App/Services/WebSocket'
 
-import SocketIOClient from 'socket.io-client'
+const socket = WebSocket.getInstance()
 
 export default class Drive {
-  static myInstance = null
-
-  socket = null
-
-  static getInstance () {
-    if (Drive.myInstance == null) {
-      Drive.myInstance = new Drive()
-    }
-    if (Config.SOCKET_IO_URL) {
-      Drive.myInstance.socket = SocketIOClient(Config.SOCKET_IO_URL)
-    }
-    return Drive.myInstance
-  }
-
   direction = (touch) => {
     if (touch.dy <= -40) {
       return 'up'
@@ -33,8 +19,8 @@ export default class Drive {
 
   go = (touch) => {
     const direction = this.direction(touch)
-    if (this.socket && direction) {
-      this.socket.emit('go', direction)
+    if (direction) {
+      socket.emit('go', direction)
     }
   }
 
@@ -42,7 +28,7 @@ export default class Drive {
     let delay = 0
     instructions.forEach((instruction) => {
       setTimeout(() => {
-        this.socket.emit('go', instruction)
+        socket.emit('go', instruction)
       }, delay)
       delay += 500
     })

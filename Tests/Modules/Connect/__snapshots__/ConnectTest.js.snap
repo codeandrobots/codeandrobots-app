@@ -1,5 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Connect Component renders correctly when bluetooth device is connected 1`] = `
+<Container>
+  <List>
+    <DefaultListItem
+      buttonIcon="bluetooth-b"
+      buttonIconSize={22}
+      key="1"
+      onPress={[Function]}
+      text="Connected, tap to disconnect"
+      title="HC-06"
+    />
+  </List>
+  <Footer
+    style={
+      Object {
+        "paddingTop": 0,
+      }
+    }
+  >
+    <Card
+      button="Done"
+      onPress={[Function]}
+      style={
+        Object {
+          "textView": Object {
+            "marginBottom": 16,
+          },
+        }
+      }
+      text="All hooked up & ready to go!"
+      textAlign="left"
+      title="YOU’RE CONNECTED"
+    />
+  </Footer>
+</Container>
+`;
+
 exports[`Connect Component renders correctly when bluetooth is enabled 1`] = `
 <Container>
   <Footer
@@ -68,23 +105,6 @@ exports[`Connect Component renders correctly when bluetooth is enabled 1`] = `
 
 exports[`Connect Component renders correctly when bluetooth is not enabled 1`] = `
 <Container>
-  <Card
-    image={
-      Object {
-        "process": [Function],
-      }
-    }
-  />
-  <Modal
-    navigation={
-      Object {
-        "navigate": [Function],
-      }
-    }
-    onHidePress={[Function]}
-    show={false}
-    template="ProblemsConnecting"
-  />
   <Footer
     style={
       Object {
@@ -107,6 +127,109 @@ exports[`Connect Component renders correctly when bluetooth is not enabled 1`] =
       text="You need to turn on Bluetooth before connecting"
       textAlign="left"
       title="BLUETOOTH IS TURNED OFF"
+    />
+  </Footer>
+  <Card
+    image={
+      Object {
+        "process": [Function],
+      }
+    }
+  />
+  <Modal
+    navigation={
+      Object {
+        "navigate": [Function],
+      }
+    }
+    onHidePress={[Function]}
+    show={false}
+    template="ProblemsConnecting"
+  />
+</Container>
+`;
+
+exports[`Connect Component renders correctly when connected to simulator 1`] = `
+<Container>
+  <Footer
+    style={
+      Object {
+        "paddingTop": 0,
+      }
+    }
+  >
+    <Card
+      button="Done"
+      link="Email simulator link"
+      onLinkPress={[Function]}
+      onPress={[Function]}
+      style={
+        Object {
+          "textView": Object {
+            "marginBottom": 16,
+          },
+        }
+      }
+      text="Test instructions"
+      textAlign="left"
+      title="YOU\`RE CONNECTED TO THE SIMULATOR"
+    />
+  </Footer>
+  <Card
+    image={
+      Object {
+        "process": [Function],
+      }
+    }
+    title="Good job 👍"
+  />
+</Container>
+`;
+
+exports[`Connect Component renders correctly when first connecting 1`] = `
+<Container>
+  <Card
+    image={
+      Object {
+        "process": [Function],
+      }
+    }
+    link="Is the device you want
+to connect to supported?"
+    onLinkPress={[Function]}
+  />
+  <Modal
+    navigation={
+      Object {
+        "navigate": [Function],
+      }
+    }
+    show={false}
+    template="IsYourDeviceSupported"
+  />
+  <Footer
+    style={
+      Object {
+        "paddingTop": 0,
+      }
+    }
+  >
+    <Card
+      button="Connect Bluetooth Device"
+      link="Connect to the
+Code & Robots Simulator"
+      onLinkPress={[Function]}
+      onPress={[Function]}
+      style={
+        Object {
+          "textView": Object {
+            "marginBottom": 16,
+          },
+        }
+      }
+      text="Connect to a bluetooth device OR to the Code & Robots simulator"
+      textAlign="left"
+      title="CHOOSE HOW TO CONNECT"
     />
   </Footer>
 </Container>

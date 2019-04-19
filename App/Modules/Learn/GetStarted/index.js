@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import Bluetooth from 'App/Services/Bluetooth'
+import { isConnected } from 'App/Services/Connect'
 
 import Screen from './Screen'
 
@@ -14,11 +14,11 @@ export class GetStartedContainer extends Component {
   }
 
   componentWillMount () {
-    this.updateBluetoothStatus()
+    this.updateConnectedStatus()
   }
 
-  updateBluetoothStatus = async () => {
-    const connected = await Bluetooth.isConnected()
+  updateConnectedStatus = async () => {
+    const connected = await isConnected()
     this.setState({connected})
   }
 
@@ -28,7 +28,7 @@ export class GetStartedContainer extends Component {
 
   onConnectPress = () => {
     this.props.navigation.navigate('ConnectScreen', {
-      onBack: this.updateBluetoothStatus
+      onBack: this.updateConnectedStatus
     })
   }
 

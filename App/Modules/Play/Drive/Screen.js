@@ -6,24 +6,29 @@ import {
   Container,
   Footer,
   Joystick,
-  Card} from 'App/Components'
+  Card,
+  Modal} from 'App/Components'
 
 import s from './Styles'
 
 export default class Screen extends Component {
   static propTypes = {
+    showNotConnectedModal: PropTypes.bool.isRequired,
     message: PropTypes.string.isRequired,
     onDraggableMove: PropTypes.func,
     onDraggableRelease: PropTypes.func,
-    onDraggableStart: PropTypes.func
+    onDraggableStart: PropTypes.func,
+    onHideNotConnectedModal: PropTypes.func.isRequired
   }
 
   render () {
     const {
       message,
+      showNotConnectedModal,
       onDraggableMove,
       onDraggableRelease,
-      onDraggableStart
+      onDraggableStart,
+      onHideNotConnectedModal
     } = this.props
     return (
       <Container>
@@ -33,6 +38,11 @@ export default class Screen extends Component {
             onDraggableRelease={onDraggableRelease}
             onDraggableStart={onDraggableStart} />
         </View>
+        <Modal
+          navigation={this.props.navigation}
+          show={showNotConnectedModal}
+          onHidePress={onHideNotConnectedModal}
+          template='NotConnected' />
         <Footer>
           <Card text={message} />
         </Footer>

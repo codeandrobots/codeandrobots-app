@@ -8,6 +8,7 @@ import { TouchableOpacity, TouchableWithoutFeedback, Icon } from 'App/Components
 import NotReady from './NotReady'
 import NotConnected from './NotConnected'
 import ProblemsConnecting from './ProblemsConnecting'
+import IsYourDeviceSupported from './IsYourDeviceSupported'
 
 import s from './Styles'
 
@@ -65,6 +66,11 @@ export default class Modal extends Component {
                 )}
                 {template && template === 'ProblemsConnecting' && (
                   <ProblemsConnecting
+                    navigation={this.props.navigation}
+                    onHidePress={this.onHidePress} />
+                )}
+                {template && template === 'IsYourDeviceSupported' && (
+                  <IsYourDeviceSupported
                     navigation={this.props.navigation}
                     onHidePress={this.onHidePress} />
                 )}

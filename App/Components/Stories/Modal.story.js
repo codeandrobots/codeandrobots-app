@@ -28,3 +28,6 @@ storiesOf('Modal', module)
   .add('Problems Connecting', () => (
     <Modal navigation={navigation} show template='ProblemsConnecting' />
   ))
+  .add('Is Your Device Supported', () => (
+    <Modal navigation={navigation} show template='IsYourDeviceSupported' />
+  ))

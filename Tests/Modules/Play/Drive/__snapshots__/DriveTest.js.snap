@@ -18,6 +18,16 @@ exports[`Drive Component renders correctly 1`] = `
       onDraggableStart={[Function]}
     />
   </View>
+  <Modal
+    navigation={
+      Object {
+        "navigate": [Function],
+      }
+    }
+    onHidePress={[Function]}
+    show={false}
+    template="NotConnected"
+  />
   <Footer>
     <Card
       text="Use joystick to drive"

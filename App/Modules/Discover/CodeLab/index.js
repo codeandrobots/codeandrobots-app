@@ -9,7 +9,7 @@ import Screen from './Screen'
 export class CodeLabContainer extends Component {
   constructor (props) {
     super(props)
-    this.drive = Drive.getInstance()
+    this.drive = new Drive()
     this.order = null
     this.state = {
       instructions: []

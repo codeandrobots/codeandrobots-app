@@ -10,7 +10,11 @@ const devices = [
   {id: '2', name: 'Laptop'}
 ]
 
+const activeDevice = {...devices[0], isConnected: true}
+
 const navigation = {navigate: () => {}}
+
+const instructions = 'Test instructions'
 
 const onProps = {
   onEnableBluetooth: () => {},
@@ -18,12 +22,14 @@ const onProps = {
   onConnect: () => {},
   onDisconnect: () => {},
   onDone: () => {},
+  onEmailInstructions: () => {},
+  onIsYourDeviceSupported: () => {},
   onProblemsConnecting: () => {},
   onHideProblemsConnectingModal: () => {}
 }
 
 describe('Connect', () => {
-  it('Component renders correctly when bluetooth is not enabled', () => {
+  it('Component renders correctly when first connecting', () => {
     const wrapper = shallow(
       <Screen
         navigation={navigation}
@@ -31,6 +37,36 @@ describe('Connect', () => {
         scanning={false}
         devices={[]}
         showProblemsConnectingModal={false}
+        showIsYourDeviceSupportedModal={false}
+        instructions={instructions}
+        {...onProps} />)
+    expect(toJson(wrapper)).toMatchSnapshot()
+  })
+  it('Component renders correctly when connected to simulator', () => {
+    const wrapper = shallow(
+      <Screen
+        navigation={navigation}
+        connectTo='simulator'
+        enabled={false}
+        scanning={false}
+        devices={[]}
+        showProblemsConnectingModal={false}
+        showIsYourDeviceSupportedModal={false}
+        instructions={instructions}
+        {...onProps} />)
+    expect(toJson(wrapper)).toMatchSnapshot()
+  })
+  it('Component renders correctly when bluetooth is not enabled', () => {
+    const wrapper = shallow(
+      <Screen
+        navigation={navigation}
+        connectTo='device'
+        enabled={false}
+        scanning={false}
+        devices={[]}
+        showProblemsConnectingModal={false}
+        showIsYourDeviceSupportedModal={false}
+        instructions={instructions}
         {...onProps} />)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
@@ -38,10 +74,13 @@ describe('Connect', () => {
     const wrapper = shallow(
       <Screen
         navigation={navigation}
+        connectTo='device'
         enabled
         scanning={false}
         devices={devices}
         showProblemsConnectingModal={false}
+        showIsYourDeviceSupportedModal={false}
+        instructions={instructions}
         {...onProps} />)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
@@ -49,10 +88,28 @@ describe('Connect', () => {
     const wrapper = shallow(
       <Screen
         navigation={navigation}
+        connectTo='device'
         enabled
         scanning
         devices={devices}
         showProblemsConnectingModal={false}
+        showIsYourDeviceSupportedModal={false}
+        instructions={instructions}
+        {...onProps} />)
+    expect(toJson(wrapper)).toMatchSnapshot()
+  })
+  it('Component renders correctly when bluetooth device is connected', () => {
+    const wrapper = shallow(
+      <Screen
+        navigation={navigation}
+        connectTo='device'
+        enabled
+        scanning={false}
+        devices={devices}
+        activeDevice={activeDevice}
+        showProblemsConnectingModal={false}
+        showIsYourDeviceSupportedModal={false}
+        instructions={instructions}
         {...onProps} />)
     expect(toJson(wrapper)).toMatchSnapshot()
   })

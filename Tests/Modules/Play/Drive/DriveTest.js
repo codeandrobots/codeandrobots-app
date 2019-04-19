@@ -11,10 +11,13 @@ describe('Drive', () => {
   beforeEach(() => {
     wrapper = shallow(
       <Screen
+        navigation={{navigate: () => {}}}
         message='Use joystick to drive'
+        showNotConnectedModal={false}
         onDraggableMove={(touch) => {}}
         onDraggableRelease={(touch) => {}}
-        onDraggableStart={() => {}} />)
+        onDraggableStart={() => {}}
+        onHideNotConnectedModal={(touch) => {}} />)
   })
 
   it('Component renders correctly', () => {

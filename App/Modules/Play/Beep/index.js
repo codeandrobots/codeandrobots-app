@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import Bluetooth from 'App/Services/Bluetooth'
+import { isConnected } from 'App/Services/Connect'
 import { sounds, play } from 'App/Services/Beep'
 
 import Screen from './Screen'
@@ -15,7 +15,7 @@ export class BeepContainer extends Component {
   }
 
   onPlay = async (sound) => {
-    const connected = await Bluetooth.isConnected()
+    const connected = await isConnected()
     if (connected) {
       play(sound)
     } else {

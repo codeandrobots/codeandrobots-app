@@ -1,20 +1,29 @@
 import React, { Component } from 'react'
+import { Linking } from 'react-native'
 import { connect } from 'react-redux'
 
 import Bluetooth from 'App/Services/Bluetooth'
+import WebSocket from 'App/Services/WebSocket'
+import { isSimulator } from 'App/Services/Properties'
+import { notPossibleInSimulator } from 'App/Services/Alerts'
 
 import Screen from './Screen'
 
 export class ConnectContainer extends Component {
   constructor (props) {
     super(props)
+    this.socket = WebSocket.getInstance()
+    const instructions = `To view the simulator, open the following link on another device (e.g. your laptop):\ncodeandrobots.com/simulator?room=${this.socket.room}`
     this.state = {
       error: null,
+      connectTo: null,
       enabled: false,
       scanning: false,
       devices: [],
       activeDevice: null,
-      showProblemsConnectingModal: false
+      showProblemsConnectingModal: false,
+      showIsYourDeviceSupportedModal: false,
+      instructions
     }
   }
 
@@ -29,6 +38,13 @@ export class ConnectContainer extends Component {
   showDevices = async () => {
     const { devices, error } = await Bluetooth.list()
     this.setState({devices, error})
+  }
+
+  onConnectTo = (connectTo) => {
+    if (connectTo === 'simulator') {
+      this.socket.connect()
+    }
+    this.setState({ connectTo })
   }
 
   onEnableBluetooth = async () => {
@@ -84,23 +100,48 @@ export class ConnectContainer extends Component {
     this.props.navigation.goBack()
   }
 
+  onEmailInstructions = () => {
+    if (isSimulator()) { return notPossibleInSimulator() }
+    const subject = 'Code & Robots simulator instructions'
+    const body = this.state.instructions
+    const mailtoURL = `mailto:?subject=${subject}&body=${body}`
+
+    Linking.canOpenURL(mailtoURL)
+      .then((supported) => {
+        if (supported) {
+          return Linking.openURL(mailtoURL).catch((error) => { console.warn(error) })
+        }
+      })
+  }
+
   onProblemsConnecting = () => {
     this.setState({showProblemsConnectingModal: true})
+  }
+
+  onIsYourDeviceSupported = () => {
+    this.setState({showIsYourDeviceSupportedModal: true})
   }
 
   onHideProblemsConnectingModal = () => {
     this.setState({showProblemsConnectingModal: false})
   }
 
+  onHideIsYourDeviceSupportedModal = () => {
+    this.setState({showIsYourDeviceSupportedModal: false})
+  }
+
   render () {
     const {
       error,
+      connectTo,
       enabled,
       scanning,
       connecting,
       devices,
       activeDevice,
-      showProblemsConnectingModal} = this.state
+      showProblemsConnectingModal,
+      instructions,
+      showIsYourDeviceSupportedModal} = this.state
     return (
       <Screen
         ref={(ref) => {
@@ -108,19 +149,26 @@ export class ConnectContainer extends Component {
         }}
         {...this.props}
         error={error}
+        connectTo={connectTo}
         enabled={enabled}
         scanning={scanning}
         connecting={connecting}
         devices={devices}
         activeDevice={activeDevice}
         showProblemsConnectingModal={showProblemsConnectingModal}
+        showIsYourDeviceSupportedModal={showIsYourDeviceSupportedModal}
+        instructions={instructions}
+        onConnectTo={this.onConnectTo}
         onEnableBluetooth={this.onEnableBluetooth}
         onScan={this.onScan}
         onConnect={this.onConnect}
         onDisconnect={this.onDisconnect}
         onDone={this.onDone}
+        onEmailInstructions={this.onEmailInstructions}
         onProblemsConnecting={this.onProblemsConnecting}
+        onIsYourDeviceSupported={this.onIsYourDeviceSupported}
         onHideProblemsConnectingModal={this.onHideProblemsConnectingModal}
+        onHideIsYourDeviceSupportedModal={this.onHideIsYourDeviceSupportedModal}
       />
     )
   }

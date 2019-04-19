@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
+import { isConnected } from 'App/Services/Connect'
 import Drive from 'App/Services/Drive'
 
 import Screen from './Screen'
@@ -8,11 +9,23 @@ import Screen from './Screen'
 export class DriveContainer extends Component {
   constructor (props) {
     super(props)
-    this.drive = Drive.getInstance()
+    this.drive = new Drive()
+    this.state = {
+      showNotConnectedModal: false
+    }
   }
 
-  onDraggableRelease = (touch) => {
-    this.drive.go(touch)
+  onDraggableRelease = async (touch) => {
+    const connected = await isConnected()
+    if (connected) {
+      this.drive.go(touch)
+    } else {
+      this.setState({showNotConnectedModal: true})
+    }
+  }
+
+  onHideNotConnectedModal = () => {
+    this.setState({showNotConnectedModal: false})
   }
 
   render () {
@@ -23,7 +36,9 @@ export class DriveContainer extends Component {
         }}
         {...this.props}
         message='Use joystick to drive'
+        showNotConnectedModal={this.state.showNotConnectedModal}
         onDraggableRelease={this.onDraggableRelease}
+        onHideNotConnectedModal={this.onHideNotConnectedModal}
       />
     )
   }

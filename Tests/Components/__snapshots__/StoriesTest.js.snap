@@ -758,6 +758,7 @@ exports[`Storyshots Card Atlas 1`] = `
             "color": "#354052",
             "fontFamily": "Roboto-Medium",
             "fontSize": 18,
+            "textAlign": "center",
             "textDecorationLine": "underline",
           },
           Object {
@@ -2755,6 +2756,7 @@ exports[`Storyshots Links Multiple 1`] = `
             "color": "#354052",
             "fontFamily": "Roboto-Medium",
             "fontSize": 18,
+            "textAlign": "center",
             "textDecorationLine": "underline",
           },
           undefined,
@@ -2804,6 +2806,7 @@ exports[`Storyshots Links Multiple 1`] = `
             "color": "#354052",
             "fontFamily": "Roboto-Medium",
             "fontSize": 18,
+            "textAlign": "center",
             "textDecorationLine": "underline",
           },
           undefined,
@@ -2856,6 +2859,7 @@ exports[`Storyshots Links Single 1`] = `
           "color": "#354052",
           "fontFamily": "Roboto-Medium",
           "fontSize": 18,
+          "textAlign": "center",
           "textDecorationLine": "underline",
         },
         undefined,
@@ -7842,6 +7846,249 @@ exports[`Storyshots Modal Default 1`] = `
 </View>
 `;
 
+exports[`Storyshots Modal Is Your Device Supported 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#FAFAFA",
+      "height": "100%",
+    }
+  }
+>
+  <Modal
+    hardwareAccelerated={false}
+    onRequestClose={[Function]}
+    transparent={true}
+    visible={true}
+  >
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hitSlop={undefined}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(0, 0, 0, 0.8)",
+            "bottom": 0,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          undefined,
+        ]
+      }
+      testID={undefined}
+    >
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        hitSlop={undefined}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "white",
+            "borderRadius": 6,
+            "marginHorizontal": 32,
+            "padding": 32,
+          }
+        }
+        testID={undefined}
+      >
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          collapsable={undefined}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          nativeID={undefined}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "margin": 16,
+              "opacity": 1,
+              "position": "absolute",
+              "right": 0,
+              "zIndex": 9999,
+            }
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#516173",
+                  "fontSize": 18,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <View
+          style={undefined}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "justifyContent": "center",
+                "marginVertical": 24,
+                "width": "100%",
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "process": [Function],
+                }
+              }
+              style={undefined}
+            />
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "marginBottom": 24,
+                  "marginTop": 8,
+                },
+                Object {
+                  "alignItems": "center",
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "width": "100%",
+                },
+                undefined,
+              ]
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "#354052",
+                    "fontFamily": "Roboto-Medium",
+                    "fontSize": 16,
+                  },
+                  Object {
+                    "textAlign": "center",
+                  },
+                ]
+              }
+            >
+              The Beta app currently supports connecting to the Otto DIY open source robot or to the Code & Robots simulator.
+
+The aim of the Code & Robots app is to support all of the most popular robots and more will be added soon 🤞
+            </Text>
+          </View>
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            collapsable={undefined}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            nativeID={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "justifyContent": "center",
+                "opacity": 1,
+                "width": "100%",
+              }
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "#354052",
+                    "fontFamily": "Roboto-Medium",
+                    "fontSize": 18,
+                    "textAlign": "center",
+                    "textDecorationLine": "underline",
+                  },
+                  Object {
+                    "fontSize": undefined,
+                  },
+                ]
+              }
+            >
+              What is the Otto DIY robot?
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </Modal>
+</View>
+`;
+
 exports[`Storyshots Modal Not Connected 1`] = `
 <View
   style={
@@ -8576,6 +8823,7 @@ exports[`Storyshots Modal Problems Connecting 1`] = `
                     "color": "#354052",
                     "fontFamily": "Roboto-Medium",
                     "fontSize": 18,
+                    "textAlign": "center",
                     "textDecorationLine": "underline",
                   },
                   Object {

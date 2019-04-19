@@ -17,26 +17,75 @@ import { Metrics, Images } from 'App/Themes'
 export default class Screen extends Component {
   static propTypes = {
     error: Types.error,
+    connectTo: PropTypes.string,
     enabled: PropTypes.bool.isRequired,
     scanning: PropTypes.bool.isRequired,
     devices: PropTypes.arrayOf(Types.bluetoothDevice).isRequired,
     activeDevice: Types.bluetoothDevice,
     showProblemsConnectingModal: PropTypes.bool.isRequired,
+    showIsYourDeviceSupportedModal: PropTypes.bool.isRequired,
+    instructions: PropTypes.string.isRequired,
     onEnableBluetooth: PropTypes.func.isRequired,
     onScan: PropTypes.func.isRequired,
     onConnect: PropTypes.func.isRequired,
     onDisconnect: PropTypes.func.isRequired,
     onDone: PropTypes.func.isRequired,
+    onEmailInstructions: PropTypes.func.isRequired,
+    onIsYourDeviceSupported: PropTypes.func.isRequired,
     onProblemsConnecting: PropTypes.func.isRequired,
     onHideProblemsConnectingModal: PropTypes.func.isRequired
+  }
+
+  renderConnectTo = () => {
+    const { onConnectTo, onIsYourDeviceSupported } = this.props
+    return (
+      <Container>
+        <Card
+          image={Images.bluetooth}
+          link={'Is the device you want\nto connect to supported?'}
+          onLinkPress={onIsYourDeviceSupported} />
+        {this.renderIsYourDeviceSupportedModal()}
+        <Footer style={{paddingTop: 0}}>
+          <Card
+            title='CHOOSE HOW TO CONNECT'
+            text='Connect to a bluetooth device OR to the Code & Robots simulator'
+            button='Connect Bluetooth Device'
+            link={'Connect to the\nCode & Robots Simulator'}
+            textAlign='left'
+            onPress={() => { onConnectTo('device') }}
+            onLinkPress={() => { onConnectTo('simulator') }}
+            style={{textView: {marginBottom: Metrics.unit * 2}}} />
+        </Footer>
+      </Container>
+    )
+  }
+
+  renderConnectedToSimulator = () => {
+    const { instructions, onDone, onEmailInstructions } = this.props
+    return (
+      <Container>
+        <Footer style={{paddingTop: 0}}>
+          <Card
+            title='YOU`RE CONNECTED TO THE SIMULATOR'
+            text={instructions}
+            button='Done'
+            link='Email simulator link'
+            textAlign='left'
+            onPress={onDone}
+            onLinkPress={onEmailInstructions}
+            style={{textView: {marginBottom: Metrics.unit * 2}}} />
+        </Footer>
+        <Card
+          image={Images.bluetooth}
+          title='Good job 👍' />
+      </Container>
+    )
   }
 
   renderTurnOnBluetooth = () => {
     const { onEnableBluetooth, onProblemsConnecting } = this.props
     return (
       <Container>
-        <Card image={Images.bluetooth} />
-        {this.renderProblemsConnectingModal()}
         <Footer style={{paddingTop: 0}}>
           <Card
             title='BLUETOOTH IS TURNED OFF'
@@ -48,6 +97,8 @@ export default class Screen extends Component {
             onLinkPress={onProblemsConnecting}
             style={{textView: {marginBottom: Metrics.unit * 2}}} />
         </Footer>
+        <Card image={Images.bluetooth} />
+        {this.renderProblemsConnectingModal()}
       </Container>
     )
   }
@@ -153,17 +204,41 @@ export default class Screen extends Component {
       template='ProblemsConnecting' />
   }
 
+  renderIsYourDeviceSupportedModal = () => {
+    const {
+      showIsYourDeviceSupportedModal,
+      onHideIsYourDeviceSupportedModal } = this.props
+    return <Modal
+      navigation={this.props.navigation}
+      show={showIsYourDeviceSupportedModal}
+      onHidePress={onHideIsYourDeviceSupportedModal}
+      template='IsYourDeviceSupported' />
+  }
+
   render () {
-    const { enabled, activeDevice } = this.props
+    const {
+      connectTo,
+      enabled,
+      activeDevice } = this.props
 
-    if (!enabled) {
-      return this.renderTurnOnBluetooth()
+    if (!connectTo) {
+      return this.renderConnectTo()
     }
 
-    if (activeDevice && activeDevice.isConnected) {
-      return this.renderConnectedDevice()
+    if (connectTo === 'device') {
+      if (!enabled) {
+        return this.renderTurnOnBluetooth()
+      }
+
+      if (activeDevice && activeDevice.isConnected) {
+        return this.renderConnectedDevice()
+      }
+
+      return this.renderDevices()
     }
 
-    return this.renderDevices()
+    if (connectTo === 'simulator') {
+      return this.renderConnectedToSimulator()
+    }
   }
 }
