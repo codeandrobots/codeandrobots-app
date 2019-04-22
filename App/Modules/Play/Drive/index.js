@@ -21,10 +21,14 @@ export class DriveContainer extends Component {
     }
   }
 
+  onDraggableMove = (touch) => {
+    this.client.move(touch)
+  }
+
   onDraggableRelease = async (touch) => {
     const connected = await isConnected()
     if (connected) {
-      this.client.move(touch)
+      this.client.moveAndStop(touch)
     } else {
       this.setState({showNotConnectedModal: true})
     }
@@ -43,6 +47,7 @@ export class DriveContainer extends Component {
         {...this.props}
         message='Use joystick to drive'
         showNotConnectedModal={this.state.showNotConnectedModal}
+        onDraggableMove={this.onDraggableMove}
         onDraggableRelease={this.onDraggableRelease}
         onHideNotConnectedModal={this.onHideNotConnectedModal}
       />

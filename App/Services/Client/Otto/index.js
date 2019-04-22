@@ -1,6 +1,10 @@
 
 import Bluetooth from 'App/Services/Bluetooth'
 
+const STOP = 'stop'
+
+const DELAY = 600 // Delay between commands
+
 const sounds = [
   {key: '1', name: 'Beep'},
   {key: '2', name: 'Bye'},
@@ -16,9 +20,49 @@ const sounds = [
   {key: '14', name: 'Fart'}
 ]
 
+const cmdFromTouch = (touch) => {
+  if (touch.dy <= -40) {
+    return 'M 1' // up
+  } else if (touch.dy >= 40) {
+    return 'M 2' // down
+  } else if (touch.dx >= 40) {
+    return 'M 3' // right
+  } else if (touch.dx <= -40) {
+    return 'M 4' // left
+  } else {
+    return 'M 0'
+  }
+}
+
+const cmdFromInstruction = (instruction) => {
+  if (instruction === 'up') {
+    return 'M 1' // up
+  } else if (instruction === 'down') {
+    return 'M 2' // down
+  } else if (instruction === 'right') {
+    return 'M 3' // right
+  } else if (instruction === 'left') {
+    return 'M 4' // left
+  } else if (instruction === STOP) {
+    return 'M 0' // stop
+  } else {
+    return 'M 0'
+  }
+}
+
 export default class Otto {
+  lastCmdSent = null
+
   getSounds = () => {
     return sounds
+  }
+
+  stop = async (delay) => {
+    if (!delay) {
+      const cmd = cmdFromInstruction(STOP)
+      return Bluetooth.write(cmd)
+    }
+    setTimeout(() => { this.stop() }, delay)
   }
 
   play = async (sound) => {
@@ -26,16 +70,27 @@ export default class Otto {
   }
 
   move = (touch) => {
-    // TODO
+    const cmd = cmdFromTouch(touch)
+    if (!this.lastCmdSent || this.lastCmdSent !== cmd) {
+      Bluetooth.write(cmd)
+      this.lastCmdSent = cmd
+    }
+  }
+
+  moveAndStop = (touch) => {
+    this.move(touch)
+    this.stop(DELAY)
   }
 
   run = (instructions) => {
     let delay = 0
+    instructions.push(STOP) // Always finish with stop
     instructions.forEach((instruction) => {
       setTimeout(() => {
-        // TODO
+        const cmd = cmdFromInstruction(instruction)
+        Bluetooth.write(cmd)
       }, delay)
-      delay += 500
+      delay += DELAY
     })
   }
 }

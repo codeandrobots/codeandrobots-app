@@ -31,6 +31,10 @@ export default class Simulator {
   }
 
   move = (touch) => {
+    // Only moveAndStop is supported for the time being
+  }
+
+  moveAndStop = (touch) => {
     const direction = calculateDirection(touch)
     if (direction) {
       socket.emit({event: 'move', direction})

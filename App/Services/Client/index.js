@@ -49,6 +49,13 @@ export default class Client {
     }
   }
 
+  moveAndStop = async (touch) => {
+    const client = this.getClient()
+    if (client) {
+      client.moveAndStop(touch)
+    }
+  }
+
   run = async (instructions) => {
     const client = this.getClient()
     if (client) {
