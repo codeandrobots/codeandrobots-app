@@ -2,18 +2,30 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import uuid from 'react-native-uuid'
 
-import Drive from 'App/Services/Drive'
+import Client, { isConnected } from 'App/Services/Client'
 
 import Screen from './Screen'
 
 export class CodeLabContainer extends Component {
   constructor (props) {
     super(props)
-    this.drive = new Drive()
+    this.client = new Client()
     this.order = null
     this.state = {
-      instructions: []
+      instructions: [],
+      showNotConnectedModal: false
     }
+  }
+
+  async componentWillMount () {
+    const connected = await isConnected()
+    if (!connected) {
+      this.setState({showNotConnectedModal: true})
+    }
+  }
+
+  onHideNotConnectedModal = () => {
+    this.setState({showNotConnectedModal: false})
   }
 
   sortInstructions = () => {
@@ -49,9 +61,14 @@ export class CodeLabContainer extends Component {
     this.setState({ instructions })
   }
 
-  onRun = () => {
-    const instructions = this.sortInstructions()
-    this.drive.run(instructions.map(instruction => instruction.key))
+  onRun = async () => {
+    const connected = await isConnected()
+    if (connected) {
+      const instructions = this.sortInstructions()
+      this.client.run(instructions.map(instruction => instruction.key))
+    } else {
+      this.setState({showNotConnectedModal: true})
+    }
   }
 
   render () {
@@ -63,10 +80,12 @@ export class CodeLabContainer extends Component {
         }}
         {...this.props}
         instructions={instructions}
+        showNotConnectedModal={this.state.showNotConnectedModal}
         onChangeOrder={this.onChangeOrder}
         onClose={this.onClose}
         onNavPress={this.onNavPress}
         onRun={this.onRun}
+        onHideNotConnectedModal={this.onHideNotConnectedModal}
       />
     )
   }

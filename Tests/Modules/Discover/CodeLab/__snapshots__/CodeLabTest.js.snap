@@ -7,6 +7,16 @@ exports[`CodeLab Component renders correctly 1`] = `
     onChangeOrder={[Function]}
     onClose={[Function]}
   />
+  <Modal
+    navigation={
+      Object {
+        "navigate": [Function],
+      }
+    }
+    onHidePress={[Function]}
+    show={false}
+    template="NotConnected"
+  />
   <CodeLabNav
     onPress={[Function]}
     onRun={[Function]}

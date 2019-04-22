@@ -1,26 +1,32 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { isConnected } from 'App/Services/Connect'
-import { sounds, play } from 'App/Services/Beep'
+import Client, { isConnected } from 'App/Services/Client'
 
 import Screen from './Screen'
 
 export class BeepContainer extends Component {
   constructor (props) {
     super(props)
+    this.client = new Client()
     this.state = {
+      sounds: [],
       showNotConnectedModal: false
     }
   }
 
-  onPlay = async (sound) => {
+  async componentWillMount () {
     const connected = await isConnected()
     if (connected) {
-      play(sound)
+      const sounds = await this.client.getSounds()
+      this.setState({ sounds })
     } else {
       this.setState({showNotConnectedModal: true})
     }
+  }
+
+  onPlay = async (sound) => {
+    this.client.play(sound)
   }
 
   onHideNotConnectedModal = () => {
@@ -28,6 +34,7 @@ export class BeepContainer extends Component {
   }
 
   render () {
+    const { sounds } = this.state
     return (
       <Screen
         ref={(ref) => {

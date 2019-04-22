@@ -11,11 +11,14 @@ describe('CodeLab', () => {
   beforeEach(() => {
     wrapper = shallow(
       <Screen
+        navigation={{navigate: () => {}}}
         instructions={[]}
+        showNotConnectedModal={false}
         onChangeOrder={() => {}}
         onClose={() => {}}
         onNavPress={() => {}}
-        onRun={() => {}} />)
+        onRun={() => {}}
+        onHideNotConnectedModal={(touch) => {}} />)
   })
 
   it('Component renders correctly', () => {

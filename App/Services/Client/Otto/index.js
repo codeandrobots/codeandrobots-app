@@ -1,3 +1,4 @@
+
 import Bluetooth from 'App/Services/Bluetooth'
 
 const sounds = [
@@ -15,15 +16,26 @@ const sounds = [
   {key: '14', name: 'Fart'}
 ]
 
-const play = async (sound) => {
-  const connected = await Bluetooth.isConnected()
-  if (!connected) {
-    return false
+export default class Otto {
+  getSounds = () => {
+    return sounds
   }
-  return Bluetooth.write('K ' + sound.key)
-}
 
-export {
-  sounds,
-  play
+  play = async (sound) => {
+    return Bluetooth.write('K ' + sound.key)
+  }
+
+  move = (touch) => {
+    // TODO
+  }
+
+  run = (instructions) => {
+    let delay = 0
+    instructions.forEach((instruction) => {
+      setTimeout(() => {
+        // TODO
+      }, delay)
+      delay += 500
+    })
+  }
 }

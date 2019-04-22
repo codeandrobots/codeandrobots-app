@@ -1,24 +1,30 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { isConnected } from 'App/Services/Connect'
-import Drive from 'App/Services/Drive'
+import Client, { isConnected } from 'App/Services/Client'
 
 import Screen from './Screen'
 
 export class DriveContainer extends Component {
   constructor (props) {
     super(props)
-    this.drive = new Drive()
+    this.client = new Client()
     this.state = {
       showNotConnectedModal: false
+    }
+  }
+
+  async componentWillMount () {
+    const connected = await isConnected()
+    if (!connected) {
+      this.setState({showNotConnectedModal: true})
     }
   }
 
   onDraggableRelease = async (touch) => {
     const connected = await isConnected()
     if (connected) {
-      this.drive.go(touch)
+      this.client.move(touch)
     } else {
       this.setState({showNotConnectedModal: true})
     }

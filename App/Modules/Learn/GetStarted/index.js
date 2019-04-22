@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { isConnected } from 'App/Services/Connect'
+import { isConnected } from 'App/Services/Client'
 
 import Screen from './Screen'
 

@@ -2,6 +2,8 @@ import Config from 'react-native-config'
 
 import SocketIOClient from 'socket.io-client'
 
+import { isSimulator } from 'App/Services/Properties'
+
 // Random 4-digit room number (0000-9999)
 // See https://stackoverflow.com/a/45551032
 const randomFourDigitNumber = () => {
@@ -18,7 +20,13 @@ export default class WebSocket {
   static getInstance () {
     if (WebSocket.myInstance == null) {
       WebSocket.myInstance = new WebSocket()
-      WebSocket.myInstance.room = randomFourDigitNumber()
+      if (isSimulator()) {
+        // If in simulator then connect automatically to room 10000
+        WebSocket.myInstance.room = '10000'
+        WebSocket.myInstance.connect()
+      } else {
+        WebSocket.myInstance.room = randomFourDigitNumber()
+      }
     }
 
     return WebSocket.myInstance
@@ -32,9 +40,9 @@ export default class WebSocket {
     }
   }
 
-  emit = (event, message) => {
+  emit = (event) => {
     if (this.socket && this.isConnected) {
-      this.socket.emit(event, {room: this.room, message})
+      this.socket.emit('event', {room: this.room, ...event})
     }
   }
 }
