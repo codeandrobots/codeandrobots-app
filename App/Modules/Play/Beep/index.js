@@ -30,7 +30,12 @@ export class BeepContainer extends Component {
   }
 
   onPlay = async (sound) => {
-    this.client.play(sound)
+    const connected = await isConnected()
+    if (connected) {
+      this.client.play(sound)
+    } else {
+      this.setState({showNotConnectedModal: true})
+    }
   }
 
   onHideNotConnectedModal = () => {

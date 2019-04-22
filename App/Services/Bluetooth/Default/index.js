@@ -7,6 +7,11 @@ class ConnectedDevice {
 
 const connectedDevice = new ConnectedDevice()
 
+BluetoothSerial.on('error', (err) => console.log(`Error: ${err.message}`))
+BluetoothSerial.on('connectionLost', () => {
+  disconnect()
+})
+
 const isEnabled = async () => {
   try {
     const enabled = await BluetoothSerial.isEnabled()
@@ -67,10 +72,6 @@ const scan = async () => {
 const connect = async (device) => {
   try {
     await BluetoothSerial.connect(device.id)
-
-    // TODO Good idea to send ? command after connecting?
-    await write('?')
-
     connectedDevice.device = device
     return {connected: true, error: null}
   } catch (error) {
