@@ -8,15 +8,16 @@ import { Images } from 'App/Themes'
 
 export default class NotConnected extends Component {
   static propTypes = {
-    onHidePress: PropTypes.func
+    onHidePress: PropTypes.func,
+    onBack: PropTypes.func
   }
 
   onConnectPress = () => {
-    const { navigation, onHidePress } = this.props
+    const { navigation, onHidePress, onBack } = this.props
     if (onHidePress) {
       onHidePress()
     }
-    navigation.navigate('ConnectScreen')
+    navigation.navigate('ConnectScreen', { onBack })
   }
 
   render () {

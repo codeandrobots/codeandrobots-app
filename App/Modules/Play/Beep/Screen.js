@@ -14,7 +14,8 @@ export default class Screen extends Component {
     sounds: PropTypes.arrayOf(Types.sound).isRequired,
     showNotConnectedModal: PropTypes.bool.isRequired,
     onPlay: PropTypes.func.isRequired,
-    onHideNotConnectedModal: PropTypes.func.isRequired
+    onHideNotConnectedModal: PropTypes.func.isRequired,
+    onBack: PropTypes.func.isRequired
   }
 
   render () {
@@ -22,7 +23,8 @@ export default class Screen extends Component {
       sounds,
       showNotConnectedModal,
       onPlay,
-      onHideNotConnectedModal
+      onHideNotConnectedModal,
+      onBack
     } = this.props
     return (
       <Container>
@@ -42,6 +44,7 @@ export default class Screen extends Component {
           navigation={this.props.navigation}
           show={showNotConnectedModal}
           onHidePress={onHideNotConnectedModal}
+          onBack={onBack}
           template='NotConnected' />
       </Container>
     )

@@ -35,6 +35,7 @@ exports[`Beep Component renders correctly 1`] = `
         "navigate": [Function],
       }
     }
+    onBack={[Function]}
     onHidePress={[Function]}
     show={false}
     template="NotConnected"

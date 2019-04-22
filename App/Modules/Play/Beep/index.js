@@ -18,11 +18,15 @@ export class BeepContainer extends Component {
   async componentWillMount () {
     const connected = await isConnected()
     if (connected) {
-      const sounds = await this.client.getSounds()
-      this.setState({ sounds })
+      this.updateSounds()
     } else {
       this.setState({showNotConnectedModal: true})
     }
+  }
+
+  updateSounds = async () => {
+    const sounds = await this.client.getSounds()
+    this.setState({ sounds })
   }
 
   onPlay = async (sound) => {
@@ -45,6 +49,7 @@ export class BeepContainer extends Component {
         showNotConnectedModal={this.state.showNotConnectedModal}
         onPlay={this.onPlay}
         onHideNotConnectedModal={this.onHideNotConnectedModal}
+        onBack={this.updateSounds}
       />
     )
   }

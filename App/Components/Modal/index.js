@@ -18,8 +18,9 @@ export default class Modal extends Component {
       navigate: PropTypes.func.isRequired
     }).isRequired,
     show: PropTypes.bool.isRequired,
+    template: PropTypes.string,
     onHidePress: PropTypes.func,
-    template: PropTypes.string
+    onBack: PropTypes.func
   }
 
   constructor (props) {
@@ -37,7 +38,7 @@ export default class Modal extends Component {
   }
 
   render () {
-    const { style = undefined, template } = this.props
+    const { style = undefined, template, onBack } = this.props
     const { show } = (this.props.onHidePress)
       ? this.props
       : this.state
@@ -57,22 +58,26 @@ export default class Modal extends Component {
                 {template && template === 'NotReady' && (
                   <NotReady
                     navigation={this.props.navigation}
-                    onHidePress={this.onHidePress} />
+                    onHidePress={this.onHidePress}
+                    onBack={onBack} />
                 )}
                 {template && template === 'NotConnected' && (
                   <NotConnected
                     navigation={this.props.navigation}
-                    onHidePress={this.onHidePress} />
+                    onHidePress={this.onHidePress}
+                    onBack={onBack} />
                 )}
                 {template && template === 'ProblemsConnecting' && (
                   <ProblemsConnecting
                     navigation={this.props.navigation}
-                    onHidePress={this.onHidePress} />
+                    onHidePress={this.onHidePress}
+                    onBack={onBack} />
                 )}
                 {template && template === 'IsYourDeviceSupported' && (
                   <IsYourDeviceSupported
                     navigation={this.props.navigation}
-                    onHidePress={this.onHidePress} />
+                    onHidePress={this.onHidePress}
+                    onBack={onBack} />
                 )}
               </View>
             </TouchableWithoutFeedback>

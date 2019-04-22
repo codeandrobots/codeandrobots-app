@@ -20,7 +20,8 @@ describe('Beep', () => {
         sounds={sounds}
         showNotConnectedModal={false}
         onPlay={(touch) => {}}
-        onHideNotConnectedModal={(touch) => {}} />)
+        onHideNotConnectedModal={(touch) => {}}
+        onBack={() => {}} />)
   })
 
   it('Component renders correctly', () => {

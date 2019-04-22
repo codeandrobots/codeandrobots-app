@@ -10,13 +10,12 @@ const sounds = [
   {key: '2', name: 'Bye'},
   {key: '3', name: 'Surprise'},
   {key: '4', name: 'OhOoh'},
-  {key: '6', name: 'Surprise'},
-  {key: '7', name: 'Cuddly'},
-  {key: '8', name: 'Sleeping'},
-  {key: '9', name: 'Happy'},
-  {key: '10', name: 'Super Happy'},
-  {key: '12', name: 'Sad'},
-  {key: '13', name: 'Confused'},
+  {key: '6', name: 'Cuddly'},
+  {key: '7', name: 'Sleeping'},
+  {key: '8', name: 'Happy'},
+  {key: '9', name: 'Super Happy'},
+  {key: '11', name: 'Sad'},
+  {key: '12', name: 'Confused'},
   {key: '14', name: 'Fart'}
 ]
 
