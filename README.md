@@ -34,6 +34,16 @@
     * Run [Genymotion](https://www.genymotion.com) or run on [an Android device](https://facebook.github.io/react-native/docs/running-on-device)
     * run `react-native run-android --variant=devDebug`
 
+### Troubleshooting
+
+#### Activity class {com.codeandrobots/com.codeandrobots.MainActivity} does not exist
+
+If you see the error "Activity class {com.codeandrobots/com.codeandrobots.MainActivity} does not exist" then all is OK but you have to find and launch the Code & Robots app manually from your device. This error occurs because react-native CLI doesn't work well yet with Android variants.
+
+#### Failed to create directory
+
+If you see the error "Failed to create directory" then keep running ```react-native run-android --variant=devDebug``` until they stop happening, sometimes as much as 3 or 4 times :confounded:
+
 ### App Properties
 
 When running the app locally, it will rely on the properties defined in your local `.env` file.
