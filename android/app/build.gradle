@@ -136,7 +136,7 @@ android {
     }
     signingConfigs {
         release {
-            storeFile file(System.getenv("APP_KEYSTORE_FILE"))
+            storeFile System.getenv("APP_KEYSTORE_FILE") != null ? file(System.getenv("APP_KEYSTORE_FILE")) : null
             storePassword System.getenv("APP_KEYSTORE_PASSWORD")
             keyAlias System.getenv("APP_KEY_ALIAS")
             keyPassword System.getenv("APP_KEY_PASSWORD")
