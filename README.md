@@ -40,6 +40,13 @@
 
 If you see the error "Activity class {com.codeandrobots/com.codeandrobots.MainActivity} does not exist" then all is OK but you have to find and launch the Code & Robots app manually from your device. This error occurs because react-native CLI doesn't work well yet with Android variants.
 
+#### Device is UNAUTHORIZED
+
+If you see the error "Device is UNAUTHORIZED", make sure to click OK when the popup "Allow USB debugging" shows on your device.
+
+To check to see if your device is connected and authorized:
+  * ```adb devices```
+
 #### Failed to create directory
 
 If you see the error "Failed to create directory" then keep running ```react-native run-android --variant=devDebug``` until they stop happening, sometimes as much as 3 or 4 times :confounded:
