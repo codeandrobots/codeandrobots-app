@@ -1,26 +1,38 @@
 # Code & Robots
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
 
-## :arrow_up: How to Setup
+## :rocket: How to setup and run the app
 
-**Step 1:** git clone this repo
+**Step 1:** Install and setup React Native
+  * Mac or Linux
+    * See [React Native getting started doc](https://facebook.github.io/react-native/docs/getting-started)
+  * Windows
+    * See [Windows Setup doc](https://github.com/codeandrobots/codeandrobots-app/blob/master/SETUP_WINDOWS.md)
 
-**Step 2:** cd to the cloned repo
+**Step 2:** git clone this repo
+  * ```git clone https://github.com/codeandrobots/codeandrobots-app.git```
 
-**Step 3:** Install the Application with `yarn install`
+**Step 3:** cd to the cloned repo
+  * ```cd codeandrobots-app```
 
-## :arrow_forward: How to Run App
+**Step 4:** Install the Application with Yarn
+  * ```yarn install --ignore-engines```
 
-1. cd to the repo
-2. Copy `.env.example` to `.env`
-3. Update [App Properties](#app-properties) if necessary
-4. Run Build
-  * for iOS
+**Step 5:** Copy `.env.example` to `.env`
+  * Mac or Linux
+    * ```cp .env.example .env```
+  * Windows
+    * ```copy .env.example .env```
+  
+**Step 6:** Update [App Properties](#app-properties) in ```.env``` if necessary
+
+**Step 7:** Install and run the app
+  * iOS
     * Make sure [XCode](https://developer.apple.com/xcode/) is installed
     * run `react-native run-ios`
-  * for Android
+  * Android
     * Run [Genymotion](https://www.genymotion.com) or run on [an Android device](https://facebook.github.io/react-native/docs/running-on-device)
-    * run `react-native run-android`
+    * run `react-native run-android --variant=devDebug`
 
 ### App Properties
 
