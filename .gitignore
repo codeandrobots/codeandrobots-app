@@ -54,6 +54,13 @@ api-*.json
 */fastlane/Preview.html
 */fastlane/screenshots
 
+# Keystore
+#
+# Keystore files are security files used for signing Android apps and must be kept safe and
+# so it is important to not store these in the git repo
+#
+*.keystore
+
 # Misc
 #
 .env
