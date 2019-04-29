@@ -121,6 +121,7 @@ Hint: You can also test on a virtual device, see https://developer.android.com/s
 1. Open a Administrator Command Prompt
 
 2. Create the HelloWorld project
+    * ```cd C:\Users\%username%```
     * ```react-native init HelloWorld```
 
 3. Enable developer options on your Android device (See https://developer.android.com/studio/debug/dev-options#enable)
@@ -151,6 +152,7 @@ To check to see if your device is connected and authorized:
 ## Run the Code & Robots app
 
 Follow the instructions in https://github.com/codeandrobots/codeandrobots-app#arrow_up-how-to-setup, i.e:
+  * ```cd C:\Users\%username%```
   * ```git clone https://github.com/codeandrobots/codeandrobots-app.git```
   * ```yarn install --ignore-engines```
   * ```copy .env.example .env```
