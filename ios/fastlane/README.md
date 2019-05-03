@@ -26,11 +26,6 @@ Push a new beta build to TestFlight
 fastlane ios release
 ```
 Push a new release build
-### ios upload_symbols
-```
-fastlane ios upload_symbols
-```
-
 
 ----
 
