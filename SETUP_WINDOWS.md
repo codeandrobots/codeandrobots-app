@@ -167,3 +167,16 @@ If you see the error "Failed to create directory" then keep running ```react-nat
 #### Activity class {com.codeandrobots/com.codeandrobots.MainActivity} does not exist
 
 If you see the error "Activity class {com.codeandrobots/com.codeandrobots.MainActivity} does not exist" then all is OK but you have to launch the Code & Robots app manually from your device. This error occurs because react-native CLI doesn't work well yet with Android variants.
+
+#### Operation not permitted, lstat
+
+If you see the error "Operation not permitted, lstat" then try the following:
+
+1. Start the React Native bundler inside a **NEW** terminal or command prompt
+  * ```cd codeandrobots-app```
+  * ```npm cache clean```
+  * ```npm start -- --reset-cache```
+
+2. Run the app in a different terminal or command prompt
+  * ```react-native run-android --variant=devDebug```
+
