@@ -3,6 +3,10 @@
 
 ## :rocket: How to setup and run the app
 
+If you're new to mobile app development with React Native then here are some crash courses to bring you up to speed:
+  * [React Native crash course video](https://www.youtube.com/watch?v=mkualZPRZCs)
+  * [JavaScript OOP Crash Course (ES5 & ES6)](https://www.youtube.com/watch?v=vDJpGenyHaA)
+
 **Step 1:** Install and setup React Native
   * Mac or Linux
     * See [React Native getting started doc](https://facebook.github.io/react-native/docs/getting-started)
@@ -10,7 +14,12 @@
     * See [Windows Setup doc](https://github.com/codeandrobots/codeandrobots-app/blob/master/SETUP_WINDOWS.md)
 
 **Step 2:** git clone this repo
-  * ```git clone https://github.com/codeandrobots/codeandrobots-app.git```
+  * Mac or Linux
+    * ```cd ~```
+    * ```git clone https://github.com/codeandrobots/codeandrobots-app.git```
+  * Windows
+    * ```cd C:\Users\%username%```
+    * ```git clone https://github.com/codeandrobots/codeandrobots-app.git```
 
 **Step 3:** cd to the cloned repo
   * ```cd codeandrobots-app```
@@ -31,7 +40,7 @@
     * Make sure [XCode](https://developer.apple.com/xcode/) is installed
     * run `react-native run-ios`
   * Android
-    * Run [Genymotion](https://www.genymotion.com) or run on [an Android device](https://facebook.github.io/react-native/docs/running-on-device)
+    * [Use your Android device](https://facebook.github.io/react-native/docs/running-on-device) or run on an [Android Emulator](https://medium.com/@Charles_Stover/create-a-react-native-app-on-an-android-emulator-1c0d94f288ae) or run on [Genymotion](https://www.genymotion.com)
     * run `react-native run-android --variant=devDebug`
 
 ### Troubleshooting
@@ -50,6 +59,17 @@ To check to see if your device is connected and authorized:
 #### Failed to create directory
 
 If you see the error "Failed to create directory" then keep running ```react-native run-android --variant=devDebug``` until they stop happening, sometimes as much as 3 or 4 times :confounded:
+
+#### Operation not permitted, lstat
+
+If you see the error "Operation not permitted, lstat" then try the following:
+
+1. Start the React Native bundler inside a **NEW** terminal or command prompt
+  * ```cd codeandrobots-app```
+  * ```npm cache clean```
+  * ```npm start -- --reset-cache```
+
+2. Run the app in a different terminal or command prompt, see **Step 7** above
 
 ### App Properties
 
