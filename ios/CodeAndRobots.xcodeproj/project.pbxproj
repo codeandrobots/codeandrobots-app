@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00523F7841D441AE8D5178FB /* libRNSentry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E2FA9064FD4F5CBDEC1D68 /* libRNSentry.a */; };
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
@@ -73,9 +74,9 @@
 		D6674A9F6CF742868004F3A8 /* libjschelpers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F825B18C613A440E93F87FF7 /* libjschelpers.a */; };
 		E4174D6755BD427D9F055803 /* libRCTVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B70893341FE94B688CC47C7A /* libRCTVideo.a */; };
 		ECD1608B830D47CA9BD36BED /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A506294C7804F59B9BC8540 /* libRNDeviceInfo.a */; };
+		F411788F3A03408DA04375E2 /* libRCTBluetoothSerial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7043272667B49B5941885D9 /* libRCTBluetoothSerial.a */; };
 		F97CCD46D3B9427A98096C92 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408BDF84B2A14BBA9FF4AB9F /* Octicons.ttf */; };
 		FC74D31C87254E3692E7F91B /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 117723CE7BB54684B689930C /* Foundation.ttf */; };
-		F411788F3A03408DA04375E2 /* libRCTBluetoothSerial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7043272667B49B5941885D9 /* libRCTBluetoothSerial.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -219,13 +220,6 @@
 			remoteGlobalIDString = 9936F32F1F5F2E5B0010BF04;
 			remoteInfo = "privatedata-tvOS";
 		};
-		237DB02820F7ABBD00B6E4A6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E21B76DF4B0A407FBC0A74FC /* RNDeviceInfo.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DA5891D81BA9A9FC002B4DB2;
-			remoteInfo = RNDeviceInfo;
-		};
 		237DB02C20F7ABBD00B6E4A6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 58209E8CCCB14540947C9FAE /* RNI18n.xcodeproj */;
@@ -288,6 +282,27 @@
 			proxyType = 2;
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = RNSentry;
+		};
+		23D1A343227C8F3C009CB6D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B878BD9E77914666B5636D5D /* RCTBluetoothSerial.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 69CA06031CC43C2900AF6479;
+			remoteInfo = RCTBluetoothSerial;
+		};
+		23D1A34A227C8F68009CB6D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23D1A345227C8F68009CB6D3 /* RNDeviceInfo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DA5891D81BA9A9FC002B4DB2;
+			remoteInfo = RNDeviceInfo;
+		};
+		23D1A34C227C8F68009CB6D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23D1A345227C8F68009CB6D3 /* RNDeviceInfo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E72EC1401F7ABB5A0001BC90;
+			remoteInfo = "RNDeviceInfo-tvOS";
 		};
 		23D22F3D210669A20006833F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -488,6 +503,7 @@
 		239814342201FCBB002CA2F9 /* RobotoMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = RobotoMedium.ttf; path = ../assets/fonts/RobotoMedium.ttf; sourceTree = "<group>"; };
 		23B42B74211091C30090D3E6 /* FirebaseMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseMessaging.framework; path = Firebase/FirebaseMessaging.framework; sourceTree = "<group>"; };
 		23B42BA4211091C30090D3E6 /* Protobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Protobuf.framework; path = Firebase/Protobuf.framework; sourceTree = "<group>"; };
+		23D1A345227C8F68009CB6D3 /* RNDeviceInfo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNDeviceInfo.xcodeproj; path = "../node_modules/react-native-device-info/ios/RNDeviceInfo.xcodeproj"; sourceTree = "<group>"; };
 		23F4B4272108D7AF001BE98B /* CodeAndRobots Dev.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "CodeAndRobots Dev.entitlements"; path = "CodeAndRobots/CodeAndRobots Dev.entitlements"; sourceTree = "<group>"; };
 		23FAD34B20FD067500ECBF97 /* Helvetica.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; name = Helvetica.ttc; path = ../assets/fonts/Helvetica.ttc; sourceTree = "<group>"; };
 		23FAD35120FD180700ECBF97 /* LatoRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = LatoRegular.ttf; path = ../assets/fonts/LatoRegular.ttf; sourceTree = "<group>"; };
@@ -522,17 +538,16 @@
 		AB68D73B6C7A415E812FCE04 /* BVLinearGradient.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = BVLinearGradient.xcodeproj; path = "../node_modules/react-native-linear-gradient/BVLinearGradient.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		B70893341FE94B688CC47C7A /* libRCTVideo.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTVideo.a; sourceTree = "<group>"; };
+		B878BD9E77914666B5636D5D /* RCTBluetoothSerial.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTBluetoothSerial.xcodeproj; path = "../node_modules/react-native-bluetooth-serial/ios/RCTBluetoothSerial.xcodeproj"; sourceTree = "<group>"; };
 		B8CA89F690CA490A85205D11 /* ReactNativeConfig.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeConfig.xcodeproj; path = "../node_modules/react-native-config/ios/ReactNativeConfig.xcodeproj"; sourceTree = "<group>"; };
 		BC2063D680AA4BF49C7463F3 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		DA0A2DF28EED4C66AD2C004A /* RCTVideo.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTVideo.xcodeproj; path = "../node_modules/react-native-video/ios/RCTVideo.xcodeproj"; sourceTree = "<group>"; };
 		E1E2FA9064FD4F5CBDEC1D68 /* libRNSentry.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSentry.a; sourceTree = "<group>"; };
-		E21B76DF4B0A407FBC0A74FC /* RNDeviceInfo.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNDeviceInfo.xcodeproj; path = "../node_modules/react-native-device-info/RNDeviceInfo.xcodeproj"; sourceTree = "<group>"; };
+		E7043272667B49B5941885D9 /* libRCTBluetoothSerial.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTBluetoothSerial.a; sourceTree = "<group>"; };
 		E9E43B9775A64CF08F66E683 /* RNVersionNumber.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVersionNumber.xcodeproj; path = "../node_modules/react-native-version-number/ios/RNVersionNumber.xcodeproj"; sourceTree = "<group>"; };
 		E9FE5B898B0D407B8B6F7AC1 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		F68BAD0B69AB4D6EA37B0369 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		F825B18C613A440E93F87FF7 /* libjschelpers.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libjschelpers.a; sourceTree = "<group>"; };
-		B878BD9E77914666B5636D5D /* RCTBluetoothSerial.xcodeproj */ = {isa = PBXFileReference; name = "RCTBluetoothSerial.xcodeproj"; path = "../node_modules/react-native-bluetooth-serial/ios/RCTBluetoothSerial.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		E7043272667B49B5941885D9 /* libRCTBluetoothSerial.a */ = {isa = PBXFileReference; name = "libRCTBluetoothSerial.a"; path = "libRCTBluetoothSerial.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -771,16 +786,9 @@
 				652F9218FF3D4BD5A956C677 /* libRNOpenAppSettings.a */,
 				1DDB46D021824DD6AF617CBC /* libBVLinearGradient.a */,
 				B70893341FE94B688CC47C7A /* libRCTVideo.a */,
+				E7043272667B49B5941885D9 /* libRCTBluetoothSerial.a */,
 			);
 			name = "Recovered References";
-			sourceTree = "<group>";
-		};
-		237DB02120F7ABBB00B6E4A6 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				237DB02920F7ABBD00B6E4A6 /* libRNDeviceInfo.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		237DB02320F7ABBB00B6E4A6 /* Products */ = {
@@ -831,6 +839,23 @@
 			isa = PBXGroup;
 			children = (
 				23CF45FE212D5D3D0085F0A9 /* libRNSentry.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		23D1A340227C8F3C009CB6D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23D1A344227C8F3C009CB6D3 /* libRCTBluetoothSerial.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		23D1A346227C8F68009CB6D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23D1A34B227C8F68009CB6D3 /* libRNDeviceInfo.a */,
+				23D1A34D227C8F68009CB6D3 /* libRNDeviceInfo-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -906,6 +931,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				23D1A345227C8F68009CB6D3 /* RNDeviceInfo.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -918,7 +944,6 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
-				E21B76DF4B0A407FBC0A74FC /* RNDeviceInfo.xcodeproj */,
 				471C9E3E195D436CB714E865 /* RNVectorIcons.xcodeproj */,
 				58209E8CCCB14540947C9FAE /* RNI18n.xcodeproj */,
 				B8CA89F690CA490A85205D11 /* ReactNativeConfig.xcodeproj */,
@@ -1120,6 +1145,10 @@
 					ProjectRef = ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */;
 				},
 				{
+					ProductGroup = 23D1A340227C8F3C009CB6D3 /* Products */;
+					ProjectRef = B878BD9E77914666B5636D5D /* RCTBluetoothSerial.xcodeproj */;
+				},
+				{
 					ProductGroup = 00C302B61ABCB90400DB3ED1 /* Products */;
 					ProjectRef = 00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */;
 				},
@@ -1164,8 +1193,8 @@
 					ProjectRef = B8CA89F690CA490A85205D11 /* ReactNativeConfig.xcodeproj */;
 				},
 				{
-					ProductGroup = 237DB02120F7ABBB00B6E4A6 /* Products */;
-					ProjectRef = E21B76DF4B0A407FBC0A74FC /* RNDeviceInfo.xcodeproj */;
+					ProductGroup = 23D1A346227C8F68009CB6D3 /* Products */;
+					ProjectRef = 23D1A345227C8F68009CB6D3 /* RNDeviceInfo.xcodeproj */;
 				},
 				{
 					ProductGroup = 2316F94821087C1B00B743C8 /* Products */;
@@ -1340,13 +1369,6 @@
 			remoteRef = 237DB01F20F7ABBB00B6E4A6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		237DB02920F7ABBD00B6E4A6 /* libRNDeviceInfo.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNDeviceInfo.a;
-			remoteRef = 237DB02820F7ABBD00B6E4A6 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		237DB02D20F7ABBD00B6E4A6 /* libRNI18n.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1408,6 +1430,27 @@
 			fileType = archive.ar;
 			path = libRNSentry.a;
 			remoteRef = 23CF45FD212D5D3D0085F0A9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		23D1A344227C8F3C009CB6D3 /* libRCTBluetoothSerial.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTBluetoothSerial.a;
+			remoteRef = 23D1A343227C8F3C009CB6D3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		23D1A34B227C8F68009CB6D3 /* libRNDeviceInfo.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNDeviceInfo.a;
+			remoteRef = 23D1A34A227C8F68009CB6D3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		23D1A34D227C8F68009CB6D3 /* libRNDeviceInfo-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRNDeviceInfo-tvOS.a";
+			remoteRef = 23D1A34C227C8F68009CB6D3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		23D22F3E210669A20006833F /* libSplashScreen.a */ = {
@@ -1794,6 +1837,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon${BUNDLE_ID_SUFFIX}";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				BUNDLE_ID_PREFIX = "CodeAndRobots-Dev";
 				BUNDLE_ID_SUFFIX = .dev;
 				CODE_SIGN_ENTITLEMENTS = "CodeAndRobots/CodeAndRobots Dev.entitlements";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1837,6 +1881,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon${BUNDLE_ID_SUFFIX}";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				BUNDLE_ID_PREFIX = CodeAndRobots;
 				BUNDLE_ID_SUFFIX = "";
 				CODE_SIGN_ENTITLEMENTS = "CodeAndRobots/CodeAndRobots Dev.entitlements";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1914,6 +1959,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon${BUNDLE_ID_SUFFIX}";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				BUNDLE_ID_PREFIX = "CodeAndRobots-Beta";
 				BUNDLE_ID_SUFFIX = .beta;
 				CODE_SIGN_ENTITLEMENTS = "CodeAndRobots/CodeAndRobots Dev.entitlements";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
