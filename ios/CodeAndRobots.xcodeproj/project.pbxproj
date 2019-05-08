@@ -37,6 +37,8 @@
 		2316F9022108723300B743C8 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2316F8F92108723300B743C8 /* FirebaseInstanceID.framework */; };
 		239814352201FCBB002CA2F9 /* RobotoBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 239814332201FCBA002CA2F9 /* RobotoBold.ttf */; };
 		239814362201FCBB002CA2F9 /* RobotoMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 239814342201FCBB002CA2F9 /* RobotoMedium.ttf */; };
+		23AC08E62282F74700946957 /* GoogleService-Info-Dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23AC08B02282F74600946957 /* GoogleService-Info-Dev.plist */; };
+		23AC08E82282F9B900946957 /* GoogleService-Info-Beta.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23AC08E72282F9B800946957 /* GoogleService-Info-Beta.plist */; };
 		23B42BA5211091C30090D3E6 /* FirebaseMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B42B74211091C30090D3E6 /* FirebaseMessaging.framework */; };
 		23B42BA6211091C30090D3E6 /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B42BA4211091C30090D3E6 /* Protobuf.framework */; };
 		23FAD34E20FD067700ECBF97 /* Helvetica.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 23FAD34B20FD067500ECBF97 /* Helvetica.ttc */; };
@@ -480,7 +482,7 @@
 		117723CE7BB54684B689930C /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* CodeAndRobots Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "CodeAndRobots Dev.app"; path = "Code&Robots Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* Code&Robots Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Code&Robots Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = CodeAndRobots/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = CodeAndRobots/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = CodeAndRobots/Images.xcassets; sourceTree = "<group>"; };
@@ -501,6 +503,8 @@
 		2316F9032108724C00B743C8 /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Firebase/Firebase.h; sourceTree = "<group>"; };
 		239814332201FCBA002CA2F9 /* RobotoBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = RobotoBold.ttf; path = ../assets/fonts/RobotoBold.ttf; sourceTree = "<group>"; };
 		239814342201FCBB002CA2F9 /* RobotoMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = RobotoMedium.ttf; path = ../assets/fonts/RobotoMedium.ttf; sourceTree = "<group>"; };
+		23AC08B02282F74600946957 /* GoogleService-Info-Dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info-Dev.plist"; path = "CodeAndRobots/GoogleService-Info-Dev.plist"; sourceTree = "<group>"; };
+		23AC08E72282F9B800946957 /* GoogleService-Info-Beta.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info-Beta.plist"; path = "CodeAndRobots/GoogleService-Info-Beta.plist"; sourceTree = "<group>"; };
 		23B42B74211091C30090D3E6 /* FirebaseMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseMessaging.framework; path = Firebase/FirebaseMessaging.framework; sourceTree = "<group>"; };
 		23B42BA4211091C30090D3E6 /* Protobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Protobuf.framework; path = Firebase/Protobuf.framework; sourceTree = "<group>"; };
 		23D1A345227C8F68009CB6D3 /* RNDeviceInfo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNDeviceInfo.xcodeproj; path = "../node_modules/react-native-device-info/ios/RNDeviceInfo.xcodeproj"; sourceTree = "<group>"; };
@@ -720,6 +724,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				2316F9032108724C00B743C8 /* Firebase.h */,
+				23AC08B02282F74600946957 /* GoogleService-Info-Dev.plist */,
+				23AC08E72282F9B800946957 /* GoogleService-Info-Beta.plist */,
 			);
 			name = CodeAndRobots;
 			sourceTree = "<group>";
@@ -987,7 +993,7 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* CodeAndRobots Dev.app */,
+				13B07F961A680F5B00A75B9A /* Code&Robots Dev.app */,
 				00E356EE1AD99517003FC87E /* CodeAndRobotsTests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* CodeAndRobots-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* CodeAndRobots-tvOSTests.xctest */,
@@ -1041,7 +1047,7 @@
 			);
 			name = CodeAndRobots;
 			productName = "Hello World";
-			productReference = 13B07F961A680F5B00A75B9A /* CodeAndRobots Dev.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* Code&Robots Dev.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2D02E47A1E0B4A5D006451C7 /* CodeAndRobots-tvOS */ = {
@@ -1091,7 +1097,7 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = P925R5M5JL;
+						DevelopmentTeam = B423242B9Q;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
@@ -1635,8 +1641,10 @@
 				239814352201FCBB002CA2F9 /* RobotoBold.ttf in Resources */,
 				F97CCD46D3B9427A98096C92 /* Octicons.ttf in Resources */,
 				7CF02086C8534962B98627C8 /* SimpleLineIcons.ttf in Resources */,
+				23AC08E62282F74700946957 /* GoogleService-Info-Dev.plist in Resources */,
 				D59344C07A6B43089A051A76 /* Zocial.ttf in Resources */,
 				23FAD34E20FD067700ECBF97 /* Helvetica.ttc in Resources */,
+				23AC08E82282F9B900946957 /* GoogleService-Info-Beta.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1757,7 +1765,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = P925R5M5JL;
+				DEVELOPMENT_TEAM = B423242B9Q;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1790,7 +1798,7 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodeAndRobots Dev.app/CodeAndRobots Dev";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Code&Robots Dev.app/Code&Robots Dev";
 			};
 			name = Debug;
 		};
@@ -1799,7 +1807,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = P925R5M5JL;
+				DEVELOPMENT_TEAM = B423242B9Q;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
@@ -1828,7 +1836,7 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodeAndRobots.app/CodeAndRobots";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Code&Robots.app/Code&Robots";
 			};
 			name = Release;
 		};
@@ -2008,7 +2016,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = P925R5M5JL;
+				DEVELOPMENT_TEAM = B423242B9Q;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
@@ -2037,7 +2045,7 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodeAndRobots Beta.app/CodeAndRobots Beta";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Code&Robots Beta.app/Code&Robots Beta";
 			};
 			name = Beta;
 		};

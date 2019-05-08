@@ -30,29 +30,28 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  // TODO Uncomment below to configure Firebase based on GoogleService-Info plist files
   // Configure Firebase
-//  #if BETA
-//    NSLog(@"[FIREBASE] Beta mode.");
-//    NSString *filePath;
-//    filePath = [[NSBundle mainBundle] pathForResource:@"GoogleService-Info-Beta" ofType:@"plist"];
-//    FIROptions *options = [[FIROptions alloc] initWithContentsOfFile:filePath];
-//    [FIRApp configureWithOptions:options];
-//  #elif DEBUG
-//    NSLog(@"[FIREBASE] Debug mode.");
-//    NSString *filePath;
-//    filePath = [[NSBundle mainBundle] pathForResource:@"GoogleService-Info-Dev" ofType:@"plist"];
-//    FIROptions *options = [[FIROptions alloc] initWithContentsOfFile:filePath];
-//    [FIRApp configureWithOptions:options];
-//  #else
-//    NSLog(@"[FIREBASE] Default mode.");
-//    [FIRApp configure];
-//  #endif
-//
-//  #if !(TARGET_IPHONE_SIMULATOR)
-//    // The following crashes the app in the simulator for some reason
-//    [RNFirebaseNotifications configure];
-//  #endif
+  #if BETA
+    NSLog(@"[FIREBASE] Beta mode.");
+    NSString *filePath;
+    filePath = [[NSBundle mainBundle] pathForResource:@"GoogleService-Info-Beta" ofType:@"plist"];
+    FIROptions *options = [[FIROptions alloc] initWithContentsOfFile:filePath];
+    [FIRApp configureWithOptions:options];
+  #elif DEBUG
+    NSLog(@"[FIREBASE] Debug mode.");
+    NSString *filePath;
+    filePath = [[NSBundle mainBundle] pathForResource:@"GoogleService-Info-Dev" ofType:@"plist"];
+    FIROptions *options = [[FIROptions alloc] initWithContentsOfFile:filePath];
+    [FIRApp configureWithOptions:options];
+  #else
+    NSLog(@"[FIREBASE] Default mode.");
+    [FIRApp configure];
+  #endif
+
+  #if !(TARGET_IPHONE_SIMULATOR)
+    // The following crashes the app in the simulator for some reason
+    [RNFirebaseNotifications configure];
+  #endif
 
   // Set the Audio Session Category to Playback
   // https://developer.apple.com/library/content/qa/qa1668/_index.html

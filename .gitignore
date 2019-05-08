@@ -61,6 +61,10 @@ api-*.json
 #
 *.keystore
 
+# Firebase plist
+ios/CodeAndRobots/GoogleService-Info-Beta.plist
+ios/CodeAndRobots/GoogleService-Info.plist
+
 # Misc
 #
 .env
