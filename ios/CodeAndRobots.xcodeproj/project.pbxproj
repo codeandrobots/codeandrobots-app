@@ -78,6 +78,7 @@
 		E4174D6755BD427D9F055803 /* libRCTVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B70893341FE94B688CC47C7A /* libRCTVideo.a */; };
 		ECD1608B830D47CA9BD36BED /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A506294C7804F59B9BC8540 /* libRNDeviceInfo.a */; };
 		F411788F3A03408DA04375E2 /* libRCTBluetoothSerial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7043272667B49B5941885D9 /* libRCTBluetoothSerial.a */; };
+		F686F13FD52A45CCB6DB40EB /* libBleManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7140FE891640491A98367CB9 /* libBleManager.a */; };
 		F97CCD46D3B9427A98096C92 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408BDF84B2A14BBA9FF4AB9F /* Octicons.ttf */; };
 		FC74D31C87254E3692E7F91B /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 117723CE7BB54684B689930C /* Foundation.ttf */; };
 /* End PBXBuildFile section */
@@ -180,6 +181,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = RNOpenAppSettings;
+		};
+		235A2DBA228D48FA00D92B70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60052F0387BC408E8F4D643E /* BleManager.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = BleManager;
 		};
 		237DB01520F7ABBB00B6E4A6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -531,8 +539,10 @@
 		58209E8CCCB14540947C9FAE /* RNI18n.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNI18n.xcodeproj; path = "../node_modules/react-native-i18n/RNI18n.xcodeproj"; sourceTree = "<group>"; };
 		59AAB9A4BCAC43C7ADD55200 /* libRNVersionNumber.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVersionNumber.a; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
+		60052F0387BC408E8F4D643E /* BleManager.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = BleManager.xcodeproj; path = "../node_modules/react-native-ble-manager/ios/BleManager.xcodeproj"; sourceTree = "<group>"; };
 		652F9218FF3D4BD5A956C677 /* libRNOpenAppSettings.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNOpenAppSettings.a; sourceTree = "<group>"; };
 		671610D992A242D2B577E4EA /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
+		7140FE891640491A98367CB9 /* libBleManager.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libBleManager.a; sourceTree = "<group>"; };
 		7656FFF0A9494CBB993B55D5 /* RNSentry.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSentry.xcodeproj; path = "../node_modules/react-native-sentry/ios/RNSentry.xcodeproj"; sourceTree = "<group>"; };
 		788EBE27BF4B4636AD85A925 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
@@ -608,6 +618,7 @@
 				0363B7F228794868A471DC4C /* libBVLinearGradient.a in Frameworks */,
 				E4174D6755BD427D9F055803 /* libRCTVideo.a in Frameworks */,
 				F411788F3A03408DA04375E2 /* libRCTBluetoothSerial.a in Frameworks */,
+				F686F13FD52A45CCB6DB40EB /* libBleManager.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -779,6 +790,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		235A2DB7228D48FA00D92B70 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				235A2DBB228D48FA00D92B70 /* libBleManager.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		237DAFF020F7ABB600B6E4A6 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -796,6 +815,7 @@
 				1DDB46D021824DD6AF617CBC /* libBVLinearGradient.a */,
 				B70893341FE94B688CC47C7A /* libRCTVideo.a */,
 				E7043272667B49B5941885D9 /* libRCTBluetoothSerial.a */,
+				7140FE891640491A98367CB9 /* libBleManager.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -964,6 +984,7 @@
 				AB68D73B6C7A415E812FCE04 /* BVLinearGradient.xcodeproj */,
 				DA0A2DF28EED4C66AD2C004A /* RCTVideo.xcodeproj */,
 				B878BD9E77914666B5636D5D /* RCTBluetoothSerial.xcodeproj */,
+				60052F0387BC408E8F4D643E /* BleManager.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1137,6 +1158,10 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 235A2DB7228D48FA00D92B70 /* Products */;
+					ProjectRef = 60052F0387BC408E8F4D643E /* BleManager.xcodeproj */;
+				},
 				{
 					ProductGroup = 2396A76321DFA586007C79F2 /* Products */;
 					ProjectRef = AB68D73B6C7A415E812FCE04 /* BVLinearGradient.xcodeproj */;
@@ -1334,6 +1359,13 @@
 			fileType = archive.ar;
 			path = libRNOpenAppSettings.a;
 			remoteRef = 234608DA2175D9B400533B5F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		235A2DBB228D48FA00D92B70 /* libBleManager.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libBleManager.a;
+			remoteRef = 235A2DBA228D48FA00D92B70 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		237DB01620F7ABBB00B6E4A6 /* libthird-party.a */ = {
@@ -1788,12 +1820,14 @@
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-bluetooth-serial/ios/RCTBluetoothSerial",
+					"$(SRCROOT)/../node_modules/react-native-ble-manager/ios",
 				);
 				INFOPLIST_FILE = CodeAndRobotsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1826,12 +1860,14 @@
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-bluetooth-serial/ios/RCTBluetoothSerial",
+					"$(SRCROOT)/../node_modules/react-native-ble-manager/ios",
 				);
 				INFOPLIST_FILE = CodeAndRobotsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1873,6 +1909,7 @@
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-bluetooth-serial/ios/RCTBluetoothSerial",
+					"$(SRCROOT)/../node_modules/react-native-ble-manager/ios",
 				);
 				INFOPLIST_FILE = CodeAndRobots/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1916,6 +1953,7 @@
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-bluetooth-serial/ios/RCTBluetoothSerial",
+					"$(SRCROOT)/../node_modules/react-native-ble-manager/ios",
 				);
 				INFOPLIST_FILE = CodeAndRobots/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1997,6 +2035,7 @@
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-bluetooth-serial/ios/RCTBluetoothSerial",
+					"$(SRCROOT)/../node_modules/react-native-ble-manager/ios",
 				);
 				INFOPLIST_FILE = CodeAndRobots/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -2035,12 +2074,14 @@
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-bluetooth-serial/ios/RCTBluetoothSerial",
+					"$(SRCROOT)/../node_modules/react-native-ble-manager/ios",
 				);
 				INFOPLIST_FILE = CodeAndRobotsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -2079,11 +2120,13 @@
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-bluetooth-serial/ios/RCTBluetoothSerial",
+					"$(SRCROOT)/../node_modules/react-native-ble-manager/ios",
 				);
 				INFOPLIST_FILE = "CodeAndRobots-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -2114,6 +2157,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -2151,11 +2195,13 @@
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-bluetooth-serial/ios/RCTBluetoothSerial",
+					"$(SRCROOT)/../node_modules/react-native-ble-manager/ios",
 				);
 				INFOPLIST_FILE = "CodeAndRobots-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -2197,11 +2243,13 @@
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-bluetooth-serial/ios/RCTBluetoothSerial",
+					"$(SRCROOT)/../node_modules/react-native-ble-manager/ios",
 				);
 				INFOPLIST_FILE = "CodeAndRobots-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -2234,6 +2282,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.CodeAndRobots-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2258,6 +2307,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
