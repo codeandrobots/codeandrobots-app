@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { ScrollView } from 'react-native'
 import PropTypes from 'prop-types'
 
+import { isIOSProduction } from 'App/Services/Properties'
+
 import {
   Container,
   Footer,
@@ -27,29 +29,31 @@ export default class Screen extends Component {
       onPress } = this.props
     return (
       <Container>
-        <ScrollView style={{ marginBottom: 210 }}>
-          <List title='Featured' cols={2}>
-            <FeaturedListItem
-              image={Images.featured.led}
-              title='Blink'
-              onPress={() => { onPress('Blink') }} />
-            <FeaturedListItem
-              icon={'heartbeat'}
-              iconColor={Colors.red}
-              title='Heart Beat'
-              onPress={() => { onPress('Heart Beat') }} />
-          </List>
-          <List title='Projects'>
-            <CompactListItem
-              icon='circle-o'
-              title='Hello World'
-              onPress={() => { onPress('Hello World') }} />
-            <CompactListItem
-              icon='circle-o'
-              title='Dance Show'
-              onPress={() => { onPress('Dance Show') }} />
-          </List>
-        </ScrollView>
+        {!isIOSProduction() &&
+          <ScrollView style={{ marginBottom: 210 }}>
+            <List title='Featured' cols={2}>
+              <FeaturedListItem
+                image={Images.featured.led}
+                title='Blink'
+                onPress={() => { onPress('Blink') }} />
+              <FeaturedListItem
+                icon={'heartbeat'}
+                iconColor={Colors.red}
+                title='Heart Beat'
+                onPress={() => { onPress('Heart Beat') }} />
+            </List>
+            <List title='Projects'>
+              <CompactListItem
+                icon='circle-o'
+                title='Hello World'
+                onPress={() => { onPress('Hello World') }} />
+              <CompactListItem
+                icon='circle-o'
+                title='Dance Show'
+                onPress={() => { onPress('Dance Show') }} />
+            </List>
+          </ScrollView>
+        }
         <Modal
           navigation={this.props.navigation}
           show={showNotReadyModal}
