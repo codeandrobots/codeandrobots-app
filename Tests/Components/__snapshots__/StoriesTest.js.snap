@@ -47,16 +47,8 @@ exports[`Storyshots BottomNav Default 1`] = `
       }
     >
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -71,8 +63,6 @@ exports[`Storyshots BottomNav Default 1`] = `
             "width": 66,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <View
           style={
@@ -151,16 +141,8 @@ exports[`Storyshots BottomNav Default 1`] = `
         </View>
       </View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -175,8 +157,6 @@ exports[`Storyshots BottomNav Default 1`] = `
             "width": 116,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <View
           style={
@@ -246,16 +226,8 @@ exports[`Storyshots BottomNav Default 1`] = `
         </View>
       </View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -270,8 +242,6 @@ exports[`Storyshots BottomNav Default 1`] = `
             "width": 66,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <View
           style={
@@ -362,20 +332,10 @@ exports[`Storyshots Button Default 1`] = `
     }
   }
 >
-  <View
-    style={undefined}
-  >
+  <View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -394,8 +354,6 @@ exports[`Storyshots Button Default 1`] = `
           "paddingVertical": 8,
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -425,20 +383,10 @@ exports[`Storyshots Button Disabled 1`] = `
     }
   }
 >
-  <View
-    style={undefined}
-  >
+  <View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -457,8 +405,6 @@ exports[`Storyshots Button Disabled 1`] = `
           "paddingVertical": 8,
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -486,20 +432,10 @@ exports[`Storyshots Button Disabled 1`] = `
 `;
 
 exports[`Storyshots Card Atlas 1`] = `
-<View
-  style={undefined}
->
+<View>
   <View
-    accessibilityComponentType={undefined}
-    accessibilityLabel={undefined}
-    accessibilityTraits={undefined}
     accessible={true}
-    collapsable={undefined}
-    hasTVPreferredFocus={undefined}
-    hitSlop={undefined}
     isTVSelectable={true}
-    nativeID={undefined}
-    onLayout={undefined}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
@@ -516,20 +452,10 @@ exports[`Storyshots Card Atlas 1`] = `
         "width": "100%",
       }
     }
-    testID={undefined}
-    tvParallaxProperties={undefined}
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -545,8 +471,6 @@ exports[`Storyshots Card Atlas 1`] = `
           "zIndex": 9999,
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <View
         style={
@@ -720,16 +644,8 @@ exports[`Storyshots Card Atlas 1`] = `
     </Text>
   </View>
   <View
-    accessibilityComponentType={undefined}
-    accessibilityLabel={undefined}
-    accessibilityTraits={undefined}
     accessible={true}
-    collapsable={undefined}
-    hasTVPreferredFocus={undefined}
-    hitSlop={undefined}
     isTVSelectable={true}
-    nativeID={undefined}
-    onLayout={undefined}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
@@ -745,8 +661,6 @@ exports[`Storyshots Card Atlas 1`] = `
         "width": "100%",
       }
     }
-    testID={undefined}
-    tvParallaxProperties={undefined}
   >
     <Text
       accessible={true}
@@ -774,9 +688,7 @@ exports[`Storyshots Card Atlas 1`] = `
 `;
 
 exports[`Storyshots Card Hello 1`] = `
-<View
-  style={undefined}
->
+<View>
   <View
     style={
       Object {
@@ -794,7 +706,6 @@ exports[`Storyshots Card Hello 1`] = `
           "process": [Function],
         }
       }
-      style={undefined}
     />
   </View>
   <View
@@ -884,16 +795,8 @@ exports[`Storyshots Card Hello 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -912,8 +815,6 @@ exports[`Storyshots Card Hello 1`] = `
           "paddingVertical": 8,
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -945,9 +846,7 @@ exports[`Storyshots Carousel Default 1`] = `
       }
     }
   >
-    <View
-      style={undefined}
-    >
+    <View>
       <View
         style={
           Array [
@@ -1069,20 +968,10 @@ exports[`Storyshots Carousel Default 1`] = `
           }
         }
       />
-      <View
-        style={undefined}
-      >
+      <View>
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -1101,8 +990,6 @@ exports[`Storyshots Carousel Default 1`] = `
               "paddingVertical": 8,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <Text
             accessible={true}
@@ -1136,9 +1023,7 @@ exports[`Storyshots Carousel Dilbert 1`] = `
       }
     }
   >
-    <View
-      style={undefined}
-    >
+    <View>
       <View
         style={
           Object {
@@ -1156,7 +1041,6 @@ exports[`Storyshots Carousel Dilbert 1`] = `
               "uri": "https://i.imgur.com/eMuml0e.png",
             }
           }
-          style={undefined}
         />
       </View>
       <View
@@ -1305,20 +1189,10 @@ exports[`Storyshots Carousel Dilbert 1`] = `
           }
         }
       />
-      <View
-        style={undefined}
-      >
+      <View>
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -1337,8 +1211,6 @@ exports[`Storyshots Carousel Dilbert 1`] = `
               "paddingVertical": 8,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <Text
             accessible={true}
@@ -1381,16 +1253,8 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -1410,8 +1274,6 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
           "width": "100%",
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -1429,16 +1291,8 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
       </Text>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -1458,8 +1312,6 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
           "width": "100%",
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -1477,16 +1329,8 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
       </Text>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -1506,8 +1350,6 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
           "width": "100%",
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -1525,16 +1367,8 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
       </Text>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -1554,8 +1388,6 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
           "width": "100%",
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -1584,20 +1416,10 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
       }
     }
   >
-    <View
-      style={undefined}
-    >
+    <View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -1616,8 +1438,6 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
             "paddingVertical": 8,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Text
           accessible={true}
@@ -1772,16 +1592,8 @@ exports[`Storyshots IconButton Disabled 1`] = `
   }
 >
   <View
-    accessibilityComponentType={undefined}
-    accessibilityLabel={undefined}
-    accessibilityTraits={undefined}
     accessible={true}
-    collapsable={undefined}
-    hasTVPreferredFocus={undefined}
-    hitSlop={undefined}
     isTVSelectable={true}
-    nativeID={undefined}
-    onLayout={undefined}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
@@ -1795,8 +1607,6 @@ exports[`Storyshots IconButton Disabled 1`] = `
         "width": 66,
       }
     }
-    testID={undefined}
-    tvParallaxProperties={undefined}
   >
     <View
       style={
@@ -1890,16 +1700,8 @@ exports[`Storyshots IconButton Heart 1`] = `
   }
 >
   <View
-    accessibilityComponentType={undefined}
-    accessibilityLabel={undefined}
-    accessibilityTraits={undefined}
     accessible={true}
-    collapsable={undefined}
-    hasTVPreferredFocus={undefined}
-    hitSlop={undefined}
     isTVSelectable={true}
-    nativeID={undefined}
-    onLayout={undefined}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
@@ -1913,8 +1715,6 @@ exports[`Storyshots IconButton Heart 1`] = `
         "width": 66,
       }
     }
-    testID={undefined}
-    tvParallaxProperties={undefined}
   >
     <View
       style={
@@ -2008,16 +1808,8 @@ exports[`Storyshots IconButton Large Home 1`] = `
   }
 >
   <View
-    accessibilityComponentType={undefined}
-    accessibilityLabel={undefined}
-    accessibilityTraits={undefined}
     accessible={true}
-    collapsable={undefined}
-    hasTVPreferredFocus={undefined}
-    hitSlop={undefined}
     isTVSelectable={true}
-    nativeID={undefined}
-    onLayout={undefined}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
@@ -2031,8 +1823,6 @@ exports[`Storyshots IconButton Large Home 1`] = `
         "width": 116,
       }
     }
-    testID={undefined}
-    tvParallaxProperties={undefined}
   >
     <View
       style={
@@ -2180,16 +1970,8 @@ exports[`Storyshots Instruction Action 1`] = `
     Move Up
   </Text>
   <View
-    accessibilityComponentType={undefined}
-    accessibilityLabel={undefined}
-    accessibilityTraits={undefined}
     accessible={true}
-    collapsable={undefined}
-    hasTVPreferredFocus={undefined}
-    hitSlop={undefined}
     isTVSelectable={true}
-    nativeID={undefined}
-    onLayout={undefined}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
@@ -2201,8 +1983,6 @@ exports[`Storyshots Instruction Action 1`] = `
         "opacity": 1,
       }
     }
-    testID={undefined}
-    tvParallaxProperties={undefined}
   >
     <Text
       accessible={true}
@@ -2279,16 +2059,8 @@ exports[`Storyshots Instruction Control 1`] = `
     If
   </Text>
   <View
-    accessibilityComponentType={undefined}
-    accessibilityLabel={undefined}
-    accessibilityTraits={undefined}
     accessible={true}
-    collapsable={undefined}
-    hasTVPreferredFocus={undefined}
-    hitSlop={undefined}
     isTVSelectable={true}
-    nativeID={undefined}
-    onLayout={undefined}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
@@ -2300,8 +2072,6 @@ exports[`Storyshots Instruction Control 1`] = `
         "opacity": 1,
       }
     }
-    testID={undefined}
-    tvParallaxProperties={undefined}
   >
     <Text
       accessible={true}
@@ -2405,16 +2175,8 @@ exports[`Storyshots Instruction Data 1`] = `
     Set Color
   </Text>
   <View
-    accessibilityComponentType={undefined}
-    accessibilityLabel={undefined}
-    accessibilityTraits={undefined}
     accessible={true}
-    collapsable={undefined}
-    hasTVPreferredFocus={undefined}
-    hitSlop={undefined}
     isTVSelectable={true}
-    nativeID={undefined}
-    onLayout={undefined}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
@@ -2426,8 +2188,6 @@ exports[`Storyshots Instruction Data 1`] = `
         "opacity": 1,
       }
     }
-    testID={undefined}
-    tvParallaxProperties={undefined}
   >
     <Text
       accessible={true}
@@ -2531,16 +2291,8 @@ exports[`Storyshots Instruction Sensor 1`] = `
     Read Temperature
   </Text>
   <View
-    accessibilityComponentType={undefined}
-    accessibilityLabel={undefined}
-    accessibilityTraits={undefined}
     accessible={true}
-    collapsable={undefined}
-    hasTVPreferredFocus={undefined}
-    hitSlop={undefined}
     isTVSelectable={true}
-    nativeID={undefined}
-    onLayout={undefined}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
@@ -2552,8 +2304,6 @@ exports[`Storyshots Instruction Sensor 1`] = `
         "opacity": 1,
       }
     }
-    testID={undefined}
-    tvParallaxProperties={undefined}
   >
     <Text
       accessible={true}
@@ -2614,9 +2364,7 @@ exports[`Storyshots Joystick Default 1`] = `
     }
   }
 >
-  <View
-    style={undefined}
-  >
+  <View>
     <Image
       source={
         Object {
@@ -2667,7 +2415,6 @@ exports[`Storyshots Joystick Default 1`] = `
           }
         >
           <View
-            collapsable={undefined}
             onMoveShouldSetResponder={[Function]}
             onMoveShouldSetResponderCapture={[Function]}
             onResponderEnd={[Function]}
@@ -2713,20 +2460,10 @@ exports[`Storyshots Joystick Default 1`] = `
 `;
 
 exports[`Storyshots Links Multiple 1`] = `
-<View
-  style={undefined}
->
+<View>
   <View
-    accessibilityComponentType={undefined}
-    accessibilityLabel={undefined}
-    accessibilityTraits={undefined}
     accessible={true}
-    collapsable={undefined}
-    hasTVPreferredFocus={undefined}
-    hitSlop={undefined}
     isTVSelectable={true}
-    nativeID={undefined}
-    onLayout={undefined}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
@@ -2743,8 +2480,6 @@ exports[`Storyshots Links Multiple 1`] = `
         "width": "100%",
       }
     }
-    testID={undefined}
-    tvParallaxProperties={undefined}
   >
     <Text
       accessible={true}
@@ -2767,16 +2502,8 @@ exports[`Storyshots Links Multiple 1`] = `
     </Text>
   </View>
   <View
-    accessibilityComponentType={undefined}
-    accessibilityLabel={undefined}
-    accessibilityTraits={undefined}
     accessible={true}
-    collapsable={undefined}
-    hasTVPreferredFocus={undefined}
-    hitSlop={undefined}
     isTVSelectable={true}
-    nativeID={undefined}
-    onLayout={undefined}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
@@ -2793,8 +2520,6 @@ exports[`Storyshots Links Multiple 1`] = `
         "width": "100%",
       }
     }
-    testID={undefined}
-    tvParallaxProperties={undefined}
   >
     <Text
       accessible={true}
@@ -2821,16 +2546,8 @@ exports[`Storyshots Links Multiple 1`] = `
 
 exports[`Storyshots Links Single 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -2846,8 +2563,6 @@ exports[`Storyshots Links Single 1`] = `
       "width": "100%",
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <Text
     accessible={true}
@@ -2906,16 +2621,8 @@ exports[`Storyshots List Default 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -2933,8 +2640,6 @@ exports[`Storyshots List Default 1`] = `
           "padding": 8,
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <View
         style={
@@ -3012,16 +2717,8 @@ exports[`Storyshots List Default 1`] = `
         }
       >
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -3035,8 +2732,6 @@ exports[`Storyshots List Default 1`] = `
               "width": 66,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <View
             style={
@@ -3125,16 +2820,8 @@ exports[`Storyshots List Default 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -3152,8 +2839,6 @@ exports[`Storyshots List Default 1`] = `
           "padding": 8,
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <View
         style={
@@ -3242,16 +2927,8 @@ exports[`Storyshots List Default 1`] = `
         }
       >
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -3265,8 +2942,6 @@ exports[`Storyshots List Default 1`] = `
               "width": 66,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <View
             style={
@@ -3385,16 +3060,8 @@ exports[`Storyshots List Featured 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -3413,8 +3080,6 @@ exports[`Storyshots List Featured 1`] = `
           "width": 351,
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <View
         style={
@@ -3506,16 +3171,8 @@ exports[`Storyshots List Featured 1`] = `
       </View>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -3534,8 +3191,6 @@ exports[`Storyshots List Featured 1`] = `
           "width": 351,
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <View
         style={
@@ -3649,16 +3304,8 @@ exports[`Storyshots List Featured 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -3677,8 +3324,6 @@ exports[`Storyshots List Featured 1`] = `
           "width": 351,
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <View
         style={
@@ -3822,16 +3467,8 @@ exports[`Storyshots List Games 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -3850,8 +3487,6 @@ exports[`Storyshots List Games 1`] = `
           "width": 359,
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <View
         style={
@@ -3912,16 +3547,8 @@ exports[`Storyshots List Games 1`] = `
         }
       >
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -3935,8 +3562,6 @@ exports[`Storyshots List Games 1`] = `
               "width": 66,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <View
             style={
@@ -4017,16 +3642,8 @@ exports[`Storyshots List Games 1`] = `
       </View>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -4045,8 +3662,6 @@ exports[`Storyshots List Games 1`] = `
           "width": 359,
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <View
         style={
@@ -4107,16 +3722,8 @@ exports[`Storyshots List Games 1`] = `
         }
       >
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -4130,8 +3737,6 @@ exports[`Storyshots List Games 1`] = `
               "width": 66,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <View
             style={
@@ -4220,16 +3825,8 @@ exports[`Storyshots List Games 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -4248,8 +3845,6 @@ exports[`Storyshots List Games 1`] = `
           "width": 359,
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <View
         style={
@@ -4320,16 +3915,8 @@ exports[`Storyshots List Games 1`] = `
         }
       >
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -4343,8 +3930,6 @@ exports[`Storyshots List Games 1`] = `
               "width": 66,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <View
             style={
@@ -4541,16 +4126,8 @@ exports[`Storyshots List Lessons 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -4564,8 +4141,6 @@ exports[`Storyshots List Lessons 1`] = `
           "opacity": 1,
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <View
         style={
@@ -4693,16 +4268,8 @@ exports[`Storyshots List Lessons 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -4716,8 +4283,6 @@ exports[`Storyshots List Lessons 1`] = `
           "opacity": 1,
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <View
         style={
@@ -4845,16 +4410,8 @@ exports[`Storyshots List Lessons 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -4868,8 +4425,6 @@ exports[`Storyshots List Lessons 1`] = `
           "opacity": 1,
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <View
         style={
@@ -5749,16 +5304,8 @@ exports[`Storyshots ListHeader Todos 1`] = `
 
 exports[`Storyshots ListItem Beep 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -5775,8 +5322,6 @@ exports[`Storyshots ListItem Beep 1`] = `
       "padding": 8,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
     style={
@@ -5865,16 +5410,8 @@ exports[`Storyshots ListItem Beep 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -5888,8 +5425,6 @@ exports[`Storyshots ListItem Beep 1`] = `
           "width": 66,
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <View
         style={
@@ -5973,16 +5508,8 @@ exports[`Storyshots ListItem Beep 1`] = `
 
 exports[`Storyshots ListItem Compact 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -5995,8 +5522,6 @@ exports[`Storyshots ListItem Compact 1`] = `
       "opacity": 1,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
     style={
@@ -6119,16 +5644,8 @@ exports[`Storyshots ListItem Compact 1`] = `
 
 exports[`Storyshots ListItem Compact Disabled 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -6141,8 +5658,6 @@ exports[`Storyshots ListItem Compact Disabled 1`] = `
       "opacity": 1,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
     style={
@@ -6270,16 +5785,8 @@ exports[`Storyshots ListItem Compact Disabled 1`] = `
 
 exports[`Storyshots ListItem Compact No Icon 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -6292,8 +5799,6 @@ exports[`Storyshots ListItem Compact No Icon 1`] = `
       "opacity": 1,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
     style={
@@ -6379,16 +5884,8 @@ exports[`Storyshots ListItem Compact No Icon 1`] = `
 
 exports[`Storyshots ListItem Default 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -6405,8 +5902,6 @@ exports[`Storyshots ListItem Default 1`] = `
       "padding": 8,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
     style={
@@ -6460,20 +5955,10 @@ exports[`Storyshots ListItem Default 1`] = `
       }
     }
   >
-    <View
-      style={undefined}
-    >
+    <View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -6492,8 +5977,6 @@ exports[`Storyshots ListItem Default 1`] = `
             "paddingVertical": 8,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Text
           accessible={true}
@@ -6518,16 +6001,8 @@ exports[`Storyshots ListItem Default 1`] = `
 
 exports[`Storyshots ListItem Disabled 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -6544,8 +6019,6 @@ exports[`Storyshots ListItem Disabled 1`] = `
       "padding": 8,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
     style={
@@ -6609,20 +6082,10 @@ exports[`Storyshots ListItem Disabled 1`] = `
       }
     }
   >
-    <View
-      style={undefined}
-    >
+    <View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -6641,8 +6104,6 @@ exports[`Storyshots ListItem Disabled 1`] = `
             "paddingVertical": 8,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Text
           accessible={true}
@@ -6672,16 +6133,8 @@ exports[`Storyshots ListItem Disabled 1`] = `
 
 exports[`Storyshots ListItem Drive 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -6698,8 +6151,6 @@ exports[`Storyshots ListItem Drive 1`] = `
       "padding": 8,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
     style={
@@ -6777,16 +6228,8 @@ exports[`Storyshots ListItem Drive 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -6800,8 +6243,6 @@ exports[`Storyshots ListItem Drive 1`] = `
           "width": 66,
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <View
         style={
@@ -6885,16 +6326,8 @@ exports[`Storyshots ListItem Drive 1`] = `
 
 exports[`Storyshots ListItem Featured 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -6913,8 +6346,6 @@ exports[`Storyshots ListItem Featured 1`] = `
       "width": 351,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
     style={
@@ -7009,16 +6440,8 @@ exports[`Storyshots ListItem Featured 1`] = `
 
 exports[`Storyshots ListItem Featured Disabled 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -7037,8 +6460,6 @@ exports[`Storyshots ListItem Featured Disabled 1`] = `
       "width": 351,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
     style={
@@ -7152,16 +6573,8 @@ exports[`Storyshots ListItem Featured Disabled 1`] = `
 
 exports[`Storyshots ListItem Square 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -7180,8 +6593,6 @@ exports[`Storyshots ListItem Square 1`] = `
       "width": 359,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
     style={
@@ -7242,16 +6653,8 @@ exports[`Storyshots ListItem Square 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -7265,8 +6668,6 @@ exports[`Storyshots ListItem Square 1`] = `
           "width": 66,
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <View
         style={
@@ -7350,16 +6751,8 @@ exports[`Storyshots ListItem Square 1`] = `
 
 exports[`Storyshots ListItem Square Disabled 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -7378,8 +6771,6 @@ exports[`Storyshots ListItem Square Disabled 1`] = `
       "width": 359,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
     style={
@@ -7450,16 +6841,8 @@ exports[`Storyshots ListItem Square Disabled 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -7473,8 +6856,6 @@ exports[`Storyshots ListItem Square Disabled 1`] = `
           "width": 66,
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <View
         style={
@@ -7654,9 +7035,7 @@ exports[`Storyshots ListItem Stat 1`] = `
 `;
 
 exports[`Storyshots LoadingIndicator Default 1`] = `
-<View
-  style={undefined}
->
+<View>
   <ActivityIndicator
     animating={true}
     color="#999999"
@@ -7667,9 +7046,7 @@ exports[`Storyshots LoadingIndicator Default 1`] = `
 `;
 
 exports[`Storyshots LoadingIndicator Large 1`] = `
-<View
-  style={undefined}
->
+<View>
   <ActivityIndicator
     animating={true}
     color="#999999"
@@ -7680,9 +7057,7 @@ exports[`Storyshots LoadingIndicator Large 1`] = `
 `;
 
 exports[`Storyshots LoadingIndicator Red 1`] = `
-<View
-  style={undefined}
->
+<View>
   <ActivityIndicator
     animating={true}
     color="red"
@@ -7708,13 +7083,7 @@ exports[`Storyshots Modal Default 1`] = `
     visible={true}
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hitSlop={undefined}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -7736,16 +7105,9 @@ exports[`Storyshots Modal Default 1`] = `
           undefined,
         ]
       }
-      testID={undefined}
     >
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        hitSlop={undefined}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -7761,19 +7123,10 @@ exports[`Storyshots Modal Default 1`] = `
             "padding": 32,
           }
         }
-        testID={undefined}
       >
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -7789,8 +7142,6 @@ exports[`Storyshots Modal Default 1`] = `
               "zIndex": 9999,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <Text
             accessible={true}
@@ -7862,13 +7213,7 @@ exports[`Storyshots Modal Is Your Device Supported 1`] = `
     visible={true}
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hitSlop={undefined}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -7890,16 +7235,9 @@ exports[`Storyshots Modal Is Your Device Supported 1`] = `
           undefined,
         ]
       }
-      testID={undefined}
     >
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        hitSlop={undefined}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -7915,19 +7253,10 @@ exports[`Storyshots Modal Is Your Device Supported 1`] = `
             "padding": 32,
           }
         }
-        testID={undefined}
       >
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -7943,8 +7272,6 @@ exports[`Storyshots Modal Is Your Device Supported 1`] = `
               "zIndex": 9999,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <Text
             accessible={true}
@@ -7969,9 +7296,7 @@ exports[`Storyshots Modal Is Your Device Supported 1`] = `
             
           </Text>
         </View>
-        <View
-          style={undefined}
-        >
+        <View>
           <View
             style={
               Object {
@@ -7989,7 +7314,6 @@ exports[`Storyshots Modal Is Your Device Supported 1`] = `
                   "process": [Function],
                 }
               }
-              style={undefined}
             />
           </View>
           <View
@@ -8032,16 +7356,8 @@ The aim of the Code & Robots app is to support all of the most popular robots an
             </Text>
           </View>
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -8057,8 +7373,6 @@ The aim of the Code & Robots app is to support all of the most popular robots an
                 "width": "100%",
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -8105,13 +7419,7 @@ exports[`Storyshots Modal Not Connected 1`] = `
     visible={true}
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hitSlop={undefined}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -8133,16 +7441,9 @@ exports[`Storyshots Modal Not Connected 1`] = `
           undefined,
         ]
       }
-      testID={undefined}
     >
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        hitSlop={undefined}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -8158,19 +7459,10 @@ exports[`Storyshots Modal Not Connected 1`] = `
             "padding": 32,
           }
         }
-        testID={undefined}
       >
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -8186,8 +7478,6 @@ exports[`Storyshots Modal Not Connected 1`] = `
               "zIndex": 9999,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <Text
             accessible={true}
@@ -8212,9 +7502,7 @@ exports[`Storyshots Modal Not Connected 1`] = `
             
           </Text>
         </View>
-        <View
-          style={undefined}
-        >
+        <View>
           <View
             style={
               Object {
@@ -8232,7 +7520,6 @@ exports[`Storyshots Modal Not Connected 1`] = `
                   "process": [Function],
                 }
               }
-              style={undefined}
             />
           </View>
           <View
@@ -8286,16 +7573,8 @@ exports[`Storyshots Modal Not Connected 1`] = `
             }
           >
             <View
-              accessibilityComponentType={undefined}
-              accessibilityLabel={undefined}
-              accessibilityTraits={undefined}
               accessible={true}
-              collapsable={undefined}
-              hasTVPreferredFocus={undefined}
-              hitSlop={undefined}
               isTVSelectable={true}
-              nativeID={undefined}
-              onLayout={undefined}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -8314,8 +7593,6 @@ exports[`Storyshots Modal Not Connected 1`] = `
                   "paddingVertical": 8,
                 }
               }
-              testID={undefined}
-              tvParallaxProperties={undefined}
             >
               <Text
                 accessible={true}
@@ -8357,13 +7634,7 @@ exports[`Storyshots Modal Not Ready 1`] = `
     visible={true}
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hitSlop={undefined}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -8385,16 +7656,9 @@ exports[`Storyshots Modal Not Ready 1`] = `
           undefined,
         ]
       }
-      testID={undefined}
     >
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        hitSlop={undefined}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -8410,19 +7674,10 @@ exports[`Storyshots Modal Not Ready 1`] = `
             "padding": 32,
           }
         }
-        testID={undefined}
       >
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -8438,8 +7693,6 @@ exports[`Storyshots Modal Not Ready 1`] = `
               "zIndex": 9999,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <Text
             accessible={true}
@@ -8464,9 +7717,7 @@ exports[`Storyshots Modal Not Ready 1`] = `
             
           </Text>
         </View>
-        <View
-          style={undefined}
-        >
+        <View>
           <View
             style={
               Object {
@@ -8484,7 +7735,6 @@ exports[`Storyshots Modal Not Ready 1`] = `
                   "process": [Function],
                 }
               }
-              style={undefined}
             />
           </View>
           <View
@@ -8540,16 +7790,8 @@ The good news is you can follow along as this Beta version of the app develops o
             }
           >
             <View
-              accessibilityComponentType={undefined}
-              accessibilityLabel={undefined}
-              accessibilityTraits={undefined}
               accessible={true}
-              collapsable={undefined}
-              hasTVPreferredFocus={undefined}
-              hitSlop={undefined}
               isTVSelectable={true}
-              nativeID={undefined}
-              onLayout={undefined}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -8568,8 +7810,6 @@ The good news is you can follow along as this Beta version of the app develops o
                   "paddingVertical": 8,
                 }
               }
-              testID={undefined}
-              tvParallaxProperties={undefined}
             >
               <Text
                 accessible={true}
@@ -8611,13 +7851,7 @@ exports[`Storyshots Modal Problems Connecting 1`] = `
     visible={true}
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hitSlop={undefined}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -8639,16 +7873,9 @@ exports[`Storyshots Modal Problems Connecting 1`] = `
           undefined,
         ]
       }
-      testID={undefined}
     >
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        hitSlop={undefined}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -8664,19 +7891,10 @@ exports[`Storyshots Modal Problems Connecting 1`] = `
             "padding": 32,
           }
         }
-        testID={undefined}
       >
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -8692,8 +7910,6 @@ exports[`Storyshots Modal Problems Connecting 1`] = `
               "zIndex": 9999,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <Text
             accessible={true}
@@ -8718,9 +7934,7 @@ exports[`Storyshots Modal Problems Connecting 1`] = `
             
           </Text>
         </View>
-        <View
-          style={undefined}
-        >
+        <View>
           <View
             style={
               Object {
@@ -8738,7 +7952,6 @@ exports[`Storyshots Modal Problems Connecting 1`] = `
                   "process": [Function],
                 }
               }
-              style={undefined}
             />
           </View>
           <View
@@ -8785,16 +7998,8 @@ exports[`Storyshots Modal Problems Connecting 1`] = `
             </Text>
           </View>
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -8810,8 +8015,6 @@ exports[`Storyshots Modal Problems Connecting 1`] = `
                 "width": "100%",
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -8845,19 +8048,13 @@ exports[`Storyshots Modal Problems Connecting 1`] = `
 exports[`Storyshots NavButton Default 1`] = `
 <View
   accessibilityComponentType="button"
-  accessibilityLabel={undefined}
   accessibilityTraits={
     Array [
       "button",
     ]
   }
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -8869,8 +8066,6 @@ exports[`Storyshots NavButton Default 1`] = `
       "opacity": 1,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
     style={
@@ -8882,7 +8077,6 @@ exports[`Storyshots NavButton Default 1`] = `
     <Text
       accessible={true}
       allowFontScaling={true}
-      disabled={undefined}
       ellipsizeMode="tail"
       style={
         Array [
@@ -8917,22 +8111,12 @@ exports[`Storyshots Web Code&Robots 1`] = `
     }
   >
     <RCTWebView
-      allowsInlineMediaPlayback={undefined}
-      automaticallyAdjustContentInsets={undefined}
-      bounces={undefined}
-      contentInset={undefined}
-      dataDetectorTypes={undefined}
-      decelerationRate={undefined}
-      injectedJavaScript={undefined}
-      mediaPlaybackRequiresUserAction={undefined}
       messagingEnabled={false}
       onLoadingError={[Function]}
       onLoadingFinish={[Function]}
       onLoadingStart={[Function]}
       onMessage={[Function]}
-      onShouldStartLoadWithRequest={undefined}
       scalesPageToFit={true}
-      scrollEnabled={undefined}
       source={
         Object {
           "uri": "http://codeandrobots.com",
