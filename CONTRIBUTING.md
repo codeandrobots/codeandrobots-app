@@ -8,7 +8,7 @@ For **help**, **support**, **questions** and **ideas** please visit **[our FAQ](
 
 If you're a developer looking to contribute, check out the [help wanted](https://github.com/codeandrobots/codeandrobots-app/labels/help%20wanted) label encompassing issues which need some love or [drop us an email](mailto:codeandrobotshq@gmail.com?subject=Hi&body=I%20would%20like%20to%20help) and we'll help you get started.
 
-If you've got an idea for a new feature, please email us your suggestions at [codeandrobotshq@gmail.com](mailto:codeandrobotshq@gmail.com?subject=Idea), as adding new features requires generating consensus first.
+If you've got a fix in mind or an idea for a new feature, please first check the [Code&Robots Project Board](https://github.com/orgs/codeandrobots/projects/1) before emailing us your suggestions at [codeandrobotshq@gmail.com](mailto:codeandrobotshq@gmail.com?subject=Idea), as fixes and adding new features requires generating consensus first.
 
 ### Branching Guide
 
