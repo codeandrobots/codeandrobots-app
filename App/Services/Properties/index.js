@@ -46,6 +46,10 @@ export const isIOS12OrHigher = () => {
   return (majorVersionIOS >= 12)
 }
 
+export const isIOSProduction = () => {
+  return (Platform.OS === 'ios' && Config.ENV === 'production')
+}
+
 export const enrichProperties = (properties) => {
   if (!properties) {
     properties = {}

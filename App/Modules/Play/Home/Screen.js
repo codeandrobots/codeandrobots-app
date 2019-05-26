@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+import { isIOSProduction } from 'App/Services/Properties'
+
 import {
   Container,
   Modal,
@@ -26,21 +28,32 @@ export default class Screen extends Component {
       onPress } = this.props
     return (
       <Container scrollable>
-        <List>
-          <ListHeader title='Level 1' count={3} completed={0} />
-          <CompactListItem
-            icon='circle-o'
-            title='Get Started'
-            onPress={onPress.getStarted} />
-          <CompactListItem
-            icon='circle-o'
-            title='Explore'
-            onPress={onPress.explore} />
-          <CompactListItem
-            icon='circle-o'
-            title='Play a game'
-            onPress={onPress.playGame} />
-        </List>
+        {!isIOSProduction() &&
+          <List>
+            <ListHeader title='Level 1' count={3} completed={0} />
+            <CompactListItem
+              icon='circle-o'
+              title='Get Started'
+              onPress={onPress.getStarted} />
+            <CompactListItem
+              icon='circle-o'
+              title='Explore'
+              onPress={onPress.explore} />
+            <CompactListItem
+              icon='circle-o'
+              title='Play a game'
+              onPress={onPress.playGame} />
+          </List>
+        }
+        {isIOSProduction() &&
+          <List>
+            <ListHeader title='Level 1' count={1} completed={0} />
+            <CompactListItem
+              icon='circle-o'
+              title='Get Started'
+              onPress={onPress.getStarted} />
+          </List>
+        }
         <List title='Explore'>
           <ListItem
             image={Images.controls}
@@ -55,27 +68,29 @@ export default class Screen extends Component {
             text='Beep bop boopity beep'
             onPress={onPress.beep} />
         </List>
-        <List title='Games' cols={2}>
-          <SquareListItem
-            icon='play'
-            iconStyle={{marginLeft: 4}}
-            title='Drive'
-            text='Vroom vroom'
-            onPress={onPress.drive} />
-          <SquareListItem
-            icon='play'
-            iconStyle={{marginLeft: 4}}
-            title='Dance'
-            text='Let’s boogie'
-            onPress={onPress.dance} />
-          <SquareListItem
-            icon='play'
-            iconStyle={{marginLeft: 4}}
-            title='Find a friend'
-            text='Humans are nice'
-            disabled
-            onPress={onPress.findAFriend} />
-        </List>
+        {!isIOSProduction() &&
+          <List title='Games' cols={2}>
+            <SquareListItem
+              icon='play'
+              iconStyle={{marginLeft: 4}}
+              title='Drive'
+              text='Vroom vroom'
+              onPress={onPress.drive} />
+            <SquareListItem
+              icon='play'
+              iconStyle={{marginLeft: 4}}
+              title='Dance'
+              text='Let’s boogie'
+              onPress={onPress.dance} />
+            <SquareListItem
+              icon='play'
+              iconStyle={{marginLeft: 4}}
+              title='Find a friend'
+              text='Humans are nice'
+              disabled
+              onPress={onPress.findAFriend} />
+          </List>
+        }
         <Modal
           navigation={this.props.navigation}
           show={showNotReadyModal}
