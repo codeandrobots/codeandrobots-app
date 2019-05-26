@@ -16,6 +16,14 @@ If you've got an idea for a new feature, please email us your suggestions at [co
 
 On your local repository, you should always work on a branch to make keeping up-to-date and submitting pull requests easier, but in most cases you should submit your pull requests to `master`. Where necessary, for example if multiple people are contributing on a large feature, we make use of feature branches.
 
+#### Branch structure
+
+- **master** Every stable feature or fix goes to `master`
+- **feature/id-xxx** You're working on an issue and this is your feature branch, see this [example feature branch](https://github.com/codeandrobots/codeandrobots-app/tree/feature/1-hide-beta-feature-ios)
+- **fix/id-xxx** Fixing an issue, e.g. `fix/2-ble-discovery`
+- **test/id-xxx** This is an unstable / experimental branch, e.g. `test/3-wifi-support`
+- **refactor/id-xxx** For refactoring purposes, e.g. `refactor\4-bluetooth-service-refactor`
+
 ### Commit Messages
 
 We have a handful of simple standards for commit messages which help us to generate readable changelogs. Please follow this wherever possible and mention the associated issue number.
@@ -25,7 +33,7 @@ We have a handful of simple standards for commit messages which help us to gener
 - **3rd line:** `refs #000` or `closes #000` or `no issue`
 - **4th line:** Whatever you want. Any extra details can be included from here
 
-Good commit message examples: [one](https://github.com/codeandrobots/codeandrobots-app/commit/9f26ac76a1dc53b1119718a987fee0ee51d3ae7f), [two](https://github.com/codeandrobots/codeandrobots-app/commit/0f795fa2831eef286364215403d6264efe702859).
+Good commit message examples: [one](https://github.com/codeandrobots/codeandrobots-app/commit/9f26ac76a1dc53b1119718a987fee0ee51d3ae7f), [two](https://github.com/codeandrobots/codeandrobots-app/commit/0f795fa2831eef286364215403d6264efe702859) and [three](https://github.com/codeandrobots/codeandrobots-app/commit/e63bc34dfce4e3e3818bdd2b4cc38931c91bffb4).
 
 ### Submitting Pull Requests
 
