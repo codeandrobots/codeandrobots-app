@@ -1,6 +1,10 @@
 # Code & Robots
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
 
+## Open Source
+
+Code & Robots is completly FREE under the [MIT license](LICENSE). You can even use it commercially!
+
 ## :rocket: How to setup and run the app
 
 If you're new to mobile app development with React Native then here are some crash courses to bring you up to speed:
