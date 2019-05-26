@@ -19,7 +19,7 @@ On your local repository, you should always work on a branch to make keeping up-
 #### Branch structure
 
 - **master** Every stable feature or fix goes to `master`
-- **feature/id-xxx** You're working on an issue and this is your feature branch, see this [example feature branch](https://github.com/codeandrobots/codeandrobots-app/tree/feature/1-hide-beta-feature-ios)
+- **feature/id-xxx** You're working on an issue and this is your feature branch, see this [example feature/1-hide-beta-feature-ios branch](https://github.com/codeandrobots/codeandrobots-app/tree/feature/1-hide-beta-feature-ios)
 - **fix/id-xxx** Fixing an issue, e.g. `fix/2-ble-discovery`
 - **test/id-xxx** This is an unstable / experimental branch, e.g. `test/3-wifi-support`
 - **refactor/id-xxx** For refactoring purposes, e.g. `refactor\4-bluetooth-service-refactor`
