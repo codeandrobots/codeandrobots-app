@@ -3,7 +3,7 @@
 
 ## Open Source
 
-Code & Robots is completly FREE under the [MIT license](LICENSE). You can even use it commercially and we welcome all contributions, see our [contributing guide](CONTRIBUTING.md) to get started.
+Code & Robots is completly FREE under the [MIT license](https://github.com/codeandrobots/codeandrobots/blob/master/LICENSE). You can even use it commercially and we welcome all contributions, see our [contributing guide](CONTRIBUTING.md) to get started.
 
 ## :rocket: How to setup and run the app
 
@@ -36,7 +36,7 @@ If you're new to mobile app development with React Native then here are some cra
     * ```cp .env.example .env```
   * Windows
     * ```copy .env.example .env```
-  
+
 **Step 6:** Update [App Properties](#app-properties) in ```.env``` if necessary
 
 **Step 7:** Install and run the app
