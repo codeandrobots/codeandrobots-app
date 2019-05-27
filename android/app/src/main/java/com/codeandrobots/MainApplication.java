@@ -4,7 +4,6 @@ import android.app.Application;
 
 import com.facebook.react.ReactApplication;
 import com.polidea.reactnativeble.BlePackage;
-import it.innove.BleManagerPackage;
 import com.rusel.RCTBluetoothSerial.RCTBluetoothSerialPackage;
 import com.brentvatne.react.ReactVideoPackage;
 import com.BV.LinearGradient.LinearGradientPackage;
@@ -41,7 +40,6 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
             new BlePackage(),
-            new BleManagerPackage(),
             new RCTBluetoothSerialPackage(),
             new ReactVideoPackage(),
             new LinearGradientPackage(),

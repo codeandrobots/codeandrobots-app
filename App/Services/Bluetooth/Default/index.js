@@ -1,7 +1,5 @@
 import BluetoothSerial from 'react-native-bluetooth-serial'
 
-// Using BlePLXManager instead of BleManager as it is working
-// reliably on Android and iOS
 import BleManager from './BlePLXManager'
 
 class ConnectedDevice {
@@ -116,7 +114,6 @@ const write = async (s) => {
 
 const stopService = async () => {
   await disconnect()
-  bleManager.removeListeners()
 }
 
 export default {
