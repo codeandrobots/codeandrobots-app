@@ -8217,9 +8217,17 @@ react-native-app-settings@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/react-native-app-settings/-/react-native-app-settings-2.0.0.tgz#d2dbcf88dbb40d7261599fc373b35bd0f9fd886e"
 
+react-native-base64@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/react-native-base64/-/react-native-base64-0.0.2.tgz#c28463c2c6779ac3ec5fdd12979ebc8c5f9b410a"
+
 react-native-ble-manager@^6.6.4:
   version "6.6.4"
   resolved "https://registry.yarnpkg.com/react-native-ble-manager/-/react-native-ble-manager-6.6.4.tgz#38862c65edfab8f839cfae0f34e3b3a637c577d3"
+
+react-native-ble-plx@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-native-ble-plx/-/react-native-ble-plx-1.0.3.tgz#d5068f633522c2420b5e095d4c67286c31515c84"
 
 "react-native-bluetooth-serial@git+https://github.com/chico/react-native-bluetooth-serial.git#master":
   version "1.0.0-rc1"

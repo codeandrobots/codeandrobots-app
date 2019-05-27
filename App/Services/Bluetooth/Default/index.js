@@ -1,6 +1,8 @@
 import BluetoothSerial from 'react-native-bluetooth-serial'
 
-import BleManager from './BleManager'
+// Using BlePLXManager instead of BleManager as it is working
+// reliably on Android and iOS
+import BleManager from './BlePLXManager'
 
 class ConnectedDevice {
   device = null
@@ -9,9 +11,11 @@ class ConnectedDevice {
 const bleManager = BleManager.getInstance()
 const connectedDevice = new ConnectedDevice()
 
-BluetoothSerial.on('error', (err) => console.log(`Error: ${err.message}`))
+BluetoothSerial.on('error', (err) => console.log(`Bluetooth Serial Error: ${err.message}`))
 BluetoothSerial.on('connectionLost', () => {
-  disconnect()
+  if (connectedDevice.device && !connectedDevice.device.isBle) {
+    disconnect()
+  }
 })
 
 const isEnabled = async () => {

@@ -1,3 +1,9 @@
+// Replaced by BlePLXManager as when testing react-native-ble-manager
+// it did not reliably discover BLE devices on Android
+//
+// TODO Remove this BleManager class along with
+// react-native-ble-manager and convert-string dependencies?
+
 import {
   Platform,
   NativeEventEmitter,
