@@ -158,30 +158,4 @@ Follow the instructions in https://github.com/codeandrobots/codeandrobots-app#ar
   * ```copy .env.example .env```
   * ```react-native run-android --variant=devDebug```
 
-### Troubleshooting
-
-#### Failed to create directory
-
-If you see the error "Failed to create directory" then keep running ```react-native run-android --variant=devDebug``` until they stop happening, sometimes as much as 3 or 4 times :/
-
-#### Activity class {com.codeandrobots/com.codeandrobots.MainActivity} does not exist
-
-If you see the error "Activity class {com.codeandrobots/com.codeandrobots.MainActivity} does not exist" then all is OK but you have to launch the Code & Robots app manually from your device. This error occurs because react-native CLI doesn't work well yet with Android variants.
-
-#### Operation not permitted, lstat
-
-If you see the error "Operation not permitted, lstat" then try the following:
-
-1. Start the React Native bundler inside a **NEW** terminal or command prompt
-  * ```cd codeandrobots-app```
-  * ```npm cache clean```
-  * ```npm start -- --reset-cache```
-
-2. Run the app in a different terminal or command prompt
-  * ```react-native run-android --variant=devDebug```
-  
-#### Could not dispatch a message to the daemon
-
-If you see the error "Could not dispatch a message to the daemon" then run ```adb devices``` and make sure that the daemon is running or starts successfully and also that your attached device is listed.
-
-
+## [Troubleshooting](TROUBLESHOOTING.md)
