@@ -8,7 +8,8 @@ import {
   SquareListItem,
   CompactListItem,
   FeaturedListItem,
-  StatListItem } from '../ListItems'
+  StatListItem,
+  CardListItem } from '../ListItems'
 
 storiesOf('ListItem', module)
   .add('Default', () => (
@@ -46,4 +47,7 @@ storiesOf('ListItem', module)
   ))
   .add('Stat', () => (
     <StatListItem icon='bluetooth' title='bluetooth' value='Connected' />
+  ))
+  .add('CardListItem', () => (
+    <CardListItem image={Images.hello} title='Title' text='Content goes here....' />
   ))
