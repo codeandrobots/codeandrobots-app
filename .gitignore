@@ -69,3 +69,4 @@ ios/CodeAndRobots/GoogleService-Info.plist
 #
 .env
 sentry.properties
+ios/index/
