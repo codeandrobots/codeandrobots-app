@@ -21,16 +21,16 @@ export default class CardListItem extends Component {
   render () {
     const {
       style = undefined,
-      image, //todo image is getting cropped in card
-      //video, todo impleemt style for this
+      image, // todo image is getting cropped in card
+      // video, todo impleemt style for this
       title,
       text,
       button,
-      //loading = false,
-      //link,
-      onPress = () => {},
-      //onLinkPress = () => {},
-      buttonIconStyle = {marginTop: 2},
+      // loading = false,
+      // link,
+      onPress = () => { },
+      // onLinkPress = () => {},
+      buttonIconStyle = { marginTop: 2 },
       buttonIconSet,
       buttonIcon = 'chevron-right',
       buttonIconSize = 18,
