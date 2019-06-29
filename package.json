@@ -5,7 +5,6 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "test-e2e": "detox build && jest --config Tests/EndToEnd/config.json",
     "clean": "rm -rf $TMPDIR/react-* && watchman watch-del-all && npm cache clean --force",
     "clean:android": "cd android/ && ./gradlew clean && cd .. && react-native run-android",
     "newclear": "rm -rf $TMPDIR/react-* && watchman watch-del-all && rm -rf ios/build && rm -rf node_modules/ && npm cache clean --force && npm i",
@@ -89,7 +88,6 @@
     "babel-plugin-root-import": "^5.1.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react-native": "^3.0.2",
-    "detox": "^10.0.10",
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.0",
     "enzyme-to-json": "^3.3.3",
@@ -139,16 +137,6 @@
     "transformIgnorePatterns": [
       "node_modules/(?!react-native|react-navigation|tcomb-form-native)"
     ]
-  },
-  "detox": {
-    "configurations": {
-      "ios.sim.debug": {
-        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/CodeAndRobots Dev.app",
-        "build": "xcodebuild -project ios/CodeAndRobots.xcodeproj -scheme CodeAndRobots -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
-        "type": "ios.simulator",
-        "name": "iPhone X"
-      }
-    }
   },
   "config": {},
   "standard": {
