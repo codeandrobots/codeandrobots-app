@@ -21,15 +21,15 @@ export default class CardListItem extends Component {
   render () {
     const {
       style = undefined,
-      image, //todo image is getting cropped in card
-      //video, todo impleemt style for this
+      image,
+      // video,  | TODO: impleemt style for this
       title,
       text,
       button,
-      //loading = false,
-      //link,
+      // loading = false, | TODO: implemnt these features from the card class
+      // link, | TODO:
       onPress = () => {},
-      //onLinkPress = () => {},
+      // onLinkPress = () => {}, | TODO:
       buttonIconStyle = {marginTop: 2},
       buttonIconSet,
       buttonIcon = 'chevron-right',
@@ -43,8 +43,8 @@ export default class CardListItem extends Component {
     return (
       <TouchableOpacity style={itemViewStyle} disabled={disabled} onPress={onPress}>
         {image && (
-          <View style={s.imageView}>
-            <Image style={s.image} source={image} />
+          <View style={s.imageView_cardListItem}>
+            <Image style={s.image_cardListItem} source={image} />
           </View>
         )}
         <View style={s.textView}>
