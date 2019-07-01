@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react-native'
-
-import { Images } from 'App/Themes'
+import { Linking } from 'react-native'
+import { Images, Videos } from 'App/Themes'
 
 import {
   ListItem,
@@ -48,6 +48,15 @@ storiesOf('ListItem', module)
   .add('Stat', () => (
     <StatListItem icon='bluetooth' title='bluetooth' value='Connected' />
   ))
-  .add('CardListItem', () => (
+  .add('CardListItem Image', () => (
     <CardListItem image={Images.hello} title='Title' text='Content goes here....' />
+  ))
+  .add('CardListItem Video', () => (
+    <CardListItem video={Videos.atlas}
+      title='🤖⬆️'
+      text='Jump, Atlas, Jump!'
+      link='Atlas on Wikipedia'
+      onLinkPress={() => {
+        Linking.openURL('https://en.wikipedia.org/wiki/Atlas_(robot)')
+      }} />
   ))

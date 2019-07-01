@@ -8,6 +8,8 @@ import { TouchableOpacity, Button, Link, IconButton, Icon } from 'App/Components
 
 import { Metrics } from 'App/Themes'
 
+import { onVideoEnd, onVideoError, onVideoToggle, getImageSize, componentDidMount, componentWillMount } from 'App/Modules'
+
 import s from './Styles'
 
 export default class Card extends Component {
@@ -33,48 +35,28 @@ export default class Card extends Component {
     }
   }
 
-  async componentDidMount () {
-    this._isMounted = true
-    const { image } = this.props
-    if (image && image.uri) {
-      const { width, height } = await this.getImageSize(image.uri)
-      if (this._isMounted) {
-        this.setState({ imageWidth: width, imageHeight: height })
-      }
-    }
+  componentDidMount () {
+    componentDidMount(this)
   }
 
   componentWillUnmount () {
-    this._isMounted = false
+    componentWillMount(this)
   }
 
   getImageSize (imageUri) {
-    return new Promise((resolve, reject) => {
-      Image.getSize(imageUri,
-        (width, height) => {
-          const maxWidth = Metrics.screenWidth - (Metrics.unit * 4)
-          const size = (maxWidth < width)
-            ? { width: maxWidth, height: height * (maxWidth / width) }
-            : { width, height }
-          resolve(size)
-        },
-        reject)
-    })
+    getImageSize(imageUri)
   }
 
   onVideoToggle = () => {
-    const { paused } = this.state
-    this.setState({paused: !paused})
+    onVideoToggle(this)
   }
 
-  onVideoEnd = (data) => {
-    this.setState({paused: true}, () => {
-      this.player.seek(0)
-    })
+  onVideoEnd = () => {
+    onVideoEnd(this)
   }
 
   onVideoError = (e) => {
-    console.log(e)
+    onVideoError(e)
   }
 
   render () {

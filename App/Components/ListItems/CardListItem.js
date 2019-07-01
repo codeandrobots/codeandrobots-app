@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import { View, Text, Image } from 'react-native'
 import PropTypes from 'prop-types'
 
-import s from './Styles'
 import { TouchableOpacity, Button, Icon, IconButton } from 'App/Components'
+import { onVideoEnd, onVideoError, onVideoToggle, getImageSize, componentDidMount, componentWillMount } from 'App/Modules'
+import s from './Styles'
 
 export default class CardListItem extends Component {
   static PropTypes = {
@@ -18,18 +19,52 @@ export default class CardListItem extends Component {
     onPress: PropTypes.func,
     onLinkPress: PropTypes.func
   }
+
+  constructor (props) {
+    super(props)
+    this.state = {
+      paused: true,
+      imageWidth: 0,
+      imageHeight: 0
+    }
+  }
+
+  componentDidMount () {
+    componentDidMount(this)
+  }
+
+  componentWillUnmount () {
+    componentWillMount(this)
+  }
+
+  getImageSize (imageUri) {
+    getImageSize(imageUri)
+  }
+
+  onVideoToggle = () => {
+    onVideoToggle(this)
+  }
+
+  onVideoEnd = () => {
+    onVideoEnd(this)
+  }
+
+  onVideoError = (e) => {
+    onVideoError(e)
+  }
+
   render () {
     const {
       style = undefined,
       image,
-      // video,  | TODO: impleemt style for this
+      video,
       title,
       text,
       button,
-      // loading = false, | TODO: implemnt these features from the card class
-      // link, | TODO:
+      // loading = false,
+      // link,
       onPress = () => {},
-      // onLinkPress = () => {}, | TODO:
+      // onLinkPress = () => {},
       buttonIconStyle = {marginTop: 2},
       buttonIconSet,
       buttonIcon = 'chevron-right',
@@ -46,6 +81,10 @@ export default class CardListItem extends Component {
           <View style={s.imageView_cardListItem}>
             <Image style={s.image_cardListItem} source={image} />
           </View>
+        )}
+        {!image && video && (
+          // TODO: Kelsey add video styling here
+          <Text />
         )}
         <View style={s.textView}>
           {title && <Text style={textStyle}>{title.toUpperCase()}</Text>}
