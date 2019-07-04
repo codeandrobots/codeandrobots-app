@@ -6,7 +6,12 @@ import Video from 'react-native-video'
 
 import { TouchableOpacity, Button, Icon, IconButton } from 'App/Components'
 
-import { onVideoEnd, onVideoError, onVideoToggle, getImageSize, componentDidMount, componentWillMount } from 'App/Modules'
+import {
+  onVideoError,
+  onVideoToggle,
+  getImageSize,
+  componentWillMount
+} from 'App/Modules'
 
 import { Colors } from 'App/Themes'
 
@@ -35,10 +40,6 @@ export default class CardListItem extends Component {
     }
   }
 
-  componentDidMount () {
-    componentDidMount(this)
-  }
-
   componentWillUnmount () {
     componentWillMount(this)
   }
@@ -51,8 +52,10 @@ export default class CardListItem extends Component {
     onVideoToggle(this)
   }
 
-  onVideoEnd = () => {
-    onVideoEnd(this)
+  onVideoEnd = (data) => {
+    this.setState({ paused: true }, () => {
+      this.player.seek(0)
+    })
   }
 
   onVideoError = (e) => {
