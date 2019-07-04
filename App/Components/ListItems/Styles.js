@@ -89,13 +89,14 @@ export default StyleSheet.create({
     margin: Metrics.unit
   },
   imageView_cardListItem: {
-    maxWidth: 75,
-    maxHeight: 75,
+    maxWidth: 165,
+    maxHeight: 112,
     padding: 40,
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 1,
     borderRadius: 10,
+    borderColor: Colors.primary,
     flex: 1,
     flexDirection: 'row'
   },
@@ -104,8 +105,8 @@ export default StyleSheet.create({
     maxHeight: 55
   },
   image_cardListItem: {
-    maxWidth: 75,
-    maxHeight: 75,
+    maxWidth: 165,
+    maxHeight: 112,
     resizeMode: 'contain'
   },
   image_compact: {
