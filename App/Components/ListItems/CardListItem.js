@@ -1,9 +1,15 @@
 import React, { Component } from 'react'
-import { View, Text, Image } from 'react-native'
+import { StyleSheet, View, Image, Text } from 'react-native'
 import PropTypes from 'prop-types'
 
+import Video from 'react-native-video'
+
 import { TouchableOpacity, Button, Icon, IconButton } from 'App/Components'
+
 import { onVideoEnd, onVideoError, onVideoToggle, getImageSize, componentDidMount, componentWillMount } from 'App/Modules'
+
+import { Colors } from 'App/Themes'
+
 import s from './Styles'
 
 export default class CardListItem extends Component {
@@ -20,7 +26,7 @@ export default class CardListItem extends Component {
     onLinkPress: PropTypes.func
   }
 
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       paused: true,
@@ -61,19 +67,14 @@ export default class CardListItem extends Component {
       title,
       text,
       button,
-      // loading = false,
-      // link,
-      onPress = () => {},
-      // onLinkPress = () => {},
-      buttonIconStyle = {marginTop: 2},
-      buttonIconSet,
-      buttonIcon = 'chevron-right',
-      buttonIconSize = 18,
+      onPress = () => { },
       disabled = false
     } = this.props
 
-    const itemViewStyle = (!disabled) ? [s.itemView, style] : [s.itemView, s.itemView_disabled, style]
+    const itemViewStyle = (!disabled) ? [s.itemView_cardList, style] : [s.itemView, s.itemView_disabled, style]
     const textStyle = (!disabled) ? s.text : [s.text, s.text_disabled]
+    const { paused } = this.state;
+    const buttonIconColor = (!disabled) ? Colors.icon_dark : Colors.icon_disabled
 
     return (
       <TouchableOpacity style={itemViewStyle} disabled={disabled} onPress={onPress}>
@@ -83,8 +84,28 @@ export default class CardListItem extends Component {
           </View>
         )}
         {!image && video && (
-          // TODO: Kelsey add video styling here
-          <Text />
+          <TouchableOpacity style={s.videoView} onPress={this.onVideoToggle}>
+            {paused && (
+              <IconButton
+                style={{ button: StyleSheet.flatten(s.videoButton) }}
+                onPress={this.onVideoToggle}>
+                <Icon
+                  name='play'
+                  size={24}
+                  style={{ marginLeft: 4, color: Colors.primary }} />
+              </IconButton>
+            )}
+            <Video
+              ref={(ref) => { this.player = ref }}
+              paused={paused}
+              source={video}
+              resizeMode='cover'
+              ignoreSilentSwitch={'ignore'}
+              progressUpdateInterval={100.0}
+              onEnd={this.onVideoEnd}
+              onError={this.onVideoError}
+              style={s.videoPlayer} />
+          </TouchableOpacity>
         )}
         <View style={s.textView}>
           {title && <Text style={textStyle}>{title.toUpperCase()}</Text>}
@@ -97,9 +118,7 @@ export default class CardListItem extends Component {
         )}
         {!button && (
           <View style={s.buttonView}>
-            <IconButton disabled={disabled} onPress={onPress}>
-              <Icon set={buttonIconSet} name={buttonIcon} size={buttonIconSize} disabled={disabled} style={buttonIconStyle} />
-            </IconButton>
+            <Icon set='SimpleLine' name='arrow-right' size={16} color={buttonIconColor} />
           </View>
         )}
       </TouchableOpacity>

@@ -46,6 +46,13 @@ export default StyleSheet.create({
   itemView_disabled: {
     backgroundColor: Colors.background_disabled
   },
+  itemView_cardList: {
+    flexDirection: 'row',
+    margin: Metrics.unit,
+    padding: Metrics.unit,
+    borderRadius: Metrics.unit,
+    backgroundColor: Colors.white
+  },
   itemOuterBorder: {
     padding: Metrics.unit,
     borderColor: Colors.lightgrey,
