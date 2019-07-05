@@ -75,7 +75,8 @@ export default class CardListItem extends Component {
     } = this.props
 
     const itemViewStyle = (!disabled) ? [s.itemView_cardList, style] : [s.itemView, s.itemView_disabled, style]
-    const textStyle = (!disabled) ? s.text : [s.text, s.text_disabled]
+    const textStyle = (!disabled) ? s.text_cardListItem : [s.text_cardListItem, s.text_disabled]
+    const titleStyle = (!disabled) ? s.title_cardListItem : [s.title_cardListItem, s.text_disabled]
     const { paused } = this.state;
     const buttonIconColor = (!disabled) ? Colors.icon_dark : Colors.icon_disabled
 
@@ -110,8 +111,8 @@ export default class CardListItem extends Component {
               style={s.videoPlayer} />
           </TouchableOpacity>
         )}
-        <View style={s.textView}>
-          {title && <Text style={textStyle}>{title.toUpperCase()}</Text>}
+        <View style={s.textView_cardListItem}>
+          {title && <Text style={titleStyle}>{title}</Text>}
           {text && <Text style={[textStyle, s.text_medium]}>{text}</Text>}
         </View>
         {button && (

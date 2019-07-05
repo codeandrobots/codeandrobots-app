@@ -89,8 +89,8 @@ export default StyleSheet.create({
     margin: Metrics.unit
   },
   imageView_cardListItem: {
-    maxWidth: 165,
-    maxHeight: 112,
+    maxWidth: (Metrics.unit * 20),
+    maxHeight: (Metrics.unit * 14),
     padding: 40,
     justifyContent: 'center',
     alignItems: 'center',
@@ -105,8 +105,8 @@ export default StyleSheet.create({
     maxHeight: 55
   },
   image_cardListItem: {
-    maxWidth: 165,
-    maxHeight: 112,
+    maxWidth: (Metrics.unit * 20),
+    maxHeight: (Metrics.unit * 14),
     resizeMode: 'contain'
   },
   image_compact: {
@@ -129,6 +129,13 @@ export default StyleSheet.create({
   textView_featured: {
     alignItems: 'center',
     marginTop: Metrics.unit * 2
+  },
+  textView_cardListItem: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    marginLeft: Metrics.unit,
+    marginRight: Metrics.unit / 10
   },
   buttonView: {
     justifyContent: 'center',
@@ -159,5 +166,27 @@ export default StyleSheet.create({
   statValue: {
     ...Styles.text,
     fontSize: Fonts.size.large
+  },
+  videoPlayer: {
+    marginHorizontal: Metrics.unit * 2,
+    width: (Metrics.unit * 20),
+    height: (Metrics.unit * 14),
+    borderRadius: Metrics.unit
+  },
+  videoButton: {
+    position: 'absolute',
+    zIndex: 9999
+  },
+  videoView: {
+    // ...Styles.centered,
+    marginVertical: Metrics.unit * 3
+  },
+  text_cardListItem: {
+    ...Styles.text,
+    lineHeight: Metrics.unit * 2.75,
+  },
+  title_cardListItem: {
+    ...Styles.text,
+    lineHeight: Metrics.unit * 3.5
   }
 })

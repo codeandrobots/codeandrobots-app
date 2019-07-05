@@ -35,13 +35,20 @@ export default class Card extends Component {
     }
   }
 
-  componentDidMount () {
-    componentDidMount(this)
+  async componentDidMount () {
+    this._isMounted = true
+    const { image } = this.props
+    if (image && image.uri) {
+      const { width, height } = await this.getImageSize(image.uri)
+      if (this._isMounted) {
+        this.setState({ imageWidth: width, imageHeight: height })
+      }
+    }
   }
 
   componentWillUnmount () {
-    componentWillMount(this)
-  }
+      this._isMounted = false
+	  }
 
   getImageSize (imageUri) {
     getImageSize(imageUri)

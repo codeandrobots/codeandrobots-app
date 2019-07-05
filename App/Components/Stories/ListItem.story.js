@@ -1,6 +1,5 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react-native'
-import { Linking } from 'react-native'
 import { Images, Videos } from 'App/Themes'
 
 import {
@@ -50,7 +49,7 @@ storiesOf('ListItem', module)
     <StatListItem icon='bluetooth' title='bluetooth' value='Connected' />
   ))
   .add('CardListItem Image', () => (
-    <CardListItem image={Images.hello} title='Title' text='Content goes here....' />
+    <CardListItem image={Images.otto} title='Otto DIY' text='The open source robot that you can build yourself' />
   ))
   .add('CardListItem Video', () => (
     <CardListItem
