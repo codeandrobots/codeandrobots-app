@@ -46,7 +46,7 @@ export default StyleSheet.create({
   itemView_disabled: {
     backgroundColor: Colors.background_disabled
   },
-  itemView_cardList: {
+  itemView_card: {
     flexDirection: 'row',
     margin: Metrics.unit,
     padding: Metrics.unit,
@@ -88,7 +88,7 @@ export default StyleSheet.create({
     flex: 1,
     margin: Metrics.unit
   },
-  imageView_cardListItem: {
+  imageView_card: {
     maxWidth: (Metrics.unit * 20),
     maxHeight: (Metrics.unit * 14),
     padding: 40,
@@ -104,7 +104,7 @@ export default StyleSheet.create({
     maxWidth: 55,
     maxHeight: 55
   },
-  image_cardListItem: {
+  image_card: {
     maxWidth: (Metrics.unit * 20),
     maxHeight: (Metrics.unit * 14),
     resizeMode: 'contain'
@@ -130,12 +130,20 @@ export default StyleSheet.create({
     alignItems: 'center',
     marginTop: Metrics.unit * 2
   },
-  textView_cardListItem: {
+  textView_card: {
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'flex-start',
     marginLeft: Metrics.unit,
-    marginRight: Metrics.unit / 10
+    marginRight: Metrics.unit / 11
+  },
+  text_card: {
+    ...Styles.text,
+    lineHeight: Metrics.unit * 2.75,
+  },
+  title_card: {
+    ...Styles.text,
+    lineHeight: Metrics.unit * 3.5
   },
   buttonView: {
     justifyContent: 'center',
@@ -168,25 +176,20 @@ export default StyleSheet.create({
     fontSize: Fonts.size.large
   },
   videoPlayer: {
-    marginHorizontal: Metrics.unit * 2,
     width: (Metrics.unit * 20),
     height: (Metrics.unit * 14),
-    borderRadius: Metrics.unit
+    borderRadius: Metrics.unit,
+    borderWidth: 2,
+    borderColor: Colors.primary
   },
   videoButton: {
     position: 'absolute',
-    zIndex: 9999
+    zIndex: 9999,
   },
   videoView: {
-    // ...Styles.centered,
-    marginVertical: Metrics.unit * 3
-  },
-  text_cardListItem: {
-    ...Styles.text,
-    lineHeight: Metrics.unit * 2.75,
-  },
-  title_cardListItem: {
-    ...Styles.text,
-    lineHeight: Metrics.unit * 3.5
+    ...Styles.centered,
+    marginHorizontal: Metrics.unit,
+    flexDirection: 'column',
+    flex: 1,
   }
 })

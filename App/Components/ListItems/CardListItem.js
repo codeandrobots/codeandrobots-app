@@ -74,17 +74,17 @@ export default class CardListItem extends Component {
       disabled = false
     } = this.props
 
-    const itemViewStyle = (!disabled) ? [s.itemView_cardList, style] : [s.itemView, s.itemView_disabled, style]
-    const textStyle = (!disabled) ? s.text_cardListItem : [s.text_cardListItem, s.text_disabled]
-    const titleStyle = (!disabled) ? s.title_cardListItem : [s.title_cardListItem, s.text_disabled]
+    const itemViewStyle = (!disabled) ? [s.itemView_card, style] : [s.itemView_card, s.itemView_disabled, style]
+    const textStyle = (!disabled) ? s.text_card : [s.text_card, s.text_disabled]
+    const titleStyle = (!disabled) ? s.title_card : [s.title_card, s.text_disabled]
     const { paused } = this.state;
     const buttonIconColor = (!disabled) ? Colors.icon_dark : Colors.icon_disabled
 
     return (
       <TouchableOpacity style={itemViewStyle} disabled={disabled} onPress={onPress}>
         {image && (
-          <View style={s.imageView_cardListItem}>
-            <Image style={s.image_cardListItem} source={image} />
+          <View style={s.imageView_card}>
+            <Image style={s.image_card} source={image} />
           </View>
         )}
         {!image && video && (
@@ -96,7 +96,7 @@ export default class CardListItem extends Component {
                 <Icon
                   name='play'
                   size={24}
-                  style={{ marginLeft: 4, color: Colors.primary }} />
+                  style={{ color: Colors.primary }} />
               </IconButton>
             )}
             <Video
@@ -111,7 +111,7 @@ export default class CardListItem extends Component {
               style={s.videoPlayer} />
           </TouchableOpacity>
         )}
-        <View style={s.textView_cardListItem}>
+        <View style={s.textView_card}>
           {title && <Text style={titleStyle}>{title}</Text>}
           {text && <Text style={[textStyle, s.text_medium]}>{text}</Text>}
         </View>
