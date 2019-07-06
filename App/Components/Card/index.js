@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 
 import Video from 'react-native-video'
 
+import { getImageSize } from 'App/Services/ImageUtils'
+
 import { TouchableOpacity, Button, Link, IconButton, Icon } from 'App/Components'
 
 import { Metrics } from 'App/Themes'
@@ -37,7 +39,7 @@ export default class Card extends Component {
     this._isMounted = true
     const { image } = this.props
     if (image && image.uri) {
-      const { width, height } = await this.getImageSize(image.uri)
+      const { width, height } = await getImageSize(image.uri)
       if (this._isMounted) {
         this.setState({ imageWidth: width, imageHeight: height })
       }
@@ -48,27 +50,13 @@ export default class Card extends Component {
     this._isMounted = false
   }
 
-  getImageSize (imageUri) {
-    return new Promise((resolve, reject) => {
-      Image.getSize(imageUri,
-        (width, height) => {
-          const maxWidth = Metrics.screenWidth - (Metrics.unit * 4)
-          const size = (maxWidth < width)
-            ? { width: maxWidth, height: height * (maxWidth / width) }
-            : { width, height }
-          resolve(size)
-        },
-        reject)
-    })
-  }
-
   onVideoToggle = () => {
     const { paused } = this.state
-    this.setState({ paused: !paused })
+    this.setState({paused: !paused})
   }
 
   onVideoEnd = (data) => {
-    this.setState({ paused: true }, () => {
+    this.setState({paused: true}, () => {
       this.player.seek(0)
     })
   }
@@ -88,13 +76,13 @@ export default class Card extends Component {
       loading = false,
       link,
       textAlign = 'center',
-      onPress = () => { },
-      onLinkPress = () => { }
+      onPress = () => {},
+      onLinkPress = () => {}
     } = this.props
 
     const { paused, imageWidth, imageHeight } = this.state
     const imageStyle = (imageWidth > 0)
-      ? { width: imageWidth, height: imageHeight }
+      ? {width: imageWidth, height: imageHeight}
       : undefined
 
     return (
@@ -108,7 +96,7 @@ export default class Card extends Component {
           <TouchableOpacity style={s.videoView} onPress={this.onVideoToggle}>
             {paused && (
               <IconButton
-                style={{ button: StyleSheet.flatten(s.videoButton) }}
+                style={{button: StyleSheet.flatten(s.videoButton)}}
                 onPress={this.onVideoToggle}>
                 <Icon
                   name='play'

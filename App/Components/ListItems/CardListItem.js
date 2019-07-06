@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 
 import Video from 'react-native-video'
 
+import { getImageSize } from 'App/Services/ImageUtils'
+
 import { TouchableOpacity, Button, Icon, IconButton } from 'App/Components'
 
 import { Colors } from 'App/Themes'
@@ -37,7 +39,7 @@ export default class CardListItem extends Component {
     this._isMounted = true
     const { image } = this.props
     if (image && image.uri) {
-      const { width, height } = await this.getImageSize(image.uri)
+      const { width, height } = await getImageSize(image.uri)
       if (this._isMounted) {
         this.setState({ imageWidth: width, imageHeight: height })
       }
@@ -46,20 +48,6 @@ export default class CardListItem extends Component {
 
   componentWillUnmount () {
     this._isMounted = false
-  }
-
-  getImageSize (imageUri) {
-    return new Promise((resolve, reject) => {
-      Image.getSize(imageUri,
-        (width, height) => {
-          const maxWidth = Metrics.screenWidth - (Metrics.unit * 4)
-          const size = (maxWidth < width)
-            ? { width: maxWidth, height: height * (maxWidth / width) }
-            : { width, height }
-          resolve(size)
-        },
-        reject)
-    })
   }
 
   onVideoToggle = () => {
