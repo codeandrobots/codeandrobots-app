@@ -8,8 +8,6 @@ import { TouchableOpacity, Button, Link, IconButton, Icon } from 'App/Components
 
 import { Metrics } from 'App/Themes'
 
-import { onVideoEnd, onVideoError, onVideoToggle, getImageSize, componentDidMount, componentWillMount } from 'App/Modules'
-
 import s from './Styles'
 
 export default class Card extends Component {
@@ -26,7 +24,7 @@ export default class Card extends Component {
     onLinkPress: PropTypes.func
   }
 
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       paused: true,
@@ -47,23 +45,36 @@ export default class Card extends Component {
   }
 
   componentWillUnmount () {
-      this._isMounted = false
-	  }
+    this._isMounted = false
+  }
 
   getImageSize (imageUri) {
-    getImageSize(imageUri)
+    return new Promise((resolve, reject) => {
+      Image.getSize(imageUri,
+        (width, height) => {
+          const maxWidth = Metrics.screenWidth - (Metrics.unit * 4)
+          const size = (maxWidth < width)
+            ? { width: maxWidth, height: height * (maxWidth / width) }
+            : { width, height }
+          resolve(size)
+        },
+        reject)
+    })
   }
 
   onVideoToggle = () => {
-    onVideoToggle(this)
+    const { paused } = this.state
+    this.setState({ paused: !paused })
   }
 
-  onVideoEnd = () => {
-    onVideoEnd(this)
+  onVideoEnd = (data) => {
+    this.setState({ paused: true }, () => {
+      this.player.seek(0)
+    })
   }
 
   onVideoError = (e) => {
-    onVideoError(e)
+    console.log(e)
   }
 
   render () {
@@ -77,13 +88,13 @@ export default class Card extends Component {
       loading = false,
       link,
       textAlign = 'center',
-      onPress = () => {},
-      onLinkPress = () => {}
+      onPress = () => { },
+      onLinkPress = () => { }
     } = this.props
 
     const { paused, imageWidth, imageHeight } = this.state
     const imageStyle = (imageWidth > 0)
-      ? {width: imageWidth, height: imageHeight}
+      ? { width: imageWidth, height: imageHeight }
       : undefined
 
     return (
@@ -97,12 +108,12 @@ export default class Card extends Component {
           <TouchableOpacity style={s.videoView} onPress={this.onVideoToggle}>
             {paused && (
               <IconButton
-                style={{button: StyleSheet.flatten(s.videoButton)}}
+                style={{ button: StyleSheet.flatten(s.videoButton) }}
                 onPress={this.onVideoToggle}>
                 <Icon
                   name='play'
                   size={24}
-                  style={{marginLeft: 4}} />
+                  style={{ marginLeft: 4 }} />
               </IconButton>
             )}
             <Video
@@ -132,7 +143,7 @@ export default class Card extends Component {
         )}
         {link && (
           <Link
-            style={{view: (button) ? {marginTop: Metrics.unit} : null, text: StyleSheet.flatten(s.link)}}
+            style={{ view: (button) ? { marginTop: Metrics.unit } : null, text: StyleSheet.flatten(s.link) }}
             text={link}
             centered uppercase={false}
             onPress={onLinkPress} />
