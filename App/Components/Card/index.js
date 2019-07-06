@@ -24,7 +24,7 @@ export default class Card extends Component {
     onLinkPress: PropTypes.func
   }
 
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       paused: true,

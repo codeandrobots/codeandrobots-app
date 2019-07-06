@@ -6,13 +6,6 @@ import Video from 'react-native-video'
 
 import { TouchableOpacity, Button, Icon, IconButton } from 'App/Components'
 
-import {
-  onVideoError,
-  onVideoToggle,
-  getImageSize,
-  componentWillMount
-} from 'App/Modules'
-
 import { Colors } from 'App/Themes'
 
 import s from './Styles'
@@ -40,16 +33,38 @@ export default class CardListItem extends Component {
     }
   }
 
+  async componentDidMount () {
+    this._isMounted = true
+    const { image } = this.props
+    if (image && image.uri) {
+      const { width, height } = await this.getImageSize(image.uri)
+      if (this._isMounted) {
+        this.setState({ imageWidth: width, imageHeight: height })
+      }
+    }
+  }
+
   componentWillUnmount () {
-    componentWillMount(this)
+    this._isMounted = false
   }
 
   getImageSize (imageUri) {
-    getImageSize(imageUri)
+    return new Promise((resolve, reject) => {
+      Image.getSize(imageUri,
+        (width, height) => {
+          const maxWidth = Metrics.screenWidth - (Metrics.unit * 4)
+          const size = (maxWidth < width)
+            ? { width: maxWidth, height: height * (maxWidth / width) }
+            : { width, height }
+          resolve(size)
+        },
+        reject)
+    })
   }
 
   onVideoToggle = () => {
-    onVideoToggle(this)
+    const { paused } = this.state
+    this.setState({ paused: !paused })
   }
 
   onVideoEnd = (data) => {
@@ -59,7 +74,7 @@ export default class CardListItem extends Component {
   }
 
   onVideoError = (e) => {
-    onVideoError(e)
+    console.log(e)
   }
 
   render () {
