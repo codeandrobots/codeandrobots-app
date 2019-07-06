@@ -89,8 +89,8 @@ export default StyleSheet.create({
     margin: Metrics.unit
   },
   imageView_card: {
-    maxWidth: (Metrics.unit * 20),
-    maxHeight: (Metrics.unit * 14),
+    maxWidth: 165,
+    maxHeight: 112,
     padding: 40,
     justifyContent: 'center',
     alignItems: 'center',
@@ -105,8 +105,8 @@ export default StyleSheet.create({
     maxHeight: 55
   },
   image_card: {
-    maxWidth: (Metrics.unit * 20),
-    maxHeight: (Metrics.unit * 14),
+    maxWidth: 165,
+    maxHeight: 112,
     resizeMode: 'contain'
   },
   image_compact: {
@@ -135,15 +135,13 @@ export default StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'flex-start',
     marginLeft: Metrics.unit,
-    marginRight: Metrics.unit / 11
   },
   text_card: {
     ...Styles.text,
-    lineHeight: Metrics.unit * 2.75,
   },
   title_card: {
     ...Styles.text,
-    lineHeight: Metrics.unit * 3.5
+    marginVertical: Metrics.unit / 2
   },
   buttonView: {
     justifyContent: 'center',
@@ -176,8 +174,8 @@ export default StyleSheet.create({
     fontSize: Fonts.size.large
   },
   videoPlayer: {
-    width: (Metrics.unit * 20),
-    height: (Metrics.unit * 14),
+    width: 165,
+    height: 112,
     borderRadius: Metrics.unit,
     borderWidth: 2,
     borderColor: Colors.primary
