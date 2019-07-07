@@ -101,7 +101,7 @@ export default class Card extends Component {
                 <Icon
                   name='play'
                   size={24}
-                  style={{ marginLeft: 4 }} />
+                  style={{marginLeft: 4}} />
               </IconButton>
             )}
             <Video
@@ -131,7 +131,7 @@ export default class Card extends Component {
         )}
         {link && (
           <Link
-            style={{ view: (button) ? { marginTop: Metrics.unit } : null, text: StyleSheet.flatten(s.link) }}
+            style={{view: (button) ? {marginTop: Metrics.unit} : null, text: StyleSheet.flatten(s.link)}}
             text={link}
             centered uppercase={false}
             onPress={onLinkPress} />
