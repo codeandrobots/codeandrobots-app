@@ -49,7 +49,7 @@ storiesOf('ListItem', module)
     <StatListItem icon='bluetooth' title='bluetooth' value='Connected' />
   ))
   .add('CardListItem Image', () => (
-    <CardListItem image={Images.otto} title='Otto DIY' text='The open source robot that you can build yourself' />
+    <CardListItem image={Images.robots.otto} title='Otto DIY' text='The open source robot that you can build yourself' />
   ))
   .add('CardListItem Video', () => (
     <CardListItem
