@@ -73,7 +73,7 @@ export default class CardListItem extends Component {
       title,
       text,
       button,
-      onPress = () => { },
+      onPress = () => {},
       disabled = false
     } = this.props
 
