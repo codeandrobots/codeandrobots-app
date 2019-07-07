@@ -26,7 +26,7 @@ export default class CardListItem extends Component {
     onLinkPress: PropTypes.func
   }
 
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       paused: true,
@@ -80,7 +80,7 @@ export default class CardListItem extends Component {
     const itemViewStyle = (!disabled) ? [s.itemView_card, style] : [s.itemView_card, s.itemView_disabled, style]
     const textStyle = (!disabled) ? s.text_card : [s.text_card, s.text_disabled]
     const titleStyle = (!disabled) ? s.title_card : [s.title_card, s.text_disabled]
-    const { paused } = this.state;
+    const { paused } = this.state
     const buttonIconColor = (!disabled) ? Colors.icon_dark : Colors.icon_disabled
 
     return (

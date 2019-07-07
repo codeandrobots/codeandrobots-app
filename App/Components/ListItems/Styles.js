@@ -134,10 +134,10 @@ export default StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'flex-start',
-    marginLeft: Metrics.unit,
+    marginLeft: Metrics.unit
   },
   text_card: {
-    ...Styles.text,
+    ...Styles.text
   },
   title_card: {
     ...Styles.text,
@@ -182,12 +182,12 @@ export default StyleSheet.create({
   },
   videoButton: {
     position: 'absolute',
-    zIndex: 9999,
+    zIndex: 9999
   },
   videoView: {
     ...Styles.centered,
     marginHorizontal: Metrics.unit,
     flexDirection: 'column',
-    flex: 1,
+    flex: 1
   }
 })
