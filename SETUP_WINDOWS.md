@@ -7,6 +7,10 @@ In a nutshell, these are the steps:
   * Install react native pre-requisites for Windows
   * Run HelloWorld React Native app on an Android device
   * Run Code & Robots app on an Android device
+  
+## Troubleshooting
+
+There are quite a few gotchas when setting up right now. We're working towards a better experience to get started but it's best if you visit the [Troubleshooting](TROUBLESHOOTING.md) guide before starting and refer to it if you run into problems. For further support, send an email to [codeandrobotshq@gmail.com](mailto:codeandrobotshq@gmail.com).
 
 ## Install react native pre-requisites
 
@@ -157,5 +161,3 @@ Follow the instructions in https://github.com/codeandrobots/codeandrobots-app#ar
   * ```yarn install --ignore-engines```
   * ```copy .env.example .env```
   * ```react-native run-android --variant=devDebug```
-
-## [Troubleshooting](TROUBLESHOOTING.md)
