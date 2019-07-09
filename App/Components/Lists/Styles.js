@@ -11,5 +11,10 @@ export default StyleSheet.create({
     ...Styles.text,
     marginHorizontal: Metrics.unit,
     marginBottom: Metrics.unit
+  },
+  linedRow: {
+    ...Styles.row,
+    borderBottomColor: '#ECECEC',
+    borderBottomWidth: 1
   }
 })
