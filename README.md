@@ -7,6 +7,12 @@ Code & Robots is completly FREE under the [MIT license](https://github.com/codea
 
 ## :rocket: How to setup and run the app
 
+### [Troubleshooting](TROUBLESHOOTING.md)
+
+There are quite a few gotchas when setting up and running the app right now. We're working towards a better experience to get started but it's best if you visit the [Troubleshooting](TROUBLESHOOTING.md) guide before starting and refer to it if you run into problems. For further support, send an email to [codeandrobotshq@gmail.com](mailto:codeandrobotshq@gmail.com).
+
+### Setup
+
 If you're new to mobile app development with React Native then here are some crash courses to bring you up to speed:
   * [React Native crash course video](https://www.youtube.com/watch?v=mkualZPRZCs)
   * [JavaScript OOP Crash Course (ES5 & ES6)](https://www.youtube.com/watch?v=vDJpGenyHaA)
@@ -31,15 +37,18 @@ If you're new to mobile app development with React Native then here are some cra
 **Step 4:** Install the Application with Yarn
   * ```yarn install --ignore-engines```
 
-**Step 5:** Copy `.env.example` to `.env`
+**Step 5:** Reinstall husky to setup git hooks
+  * ```npm install husky@next --save-dev```
+
+**Step 6:** Copy `.env.example` to `.env`
   * Mac or Linux
     * ```cp .env.example .env```
   * Windows
     * ```copy .env.example .env```
 
-**Step 6:** Update [App Properties](#app-properties) in ```.env``` if necessary
+**Step 7:** Update [App Properties](#app-properties) in ```.env``` if necessary
 
-**Step 7:** Install and run the app
+**Step 8:** Install and run the app
   * iOS
     * Make sure [XCode](https://developer.apple.com/xcode/) is installed
     * run `react-native run-ios`
@@ -100,5 +109,3 @@ yarn test
 #### End to End Testing
 
 There are no end to end tests right now as the app development is in flux but it's a good idea to add them in the future.
-
-## [Troubleshooting](TROUBLESHOOTING.md)
