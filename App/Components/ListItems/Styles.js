@@ -46,6 +46,13 @@ export default StyleSheet.create({
   itemView_disabled: {
     backgroundColor: Colors.background_disabled
   },
+  itemView_card: {
+    flexDirection: 'row',
+    margin: Metrics.unit,
+    padding: Metrics.unit,
+    borderRadius: Metrics.unit,
+    backgroundColor: Colors.white
+  },
   itemOuterBorder: {
     padding: Metrics.unit,
     borderColor: Colors.lightgrey,
@@ -81,9 +88,26 @@ export default StyleSheet.create({
     flex: 1,
     margin: Metrics.unit
   },
+  imageView_card: {
+    maxWidth: 165,
+    maxHeight: 112,
+    padding: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderRadius: 10,
+    borderColor: Colors.primary,
+    flex: 1,
+    flexDirection: 'row'
+  },
   image: {
     maxWidth: 55,
     maxHeight: 55
+  },
+  image_card: {
+    maxWidth: 165,
+    maxHeight: 112,
+    resizeMode: 'contain'
   },
   image_compact: {
     maxWidth: 20,
@@ -105,6 +129,19 @@ export default StyleSheet.create({
   textView_featured: {
     alignItems: 'center',
     marginTop: Metrics.unit * 2
+  },
+  textView_card: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    marginLeft: Metrics.unit
+  },
+  text_card: {
+    ...Styles.text
+  },
+  title_card: {
+    ...Styles.text,
+    marginVertical: Metrics.unit / 2
   },
   buttonView: {
     justifyContent: 'center',
@@ -135,5 +172,22 @@ export default StyleSheet.create({
   statValue: {
     ...Styles.text,
     fontSize: Fonts.size.large
+  },
+  videoPlayer: {
+    width: 165,
+    height: 112,
+    borderRadius: Metrics.unit,
+    borderWidth: 2,
+    borderColor: Colors.primary
+  },
+  videoButton: {
+    position: 'absolute',
+    zIndex: 9999
+  },
+  videoView: {
+    ...Styles.centered,
+    marginHorizontal: Metrics.unit,
+    flexDirection: 'column',
+    flex: 1
   }
 })

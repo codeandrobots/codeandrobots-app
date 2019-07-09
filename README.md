@@ -47,38 +47,6 @@ If you're new to mobile app development with React Native then here are some cra
     * [Use your Android device](https://facebook.github.io/react-native/docs/running-on-device) or run on an [Android Emulator](https://medium.com/@Charles_Stover/create-a-react-native-app-on-an-android-emulator-1c0d94f288ae) or run on [Genymotion](https://www.genymotion.com)
     * run `react-native run-android --variant=devDebug`
 
-### Troubleshooting
-
-#### Activity class {com.codeandrobots/com.codeandrobots.MainActivity} does not exist
-
-If you see the error "Activity class {com.codeandrobots/com.codeandrobots.MainActivity} does not exist" then all is OK but you have to find and launch the Code & Robots app manually from your device. This error occurs because react-native CLI doesn't work well yet with Android variants.
-
-#### Device is UNAUTHORIZED
-
-If you see the error "Device is UNAUTHORIZED", make sure to click OK when the popup "Allow USB debugging" shows on your device.
-
-To check to see if your device is connected and authorized:
-  * ```adb devices```
-
-#### Failed to create directory
-
-If you see the error "Failed to create directory" then keep running ```react-native run-android --variant=devDebug``` until they stop happening, sometimes as much as 3 or 4 times :confounded:
-
-#### Operation not permitted, lstat
-
-If you see the error "Operation not permitted, lstat" then try the following:
-
-1. Start the React Native bundler inside a **NEW** terminal or command prompt
-  * ```cd codeandrobots-app```
-  * ```npm cache clean```
-  * ```npm start -- --reset-cache```
-
-2. Run the app in a different terminal or command prompt, see **Step 7** above
-
-#### Could not dispatch a message to the daemon
-
-If you see the error "Could not dispatch a message to the daemon" then run ```adb devices``` and make sure that the daemon is running or starts successfully and also that your attached device is listed.
-
 ### App Properties
 
 When running the app locally, it will rely on the properties defined in your local `.env` file.
@@ -131,24 +99,6 @@ yarn test
 
 #### End to End Testing
 
-There are no end to end tests right now as the app development is in flux but it's a good idea to add them in the future. [Detox](https://github.com/wix/detox) is a good end to end testing tool and the project has already been setup to work with it.
+There are no end to end tests right now as the app development is in flux but it's a good idea to add them in the future.
 
-##### Detox
-
-[Detox](https://github.com/wix/detox) is a brand new end-to-end test and automation library for React Native.
-
-Follow the official [Detox documentation](https://github.com/wix/detox/blob/master/docs/Introduction.GettingStarted.md) (Step 1 and Step 2) on getting started but **skip** Step 3 as it's tightly coupled to Mocha.
-
-* Install Node 7.6.0 or above for native async-await support needed for Detox
-```
-brew update && brew install node
-```
-* Install appleSimUtils
-```
-brew tap wix/brew
-brew install --HEAD applesimutils
-```
-* Intall Detox CLI
-```
-npm install -g detox-cli
-```
+## [Troubleshooting](TROUBLESHOOTING.md)

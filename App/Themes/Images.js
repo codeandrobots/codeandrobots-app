@@ -9,5 +9,10 @@ export default {
   },
   joystick: {
     arrows: require('App/Images/Joystick/arrows.png')
+  },
+  robots: {
+    otto: require('App/Images/Robots/Otto/otto.png'),
+    nybble: require('App/Images/Robots/Nybble/nybble.png'),
+    custom_robot: require('App/Images/Robots/Custom_Robot/custom_robot.png')
   }
 }
