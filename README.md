@@ -7,7 +7,7 @@ Code & Robots is completly FREE under the [MIT license](https://github.com/codea
 
 ## :rocket: How to setup and run the app
 
-### [Troubleshooting](TROUBLESHOOTING.md)
+### Troubleshooting
 
 There are quite a few gotchas when setting up and running the app right now. We're working towards a better experience to get started but it's best if you visit the [Troubleshooting](TROUBLESHOOTING.md) guide before starting and refer to it if you run into problems. For further support, send an email to [codeandrobotshq@gmail.com](mailto:codeandrobotshq@gmail.com).
 
