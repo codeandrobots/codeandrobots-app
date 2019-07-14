@@ -50,6 +50,9 @@ const create = (baseURL = Config.API_BASE_URL) => {
   const signup = (user) => api.post('users', user)
   const deleteAccount = (userId) => api.delete('users/' + userId)
 
+  // TODO Proof of concept
+  const move = (direction) => api.get('/move/' + direction)
+
   // ------
   // STEP 4
   // ------
@@ -68,7 +71,8 @@ const create = (baseURL = Config.API_BASE_URL) => {
     removeAuthToken,
     login,
     signup,
-    deleteAccount
+    deleteAccount,
+    move
   }
 }
 

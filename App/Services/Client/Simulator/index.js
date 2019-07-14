@@ -1,6 +1,9 @@
 import WebSocket from 'App/Services/WebSocket'
 
+import { API } from 'App/Services/Api'
+
 const socket = WebSocket.getInstance()
+const api = API.create()
 
 const sounds = [
   {key: '1', name: 'Beep'},
@@ -32,13 +35,22 @@ export default class Simulator {
 
   move = (touch) => {
     // Only moveAndStop is supported for the time being
+
+    // TODO Proof of concept
+    const direction = calculateDirection(touch)
+    if (direction) {
+      api.move(direction)
+    }
   }
 
   moveAndStop = (touch) => {
-    const direction = calculateDirection(touch)
-    if (direction) {
-      socket.emit({event: 'move', direction})
-    }
+    // const direction = calculateDirection(touch)
+    // if (direction) {
+    //   socket.emit({event: 'move', direction})
+    // }
+
+    // TODO Proof of concept
+    api.move('stop')
   }
 
   run = (instructions) => {
