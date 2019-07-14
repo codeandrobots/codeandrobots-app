@@ -3022,13 +3022,6 @@ exports[`Storyshots List Default 1`] = `
       </View>
     </View>
   </View>
-  <View
-    style={
-      Object {
-        "flexDirection": "row",
-      }
-    }
-  />
 </View>
 `;
 
@@ -3436,13 +3429,6 @@ exports[`Storyshots List Featured 1`] = `
       </View>
     </View>
   </View>
-  <View
-    style={
-      Object {
-        "flexDirection": "row",
-      }
-    }
-  />
 </View>
 `;
 
@@ -4027,13 +4013,6 @@ exports[`Storyshots List Games 1`] = `
       </View>
     </View>
   </View>
-  <View
-    style={
-      Object {
-        "flexDirection": "row",
-      }
-    }
-  />
 </View>
 `;
 
@@ -4570,13 +4549,6 @@ exports[`Storyshots List Lessons 1`] = `
       </View>
     </View>
   </View>
-  <View
-    style={
-      Object {
-        "flexDirection": "row",
-      }
-    }
-  />
 </View>
 `;
 
@@ -5175,13 +5147,6 @@ exports[`Storyshots List Stats 1`] = `
       </View>
     </View>
   </View>
-  <View
-    style={
-      Object {
-        "flexDirection": "row",
-      }
-    }
-  />
 </View>
 `;
 

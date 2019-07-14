@@ -36,12 +36,15 @@ export default class List extends Component {
           <Text style={s.title}>{title}</Text>
         )}
         {rows.map((row, i) => {
-          const rowStyle = (linedRows && rows[i + 1]) ? s.linedRow : s.row
-          return (
-            <View key={uuid.v4()} style={rowStyle}>{row}</View>
-          )
+          return (linedRows)
+            ? (
+              <View key={uuid.v4()}>
+                <View style={s.row}>{row}</View>
+                {linedRows && <View style={s.linedRow} />}
+              </View>
+            )
+            : <View key={uuid.v4()} style={s.row}>{row}</View>
         })}
-        <View style={s.row} />
       </ListView>
     )
   }
