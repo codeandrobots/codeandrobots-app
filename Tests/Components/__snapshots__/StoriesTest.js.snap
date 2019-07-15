@@ -1897,6 +1897,745 @@ exports[`Storyshots IconButton Large Home 1`] = `
 </View>
 `;
 
+exports[`Storyshots Inputs Range Slider Light Theme 1`] = `
+<View
+  style={
+    Object {
+      "margin": 16,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": 48,
+          "width": "100%",
+        },
+        Object {
+          "backgroundColor": "#F9BC62",
+        },
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "white",
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 16,
+            "marginRight": 8,
+          },
+          undefined,
+        ]
+      }
+    >
+      Speed
+    </Text>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "height": 48,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "white",
+                "height": 2,
+                "marginVertical": 23,
+                "opacity": 0.5,
+                "width": "100%",
+              },
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "width": "100%",
+              },
+            ]
+          }
+        />
+        <View
+          style={Object {}}
+        />
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "white",
+              "borderRadius": 5,
+              "height": 10,
+              "position": "absolute",
+              "top": 19,
+              "width": 10,
+              "zIndex": 9998,
+            },
+            Object {
+              "right": 0,
+            },
+          ]
+        }
+      />
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "height": 48,
+            "left": 0,
+            "opacity": 1,
+            "position": "absolute",
+            "top": 0,
+            "width": 80,
+            "zIndex": 9999,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "marginTop": 30,
+                "opacity": 0.8,
+                "width": 80,
+              },
+            ]
+          }
+        >
+          Slow
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "height": 48,
+            "left": "50%",
+            "marginLeft": -40,
+            "opacity": 1,
+            "position": "absolute",
+            "top": 0,
+            "width": 80,
+            "zIndex": 9999,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "marginTop": 30,
+                "opacity": 0.8,
+                "width": 80,
+              },
+              Object {
+                "textAlign": "center",
+              },
+            ]
+          }
+        >
+          Normal
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "height": 48,
+            "opacity": 1,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": 80,
+            "zIndex": 9999,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "marginTop": 30,
+                "opacity": 0.8,
+                "width": 80,
+              },
+              Object {
+                "textAlign": "right",
+              },
+              Object {
+                "opacity": 1,
+              },
+            ]
+          }
+        >
+          Fast
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Storyshots Inputs Range Slider with 3 Labels 1`] = `
+<View
+  style={
+    Object {
+      "margin": 16,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": 48,
+          "width": "100%",
+        },
+        undefined,
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#354052",
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 16,
+            "marginRight": 8,
+          },
+          undefined,
+        ]
+      }
+    >
+      Speed
+    </Text>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "height": 48,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={Object {}}
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#354052",
+                "height": 2,
+                "marginVertical": 23,
+                "opacity": 0.5,
+                "width": "100%",
+              },
+            ]
+          }
+        />
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#354052",
+              "borderRadius": 5,
+              "height": 10,
+              "position": "absolute",
+              "top": 19,
+              "width": 10,
+              "zIndex": 9998,
+            },
+            Object {
+              "left": 0,
+            },
+          ]
+        }
+      />
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "height": 48,
+            "left": 0,
+            "opacity": 1,
+            "position": "absolute",
+            "top": 0,
+            "width": 80,
+            "zIndex": 9999,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#354052",
+                "marginTop": 30,
+                "opacity": 0.8,
+                "width": 80,
+              },
+              Object {
+                "opacity": 1,
+              },
+            ]
+          }
+        >
+          Slow
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "height": 48,
+            "left": "50%",
+            "marginLeft": -40,
+            "opacity": 1,
+            "position": "absolute",
+            "top": 0,
+            "width": 80,
+            "zIndex": 9999,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#354052",
+                "marginTop": 30,
+                "opacity": 0.8,
+                "width": 80,
+              },
+              Object {
+                "textAlign": "center",
+              },
+            ]
+          }
+        >
+          Normal
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "height": 48,
+            "opacity": 1,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": 80,
+            "zIndex": 9999,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#354052",
+                "marginTop": 30,
+                "opacity": 0.8,
+                "width": 80,
+              },
+              Object {
+                "textAlign": "right",
+              },
+            ]
+          }
+        >
+          Fast
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Storyshots Inputs Range Slider with 4 Labels 1`] = `
+<View
+  style={
+    Object {
+      "margin": 16,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": 48,
+          "width": "100%",
+        },
+        undefined,
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#354052",
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 16,
+            "marginRight": 8,
+          },
+          undefined,
+        ]
+      }
+    >
+      Gait
+    </Text>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "height": 48,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#354052",
+                "height": 2,
+                "marginVertical": 23,
+                "opacity": 0.5,
+                "width": "100%",
+              },
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "width": "33.333333333333336%",
+              },
+            ]
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#354052",
+                "height": 2,
+                "marginVertical": 23,
+                "opacity": 0.5,
+                "width": "100%",
+              },
+              Object {
+                "width": "66.66666666666666%",
+              },
+            ]
+          }
+        />
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#354052",
+              "borderRadius": 5,
+              "height": 10,
+              "position": "absolute",
+              "top": 19,
+              "width": 10,
+              "zIndex": 9998,
+            },
+            Object {
+              "marginLeft": -5,
+            },
+            Object {
+              "left": "33.333333333333336%",
+            },
+          ]
+        }
+      />
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "height": 48,
+            "left": 0,
+            "opacity": 1,
+            "position": "absolute",
+            "top": 0,
+            "width": 80,
+            "zIndex": 9999,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#354052",
+                "marginTop": 30,
+                "opacity": 0.8,
+                "width": 80,
+              },
+            ]
+          }
+        >
+          Crawl
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "height": 48,
+            "left": "33.333333333333336%",
+            "marginLeft": -40,
+            "opacity": 1,
+            "position": "absolute",
+            "top": 0,
+            "width": 80,
+            "zIndex": 9999,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#354052",
+                "marginTop": 30,
+                "opacity": 0.8,
+                "width": 80,
+              },
+              Object {
+                "textAlign": "center",
+              },
+              Object {
+                "opacity": 1,
+              },
+            ]
+          }
+        >
+          Walk
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "height": 48,
+            "left": "66.66666666666667%",
+            "marginLeft": -40,
+            "opacity": 1,
+            "position": "absolute",
+            "top": 0,
+            "width": 80,
+            "zIndex": 9999,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#354052",
+                "marginTop": 30,
+                "opacity": 0.8,
+                "width": 80,
+              },
+              Object {
+                "textAlign": "center",
+              },
+            ]
+          }
+        >
+          Trot
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "height": 48,
+            "opacity": 1,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": 80,
+            "zIndex": 9999,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#354052",
+                "marginTop": 30,
+                "opacity": 0.8,
+                "width": 80,
+              },
+              Object {
+                "textAlign": "right",
+              },
+            ]
+          }
+        >
+          Bound
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
 exports[`Storyshots Instruction Action 1`] = `
 <View
   style={
@@ -8462,6 +9201,243 @@ exports[`Storyshots NavButton Default 1`] = `
     >
       Done
     </Text>
+  </View>
+</View>
+`;
+
+exports[`Storyshots Player Bottom Nav 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "white",
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#F9BC62",
+        "minHeight": 80,
+        "paddingBottom": 32,
+        "paddingHorizontal": 8,
+        "paddingTop": 32,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "height": 48,
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "white",
+              "fontFamily": "Roboto-Medium",
+              "fontSize": 16,
+              "marginRight": 8,
+            },
+            undefined,
+          ]
+        }
+      >
+        Speed
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "height": 48,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            style={Object {}}
+          />
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "white",
+                  "height": 2,
+                  "marginVertical": 23,
+                  "opacity": 0.5,
+                  "width": "100%",
+                },
+              ]
+            }
+          />
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "white",
+                "borderRadius": 5,
+                "height": 10,
+                "position": "absolute",
+                "top": 19,
+                "width": 10,
+                "zIndex": 9998,
+              },
+              Object {
+                "left": 0,
+              },
+            ]
+          }
+        />
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "height": 48,
+              "left": 0,
+              "opacity": 1,
+              "position": "absolute",
+              "top": 0,
+              "width": 80,
+              "zIndex": 9999,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "white",
+                  "marginTop": 30,
+                  "opacity": 0.8,
+                  "width": 80,
+                },
+                Object {
+                  "opacity": 1,
+                },
+              ]
+            }
+          >
+            Slow
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "height": 48,
+              "left": "50%",
+              "marginLeft": -40,
+              "opacity": 1,
+              "position": "absolute",
+              "top": 0,
+              "width": 80,
+              "zIndex": 9999,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "white",
+                  "marginTop": 30,
+                  "opacity": 0.8,
+                  "width": 80,
+                },
+                Object {
+                  "textAlign": "center",
+                },
+              ]
+            }
+          >
+            Normal
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "height": 48,
+              "opacity": 1,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": 80,
+              "zIndex": 9999,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "white",
+                  "marginTop": 30,
+                  "opacity": 0.8,
+                  "width": 80,
+                },
+                Object {
+                  "textAlign": "right",
+                },
+              ]
+            }
+          >
+            Fast
+          </Text>
+        </View>
+      </View>
+    </View>
   </View>
 </View>
 `;
