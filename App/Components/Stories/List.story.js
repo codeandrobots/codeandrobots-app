@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react-native'
 
-import { Images, Colors } from 'App/Themes'
+import { Images, Colors, Videos } from 'App/Themes'
 
 import List from '../Lists'
 import ListHeader from '../ListHeaders'
@@ -10,7 +10,8 @@ import {
   SquareListItem,
   CompactListItem,
   FeaturedListItem,
-  StatListItem } from '../ListItems'
+  StatListItem,
+  CardListItem } from '../ListItems'
 
 storiesOf('List', module)
   .add('Default', () => (
@@ -49,5 +50,13 @@ storiesOf('List', module)
       <StatListItem icon='code' title='remixes' value='5' />
       <StatListItem icon='book' title='lessons' value='2' />
       <StatListItem icon='gamepad' title='level' value='1' />
+    </List>
+  ))
+  .add('Robot List', () => (
+    <List title='Which Robot?' linedRows>
+      <CardListItem image={Images.robots.otto} title='Otto DIY' text='The open source robot that you can build yourself' />
+      <CardListItem image={Images.robots.nybble} title='Nybble' text="The world's cutest open source robotic kitten" />
+      <CardListItem image={Images.robots.simulator} title='Robot Simulator' text='No robot, no problem, simulator to the rescue' />
+      <CardListItem video={Videos.atlas} title='Custom Robot' text='Let’s see if your robot has what it takes' />
     </List>
   ))

@@ -10,11 +10,12 @@ export default class List extends Component {
   static propTypes = {
     title: PropTypes.string,
     cols: PropTypes.number,
-    scrollable: PropTypes.bool
+    scrollable: PropTypes.bool,
+    linedRows: PropTypes.bool
   }
 
   render () {
-    const { style = undefined, cols = 1, title, scrollable = false } = this.props
+    const { style = undefined, cols = 1, title, scrollable = false, linedRows } = this.props
 
     const rowStyle = (cols === 1) ? {flex: 1} : undefined
 
@@ -34,10 +35,15 @@ export default class List extends Component {
         {title && (
           <Text style={s.title}>{title}</Text>
         )}
-        {rows.map((row) => {
-          return (
-            <View key={uuid.v4()} style={s.row}>{row}</View>
-          )
+        {rows.map((row, i) => {
+          return (linedRows)
+            ? (
+              <View key={uuid.v4()}>
+                <View style={s.row}>{row}</View>
+                {linedRows && <View style={s.linedRow} />}
+              </View>
+            )
+            : <View key={uuid.v4()} style={s.row}>{row}</View>
         })}
       </ListView>
     )
