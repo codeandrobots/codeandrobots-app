@@ -127,7 +127,7 @@ export default class Card extends Component {
           </View>
         )}
         {button && (
-          <Button style={[s.centered, style.buttonView]} loading={loading} text={button} onPress={onPress} />
+          <Button style={{view: [s.centered, style.buttonView]}} loading={loading} text={button} onPress={onPress} />
         )}
         {link && (
           <Link

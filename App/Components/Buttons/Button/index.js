@@ -15,13 +15,22 @@ export default class Button extends Component {
   }
 
   render () {
-    const { style = undefined, text, disabled = false, loading = false, onPress } = this.props
+    const {
+      style = {},
+      text,
+      disabled = false,
+      loading = false,
+      onPress } = this.props
 
-    const textStyle = (!disabled) ? s.text : [s.text, s.text_disabled]
-    const buttonStyle = (!disabled) ? s.button : [s.button, s.button_disabled]
+    const textStyle = (!disabled)
+      ? (style.text) ? [s.text, style.text] : s.text
+      : (style.text) ? [s.text, s.text_disabled, style.text] : [s.text, s.text_disabled]
+    const buttonStyle = (!disabled)
+      ? (style.button) ? [s.button, style.button] : s.button
+      : (style.button) ? [s.button, s.button_disabled, style.button] : [s.button, s.button_disabled]
 
     return (
-      <View style={style}>
+      <View style={style.view}>
         <TouchableOpacity style={buttonStyle} disabled={disabled || loading} onPress={onPress}>
           {!loading && <Text style={textStyle}>{text}</Text>}
           {loading && <LoadingIndicator style={{marginVertical: 2}} />}

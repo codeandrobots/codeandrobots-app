@@ -1,7 +1,8 @@
 import React from 'react'
+import { View } from 'react-native'
 import { storiesOf } from '@storybook/react-native'
 
-import { Colors } from 'App/Themes'
+import { Metrics, Colors } from 'App/Themes'
 
 import Decorator from './Decorators'
 
@@ -23,11 +24,12 @@ storiesOf('Inputs', module)
       onPress={(index) => {}} />
   ))
   .add('Range Slider Light Theme', () => (
-    <LabelRangeSliderInput
-      theme='light'
-      title='Speed'
-      labels={['Slow', 'Normal', 'Fast']}
-      defaultIndex={2}
-      style={{backgroundColor: Colors.primary}}
-      onPress={(index) => {}} />
+    <View style={{ backgroundColor: Colors.primary, paddingHorizontal: Metrics.unit }}>
+      <LabelRangeSliderInput
+        theme='light'
+        title='Speed'
+        labels={['Slow', 'Normal', 'Fast']}
+        defaultIndex={2}
+        onPress={(index) => {}} />
+    </View>
   ))
