@@ -64,7 +64,7 @@ export default class LabelRangeSliderInput extends Component {
 
     return (
       <View style={[s.view, style]}>
-        {title && <Text style={[s.title, s['title_' + theme]]}>{title}</Text>}
+        {title && <Text style={s.title}>{title}</Text>}
         <View style={s.input}>
           <View style={s.row}>
             <View style={sliderActiveStyles} />
