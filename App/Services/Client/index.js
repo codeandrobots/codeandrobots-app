@@ -30,30 +30,39 @@ export default class Client {
     return null
   }
 
+  getConfig = async () => {
+    const client = this.getClient()
+    return (client) ? client.getConfig() : null
+  }
+
   getSounds = async () => {
     const client = this.getClient()
     return (client) ? client.getSounds() : []
   }
 
+  setParam = async (param, index) => {
+    const client = this.getClient()
+    if (client) { client.setParam(param, index) }
+  }
+
   play = async (sound) => {
     const client = this.getClient()
-    if (client) {
-      client.play(sound)
-    }
+    if (client) { client.play(sound) }
   }
 
   move = async (touch) => {
     const client = this.getClient()
-    if (client) {
-      client.move(touch)
-    }
+    if (client) { client.move(touch) }
   }
 
   moveAndStop = async (touch) => {
     const client = this.getClient()
-    if (client) {
-      client.moveAndStop(touch)
-    }
+    if (client) { client.moveAndStop(touch) }
+  }
+
+  doSkill = (index) => {
+    const client = this.getClient()
+    if (client) { client.doSkill(index) }
   }
 
   run = async (instructions) => {

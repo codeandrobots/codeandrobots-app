@@ -7,25 +7,33 @@ import { PlayerBottomNav } from '../Player'
 const slider = {
   title: 'Speed',
   labels: ['Slow', 'Normal', 'Fast'],
-  defaultIndex: 1,
-  onPress: () => {}
+  defaultIndex: 1
 }
 
 const skills = [
-  {title: 'Jump', onPress: () => {}},
-  {title: 'Shuffle', onPress: () => {}},
-  {title: 'Bow', onPress: () => {}},
-  {title: 'Spin', onPress: () => {}},
-  {title: 'Dance', onPress: () => {}},
-  {title: 'Moonwalk', onPress: () => {}},
-  {title: 'Chill', onPress: () => {}}
+  {title: 'Jump'},
+  {title: 'Shuffle'},
+  {title: 'Bow'},
+  {title: 'Spin'},
+  {title: 'Dance'},
+  {title: 'Moonwalk'},
+  {title: 'Chill'}
 ]
 
 storiesOf('Player', module)
   .addDecorator(FullScreenDecorator)
   .add('Bottom Nav', () => (
-    <PlayerBottomNav slider={slider} skills={skills} />
+    <PlayerBottomNav
+      slider={slider}
+      skills={skills}
+      onSliderPress={() => {}}
+      onSkillPress={() => {}} />
   ))
   .add('Bottom Nav Light', () => (
-    <PlayerBottomNav theme='light' slider={slider} skills={skills} />
+    <PlayerBottomNav
+      theme='light'
+      slider={slider}
+      skills={skills}
+      onSliderPress={() => {}}
+      onSkillPress={() => {}} />
   ))

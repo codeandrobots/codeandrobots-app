@@ -1,4 +1,5 @@
 import WebSocket from 'App/Services/WebSocket'
+import Config from './Config'
 
 const socket = WebSocket.getInstance()
 
@@ -22,8 +23,16 @@ const calculateDirection = (touch) => {
 }
 
 export default class Simulator {
+  getConfig = () => {
+    return Config
+  }
+
   getSounds = () => {
     return sounds
+  }
+
+  setParam = (param, index) => {
+    // No params are supported for the time being
   }
 
   play = (sound) => {
@@ -39,6 +48,10 @@ export default class Simulator {
     if (direction) {
       socket.emit({event: 'move', direction})
     }
+  }
+
+  doSkill = (index) => {
+    // No skills are supported for the time being
   }
 
   run = (instructions) => {

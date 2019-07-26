@@ -1,5 +1,6 @@
 
 import Bluetooth from 'App/Services/Bluetooth'
+import Config from './Config'
 
 const STOP = 'stop'
 
@@ -51,9 +52,32 @@ const cmdFromInstruction = (instruction) => {
 
 export default class Otto {
   lastCmdSent = null
+  speed = 1000
+
+  getConfig = () => {
+    return Config
+  }
 
   getSounds = () => {
     return sounds
+  }
+
+  setParam = (param, index) => {
+    if (param === 'Speed') {
+      switch (index) {
+        case 0:
+          this.speed = 500
+          break
+        case 1:
+          this.speed = 1000
+          break
+        case 2:
+          this.speed = 1500
+          break
+        default:
+          this.speed = 1000
+      }
+    }
   }
 
   stop = async (delay) => {
@@ -71,7 +95,7 @@ export default class Otto {
   move = (touch) => {
     const cmd = cmdFromTouch(touch)
     if (!this.lastCmdSent || this.lastCmdSent !== cmd) {
-      Bluetooth.write(cmd)
+      Bluetooth.write(cmd + ' ' + this.speed)
       this.lastCmdSent = cmd
     }
   }
@@ -79,6 +103,10 @@ export default class Otto {
   moveAndStop = (touch) => {
     this.move(touch)
     this.stop(DELAY)
+  }
+
+  doSkill = (index) => {
+    Bluetooth.write(this.getConfig().skills[index].cmd)
   }
 
   run = (instructions) => {

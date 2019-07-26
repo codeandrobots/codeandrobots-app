@@ -15,20 +15,26 @@ export default class PlayerBottomNav extends Component {
     slider: PropTypes.shape({
       title: PropTypes.string,
       labels: PropTypes.arrayOf(PropTypes.string).isRequired,
-      defaultIndex: PropTypes.number,
-      onPress: PropTypes.func.isRequired
+      defaultIndex: PropTypes.number
     }),
     skills: PropTypes.arrayOf(
       PropTypes.shape({
         title: PropTypes.string,
-        image: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
-        onPress: PropTypes.func.isRequired
+        image: PropTypes.oneOfType([PropTypes.number, PropTypes.object])
       }).isRequired
-    )
+    ),
+    onSliderPress: PropTypes.func,
+    onSkillPress: PropTypes.func
   }
 
   render () {
-    const { style = undefined, theme = 'default', slider, skills = [] } = this.props
+    const {
+      style = undefined,
+      theme = 'default',
+      slider,
+      skills = [],
+      onSliderPress = () => {},
+      onSkillPress = () => {} } = this.props
 
     // Show three skills per row
     const maxSkillsByRow = 3
@@ -46,16 +52,33 @@ export default class PlayerBottomNav extends Component {
     return (
       <View style={[s.footer, style]}>
         {slider &&
-          <LabelRangeSliderInput theme={theme} {...slider} />
+          <LabelRangeSliderInput
+            theme={theme}
+            {...slider}
+            onPress={onSliderPress} />
         }
         <View style={s.skills}>
-          {skillsInThrees.map((skills) => {
+          {skillsInThrees.map((skillsInRow) => {
             return (
               <View key={uuid.v4()} style={s.buttons}>
-                {skills.map((skill) => {
+                {skillsInRow.map((skill) => {
                   return (skill)
-                    ? <PlayerButton key={uuid.v4()} theme={theme} text={skill.title} onPress={skill.onPress} />
-                    : <PlayerButton key={uuid.v4()} theme={theme} disabled onPress={() => {}} />
+                    ? (
+                      <PlayerButton
+                        key={uuid.v4()}
+                        theme={theme}
+                        text={skill.title}
+                        onPress={() => {
+                          onSkillPress(skills.findIndex(s => s.title === skill.title))
+                        }} />
+                    )
+                    : (
+                      <PlayerButton
+                        key={uuid.v4()}
+                        theme={theme}
+                        disabled
+                        onPress={() => {}} />
+                    )
                 })}
               </View>
             )
