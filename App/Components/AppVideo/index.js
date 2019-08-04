@@ -51,9 +51,9 @@ export default class AppVideo extends Component {
 
   render () {
     const {
-      size = 'default',
-      style = {},
-      video } = this.props
+      video,
+      size,
+      style = {} } = this.props
     const isSmall = (size === 'small')
 
     const iconSize = isSmall ? 18 : 35
