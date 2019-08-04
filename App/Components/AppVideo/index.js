@@ -11,9 +11,10 @@ import { Colors } from 'App/Themes'
 
 import s from './Styles'
 
-export default class RobotVideo extends Component {
+export default class AppVideo extends Component {
   static PropTypes = {
-    video: PropTypes.oneOfType([PropTypes.number, PropTypes.object])
+    video: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
+    size: PropTypes.oneOf(['small', 'default'])
   }
 
   constructor (props) {
@@ -50,21 +51,32 @@ export default class RobotVideo extends Component {
 
   render () {
     const {
-      // style = undefined,
-      video
-    } = this.props
+      size = 'default',
+      style = {},
+      video } = this.props
+    const isSmall = (size === 'small')
+
+    const iconSize = isSmall ? 18 : 35
 
     const {paused} = this.state
+
+    const styles = {
+      videoPlayer: [
+        s.videoPlayer,
+        ...((isSmall) ? [s.videoPlayer_small] : []),
+        ...((style.videoPlayer) ? [style.videoPlayer] : [])
+      ]}
 
     return (
       <TouchableOpacity style={s.videoView} onPress={this.onVideoToggle}>
         {paused && (
           <VideoButton
             style={{ button: StyleSheet.flatten(s.videoButton) }}
-            onPress={this.onVideoToggle}>
+            onPress={this.onVideoToggle}
+            size={size}>
             <Icon
               name='play'
-              size={16}
+              size={iconSize}
               style={{ color: Colors.primary }} />
           </VideoButton>
         )}
@@ -77,7 +89,7 @@ export default class RobotVideo extends Component {
           progressUpdateInterval={100.0}
           onEnd={this.onVideoEnd}
           onError={this.onVideoError}
-          style={s.videoPlayer} />
+          style={styles.videoPlayer} />
       </TouchableOpacity>
     )
   }

@@ -6,16 +6,9 @@ import { TouchableOpacity } from 'App/Components'
 
 import s from './Styles'
 
-/*
-    TODO
-  - No outer/inner button, just one button with an orange 'play' arrow
-  - Opacity should be 0.8
-  - Shrink size based on Figma - maybe about 1/5 the height of the video window?
-*/
-
-export default class IconButton extends Component {
+export default class VideoButton extends Component {
   static propTypes = {
-    size: PropTypes.oneOf(['small', 'large']),
+    size: PropTypes.oneOf(['small', 'default']),
     disabled: PropTypes.bool,
     onPress: PropTypes.func.isRequired
   }
@@ -29,11 +22,6 @@ export default class IconButton extends Component {
         ...((isSmall) ? [s.button_small] : []),
         ...((style.button) ? [style.button] : [])
       ],
-      buttonOutter: [
-        ...((!disabled) ? [s.buttonOutter] : [s.buttonOutter, s.buttonOutter_disabled]),
-        ...((isSmall) ? [s.buttonOutter_small] : []),
-        ...((style.buttonOutter) ? [style.buttonOutter] : [])
-      ],
       buttonInner: [
         s.buttonInner,
         ...((isSmall) ? [s.buttonInner_small] : []),
@@ -46,11 +34,9 @@ export default class IconButton extends Component {
     }
     return (
       <TouchableOpacity style={styles.button} disabled={disabled} onPress={onPress}>
-        <View style={styles.buttonOutter}>
-          <View style={styles.buttonInner}>
-            <View style={styles.buttonIcon}>
-              {this.props.children}
-            </View>
+        <View style={styles.buttonInner}>
+          <View style={styles.buttonIcon}>
+            {this.props.children}
           </View>
         </View>
       </TouchableOpacity>

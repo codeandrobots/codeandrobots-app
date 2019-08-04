@@ -1,5 +1,265 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots AppVideo Default 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "flex": 1,
+      "flexDirection": "column",
+      "justifyContent": "center",
+      "marginHorizontal": 8,
+      "opacity": 1,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 70,
+        "justifyContent": "center",
+        "opacity": 1,
+        "position": "absolute",
+        "width": 70,
+        "zIndex": 9999,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255,255,255,0.8)",
+            "borderRadius": 100,
+            "height": 60,
+            "justifyContent": "center",
+            "position": "relative",
+            "width": 60,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#516173",
+                "fontSize": 35,
+              },
+              Object {
+                "color": "#F9BC62",
+              },
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+  </View>
+  <react-native-video
+    ignoreSilentSwitch="ignore"
+    onEnd={[Function]}
+    onError={[Function]}
+    paused={true}
+    progressUpdateInterval={100}
+    resizeMode="cover"
+    source={
+      Object {
+        "process": [Function],
+      }
+    }
+    style={
+      Array [
+        Object {
+          "borderColor": "#F9BC62",
+          "borderRadius": 8,
+          "borderWidth": 2,
+          "height": 232,
+          "width": 343,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Storyshots AppVideo Small 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "flex": 1,
+      "flexDirection": "column",
+      "justifyContent": "center",
+      "marginHorizontal": 8,
+      "opacity": 1,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 40,
+        "justifyContent": "center",
+        "opacity": 1,
+        "position": "absolute",
+        "width": 40,
+        "zIndex": 9999,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255,255,255,0.8)",
+            "borderRadius": 100,
+            "height": 60,
+            "justifyContent": "center",
+            "position": "relative",
+            "width": 60,
+          },
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255,255,255,0.8)",
+            "height": 30,
+            "justifyContent": "center",
+            "position": "relative",
+            "width": 30,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#516173",
+                "fontSize": 18,
+              },
+              Object {
+                "color": "#F9BC62",
+              },
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+  </View>
+  <react-native-video
+    ignoreSilentSwitch="ignore"
+    onEnd={[Function]}
+    onError={[Function]}
+    paused={true}
+    progressUpdateInterval={100}
+    resizeMode="cover"
+    source={
+      Object {
+        "process": [Function],
+      }
+    }
+    style={
+      Array [
+        Object {
+          "borderColor": "#F9BC62",
+          "borderRadius": 8,
+          "borderWidth": 2,
+          "height": 232,
+          "width": 343,
+        },
+        Object {
+          "height": 112,
+          "width": 165,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
 exports[`Storyshots BottomNav Default 1`] = `
 <View
   style={
@@ -11676,149 +11936,6 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
       </View>
     </View>
   </View>
-</View>
-`;
-
-exports[`Storyshots RobotVideo Default 1`] = `
-<View
-  accessible={true}
-  isTVSelectable={true}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "alignItems": "center",
-      "display": "flex",
-      "flex": 1,
-      "flexDirection": "column",
-      "justifyContent": "center",
-      "marginHorizontal": 8,
-      "opacity": 1,
-      "width": "100%",
-    }
-  }
->
-  <View
-    accessible={true}
-    isTVSelectable={true}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "height": 66,
-        "opacity": 1,
-        "position": "absolute",
-        "width": 66,
-        "zIndex": 9999,
-      }
-    }
-  >
-    <View
-      style={
-        Array [
-          Object {
-            "backgroundColor": "rgba(255,255,255,0.25)",
-            "borderRadius": 100,
-            "height": 116,
-            "paddingLeft": 8,
-            "paddingTop": 8,
-            "position": "absolute",
-            "width": 116,
-          },
-          Object {
-            "height": 66,
-            "width": 66,
-          },
-        ]
-      }
-    >
-      <View
-        style={
-          Array [
-            Object {
-              "backgroundColor": "white",
-              "borderRadius": 100,
-              "height": 100,
-              "position": "relative",
-              "width": 100,
-            },
-            Object {
-              "height": 50,
-              "position": "relative",
-              "width": 50,
-            },
-          ]
-        }
-      >
-        <View
-          style={
-            Array [
-              Object {
-                "alignItems": "center",
-                "flex": 1,
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Text
-            accessible={true}
-            allowFontScaling={false}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "#516173",
-                  "fontSize": 16,
-                },
-                Object {
-                  "color": "#F9BC62",
-                },
-                Object {
-                  "fontFamily": "FontAwesome",
-                  "fontStyle": "normal",
-                  "fontWeight": "normal",
-                },
-                Object {},
-              ]
-            }
-          >
-            
-          </Text>
-        </View>
-      </View>
-    </View>
-  </View>
-  <react-native-video
-    ignoreSilentSwitch="ignore"
-    onEnd={[Function]}
-    onError={[Function]}
-    paused={true}
-    progressUpdateInterval={100}
-    resizeMode="cover"
-    source={
-      Object {
-        "process": [Function],
-      }
-    }
-    style={
-      Object {
-        "borderColor": "#F9BC62",
-        "borderRadius": 8,
-        "borderWidth": 2,
-        "height": 112,
-        "width": 165,
-      }
-    }
-  />
 </View>
 `;
 
