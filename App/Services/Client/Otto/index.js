@@ -83,19 +83,19 @@ export default class Otto {
   stop = async (delay) => {
     if (!delay) {
       const cmd = cmdFromInstruction(STOP)
-      return Bluetooth.write(cmd)
+      Bluetooth.writeln(cmd)
     }
     setTimeout(() => { this.stop() }, delay)
   }
 
   play = async (sound) => {
-    return Bluetooth.write('K ' + sound.key)
+    return Bluetooth.writeln('K ' + sound.key)
   }
 
   move = (touch) => {
     const cmd = cmdFromTouch(touch)
     if (!this.lastCmdSent || this.lastCmdSent !== cmd) {
-      Bluetooth.write(cmd + ' ' + this.speed)
+      Bluetooth.writeln(cmd + ' ' + this.speed)
       this.lastCmdSent = cmd
     }
   }
@@ -106,7 +106,8 @@ export default class Otto {
   }
 
   doSkill = (index) => {
-    Bluetooth.write(this.getConfig().skills[index].cmd)
+    Bluetooth.writeln(this.getConfig().skills[index].cmd)
+    this.stop(DELAY)
   }
 
   run = (instructions) => {
@@ -115,7 +116,7 @@ export default class Otto {
     instructions.forEach((instruction) => {
       setTimeout(() => {
         const cmd = cmdFromInstruction(instruction)
-        Bluetooth.write(cmd)
+        Bluetooth.writeln(cmd)
       }, delay)
       delay += DELAY
     })

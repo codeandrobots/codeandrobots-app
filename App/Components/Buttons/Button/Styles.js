@@ -16,9 +16,18 @@ export default StyleSheet.create({
   button_disabled: {
     borderColor: Colors.button.border_disabled
   },
+  button_image: {
+    paddingVertical: Metrics.unit / 2,
+    minWidth: 62
+  },
   text: {
     ...Fonts.style.button,
     ...Styles.text_center,
     color: Colors.button.text
+  },
+  image: {
+    width: 54,
+    height: 54,
+    marginHorizontal: Metrics.unit / 2
   }
 })

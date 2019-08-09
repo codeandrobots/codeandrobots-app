@@ -4,9 +4,11 @@ import WebSocket from 'App/Services/WebSocket'
 
 import Simulator from './Simulator'
 import Otto from './Otto'
+import Nybble from './Nybble'
 
 const simulator = new Simulator()
 const otto = new Otto()
+const nybble = new Nybble()
 
 const isConnectedToSocket = () => {
   return WebSocket.getInstance().isConnected
@@ -25,7 +27,11 @@ export default class Client {
     if (isConnectedToSocket()) {
       return simulator
     } else if (isConnectedToBluetooth()) {
-      return otto
+      const connnectedDevice = Bluetooth.getConnectedDevice()
+      const isNybble = connnectedDevice != null &&
+        connnectedDevice.name != null &&
+        connnectedDevice.name.toLowerCase().startsWith('nybble')
+      return (isNybble) ? nybble : otto
     }
     return null
   }

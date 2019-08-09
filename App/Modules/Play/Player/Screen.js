@@ -38,7 +38,7 @@ export default class Screen extends Component {
       onHideNotConnectedModal
     } = this.props
 
-    const { params, skills } = config || {}
+    const { params, skills, showSkillIcons } = config || {}
 
     const showPlayerBottomNav =
       config && (params.length > 0 || skills.length > 0)
@@ -61,6 +61,7 @@ export default class Screen extends Component {
             theme='light'
             slider={slider}
             skills={skills}
+            showSkillIcons={showSkillIcons}
             onSliderPress={onSliderPress}
             onSkillPress={onSkillPress} />
         }
