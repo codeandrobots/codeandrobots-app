@@ -28,7 +28,12 @@ export default StyleSheet.create({
     borderRadius: Metrics.button.radius,
     backgroundColor: 'rgba(255,255,255,0.8)',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0.25,
+    shadowRadius: 1.00,
+    elevation: 1
   },
   buttonInner_small: {
     position: 'relative',

@@ -3,17 +3,17 @@ import { storiesOf } from '@storybook/react-native'
 
 import { Videos } from 'App/Themes'
 
-import AppVideo from '../AppVideo'
+import Video from '../Video'
 
-storiesOf('AppVideo', module)
+storiesOf('Video', module)
   .add('Default', () => (
-    <AppVideo
+    <Video
       video={Videos.atlas}
       size='default'
     />
   ))
   .add('Small', () => (
-    <AppVideo
+    <Video
       video={Videos.atlas}
       size='small'
     />

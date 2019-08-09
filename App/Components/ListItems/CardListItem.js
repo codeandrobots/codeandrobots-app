@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 import { getImageSize } from 'App/Services/ImageUtils'
 
-import { TouchableOpacity, Button, Icon, AppVideo } from 'App/Components'
+import { TouchableOpacity, Button, Icon, Video } from 'App/Components'
 
 import { Colors } from 'App/Themes'
 
@@ -73,9 +73,9 @@ export default class CardListItem extends Component {
           </View>
         )}
         {!image && video && (
-          <AppVideo
-            video={video}
-            size='small' />
+          <View style={s.videoView_card}>
+            <Video video={video} size='small' />
+          </View>
         )}
         <View style={s.textView_card}>
           {title && <Text style={titleStyle}>{title}</Text>}

@@ -7,8 +7,8 @@ export default StyleSheet.create({
   videoPlayer: {
     width: 343,
     height: 232,
-    borderRadius: Metrics.unit,
-    borderWidth: 2,
+    borderRadius: Metrics.media.border,
+    borderWidth: 1,
     borderColor: Colors.primary
   },
   videoPlayer_small: {
@@ -20,9 +20,6 @@ export default StyleSheet.create({
     zIndex: 9999
   },
   videoView: {
-    ...Styles.centered,
-    marginHorizontal: Metrics.unit,
-    flexDirection: 'column',
-    flex: 1
+    ...Styles.centered
   }
 })
