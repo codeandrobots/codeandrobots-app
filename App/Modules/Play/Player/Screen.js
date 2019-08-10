@@ -10,6 +10,8 @@ import {
   Card,
   Modal} from 'App/Components'
 
+import { splitItemsByRow } from 'App/Services/UIUtils'
+
 import s from './Styles'
 
 export default class Screen extends Component {
@@ -17,6 +19,7 @@ export default class Screen extends Component {
     config: PropTypes.any,
     message: PropTypes.string.isRequired,
     showNotConnectedModal: PropTypes.bool.isRequired,
+    onConnect: PropTypes.func,
     onDraggableMove: PropTypes.func,
     onDraggableRelease: PropTypes.func,
     onDraggableStart: PropTypes.func,
@@ -30,6 +33,7 @@ export default class Screen extends Component {
       config,
       message,
       showNotConnectedModal,
+      onConnect,
       onDraggableMove,
       onDraggableRelease,
       onDraggableStart,
@@ -48,9 +52,13 @@ export default class Screen extends Component {
       ? {...params[0], labels: params[0].values}
       : null
 
+    const itemsByRow = splitItemsByRow(skills, showSkillIcons)
+    const skillRowHeight = (showSkillIcons) ? 40 : 20
+    const footerHeight = 200 + (itemsByRow.length * skillRowHeight)
+
     return (
       <Container>
-        <View style={s.joystickView}>
+        <View style={[s.joystickView, {marginBottom: footerHeight}]}>
           <Joystick
             onDraggableMove={onDraggableMove}
             onDraggableRelease={onDraggableRelease}
@@ -74,6 +82,7 @@ export default class Screen extends Component {
           navigation={this.props.navigation}
           show={showNotConnectedModal}
           onHidePress={onHideNotConnectedModal}
+          onBack={onConnect}
           template='NotConnected' />
       </Container>
     )

@@ -11,7 +11,8 @@ export class PlayerContainer extends Component {
     this.client = new Client()
     this.state = {
       config: null,
-      showNotConnectedModal: false
+      showNotConnectedModal: false,
+      params: []
     }
   }
 
@@ -22,6 +23,18 @@ export class PlayerContainer extends Component {
       this.setState({ config })
     } else {
       this.setState({showNotConnectedModal: true})
+    }
+  }
+
+  onConnect = async () => {
+    const connected = await isConnected()
+    if (connected) {
+      const config = await this.client.getConfig()
+      this.setState({ config })
+      const { params } = this.state
+      for (var param of params) {
+        this.client.setParam(param, param.index)
+      }
     }
   }
 
@@ -38,14 +51,29 @@ export class PlayerContainer extends Component {
     }
   }
 
-  onSliderPress = (index) => {
-    const { config } = this.state
-    // TODO support setting multiple params
-    this.client.setParam(config.params[0], index)
+  onSliderPress = async (index) => {
+    const { config, params } = this.state
+    const connected = await isConnected()
+    if (connected) {
+      // TODO support setting multiple params
+      this.client.setParam(config.params[0], index)
+      params[0] = {
+        ...config.params[0],
+        index
+      }
+      this.setState({params})
+    } else {
+      this.setState({showNotConnectedModal: true})
+    }
   }
 
-  onSkillPress = (index) => {
-    this.client.doSkill(index)
+  onSkillPress = async (index) => {
+    const connected = await isConnected()
+    if (connected) {
+      this.client.doSkill(index)
+    } else {
+      this.setState({showNotConnectedModal: true})
+    }
   }
 
   onHideNotConnectedModal = () => {
@@ -63,6 +91,7 @@ export class PlayerContainer extends Component {
         config={config}
         message='Use joystick to drive'
         showNotConnectedModal={this.state.showNotConnectedModal}
+        onConnect={this.onConnect}
         onDraggableMove={this.onDraggableMove}
         onDraggableRelease={this.onDraggableRelease}
         onSliderPress={this.onSliderPress}

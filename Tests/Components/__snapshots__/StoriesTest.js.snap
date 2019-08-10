@@ -197,30 +197,19 @@ exports[`Storyshots BottomNav Default 1`] = `
                 ]
               }
             >
-              <Text
-                accessible={true}
-                allowFontScaling={false}
-                ellipsizeMode="tail"
-                style={
-                  Array [
-                    Object {
-                      "color": "#516173",
-                      "fontSize": 38,
-                    },
-                    Object {
-                      "marginTop": 4,
-                    },
-                    Object {
-                      "fontFamily": "Material Design Icons",
-                      "fontStyle": "normal",
-                      "fontWeight": "normal",
-                    },
-                    Object {},
-                  ]
+              <Image
+                source={
+                  Object {
+                    "process": [Function],
+                  }
                 }
-              >
-                
-              </Text>
+                style={
+                  Object {
+                    "height": 60,
+                    "width": 60,
+                  }
+                }
+              />
             </View>
           </View>
         </View>
@@ -11792,7 +11781,7 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
                   "opacity": 1,
                 },
                 Object {
-                  "width": "33.333333333333336%",
+                  "width": "50%",
                 },
               ]
             }
@@ -11808,7 +11797,7 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
                   "width": "100%",
                 },
                 Object {
-                  "width": "66.66666666666666%",
+                  "width": "50%",
                 },
               ]
             }
@@ -11830,7 +11819,7 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
                 "marginLeft": -5,
               },
               Object {
-                "left": "33.333333333333336%",
+                "left": "50%",
               },
             ]
           }
@@ -11886,7 +11875,7 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
           style={
             Object {
               "height": 48,
-              "left": "33.333333333333336%",
+              "left": "50%",
               "marginLeft": -40,
               "opacity": 1,
               "position": "absolute",
@@ -11932,49 +11921,6 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
           style={
             Object {
               "height": 48,
-              "left": "66.66666666666667%",
-              "marginLeft": -40,
-              "opacity": 1,
-              "position": "absolute",
-              "top": 0,
-              "width": 80,
-              "zIndex": 9999,
-            }
-          }
-        >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "white",
-                  "marginTop": 30,
-                  "opacity": 0.8,
-                  "width": 80,
-                },
-                Object {
-                  "textAlign": "center",
-                },
-              ]
-            }
-          >
-            Trot
-          </Text>
-        </View>
-        <View
-          accessible={true}
-          isTVSelectable={true}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "height": 48,
               "opacity": 1,
               "position": "absolute",
               "right": 0,
@@ -12002,7 +11948,7 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
               ]
             }
           >
-            Bound
+            Trot
           </Text>
         </View>
       </View>
@@ -12307,11 +12253,78 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
                   ]
                 }
               >
+                Stretch
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View>
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "borderColor": "white",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "minWidth": 112,
+                  "opacity": 1,
+                  "paddingHorizontal": 0,
+                  "paddingVertical": 8,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "color": "#354052",
+                      "fontFamily": "Roboto-Medium",
+                      "fontSize": 18,
+                      "textAlign": "center",
+                    },
+                    Object {
+                      "color": "white",
+                      "fontFamily": "Roboto-Medium",
+                      "fontSize": 16,
+                    },
+                  ]
+                }
+              >
                 Pee
               </Text>
             </View>
           </View>
         </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginVertical": 8,
+            },
+          ]
+        }
+      >
         <View
           style={
             Object {
@@ -12367,18 +12380,6 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
             </View>
           </View>
         </View>
-      </View>
-      <View
-        style={
-          Array [
-            Object {
-              "flexDirection": "row",
-              "justifyContent": "space-between",
-              "marginVertical": 8,
-            },
-          ]
-        }
-      >
         <View
           style={
             Object {
@@ -12485,64 +12486,6 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
                 }
               >
                 Recover
-              </Text>
-            </View>
-          </View>
-        </View>
-        <View
-          style={
-            Object {
-              "opacity": 0.5,
-            }
-          }
-        >
-          <View>
-            <View
-              accessible={true}
-              isTVSelectable={true}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
-              style={
-                Object {
-                  "backgroundColor": "transparent",
-                  "borderColor": "white",
-                  "borderRadius": 8,
-                  "borderWidth": 1,
-                  "minWidth": 112,
-                  "opacity": 1,
-                  "paddingHorizontal": 0,
-                  "paddingVertical": 8,
-                }
-              }
-            >
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
-                style={
-                  Array [
-                    Object {
-                      "color": "#354052",
-                      "fontFamily": "Roboto-Medium",
-                      "fontSize": 18,
-                      "textAlign": "center",
-                    },
-                    Object {
-                      "color": "#9B9B9B",
-                    },
-                    Object {
-                      "color": "white",
-                      "fontFamily": "Roboto-Medium",
-                      "fontSize": 16,
-                    },
-                  ]
-                }
-              >
-                 
               </Text>
             </View>
           </View>

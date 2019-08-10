@@ -60,6 +60,13 @@ const scan = async () => {
       )
     )
 
+    // Set blank device names to their device id
+    for (var device of devices) {
+      if (!device.name || device.name.trim().length < 0) {
+        device.name = device.id
+      }
+    }
+
     return {devices, error: null}
   } catch (error) {
     return {devices: [], error}

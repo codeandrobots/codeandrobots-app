@@ -40,6 +40,7 @@ describe('Player', () => {
         config={config}
         message='Use joystick to drive'
         showNotConnectedModal={false}
+        onConnect={() => {}}
         onDraggableMove={(touch) => {}}
         onDraggableRelease={(touch) => {}}
         onDraggableStart={() => {}}

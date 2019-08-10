@@ -1,6 +1,6 @@
 
 import Bluetooth from 'App/Services/Bluetooth'
-import Config from './Config'
+import Config, { Gaits } from './Config'
 
 const STOP = 'stop'
 
@@ -8,39 +8,55 @@ const DELAY = 600 // Delay between commands
 
 const sounds = []
 
-const cmdFromTouch = (touch) => {
+const cmdFromTouch = (touch, gait) => {
   if (touch.dy <= -40) {
-    return 'M 1' // up
+    if (gait === Gaits.Crawl) {
+      return Config.commands.crawl.forwards
+    } else if (gait === Gaits.Walk) {
+      return Config.commands.walk.forwards
+    } else if (gait === Gaits.Trot) {
+      return Config.commands.trot.forwards
+    } else {
+      return Config.commands.walk.forwards
+    }
   } else if (touch.dy >= 40) {
-    return 'M 2' // down
+    return Config.commands.walk.backwards
   } else if (touch.dx >= 40) {
-    return 'M 3' // right
+    if (gait === Gaits.Crawl) {
+      return Config.commands.crawl.right
+    } else {
+      return Config.commands.walk.right
+    }
   } else if (touch.dx <= -40) {
-    return 'M 4' // left
+    if (gait === Gaits.Crawl) {
+      return Config.commands.crawl.left
+    } else {
+      return Config.commands.walk.left
+    }
   } else {
-    return 'M 0'
+    return Config.commands.stop
   }
 }
 
 const cmdFromInstruction = (instruction) => {
   if (instruction === 'up') {
-    return 'M 1' // up
+    return Config.commands.walk.forwards
   } else if (instruction === 'down') {
-    return 'M 2' // down
+    return Config.commands.walk.backwards
   } else if (instruction === 'right') {
-    return 'M 3' // right
+    return Config.commands.walk.right
   } else if (instruction === 'left') {
-    return 'M 4' // left
+    return Config.commands.walk.left
   } else if (instruction === STOP) {
-    return 'M 0' // stop
+    return Config.commands.stop
   } else {
-    return 'M 0'
+    return Config.commands.stop
   }
 }
 
 export default class Nybble {
   lastCmdSent = null
-  gait = 0
+  gait = Config.params[0].defaultIndex
 
   getConfig = () => {
     return Config
@@ -51,38 +67,47 @@ export default class Nybble {
   }
 
   setParam = (param, index) => {
-    if (param === 'Gait') {
+    if (param.title === 'Gait') {
       this.gait = index
+    }
+  }
+
+  sendCommand = async (cmd) => {
+    if (cmd && (!this.lastCmdSent || this.lastCmdSent !== cmd)) {
+      this.lastCmdSent = cmd
+      return Bluetooth.write(cmd)
+    } else {
+      return { ok: true }
     }
   }
 
   stop = async (delay) => {
     if (!delay) {
       const cmd = cmdFromInstruction(STOP)
-      return Bluetooth.write(cmd)
+      return this.sendCommand(cmd)
+    } else {
+      setTimeout(() => { this.stop() }, delay)
     }
-    setTimeout(() => { this.stop() }, delay)
   }
 
   play = async (sound) => {
-    return Bluetooth.write('K ' + sound.key)
+    // TODO
+    return { ok: true }
   }
 
   move = (touch) => {
-    const cmd = cmdFromTouch(touch)
-    if (!this.lastCmdSent || this.lastCmdSent !== cmd) {
-      Bluetooth.write(cmd + ' ' + this.speed)
-      this.lastCmdSent = cmd
-    }
+    const cmd = cmdFromTouch(touch, this.gait)
+    this.sendCommand(cmd)
   }
 
   moveAndStop = (touch) => {
-    this.move(touch)
-    this.stop(DELAY)
+    // No need to move, just stop after short delay
+    this.stop(100)
   }
 
   doSkill = (index) => {
-    Bluetooth.write(this.getConfig().skills[index].cmd)
+    const cmd = this.getConfig().skills[index].cmd
+    this.sendCommand(cmd)
   }
 
   run = (instructions) => {

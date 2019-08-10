@@ -8,7 +8,8 @@ export default {
     led: require('App/Images/Featured/LED/led.png')
   },
   joystick: {
-    arrows: require('App/Images/Joystick/arrows.png')
+    arrows: require('App/Images/Joystick/arrows.png'),
+    joystick: require('App/Images/Joystick/joystick.png')
   },
   robots: {
     otto: require('App/Images/Robots/Otto/otto.png'),

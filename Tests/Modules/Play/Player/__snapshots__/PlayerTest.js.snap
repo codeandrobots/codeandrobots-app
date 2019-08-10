@@ -4,12 +4,17 @@ exports[`Player Component renders correctly 1`] = `
 <Container>
   <View
     style={
-      Object {
-        "alignItems": "center",
-        "flex": 1,
-        "justifyContent": "center",
-        "marginBottom": 200,
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+          "marginBottom": 200,
+        },
+        Object {
+          "marginBottom": 260,
+        },
+      ]
     }
   >
     <Joystick
@@ -70,6 +75,7 @@ exports[`Player Component renders correctly 1`] = `
         "navigate": [Function],
       }
     }
+    onBack={[Function]}
     onHidePress={[Function]}
     show={false}
     template="NotConnected"

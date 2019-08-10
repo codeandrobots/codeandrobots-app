@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { View } from 'react-native'
 import PropTypes from 'prop-types'
-
-import _ from 'lodash'
 import uuid from 'react-native-uuid'
 
 import { LabelRangeSliderInput, PlayerButton } from 'App/Components'
+
+import { splitItemsByRow } from 'App/Services/UIUtils'
 
 import s from './Styles'
 
@@ -38,18 +38,7 @@ export default class PlayerBottomNav extends Component {
       onSliderPress = () => {},
       onSkillPress = () => {} } = this.props
 
-    // Show three skills per row
-    const maxSkillsByRow = (showSkillIcons) ? 5 : 3
-    const skillsInThrees = _.chunk(skills, maxSkillsByRow)
-
-    // Add empty skills to last chunk if last chunk has less than three skills
-    const chunks = skillsInThrees.length
-    const skillCountInLastChunk = (chunks > 0) ? skillsInThrees[chunks - 1].length : 0
-    if (skillCountInLastChunk > 0) {
-      for (let i = skillCountInLastChunk; i < maxSkillsByRow; i++) {
-        skillsInThrees[chunks - 1].push(null)
-      }
-    }
+    const skillsInRows = splitItemsByRow(skills, showSkillIcons)
 
     const buttonsStyle = (showSkillIcons)
       ? [s.buttons, s.buttons_small]
@@ -64,7 +53,7 @@ export default class PlayerBottomNav extends Component {
             onPress={onSliderPress} />
         }
         <View style={s.skills}>
-          {skillsInThrees.map((skillsInRow) => {
+          {skillsInRows.map((skillsInRow) => {
             return (
               <View key={uuid.v4()} style={buttonsStyle}>
                 {skillsInRow.map((skill) => {
