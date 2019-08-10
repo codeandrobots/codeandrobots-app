@@ -95,10 +95,14 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 1,
-    borderRadius: 10,
+    borderRadius: Metrics.media.border,
     borderColor: Colors.primary,
     flex: 1,
     flexDirection: 'row'
+  },
+  videoView_card: {
+    maxWidth: 165,
+    maxHeight: 112
   },
   image: {
     maxWidth: 55,
@@ -172,22 +176,5 @@ export default StyleSheet.create({
   statValue: {
     ...Styles.text,
     fontSize: Fonts.size.large
-  },
-  videoPlayer: {
-    width: 165,
-    height: 112,
-    borderRadius: Metrics.unit,
-    borderWidth: 2,
-    borderColor: Colors.primary
-  },
-  videoButton: {
-    position: 'absolute',
-    zIndex: 9999
-  },
-  videoView: {
-    ...Styles.centered,
-    marginHorizontal: Metrics.unit,
-    flexDirection: 'column',
-    flex: 1
   }
 })

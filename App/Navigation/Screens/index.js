@@ -12,7 +12,8 @@ import {
   CodeLab,
   Lessons,
   GetStarted,
-  Lab} from 'App/Modules'
+  Lab,
+  Robot} from 'App/Modules'
 
 export default {
   StartScreen: {
@@ -100,6 +101,12 @@ export default {
     screen: Lab,
     navigationOptions: ({navigation}) => ({
       title: 'Lab'
+    })
+  },
+  WhichRobotScreen: {
+    screen: Robot,
+    navigationOptions: ({navigation}) => ({
+      title: 'Which Robot?'
     })
   }
 }

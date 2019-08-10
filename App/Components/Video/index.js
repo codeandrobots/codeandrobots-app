@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { StyleSheet } from 'react-native'
 import PropTypes from 'prop-types'
 
-import Video from 'react-native-video'
+import RNVideo from 'react-native-video'
 
 import { TouchableOpacity, Icon } from 'App/Components'
 import VideoButton from './VideoButton'
@@ -11,9 +11,10 @@ import { Colors } from 'App/Themes'
 
 import s from './Styles'
 
-export default class RobotVideo extends Component {
+export default class Video extends Component {
   static PropTypes = {
-    video: PropTypes.oneOfType([PropTypes.number, PropTypes.object])
+    video: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
+    size: PropTypes.oneOf(['small', 'default'])
   }
 
   constructor (props) {
@@ -50,25 +51,37 @@ export default class RobotVideo extends Component {
 
   render () {
     const {
-      // style = undefined,
-      video
-    } = this.props
+      video,
+      size,
+      style = {} } = this.props
+    const isSmall = (size === 'small')
+
+    const iconSize = isSmall ? 16 : 32
+    const iconLeftPadding = isSmall ? 2 : 4
 
     const {paused} = this.state
+
+    const styles = {
+      videoPlayer: [
+        s.videoPlayer,
+        ...((isSmall) ? [s.videoPlayer_small] : []),
+        ...((style.videoPlayer) ? [style.videoPlayer] : [])
+      ]}
 
     return (
       <TouchableOpacity style={s.videoView} onPress={this.onVideoToggle}>
         {paused && (
           <VideoButton
             style={{ button: StyleSheet.flatten(s.videoButton) }}
-            onPress={this.onVideoToggle}>
+            onPress={this.onVideoToggle}
+            size={size}>
             <Icon
               name='play'
-              size={16}
-              style={{ color: Colors.primary }} />
+              size={iconSize}
+              style={{ color: Colors.primary, paddingLeft: iconLeftPadding }} />
           </VideoButton>
         )}
-        <Video
+        <RNVideo
           ref={(ref) => { this.player = ref }}
           paused={paused}
           source={video}
@@ -77,7 +90,7 @@ export default class RobotVideo extends Component {
           progressUpdateInterval={100.0}
           onEnd={this.onVideoEnd}
           onError={this.onVideoError}
-          style={s.videoPlayer} />
+          style={styles.videoPlayer} />
       </TouchableOpacity>
     )
   }
