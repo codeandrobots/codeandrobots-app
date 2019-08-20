@@ -12,7 +12,8 @@ import {
   Lessons,
   GetStarted,
   Lab,
-  Robot} from 'App/Modules'
+  Robot,
+  BuildRobot} from 'App/Modules'
 
 export default {
   StartScreen: {
@@ -100,6 +101,12 @@ export default {
     screen: Robot,
     navigationOptions: ({navigation}) => ({
       title: 'Which Robot?'
+    })
+  },
+  BuildRobotScreen: {
+    screen: BuildRobot,
+    navigationOptions: ({navigation}) => ({
+      title: 'Build Instructions'
     })
   }
 }

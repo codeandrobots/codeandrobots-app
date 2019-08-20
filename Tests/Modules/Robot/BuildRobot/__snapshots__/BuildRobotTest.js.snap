@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BuildRobot Component renders correctly 1`] = `
+<Container>
+  <ScrollView
+    style={
+      Object {
+        "marginBottom": 114,
+      }
+    }
+  >
+    <List
+      linedRows={true}
+      scrollable={true}
+    >
+      <CardListItem
+        image={null}
+        text=""
+        title=""
+      />
+      <CardListItem
+        image={null}
+        text=""
+        title=""
+      />
+      <CardListItem
+        image={null}
+        text=""
+        title=""
+      />
+      <CardListItem
+        image={null}
+        text=""
+        title=""
+      />
+    </List>
+  </ScrollView>
+  <Footer
+    style={
+      Object {
+        "paddingTop": 34,
+      }
+    }
+  >
+    <Card
+      button="Download Instructions"
+    />
+  </Footer>
+</Container>
+`;
