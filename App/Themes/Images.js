@@ -51,5 +51,13 @@ export default {
       ultrasound: require('App/Images/Robots/Otto/Buttons/Ultrasound/ultrasound.png'),
       updown: require('App/Images/Robots/Otto/Buttons/Updown/updown.png')
     }
+  },
+  buildRobots: {
+    otto: {
+      step1: require('App/Images/BuildRobot/Otto/step1.png'),
+      step2: require('App/Images/BuildRobot/Otto/step2.png'),
+      step3: require('App/Images/BuildRobot/Otto/step3.png'),
+      step4: require('App/Images/BuildRobot/Otto/step4.png')
+    }
   }
 }
