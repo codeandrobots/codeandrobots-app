@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Player Component renders correctly 1`] = `
+<Container>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+          "marginBottom": 200,
+        },
+        Object {
+          "marginBottom": 260,
+        },
+      ]
+    }
+  >
+    <Joystick
+      onDraggableMove={[Function]}
+      onDraggableRelease={[Function]}
+      onDraggableStart={[Function]}
+    />
+  </View>
+  <PlayerBottomNav
+    onSkillPress={[Function]}
+    onSliderPress={[Function]}
+    skills={
+      Array [
+        Object {
+          "title": "Jump",
+        },
+        Object {
+          "title": "Shuffle",
+        },
+        Object {
+          "title": "Bow",
+        },
+        Object {
+          "title": "Spin",
+        },
+        Object {
+          "title": "Dance",
+        },
+        Object {
+          "title": "Moonwalk",
+        },
+        Object {
+          "title": "Chill",
+        },
+      ]
+    }
+    slider={
+      Object {
+        "defaultIndex": 1,
+        "labels": Array [
+          "Slow",
+          "Normal",
+          "Fast",
+        ],
+        "title": "Speed",
+        "values": Array [
+          "Slow",
+          "Normal",
+          "Fast",
+        ],
+      }
+    }
+    theme="light"
+  />
+  <Modal
+    navigation={
+      Object {
+        "navigate": [Function],
+      }
+    }
+    onBack={[Function]}
+    onHidePress={[Function]}
+    show={false}
+    template="NotConnected"
+  />
+</Container>
+`;

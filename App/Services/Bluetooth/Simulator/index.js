@@ -54,6 +54,10 @@ const write = async (s) => {
   return { ok: true }
 }
 
+const writeln = async (s) => {
+  return write(s + '\r')
+}
+
 export default {
   isEnabled,
   isConnected,
@@ -63,5 +67,6 @@ export default {
   scan,
   connect,
   disconnect,
-  write
+  write,
+  writeln
 }

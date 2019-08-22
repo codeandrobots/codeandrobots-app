@@ -19,5 +19,8 @@ export default StyleSheet.create({
     ...Styles.row,
     justifyContent: 'space-between',
     marginVertical: Metrics.unit
+  },
+  buttons_small: {
+    marginVertical: Metrics.unit / 2
   }
 })

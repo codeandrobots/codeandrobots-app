@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
-import { View } from 'react-native'
+import { View, Image } from 'react-native'
 import PropTypes from 'prop-types'
 
 import { Icon, IconButton } from 'App/Components'
+
+import { Images } from 'App/Themes'
 
 import s from './Styles'
 
@@ -26,11 +28,7 @@ export default class BottomNav extends Component {
               style={{marginTop: 2}} />
           </IconButton>
           <IconButton style={{button: s.iconButton}} size='large' onPress={onHomePress}>
-            <Icon
-              set='Material'
-              name='home'
-              size={38}
-              style={{marginTop: 4}} />
+            <Image source={Images.joystick.joystick} style={{width: 60, height: 60}} />
           </IconButton>
           <IconButton style={{button: s.iconButton}} onPress={onSettingsPress}>
             <Icon

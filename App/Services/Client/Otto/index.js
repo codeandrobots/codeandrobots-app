@@ -1,83 +1,106 @@
 
 import Bluetooth from 'App/Services/Bluetooth'
+import Config, { Speed } from './Config'
 
 const STOP = 'stop'
 
 const DELAY = 600 // Delay between commands
 
-const sounds = [
-  {key: '1', name: 'Beep'},
-  {key: '2', name: 'Bye'},
-  {key: '3', name: 'Surprise'},
-  {key: '4', name: 'OhOoh'},
-  {key: '6', name: 'Cuddly'},
-  {key: '7', name: 'Sleeping'},
-  {key: '8', name: 'Happy'},
-  {key: '9', name: 'Super Happy'},
-  {key: '11', name: 'Sad'},
-  {key: '12', name: 'Confused'},
-  {key: '14', name: 'Fart'}
-]
-
 const cmdFromTouch = (touch) => {
   if (touch.dy <= -40) {
-    return 'M 1' // up
+    return Config.commands.walk.forwards
   } else if (touch.dy >= 40) {
-    return 'M 2' // down
+    return Config.commands.walk.backwards
   } else if (touch.dx >= 40) {
-    return 'M 3' // right
+    return Config.commands.walk.left
   } else if (touch.dx <= -40) {
-    return 'M 4' // left
+    return Config.commands.walk.right
   } else {
-    return 'M 0'
+    return null
   }
 }
 
 const cmdFromInstruction = (instruction) => {
   if (instruction === 'up') {
-    return 'M 1' // up
+    return Config.commands.walk.forwards
   } else if (instruction === 'down') {
-    return 'M 2' // down
+    return Config.commands.walk.backwards
   } else if (instruction === 'right') {
-    return 'M 3' // right
+    return Config.commands.walk.right
   } else if (instruction === 'left') {
-    return 'M 4' // left
+    return Config.commands.walk.left
   } else if (instruction === STOP) {
-    return 'M 0' // stop
+    return Config.commands.stop
   } else {
-    return 'M 0'
+    return null
   }
 }
 
 export default class Otto {
   lastCmdSent = null
+  speed = Speed.Normal
 
-  getSounds = () => {
-    return sounds
+  getConfig = () => {
+    return Config
   }
 
-  stop = async (delay) => {
+  getSounds = () => {
+    return Config.sounds
+  }
+
+  setParam = (param, index) => {
+    if (param.title === 'Speed') {
+      switch (index) {
+        case 0:
+          this.speed = Speed.Slow
+          break
+        case 1:
+          this.speed = Speed.Normal
+          break
+        case 2:
+          this.speed = Speed.Fast
+          break
+        default:
+          this.speed = Speed.Normal
+      }
+    }
+  }
+
+  sendCommand = async (cmd) => {
+    if (cmd && (!this.lastCmdSent || this.lastCmdSent !== cmd)) {
+      this.lastCmdSent = cmd
+      return Bluetooth.writeln(cmd)
+    } else {
+      return { ok: true }
+    }
+  }
+
+  stop = (delay) => {
     if (!delay) {
       const cmd = cmdFromInstruction(STOP)
-      return Bluetooth.write(cmd)
+      this.sendCommand(cmd)
+    } else {
+      setTimeout(() => { this.stop() }, delay)
     }
-    setTimeout(() => { this.stop() }, delay)
   }
 
   play = async (sound) => {
-    return Bluetooth.write('K ' + sound.key)
+    return this.sendCommand(Config.commands.sound + ' ' + sound.key)
   }
 
   move = (touch) => {
-    const cmd = cmdFromTouch(touch)
-    if (!this.lastCmdSent || this.lastCmdSent !== cmd) {
-      Bluetooth.write(cmd)
-      this.lastCmdSent = cmd
-    }
+    const cmd = cmdFromTouch(touch) + ' ' + this.speed
+    this.sendCommand(cmd)
   }
 
   moveAndStop = (touch) => {
-    this.move(touch)
+    // No need to move, just stop after short delay
+    this.stop(100)
+  }
+
+  doSkill = (index) => {
+    const cmd = this.getConfig().skills[index].cmd
+    this.sendCommand(cmd)
     this.stop(DELAY)
   }
 
@@ -87,7 +110,7 @@ export default class Otto {
     instructions.forEach((instruction) => {
       setTimeout(() => {
         const cmd = cmdFromInstruction(instruction)
-        Bluetooth.write(cmd)
+        this.sendCommand(cmd)
       }, delay)
       delay += DELAY
     })

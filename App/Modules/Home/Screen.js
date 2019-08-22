@@ -59,7 +59,7 @@ export default class Screen extends Component {
         }
         <BottomNav
           onRatePress={() => { onNavigatePress('RateScreen') }}
-          onHomePress={() => {}}
+          onHomePress={() => { onNavigatePress('PlayerScreen') }}
           onSettingsPress={() => { onNavigatePress('SettingsScreen') }} />
       </Container>
     )

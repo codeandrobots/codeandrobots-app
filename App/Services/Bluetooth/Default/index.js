@@ -60,6 +60,13 @@ const scan = async () => {
       )
     )
 
+    // Set blank device names to their device id
+    for (var device of devices) {
+      if (!device.name || device.name.trim().length < 0) {
+        device.name = device.id
+      }
+    }
+
     return {devices, error: null}
   } catch (error) {
     return {devices: [], error}
@@ -78,7 +85,7 @@ const scanUnpaired = async () => {
 
 const connect = async (device) => {
   try {
-    if (device.isBle) {
+    if (device && device.isBle) {
       connectedDevice.device = await bleManager.connect(device)
     } else {
       await BluetoothSerial.connect(device.id)
@@ -106,10 +113,17 @@ const disconnect = async () => {
 }
 
 const write = async (s) => {
+  if (!connectedDevice.device) {
+    return { ok: false }
+  }
   const ok = (connectedDevice.device.isBle)
-    ? await bleManager.write(connectedDevice.device, s + '\r')
-    : await BluetoothSerial.write(s + '\r')
+    ? await bleManager.write(connectedDevice.device, s)
+    : await BluetoothSerial.write(s)
   return { ok }
+}
+
+const writeln = async (s) => {
+  return write(s + '\r')
 }
 
 const stopService = async () => {
@@ -126,5 +140,6 @@ export default {
   connect,
   disconnect,
   write,
+  writeln,
   stopService
 }
