@@ -113,9 +113,7 @@ exports[`Storyshots BottomNav Default 1`] = `
               }
             >
               <Text
-                accessible={true}
                 allowFontScaling={false}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -281,9 +279,7 @@ exports[`Storyshots BottomNav Default 1`] = `
               }
             >
               <Text
-                accessible={true}
                 allowFontScaling={false}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -345,9 +341,6 @@ exports[`Storyshots Button Default 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "#354052",
@@ -396,9 +389,6 @@ exports[`Storyshots Button Disabled 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Array [
             Object {
@@ -459,9 +449,6 @@ exports[`Storyshots Button Player 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -533,9 +520,6 @@ exports[`Storyshots Button Player Light 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -651,9 +635,7 @@ exports[`Storyshots Card Atlas 1`] = `
             }
           >
             <Text
-              accessible={true}
               allowFontScaling={false}
-              ellipsizeMode="tail"
               style={
                 Array [
                   Object {
@@ -717,9 +699,6 @@ exports[`Storyshots Card Atlas 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -754,9 +733,6 @@ exports[`Storyshots Card Atlas 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -793,9 +769,6 @@ exports[`Storyshots Card Atlas 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -855,9 +828,6 @@ exports[`Storyshots Card Hello 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -892,9 +862,6 @@ exports[`Storyshots Card Hello 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -947,9 +914,6 @@ exports[`Storyshots Card Hello 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "#354052",
@@ -994,9 +958,6 @@ exports[`Storyshots Carousel Default 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -1122,9 +1083,6 @@ exports[`Storyshots Carousel Default 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#354052",
@@ -1190,9 +1148,6 @@ exports[`Storyshots Carousel Dilbert 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -1227,9 +1182,6 @@ exports[`Storyshots Carousel Dilbert 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -1343,9 +1295,6 @@ exports[`Storyshots Carousel Dilbert 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#354052",
@@ -1406,9 +1355,6 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "#354052",
@@ -1444,9 +1390,6 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "#354052",
@@ -1482,9 +1425,6 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "#354052",
@@ -1520,9 +1460,6 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "#354052",
@@ -1570,9 +1507,6 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "#354052",
@@ -1600,9 +1534,7 @@ exports[`Storyshots Icon Disabled 1`] = `
   }
 >
   <Text
-    accessible={true}
     allowFontScaling={false}
-    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -1643,9 +1575,7 @@ exports[`Storyshots Icon Robots Love Code 1`] = `
     }
   >
     <Text
-      accessible={true}
       allowFontScaling={false}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -1665,9 +1595,7 @@ exports[`Storyshots Icon Robots Love Code 1`] = `
       
     </Text>
     <Text
-      accessible={true}
       allowFontScaling={false}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -1687,9 +1615,7 @@ exports[`Storyshots Icon Robots Love Code 1`] = `
       
     </Text>
     <Text
-      accessible={true}
       allowFontScaling={false}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -1790,9 +1716,7 @@ exports[`Storyshots IconButton Disabled 1`] = `
           }
         >
           <Text
-            accessible={true}
             allowFontScaling={false}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -1898,9 +1822,7 @@ exports[`Storyshots IconButton Heart 1`] = `
           }
         >
           <Text
-            accessible={true}
             allowFontScaling={false}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -1997,9 +1919,7 @@ exports[`Storyshots IconButton Large Home 1`] = `
           }
         >
           <Text
-            accessible={true}
             allowFontScaling={false}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -2057,9 +1977,6 @@ exports[`Storyshots Inputs Range Slider Light Theme 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "white",
@@ -2150,9 +2067,6 @@ exports[`Storyshots Inputs Range Slider Light Theme 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -2190,9 +2104,6 @@ exports[`Storyshots Inputs Range Slider Light Theme 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -2232,9 +2143,6 @@ exports[`Storyshots Inputs Range Slider Light Theme 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -2283,9 +2191,6 @@ exports[`Storyshots Inputs Range Slider with 3 Labels 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#354052",
@@ -2370,9 +2275,6 @@ exports[`Storyshots Inputs Range Slider with 3 Labels 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -2413,9 +2315,6 @@ exports[`Storyshots Inputs Range Slider with 3 Labels 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -2455,9 +2354,6 @@ exports[`Storyshots Inputs Range Slider with 3 Labels 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -2502,9 +2398,6 @@ exports[`Storyshots Inputs Range Slider with 4 Labels 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#354052",
@@ -2611,9 +2504,6 @@ exports[`Storyshots Inputs Range Slider with 4 Labels 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -2651,9 +2541,6 @@ exports[`Storyshots Inputs Range Slider with 4 Labels 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -2697,9 +2584,6 @@ exports[`Storyshots Inputs Range Slider with 4 Labels 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -2739,9 +2623,6 @@ exports[`Storyshots Inputs Range Slider with 4 Labels 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -2793,9 +2674,7 @@ exports[`Storyshots Instruction Action 1`] = `
   }
 >
   <Text
-    accessible={true}
     allowFontScaling={false}
-    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -2820,9 +2699,6 @@ exports[`Storyshots Instruction Action 1`] = `
     
   </Text>
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "color": "white",
@@ -2852,9 +2728,7 @@ exports[`Storyshots Instruction Action 1`] = `
     }
   >
     <Text
-      accessible={true}
       allowFontScaling={false}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -2909,9 +2783,6 @@ exports[`Storyshots Instruction Control 1`] = `
   }
 >
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "color": "white",
@@ -2941,9 +2812,7 @@ exports[`Storyshots Instruction Control 1`] = `
     }
   >
     <Text
-      accessible={true}
       allowFontScaling={false}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -2998,9 +2867,7 @@ exports[`Storyshots Instruction Data 1`] = `
   }
 >
   <Text
-    accessible={true}
     allowFontScaling={false}
-    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -3025,9 +2892,6 @@ exports[`Storyshots Instruction Data 1`] = `
     
   </Text>
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "color": "white",
@@ -3057,9 +2921,7 @@ exports[`Storyshots Instruction Data 1`] = `
     }
   >
     <Text
-      accessible={true}
       allowFontScaling={false}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -3114,9 +2976,7 @@ exports[`Storyshots Instruction Sensor 1`] = `
   }
 >
   <Text
-    accessible={true}
     allowFontScaling={false}
-    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -3141,9 +3001,6 @@ exports[`Storyshots Instruction Sensor 1`] = `
     
   </Text>
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "color": "white",
@@ -3173,9 +3030,7 @@ exports[`Storyshots Instruction Sensor 1`] = `
     }
   >
     <Text
-      accessible={true}
       allowFontScaling={false}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -3349,9 +3204,6 @@ exports[`Storyshots Links Multiple 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -3389,9 +3241,6 @@ exports[`Storyshots Links Multiple 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -3432,9 +3281,6 @@ exports[`Storyshots Links Single 1`] = `
   }
 >
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -3465,9 +3311,6 @@ exports[`Storyshots List Default 1`] = `
   }
 >
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "color": "#354052",
@@ -3542,9 +3385,6 @@ exports[`Storyshots List Default 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "#354052",
@@ -3556,9 +3396,6 @@ exports[`Storyshots List Default 1`] = `
           DRIVE MODE
         </Text>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -3649,9 +3486,7 @@ exports[`Storyshots List Default 1`] = `
                 }
               >
                 <Text
-                  accessible={true}
                   allowFontScaling={false}
-                  ellipsizeMode="tail"
                   style={
                     Array [
                       Object {
@@ -3717,9 +3552,7 @@ exports[`Storyshots List Default 1`] = `
         }
       >
         <Text
-          accessible={true}
           allowFontScaling={false}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -3752,9 +3585,6 @@ exports[`Storyshots List Default 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "#354052",
@@ -3766,9 +3596,6 @@ exports[`Storyshots List Default 1`] = `
           BEEP BEEP
         </Text>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -3859,9 +3686,7 @@ exports[`Storyshots List Default 1`] = `
                 }
               >
                 <Text
-                  accessible={true}
                   allowFontScaling={false}
-                  ellipsizeMode="tail"
                   style={
                     Array [
                       Object {
@@ -3904,9 +3729,6 @@ exports[`Storyshots List Featured 1`] = `
   }
 >
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "color": "#354052",
@@ -4022,9 +3844,6 @@ exports[`Storyshots List Featured 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "#354052",
@@ -4106,9 +3925,7 @@ exports[`Storyshots List Featured 1`] = `
             }
           >
             <Text
-              accessible={true}
               allowFontScaling={false}
-              ellipsizeMode="tail"
               style={
                 Array [
                   Object {
@@ -4147,9 +3964,6 @@ exports[`Storyshots List Featured 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "#354052",
@@ -4239,9 +4053,7 @@ exports[`Storyshots List Featured 1`] = `
             }
           >
             <Text
-              accessible={true}
               allowFontScaling={false}
-              ellipsizeMode="tail"
               style={
                 Array [
                   Object {
@@ -4280,9 +4092,6 @@ exports[`Storyshots List Featured 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "#354052",
@@ -4311,9 +4120,6 @@ exports[`Storyshots List Games 1`] = `
   }
 >
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "color": "#354052",
@@ -4372,9 +4178,6 @@ exports[`Storyshots List Games 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "#354052",
@@ -4386,9 +4189,6 @@ exports[`Storyshots List Games 1`] = `
           DRIVE
         </Text>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "#354052",
@@ -4479,9 +4279,7 @@ exports[`Storyshots List Games 1`] = `
                 }
               >
                 <Text
-                  accessible={true}
                   allowFontScaling={false}
-                  ellipsizeMode="tail"
                   style={
                     Array [
                       Object {
@@ -4547,9 +4345,6 @@ exports[`Storyshots List Games 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "#354052",
@@ -4561,9 +4356,6 @@ exports[`Storyshots List Games 1`] = `
           DANCE
         </Text>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "#354052",
@@ -4654,9 +4446,7 @@ exports[`Storyshots List Games 1`] = `
                 }
               >
                 <Text
-                  accessible={true}
                   allowFontScaling={false}
-                  ellipsizeMode="tail"
                   style={
                     Array [
                       Object {
@@ -4730,9 +4520,6 @@ exports[`Storyshots List Games 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -4749,9 +4536,6 @@ exports[`Storyshots List Games 1`] = `
           FIND A FRIEND
         </Text>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -4850,9 +4634,7 @@ exports[`Storyshots List Games 1`] = `
                 }
               >
                 <Text
-                  accessible={true}
                   allowFontScaling={false}
-                  ellipsizeMode="tail"
                   style={
                     Array [
                       Object {
@@ -4921,9 +4703,6 @@ exports[`Storyshots List Lessons 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "#354052",
@@ -4936,9 +4715,6 @@ exports[`Storyshots List Lessons 1`] = `
           LESSONS
         </Text>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "#354052",
@@ -5024,9 +4800,7 @@ exports[`Storyshots List Lessons 1`] = `
         }
       >
         <Text
-          accessible={true}
           allowFontScaling={false}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -5088,9 +4862,6 @@ exports[`Storyshots List Lessons 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#354052",
@@ -5103,9 +4874,7 @@ exports[`Storyshots List Lessons 1`] = `
           </Text>
         </View>
         <Text
-          accessible={true}
           allowFontScaling={false}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -5166,9 +4935,7 @@ exports[`Storyshots List Lessons 1`] = `
         }
       >
         <Text
-          accessible={true}
           allowFontScaling={false}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -5230,9 +4997,6 @@ exports[`Storyshots List Lessons 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#354052",
@@ -5245,9 +5009,7 @@ exports[`Storyshots List Lessons 1`] = `
           </Text>
         </View>
         <Text
-          accessible={true}
           allowFontScaling={false}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -5308,9 +5070,7 @@ exports[`Storyshots List Lessons 1`] = `
         }
       >
         <Text
-          accessible={true}
           allowFontScaling={false}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -5372,9 +5132,6 @@ exports[`Storyshots List Lessons 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -5392,9 +5149,7 @@ exports[`Storyshots List Lessons 1`] = `
           </Text>
         </View>
         <Text
-          accessible={true}
           allowFontScaling={false}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -5431,9 +5186,6 @@ exports[`Storyshots List Robot List 1`] = `
   }
 >
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "color": "#354052",
@@ -5517,9 +5269,6 @@ exports[`Storyshots List Robot List 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#354052",
@@ -5532,9 +5281,6 @@ exports[`Storyshots List Robot List 1`] = `
             Otto DIY
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -5560,9 +5306,7 @@ exports[`Storyshots List Robot List 1`] = `
           }
         >
           <Text
-            accessible={true}
             allowFontScaling={false}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -5666,9 +5410,6 @@ exports[`Storyshots List Robot List 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#354052",
@@ -5681,9 +5422,6 @@ exports[`Storyshots List Robot List 1`] = `
             Nybble
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -5709,9 +5447,7 @@ exports[`Storyshots List Robot List 1`] = `
           }
         >
           <Text
-            accessible={true}
             allowFontScaling={false}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -5815,9 +5551,6 @@ exports[`Storyshots List Robot List 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#354052",
@@ -5830,9 +5563,6 @@ exports[`Storyshots List Robot List 1`] = `
             Robot Simulator
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -5858,9 +5588,7 @@ exports[`Storyshots List Robot List 1`] = `
           }
         >
           <Text
-            accessible={true}
             allowFontScaling={false}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -6013,9 +5741,7 @@ exports[`Storyshots List Robot List 1`] = `
                   }
                 >
                   <Text
-                    accessible={true}
                     allowFontScaling={false}
-                    ellipsizeMode="tail"
                     style={
                       Array [
                         Object {
@@ -6081,9 +5807,6 @@ exports[`Storyshots List Robot List 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#354052",
@@ -6096,9 +5819,6 @@ exports[`Storyshots List Robot List 1`] = `
             Custom Robot
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -6124,9 +5844,7 @@ exports[`Storyshots List Robot List 1`] = `
           }
         >
           <Text
-            accessible={true}
             allowFontScaling={false}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -6211,9 +5929,7 @@ exports[`Storyshots List Stats 1`] = `
         }
       >
         <Text
-          accessible={true}
           allowFontScaling={false}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -6243,9 +5959,6 @@ exports[`Storyshots List Stats 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#354052",
@@ -6257,9 +5970,6 @@ exports[`Storyshots List Stats 1`] = `
             Connected
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#F9BC62",
@@ -6304,9 +6014,7 @@ exports[`Storyshots List Stats 1`] = `
         }
       >
         <Text
-          accessible={true}
           allowFontScaling={false}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -6336,9 +6044,6 @@ exports[`Storyshots List Stats 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#354052",
@@ -6350,9 +6055,6 @@ exports[`Storyshots List Stats 1`] = `
             85%
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#F9BC62",
@@ -6405,9 +6107,7 @@ exports[`Storyshots List Stats 1`] = `
         }
       >
         <Text
-          accessible={true}
           allowFontScaling={false}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -6437,9 +6137,6 @@ exports[`Storyshots List Stats 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#354052",
@@ -6451,9 +6148,6 @@ exports[`Storyshots List Stats 1`] = `
             4.8h
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#F9BC62",
@@ -6498,9 +6192,7 @@ exports[`Storyshots List Stats 1`] = `
         }
       >
         <Text
-          accessible={true}
           allowFontScaling={false}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -6530,9 +6222,6 @@ exports[`Storyshots List Stats 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#354052",
@@ -6544,9 +6233,6 @@ exports[`Storyshots List Stats 1`] = `
             5
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#F9BC62",
@@ -6599,9 +6285,7 @@ exports[`Storyshots List Stats 1`] = `
         }
       >
         <Text
-          accessible={true}
           allowFontScaling={false}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -6631,9 +6315,6 @@ exports[`Storyshots List Stats 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#354052",
@@ -6645,9 +6326,6 @@ exports[`Storyshots List Stats 1`] = `
             2
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#F9BC62",
@@ -6692,9 +6370,7 @@ exports[`Storyshots List Stats 1`] = `
         }
       >
         <Text
-          accessible={true}
           allowFontScaling={false}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -6724,9 +6400,6 @@ exports[`Storyshots List Stats 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#354052",
@@ -6738,9 +6411,6 @@ exports[`Storyshots List Stats 1`] = `
             1
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#F9BC62",
@@ -6777,9 +6447,6 @@ exports[`Storyshots ListHeader Default 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#354052",
@@ -6847,9 +6514,6 @@ exports[`Storyshots ListHeader Todos 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#354052",
@@ -6862,9 +6526,6 @@ exports[`Storyshots ListHeader Todos 1`] = `
       TODOS
     </Text>
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#354052",
@@ -6943,9 +6604,7 @@ exports[`Storyshots ListItem Beep 1`] = `
     }
   >
     <Text
-      accessible={true}
       allowFontScaling={false}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -6978,9 +6637,6 @@ exports[`Storyshots ListItem Beep 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#354052",
@@ -6992,9 +6648,6 @@ exports[`Storyshots ListItem Beep 1`] = `
       BEEP BEEP
     </Text>
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -7085,9 +6738,7 @@ exports[`Storyshots ListItem Beep 1`] = `
             }
           >
             <Text
-              accessible={true}
               allowFontScaling={false}
-              ellipsizeMode="tail"
               style={
                 Array [
                   Object {
@@ -7179,9 +6830,6 @@ exports[`Storyshots ListItem CardListItem Image 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#354052",
@@ -7194,9 +6842,6 @@ exports[`Storyshots ListItem CardListItem Image 1`] = `
       Otto DIY
     </Text>
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -7222,9 +6867,7 @@ exports[`Storyshots ListItem CardListItem Image 1`] = `
     }
   >
     <Text
-      accessible={true}
       allowFontScaling={false}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -7359,9 +7002,7 @@ exports[`Storyshots ListItem CardListItem Video 1`] = `
             }
           >
             <Text
-              accessible={true}
               allowFontScaling={false}
-              ellipsizeMode="tail"
               style={
                 Array [
                   Object {
@@ -7427,9 +7068,6 @@ exports[`Storyshots ListItem CardListItem Video 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#354052",
@@ -7442,9 +7080,6 @@ exports[`Storyshots ListItem CardListItem Video 1`] = `
       Otto DIY
     </Text>
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -7470,9 +7105,7 @@ exports[`Storyshots ListItem CardListItem Video 1`] = `
     }
   >
     <Text
-      accessible={true}
       allowFontScaling={false}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -7527,9 +7160,7 @@ exports[`Storyshots ListItem Compact 1`] = `
     }
   >
     <Text
-      accessible={true}
       allowFontScaling={false}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -7591,9 +7222,6 @@ exports[`Storyshots ListItem Compact 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "#354052",
@@ -7606,9 +7234,7 @@ exports[`Storyshots ListItem Compact 1`] = `
       </Text>
     </View>
     <Text
-      accessible={true}
       allowFontScaling={false}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -7663,9 +7289,7 @@ exports[`Storyshots ListItem Compact Disabled 1`] = `
     }
   >
     <Text
-      accessible={true}
       allowFontScaling={false}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -7727,9 +7351,6 @@ exports[`Storyshots ListItem Compact Disabled 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Array [
             Object {
@@ -7747,9 +7368,7 @@ exports[`Storyshots ListItem Compact Disabled 1`] = `
       </Text>
     </View>
     <Text
-      accessible={true}
       allowFontScaling={false}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -7831,9 +7450,6 @@ exports[`Storyshots ListItem Compact No Icon 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "#354052",
@@ -7846,9 +7462,7 @@ exports[`Storyshots ListItem Compact No Icon 1`] = `
       </Text>
     </View>
     <Text
-      accessible={true}
       allowFontScaling={false}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -7903,9 +7517,6 @@ exports[`Storyshots ListItem Default 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#354052",
@@ -7917,9 +7528,6 @@ exports[`Storyshots ListItem Default 1`] = `
       PLAY & EXPLORE
     </Text>
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -7968,9 +7576,6 @@ exports[`Storyshots ListItem Default 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "#354052",
@@ -8020,9 +7625,6 @@ exports[`Storyshots ListItem Disabled 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -8039,9 +7641,6 @@ exports[`Storyshots ListItem Disabled 1`] = `
       PRO LEVEL
     </Text>
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Array [
           Array [
@@ -8095,9 +7694,6 @@ exports[`Storyshots ListItem Disabled 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -8175,9 +7771,6 @@ exports[`Storyshots ListItem Drive 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#354052",
@@ -8189,9 +7782,6 @@ exports[`Storyshots ListItem Drive 1`] = `
       DRIVE MODE
     </Text>
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -8282,9 +7872,7 @@ exports[`Storyshots ListItem Drive 1`] = `
             }
           >
             <Text
-              accessible={true}
               allowFontScaling={false}
-              ellipsizeMode="tail"
               style={
                 Array [
                   Object {
@@ -8410,9 +7998,6 @@ exports[`Storyshots ListItem Featured 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#354052",
@@ -8497,9 +8082,7 @@ exports[`Storyshots ListItem Featured Disabled 1`] = `
         }
       >
         <Text
-          accessible={true}
           allowFontScaling={false}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -8538,9 +8121,6 @@ exports[`Storyshots ListItem Featured Disabled 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -8600,9 +8180,6 @@ exports[`Storyshots ListItem Square 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#354052",
@@ -8614,9 +8191,6 @@ exports[`Storyshots ListItem Square 1`] = `
       DANCE
     </Text>
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#354052",
@@ -8707,9 +8281,7 @@ exports[`Storyshots ListItem Square 1`] = `
             }
           >
             <Text
-              accessible={true}
               allowFontScaling={false}
-              ellipsizeMode="tail"
               style={
                 Array [
                   Object {
@@ -8778,9 +8350,6 @@ exports[`Storyshots ListItem Square Disabled 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -8797,9 +8366,6 @@ exports[`Storyshots ListItem Square Disabled 1`] = `
       PRO LEVEL
     </Text>
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -8898,9 +8464,7 @@ exports[`Storyshots ListItem Square Disabled 1`] = `
             }
           >
             <Text
-              accessible={true}
               allowFontScaling={false}
-              ellipsizeMode="tail"
               style={
                 Array [
                   Object {
@@ -8959,9 +8523,7 @@ exports[`Storyshots ListItem Stat 1`] = `
     }
   >
     <Text
-      accessible={true}
       allowFontScaling={false}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -8991,9 +8553,6 @@ exports[`Storyshots ListItem Stat 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "#354052",
@@ -9005,9 +8564,6 @@ exports[`Storyshots ListItem Stat 1`] = `
         Connected
       </Text>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "#F9BC62",
@@ -9133,9 +8689,7 @@ exports[`Storyshots Modal Default 1`] = `
           }
         >
           <Text
-            accessible={true}
             allowFontScaling={false}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -9166,9 +8720,6 @@ exports[`Storyshots Modal Default 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#354052",
@@ -9263,9 +8814,7 @@ exports[`Storyshots Modal Is Your Device Supported 1`] = `
           }
         >
           <Text
-            accessible={true}
             allowFontScaling={false}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -9323,9 +8872,6 @@ exports[`Storyshots Modal Is Your Device Supported 1`] = `
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Array [
                   Object {
@@ -9364,9 +8910,6 @@ The aim of the Code & Robots app is to support all of the most popular robots an
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Array [
                   Object {
@@ -9469,9 +9012,7 @@ exports[`Storyshots Modal Not Connected 1`] = `
           }
         >
           <Text
-            accessible={true}
             allowFontScaling={false}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -9529,9 +9070,6 @@ exports[`Storyshots Modal Not Connected 1`] = `
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Array [
                   Object {
@@ -9584,9 +9122,6 @@ exports[`Storyshots Modal Not Connected 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Object {
                     "color": "#354052",
@@ -9684,9 +9219,7 @@ exports[`Storyshots Modal Not Ready 1`] = `
           }
         >
           <Text
-            accessible={true}
             allowFontScaling={false}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -9744,9 +9277,6 @@ exports[`Storyshots Modal Not Ready 1`] = `
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Array [
                   Object {
@@ -9801,9 +9331,6 @@ The good news is you can follow along as this Beta version of the app develops o
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Object {
                     "color": "#354052",
@@ -9901,9 +9428,7 @@ exports[`Storyshots Modal Problems Connecting 1`] = `
           }
         >
           <Text
-            accessible={true}
             allowFontScaling={false}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -9961,9 +9486,6 @@ exports[`Storyshots Modal Problems Connecting 1`] = `
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Array [
                   Object {
@@ -10006,9 +9528,6 @@ exports[`Storyshots Modal Problems Connecting 1`] = `
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Array [
                   Object {
@@ -10036,12 +9555,8 @@ exports[`Storyshots Modal Problems Connecting 1`] = `
 
 exports[`Storyshots NavButton Default 1`] = `
 <View
-  accessibilityComponentType="button"
-  accessibilityTraits={
-    Array [
-      "button",
-    ]
-  }
+  accessibilityRole="button"
+  accessibilityStates={Array []}
   accessible={true}
   isTVSelectable={true}
   onResponderGrant={[Function]}
@@ -10064,9 +9579,6 @@ exports[`Storyshots NavButton Default 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -10125,9 +9637,6 @@ exports[`Storyshots Player Bottom Nav 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "#354052",
@@ -10234,9 +9743,6 @@ exports[`Storyshots Player Bottom Nav 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -10274,9 +9780,6 @@ exports[`Storyshots Player Bottom Nav 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -10319,9 +9822,6 @@ exports[`Storyshots Player Bottom Nav 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -10390,9 +9890,6 @@ exports[`Storyshots Player Bottom Nav 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -10445,9 +9942,6 @@ exports[`Storyshots Player Bottom Nav 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -10500,9 +9994,6 @@ exports[`Storyshots Player Bottom Nav 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -10567,9 +10058,6 @@ exports[`Storyshots Player Bottom Nav 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -10622,9 +10110,6 @@ exports[`Storyshots Player Bottom Nav 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -10677,9 +10162,6 @@ exports[`Storyshots Player Bottom Nav 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -10744,9 +10226,6 @@ exports[`Storyshots Player Bottom Nav 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -10799,9 +10278,6 @@ exports[`Storyshots Player Bottom Nav 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -10857,9 +10333,6 @@ exports[`Storyshots Player Bottom Nav 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -10931,9 +10404,6 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "white",
@@ -11040,9 +10510,6 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -11080,9 +10547,6 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -11125,9 +10589,6 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -11196,9 +10657,6 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -11251,9 +10709,6 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -11306,9 +10761,6 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -11373,9 +10825,6 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -11428,9 +10877,6 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -11483,9 +10929,6 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -11550,9 +10993,6 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -11605,9 +11045,6 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -11663,9 +11100,6 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -11737,9 +11171,6 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "white",
@@ -11846,9 +11277,6 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -11886,9 +11314,6 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -11931,9 +11356,6 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -12002,9 +11424,6 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -12057,9 +11476,6 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -12112,9 +11528,6 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -12179,9 +11592,6 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -12234,9 +11644,6 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -12289,9 +11696,6 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -12356,9 +11760,6 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -12411,9 +11812,6 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -12466,9 +11864,6 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -12537,9 +11932,6 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "white",
@@ -12646,9 +12038,6 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -12686,9 +12075,6 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -12731,9 +12117,6 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -13591,9 +12974,7 @@ exports[`Storyshots Video Default 1`] = `
         }
       >
         <Text
-          accessible={true}
           allowFontScaling={false}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -13729,9 +13110,7 @@ exports[`Storyshots Video Small 1`] = `
         }
       >
         <Text
-          accessible={true}
           allowFontScaling={false}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -13808,6 +13187,7 @@ exports[`Storyshots Web Code&Robots 1`] = `
       onLoadingFinish={[Function]}
       onLoadingStart={[Function]}
       onMessage={[Function]}
+      onShouldStartLoadWithRequest={[Function]}
       scalesPageToFit={true}
       source={
         Object {

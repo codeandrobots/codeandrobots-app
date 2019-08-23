@@ -12,7 +12,7 @@ import { Colors } from 'App/Themes'
 import s from './Styles'
 
 export default class Video extends Component {
-  static PropTypes = {
+  static propTypes = {
     video: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
     size: PropTypes.oneOf(['small', 'default'])
   }
