@@ -11,7 +11,7 @@ import { Colors } from 'App/Themes'
 import s from './Styles'
 
 export default class CardListItem extends Component {
-  static PropTypes = {
+  static propTypes = {
     image: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
     video: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
     title: PropTypes.string,
