@@ -4,12 +4,12 @@ import { storiesOf } from '@storybook/react-native'
 
 import { Colors, Metrics } from 'App/Themes'
 
-import Decorator from './Decorators'
+import { PaddedDecorator } from './Decorators'
 
 import { Button, PlayerButton } from '../Buttons'
 
 storiesOf('Button', module)
-  .addDecorator(Decorator)
+  .addDecorator(PaddedDecorator)
   .add('Default', () => (
     <Button text='Click Me' onPress={() => {}} />
   ))

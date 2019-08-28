@@ -4,12 +4,12 @@ import { storiesOf } from '@storybook/react-native'
 
 import { Metrics, Colors } from 'App/Themes'
 
-import Decorator from './Decorators'
+import { PaddedDecorator } from './Decorators'
 
 import { LabelRangeSliderInput } from '../Inputs'
 
 storiesOf('Inputs', module)
-  .addDecorator(Decorator)
+  .addDecorator(PaddedDecorator)
   .add('Range Slider with 3 Labels', () => (
     <LabelRangeSliderInput
       title='Speed'

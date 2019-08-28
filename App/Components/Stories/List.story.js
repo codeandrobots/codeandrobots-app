@@ -1,6 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react-native'
 
+import Decorator from './Decorators'
 import { Images, Colors, Videos } from 'App/Themes'
 
 import List from '../Lists'
@@ -14,6 +15,7 @@ import {
   CardListItem } from '../ListItems'
 
 storiesOf('List', module)
+  .addDecorator(Decorator)
   .add('Default', () => (
     <List title='Explore'>
       <ListItem image={Images.controls} title='Drive Mode' text='Let’s get moving' onPress={() => {}} />
