@@ -6,13 +6,12 @@ import {
   Card
 } from 'App/Components'
 
-import { Colors, Metrics, Images, Videos } from 'App/Themes'
+import { Images, Videos } from 'App/Themes'
 
 export default class Screen extends Component {
-
   render () {
     const { onDone } = this.props
-    
+
     return (
       <Container>
         <Carousel
@@ -23,7 +22,7 @@ export default class Screen extends Component {
             video={Videos.atlas}
             title='Code & Robots'
             text='Where your robots comes alive'
-            style={{title_center: {fontSize: 128} }}/>
+          />
           <Card
             image={Images.hello}
             title='Robots await your commands'

@@ -4,10 +4,6 @@ import { connect } from 'react-redux'
 import Screen from './Screen'
 
 export class OnboardingContainer extends Component {
-  constructor (props) {
-    super(props)
-  }
-
   onDone = () => {
     this.props.navigation.navigate('HomeScreen')
   }
