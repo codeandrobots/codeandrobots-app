@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 import {
   Container,
@@ -9,6 +10,10 @@ import {
 import { Images, Videos } from 'App/Themes'
 
 export default class Screen extends Component {
+  static propTypes = {
+    onDone: PropTypes.func.isRequired
+  }
+
   render () {
     const { onDone } = this.props
 
@@ -21,7 +26,7 @@ export default class Screen extends Component {
           <Card
             video={Videos.atlas}
             title='Code & Robots'
-            text='Where your robots comes alive'
+            text='Where your robots come alive'
           />
           <Card
             image={Images.hello}

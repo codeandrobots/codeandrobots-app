@@ -32,7 +32,8 @@ export default {
   HomeScreen: {
     screen: Home,
     navigationOptions: ({navigation}) => ({
-      title: 'Code & Robots'
+      title: 'Code & Robots',
+      headerLeft: null
     })
   },
   RateScreen: {
