@@ -7,7 +7,7 @@ import {
   Card
 } from 'App/Components'
 
-import { Images, Videos } from 'App/Themes'
+import { Images } from 'App/Themes'
 
 export default class Screen extends Component {
   static propTypes = {
@@ -24,17 +24,17 @@ export default class Screen extends Component {
           onPress={[null, null, null]}
           onDone={onDone}>
           <Card
-            video={Videos.atlas}
-            title='Code & Robots'
+            image={Images.onboarding.one}
+            title='Welcome to Code & Robots'
             text='Where your robots come alive'
           />
           <Card
-            image={Images.hello}
+            image={Images.onboarding.two}
             title='Robots await your commands'
             text='Otto & Nybble supported out of the box, more robots coming soon!'
           />
           <Card
-            image={Images.done}
+            image={Images.onboarding.three}
             title='Lots more to come! 🎉'
             text='Learn to code, build your own robot and so much more...'
           />

@@ -20,13 +20,13 @@ exports[`Onboarding Component renders correctly 1`] = `
     }
   >
     <Card
-      text="Where your robots come alive"
-      title="Code & Robots"
-      video={
+      image={
         Object {
           "process": [Function],
         }
       }
+      text="Where your robots come alive"
+      title="Welcome to Code & Robots"
     />
     <Card
       image={

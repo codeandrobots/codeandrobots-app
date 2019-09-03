@@ -79,7 +79,7 @@ export default class Card extends Component {
         )}
         {title && (
           <View style={[s.titleView, (textAlign === 'center') ? s.centered : s.titleView_padded, style.titleView]}>
-            <Text style={[s.text, (textAlign === 'center') ? s.text_center : null]}>{title}</Text>
+            <Text style={[s.titleText, (textAlign === 'center') ? s.text_center : null]}>{title}</Text>
           </View>
         )}
         {text && (
