@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Onboarding Component renders correctly 1`] = `
+<Container>
+  <Carousel
+    buttons={
+      Array [
+        "Next",
+        "Next",
+        "Done",
+      ]
+    }
+    onDone={[Function]}
+    onPress={
+      Array [
+        null,
+        null,
+        null,
+      ]
+    }
+  >
+    <Card
+      image={
+        Object {
+          "process": [Function],
+        }
+      }
+      text="Where your robots come alive"
+      title="Welcome to Code & Robots"
+    />
+    <Card
+      image={
+        Object {
+          "process": [Function],
+        }
+      }
+      text="Otto & Nybble supported out of the box, more robots coming soon!"
+      title="Robots await your commands"
+    />
+    <Card
+      image={
+        Object {
+          "process": [Function],
+        }
+      }
+      text="Learn to code, build your own robot and so much more..."
+      title="Lots more to come! 🎉"
+    />
+  </Carousel>
+</Container>
+`;

@@ -4,6 +4,11 @@ export default {
   bluetooth: require('App/Images/Bluetooth/bluetooth.png'),
   done: require('App/Images/Done/done.png'),
   controls: require('App/Images/Controls/controls.png'),
+  onboarding: {
+    one: require('App/Images/Onboarding/One/onboarding_one.png'),
+    two: require('App/Images/Onboarding/Two/onboarding_two.png'),
+    three: require('App/Images/Onboarding/Three/onboarding_three.png')
+  },
   featured: {
     led: require('App/Images/Featured/LED/led.png')
   },

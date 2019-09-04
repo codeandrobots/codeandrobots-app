@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { AppState, View, StatusBar } from 'react-native'
 import ReduxNavigation from '../Navigation/ReduxNavigation'
 import { connect } from 'react-redux'
-import StartupActions from '../Redux/StartupRedux'
-import ReduxPersist from '../Config/ReduxPersist'
+import StartupActions from 'App/Redux/StartupRedux'
+import ReduxPersist from 'App/Config/ReduxPersist'
 
 // TODO Fix firebase code
 // import firebase from 'react-native-firebase'
@@ -114,7 +114,7 @@ class RootContainer extends Component {
   render () {
     return (
       <View style={{flex: 1}}>
-        <StatusBar backgroundColor={Colors.statusBar.background} barStyle={'light-content'} />
+        <StatusBar backgroundColor={Colors.statusBar.background} barStyle={'dark-content'} />
         <ReduxNavigation />
       </View>
     )

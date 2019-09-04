@@ -1,4 +1,6 @@
+import React from 'react'
 import { Start, Web } from 'App/Containers'
+import { NavButton } from 'App/Components/Buttons'
 import {
   Home,
   Rate,
@@ -14,7 +16,8 @@ import {
   GetStarted,
   Lab,
   Robot,
-  BuildRobot} from 'App/Modules'
+  BuildRobot,
+  Onboarding} from 'App/Modules'
 
 export default {
   StartScreen: {
@@ -29,7 +32,8 @@ export default {
   HomeScreen: {
     screen: Home,
     navigationOptions: ({navigation}) => ({
-      title: 'Code & Robots'
+      title: 'Code & Robots',
+      headerLeft: null
     })
   },
   RateScreen: {
@@ -115,5 +119,14 @@ export default {
     navigationOptions: ({navigation}) => ({
       title: 'Build Instructions'
     })
+  },
+  OnboardingScreen: {
+    screen: Onboarding,
+    navigationOptions: (navigation) => {
+      const { navigate } = navigation.navigation
+      return {
+        headerRight: <NavButton onPress={() => navigate('HomeScreen')} text='Skip' />
+      }
+    }
   }
 }

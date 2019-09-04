@@ -569,7 +569,6 @@ exports[`Storyshots Card Atlas 1`] = `
           "alignItems": "center",
           "display": "flex",
           "justifyContent": "center",
-          "marginVertical": 24,
           "opacity": 1,
           "width": "100%",
         }
@@ -586,10 +585,12 @@ exports[`Storyshots Card Atlas 1`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "height": 66,
+            "alignItems": "center",
+            "height": 70,
+            "justifyContent": "center",
             "opacity": 1,
             "position": "absolute",
-            "width": 66,
+            "width": 70,
             "zIndex": 9999,
           }
         }
@@ -598,17 +599,21 @@ exports[`Storyshots Card Atlas 1`] = `
           style={
             Array [
               Object {
-                "backgroundColor": "rgba(255,255,255,0.25)",
+                "alignItems": "center",
+                "backgroundColor": "rgba(255,255,255,0.8)",
                 "borderRadius": 100,
-                "height": 116,
-                "paddingLeft": 8,
-                "paddingTop": 8,
-                "position": "absolute",
-                "width": 116,
-              },
-              Object {
-                "height": 66,
-                "width": 66,
+                "elevation": 1,
+                "height": 60,
+                "justifyContent": "center",
+                "position": "relative",
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 0,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.25,
+                "shadowRadius": 1,
+                "width": 60,
               },
             ]
           }
@@ -617,54 +622,36 @@ exports[`Storyshots Card Atlas 1`] = `
             style={
               Array [
                 Object {
-                  "backgroundColor": "white",
-                  "borderRadius": 100,
-                  "height": 100,
-                  "position": "relative",
-                  "width": 100,
-                },
-                Object {
-                  "height": 50,
-                  "position": "relative",
-                  "width": 50,
+                  "alignItems": "center",
+                  "flex": 1,
+                  "justifyContent": "center",
                 },
               ]
             }
           >
-            <View
+            <Text
+              allowFontScaling={false}
               style={
                 Array [
                   Object {
-                    "alignItems": "center",
-                    "flex": 1,
-                    "justifyContent": "center",
+                    "color": "#516173",
+                    "fontSize": 32,
                   },
+                  Object {
+                    "color": "#F9BC62",
+                    "paddingLeft": 4,
+                  },
+                  Object {
+                    "fontFamily": "FontAwesome",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
                 ]
               }
             >
-              <Text
-                allowFontScaling={false}
-                style={
-                  Array [
-                    Object {
-                      "color": "#516173",
-                      "fontSize": 24,
-                    },
-                    Object {
-                      "marginLeft": 4,
-                    },
-                    Object {
-                      "fontFamily": "FontAwesome",
-                      "fontStyle": "normal",
-                      "fontWeight": "normal",
-                    },
-                    Object {},
-                  ]
-                }
-              >
-                
-              </Text>
-            </View>
+              
+            </Text>
           </View>
         </View>
       </View>
@@ -681,12 +668,15 @@ exports[`Storyshots Card Atlas 1`] = `
           }
         }
         style={
-          Object {
-            "borderRadius": 8,
-            "height": 403.8749994951562,
-            "marginHorizontal": 16,
-            "width": 718,
-          }
+          Array [
+            Object {
+              "borderColor": "#F9BC62",
+              "borderRadius": 10,
+              "borderWidth": 1,
+              "height": 232,
+              "width": 343,
+            },
+          ]
         }
       />
     </View>
@@ -710,9 +700,7 @@ exports[`Storyshots Card Atlas 1`] = `
         style={
           Array [
             Object {
-              "color": "#354052",
-              "fontFamily": "Roboto-Medium",
-              "fontSize": 16,
+              "fontSize": 22,
             },
             Object {
               "textAlign": "center",
@@ -843,9 +831,7 @@ exports[`Storyshots Card Hello 1`] = `
         style={
           Array [
             Object {
-              "color": "#354052",
-              "fontFamily": "Roboto-Medium",
-              "fontSize": 16,
+              "fontSize": 22,
             },
             Object {
               "textAlign": "center",
@@ -955,6 +941,20 @@ exports[`Storyshots Carousel Default 1`] = `
 >
   <View>
     <View
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      onSwipeLeft={[Function]}
+      onSwipeRight={[Function]}
       style={
         Object {
           "height": "100%",
@@ -983,9 +983,7 @@ exports[`Storyshots Carousel Default 1`] = `
             style={
               Array [
                 Object {
-                  "color": "#354052",
-                  "fontFamily": "Roboto-Medium",
-                  "fontSize": 16,
+                  "fontSize": 22,
                 },
                 Object {
                   "textAlign": "center",
@@ -1007,7 +1005,7 @@ exports[`Storyshots Carousel Default 1`] = `
           "left": 0,
           "minHeight": 80,
           "paddingBottom": 0,
-          "paddingTop": 0,
+          "paddingTop": 16,
           "position": "absolute",
           "width": "100%",
         }
@@ -1136,6 +1134,20 @@ exports[`Storyshots Carousel Dilbert 1`] = `
 >
   <View>
     <View
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      onSwipeLeft={[Function]}
+      onSwipeRight={[Function]}
       style={
         Object {
           "height": "100%",
@@ -1183,9 +1195,7 @@ exports[`Storyshots Carousel Dilbert 1`] = `
             style={
               Array [
                 Object {
-                  "color": "#354052",
-                  "fontFamily": "Roboto-Medium",
-                  "fontSize": 16,
+                  "fontSize": 22,
                 },
                 Object {
                   "textAlign": "center",
@@ -1241,7 +1251,7 @@ exports[`Storyshots Carousel Dilbert 1`] = `
           "left": 0,
           "minHeight": 80,
           "paddingBottom": 0,
-          "paddingTop": 0,
+          "paddingTop": 16,
           "position": "absolute",
           "width": "100%",
         }
