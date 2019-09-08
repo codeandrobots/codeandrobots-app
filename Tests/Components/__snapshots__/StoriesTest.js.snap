@@ -9099,47 +9099,9 @@ exports[`Storyshots Modal Is Your Device Supported 1`] = `
                 ]
               }
             >
-              The Beta app currently supports connecting to the Otto DIY open source robot or to the Code & Robots simulator.
+              The app currently supports the Otto DIY and Nybble robots or the Code & Robots simulator.
 
 The aim of the Code & Robots app is to support all of the most popular robots and more will be added soon 🤞
-            </Text>
-          </View>
-          <View
-            accessible={true}
-            isTVSelectable={true}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              Object {
-                "alignItems": "center",
-                "display": "flex",
-                "justifyContent": "center",
-                "opacity": 1,
-                "width": "100%",
-              }
-            }
-          >
-            <Text
-              style={
-                Array [
-                  Object {
-                    "color": "#354052",
-                    "fontFamily": "Roboto-Medium",
-                    "fontSize": 18,
-                    "textAlign": "center",
-                    "textDecorationLine": "underline",
-                  },
-                  Object {
-                    "fontSize": undefined,
-                  },
-                ]
-              }
-            >
-              What is the Otto DIY robot?
             </Text>
           </View>
         </View>
