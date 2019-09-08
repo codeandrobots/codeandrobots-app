@@ -12,7 +12,9 @@ export class WhichRobotContainer extends Component {
     const headerRight = (!params.hideSkip)
       ? <NavButton onPress={() => navigate('HomeScreen')} text='Skip' />
       : null
-    return { headerRight }
+    return (params.hideBack)
+      ? { headerLeft: null, headerRight }
+      : { headerRight }
   }
 
   onConnect = () => {

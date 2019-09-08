@@ -1,11 +1,20 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
+import { NavButton } from 'App/Components'
+
 import Screen from './Screen'
 
 export class OnboardingContainer extends Component {
+  static navigationOptions = ({ navigation }) => {
+    const { navigate } = navigation
+    const onSkip = () => navigate('WhichRobotScreen', { hideBack: true })
+    const headerRight = <NavButton onPress={onSkip} text='Skip' />
+    return { headerRight }
+  }
+
   onDone = () => {
-    this.props.navigation.navigate('HomeScreen')
+    this.props.navigation.navigate('WhichRobotScreen', { hideBack: true })
   }
 
   render () {
