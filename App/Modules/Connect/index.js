@@ -41,12 +41,12 @@ export class ConnectContainer extends Component {
         : 'device'
       : null
     const { enabled, error } = await Bluetooth.isEnabled()
-    this.setState({robot, connectTo, enabled, error}, () => {
-      if (robot !== 'simulator' && enabled) {
-        this.setState({ scanning: true })
-        this.showDevices()
-      }
-    })
+    this.onConnectTo(connectTo)
+    this.setState({robot, enabled, error})
+    if (robot !== 'simulator' && enabled) {
+      this.setState({ scanning: true })
+      this.showDevices()
+    }
   }
 
   // TODO Better sorting of bluetooth devices
