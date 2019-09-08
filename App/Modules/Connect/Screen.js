@@ -16,6 +16,7 @@ import { Metrics, Images } from 'App/Themes'
 
 export default class Screen extends Component {
   static propTypes = {
+    robot: PropTypes.string,
     error: Types.error,
     connectTo: PropTypes.string,
     enabled: PropTypes.bool.isRequired,

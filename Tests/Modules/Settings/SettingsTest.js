@@ -11,6 +11,7 @@ describe('Settings', () => {
   beforeEach(() => {
     wrapper = shallow(
       <Screen
+        onChooseRobotPress={() => {}}
         onShareAppPress={() => {}}
         onFeedbackPress={() => {}}
         onFAQPress={() => {}}

@@ -1,28 +1,5 @@
-import React, { Component } from 'react'
-import WhichRobotScreen from './WhichRobotScreen'
-import { connect } from 'react-redux'
+import WhichRobot from './WhichRobot'
 
-export class RobotContainer extends Component {
-  render () {
-    return (
-      <WhichRobotScreen
-        ref={(ref) => {
-          this.screen = ref
-        }}
-        {...this.props}
-      />
-    )
-  }
-}
+export { default as BuildRobot } from './BuildRobot'
 
-const mapStateToProps = (state) => {
-  return {
-  }
-}
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(RobotContainer)
+export default WhichRobot

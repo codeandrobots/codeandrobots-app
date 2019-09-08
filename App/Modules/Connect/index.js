@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Linking } from 'react-native'
 import { connect } from 'react-redux'
 
+import { setRobot } from 'App/Services/Client'
 import Bluetooth from 'App/Services/Bluetooth'
 import WebSocket from 'App/Services/WebSocket'
 import { isSimulator } from 'App/Services/Properties'
@@ -15,6 +16,7 @@ export class ConnectContainer extends Component {
     this.socket = WebSocket.getInstance()
     const instructions = `To view the simulator, open the following link on another device (e.g. your laptop):\ncodeandrobots.com/simulator?room=${this.socket.room}`
     this.state = {
+      robot: null,
       error: null,
       connectTo: null,
       enabled: false,
@@ -28,17 +30,48 @@ export class ConnectContainer extends Component {
   }
 
   async componentWillMount () {
-    const { enabled, error } = await Bluetooth.isEnabled()
-    this.setState({enabled, error})
-    if (enabled) {
-      this.setState({ scanning: true })
-      this.showDevices()
+    const { state } = this.props.navigation
+    const robot = state && state.params && state.params.robot
+    if (robot) {
+      setRobot(robot)
     }
+    const connectTo = (robot)
+      ? (robot === 'simulator')
+        ? 'simulator'
+        : 'device'
+      : null
+    const { enabled, error } = await Bluetooth.isEnabled()
+    this.setState({robot, connectTo, enabled, error}, () => {
+      if (robot !== 'simulator' && enabled) {
+        this.setState({ scanning: true })
+        this.showDevices()
+      }
+    })
+  }
+
+  // TODO Better sorting of bluetooth devices
+  //      See https://github.com/codeandrobots/codeandrobots-app/issues/29
+  sortDevices = (devices) => {
+    const { robot } = this.state
+    if (!robot) {
+      return devices
+    }
+    return devices.sort((deviceA, deviceB) => {
+      const deviceAMatch = deviceA.name != null && deviceA.name.toLowerCase().startsWith(robot)
+      const deviceBMatch = deviceB.name != null && deviceB.name.toLowerCase().startsWith(robot)
+      if (deviceAMatch) {
+        return -1
+      } else if (deviceBMatch) {
+        return 1
+      } else {
+        return 0
+      }
+    })
   }
 
   showDevices = async () => {
     const { devices, error } = await Bluetooth.scan()
-    this.setState({scanning: false, devices, error})
+    this.setState({scanning: false, devices: this.sortDevices(devices), error})
   }
 
   onConnectTo = (connectTo) => {
@@ -111,11 +144,16 @@ export class ConnectContainer extends Component {
 
   onDone = () => {
     const { state } = this.props.navigation
-    const onBack = state && state.params && state.params.onBack
-    if (onBack) {
-      onBack()
+    const onDone = state && state.params && state.params.onDone
+    if (onDone) {
+      onDone()
+    } else {
+      const onBack = state && state.params && state.params.onBack
+      if (onBack) {
+        onBack()
+      }
+      this.props.navigation.goBack()
     }
-    this.props.navigation.goBack()
   }
 
   onEmailInstructions = () => {
@@ -150,6 +188,7 @@ export class ConnectContainer extends Component {
 
   render () {
     const {
+      robot,
       error,
       connectTo,
       enabled,
@@ -166,6 +205,7 @@ export class ConnectContainer extends Component {
           this.screen = ref
         }}
         {...this.props}
+        robot={robot}
         error={error}
         connectTo={connectTo}
         enabled={enabled}

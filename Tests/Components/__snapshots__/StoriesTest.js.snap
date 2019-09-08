@@ -700,7 +700,9 @@ exports[`Storyshots Card Atlas 1`] = `
         style={
           Array [
             Object {
-              "fontSize": 22,
+              "color": "#354052",
+              "fontFamily": "Roboto-Medium",
+              "fontSize": 18,
             },
             Object {
               "textAlign": "center",
@@ -831,7 +833,9 @@ exports[`Storyshots Card Hello 1`] = `
         style={
           Array [
             Object {
-              "fontSize": 22,
+              "color": "#354052",
+              "fontFamily": "Roboto-Medium",
+              "fontSize": 18,
             },
             Object {
               "textAlign": "center",
@@ -983,7 +987,9 @@ exports[`Storyshots Carousel Default 1`] = `
             style={
               Array [
                 Object {
-                  "fontSize": 22,
+                  "color": "#354052",
+                  "fontFamily": "Roboto-Medium",
+                  "fontSize": 18,
                 },
                 Object {
                   "textAlign": "center",
@@ -1195,7 +1201,9 @@ exports[`Storyshots Carousel Dilbert 1`] = `
             style={
               Array [
                 Object {
-                  "fontSize": 22,
+                  "color": "#354052",
+                  "fontFamily": "Roboto-Medium",
+                  "fontSize": 18,
                 },
                 Object {
                   "textAlign": "center",
