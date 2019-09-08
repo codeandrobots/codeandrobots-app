@@ -12,6 +12,7 @@ exports[`WhichRobot Component renders correctly 1`] = `
           "process": [Function],
         }
       }
+      onPress={[Function]}
       text="The open source robot that you can build yourself"
       title="Otto DIY"
     />
@@ -21,6 +22,7 @@ exports[`WhichRobot Component renders correctly 1`] = `
           "process": [Function],
         }
       }
+      onPress={[Function]}
       text="The world's cutest open source robotic kitten"
       title="Nybble"
     />
@@ -30,18 +32,15 @@ exports[`WhichRobot Component renders correctly 1`] = `
           "process": [Function],
         }
       }
+      onPress={[Function]}
       text="No robot, no problem, simulator to the rescue"
       title="Robot Simulator"
     />
-    <CardListItem
-      image={
-        Object {
-          "process": [Function],
-        }
-      }
-      text="Let’s see if your robot has what it takes"
-      title="Custom Robot"
-    />
   </List>
+  <Footer>
+    <Card
+      text="Choose the robot you want to play with"
+    />
+  </Footer>
 </Container>
 `;

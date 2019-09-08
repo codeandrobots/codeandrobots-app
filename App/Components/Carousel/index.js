@@ -107,6 +107,10 @@ export default class Carousel extends Component {
         <GestureRecognizer
           onSwipeLeft={this.onSwipeLeft}
           onSwipeRight={this.onSwipeRight}
+          config={{
+            velocityThreshold: 0.1,
+            directionalOffsetThreshold: 80
+          }}
           style={s.page}>
           { children[page] }
         </GestureRecognizer>

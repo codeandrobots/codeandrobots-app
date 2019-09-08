@@ -8,12 +8,13 @@ export default StyleSheet.create({
   ...Styles,
   page: {
     height: '100%',
-    marginHorizontal: Metrics.unit
+    marginHorizontal: Metrics.unit,
+    backgroundColor: Colors.transparent
   },
   footer: {
     ...Styles.footer,
     paddingTop: Metrics.unit * 2,
-    paddingBottom: (isIphoneX()) ? Metrics.unit * 3 : 0,
+    paddingBottom: (isIphoneX()) ? Metrics.unit * 3 : Metrics.unit * 2,
     justifyContent: 'center'
   },
   controls: {

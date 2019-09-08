@@ -10,6 +10,7 @@ import s from './Styles'
 
 export default class Screen extends Component {
   static propTypes = {
+    onChooseRobotPress: PropTypes.func.isRequired,
     onShareAppPress: PropTypes.func.isRequired,
     onFeedbackPress: PropTypes.func.isRequired,
     onFAQPress: PropTypes.func.isRequired,
@@ -20,6 +21,7 @@ export default class Screen extends Component {
 
   render () {
     const {
+      onChooseRobotPress,
       onShareAppPress,
       onFeedbackPress,
       onFAQPress,
@@ -28,6 +30,7 @@ export default class Screen extends Component {
       onPrivacyPress} = this.props
     return (
       <Container>
+        <CompactListItem title='Choose the robot you want to play with' onPress={onChooseRobotPress} />
         <CompactListItem title='Share app with a friend' onPress={onShareAppPress} />
         <CompactListItem title='Share your ideas with us' onPress={onFeedbackPress} />
         <View style={s.appVersionView}>

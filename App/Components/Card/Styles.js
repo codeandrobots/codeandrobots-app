@@ -19,7 +19,8 @@ export default StyleSheet.create({
     paddingHorizontal: Metrics.unit * 2
   },
   titleText: {
-    fontSize: 22
+    ...Styles.text,
+    fontSize: 18
   },
   textView: {
     marginTop: Metrics.unit,

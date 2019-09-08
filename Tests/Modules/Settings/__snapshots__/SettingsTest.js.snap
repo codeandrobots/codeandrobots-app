@@ -4,6 +4,10 @@ exports[`Settings Component renders correctly 1`] = `
 <Container>
   <CompactListItem
     onPress={[Function]}
+    title="Choose the robot you want to play with"
+  />
+  <CompactListItem
+    onPress={[Function]}
     title="Share app with a friend"
   />
   <CompactListItem

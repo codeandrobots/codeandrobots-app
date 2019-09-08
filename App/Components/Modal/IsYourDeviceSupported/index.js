@@ -11,24 +11,17 @@ export default class IsYourDeviceSupported extends Component {
     onHidePress: PropTypes.func
   }
 
-  onLinkPress = () => {
-    const { navigation, onHidePress } = this.props
-    if (onHidePress) {
-      onHidePress()
-    }
-    navigation.navigate('WebScreen', {
-      source: 'https://www.ottodiy.com',
-      title: 'Otto DIY'
-    })
-  }
-
   render () {
+    const text = [
+      'The app currently supports the Otto DIY and Nybble robots',
+      'or the Code & Robots simulator.\n\nThe aim of the Code &',
+      'Robots app is to support all of the most popular robots',
+      'and more will be added soon 🤞'
+    ].join(' ')
     return (
       <Card
         image={Images.bluetooth}
-        text={'The Beta app currently supports connecting to the Otto DIY open source robot or to the Code & Robots simulator.\n\nThe aim of the Code & Robots app is to support all of the most popular robots and more will be added soon 🤞'}
-        link='What is the Otto DIY robot?'
-        onLinkPress={this.onLinkPress} />
+        text={text} />
     )
   }
 }
