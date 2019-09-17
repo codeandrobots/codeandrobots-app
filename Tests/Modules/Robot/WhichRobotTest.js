@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 
-import WhichRobotScreen from 'App/Modules/Robot/WhichRobotScreen'
+import WhichRobotScreen from 'App/Modules/Robot/WhichRobot/Screen'
 
 describe('WhichRobot', () => {
   let wrapper

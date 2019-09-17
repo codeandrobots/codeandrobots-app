@@ -15,9 +15,11 @@ import {
   Lessons,
   GetStarted,
   Lab,
-  Robot,
+  WhichRobot,
   BuildRobot,
-  Onboarding} from 'App/Modules'
+  ConnectRobot,
+  Onboarding
+} from 'App/Modules'
 
 export default {
   StartScreen: {
@@ -108,7 +110,7 @@ export default {
     })
   },
   WhichRobotScreen: {
-    screen: Robot,
+    screen: WhichRobot,
     navigationOptions: ({navigation}) => ({
       title: 'Which Robot?'
     })
@@ -117,6 +119,12 @@ export default {
     screen: BuildRobot,
     navigationOptions: ({navigation}) => ({
       title: 'Build Instructions'
+    })
+  },
+  ConnectRobotScreen: {
+    screen: ConnectRobot,
+    navigationOptions: ({navigation}) => ({
+      title: '<Otto DIY/>'
     })
   },
   OnboardingScreen: {
