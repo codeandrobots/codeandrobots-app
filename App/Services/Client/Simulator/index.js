@@ -50,7 +50,7 @@ export default class Simulator {
     }
   }
 
-  doSkill = (index) => {
+  doSkill = (category, index) => {
     // No skills are supported for the time being
   }
 
