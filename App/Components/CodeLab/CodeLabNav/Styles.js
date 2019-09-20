@@ -67,7 +67,7 @@ export default StyleSheet.create({
   separator: {
     width: 1,
     height: '100%',
-    backgroundColor: Colors.white_translucent,
+    backgroundColor: Colors.whiteTranslucent,
     margin: Metrics.unit
   },
   footer: {

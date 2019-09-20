@@ -88,9 +88,9 @@ export default class Client {
     if (client) { client.moveAndStop(touch) }
   }
 
-  doSkill = async (index) => {
+  doSkill = async (category, index) => {
     const client = await this.getClient()
-    if (client) { client.doSkill(index) }
+    if (client) { client.doSkill(category, index) }
   }
 
   run = async (instructions) => {

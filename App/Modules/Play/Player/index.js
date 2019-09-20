@@ -67,10 +67,10 @@ export class PlayerContainer extends Component {
     }
   }
 
-  onSkillPress = async (index) => {
+  onSkillPress = async (category, index) => {
     const connected = await isConnected()
     if (connected) {
-      this.client.doSkill(index)
+      this.client.doSkill(category, index)
     } else {
       this.setState({showNotConnectedModal: true})
     }

@@ -53,7 +53,7 @@ export default class Instruction extends Component {
             set='Material'
             name='close'
             size={24}
-            color={Colors.white_translucent}
+            color={Colors.whiteTranslucent}
             style={s.close} />
         </TouchableOpacity>
       </View>

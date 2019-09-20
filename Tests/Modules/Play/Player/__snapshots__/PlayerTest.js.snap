@@ -12,7 +12,7 @@ exports[`Player Component renders correctly 1`] = `
           "marginBottom": 200,
         },
         Object {
-          "marginBottom": 260,
+          "marginBottom": 240,
         },
       ]
     }
