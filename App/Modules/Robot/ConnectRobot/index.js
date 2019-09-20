@@ -1,24 +1,40 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
+
 
 import ConnectRobotScreen from './Screen'
-// import { Videos } from 'App/Themes'
+import { Videos } from 'App/Themes'
 
 export class ConnectRobotContainer extends Component {
+  static propTypes = {
+    video: Videos,
+    text: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    links: PropTypes.arrayOf(PropTypes.string),
+    onLinksPress: PropTypes.arrayOf(PropTypes.func),
+    onButtonPress: PropTypes.func.isRequired
+  }
   render () {
-    // TODO: Use in the screen
-    // const data = {
-    //   video: Videos.atlas,
-    //   title: 'Otto DIY',
-    //   text: 'The open source robot that you can build yourself.' +
-    //     'You will be able to build your own Otto in as little as one hour! ' +
-    //     'It is a simple robot kit for both beginners and experts.'
-    // }
+    const {
+      video,
+      text,
+      title,
+      links,
+      onLinksPress,
+      onButtonPress
+    } = this.props
     return (
       <ConnectRobotScreen
         ref={(ref) => {
           this.screen = ref
         }}
+        video={video}
+        text={text}
+        title={title}
+        links={links}
+        onLinksPress={onLinksPress}
+        onButtonPress={onButtonPress}
         {...this.props}
       />
     )
