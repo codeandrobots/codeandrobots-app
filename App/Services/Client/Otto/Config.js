@@ -81,6 +81,24 @@ export default {
         { title: 'Fart2', image: Images.otto.sounds.fart2, cmd: 'K 14' },
         { title: 'Fart3', image: Images.otto.sounds.fart3, cmd: 'K 15' }
       ]
+    },
+    {
+      category: 'Moods',
+      items: [
+        { title: 'Happy', image: Images.otto.moods.happy, cmd: 'H 1' },
+        { title: 'Super Happy', image: Images.otto.moods.superhappy, cmd: 'H 2' },
+        { title: 'Sad', image: Images.otto.moods.sad, cmd: 'H 3' },
+        { title: 'Sleeping', image: Images.otto.moods.sleeping, cmd: 'H 4' },
+        { title: 'Fart', image: Images.otto.moods.fart, cmd: 'H 5' },
+        { title: 'Confused', image: Images.otto.moods.confused, cmd: 'H 6' },
+        { title: 'Love', image: Images.otto.moods.love, cmd: 'H 7' },
+        { title: 'Angry', image: Images.otto.moods.angry, cmd: 'H 8' },
+        { title: 'Fretful', image: Images.otto.moods.fretful, cmd: 'H 9' },
+        { title: 'Magic', image: Images.otto.moods.magic, cmd: 'H 10' },
+        { title: 'Wave', image: Images.otto.moods.wave, cmd: 'H 11' },
+        { title: 'Victory', image: Images.otto.moods.victory, cmd: 'H 12' },
+        { title: 'Fail', image: Images.otto.moods.fail, cmd: 'H 13' }
+      ]
     }
   ],
   showSkillIcons: true

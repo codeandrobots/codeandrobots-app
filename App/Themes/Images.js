@@ -86,7 +86,7 @@ export default {
       wave: require('App/Images/Robots/Otto/Buttons/Moods/Wave/wave.png'),
       love: require('App/Images/Robots/Otto/Buttons/Moods/Love/love.png'),
       magic: require('App/Images/Robots/Otto/Buttons/Moods/Magic/magic.png'),
-      freetful: require('App/Images/Robots/Otto/Buttons/Moods/Freetful/freetful.png'),
+      fretful: require('App/Images/Robots/Otto/Buttons/Moods/Fretful/fretful.png'),
       victory: require('App/Images/Robots/Otto/Buttons/Moods/Victory/victory.png')
     }
   },

@@ -13310,7 +13310,7 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
             "borderTopColor": "rgba(255, 255, 255, 0.8)",
             "borderTopWidth": 1,
             "display": "flex",
-            "flex": 0.5,
+            "flex": 0.3333333333333333,
             "justifyContent": "center",
             "opacity": 1,
             "paddingVertical": 8,
@@ -13345,7 +13345,7 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
             "borderTopColor": "transparent",
             "borderTopWidth": 1,
             "display": "flex",
-            "flex": 0.5,
+            "flex": 0.3333333333333333,
             "justifyContent": "center",
             "opacity": 1,
             "paddingVertical": 8,
@@ -13363,6 +13363,41 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
           }
         >
           SOUNDS
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "borderTopColor": "transparent",
+            "borderTopWidth": 1,
+            "display": "flex",
+            "flex": 0.3333333333333333,
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingVertical": 8,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "white",
+              "fontFamily": "Roboto-Medium",
+              "fontSize": 16,
+            }
+          }
+        >
+          MOODS
         </Text>
       </View>
     </View>
