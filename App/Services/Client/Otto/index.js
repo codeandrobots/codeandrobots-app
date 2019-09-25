@@ -98,10 +98,13 @@ export default class Otto {
     this.stop(100)
   }
 
-  doSkill = (index) => {
-    const cmd = this.getConfig().skills[index].cmd
-    this.sendCommand(cmd)
-    this.stop(DELAY)
+  doSkill = (category, index) => {
+    const skill = this.getConfig().skills.find(skill => skill.category === category)
+    if (skill && skill.items.length > index) {
+      const cmd = skill.items[index].cmd
+      this.sendCommand(cmd)
+      this.stop(DELAY)
+    }
   }
 
   run = (instructions) => {

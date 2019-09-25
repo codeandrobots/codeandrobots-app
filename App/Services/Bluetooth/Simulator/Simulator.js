@@ -6,17 +6,21 @@ export default class Simulator {
   devices = [
     {
       id: '1',
-      name: 'HC-06'
+      name: 'Otto'
     },
     {
       id: '2',
+      name: 'Nybble'
+    },
+    {
+      id: '3',
       name: 'Laptop'
     }
   ]
 
   unpairedDevices = [
     {
-      id: '3',
+      id: '4',
       name: 'Echo'
     }
   ]

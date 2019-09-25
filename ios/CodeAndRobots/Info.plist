@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.1</string>
+	<string>1.0.4</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
@@ -34,7 +34,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>4</string>
+	<string>7</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LSRequiresIPhoneOS</key>
@@ -70,6 +70,8 @@
 	<key>NSMicrophoneUsageDescription</key>
 	<string>This app uses the microphone to record audio.</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>This app uses bluetooth to connect to devices.</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
 	<string>This app uses bluetooth to connect to devices.</string>
 	<key>UIAppFonts</key>
 	<array>

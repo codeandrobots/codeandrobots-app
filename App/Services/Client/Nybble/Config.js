@@ -40,14 +40,19 @@ export default {
     }
   },
   skills: [
-    { title: 'Rest', cmd: 'krest' },
-    { title: 'Balance', cmd: 'kbalance' },
-    { title: 'Sit', cmd: 'ksit' },
-    { title: 'Hi', cmd: 'khi' },
-    { title: 'Stretch', cmd: 'kstr' },
-    { title: 'Pee', cmd: 'kpee' },
-    { title: 'Push Up', cmd: 'kpu' },
-    { title: 'Turbo', cmd: 'ktb' },
-    { title: 'Recover', cmd: 'krc' }
+    {
+      category: 'Skills',
+      items: [
+        { title: 'Rest', cmd: 'krest' },
+        { title: 'Balance', cmd: 'kbalance' },
+        { title: 'Sit', cmd: 'ksit' },
+        { title: 'Hi', cmd: 'khi' },
+        { title: 'Stretch', cmd: 'kstr' },
+        { title: 'Pee', cmd: 'kpee' },
+        { title: 'Push Up', cmd: 'kpu' },
+        { title: 'Turbo', cmd: 'ktb' },
+        { title: 'Recover', cmd: 'krc' }
+      ]
+    }
   ]
 }

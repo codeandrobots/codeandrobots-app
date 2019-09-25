@@ -10,6 +10,10 @@ import { notPossibleInSimulator } from 'App/Services/Alerts'
 import Screen from './Screen'
 
 export class SettingsContainer extends Component {
+  onChooseRobotPress = () => {
+    this.props.navigation.navigate('WhichRobotScreen', { hideSkip: true })
+  }
+
   onShareAppPress = () => {
     const title = appName()
     Share.share({
@@ -81,6 +85,7 @@ export class SettingsContainer extends Component {
           this.screen = ref
         }}
         {...this.props}
+        onChooseRobotPress={this.onChooseRobotPress}
         onShareAppPress={this.onShareAppPress}
         onFeedbackPress={this.onFeedbackPress}
         onFAQPress={this.onFAQPress}

@@ -14,6 +14,6 @@ export default StyleSheet.create({
   },
   text: {
     ...Fonts.style.normalBold,
-    color: Colors.white
+    color: Colors.primary
   }
 })

@@ -1,5 +1,6 @@
 // Import your stories here
 
+import './BottomTabs.story'
 import './Card.story'
 import './Modal.story'
 import './Carousel.story'

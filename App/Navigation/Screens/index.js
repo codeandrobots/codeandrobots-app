@@ -1,6 +1,4 @@
-import React from 'react'
 import { Start, Web } from 'App/Containers'
-import { NavButton } from 'App/Components/Buttons'
 import {
   Home,
   Rate,
@@ -34,7 +32,8 @@ export default {
   HomeScreen: {
     screen: Home,
     navigationOptions: ({navigation}) => ({
-      title: 'Code & Robots'
+      title: 'Code & Robots',
+      headerLeft: null
     })
   },
   RateScreen: {
@@ -129,11 +128,8 @@ export default {
   },
   OnboardingScreen: {
     screen: Onboarding,
-    navigationOptions: (navigation) => {
-      const { navigate } = navigation.navigation
-      return {
-        headerRight: <NavButton onPress={() => navigate('HomeScreen')} text='Skip' />
-      }
-    }
+    navigationOptions: ({navigation}) => ({
+      title: null
+    })
   }
 }

@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WhichRobot Component renders correctly 1`] = `
+<Container>
+  <List
+    linedRows={true}
+    scrollable={true}
+  >
+    <CardListItem
+      image={
+        Object {
+          "process": [Function],
+        }
+      }
+      onPress={[Function]}
+      text="The open source robot that you can build yourself"
+      title="Otto DIY"
+    />
+    <CardListItem
+      image={
+        Object {
+          "process": [Function],
+        }
+      }
+      onPress={[Function]}
+      text="The world's cutest open source robotic kitten"
+      title="Nybble"
+    />
+    <CardListItem
+      image={
+        Object {
+          "process": [Function],
+        }
+      }
+      onPress={[Function]}
+      text="No robot, no problem, simulator to the rescue"
+      title="Robot Simulator"
+    />
+  </List>
+  <Footer>
+    <Card
+      text="Choose the robot you want to play with"
+    />
+  </Footer>
+</Container>
+`;

@@ -9,7 +9,9 @@ export default StyleSheet.create({
   footer: {
     ...Styles.footer,
     paddingTop: 0,
-    paddingBottom: (isIphoneX()) ? Metrics.unit : 0,
+    paddingBottom: (isIphoneX()) ? Metrics.unit * 2 : 0
+  },
+  view: {
     paddingHorizontal: Metrics.unit
   },
   skills: {

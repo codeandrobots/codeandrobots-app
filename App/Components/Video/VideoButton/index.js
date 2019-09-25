@@ -14,7 +14,7 @@ export default class VideoButton extends Component {
   }
 
   render () {
-    const { size = 'small', disabled = false, onPress, style = {} } = this.props
+    const { size, disabled = false, onPress, style = {} } = this.props
     const isSmall = (size === 'small')
     const styles = {
       button: [

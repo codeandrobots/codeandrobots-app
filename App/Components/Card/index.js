@@ -2,11 +2,9 @@ import React, { Component } from 'react'
 import { StyleSheet, View, Image, Text } from 'react-native'
 import PropTypes from 'prop-types'
 
-import Video from 'react-native-video'
-
 import { getImageSize } from 'App/Services/ImageUtils'
 
-import { TouchableOpacity, Button, Link, IconButton, Icon } from 'App/Components'
+import { Button, Link, Video } from 'App/Components'
 
 import { Metrics } from 'App/Themes'
 
@@ -29,7 +27,6 @@ export default class Card extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      paused: true,
       imageWidth: 0,
       imageHeight: 0
     }
@@ -50,21 +47,6 @@ export default class Card extends Component {
     this._isMounted = false
   }
 
-  onVideoToggle = () => {
-    const { paused } = this.state
-    this.setState({paused: !paused})
-  }
-
-  onVideoEnd = (data) => {
-    this.setState({paused: true}, () => {
-      this.player.seek(0)
-    })
-  }
-
-  onVideoError = (e) => {
-    console.log(e)
-  }
-
   render () {
     const {
       style = {},
@@ -80,7 +62,7 @@ export default class Card extends Component {
       onLinkPress = () => {}
     } = this.props
 
-    const { paused, imageWidth, imageHeight } = this.state
+    const { imageWidth, imageHeight } = this.state
     const imageStyle = (imageWidth > 0)
       ? {width: imageWidth, height: imageHeight}
       : undefined
@@ -93,32 +75,11 @@ export default class Card extends Component {
           </View>
         )}
         {!image && video && (
-          <TouchableOpacity style={s.videoView} onPress={this.onVideoToggle}>
-            {paused && (
-              <IconButton
-                style={{button: StyleSheet.flatten(s.videoButton)}}
-                onPress={this.onVideoToggle}>
-                <Icon
-                  name='play'
-                  size={24}
-                  style={{marginLeft: 4}} />
-              </IconButton>
-            )}
-            <Video
-              ref={(ref) => { this.player = ref }}
-              paused={paused}
-              source={video}
-              resizeMode='cover'
-              ignoreSilentSwitch={'ignore'}
-              progressUpdateInterval={100.0}
-              onEnd={this.onVideoEnd}
-              onError={this.onVideoError}
-              style={s.videoPlayer} />
-          </TouchableOpacity>
+          <Video video={video} />
         )}
         {title && (
           <View style={[s.titleView, (textAlign === 'center') ? s.centered : s.titleView_padded, style.titleView]}>
-            <Text style={[s.text, (textAlign === 'center') ? s.text_center : null]}>{title}</Text>
+            <Text style={[s.titleText, (textAlign === 'center') ? s.text_center : null]}>{title}</Text>
           </View>
         )}
         {text && (

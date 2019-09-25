@@ -24,13 +24,18 @@ const slider = {
 
 const skills = {
   default: [
-    {title: 'Jump'},
-    {title: 'Shuffle'},
-    {title: 'Bow'},
-    {title: 'Spin'},
-    {title: 'Dance'},
-    {title: 'Moonwalk'},
-    {title: 'Chill'}
+    {
+      category: 'Skills',
+      items: [
+        {title: 'Jump'},
+        {title: 'Shuffle'},
+        {title: 'Bow'},
+        {title: 'Spin'},
+        {title: 'Dance'},
+        {title: 'Moonwalk'},
+        {title: 'Chill'}
+      ]
+    }
   ],
   otto: OttoConfig.skills,
   nybble: NybbleConfig.skills

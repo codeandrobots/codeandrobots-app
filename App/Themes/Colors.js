@@ -2,7 +2,7 @@
 export const palette = {
   transparent: 'transparent',
   white: 'white',
-  white_translucent: 'rgba(255, 255, 255, 0.8)',
+  whiteTranslucent: 'rgba(255, 255, 255, 0.8)',
   black: 'black',
   red: 'red',
   offwhite: '#FAFAFA',
@@ -12,6 +12,7 @@ export const palette = {
   lightgrey: '#ECECEC',
   primary: '#F9BC62', // Orange yellow
   primaryDark: '#354052', // Almost black
+  primaryDarkTranslucent: 'rgba(53, 64, 82, 0.5)', // Almost black with 50% opacity
   primaryTranslucent: '#FCE2BA', // White on orange yellow with 50% opacity
   error: '#E62117' // red
 }

@@ -55,6 +55,26 @@ glog logging module didn't install correctly.
 
 Copy the [glog-0.3.4](https://github.com/codeandrobots/codeandrobots-app/files/3320286/glog-0.3.4.zip) directory into ...node_modules/react-native/third-party
 
+### unable to resolve module ./index
+
+If you see the error "unable to resolve module ./index" then try the following:
+
+1. Reinstall dependencies
+  * ```cd codeandrobots-app```
+  * Mac or Linux
+    * ```rm -rf node-modules```
+  * Windows
+    * Delete the ```codeandrobots-app\node-modules``` folder manually in File Explorer
+  * ```yarn install --ignore-engines```
+
+2. Start the React Native bundler inside a **NEW** terminal or command prompt
+  * ```cd codeandrobots-app```
+  * ```npm cache clean```
+  * ```npm start -- --reset-cache```
+
+3. Run the app in a different terminal or command prompt
+  * ```react-native run-android --variant=devDebug```
+
 ### Troubleshooting - Windows
 
 #### Failed to create directory

@@ -52,9 +52,13 @@ export default class Screen extends Component {
       ? {...params[0], labels: params[0].values}
       : null
 
-    const itemsByRow = splitItemsByRow(skills, showSkillIcons)
+    const itemsByRow = (skills && skills.length > 0)
+      ? splitItemsByRow(skills[0].items, showSkillIcons)
+      : []
     const skillRowHeight = (showSkillIcons) ? 40 : 20
-    const footerHeight = 200 + (itemsByRow.length * skillRowHeight)
+    const skillCategoryHeight = (skills && skills.length > 1) ? 40 : 0
+    const footerHeight =
+      200 + (itemsByRow.length * skillRowHeight) + skillCategoryHeight
 
     return (
       <Container>

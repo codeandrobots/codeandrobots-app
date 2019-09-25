@@ -38,7 +38,7 @@ const connect = async (device) => {
   // Wait 2 seconds to mimic connecting
   await new Promise(resolve => setTimeout(resolve, 2000))
 
-  if (device && device.id === '2') {
+  if (device && device.name === 'Laptop') {
     return {connected: false, error: {message: 'Not able to connect'}}
   }
 
@@ -47,6 +47,7 @@ const connect = async (device) => {
 }
 
 const disconnect = async () => {
+  simulator.connectedDevice = null
   return {error: null}
 }
 
