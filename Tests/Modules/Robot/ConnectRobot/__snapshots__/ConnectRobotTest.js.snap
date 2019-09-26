@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConnectRobot Component renders correctly 1`] = `
+<Container>
+  <ScrollView>
+    <Card
+      image={
+        Object {
+          "process": [Function],
+        }
+      }
+      style={
+        Object {
+          "textView": Object {
+            "marginBottom": 0,
+          },
+        }
+      }
+      text="The robot that says hi"
+      textAlign="left"
+      title="Hello"
+    />
+    <Separator />
+    <Links>
+      <Link
+        centered={true}
+        key="0"
+        onPress={[Function]}
+        style={
+          Object {
+            "text": Object {
+              "fontSize": 16,
+            },
+            "view": Object {
+              "marginVertical": 4,
+            },
+          }
+        }
+        text="Build Instructions"
+        uppercase={false}
+      />
+      <Link
+        centered={true}
+        key="1"
+        onPress={[Function]}
+        style={
+          Object {
+            "text": Object {
+              "fontSize": 16,
+            },
+            "view": Object {
+              "marginVertical": 4,
+            },
+          }
+        }
+        text="Website"
+        uppercase={false}
+      />
+    </Links>
+  </ScrollView>
+  <Footer
+    style={
+      Object {
+        "paddingTop": 34,
+      }
+    }
+  >
+    <Card
+      button="Connect"
+      onPress={[Function]}
+    />
+  </Footer>
+</Container>
+`;

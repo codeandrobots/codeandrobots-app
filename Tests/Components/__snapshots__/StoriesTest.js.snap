@@ -13405,6 +13405,27 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
 </RCTSafeAreaView>
 `;
 
+exports[`Storyshots Separator Default 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+>
+  <View
+    style={
+      Array [
+        Object {
+          "borderBottomColor": "#ECECEC",
+          "borderBottomWidth": 1,
+          "flexDirection": "row",
+          "marginHorizontal": 16,
+          "marginVertical": 16,
+        },
+        undefined,
+      ]
+    }
+  />
+</RCTSafeAreaView>
+`;
+
 exports[`Storyshots Video Default 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}

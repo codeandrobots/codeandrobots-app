@@ -13,9 +13,14 @@ import {
   Lessons,
   GetStarted,
   Lab,
-  Robot,
+  WhichRobot,
   BuildRobot,
-  Onboarding} from 'App/Modules'
+  ConnectRobot,
+  Onboarding
+} from 'App/Modules'
+import {
+  dynamicTitleNavigationOptions
+} from 'App/Navigation/NavigationOptions'
 
 export default {
   StartScreen: {
@@ -48,9 +53,7 @@ export default {
   },
   ConnectScreen: {
     screen: Connect,
-    navigationOptions: ({navigation}) => ({
-      title: 'Connect'
-    })
+    navigationOptions: dynamicTitleNavigationOptions
   },
   PlayScreen: {
     screen: Play,
@@ -60,9 +63,7 @@ export default {
   },
   PlayerScreen: {
     screen: Player,
-    navigationOptions: ({navigation}) => ({
-      title: 'Player'
-    })
+    navigationOptions: dynamicTitleNavigationOptions
   },
   DriveScreen: {
     screen: Drive,
@@ -107,7 +108,7 @@ export default {
     })
   },
   WhichRobotScreen: {
-    screen: Robot,
+    screen: WhichRobot,
     navigationOptions: ({navigation}) => ({
       title: 'Which Robot?'
     })
@@ -117,6 +118,10 @@ export default {
     navigationOptions: ({navigation}) => ({
       title: 'Build Instructions'
     })
+  },
+  ConnectRobotScreen: {
+    screen: ConnectRobot,
+    navigationOptions: dynamicTitleNavigationOptions
   },
   OnboardingScreen: {
     screen: Onboarding,

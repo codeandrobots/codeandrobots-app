@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Linking } from 'react-native'
 import { connect } from 'react-redux'
 
-import { setRobot } from 'App/Services/Client'
+import Client, { setRobot } from 'App/Services/Client'
 import Bluetooth from 'App/Services/Bluetooth'
 import WebSocket from 'App/Services/WebSocket'
 import { isSimulator } from 'App/Services/Properties'
@@ -13,6 +13,7 @@ import Screen from './Screen'
 export class ConnectContainer extends Component {
   constructor (props) {
     super(props)
+    this.client = new Client()
     this.socket = WebSocket.getInstance()
     const instructions = `To view the simulator, open the following link on another device (e.g. your laptop):\ncodeandrobots.com/simulator?room=${this.socket.room}`
     this.state = {
@@ -33,8 +34,14 @@ export class ConnectContainer extends Component {
     const { state } = this.props.navigation
     const robot = state && state.params && state.params.robot
     if (robot) {
-      setRobot(robot)
+      await setRobot(robot)
     }
+    const config = (robot)
+      ? await this.client.getConfig()
+      : null
+    this.props.navigation.setParams({
+      title: (config != null) ? `Connect ${config.name}` : 'Connect'}
+    )
     const connectTo = (robot)
       ? (robot === 'simulator')
         ? 'simulator'

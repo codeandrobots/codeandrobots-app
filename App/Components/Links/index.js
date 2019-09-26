@@ -7,12 +7,18 @@ export { default as Link } from './Link'
 
 export class Links extends Component {
   render () {
-    const { style = undefined } = this.props
+    const { style = {} } = this.props
     const children = React.Children.map(this.props.children, child => {
-      return React.cloneElement(child, { style: s.link })
+      const style = {
+        view: {
+          ...s.link
+        },
+        ...child.props.style
+      }
+      return React.cloneElement(child, { style })
     })
     return (
-      <View style={style}>
+      <View style={style.view}>
         {children}
       </View>
     )

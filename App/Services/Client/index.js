@@ -12,9 +12,9 @@ const simulator = new Simulator()
 const otto = new Otto()
 const nybble = new Nybble()
 
-export const setRobot = async (robot) => {
-  if (robot.name !== robot) {
-    robot.name = robot
+export const setRobot = async (robotName) => {
+  if (robot.name !== robotName) {
+    robot.name = robotName
     const connectedToBluetooth = await isConnectedToBluetooth()
     if (connectedToBluetooth) {
       // Robot changed so best to disconnect
@@ -38,23 +38,26 @@ export const isConnected = async () => {
 
 export default class Client {
   getClient = async () => {
-    const connectedToBluetooth = await isConnectedToBluetooth()
-    if (connectedToBluetooth) {
-      const connnectedDevice = Bluetooth.getConnectedDevice()
-      if (robot.name === 'otto') {
-        return otto
-      } else if (robot.name === 'nybble') {
-        return nybble
-      } else {
+    if (robot.name === 'otto') {
+      return otto
+    } else if (robot.name === 'nybble') {
+      return nybble
+    } else if (robot.name === 'simulator') {
+      return simulator
+    } else {
+      // Get client based on connection if possible
+      const connectedToBluetooth = await isConnectedToBluetooth()
+      if (connectedToBluetooth) {
+        const connnectedDevice = Bluetooth.getConnectedDevice()
         const isNybble = connnectedDevice != null &&
           connnectedDevice.name != null &&
           connnectedDevice.name.toLowerCase().startsWith('nybble')
         return (isNybble) ? nybble : otto
+      } else if (isConnectedToSocket()) {
+        return simulator
+      } else {
+        return null
       }
-    } else if (isConnectedToSocket()) {
-      return simulator
-    } else {
-      return null
     }
   }
 

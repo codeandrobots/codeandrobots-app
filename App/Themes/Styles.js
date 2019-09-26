@@ -30,6 +30,13 @@ export const Styles = {
     alignItems: 'center',
     width: '100%'
   },
+  separator: {
+    flexDirection: 'row',
+    borderBottomColor: Colors.lightgrey,
+    borderBottomWidth: 1,
+    marginVertical: Metrics.unit * 2,
+    marginHorizontal: Metrics.unit * 2
+  },
   footer: {
     position: 'absolute',
     bottom: 0,
