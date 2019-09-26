@@ -123,7 +123,7 @@ export default {
   ConnectRobotScreen: {
     screen: ConnectRobot,
     navigationOptions: ({navigation}) => ({
-      title: '<Otto DIY/>'
+      title: 'Connect'
     })
   },
   OnboardingScreen: {
