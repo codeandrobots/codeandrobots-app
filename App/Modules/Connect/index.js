@@ -33,7 +33,7 @@ export class ConnectContainer extends Component {
     const { state } = this.props.navigation
     const robot = state && state.params && state.params.robot
     if (robot) {
-      setRobot(robot)
+      await setRobot(robot)
     }
     const connectTo = (robot)
       ? (robot === 'simulator')

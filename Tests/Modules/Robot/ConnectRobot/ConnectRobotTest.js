@@ -9,14 +9,25 @@ import Screen from 'App/Modules/Robot/ConnectRobot/Screen'
 describe('ConnectRobot', () => {
   let wrapper
 
+  const links = [
+    {
+      title: 'Build Instructions',
+      url: 'http://hellobot.com/build'
+    },
+    {
+      title: 'Website',
+      url: 'http://hellobot.com'
+    }
+  ]
+
   beforeEach(() => {
     wrapper = shallow(
       <Screen
         navigation={{navigate: () => {}}}
         image={Images.hello}
-        text='Let`s get connected'
         title='Hello'
-        links={['Build Instructions', 'Website']}
+        text='The robot that says hi'
+        links={links}
         onLinkPress={() => {}}
         onConnectPress={() => {}}
         onPress={() => {}} />)

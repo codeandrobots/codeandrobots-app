@@ -1,32 +1,60 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { Images } from 'App/Themes'
+import Client, { setRobot } from 'App/Services/Client'
 import ConnectRobotScreen from './Screen'
 
 export class ConnectRobotContainer extends Component {
-  onConnectPress = () => {
-    // TODO
+  constructor (props) {
+    super(props)
+    this.client = new Client()
+    this.state = {
+      robot: null,
+      config: null
+    }
   }
 
-  onLinkPress = () => {
-    // TODO
+  async componentWillMount () {
+    const { state } = this.props.navigation
+    const robot = state && state.params && state.params.robot
+    if (robot) {
+      await setRobot(robot)
+      const config = await this.client.getConfig()
+      this.setState({ robot, config })
+    }
+  }
+
+  onConnect = () => {
+    this.props.navigation.navigate('HomeScreen')
+  }
+
+  onConnectPress = () => {
+    const { robot } = this.state
+    this.props.navigation.navigate('ConnectScreen', {
+      robot,
+      onDone: this.onConnect
+    })
+  }
+
+  onLinkPress = (link) => {
+    this.props.navigation.navigate('WebScreen', { source: link.url, title: link.title })
   }
 
   render () {
-    const image = Images.hello
-    const text = 'Text'
-    const title = 'Title'
-    const links = ['Build instructions', 'Website']
+    const { robot, config } = this.state
+    if (!robot || !config) {
+      return null
+    }
+
     return (
       <ConnectRobotScreen
         ref={(ref) => {
           this.screen = ref
         }}
-        image={image}
-        text={text}
-        title={title}
-        links={links}
+        image={config.image}
+        title={config.name}
+        text={config.description}
+        links={config.links}
         onLinkPress={this.onLinkPress}
         onConnectPress={this.onConnectPress}
         {...this.props}

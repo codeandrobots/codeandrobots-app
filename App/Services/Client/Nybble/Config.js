@@ -1,3 +1,5 @@
+import { Images } from 'App/Themes'
+
 export const Gaits = {
   Crawl: 0,
   Walk: 1,
@@ -6,6 +8,22 @@ export const Gaits = {
 
 export default {
   name: 'Nybble',
+  image: Images.robots.nybble,
+  description: 'The world\'s cutest open source robotic kitten',
+  links: [
+    {
+      title: 'Build Instructions',
+      url: 'https://docs.google.com/document/d/1DPbqiWkSWnGqmX-0FWCXq34XgnmIYZHJG8xMl52ginU'
+    },
+    {
+      title: 'Build Video',
+      url: 'https://www.youtube.com/playlist?list=PLHMFXft_rV6MJ-BhDN-O5I_u4YeAie30n'
+    },
+    {
+      title: 'Website',
+      url: 'https://www.petoi.com'
+    }
+  ],
   connection: { type: 'bluetooth' },
   features: {
     drive: true,

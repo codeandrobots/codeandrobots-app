@@ -16,7 +16,7 @@ exports[`ConnectRobot Component renders correctly 1`] = `
           },
         }
       }
-      text="Let\`s get connected"
+      text="The robot that says hi"
       textAlign="left"
       title="Hello"
     />

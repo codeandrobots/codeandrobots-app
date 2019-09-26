@@ -22,10 +22,16 @@ export class WhichRobotContainer extends Component {
   }
 
   onPress = (robot) => {
-    this.props.navigation.navigate('ConnectScreen', {
-      robot,
-      onDone: this.onConnect
-    })
+    if (robot === 'simulator') {
+      this.props.navigation.navigate('ConnectScreen', {
+        robot,
+        onDone: this.onConnect
+      })
+    } else {
+      this.props.navigation.navigate('ConnectRobotScreen', {
+        robot
+      })
+    }
   }
 
   render () {

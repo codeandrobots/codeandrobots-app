@@ -7,7 +7,23 @@ export const Speed = {
 }
 
 export default {
-  name: 'Otto',
+  name: 'Otto DIY',
+  image: Images.robots.otto,
+  description: 'The open source robot that you can build yourself',
+  links: [
+    {
+      title: 'Build Instructions',
+      url: 'https://wikifactory.com/+OttoDIY/otto-diy-plus'
+    },
+    {
+      title: 'Build Video',
+      url: 'https://youtu.be/8R6thwyIeb8'
+    },
+    {
+      title: 'Website',
+      url: 'https://www.ottodiy.com'
+    }
+  ],
   connection: { type: 'bluetooth' },
   features: {
     drive: true,
