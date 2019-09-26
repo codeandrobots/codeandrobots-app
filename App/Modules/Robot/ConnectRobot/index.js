@@ -20,6 +20,7 @@ export class ConnectRobotContainer extends Component {
     if (robot) {
       await setRobot(robot)
       const config = await this.client.getConfig()
+      this.props.navigation.setParams({title: config.name})
       this.setState({ robot, config })
     }
   }

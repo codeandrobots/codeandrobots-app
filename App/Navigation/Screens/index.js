@@ -18,6 +18,9 @@ import {
   ConnectRobot,
   Onboarding
 } from 'App/Modules'
+import {
+  dynamicTitleNavigationOptions
+} from 'App/Navigation/NavigationOptions'
 
 export default {
   StartScreen: {
@@ -50,9 +53,7 @@ export default {
   },
   ConnectScreen: {
     screen: Connect,
-    navigationOptions: ({navigation}) => ({
-      title: 'Connect'
-    })
+    navigationOptions: dynamicTitleNavigationOptions
   },
   PlayScreen: {
     screen: Play,
@@ -62,9 +63,7 @@ export default {
   },
   PlayerScreen: {
     screen: Player,
-    navigationOptions: ({navigation}) => ({
-      title: 'Player'
-    })
+    navigationOptions: dynamicTitleNavigationOptions
   },
   DriveScreen: {
     screen: Drive,
@@ -122,9 +121,7 @@ export default {
   },
   ConnectRobotScreen: {
     screen: ConnectRobot,
-    navigationOptions: ({navigation}) => ({
-      title: 'Connect'
-    })
+    navigationOptions: dynamicTitleNavigationOptions
   },
   OnboardingScreen: {
     screen: Onboarding,

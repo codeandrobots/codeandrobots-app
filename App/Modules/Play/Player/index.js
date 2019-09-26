@@ -20,8 +20,10 @@ export class PlayerContainer extends Component {
     const connected = await isConnected()
     if (connected) {
       const config = await this.client.getConfig()
+      this.props.navigation.setParams({title: config.name})
       this.setState({ config })
     } else {
+      this.props.navigation.setParams({title: 'Player'})
       this.setState({showNotConnectedModal: true})
     }
   }
