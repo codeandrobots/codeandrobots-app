@@ -1,6 +1,5 @@
 // Import your stories here
 
-import './BottomTabs.story'
 import './Card.story'
 import './Modal.story'
 import './Carousel.story'
@@ -22,4 +21,5 @@ import './Instruction.story'
 import './InstructionList.story'
 import './CodeLabNav.story'
 import './BottomNav.story'
+import './BottomTabs.story'
 import './Web.story'
