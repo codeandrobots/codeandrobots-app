@@ -126,10 +126,6 @@ const writeln = async (s) => {
   return write(s + '\r')
 }
 
-const stopService = async () => {
-  await disconnect()
-}
-
 export default {
   isEnabled,
   isConnected,
@@ -140,6 +136,5 @@ export default {
   connect,
   disconnect,
   write,
-  writeln,
-  stopService
+  writeln
 }
