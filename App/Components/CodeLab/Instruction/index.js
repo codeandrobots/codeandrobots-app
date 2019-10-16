@@ -18,9 +18,8 @@ export default class Instruction extends Component {
 
   render () {
     const {
-      style = undefined,
-      type = 'action',
-      iconStyle = undefined,
+      style = {},
+      type,
       iconSet,
       icon,
       iconSize = 24,
@@ -38,22 +37,33 @@ export default class Instruction extends Component {
       case 'data':
         viewStyle.backgroundColor = Colors.codeLab.data
         break
-      default:
+      case 'action':
         viewStyle.backgroundColor = Colors.codeLab.action
+        break
+      default:
+        viewStyle.backgroundColor = Colors.codeLab.default
     }
 
+    const titleStyle = (type)
+      ? [s.title, style.title]
+      : [s.title, s.title_default, style.title]
+
+    const rightIconColor = (type)
+      ? Colors.whiteTranslucent
+      : Colors.primary
+
     return (
-      <View style={[s.view, viewStyle, style]}>
+      <View style={[s.view, viewStyle, style.view]}>
         {icon && (
-          <Icon set={iconSet} name={icon} size={iconSize} color={Colors.white} style={[s.icon, iconStyle]} />
+          <Icon set={iconSet} name={icon} size={iconSize} color={Colors.white} style={[s.icon, style.icon]} />
         )}
-        <Text style={s.title}>{title}</Text>
+        <Text style={titleStyle}>{title}</Text>
         <TouchableOpacity onPress={onClose}>
           <Icon
             set='Material'
             name='close'
             size={24}
-            color={Colors.whiteTranslucent}
+            color={rightIconColor}
             style={s.close} />
         </TouchableOpacity>
       </View>

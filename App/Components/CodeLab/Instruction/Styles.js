@@ -24,10 +24,12 @@ export default StyleSheet.create({
   title: {
     flex: 1,
     ...Styles.text,
-    ...Styles.text_bold,
     fontSize: Fonts.size.large,
     color: Colors.white,
     margin: Metrics.unit / 2
+  },
+  title_default: {
+    color: Colors.primaryDark
   },
   close: {
     marginTop: 3,

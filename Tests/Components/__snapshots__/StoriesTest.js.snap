@@ -2959,14 +2959,16 @@ exports[`Storyshots Instruction Action 1`] = `
     </Text>
     <Text
       style={
-        Object {
-          "color": "white",
-          "flex": 1,
-          "fontFamily": "Roboto-Bold",
-          "fontSize": 18,
-          "fontWeight": "bold",
-          "margin": 4,
-        }
+        Array [
+          Object {
+            "color": "white",
+            "flex": 1,
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 18,
+            "margin": 4,
+          },
+          undefined,
+        ]
       }
     >
       Move Up
@@ -3047,14 +3049,16 @@ exports[`Storyshots Instruction Control 1`] = `
   >
     <Text
       style={
-        Object {
-          "color": "white",
-          "flex": 1,
-          "fontFamily": "Roboto-Bold",
-          "fontSize": 18,
-          "fontWeight": "bold",
-          "margin": 4,
-        }
+        Array [
+          Object {
+            "color": "white",
+            "flex": 1,
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 18,
+            "margin": 4,
+          },
+          undefined,
+        ]
       }
     >
       If
@@ -3160,14 +3164,16 @@ exports[`Storyshots Instruction Data 1`] = `
     </Text>
     <Text
       style={
-        Object {
-          "color": "white",
-          "flex": 1,
-          "fontFamily": "Roboto-Bold",
-          "fontSize": 18,
-          "fontWeight": "bold",
-          "margin": 4,
-        }
+        Array [
+          Object {
+            "color": "white",
+            "flex": 1,
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 18,
+            "margin": 4,
+          },
+          undefined,
+        ]
       }
     >
       Set Color
@@ -3193,6 +3199,99 @@ exports[`Storyshots Instruction Data 1`] = `
           Array [
             Object {
               "color": "rgba(255, 255, 255, 0.8)",
+              "fontSize": 24,
+            },
+            Object {
+              "marginTop": 3,
+              "padding": 4,
+            },
+            Object {
+              "fontFamily": "Material Design Icons",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`Storyshots Instruction Default 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#F9BC62",
+          "borderRadius": 4,
+          "elevation": 1,
+          "flexDirection": "row",
+          "margin": 8,
+          "paddingHorizontal": 8,
+          "paddingVertical": 4,
+          "shadowColor": "#000",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 0.2,
+          "shadowRadius": 4,
+        },
+        Object {
+          "backgroundColor": "#FFFFFF",
+        },
+        undefined,
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "white",
+            "flex": 1,
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 18,
+            "margin": 4,
+          },
+          Object {
+            "color": "#354052",
+          },
+          undefined,
+        ]
+      }
+    >
+      Forwards
+    </Text>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": "#F9BC62",
               "fontSize": 24,
             },
             Object {
@@ -3273,14 +3372,16 @@ exports[`Storyshots Instruction Sensor 1`] = `
     </Text>
     <Text
       style={
-        Object {
-          "color": "white",
-          "flex": 1,
-          "fontFamily": "Roboto-Bold",
-          "fontSize": 18,
-          "fontWeight": "bold",
-          "margin": 4,
-        }
+        Array [
+          Object {
+            "color": "white",
+            "flex": 1,
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 18,
+            "margin": 4,
+          },
+          undefined,
+        ]
       }
     >
       Read Temperature
