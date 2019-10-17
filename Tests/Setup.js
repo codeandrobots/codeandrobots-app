@@ -136,6 +136,10 @@ jest.mock('global', () =>
   Object.assign(global, { window: { STORYBOOK_HOOKS_CONTEXT: '' } })
 )
 
+jest.mock('global', () =>
+  Object.assign(global, { window: { STORYBOOK_HOOKS_CONTEXT: '' } })
+)
+
 global.requestAnimationFrame = function (callback) {
   setTimeout(callback, 0)
 }
