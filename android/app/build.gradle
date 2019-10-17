@@ -168,6 +168,7 @@ android {
 }
 
 dependencies {
+    implementation project(':@terrylinla_react-native-sketch-canvas')
     implementation project(':react-native-webview')
     compile project(':react-native-ble-plx')
     compile project(':react-native-bluetooth-serial')

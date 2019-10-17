@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots BottomNav Default 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
       "backgroundColor": "#FAFAFA",
@@ -307,12 +306,11 @@ exports[`Storyshots BottomNav Default 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots BottomTabs Default 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
       "backgroundColor": "#FAFAFA",
@@ -486,12 +484,11 @@ exports[`Storyshots BottomTabs Default 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Button Default 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
       "margin": 16,
@@ -535,12 +532,11 @@ exports[`Storyshots Button Default 1`] = `
       </Text>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Button Disabled 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
       "margin": 16,
@@ -589,12 +585,11 @@ exports[`Storyshots Button Disabled 1`] = `
       </Text>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Button Player 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
       "margin": 16,
@@ -653,12 +648,11 @@ exports[`Storyshots Button Player 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Button Player Light 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
       "margin": 16,
@@ -726,13 +720,11 @@ exports[`Storyshots Button Player Light 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Card Atlas 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View>
     <View
       accessible={true}
@@ -834,30 +826,6 @@ exports[`Storyshots Card Atlas 1`] = `
           </View>
         </View>
       </View>
-      <react-native-video
-        ignoreSilentSwitch="ignore"
-        onEnd={[Function]}
-        onError={[Function]}
-        paused={true}
-        progressUpdateInterval={100}
-        resizeMode="cover"
-        source={
-          Object {
-            "process": [Function],
-          }
-        }
-        style={
-          Array [
-            Object {
-              "borderColor": "#F9BC62",
-              "borderRadius": 10,
-              "borderWidth": 1,
-              "height": 232,
-              "width": 343,
-            },
-          ]
-        }
-      />
     </View>
     <View
       style={
@@ -965,13 +933,11 @@ exports[`Storyshots Card Atlas 1`] = `
       </Text>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Card Hello 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View>
     <View
       style={
@@ -1109,12 +1075,11 @@ exports[`Storyshots Card Hello 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Carousel Default 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
       "backgroundColor": "#FAFAFA",
@@ -1311,12 +1276,11 @@ exports[`Storyshots Carousel Default 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Carousel Dilbert 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
       "backgroundColor": "#FAFAFA",
@@ -1554,13 +1518,11 @@ exports[`Storyshots Carousel Dilbert 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots CodeLab Nav Default 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     style={
       Array [
@@ -1769,12 +1731,11 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Icon Disabled 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
       "alignItems": "center",
@@ -1802,12 +1763,11 @@ exports[`Storyshots Icon Disabled 1`] = `
   >
     
   </Text>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Icon Robots Love Code 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
       "alignItems": "center",
@@ -1885,12 +1845,11 @@ exports[`Storyshots Icon Robots Love Code 1`] = `
       
     </Text>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots IconButton Disabled 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
       "alignItems": "center",
@@ -1992,12 +1951,11 @@ exports[`Storyshots IconButton Disabled 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots IconButton Heart 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
       "alignItems": "center",
@@ -2099,12 +2057,11 @@ exports[`Storyshots IconButton Heart 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots IconButton Large Home 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
       "alignItems": "center",
@@ -2197,12 +2154,11 @@ exports[`Storyshots IconButton Large Home 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Inputs Range Slider Light Theme 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
       "margin": 16,
@@ -2420,12 +2376,11 @@ exports[`Storyshots Inputs Range Slider Light Theme 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Inputs Range Slider with 3 Labels 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
       "margin": 16,
@@ -2628,12 +2583,11 @@ exports[`Storyshots Inputs Range Slider with 3 Labels 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Inputs Range Slider with 4 Labels 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
       "margin": 16,
@@ -2898,13 +2852,11 @@ exports[`Storyshots Inputs Range Slider with 4 Labels 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Instruction Action 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     style={
       Array [
@@ -3011,13 +2963,11 @@ exports[`Storyshots Instruction Action 1`] = `
       </Text>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Instruction Control 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     style={
       Array [
@@ -3099,13 +3049,11 @@ exports[`Storyshots Instruction Control 1`] = `
       </Text>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Instruction Data 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     style={
       Array [
@@ -3212,13 +3160,11 @@ exports[`Storyshots Instruction Data 1`] = `
       </Text>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Instruction Sensor 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     style={
       Array [
@@ -3325,12 +3271,11 @@ exports[`Storyshots Instruction Sensor 1`] = `
       </Text>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots InstructionList Default 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
       "backgroundColor": "#FAFAFA",
@@ -3356,12 +3301,11 @@ exports[`Storyshots InstructionList Default 1`] = `
       }
     />
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Joystick Default 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
       "alignItems": "center",
@@ -3461,13 +3405,11 @@ exports[`Storyshots Joystick Default 1`] = `
       }
     />
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Links Multiple 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View>
     <View
       accessible={true}
@@ -3544,13 +3486,11 @@ exports[`Storyshots Links Multiple 1`] = `
       </Text>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Links Single 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     accessible={true}
     isTVSelectable={true}
@@ -3587,13 +3527,11 @@ exports[`Storyshots Links Single 1`] = `
       CLICK ME
     </Text>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots List Default 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     style={
       Array [
@@ -4009,13 +3947,11 @@ exports[`Storyshots List Default 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots List Featured 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     style={
       Array [
@@ -4404,13 +4340,11 @@ exports[`Storyshots List Featured 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots List Games 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     style={
       Array [
@@ -4965,13 +4899,11 @@ exports[`Storyshots List Games 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots List Lessons 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     style={
       Array [
@@ -5478,13 +5410,11 @@ exports[`Storyshots List Lessons 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots List Robot List 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     style={
       Array [
@@ -6076,34 +6006,6 @@ exports[`Storyshots List Robot List 1`] = `
                   </View>
                 </View>
               </View>
-              <react-native-video
-                ignoreSilentSwitch="ignore"
-                onEnd={[Function]}
-                onError={[Function]}
-                paused={true}
-                progressUpdateInterval={100}
-                resizeMode="cover"
-                source={
-                  Object {
-                    "process": [Function],
-                  }
-                }
-                style={
-                  Array [
-                    Object {
-                      "borderColor": "#F9BC62",
-                      "borderRadius": 10,
-                      "borderWidth": 1,
-                      "height": 232,
-                      "width": 343,
-                    },
-                    Object {
-                      "height": 112,
-                      "width": 165,
-                    },
-                  ]
-                }
-              />
             </View>
           </View>
           <View
@@ -6188,13 +6090,11 @@ exports[`Storyshots List Robot List 1`] = `
       />
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots List Stats 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     style={
       Array [
@@ -6740,13 +6640,11 @@ exports[`Storyshots List Stats 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots ListHeader Default 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     style={
       Array [
@@ -6811,13 +6709,11 @@ exports[`Storyshots ListHeader Default 1`] = `
       />
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots ListHeader Todos 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     style={
       Array [
@@ -6893,13 +6789,11 @@ exports[`Storyshots ListHeader Todos 1`] = `
       />
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots ListItem Beep 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     accessible={true}
     isTVSelectable={true}
@@ -7091,13 +6985,11 @@ exports[`Storyshots ListItem Beep 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots ListItem CardListItem Image 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     accessible={true}
     isTVSelectable={true}
@@ -7218,13 +7110,11 @@ exports[`Storyshots ListItem CardListItem Image 1`] = `
       </Text>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots ListItem CardListItem Video 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     accessible={true}
     isTVSelectable={true}
@@ -7361,34 +7251,6 @@ exports[`Storyshots ListItem CardListItem Video 1`] = `
             </View>
           </View>
         </View>
-        <react-native-video
-          ignoreSilentSwitch="ignore"
-          onEnd={[Function]}
-          onError={[Function]}
-          paused={true}
-          progressUpdateInterval={100}
-          resizeMode="cover"
-          source={
-            Object {
-              "process": [Function],
-            }
-          }
-          style={
-            Array [
-              Object {
-                "borderColor": "#F9BC62",
-                "borderRadius": 10,
-                "borderWidth": 1,
-                "height": 232,
-                "width": 343,
-              },
-              Object {
-                "height": 112,
-                "width": 165,
-              },
-            ]
-          }
-        />
       </View>
     </View>
     <View
@@ -7460,13 +7322,11 @@ exports[`Storyshots ListItem CardListItem Video 1`] = `
       </Text>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots ListItem Compact 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     accessible={true}
     isTVSelectable={true}
@@ -7593,13 +7453,11 @@ exports[`Storyshots ListItem Compact 1`] = `
       </Text>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots ListItem Compact Disabled 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     accessible={true}
     isTVSelectable={true}
@@ -7731,13 +7589,11 @@ exports[`Storyshots ListItem Compact Disabled 1`] = `
       </Text>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots ListItem Compact No Icon 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     accessible={true}
     isTVSelectable={true}
@@ -7829,13 +7685,11 @@ exports[`Storyshots ListItem Compact No Icon 1`] = `
       </Text>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots ListItem Default 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     accessible={true}
     isTVSelectable={true}
@@ -7941,13 +7795,11 @@ exports[`Storyshots ListItem Default 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots ListItem Disabled 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     accessible={true}
     isTVSelectable={true}
@@ -8068,13 +7920,11 @@ exports[`Storyshots ListItem Disabled 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots ListItem Drive 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     accessible={true}
     isTVSelectable={true}
@@ -8257,13 +8107,11 @@ exports[`Storyshots ListItem Drive 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots ListItem Featured 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     accessible={true}
     isTVSelectable={true}
@@ -8372,13 +8220,11 @@ exports[`Storyshots ListItem Featured 1`] = `
       </Text>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots ListItem Featured Disabled 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     accessible={true}
     isTVSelectable={true}
@@ -8504,13 +8350,11 @@ exports[`Storyshots ListItem Featured Disabled 1`] = `
       </Text>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots ListItem Square 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     accessible={true}
     isTVSelectable={true}
@@ -8678,13 +8522,11 @@ exports[`Storyshots ListItem Square 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots ListItem Square Disabled 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     accessible={true}
     isTVSelectable={true}
@@ -8863,13 +8705,11 @@ exports[`Storyshots ListItem Square Disabled 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots ListItem Stat 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     style={
       Array [
@@ -8955,43 +8795,37 @@ exports[`Storyshots ListItem Stat 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots LoadingIndicator Default 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View>
     <ActivityIndicator
       animating={true}
-      color="#999999"
+      color="#E7E8E7"
       hidesWhenStopped={true}
       size="small"
     />
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots LoadingIndicator Large 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View>
     <ActivityIndicator
       animating={true}
-      color="#999999"
+      color="#E7E8E7"
       hidesWhenStopped={true}
       size="large"
     />
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots LoadingIndicator Red 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View>
     <ActivityIndicator
       animating={true}
@@ -9000,12 +8834,11 @@ exports[`Storyshots LoadingIndicator Red 1`] = `
       size="small"
     />
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Modal Default 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
       "backgroundColor": "#FAFAFA",
@@ -9126,12 +8959,11 @@ exports[`Storyshots Modal Default 1`] = `
       </View>
     </View>
   </Modal>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Modal Is Your Device Supported 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
       "backgroundColor": "#FAFAFA",
@@ -9287,12 +9119,11 @@ The aim of the Code & Robots app is to support all of the most popular robots an
       </View>
     </View>
   </Modal>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Modal Not Connected 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
       "backgroundColor": "#FAFAFA",
@@ -9495,12 +9326,11 @@ exports[`Storyshots Modal Not Connected 1`] = `
       </View>
     </View>
   </Modal>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Modal Not Ready 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
       "backgroundColor": "#FAFAFA",
@@ -9705,12 +9535,11 @@ The good news is you can follow along as this Beta version of the app develops o
       </View>
     </View>
   </Modal>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Modal Problems Connecting 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
       "backgroundColor": "#FAFAFA",
@@ -9908,59 +9737,56 @@ exports[`Storyshots Modal Problems Connecting 1`] = `
       </View>
     </View>
   </Modal>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots NavButton Default 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
-    accessibilityRole="button"
-    accessibilityStates={Array []}
-    accessible={true}
-    isTVSelectable={true}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "opacity": 1,
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
       }
     }
   >
     <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
-        Array [
-          Object {},
-        ]
+        Object {
+          "justifyContent": "center",
+          "marginHorizontal": 16,
+          "opacity": 1,
+        }
       }
     >
       <Text
         style={
-          Array [
-            Object {
-              "color": "#007AFF",
-              "fontSize": 18,
-              "padding": 8,
-              "textAlign": "center",
-            },
-          ]
+          Object {
+            "color": "#F9BC62",
+            "fontFamily": "Roboto-Bold",
+            "fontSize": 16,
+            "fontWeight": "bold",
+          }
         }
       >
         Done
       </Text>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Player Bottom Nav 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
       "backgroundColor": "#FAFAFA",
@@ -10730,12 +10556,11 @@ exports[`Storyshots Player Bottom Nav 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Player Bottom Nav Light 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
       "backgroundColor": "#FAFAFA",
@@ -11505,12 +11330,11 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Player Nybble Bottom Nav 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
       "backgroundColor": "#FAFAFA",
@@ -12274,12 +12098,11 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Player Otto Bottom Nav 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
       "backgroundColor": "#FAFAFA",
@@ -13402,13 +13225,11 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Separator Default 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     style={
       Array [
@@ -13423,13 +13244,11 @@ exports[`Storyshots Separator Default 1`] = `
       ]
     }
   />
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Video Default 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     accessible={true}
     isTVSelectable={true}
@@ -13530,38 +13349,12 @@ exports[`Storyshots Video Default 1`] = `
         </View>
       </View>
     </View>
-    <react-native-video
-      ignoreSilentSwitch="ignore"
-      onEnd={[Function]}
-      onError={[Function]}
-      paused={true}
-      progressUpdateInterval={100}
-      resizeMode="cover"
-      source={
-        Object {
-          "process": [Function],
-        }
-      }
-      style={
-        Array [
-          Object {
-            "borderColor": "#F9BC62",
-            "borderRadius": 10,
-            "borderWidth": 1,
-            "height": 232,
-            "width": 343,
-          },
-        ]
-      }
-    />
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Video Small 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<View>
   <View
     accessible={true}
     isTVSelectable={true}
@@ -13670,41 +13463,12 @@ exports[`Storyshots Video Small 1`] = `
         </View>
       </View>
     </View>
-    <react-native-video
-      ignoreSilentSwitch="ignore"
-      onEnd={[Function]}
-      onError={[Function]}
-      paused={true}
-      progressUpdateInterval={100}
-      resizeMode="cover"
-      source={
-        Object {
-          "process": [Function],
-        }
-      }
-      style={
-        Array [
-          Object {
-            "borderColor": "#F9BC62",
-            "borderRadius": 10,
-            "borderWidth": 1,
-            "height": 232,
-            "width": 343,
-          },
-          Object {
-            "height": 112,
-            "width": 165,
-          },
-        ]
-      }
-    />
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Storyshots Web Code&Robots 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
       "backgroundColor": "#FAFAFA",
@@ -13774,11 +13538,11 @@ exports[`Storyshots Web Code&Robots 1`] = `
     >
       <ActivityIndicator
         animating={true}
-        color="#999999"
+        color="#E7E8E7"
         hidesWhenStopped={true}
         size="large"
       />
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;

@@ -94,6 +94,14 @@ jest.mock('react-native-device-info', () => {
 
 jest.mock('ScrollView', () => jest.genMockFromModule('ScrollView'))
 
+jest.mock('Platform', () => {
+  const Platform = jest.requireActual('Platform')
+  Platform.OS = 'android'
+  return Platform
+})
+
+jest.mock('react-native-video', () => jest.genMockFromModule('react-native-video'))
+
 jest.mock('analytics-react-native', () => jest.genMockFromModule('analytics-react-native'))
 
 jest.mock('react-native-firebase', () => {
@@ -124,7 +132,9 @@ jest.mock('react-native-firebase', () => {
   }
 })
 
-jest.mock('react-native-video', () => 'react-native-video')
+jest.mock('global', () =>
+  Object.assign(global, { window: { STORYBOOK_HOOKS_CONTEXT: '' } })
+)
 
 global.requestAnimationFrame = function (callback) {
   setTimeout(callback, 0)
