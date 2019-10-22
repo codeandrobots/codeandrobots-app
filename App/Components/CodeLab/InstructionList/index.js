@@ -57,8 +57,9 @@ export default class InstructionList extends Component {
   }
 
   render () {
+    const {style = undefined} = this.props
     return (
-      <View style={s.container}>
+      <View style={[s.container, style]}>
         <SortableList
           style={s.list}
           contentContainerStyle={s.contentContainer}

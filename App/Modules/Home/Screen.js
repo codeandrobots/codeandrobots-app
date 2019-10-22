@@ -22,10 +22,10 @@ export default class Screen extends Component {
               button='Play'
               onPress={() => { onNavigatePress('PlayerScreen') }} />
             <ListItem
-              title='Discover'
+              title='Code Lab'
               text='Let’s see what you can do'
-              button='Discover'
-              onPress={() => { onNavigatePress('DiscoverScreen') }} />
+              button='Code'
+              onPress={() => { onNavigatePress('CodeLabScreen') }} />
             <ListItem
               title='Learn'
               text='You’ll be a guru in no time'

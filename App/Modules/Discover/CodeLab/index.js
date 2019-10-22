@@ -3,24 +3,47 @@ import { connect } from 'react-redux'
 import uuid from 'react-native-uuid'
 
 import Client, { isConnected } from 'App/Services/Client'
+import { NavButton } from 'App/Components'
 
 import Screen from './Screen'
 
 export class CodeLabContainer extends Component {
+  static navigationOptions = ({ navigation }) => {
+    const {params = {}} = navigation.state
+    return (params.headerRight)
+      ? { headerRight: params.headerRight }
+      : {}
+  }
+
   constructor (props) {
     super(props)
     this.client = new Client()
     this.order = null
     this.state = {
+      config: null,
       instructions: [],
       showNotConnectedModal: false
     }
   }
 
   async componentWillMount () {
+    this.props.navigation.setParams({
+      headerRight: <NavButton onPress={this.onRun} text='Run' />
+    })
     const connected = await isConnected()
-    if (!connected) {
+    if (connected) {
+      const config = await this.client.getConfig()
+      this.setState({ config })
+    } else {
       this.setState({showNotConnectedModal: true})
+    }
+  }
+
+  onConnect = async () => {
+    const connected = await isConnected()
+    if (connected) {
+      const config = await this.client.getConfig()
+      this.setState({ config })
     }
   }
 
@@ -55,7 +78,7 @@ export class CodeLabContainer extends Component {
     this.setState({ instructions })
   }
 
-  onNavPress = (instruction) => {
+  onNavPress = (category, instruction) => {
     const instructions = this.sortInstructions()
     instructions.push({...instruction, id: uuid.v4()})
     this.setState({ instructions })
@@ -65,22 +88,24 @@ export class CodeLabContainer extends Component {
     const connected = await isConnected()
     if (connected) {
       const instructions = this.sortInstructions()
-      this.client.run(instructions.map(instruction => instruction.key))
+      this.client.run(instructions.map(instruction => instruction.cmd))
     } else {
       this.setState({showNotConnectedModal: true})
     }
   }
 
   render () {
-    const { instructions } = this.state
+    const { config, instructions } = this.state
     return (
       <Screen
         ref={(ref) => {
           this.screen = ref
         }}
         {...this.props}
+        config={config}
         instructions={instructions}
         showNotConnectedModal={this.state.showNotConnectedModal}
+        onConnect={this.onConnect}
         onChangeOrder={this.onChangeOrder}
         onClose={this.onClose}
         onNavPress={this.onNavPress}

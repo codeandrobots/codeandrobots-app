@@ -57,6 +57,18 @@ export default {
       forwards: 'ktr'
     }
   },
+  moves: [
+    { title: 'Forwards', cmd: 'kwk' },
+    { title: 'Back', cmd: 'kwkR' },
+    { title: 'Fwd Left', cmd: 'kwkL' },
+    { title: 'Fwd Right', cmd: 'kbk' },
+    { title: 'Back Left', cmd: 'kbkR' },
+    { title: 'Back Right', cmd: 'kbkL' },
+    { title: 'Crawl Fwd', cmd: 'kcr' },
+    { title: 'Crawl Left', cmd: 'kcrR' },
+    { title: 'Crawl Right', cmd: 'kcrL' },
+    { title: 'Trot Fwd', cmd: 'ktr' }
+  ],
   skills: [
     {
       category: 'Skills',

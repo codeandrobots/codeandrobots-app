@@ -5,30 +5,7 @@ import toJson from 'enzyme-to-json'
 
 import Screen from 'App/Modules/Play/Player/Screen'
 
-const config = {
-  name: 'Robot',
-  connection: { type: 'bluetooth' },
-  features: {
-    drive: true,
-    beep: true
-  },
-  params: [
-    {
-      title: 'Speed',
-      values: ['Slow', 'Normal', 'Fast'],
-      defaultIndex: 1
-    }
-  ],
-  skills: [
-    {title: 'Jump'},
-    {title: 'Shuffle'},
-    {title: 'Bow'},
-    {title: 'Spin'},
-    {title: 'Dance'},
-    {title: 'Moonwalk'},
-    {title: 'Chill'}
-  ]
-}
+import config from 'App/Services/Client/Otto/Config'
 
 describe('Player', () => {
   let wrapper

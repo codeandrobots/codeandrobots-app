@@ -59,6 +59,12 @@ export default {
     {key: '12', name: 'Confused'},
     {key: '14', name: 'Fart'}
   ],
+  moves: [
+    { title: 'Forwards', cmd: 'M 1' },
+    { title: 'Back', cmd: 'M 2' },
+    { title: 'Left', cmd: 'M 3' },
+    { title: 'Right', cmd: 'M 4' }
+  ],
   skills: [
     {
       category: 'Skills',

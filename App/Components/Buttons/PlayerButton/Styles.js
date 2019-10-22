@@ -11,6 +11,7 @@ const styles = {
   },
   text: {
     ...Fonts.style.normal,
+    fontSize: Fonts.size.medium,
     color: Colors.primaryDark
   }
 }

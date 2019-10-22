@@ -9,5 +9,11 @@ export default {
     beep: true
   },
   params: [],
+  moves: [
+    { title: 'Up', cmd: 'up' },
+    { title: 'Down', cmd: 'down' },
+    { title: 'Left', cmd: 'left' },
+    { title: 'Right', cmd: 'right' }
+  ],
   skills: []
 }

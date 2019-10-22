@@ -643,7 +643,7 @@ exports[`Storyshots Button Player 1`] = `
               Object {
                 "color": "#354052",
                 "fontFamily": "Roboto-Medium",
-                "fontSize": 16,
+                "fontSize": 14,
               },
             ]
           }
@@ -715,7 +715,7 @@ exports[`Storyshots Button Player Light 1`] = `
                 Object {
                   "color": "white",
                   "fontFamily": "Roboto-Medium",
-                  "fontSize": 16,
+                  "fontSize": 14,
                 },
               ]
             }
@@ -1560,17 +1560,389 @@ exports[`Storyshots Carousel Dilbert 1`] = `
 exports[`Storyshots CodeLab Nav Default 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
+  style={
+    Object {
+      "backgroundColor": "#FAFAFA",
+      "height": "100%",
+    }
+  }
 >
   <View
+    onLayout={[Function]}
     style={
       Array [
         Object {
-          "backgroundColor": "white",
+          "backgroundColor": "#F9BC62",
+          "bottom": 0,
+          "left": 0,
+          "minHeight": 80,
+          "paddingBottom": 0,
+          "paddingTop": 0,
+          "position": "absolute",
+          "width": "100%",
         },
         undefined,
       ]
     }
   >
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 8,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "marginVertical": 8,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "marginVertical": 8,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderColor": "white",
+                    "borderRadius": 8,
+                    "borderWidth": 1,
+                    "minWidth": 112,
+                    "opacity": 1,
+                    "paddingHorizontal": 0,
+                    "paddingVertical": 8,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#354052",
+                        "fontFamily": "Roboto-Medium",
+                        "fontSize": 18,
+                        "textAlign": "center",
+                      },
+                      Object {
+                        "color": "white",
+                        "fontFamily": "Roboto-Medium",
+                        "fontSize": 14,
+                      },
+                    ]
+                  }
+                >
+                  Forwards
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderColor": "white",
+                    "borderRadius": 8,
+                    "borderWidth": 1,
+                    "minWidth": 112,
+                    "opacity": 1,
+                    "paddingHorizontal": 0,
+                    "paddingVertical": 8,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#354052",
+                        "fontFamily": "Roboto-Medium",
+                        "fontSize": 18,
+                        "textAlign": "center",
+                      },
+                      Object {
+                        "color": "white",
+                        "fontFamily": "Roboto-Medium",
+                        "fontSize": 14,
+                      },
+                    ]
+                  }
+                >
+                  Back
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderColor": "white",
+                    "borderRadius": 8,
+                    "borderWidth": 1,
+                    "minWidth": 112,
+                    "opacity": 1,
+                    "paddingHorizontal": 0,
+                    "paddingVertical": 8,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#354052",
+                        "fontFamily": "Roboto-Medium",
+                        "fontSize": 18,
+                        "textAlign": "center",
+                      },
+                      Object {
+                        "color": "white",
+                        "fontFamily": "Roboto-Medium",
+                        "fontSize": 14,
+                      },
+                    ]
+                  }
+                >
+                  Left
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "marginVertical": 8,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderColor": "white",
+                    "borderRadius": 8,
+                    "borderWidth": 1,
+                    "minWidth": 112,
+                    "opacity": 1,
+                    "paddingHorizontal": 0,
+                    "paddingVertical": 8,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#354052",
+                        "fontFamily": "Roboto-Medium",
+                        "fontSize": 18,
+                        "textAlign": "center",
+                      },
+                      Object {
+                        "color": "white",
+                        "fontFamily": "Roboto-Medium",
+                        "fontSize": 14,
+                      },
+                    ]
+                  }
+                >
+                  Right
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "opacity": 0.5,
+              }
+            }
+          >
+            <View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderColor": "white",
+                    "borderRadius": 8,
+                    "borderWidth": 1,
+                    "minWidth": 112,
+                    "opacity": 1,
+                    "paddingHorizontal": 0,
+                    "paddingVertical": 8,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#354052",
+                        "fontFamily": "Roboto-Medium",
+                        "fontSize": 18,
+                        "textAlign": "center",
+                      },
+                      Object {
+                        "color": "#9B9B9B",
+                      },
+                      Object {
+                        "color": "white",
+                        "fontFamily": "Roboto-Medium",
+                        "fontSize": 14,
+                      },
+                    ]
+                  }
+                >
+                   
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "opacity": 0.5,
+              }
+            }
+          >
+            <View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderColor": "white",
+                    "borderRadius": 8,
+                    "borderWidth": 1,
+                    "minWidth": 112,
+                    "opacity": 1,
+                    "paddingHorizontal": 0,
+                    "paddingVertical": 8,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#354052",
+                        "fontFamily": "Roboto-Medium",
+                        "fontSize": 18,
+                        "textAlign": "center",
+                      },
+                      Object {
+                        "color": "#9B9B9B",
+                      },
+                      Object {
+                        "color": "white",
+                        "fontFamily": "Roboto-Medium",
+                        "fontSize": 14,
+                      },
+                    ]
+                  }
+                >
+                   
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
     <View
       style={
         Object {
@@ -1590,13 +1962,13 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "borderTopColor": "#4EBD64",
+            "borderTopColor": "rgba(255, 255, 255, 0.8)",
             "borderTopWidth": 1,
             "display": "flex",
             "flex": 0.25,
             "justifyContent": "center",
             "opacity": 1,
-            "paddingVertical": 16,
+            "paddingVertical": 8,
             "width": "100%",
           }
         }
@@ -1604,13 +1976,13 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
         <Text
           style={
             Object {
-              "color": "#354052",
+              "color": "white",
               "fontFamily": "Roboto-Medium",
               "fontSize": 16,
             }
           }
         >
-          ACTION
+          MOVE
         </Text>
       </View>
       <View
@@ -1631,7 +2003,7 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
             "flex": 0.25,
             "justifyContent": "center",
             "opacity": 1,
-            "paddingVertical": 16,
+            "paddingVertical": 8,
             "width": "100%",
           }
         }
@@ -1639,13 +2011,13 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
         <Text
           style={
             Object {
-              "color": "#354052",
+              "color": "white",
               "fontFamily": "Roboto-Medium",
               "fontSize": 16,
             }
           }
         >
-          SENSOR
+          SKILLS
         </Text>
       </View>
       <View
@@ -1666,7 +2038,7 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
             "flex": 0.25,
             "justifyContent": "center",
             "opacity": 1,
-            "paddingVertical": 16,
+            "paddingVertical": 8,
             "width": "100%",
           }
         }
@@ -1674,13 +2046,13 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
         <Text
           style={
             Object {
-              "color": "#354052",
+              "color": "white",
               "fontFamily": "Roboto-Medium",
               "fontSize": 16,
             }
           }
         >
-          CONTROL
+          SOUNDS
         </Text>
       </View>
       <View
@@ -1701,7 +2073,7 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
             "flex": 0.25,
             "justifyContent": "center",
             "opacity": 1,
-            "paddingVertical": 16,
+            "paddingVertical": 8,
             "width": "100%",
           }
         }
@@ -1709,63 +2081,14 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
         <Text
           style={
             Object {
-              "color": "#354052",
+              "color": "white",
               "fontFamily": "Roboto-Medium",
               "fontSize": 16,
             }
           }
         >
-          DATA
+          MOODS
         </Text>
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#F9BC62",
-          "minHeight": 80,
-          "paddingBottom": 32,
-          "paddingTop": 32,
-        }
-      }
-    >
-      <View>
-        <View
-          accessible={true}
-          isTVSelectable={true}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "backgroundColor": "white",
-              "borderColor": "#FCE2BA",
-              "borderRadius": 100,
-              "borderWidth": 8,
-              "minWidth": 112,
-              "opacity": 1,
-              "paddingHorizontal": 24,
-              "paddingVertical": 8,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#354052",
-                "fontFamily": "Roboto-Medium",
-                "fontSize": 18,
-                "textAlign": "center",
-              }
-            }
-          >
-            Run
-          </Text>
-        </View>
       </View>
     </View>
   </View>
@@ -3441,11 +3764,14 @@ exports[`Storyshots InstructionList Default 1`] = `
 >
   <View
     style={
-      Object {
-        "alignItems": "center",
-        "flex": 1,
-        "justifyContent": "center",
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        },
+        undefined,
+      ]
     }
   >
     <View
@@ -10070,6 +10396,7 @@ exports[`Storyshots Player Bottom Nav 1`] = `
   }
 >
   <View
+    onLayout={[Function]}
     style={
       Array [
         Object {
@@ -10371,7 +10698,7 @@ exports[`Storyshots Player Bottom Nav 1`] = `
                       Object {
                         "color": "#354052",
                         "fontFamily": "Roboto-Medium",
-                        "fontSize": 16,
+                        "fontSize": 14,
                       },
                     ]
                   }
@@ -10423,7 +10750,7 @@ exports[`Storyshots Player Bottom Nav 1`] = `
                       Object {
                         "color": "#354052",
                         "fontFamily": "Roboto-Medium",
-                        "fontSize": 16,
+                        "fontSize": 14,
                       },
                     ]
                   }
@@ -10475,7 +10802,7 @@ exports[`Storyshots Player Bottom Nav 1`] = `
                       Object {
                         "color": "#354052",
                         "fontFamily": "Roboto-Medium",
-                        "fontSize": 16,
+                        "fontSize": 14,
                       },
                     ]
                   }
@@ -10539,7 +10866,7 @@ exports[`Storyshots Player Bottom Nav 1`] = `
                       Object {
                         "color": "#354052",
                         "fontFamily": "Roboto-Medium",
-                        "fontSize": 16,
+                        "fontSize": 14,
                       },
                     ]
                   }
@@ -10591,7 +10918,7 @@ exports[`Storyshots Player Bottom Nav 1`] = `
                       Object {
                         "color": "#354052",
                         "fontFamily": "Roboto-Medium",
-                        "fontSize": 16,
+                        "fontSize": 14,
                       },
                     ]
                   }
@@ -10643,7 +10970,7 @@ exports[`Storyshots Player Bottom Nav 1`] = `
                       Object {
                         "color": "#354052",
                         "fontFamily": "Roboto-Medium",
-                        "fontSize": 16,
+                        "fontSize": 14,
                       },
                     ]
                   }
@@ -10707,7 +11034,7 @@ exports[`Storyshots Player Bottom Nav 1`] = `
                       Object {
                         "color": "#354052",
                         "fontFamily": "Roboto-Medium",
-                        "fontSize": 16,
+                        "fontSize": 14,
                       },
                     ]
                   }
@@ -10762,7 +11089,7 @@ exports[`Storyshots Player Bottom Nav 1`] = `
                       Object {
                         "color": "#354052",
                         "fontFamily": "Roboto-Medium",
-                        "fontSize": 16,
+                        "fontSize": 14,
                       },
                     ]
                   }
@@ -10817,7 +11144,7 @@ exports[`Storyshots Player Bottom Nav 1`] = `
                       Object {
                         "color": "#354052",
                         "fontFamily": "Roboto-Medium",
-                        "fontSize": 16,
+                        "fontSize": 14,
                       },
                     ]
                   }
@@ -10845,6 +11172,7 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
   }
 >
   <View
+    onLayout={[Function]}
     style={
       Array [
         Object {
@@ -11146,7 +11474,7 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
                       Object {
                         "color": "white",
                         "fontFamily": "Roboto-Medium",
-                        "fontSize": 16,
+                        "fontSize": 14,
                       },
                     ]
                   }
@@ -11198,7 +11526,7 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
                       Object {
                         "color": "white",
                         "fontFamily": "Roboto-Medium",
-                        "fontSize": 16,
+                        "fontSize": 14,
                       },
                     ]
                   }
@@ -11250,7 +11578,7 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
                       Object {
                         "color": "white",
                         "fontFamily": "Roboto-Medium",
-                        "fontSize": 16,
+                        "fontSize": 14,
                       },
                     ]
                   }
@@ -11314,7 +11642,7 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
                       Object {
                         "color": "white",
                         "fontFamily": "Roboto-Medium",
-                        "fontSize": 16,
+                        "fontSize": 14,
                       },
                     ]
                   }
@@ -11366,7 +11694,7 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
                       Object {
                         "color": "white",
                         "fontFamily": "Roboto-Medium",
-                        "fontSize": 16,
+                        "fontSize": 14,
                       },
                     ]
                   }
@@ -11418,7 +11746,7 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
                       Object {
                         "color": "white",
                         "fontFamily": "Roboto-Medium",
-                        "fontSize": 16,
+                        "fontSize": 14,
                       },
                     ]
                   }
@@ -11482,7 +11810,7 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
                       Object {
                         "color": "white",
                         "fontFamily": "Roboto-Medium",
-                        "fontSize": 16,
+                        "fontSize": 14,
                       },
                     ]
                   }
@@ -11537,7 +11865,7 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
                       Object {
                         "color": "white",
                         "fontFamily": "Roboto-Medium",
-                        "fontSize": 16,
+                        "fontSize": 14,
                       },
                     ]
                   }
@@ -11592,7 +11920,7 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
                       Object {
                         "color": "white",
                         "fontFamily": "Roboto-Medium",
-                        "fontSize": 16,
+                        "fontSize": 14,
                       },
                     ]
                   }
@@ -11620,6 +11948,7 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
   }
 >
   <View
+    onLayout={[Function]}
     style={
       Array [
         Object {
@@ -11921,7 +12250,7 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
                       Object {
                         "color": "white",
                         "fontFamily": "Roboto-Medium",
-                        "fontSize": 16,
+                        "fontSize": 14,
                       },
                     ]
                   }
@@ -11973,7 +12302,7 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
                       Object {
                         "color": "white",
                         "fontFamily": "Roboto-Medium",
-                        "fontSize": 16,
+                        "fontSize": 14,
                       },
                     ]
                   }
@@ -12025,7 +12354,7 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
                       Object {
                         "color": "white",
                         "fontFamily": "Roboto-Medium",
-                        "fontSize": 16,
+                        "fontSize": 14,
                       },
                     ]
                   }
@@ -12089,7 +12418,7 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
                       Object {
                         "color": "white",
                         "fontFamily": "Roboto-Medium",
-                        "fontSize": 16,
+                        "fontSize": 14,
                       },
                     ]
                   }
@@ -12141,7 +12470,7 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
                       Object {
                         "color": "white",
                         "fontFamily": "Roboto-Medium",
-                        "fontSize": 16,
+                        "fontSize": 14,
                       },
                     ]
                   }
@@ -12193,7 +12522,7 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
                       Object {
                         "color": "white",
                         "fontFamily": "Roboto-Medium",
-                        "fontSize": 16,
+                        "fontSize": 14,
                       },
                     ]
                   }
@@ -12257,7 +12586,7 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
                       Object {
                         "color": "white",
                         "fontFamily": "Roboto-Medium",
-                        "fontSize": 16,
+                        "fontSize": 14,
                       },
                     ]
                   }
@@ -12309,7 +12638,7 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
                       Object {
                         "color": "white",
                         "fontFamily": "Roboto-Medium",
-                        "fontSize": 16,
+                        "fontSize": 14,
                       },
                     ]
                   }
@@ -12361,7 +12690,7 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
                       Object {
                         "color": "white",
                         "fontFamily": "Roboto-Medium",
-                        "fontSize": 16,
+                        "fontSize": 14,
                       },
                     ]
                   }
@@ -12389,6 +12718,7 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
   }
 >
   <View
+    onLayout={[Function]}
     style={
       Array [
         Object {

@@ -5,6 +5,8 @@ import toJson from 'enzyme-to-json'
 
 import Screen from 'App/Modules/Discover/CodeLab/Screen'
 
+import config from 'App/Services/Client/Otto/Config'
+
 describe('CodeLab', () => {
   let wrapper
 
@@ -12,8 +14,10 @@ describe('CodeLab', () => {
     wrapper = shallow(
       <Screen
         navigation={{navigate: () => {}}}
+        config={config}
         instructions={[]}
         showNotConnectedModal={false}
+        onConnect={() => {}}
         onChangeOrder={() => {}}
         onClose={() => {}}
         onNavPress={() => {}}

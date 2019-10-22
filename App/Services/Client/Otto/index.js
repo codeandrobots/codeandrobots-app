@@ -20,22 +20,6 @@ const cmdFromTouch = (touch) => {
   }
 }
 
-const cmdFromInstruction = (instruction) => {
-  if (instruction === 'up') {
-    return Config.commands.walk.forwards
-  } else if (instruction === 'down') {
-    return Config.commands.walk.backwards
-  } else if (instruction === 'right') {
-    return Config.commands.walk.right
-  } else if (instruction === 'left') {
-    return Config.commands.walk.left
-  } else if (instruction === STOP) {
-    return Config.commands.stop
-  } else {
-    return null
-  }
-}
-
 export default class Otto {
   lastCmdSent = null
   speed = Speed.Normal
@@ -77,8 +61,7 @@ export default class Otto {
 
   stop = (delay) => {
     if (!delay) {
-      const cmd = cmdFromInstruction(STOP)
-      this.sendCommand(cmd)
+      this.sendCommand(Config.commands.stop)
     } else {
       setTimeout(() => { this.stop() }, delay)
     }
@@ -112,7 +95,7 @@ export default class Otto {
     instructions.push(STOP) // Always finish with stop
     instructions.forEach((instruction) => {
       setTimeout(() => {
-        const cmd = cmdFromInstruction(instruction)
+        const cmd = instruction
         this.sendCommand(cmd)
       }, delay)
       delay += DELAY
