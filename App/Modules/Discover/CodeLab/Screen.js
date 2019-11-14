@@ -18,26 +18,15 @@ export default class Screen extends Component {
       ...Types.instruction
     })).isRequired,
     showNotConnectedModal: PropTypes.bool.isRequired,
+    navHeight: PropTypes.number.isRequired,
     onConnect: PropTypes.func.isRequired,
+    onSlidingComplete: PropTypes.func.isRequired,
     onChangeOrder: PropTypes.func.isRequired,
+    onNavHeightChange: PropTypes.func.isRequired,
     onClose: PropTypes.func.isRequired,
     onNavPress: PropTypes.func.isRequired,
     onRun: PropTypes.func.isRequired,
     onHideNotConnectedModal: PropTypes.func.isRequired
-  }
-
-  constructor (props) {
-    super(props)
-    this.state = { navHeight: 0 }
-  }
-
-  onNavPress = (category, instruction) => {
-    const { onNavPress } = this.props
-    onNavPress(category, instruction)
-  }
-
-  onNavHeightChange = (navHeight) => {
-    this.setState({ navHeight })
   }
 
   resolveSkills = () => {
@@ -62,11 +51,14 @@ export default class Screen extends Component {
     const {
       instructions,
       showNotConnectedModal,
+      navHeight,
       onConnect,
+      onSlidingComplete,
       onChangeOrder,
+      onNavHeightChange,
       onClose,
+      onNavPress,
       onHideNotConnectedModal} = this.props
-    const { navHeight } = this.state
 
     const skills = this.resolveSkills()
 
@@ -75,6 +67,7 @@ export default class Screen extends Component {
         <InstructionList
           style={{marginBottom: navHeight + Metrics.unit}}
           instructions={instructions}
+          onSlidingComplete={onSlidingComplete}
           onChangeOrder={onChangeOrder}
           onClose={onClose} />
         <Modal
@@ -85,8 +78,8 @@ export default class Screen extends Component {
           template='NotConnected' />
         <CodeLabNav
           skills={skills}
-          onPress={this.onNavPress}
-          onNavHeightChange={this.onNavHeightChange} />
+          onPress={onNavPress}
+          onNavHeightChange={onNavHeightChange} />
       </Container>
     )
   }

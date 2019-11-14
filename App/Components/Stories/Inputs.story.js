@@ -6,7 +6,7 @@ import { Metrics, Colors } from 'App/Themes'
 
 import { PaddedDecorator } from './Decorators'
 
-import { LabelRangeSliderInput } from '../Inputs'
+import { LabelRangeSliderInput, SliderInput } from '../Inputs'
 
 storiesOf('Inputs', module)
   .addDecorator(PaddedDecorator)
@@ -31,5 +31,26 @@ storiesOf('Inputs', module)
         labels={['Slow', 'Normal', 'Fast']}
         defaultIndex={2}
         onPress={(index) => {}} />
+    </View>
+  ))
+  .add('Slider', () => (
+    <SliderInput
+      min={1}
+      max={60}
+      value={1}
+      step={1}
+      labelSuffix='s'
+      onValueChange={(value) => {}} />
+  ))
+  .add('Slider Light Theme', () => (
+    <View style={{ backgroundColor: Colors.primary, paddingHorizontal: Metrics.unit }}>
+      <SliderInput
+        theme='light'
+        min={1}
+        max={60}
+        value={1}
+        step={1}
+        labelSuffix='s'
+        onValueChange={(value) => {}} />
     </View>
   ))

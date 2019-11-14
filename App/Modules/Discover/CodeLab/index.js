@@ -22,7 +22,9 @@ export class CodeLabContainer extends Component {
     this.state = {
       config: null,
       instructions: [],
-      showNotConnectedModal: false
+      instructionValues: {},
+      showNotConnectedModal: false,
+      navHeight: 0
     }
   }
 
@@ -67,8 +69,41 @@ export class CodeLabContainer extends Component {
     return instructions
   }
 
+  // Make a copy of the instructions and set their duration
+  // Convert duration to millis if toMillis is true
+  copyInstructionsWithDuration = (instructions, toMillis = false) => {
+    const { instructionValues } = this.state
+    const instructionsWithDuration = [...instructions]
+    const convertionMultiplier = (toMillis) ? 1000 : 1
+
+    for (var instruction of instructionsWithDuration) {
+      const value = instructionValues[instruction.id]
+      instruction.duration = (value)
+        ? value.duration * convertionMultiplier
+        : null
+    }
+    return instructionsWithDuration
+  }
+
+  onSlidingComplete = (instruction, value) => {
+    const { instructionValues } = this.state
+    const instructionValuesUpdate = {...instructionValues}
+    const instructionValue = instructionValuesUpdate[instruction.id] || {}
+    if (instructionValue.duration !== value) {
+      instructionValue.duration = value
+      instructionValuesUpdate[instruction.id] = instructionValue
+      this.setState({ instructionValues: instructionValuesUpdate })
+    }
+  }
+
   onChangeOrder = (order) => {
     this.order = order
+    const instructions = [...this.sortInstructions()]
+    this.setState({ instructions })
+  }
+
+  onNavHeightChange = (navHeight) => {
+    this.setState({ navHeight })
   }
 
   onClose = (instructionToRemove) => {
@@ -79,7 +114,7 @@ export class CodeLabContainer extends Component {
   }
 
   onNavPress = (category, instruction) => {
-    const instructions = this.sortInstructions()
+    const instructions = [...this.sortInstructions()]
     instructions.push({...instruction, id: uuid.v4()})
     this.setState({ instructions })
   }
@@ -88,14 +123,16 @@ export class CodeLabContainer extends Component {
     const connected = await isConnected()
     if (connected) {
       const instructions = this.sortInstructions()
-      this.client.run(instructions.map(instruction => instruction.cmd))
+      const instructionsWithDuration = this.copyInstructionsWithDuration(instructions, true)
+      this.client.run(instructionsWithDuration)
     } else {
       this.setState({showNotConnectedModal: true})
     }
   }
 
   render () {
-    const { config, instructions } = this.state
+    const { config, instructions, showNotConnectedModal, navHeight } = this.state
+    const instructionsWithDuration = this.copyInstructionsWithDuration(instructions)
     return (
       <Screen
         ref={(ref) => {
@@ -103,10 +140,13 @@ export class CodeLabContainer extends Component {
         }}
         {...this.props}
         config={config}
-        instructions={instructions}
-        showNotConnectedModal={this.state.showNotConnectedModal}
+        instructions={instructionsWithDuration}
+        showNotConnectedModal={showNotConnectedModal}
+        navHeight={navHeight}
         onConnect={this.onConnect}
+        onSlidingComplete={this.onSlidingComplete}
         onChangeOrder={this.onChangeOrder}
+        onNavHeightChange={this.onNavHeightChange}
         onClose={this.onClose}
         onNavPress={this.onNavPress}
         onRun={this.onRun}

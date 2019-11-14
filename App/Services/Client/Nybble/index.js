@@ -2,8 +2,6 @@
 import Bluetooth from 'App/Services/Bluetooth'
 import Config, { Gaits } from './Config'
 
-const STOP = 'stop'
-
 const DELAY = 600 // Delay between commands
 
 const sounds = []
@@ -99,13 +97,19 @@ export default class Nybble {
 
   run = (instructions) => {
     let delay = 0
-    instructions.push(STOP) // Always finish with stop
     instructions.forEach((instruction) => {
       setTimeout(() => {
-        const cmd = instruction
-        Bluetooth.write(cmd)
+        const { cmd } = instruction
+        if (cmd) {
+          Bluetooth.write(cmd)
+        }
       }, delay)
-      delay += DELAY
+      const { duration } = instruction
+      delay += (duration && duration > 0) ? duration : DELAY
     })
+    // Always finish with stop
+    setTimeout(() => {
+      this.sendCommand(Config.commands.stop)
+    }, delay)
   }
 }

@@ -103,28 +103,28 @@ exports[`Player Component renders correctly 1`] = `
               "title": "Tiptoe",
             },
             Object {
-              "cmd": "M 16",
+              "cmd": "M 15",
               "image": Object {
                 "process": [Function],
               },
               "title": "Bend Right",
             },
             Object {
-              "cmd": "M 15",
+              "cmd": "M 16",
               "image": Object {
                 "process": [Function],
               },
               "title": "Bend Left",
             },
             Object {
-              "cmd": "M 18",
+              "cmd": "M 17",
               "image": Object {
                 "process": [Function],
               },
               "title": "Shake Right",
             },
             Object {
-              "cmd": "M 17",
+              "cmd": "M 18",
               "image": Object {
                 "process": [Function],
               },

@@ -17,8 +17,11 @@ describe('CodeLab', () => {
         config={config}
         instructions={[]}
         showNotConnectedModal={false}
+        navHeight={86}
         onConnect={() => {}}
+        onSlidingComplete={() => {}}
         onChangeOrder={() => {}}
+        onNavHeightChange={() => {}}
         onClose={() => {}}
         onNavPress={() => {}}
         onRun={() => {}}

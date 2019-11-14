@@ -3224,6 +3224,141 @@ exports[`Storyshots Inputs Range Slider with 4 Labels 1`] = `
 </RCTSafeAreaView>
 `;
 
+exports[`Storyshots Inputs Slider 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "margin": 16,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "width": "100%",
+        },
+        undefined,
+      ]
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#354052",
+          "fontFamily": "Roboto-Medium",
+          "fontSize": 16,
+          "minWidth": 40,
+          "textAlign": "center",
+        }
+      }
+    >
+      1s
+    </Text>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "width": "100%",
+        }
+      }
+    >
+      <@react-native-community/slider
+        maximumTrackTintColor="#FCE2BA"
+        maximumValue={60}
+        minimumTrackTintColor="#F9BC62"
+        minimumValue={1}
+        onSlidingComplete={[Function]}
+        onValueChange={[Function]}
+        step={1}
+        thumbImage={
+          Object {
+            "process": [Function],
+          }
+        }
+        thumbTintColor={null}
+        value={1}
+      />
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`Storyshots Inputs Slider Light Theme 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "margin": 16,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#F9BC62",
+        "paddingHorizontal": 8,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 16,
+            "minWidth": 40,
+            "textAlign": "center",
+          }
+        }
+      >
+        1s
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "width": "100%",
+          }
+        }
+      >
+        <@react-native-community/slider
+          maximumTrackTintColor="#FCE2BA"
+          maximumValue={60}
+          minimumTrackTintColor="white"
+          minimumValue={1}
+          onSlidingComplete={[Function]}
+          onValueChange={[Function]}
+          step={1}
+          thumbImage={
+            Object {
+              "process": [Function],
+            }
+          }
+          thumbTintColor={null}
+          value={1}
+        />
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
 exports[`Storyshots Instruction Action 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
@@ -3232,11 +3367,10 @@ exports[`Storyshots Instruction Action 1`] = `
     style={
       Array [
         Object {
-          "alignItems": "center",
           "backgroundColor": "#F9BC62",
           "borderRadius": 4,
           "elevation": 1,
-          "flexDirection": "row",
+          "flex": 1,
           "margin": 8,
           "paddingHorizontal": 8,
           "paddingVertical": 4,
@@ -3255,59 +3389,10 @@ exports[`Storyshots Instruction Action 1`] = `
       ]
     }
   >
-    <Text
-      allowFontScaling={false}
-      style={
-        Array [
-          Object {
-            "color": "white",
-            "fontSize": 24,
-          },
-          Array [
-            Object {
-              "marginLeft": 4,
-            },
-            undefined,
-          ],
-          Object {
-            "fontFamily": "FontAwesome",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-          },
-          Object {},
-        ]
-      }
-    >
-      
-    </Text>
-    <Text
-      style={
-        Array [
-          Object {
-            "color": "white",
-            "flex": 1,
-            "fontFamily": "Roboto-Medium",
-            "fontSize": 18,
-            "margin": 4,
-          },
-          undefined,
-        ]
-      }
-    >
-      Move Up
-    </Text>
     <View
-      accessible={true}
-      isTVSelectable={true}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "opacity": 1,
+          "flexDirection": "row",
         }
       }
     >
@@ -3316,15 +3401,17 @@ exports[`Storyshots Instruction Action 1`] = `
         style={
           Array [
             Object {
-              "color": "rgba(255, 255, 255, 0.8)",
+              "color": "white",
               "fontSize": 24,
             },
+            Array [
+              Object {
+                "marginLeft": 4,
+              },
+              undefined,
+            ],
             Object {
-              "marginTop": 3,
-              "padding": 4,
-            },
-            Object {
-              "fontFamily": "Material Design Icons",
+              "fontFamily": "FontAwesome",
               "fontStyle": "normal",
               "fontWeight": "normal",
             },
@@ -3332,8 +3419,71 @@ exports[`Storyshots Instruction Action 1`] = `
           ]
         }
       >
-        
+        
       </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+            "margin": 4,
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontFamily": "Roboto-Medium",
+                "fontSize": 18,
+              },
+              undefined,
+            ]
+          }
+        >
+          Move Up
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "rgba(255, 255, 255, 0.8)",
+                "fontSize": 24,
+              },
+              Object {
+                "marginTop": 3,
+                "padding": 4,
+              },
+              Object {
+                "fontFamily": "Material Design Icons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
     </View>
   </View>
 </RCTSafeAreaView>
@@ -3347,11 +3497,10 @@ exports[`Storyshots Instruction Control 1`] = `
     style={
       Array [
         Object {
-          "alignItems": "center",
           "backgroundColor": "#F9BC62",
           "borderRadius": 4,
           "elevation": 1,
-          "flexDirection": "row",
+          "flex": 1,
           "margin": 8,
           "paddingHorizontal": 8,
           "paddingVertical": 4,
@@ -3370,60 +3519,76 @@ exports[`Storyshots Instruction Control 1`] = `
       ]
     }
   >
-    <Text
-      style={
-        Array [
-          Object {
-            "color": "white",
-            "flex": 1,
-            "fontFamily": "Roboto-Medium",
-            "fontSize": 18,
-            "margin": 4,
-          },
-          undefined,
-        ]
-      }
-    >
-      If
-    </Text>
     <View
-      accessible={true}
-      isTVSelectable={true}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "opacity": 1,
+          "flexDirection": "row",
         }
       }
     >
-      <Text
-        allowFontScaling={false}
+      <View
         style={
-          Array [
-            Object {
-              "color": "rgba(255, 255, 255, 0.8)",
-              "fontSize": 24,
-            },
-            Object {
-              "marginTop": 3,
-              "padding": 4,
-            },
-            Object {
-              "fontFamily": "Material Design Icons",
-              "fontStyle": "normal",
-              "fontWeight": "normal",
-            },
-            Object {},
-          ]
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+            "margin": 4,
+          }
         }
       >
-        
-      </Text>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontFamily": "Roboto-Medium",
+                "fontSize": 18,
+              },
+              undefined,
+            ]
+          }
+        >
+          If
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "rgba(255, 255, 255, 0.8)",
+                "fontSize": 24,
+              },
+              Object {
+                "marginTop": 3,
+                "padding": 4,
+              },
+              Object {
+                "fontFamily": "Material Design Icons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
     </View>
   </View>
 </RCTSafeAreaView>
@@ -3437,11 +3602,10 @@ exports[`Storyshots Instruction Data 1`] = `
     style={
       Array [
         Object {
-          "alignItems": "center",
           "backgroundColor": "#F9BC62",
           "borderRadius": 4,
           "elevation": 1,
-          "flexDirection": "row",
+          "flex": 1,
           "margin": 8,
           "paddingHorizontal": 8,
           "paddingVertical": 4,
@@ -3460,59 +3624,10 @@ exports[`Storyshots Instruction Data 1`] = `
       ]
     }
   >
-    <Text
-      allowFontScaling={false}
-      style={
-        Array [
-          Object {
-            "color": "white",
-            "fontSize": 24,
-          },
-          Array [
-            Object {
-              "marginLeft": 4,
-            },
-            undefined,
-          ],
-          Object {
-            "fontFamily": "FontAwesome",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-          },
-          Object {},
-        ]
-      }
-    >
-      
-    </Text>
-    <Text
-      style={
-        Array [
-          Object {
-            "color": "white",
-            "flex": 1,
-            "fontFamily": "Roboto-Medium",
-            "fontSize": 18,
-            "margin": 4,
-          },
-          undefined,
-        ]
-      }
-    >
-      Set Color
-    </Text>
     <View
-      accessible={true}
-      isTVSelectable={true}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "opacity": 1,
+          "flexDirection": "row",
         }
       }
     >
@@ -3521,15 +3636,17 @@ exports[`Storyshots Instruction Data 1`] = `
         style={
           Array [
             Object {
-              "color": "rgba(255, 255, 255, 0.8)",
+              "color": "white",
               "fontSize": 24,
             },
+            Array [
+              Object {
+                "marginLeft": 4,
+              },
+              undefined,
+            ],
             Object {
-              "marginTop": 3,
-              "padding": 4,
-            },
-            Object {
-              "fontFamily": "Material Design Icons",
+              "fontFamily": "FontAwesome",
               "fontStyle": "normal",
               "fontWeight": "normal",
             },
@@ -3537,8 +3654,71 @@ exports[`Storyshots Instruction Data 1`] = `
           ]
         }
       >
-        
+        
       </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+            "margin": 4,
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontFamily": "Roboto-Medium",
+                "fontSize": 18,
+              },
+              undefined,
+            ]
+          }
+        >
+          Set Color
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "rgba(255, 255, 255, 0.8)",
+                "fontSize": 24,
+              },
+              Object {
+                "marginTop": 3,
+                "padding": 4,
+              },
+              Object {
+                "fontFamily": "Material Design Icons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
     </View>
   </View>
 </RCTSafeAreaView>
@@ -3552,11 +3732,10 @@ exports[`Storyshots Instruction Default 1`] = `
     style={
       Array [
         Object {
-          "alignItems": "center",
           "backgroundColor": "#F9BC62",
           "borderRadius": 4,
           "elevation": 1,
-          "flexDirection": "row",
+          "flex": 1,
           "margin": 8,
           "paddingHorizontal": 8,
           "paddingVertical": 4,
@@ -3575,63 +3754,248 @@ exports[`Storyshots Instruction Default 1`] = `
       ]
     }
   >
-    <Text
-      style={
-        Array [
-          Object {
-            "color": "white",
-            "flex": 1,
-            "fontFamily": "Roboto-Medium",
-            "fontSize": 18,
-            "margin": 4,
-          },
-          Object {
-            "color": "#354052",
-          },
-          undefined,
-        ]
-      }
-    >
-      Forwards
-    </Text>
     <View
-      accessible={true}
-      isTVSelectable={true}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "opacity": 1,
+          "flexDirection": "row",
         }
       }
     >
-      <Text
-        allowFontScaling={false}
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+            "margin": 4,
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontFamily": "Roboto-Medium",
+                "fontSize": 18,
+              },
+              Object {
+                "color": "#354052",
+              },
+              undefined,
+            ]
+          }
+        >
+          Beep
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#F9BC62",
+                "fontSize": 24,
+              },
+              Object {
+                "marginTop": 3,
+                "padding": 4,
+              },
+              Object {
+                "fontFamily": "Material Design Icons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`Storyshots Instruction Forwards 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#F9BC62",
+          "borderRadius": 4,
+          "elevation": 1,
+          "flex": 1,
+          "margin": 8,
+          "paddingHorizontal": 8,
+          "paddingVertical": 4,
+          "shadowColor": "#000",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 0.2,
+          "shadowRadius": 4,
+        },
+        Object {
+          "backgroundColor": "#FFFFFF",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+            "margin": 4,
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontFamily": "Roboto-Medium",
+                "fontSize": 18,
+              },
+              Object {
+                "color": "#354052",
+              },
+              undefined,
+            ]
+          }
+        >
+          Forwards
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#F9BC62",
+                "fontSize": 24,
+              },
+              Object {
+                "marginTop": 3,
+                "padding": 4,
+              },
+              Object {
+                "fontFamily": "Material Design Icons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "marginBottom": 8,
+          "marginRight": 8,
+        }
+      }
+    >
+      <View
         style={
           Array [
             Object {
-              "color": "#F9BC62",
-              "fontSize": 24,
+              "alignItems": "center",
+              "flexDirection": "row",
+              "width": "100%",
             },
-            Object {
-              "marginTop": 3,
-              "padding": 4,
-            },
-            Object {
-              "fontFamily": "Material Design Icons",
-              "fontStyle": "normal",
-              "fontWeight": "normal",
-            },
-            Object {},
+            undefined,
           ]
         }
       >
-        
-      </Text>
+        <Text
+          style={
+            Object {
+              "color": "#354052",
+              "fontFamily": "Roboto-Medium",
+              "fontSize": 16,
+              "minWidth": 40,
+              "textAlign": "center",
+            }
+          }
+        >
+          1s
+        </Text>
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "width": "100%",
+            }
+          }
+        >
+          <@react-native-community/slider
+            maximumTrackTintColor="#FCE2BA"
+            maximumValue={60}
+            minimumTrackTintColor="#F9BC62"
+            minimumValue={1}
+            onSlidingComplete={[Function]}
+            onValueChange={[Function]}
+            step={1}
+            thumbImage={
+              Object {
+                "process": [Function],
+              }
+            }
+            thumbTintColor={null}
+            value={1}
+          />
+        </View>
+      </View>
     </View>
   </View>
 </RCTSafeAreaView>
@@ -3645,11 +4009,10 @@ exports[`Storyshots Instruction Sensor 1`] = `
     style={
       Array [
         Object {
-          "alignItems": "center",
           "backgroundColor": "#F9BC62",
           "borderRadius": 4,
           "elevation": 1,
-          "flexDirection": "row",
+          "flex": 1,
           "margin": 8,
           "paddingHorizontal": 8,
           "paddingVertical": 4,
@@ -3668,59 +4031,10 @@ exports[`Storyshots Instruction Sensor 1`] = `
       ]
     }
   >
-    <Text
-      allowFontScaling={false}
-      style={
-        Array [
-          Object {
-            "color": "white",
-            "fontSize": 24,
-          },
-          Array [
-            Object {
-              "marginLeft": 4,
-            },
-            undefined,
-          ],
-          Object {
-            "fontFamily": "FontAwesome",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-          },
-          Object {},
-        ]
-      }
-    >
-      
-    </Text>
-    <Text
-      style={
-        Array [
-          Object {
-            "color": "white",
-            "flex": 1,
-            "fontFamily": "Roboto-Medium",
-            "fontSize": 18,
-            "margin": 4,
-          },
-          undefined,
-        ]
-      }
-    >
-      Read Temperature
-    </Text>
     <View
-      accessible={true}
-      isTVSelectable={true}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "opacity": 1,
+          "flexDirection": "row",
         }
       }
     >
@@ -3729,15 +4043,17 @@ exports[`Storyshots Instruction Sensor 1`] = `
         style={
           Array [
             Object {
-              "color": "rgba(255, 255, 255, 0.8)",
+              "color": "white",
               "fontSize": 24,
             },
+            Array [
+              Object {
+                "marginLeft": 4,
+              },
+              undefined,
+            ],
             Object {
-              "marginTop": 3,
-              "padding": 4,
-            },
-            Object {
-              "fontFamily": "Material Design Icons",
+              "fontFamily": "FontAwesome",
               "fontStyle": "normal",
               "fontWeight": "normal",
             },
@@ -3745,8 +4061,71 @@ exports[`Storyshots Instruction Sensor 1`] = `
           ]
         }
       >
-        
+        
       </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+            "margin": 4,
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontFamily": "Roboto-Medium",
+                "fontSize": 18,
+              },
+              undefined,
+            ]
+          }
+        >
+          Read Temperature
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "rgba(255, 255, 255, 0.8)",
+                "fontSize": 24,
+              },
+              Object {
+                "marginTop": 3,
+                "padding": 4,
+              },
+              Object {
+                "fontFamily": "Material Design Icons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
     </View>
   </View>
 </RCTSafeAreaView>

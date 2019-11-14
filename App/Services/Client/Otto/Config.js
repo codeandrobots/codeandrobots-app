@@ -60,10 +60,11 @@ export default {
     {key: '14', name: 'Fart'}
   ],
   moves: [
-    { title: 'Forwards', cmd: 'M 1' },
-    { title: 'Back', cmd: 'M 2' },
-    { title: 'Left', cmd: 'M 3' },
-    { title: 'Right', cmd: 'M 4' }
+    { title: 'Wait', cmd: 'M 0', showDuration: true },
+    { title: 'Forwards', cmd: 'M 1', showDuration: true },
+    { title: 'Back', cmd: 'M 2', showDuration: true },
+    { title: 'Left', cmd: 'M 3', showDuration: true },
+    { title: 'Right', cmd: 'M 4', showDuration: true }
   ],
   skills: [
     {
@@ -79,10 +80,10 @@ export default {
         { title: 'Flap Front', image: Images.otto.skills.flap.front, cmd: 'M 12' },
         { title: 'Flap Back', image: Images.otto.skills.flap.back, cmd: 'M 13' },
         { title: 'Tiptoe', image: Images.otto.skills.tiptoe, cmd: 'M 14' },
-        { title: 'Bend Right', image: Images.otto.skills.bend.right, cmd: 'M 16' },
-        { title: 'Bend Left', image: Images.otto.skills.bend.left, cmd: 'M 15' },
-        { title: 'Shake Right', image: Images.otto.skills.shake.right, cmd: 'M 18' },
-        { title: 'Shake Left', image: Images.otto.skills.shake.left, cmd: 'M 17' },
+        { title: 'Bend Right', image: Images.otto.skills.bend.right, cmd: 'M 15' },
+        { title: 'Bend Left', image: Images.otto.skills.bend.left, cmd: 'M 16' },
+        { title: 'Shake Right', image: Images.otto.skills.shake.right, cmd: 'M 17' },
+        { title: 'Shake Left', image: Images.otto.skills.shake.left, cmd: 'M 18' },
         { title: 'Jitter', image: Images.otto.skills.jitter, cmd: 'M 19' }
       ]
     },

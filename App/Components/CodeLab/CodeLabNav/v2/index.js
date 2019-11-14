@@ -19,9 +19,7 @@ export default class CodeLabNav extends Component {
 
     const skill = skills.find(skill => skill.category === category)
     if (skill && skill.items.length > index) {
-      const cmd = skill.items[index].cmd
-      const title = skill.items[index].title
-      onPress(category, { cmd, title })
+      onPress(category, skill.items[index])
     }
   }
 
