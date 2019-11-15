@@ -25,7 +25,8 @@ export default class PlayerBottomNav extends Component {
     ),
     showSkillIcons: PropTypes.bool,
     onSliderPress: PropTypes.func,
-    onSkillPress: PropTypes.func
+    onSkillPress: PropTypes.func,
+    onNavHeightChange: PropTypes.func
   }
 
   constructor (props) {
@@ -38,6 +39,14 @@ export default class PlayerBottomNav extends Component {
 
   onCategoryPress = (category, i) => {
     this.setState({ activeSkillCategoryIndex: i })
+  }
+
+  onLayout = (event) => {
+    const { height } = event.nativeEvent.layout
+    const { onNavHeightChange } = this.props
+    if (onNavHeightChange) {
+      onNavHeightChange(height)
+    }
   }
 
   render () {
@@ -62,7 +71,7 @@ export default class PlayerBottomNav extends Component {
       : [s.buttons]
 
     return (
-      <View style={[s.footer, style]}>
+      <View onLayout={this.onLayout} style={[s.footer, style]}>
         <View style={s.view}>
           {slider &&
             <LabelRangeSliderInput

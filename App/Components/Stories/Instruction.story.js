@@ -6,8 +6,14 @@ import { Instruction } from '../CodeLab'
 
 storiesOf('Instruction', module)
   .addDecorator(Decorator)
+  .add('Default', () => (
+    <Instruction title='Beep' onClose={() => {}} />
+  ))
+  .add('Forwards', () => (
+    <Instruction title='Forwards' showDuration onSlidingComplete={() => {}} onClose={() => {}} />
+  ))
   .add('Action', () => (
-    <Instruction icon='arrow-up' title='Move Up' onClose={() => {}} />
+    <Instruction type='action' icon='arrow-up' title='Move Up' onClose={() => {}} />
   ))
   .add('Sensor', () => (
     <Instruction type='sensor' icon='thermometer' title='Read Temperature' onClose={() => {}} />

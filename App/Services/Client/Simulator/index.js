@@ -58,10 +58,14 @@ export default class Simulator {
     let delay = 0
     instructions.forEach((instruction) => {
       setTimeout(() => {
+        const { cmd } = instruction
         // TODO Translate instruction to correct event and data
-        socket.emit({event: 'move', direction: instruction})
+        if (cmd) {
+          socket.emit({event: 'move', direction: cmd})
+        }
       }, delay)
-      delay += 500
+      const { duration } = instruction
+      delay += (duration && duration > 0) ? duration : 500
     })
   }
 }

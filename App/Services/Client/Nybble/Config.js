@@ -57,6 +57,19 @@ export default {
       forwards: 'ktr'
     }
   },
+  moves: [
+    { title: 'Wait', cmd: 'kbalance', showDuration: true },
+    { title: 'Forwards', cmd: 'kwk', showDuration: true },
+    { title: 'Back', cmd: 'kwkR', showDuration: true },
+    { title: 'Fwd Left', cmd: 'kwkL', showDuration: true },
+    { title: 'Fwd Right', cmd: 'kbk', showDuration: true },
+    { title: 'Back Left', cmd: 'kbkR', showDuration: true },
+    { title: 'Back Right', cmd: 'kbkL', showDuration: true },
+    { title: 'Crawl Fwd', cmd: 'kcr', showDuration: true },
+    { title: 'Crawl Left', cmd: 'kcrR', showDuration: true },
+    { title: 'Crawl Right', cmd: 'kcrL', showDuration: true },
+    { title: 'Trot Fwd', cmd: 'ktr', showDuration: true }
+  ],
   skills: [
     {
       category: 'Skills',

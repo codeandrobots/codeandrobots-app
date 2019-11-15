@@ -2,8 +2,6 @@
 import Bluetooth from 'App/Services/Bluetooth'
 import Config, { Speed } from './Config'
 
-const STOP = 'stop'
-
 const DELAY = 600 // Delay between commands
 
 const cmdFromTouch = (touch) => {
@@ -15,22 +13,6 @@ const cmdFromTouch = (touch) => {
     return Config.commands.walk.left
   } else if (touch.dx <= -40) {
     return Config.commands.walk.right
-  } else {
-    return null
-  }
-}
-
-const cmdFromInstruction = (instruction) => {
-  if (instruction === 'up') {
-    return Config.commands.walk.forwards
-  } else if (instruction === 'down') {
-    return Config.commands.walk.backwards
-  } else if (instruction === 'right') {
-    return Config.commands.walk.right
-  } else if (instruction === 'left') {
-    return Config.commands.walk.left
-  } else if (instruction === STOP) {
-    return Config.commands.stop
   } else {
     return null
   }
@@ -66,8 +48,8 @@ export default class Otto {
     }
   }
 
-  sendCommand = async (cmd) => {
-    if (cmd && (!this.lastCmdSent || this.lastCmdSent !== cmd)) {
+  sendCommand = async (cmd, checkLastCommand = false) => {
+    if (cmd && (!checkLastCommand || !this.lastCmdSent || this.lastCmdSent !== cmd)) {
       this.lastCmdSent = cmd
       return Bluetooth.writeln(cmd)
     } else {
@@ -77,8 +59,7 @@ export default class Otto {
 
   stop = (delay) => {
     if (!delay) {
-      const cmd = cmdFromInstruction(STOP)
-      this.sendCommand(cmd)
+      this.sendCommand(Config.commands.stop)
     } else {
       setTimeout(() => { this.stop() }, delay)
     }
@@ -90,7 +71,7 @@ export default class Otto {
 
   move = (touch) => {
     const cmd = cmdFromTouch(touch) + ' ' + this.speed
-    this.sendCommand(cmd)
+    this.sendCommand(cmd, true)
   }
 
   moveAndStop = (touch) => {
@@ -109,13 +90,19 @@ export default class Otto {
 
   run = (instructions) => {
     let delay = 0
-    instructions.push(STOP) // Always finish with stop
     instructions.forEach((instruction) => {
       setTimeout(() => {
-        const cmd = cmdFromInstruction(instruction)
-        this.sendCommand(cmd)
+        const { cmd } = instruction
+        if (cmd) {
+          this.sendCommand(cmd)
+        }
       }, delay)
-      delay += DELAY
+      const { duration } = instruction
+      delay += (duration && duration > 0) ? duration : DELAY
     })
+    // Always finish with stop
+    setTimeout(() => {
+      this.sendCommand(Config.commands.stop)
+    }, delay)
   }
 }

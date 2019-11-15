@@ -10,10 +10,10 @@ exports[`Home Component renders correctly 1`] = `
       title="Play & Explore"
     />
     <DefaultListItem
-      button="Discover"
+      button="Code"
       onPress={[Function]}
       text="Let’s see what you can do"
-      title="Discover"
+      title="Code Lab"
     />
     <DefaultListItem
       button="Learn"

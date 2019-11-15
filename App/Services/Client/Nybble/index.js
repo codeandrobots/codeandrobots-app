@@ -2,8 +2,6 @@
 import Bluetooth from 'App/Services/Bluetooth'
 import Config, { Gaits } from './Config'
 
-const STOP = 'stop'
-
 const DELAY = 600 // Delay between commands
 
 const sounds = []
@@ -38,22 +36,6 @@ const cmdFromTouch = (touch, gait) => {
   }
 }
 
-const cmdFromInstruction = (instruction) => {
-  if (instruction === 'up') {
-    return Config.commands.walk.forwards
-  } else if (instruction === 'down') {
-    return Config.commands.walk.backwards
-  } else if (instruction === 'right') {
-    return Config.commands.walk.right
-  } else if (instruction === 'left') {
-    return Config.commands.walk.left
-  } else if (instruction === STOP) {
-    return Config.commands.stop
-  } else {
-    return Config.commands.stop
-  }
-}
-
 export default class Nybble {
   lastCmdSent = null
   gait = Config.params[0].defaultIndex
@@ -83,7 +65,7 @@ export default class Nybble {
 
   stop = async (delay) => {
     if (!delay) {
-      const cmd = cmdFromInstruction(STOP)
+      const cmd = Config.commands.stop
       return this.sendCommand(cmd)
     } else {
       setTimeout(() => { this.stop() }, delay)
@@ -115,13 +97,19 @@ export default class Nybble {
 
   run = (instructions) => {
     let delay = 0
-    instructions.push(STOP) // Always finish with stop
     instructions.forEach((instruction) => {
       setTimeout(() => {
-        const cmd = cmdFromInstruction(instruction)
-        Bluetooth.write(cmd)
+        const { cmd } = instruction
+        if (cmd) {
+          Bluetooth.write(cmd)
+        }
       }, delay)
-      delay += DELAY
+      const { duration } = instruction
+      delay += (duration && duration > 0) ? duration : DELAY
     })
+    // Always finish with stop
+    setTimeout(() => {
+      this.sendCommand(Config.commands.stop)
+    }, delay)
   }
 }
