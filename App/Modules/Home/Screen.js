@@ -14,49 +14,30 @@ export default class Screen extends Component {
     const { onNavigatePress } = this.props
     return (
       <Container>
-        {!isIOSProduction() &&
-          <List>
-            <ListItem
-              title='Play & Explore'
-              text='Let’s play'
-              button='Play'
-              onPress={() => { onNavigatePress('PlayerScreen') }} />
-            <ListItem
-              title='Code Lab'
-              text='Let’s see what you can do'
-              button='Code'
-              onPress={() => { onNavigatePress('CodeLabScreen') }} />
-            <ListItem
-              title='Learn'
-              text='You’ll be a guru in no time'
-              button='Learn'
-              onPress={() => { onNavigatePress('LearnScreen') }} />
+        <List>
+          <ListItem
+            title='Play & Explore'
+            text='Let’s play'
+            button='Play'
+            onPress={() => { onNavigatePress('PlayerScreen') }} />
+          <ListItem
+            title='Code Lab'
+            text='Let’s see what you can do'
+            button='Code'
+            onPress={() => { onNavigatePress('CodeLabScreen') }} />
+          <ListItem
+            title='Learn'
+            text='You’ll be a guru in no time'
+            button='Learn'
+            onPress={() => { onNavigatePress('LearnScreen') }} />
+          {!isIOSProduction() &&
             <ListItem
               title='Lab'
               text='Get under the hood'
               button='Lab'
               onPress={() => { onNavigatePress('LabScreen') }} />
-          </List>
-        }
-        {isIOSProduction() &&
-          <List>
-            <ListItem
-              title='Play & Explore'
-              text='Let’s play'
-              button='Play'
-              onPress={() => { onNavigatePress('PlayScreen') }} />
-            <ListItem
-              title='Code Lab'
-              text='Let’s see what you can do'
-              button='Code'
-              onPress={() => { onNavigatePress('CodeLabScreen') }} />
-            <ListItem
-              title='Learn'
-              text='You’ll be a guru in no time'
-              button='Learn'
-              onPress={() => { onNavigatePress('LearnScreen') }} />
-          </List>
-        }
+          }
+        </List>
         <BottomNav
           onRatePress={() => { onNavigatePress('RateScreen') }}
           onHomePress={() => { onNavigatePress('PlayerScreen') }}

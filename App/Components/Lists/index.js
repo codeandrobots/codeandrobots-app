@@ -20,6 +20,7 @@ export default class List extends Component {
     const rowStyle = (cols === 1) ? {flex: 1} : undefined
 
     const children = React.Children.map(this.props.children, child => {
+      if (!child) return null
       return React.cloneElement(child, {style: rowStyle})
     })
 
@@ -36,6 +37,7 @@ export default class List extends Component {
           <Text style={s.title}>{title}</Text>
         )}
         {rows.map((row, i) => {
+          if (!row) return null
           return (linedRows)
             ? (
               <View key={uuid.v4()}>
