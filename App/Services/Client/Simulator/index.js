@@ -35,6 +35,10 @@ export default class Simulator {
     // No params are supported for the time being
   }
 
+  stop = () => {
+    // Only moveAndStop is supported for the time being
+  }
+
   play = (sound) => {
     socket.emit({event: 'play', sound})
   }

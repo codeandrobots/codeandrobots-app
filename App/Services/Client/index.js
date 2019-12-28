@@ -76,6 +76,11 @@ export default class Client {
     if (client) { client.setParam(param, index) }
   }
 
+  stop = async () => {
+    const client = await this.getClient()
+    if (client) { client.stop() }
+  }
+
   play = async (sound) => {
     const client = await this.getClient()
     if (client) { client.play(sound) }
