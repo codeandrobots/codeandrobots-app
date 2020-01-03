@@ -6,10 +6,5 @@ services:
       dockerfile: ./docker/Dockerfile
     volumes:
       - ../:/project 
-    command: "ls "  
+    command: "react-native run-android"  
     container_name: react-native
-    expose:
-      - "8081"
-    # Look into if we actually need to do the port mapping, or if this is ok
-    #ports:
-    #  - "8081:8081"

@@ -2,14 +2,42 @@
 # 64-bit binaries
 FROM ubuntu:18.04
 
-RUN apt-get update && apt-get install -y wget
+# ——————————
+# Installs base software packages
+# ——————————
 
-# Install Android SDK
-## Dependencies
-RUN apt-get install -y unzip curl ca-certificates \
-  openjdk-8-jdk
+ENV LANG en_US.UTF-8
+
+RUN apt-get update && apt-get install -y apt-utils && apt-get install -y software-properties-common 
+RUN add-apt-repository main && \
+    add-apt-repository universe && \
+    add-apt-repository restricted && \
+    add-apt-repository multiverse
+
+RUN apt-get update && \
+    apt-get install -y wget \
+    openjdk-8-jdk-headless \
+    wget \
+    curl \
+    git \
+    unzip \
+    git \
+    libssl-dev \
+    autoconf \
+    automake \
+    libtool \
+    python-dev \
+    ca-certificates \
+    pkg-config && \
+    apt-get clean
+
 ENV JAVA8_HOME /usr/lib/jvm/java-8-openjdk-amd64
 ENV JAVA_HOME $JAVA8_HOME
+
+# ——————————
+# Configure SDK Tools
+# ——————————
+
 ## SDK tools
 ENV ANDROID_HOME /opt/android-sdk-linux
 ENV DOCKERIZE_HOME /opt/dockerize
@@ -21,11 +49,19 @@ RUN mkdir -p $ANDROID_HOME \
 && unzip sdk.zip -d $ANDROID_HOME \
 && rm sdk.zip
 
+# ——————————
+# Configure Dockerize
+# ——————————
+
 ENV DOCKERIZE_VERSION v0.6.1
 RUN mkdir -p $DOCKERIZE_HOME \
 && wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
 && tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
 && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
+
+# ——————————
+# Download Required Andriod tools
+# ——————————
 
 ENV PATH $PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
 ## SDK
@@ -35,25 +71,41 @@ RUN mkdir -p /root/.android && touch /root/.android/repositories.cfg
 ### time, and without the verbose flag it's impossible to tell if it's hung or
 ### still working
 RUN yes | sdkmanager --verbose 'platform-tools'
+RUN yes | sdkmanager --verbose 'emulator'
+RUN yes | sdkmanager --verbose 'extras;android;m2repository'
+RUN yes | sdkmanager --verbose 'extras;google;google_play_services'
+RUN yes | sdkmanager --verbose 'extras;google;m2repository'
+RUN yes | sdkmanager --verbose 'build-tools;23.0.1'
+RUN yes | sdkmanager --verbose 'platforms;android-23'
+RUN yes | sdkmanager --verbose 'system-images;android-23;default;x86_64'
 RUN yes | sdkmanager --update --verbose
 RUN yes | sdkmanager --licenses
 # Done installing Android SDK
 
-# Set up React Native
-## Install node, yarn, and react-native-cli
-RUN apt-get update 
-RUN apt-get install -y nodejs npm \
-&& npm install -g yarn \
-&& yarn global add react-native-cli
+# ——————————
+# Install Node
+# ——————————
 
-### This is the port that the React Native app will use to communicate with the
-### build server for loading new builds, and also where the debugger page will
-### be hosted (ie. localhost:8081/debugger-ui)
-# EXPOSE 8081
-## Install watchman - required for React Native to build native code, and for
-## hot code reloading
-RUN apt-get install -y git libssl-dev autoconf automake libtool python-dev \
-  pkg-config
+ENV NODE_VERSION 10.13.0
+RUN cd && \
+    wget -q http://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.gz && \
+    tar -xzf node-v${NODE_VERSION}-linux-x64.tar.gz && \
+    mv node-v${NODE_VERSION}-linux-x64 /opt/node && \
+    rm node-v${NODE_VERSION}-linux-x64.tar.gz
+ENV PATH ${PATH}:/opt/node/bin
+
+# ——————————
+# Install React-Native package
+# ——————————
+RUN npm install --global react-native-cli
+RUN npm install --global yarn
+RUN ln -s /opt/node/lib/node_modules/yarn/bin/yarn.js /usr/local/bin/yarn
+RUN ln -s /opt/node/lib/node_modules/yarn/bin/yarn.js /usr/local/bin/yarnpkg
+
+# ——————————
+# Install Watchman
+# ——————————
+
 RUN git clone https://github.com/facebook/watchman.git \
 && cd watchman \
 && git checkout v4.9.0 \
@@ -63,14 +115,10 @@ RUN git clone https://github.com/facebook/watchman.git \
 && make install \
 && cd .. \
 && rm -rf watchman
-# Done setting up react-native
 
-# Install and set up Tini
-ARG TINI_VERSION=v0.18.0
-ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
-RUN chmod +x /tini
-ENTRYPOINT ["/tini", "--"]
-# Done installing Tini
+# ——————————
+# Adding user
+# ——————————
 
 # Set up non-root user
 ARG USERNAME=dev
@@ -80,6 +128,12 @@ RUN adduser --uid $UID --disabled-password --gecos '' $USERNAME
 ## SDK commands)
 RUN chown -R $USERNAME:$USERNAME $ANDROID_HOME
 RUN chown -R $USERNAME:$USERNAME $DOCKERIZE_HOME
+
+RUN mkdir /home/dev/.andriod/
+RUN chmod 777 /home/dev/.andriod/
+# RUN avdmanager create avd -n Nexus5_API23 --device "Nexus 5" --abi "default/x86_64"
+# RUN emulator -list-avds
+
 # Allow the Docker user to play audio through the host's pulseaudio
 ENV XDG_RUNTIME_DIR /run/user/$UID
 RUN mkdir -p $XDG_RUNTIME_DIR && chown -R $USERNAME:$USERNAME $XDG_RUNTIME_DIR
