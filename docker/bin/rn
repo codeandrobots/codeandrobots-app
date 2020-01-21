@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-IMAGE_NAME=${RNDOCKER_IMAGE_NAME:-react-native}
+IMAGE_NAME=${RNDOCKER_IMAGE_NAME:-docker react-native}
 HOST_ANDROID_DIR=${RNDOCKER_HOST_ANDROID_DIR:-$HOME/.android}
 
 # The following defaults MUST stay in sync with the corresponding settings in
@@ -32,12 +32,12 @@ docker run \
        --privileged \
        -v /tmp/.X11-unix:/tmp/.X11-unix \
        -v /dev/bus/usb:/dev/bus/usb \
-       -v "$HOST_ANDROID_DIR":/home/"$DOCKER_USERNAME"/.android \
        -v /dev/shm:/dev/shm \
        -v /etc/machine-id:/etc/machine-id \
        -v /run/user/$UID/pulse:/run/user/"$DOCKER_UID"/pulse \
        -v /var/lib/dbus:/var/lib/dbus \
        --net host \
        -e DISPLAY="$DISPLAY" \
-       "$IMAGE_NAME" \
+       "docker_react-native" \
        "$@"
+

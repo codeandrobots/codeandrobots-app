@@ -28,6 +28,19 @@ RUN apt-get update && \
     libtool \
     python-dev \
     ca-certificates \
+    libpulse0 \
+    libgl1-mesa-dev \
+    libxcomposite1 \
+    libxcursor1 \
+    libasound2 \
+    qt5-default \
+    libqt5dbus5 \
+    libqt5widgets5 \
+    libqt5network5 \
+    libqt5gui5 \
+    libqt5core5a \
+    libdouble-conversion1 \
+    libxcb-xinerama0 \
     pkg-config && \
     apt-get clean
 
@@ -72,12 +85,11 @@ RUN mkdir -p /root/.android && touch /root/.android/repositories.cfg
 ### still working
 RUN yes | sdkmanager --verbose 'platform-tools'
 RUN yes | sdkmanager --verbose 'emulator'
-RUN yes | sdkmanager --verbose 'extras;android;m2repository'
 RUN yes | sdkmanager --verbose 'extras;google;google_play_services'
-RUN yes | sdkmanager --verbose 'extras;google;m2repository'
-RUN yes | sdkmanager --verbose 'build-tools;23.0.1'
-RUN yes | sdkmanager --verbose 'platforms;android-23'
-RUN yes | sdkmanager --verbose 'system-images;android-23;default;x86_64'
+RUN yes | sdkmanager --verbose 'build-tools;25.0.2'
+RUN yes | sdkmanager --verbose 'platforms;android-25'
+RUN yes | sdkmanager --verbose 'tools'
+RUN yes | sdkmanager --verbose 'system-images;android-25;default;x86_64'
 RUN yes | sdkmanager --update --verbose
 RUN yes | sdkmanager --licenses
 # Done installing Android SDK
@@ -116,6 +128,8 @@ RUN git clone https://github.com/facebook/watchman.git \
 && cd .. \
 && rm -rf watchman
 
+RUN ln -sf /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/ /usr/bin/
+
 # ——————————
 # Adding user
 # ——————————
@@ -124,15 +138,13 @@ RUN git clone https://github.com/facebook/watchman.git \
 ARG USERNAME=dev
 ARG UID=1000
 RUN adduser --uid $UID --disabled-password --gecos '' $USERNAME
-## Give the user ownership of the SDK installation directory (so it can run
-## SDK commands)
-RUN chown -R $USERNAME:$USERNAME $ANDROID_HOME
-RUN chown -R $USERNAME:$USERNAME $DOCKERIZE_HOME
+## Give the user ownership of the SDK installation directory (so it can run SDK commands)
 
-RUN mkdir /home/dev/.andriod/
-RUN chmod 777 /home/dev/.andriod/
-# RUN avdmanager create avd -n Nexus5_API23 --device "Nexus 5" --abi "default/x86_64"
-# RUN emulator -list-avds
+RUN mkdir /home/dev/.andriod
+RUN mkdir /home/dev/.andriod/avd
+
+RUN chown -R $USERNAME:$USERNAME $ANDROID_HOME
+RUN chown -R $USERNAME:$USERNAME /home/dev/.andriod
 
 # Allow the Docker user to play audio through the host's pulseaudio
 ENV XDG_RUNTIME_DIR /run/user/$UID
@@ -142,6 +154,9 @@ USER $USERNAME
 
 ENV PROJECT_MOUNT=/project
 WORKDIR $PROJECT_MOUNT 
+
+RUN avdmanager create avd --name nameOfAvd --package 'system-images;android-25;default;x86_64' --device "Nexus 5" && echo "hw.keyboard=yes" >> ~/.android/avd/nameOfAvd.avd/config.ini
+RUN emulator -list-avds
 
 # Tell gradle to store dependencies in a sub directory of the android project -
 # this persists the dependencies between builds, speeding up build times. Make
