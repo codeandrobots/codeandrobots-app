@@ -8,7 +8,10 @@ FROM ubuntu:18.04
 
 ENV LANG en_US.UTF-8
 
-RUN apt-get update && apt-get install -y apt-utils && apt-get install -y software-properties-common 
+RUN apt-get update && \
+    apt-get install -y apt-utils \
+    software-properties-common 
+
 RUN add-apt-repository main && \
     add-apt-repository universe && \
     add-apt-repository restricted && \
@@ -33,7 +36,6 @@ RUN apt-get update && \
     libxcomposite1 \
     libxcursor1 \
     libasound2 \
-    qt5-default \
     libqt5dbus5 \
     libqt5widgets5 \
     libqt5network5 \
@@ -41,6 +43,7 @@ RUN apt-get update && \
     libqt5core5a \
     libdouble-conversion1 \
     libxcb-xinerama0 \
+    pulseaudio \
     pkg-config && \
     apt-get clean
 
@@ -77,22 +80,22 @@ RUN mkdir -p $DOCKERIZE_HOME \
 # ——————————
 
 ENV PATH $PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
+ARG ANDRIOD_VERSION
+ARG BUILD_TOOLS_VERSION
+ARG ANRIOD_SYSTEM_ARCH
+
 ## SDK
 ### sdkmanager will throw up warnings if this file does not exist
 RUN mkdir -p /root/.android && touch /root/.android/repositories.cfg
-### Use verbose flags to keep an eye on progress - some commands take a very long
-### time, and without the verbose flag it's impossible to tell if it's hung or
-### still working
+### downloading required tools
 RUN yes | sdkmanager --verbose 'platform-tools'
 RUN yes | sdkmanager --verbose 'emulator'
-RUN yes | sdkmanager --verbose 'extras;google;google_play_services'
-RUN yes | sdkmanager --verbose 'build-tools;25.0.2'
-RUN yes | sdkmanager --verbose 'platforms;android-25'
+RUN yes | sdkmanager --verbose 'build-tools;'${BUILD_TOOLS_VERSION}
+RUN yes | sdkmanager --verbose 'platforms;'${ANDRIOD_VERSION}
 RUN yes | sdkmanager --verbose 'tools'
-RUN yes | sdkmanager --verbose 'system-images;android-25;default;x86_64'
+RUN yes | sdkmanager --verbose 'system-images;'${ANDRIOD_VERSION}';default;'${ANRIOD_SYSTEM_ARCH}
 RUN yes | sdkmanager --update --verbose
 RUN yes | sdkmanager --licenses
-# Done installing Android SDK
 
 # ——————————
 # Install Node
@@ -109,6 +112,7 @@ ENV PATH ${PATH}:/opt/node/bin
 # ——————————
 # Install React-Native package
 # ——————————
+
 RUN npm install --global react-native-cli
 RUN npm install --global yarn
 RUN ln -s /opt/node/lib/node_modules/yarn/bin/yarn.js /usr/local/bin/yarn
@@ -118,17 +122,18 @@ RUN ln -s /opt/node/lib/node_modules/yarn/bin/yarn.js /usr/local/bin/yarnpkg
 # Install Watchman
 # ——————————
 
+# Number of jobs that will be excuted in parallel by make
+ARG NUM_JOBS=2
+# Downloading and compiling watchman from source
 RUN git clone https://github.com/facebook/watchman.git \
-&& cd watchman \
-&& git checkout v4.9.0 \
-&& ./autogen.sh \
-&& ./configure \
-&& make -j4\
-&& make install \
-&& cd .. \
-&& rm -rf watchman
-
-RUN ln -sf /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/ /usr/bin/
+    && cd watchman \
+    && git checkout v4.9.0 \
+    && ./autogen.sh \
+    && ./configure \
+    && make -j${NUM_JOBS}\
+    && make install \
+    && cd .. \
+    && rm -rf watchman
 
 # ——————————
 # Adding user
@@ -138,11 +143,12 @@ RUN ln -sf /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/ /usr/bin/
 ARG USERNAME=dev
 ARG UID=1000
 RUN adduser --uid $UID --disabled-password --gecos '' $USERNAME
-## Give the user ownership of the SDK installation directory (so it can run SDK commands)
 
+# Non-root user local andriod/avd directory (required for virtual devices to be created)
 RUN mkdir /home/dev/.andriod
 RUN mkdir /home/dev/.andriod/avd
 
+# Giving non-root user permissions to anrdiod sdk commands
 RUN chown -R $USERNAME:$USERNAME $ANDROID_HOME
 RUN chown -R $USERNAME:$USERNAME /home/dev/.andriod
 
@@ -155,8 +161,9 @@ USER $USERNAME
 ENV PROJECT_MOUNT=/project
 WORKDIR $PROJECT_MOUNT 
 
-RUN avdmanager create avd --name nameOfAvd --package 'system-images;android-25;default;x86_64' --device "Nexus 5" && echo "hw.keyboard=yes" >> ~/.android/avd/nameOfAvd.avd/config.ini
-RUN emulator -list-avds
+# Creating default virtual device according to arguments
+ARG DEFAULT_DEVICE_NAME
+RUN avdmanager create avd --name defaultAvd --package 'system-images;'$ANDRIOD_VERSION';default;'$ANRIOD_SYSTEM_ARCH --device "$DEFAULT_DEVICE_NAME" && echo && echo "hw.keyboard=yes" >> ~/.android/avd/defaultAvd.avd/config.ini
 
 # Tell gradle to store dependencies in a sub directory of the android project -
 # this persists the dependencies between builds, speeding up build times. Make

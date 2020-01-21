@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# The path to the dockerfile -- ensure this is correct before running
+DOCKERFILE_PATH=$(grep DOCKERFILE_PATH .env.Docker | xargs)
+DOCKERFILE_PATH=${DOCKERFILE_PATH#*=}
+
+IMAGE_NAME=$(grep IMAGE_NAME .env.Docker | xargs)
+IMAGE_NAME=${IMAGE_NAME#*=}
+
+# Building the dockerfile with arguments passed
+docker build \
+    --build-arg BUILD_TOOLS_VERSION='25.0.2' \
+    --build-arg ANDRIOD_VERSION='android-25' \
+    --build-arg ANRIOD_SYSTEM_ARCH='x86_64' \
+    --build-arg DEFAULT_DEVICE_NAME="Nexus 5" \
+    -f "${DOCKERFILE_PATH}" \
+    -t $IMAGE_NAME .

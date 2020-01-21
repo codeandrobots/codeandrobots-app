@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+
+# The path to the project directory -- ensure this is correct before running
+PROJECT_DIRECTORY=$(grep PROJECT_DIRECTORY .env.Docker | xargs)
+PROJECT_DIRECTORY=${PROJECT_DIRECTORY#*=}
+
+IMAGE_NAME=$(grep IMAGE_NAME .env.Docker | xargs)
+IMAGE_NAME=${IMAGE_NAME#*=}
+
+# These settings must stay consistant with the values used in the dockerfile
+DOCKER_USERNAME=${RNDOCKER_DOCKER_USERNAME:-dev}
+DOCKER_PROJECT_MOUNT=${RNDOCKER_DOCKER_PROJECT_MOUNT:-/project}
+DOCKER_UID=${RNDOCKER_DOCKER_UID:-1000}
+
+# Arguments:
+## --privileged -> needed to get acess for hardware acceleration
+## -v /tmp/.X11-unix -> also needed for access to the host display
+## -v /dev/bus/usb -> gives access to USB devices, so physical android devices
+##   can be used
+## -v /dev/shm -> Location of shared memory
+## -v /etc/machine-id -> The unique machine id which is set during install/boot
+## -v /run/user/$UID/pulse -> allows the emulator to play sounds through the host
+##   pulseaudio
+## -v /var/lib/dbus -> ???
+## --net host -> Using the localhost instead of docker network
+## -e DISPLAY="$DISPLAY" -> required for the container to access the host display
+docker run \
+    --rm \
+    -it \
+    --privileged \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -v /dev/bus/usb:/dev/bus/usb \
+    -v /dev/shm:/dev/shm \
+    -v /etc/machine-id:/etc/machine-id \
+    -v /run/user/$UID/pulse:/run/user/"$DOCKER_UID"/pulse \
+    -v /var/lib/dbus:/var/lib/dbus \
+    -v $PROJECT_DIRECTORY:$DOCKER_PROJECT_MOUNT \
+    --net host \
+    -e DISPLAY="$DISPLAY" \
+    "$IMAGE_NAME" \
+    "$@"
+
