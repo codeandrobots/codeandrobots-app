@@ -68,12 +68,12 @@ More infomation can be found on the react-native-docker project's [github](https
 * There is at least 11.2GB of free space on your machine
 * Make sure to run the command ```xhost local:docker``` to give Docker access to the host's display
 
-**Step 1:** ensure the ./android/local.properties file with has following contents
+**Step 1:** ensure the ./android/local.properties file has following contents
   * ```sdk.dir=/opt/android-sdk-linux```
 
 **Step 2:** configure the ./Docker/utils/.env.Docker file
-  * ```DOCKERFILE_PATH= ``` the absolute file path to the Doockerfile
-  * ```PROJECT_DIRECTORY= ``` the absolute file path to the downloaded Code&Robots project
+  * ```DOCKERFILE_PATH=``` the absolute file path to the Doockerfile
+  * ```PROJECT_DIRECTORY=``` the absolute file path to the downloaded Code&Robots project
 
 **Step 3:** build the Docker image
   * ```sudo ./Docker/utils/build```
@@ -87,7 +87,7 @@ More infomation can be found on the react-native-docker project's [github](https
 **Step 6:** Install and run the App
   * ```sudo ./Docker/utils/run watchman watch . && react-native run-android --variant=devDebug```
 
-#### Remote JS debugging
+#### Remote JS Debugging
 
 After completing the setup above, goto `localhost:8081/debugger-ui`
 
