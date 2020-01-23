@@ -62,30 +62,45 @@ If you are having difficulties setting up react-native, a Dockerfile is included
 
 More infomation can be found on the react-native-docker project's [github](https://github.com/mayhewluke/react-native-docker)
 
+### Linux (Docker) Setup:
+
 #### Prerequisites:
 * The repository has been cloned (ref step 2 above)
 * [Docker](https://docs.docker.com/) has been setup
 * There is at least 11.2GB of free space on your machine
 * Make sure to run the command ```xhost local:docker``` to give Docker access to the host's display
 
-**Step 1:** ensure the ./android/local.properties file has following contents
-  * ```sdk.dir=/opt/android-sdk-linux```
+**Step 1:** git clone this repo
+  * Mac or Linux
+    * ```cd ~```
+    * ```git clone https://github.com/codeandrobots/codeandrobots-app.git```
+  * Windows
+    * ```cd C:\Users\%username%```
+    * ```git clone https://github.com/codeandrobots/codeandrobots-app.git```
 
-**Step 2:** configure the ./Docker/utils/.env.Docker file
-  * ```DOCKERFILE_PATH=``` the absolute file path to the Doockerfile
+**Step 1.a (optional):** If the local.properties file exists (found in android/local.properties)
+  * Overwrite the following: ```sdk.dir=/opt/android-sdk-linux```
+
+**Step 2:** configure the Docker environment variables (found in Docker/utils/.env.Docker)
+  * ```DOCKERFILE_PATH=``` the absolute file path to the Dockerfile
   * ```PROJECT_DIRECTORY=``` the absolute file path to the downloaded Code&Robots project
 
-**Step 3:** build the Docker image
-  * ```sudo ./Docker/utils/build```
+#### Note for Steps 3-7
+* The below steps need to be ran within the Docker/utils directory 
+* Steps 4-7 need to be ran in separate terminal windows
 
-**Step 4:** starting the node server
+**Step 3:** call the build script
+  * ```sudo ./build```
+
+**Step 4:** install the required dependencies inside the docker image
+  * ```sudo ./Docker/utils/run yarn install --ignore-engines && npm install husky@next --save-dev && cp .env.example .env```
   * ```sudo ./Docker/utils/run npm start```
 
 **Step 5:** running the Android emulator
   * ```sudo ./Docker/utils/run /opt/android-sdk-linux/tools/emulator -use-system-libs -avd defaultAvd```
 
-**Step 6:** Install and run the App
-  * ```sudo ./Docker/utils/run watchman watch . && react-native run-android --variant=devDebug```
+**Step 7:** install and run the App
+  *  ```sudo ./Docker/utils/run react-native run-android --variant=devDebug```
 
 #### Remote JS Debugging
 
