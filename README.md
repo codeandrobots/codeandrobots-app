@@ -105,11 +105,11 @@ More information can be found on the react-native-docker project's [github](http
 
 **Step 5:** running the Android emulator
   * Open a new terminal window and navigate to the Docker/utils directory
-  * ```sudo ./Docker/utils/run /opt/android-sdk-linux/tools/emulator -use-system-libs -avd defaultAvd```
+  * ```sudo ./run /opt/android-sdk-linux/tools/emulator -use-system-libs -avd defaultAvd```
 
 **Step 7:** install and run the App
   * Open a new terminal window and navigate to the Docker/utils directory
-  *  ```sudo ./Docker/utils/run react-native run-android --variant=devDebug```
+  *  ```sudo ./run react-native run-android --variant=devDebug```
 
 #### Opening project post-installation:
 **Step 1:** ensure docker is running
@@ -119,11 +119,11 @@ More information can be found on the react-native-docker project's [github](http
 
 **Step 3:** running the Android emulator from the Docker/utils directory
   * Open a new terminal window and navigate to the Docker/utils directory
-  * ```sudo ./Docker/utils/run /opt/android-sdk-linux/tools/emulator -use-system-libs -avd defaultAvd```
+  * ```sudo ./run /opt/android-sdk-linux/tools/emulator -use-system-libs -avd defaultAvd```
 
 **Step 4:** install and run the App from the Docker/utils directory
   * Open a new terminal window and navigate to the Docker/utils directory
-  *  ```sudo ./Docker/utils/run react-native run-android --variant=devDebug```
+  *  ```sudo ./run react-native run-android --variant=devDebug```
 
 #### Remote JS Debugging
 
