@@ -134,8 +134,6 @@ RUN git clone https://github.com/facebook/watchman.git \
     && make install \
     && cd .. \
     && rm -rf watchman
-# Increasing inoitfy's limit to allow watchman to listen for file changes
-RUN echo fs.inotify.max_user_watches=524288 | tee -a /etc/sysctl.conf && sysctl -p
 
 # ——————————
 # Adding user
@@ -149,6 +147,7 @@ RUN adduser --uid $UID --disabled-password --gecos '' $USERNAME
 # Non-root user local andriod/avd directory (required for virtual devices to be created)
 RUN mkdir /home/dev/.andriod
 RUN mkdir /home/dev/.andriod/avd
+RUN cp /root/.android/repositories.cfg /home/dev/.andriod
 
 # Giving non-root user permissions to anrdiod sdk commands
 RUN chown -R $USERNAME:$USERNAME $ANDROID_HOME

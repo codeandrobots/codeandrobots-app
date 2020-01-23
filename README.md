@@ -60,13 +60,13 @@ If you're new to mobile app development with React Native then here are some cra
 
 If you are having difficulties setting up react-native, a Dockerfile is included to containerize the development environment.
 
-More infomation can be found on the react-native-docker project's [github](https://github.com/mayhewluke/react-native-docker)
+More information can be found on the react-native-docker project's [github](https://github.com/mayhewluke/react-native-docker)
 
-### Linux (Docker) Setup:
+### Docker setup on a Linux host machine:
 
 #### Prerequisites:
 * The repository has been cloned (ref step 2 above)
-* [Docker](https://docs.docker.com/) has been setup
+* [Docker](https://docs.docker.com/) has been setup and running
 * There is at least 11.2GB of free space on your machine
 * Make sure to run the command ```xhost local:docker``` to give Docker access to the host's display
 
@@ -85,27 +85,49 @@ More infomation can be found on the react-native-docker project's [github](https
   * ```DOCKERFILE_PATH=``` the absolute file path to the Dockerfile
   * ```PROJECT_DIRECTORY=``` the absolute file path to the downloaded Code&Robots project
 
-#### Note for Steps 3-7
-* The below steps need to be ran within the Docker/utils directory 
-* Steps 4-7 need to be ran in separate terminal windows
+**Step 3:** increasing the number of files that watchman can monitor
+  * Run ```cat /proc/sys/fs/inotify/max_user_watches``` to see if watchman can monitor all the required files. If this number is less than 520000, run the command: 
 
-**Step 3:** call the build script
+    ```
+    echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+    ```
+
+
+#### Note for Steps 4-7
+* The below steps need to be ran within the Docker/utils directory 
+
+**Step 4:** call the build script
   * ```sudo ./build```
 
-**Step 4:** install the required dependencies inside the docker image
-  * ```sudo ./Docker/utils/run yarn install --ignore-engines && npm install husky --save-dev && cp ../../.env.example .env```
-  * ```sudo ./Docker/utils/run watchman watch ./ && npm start```
+**Step 4:** install the required dependencies and start required applications
+  * ```sudo ./run yarn install --ignore-engines && npm install husky --save-dev && cp ../../.env.example .env```
+  * ```sudo ./run watchman watch ./ && npm start```
 
 **Step 5:** running the Android emulator
+  * Open a new terminal window and navigate to the Docker/utils directory
   * ```sudo ./Docker/utils/run /opt/android-sdk-linux/tools/emulator -use-system-libs -avd defaultAvd```
 
 **Step 7:** install and run the App
+  * Open a new terminal window and navigate to the Docker/utils directory
+  *  ```sudo ./Docker/utils/run react-native run-android --variant=devDebug```
+
+#### Opening project post-installation:
+**Step 1:** ensure docker is running
+
+**Step 2:** start required applications from the Docker/utils directory
+  * ```sudo ./run watchman watch ./ && npm start```
+
+**Step 3:** running the Android emulator from the Docker/utils directory
+  * Open a new terminal window and navigate to the Docker/utils directory
+  * ```sudo ./Docker/utils/run /opt/android-sdk-linux/tools/emulator -use-system-libs -avd defaultAvd```
+
+**Step 4:** install and run the App from the Docker/utils directory
+  * Open a new terminal window and navigate to the Docker/utils directory
   *  ```sudo ./Docker/utils/run react-native run-android --variant=devDebug```
 
 #### Remote JS Debugging
 
 After completing the setup above, goto `localhost:8081/debugger-ui`
-
 
 ### App Properties
 
