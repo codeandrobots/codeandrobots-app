@@ -38,7 +38,7 @@ If you're new to mobile app development with React Native then here are some cra
   * ```yarn install --ignore-engines```
 
 **Step 5:** Reinstall husky to setup git hooks
-  * ```npm install husky@next --save-dev```
+  * ```npm install husky --save-dev```
 
 **Step 6:** Copy `.env.example` to `.env`
   * Mac or Linux
@@ -93,8 +93,8 @@ More infomation can be found on the react-native-docker project's [github](https
   * ```sudo ./build```
 
 **Step 4:** install the required dependencies inside the docker image
-  * ```sudo ./Docker/utils/run yarn install --ignore-engines && npm install husky@next --save-dev && cp .env.example .env```
-  * ```sudo ./Docker/utils/run npm start```
+  * ```sudo ./Docker/utils/run yarn install --ignore-engines && npm install husky --save-dev && cp ../../.env.example .env```
+  * ```sudo ./Docker/utils/run watchman watch ./ && npm start```
 
 **Step 5:** running the Android emulator
   * ```sudo ./Docker/utils/run /opt/android-sdk-linux/tools/emulator -use-system-libs -avd defaultAvd```

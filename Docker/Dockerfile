@@ -134,6 +134,8 @@ RUN git clone https://github.com/facebook/watchman.git \
     && make install \
     && cd .. \
     && rm -rf watchman
+# Increasing inoitfy's limit to allow watchman to listen for file changes
+RUN echo fs.inotify.max_user_watches=524288 | tee -a /etc/sysctl.conf && sysctl -p
 
 # ——————————
 # Adding user

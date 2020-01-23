@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-IMAGE_NAME=$(grep IMAGE_NAME .env.Docker | xargs)
+IMAGE_NAME=$(bash grep IMAGE_NAME .env.Docker | xargs)
 IMAGE_NAME=${IMAGE_NAME#*=}
 
-docker system prune 
-docker rmi $IMAGE_NAME    
+docker system prune -a

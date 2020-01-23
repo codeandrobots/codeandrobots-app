@@ -4,7 +4,7 @@
 DOCKERFILE_PATH=$(grep DOCKERFILE_PATH .env.Docker | xargs)
 DOCKERFILE_PATH=${DOCKERFILE_PATH#*=}
 
-IMAGE_NAME=$(grep IMAGE_NAME .env.Docker | xargs)
+IMAGE_NAME=$(grep IMAGE_NAME ./.env.Docker | xargs)
 IMAGE_NAME=${IMAGE_NAME#*=}
 
 # Building the dockerfile with arguments passed
