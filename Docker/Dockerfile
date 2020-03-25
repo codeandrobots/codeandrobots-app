@@ -90,9 +90,9 @@ RUN mkdir -p /root/.android && touch /root/.android/repositories.cfg
 ### downloading required tools
 RUN yes | sdkmanager --verbose 'platform-tools'
 RUN yes | sdkmanager --verbose 'emulator'
-RUN yes | sdkmanager --verbose 'build-tools;'${BUILD_TOOLS_VERSION}
 RUN yes | sdkmanager --verbose 'platforms;'${ANDRIOD_VERSION}
 RUN yes | sdkmanager --verbose 'tools'
+RUN yes | sdkmanager --verbose 'build-tools;'${BUILD_TOOLS_VERSION}
 RUN yes | sdkmanager --verbose 'system-images;'${ANDRIOD_VERSION}';default;'${ANRIOD_SYSTEM_ARCH}
 RUN yes | sdkmanager --update --verbose
 RUN yes | sdkmanager --licenses
