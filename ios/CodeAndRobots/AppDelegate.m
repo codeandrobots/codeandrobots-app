@@ -27,6 +27,8 @@
 #import "RNFirebaseNotifications.h"
 #import "RNFirebaseMessaging.h"
 
+#import "Orientation.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -105,6 +107,10 @@ fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHand
 
 - (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
   [[RNFirebaseMessaging instance] didRegisterUserNotificationSettings:notificationSettings];
+}
+
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+  return [Orientation getOrientation];
 }
 
 @end

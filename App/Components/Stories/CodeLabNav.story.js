@@ -6,7 +6,7 @@ import { CodeLabNav } from '../CodeLab'
 
 const skills = [
   {
-    category: 'Move',
+    category: 'Moves',
     items: [
       { title: 'Forwards' },
       { title: 'Back' },

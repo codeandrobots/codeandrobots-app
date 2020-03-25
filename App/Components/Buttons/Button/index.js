@@ -8,6 +8,7 @@ import s from './Styles'
 
 export default class Button extends Component {
   static propTypes = {
+    size: PropTypes.string,
     text: PropTypes.string.isRequired,
     image: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
     disabled: PropTypes.bool,
@@ -18,6 +19,7 @@ export default class Button extends Component {
   render () {
     const {
       style = {},
+      size = 'default',
       text,
       image,
       disabled = false,
@@ -25,17 +27,21 @@ export default class Button extends Component {
       onPress } = this.props
 
     const textStyle = (!disabled)
-      ? (style.text) ? [s.text, style.text] : s.text
+      ? (style.text) ? [s.text, style.text] : [s.text]
       : (style.text) ? [s.text, s.text_disabled, style.text] : [s.text, s.text_disabled]
     const buttonStyle = (!disabled)
       ? (style.button) ? [s.button, style.button] : [s.button]
       : (style.button) ? [s.button, s.button_disabled, style.button] : [s.button, s.button_disabled]
     const imageStyle = (!disabled)
-      ? (style.image) ? [s.image, style.image] : s.image
+      ? (style.image) ? [s.image, style.image] : [s.image]
       : (style.image) ? [s.image, s.image_disabled, style.image] : [s.image, s.image_disabled]
 
     if (image) {
       buttonStyle.push(s.button_image)
+    }
+    if (size === 'small') {
+      imageStyle.push(s.image_small)
+      buttonStyle.push(s.button_image_small)
     }
 
     return (

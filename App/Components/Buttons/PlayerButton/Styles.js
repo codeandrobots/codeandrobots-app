@@ -2,6 +2,9 @@
 import { Metrics, Fonts, Colors } from 'App/Themes'
 
 const styles = {
+  view: {
+    width: '100%'
+  },
   button: {
     backgroundColor: Colors.transparent,
     borderWidth: 1,
@@ -19,9 +22,27 @@ const styles = {
 export default styles
 
 export const stylesLight = {
+  view: {
+    ...styles.view
+  },
   button: {
     ...styles.button,
     borderColor: Colors.white
+  },
+  text: {
+    ...styles.text,
+    color: Colors.white
+  }
+}
+
+export const stylesPrimary = {
+  view: {
+    ...styles.view
+  },
+  button: {
+    ...styles.button,
+    backgroundColor: Colors.primary,
+    borderColor: Colors.primary
   },
   text: {
     ...styles.text,

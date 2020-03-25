@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import RootContainer from './RootContainer'
 import createStore from '../Redux'
 import StorybookUI from '../../storybook'
+import Orientation from 'react-native-orientation-locker'
 
 // See https://stackoverflow.com/a/52644367
 global.Symbol = require('core-js/es6/symbol')
@@ -34,6 +35,10 @@ class App extends Component {
       const storybook = await this.checkStorybook()
       this.setState({ storybook })
     }
+  }
+
+  componentDidMount () {
+    Orientation.lockToPortrait()
   }
 
   checkStorybook = async () => {

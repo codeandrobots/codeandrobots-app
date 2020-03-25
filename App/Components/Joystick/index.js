@@ -6,10 +6,12 @@ import { Joystick as JoystickThumbstick } from 'joystick-component-lib'
 
 import { Images } from 'App/Themes'
 
-import s from './Styles'
+import styles, { stylesLightAndSmall } from './Styles'
 
 export default class Joystick extends Component {
   static propTypes = {
+    theme: PropTypes.string,
+    size: PropTypes.string,
     onDraggableMove: PropTypes.func,
     onDraggableRelease: PropTypes.func,
     onDraggableStart: PropTypes.func
@@ -24,18 +26,28 @@ export default class Joystick extends Component {
   render () {
     const {
       style = undefined,
+      theme = 'default',
+      size = 'large',
       onDraggableMove,
       onDraggableRelease,
       onDraggableStart} = this.props
 
+    const lightThemeAndSmallSize = theme === 'light' && size === 'small'
+
+    const s = lightThemeAndSmallSize ? stylesLightAndSmall : styles
+    const arrowsImage = lightThemeAndSmallSize
+      ? Images.joystick.arrows_white_small : Images.joystick.arrows
+    const thumbstickPoint = lightThemeAndSmallSize ? 60 : 80
+    const thumbstickLength = lightThemeAndSmallSize ? 40 : 50
+
     return (
       <View style={style}>
-        <Image source={Images.joystick.arrows} />
+        <Image source={arrowsImage} />
         <View style={s.thumbstickView}>
           <JoystickThumbstick
-            neutralPointX={80}
-            neutralPointY={80}
-            length={50}
+            neutralPointX={thumbstickPoint}
+            neutralPointY={thumbstickPoint}
+            length={thumbstickLength}
             shape='circular'
             isSticky
             draggableStyle={s.thumbstick}

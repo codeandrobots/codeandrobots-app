@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native'
 
 import { Styles, Colors } from 'App/Themes'
 
-export default StyleSheet.create({
+const styles = StyleSheet.create({
   ...Styles,
   thumbstickView: {
     position: 'absolute',
@@ -30,5 +30,29 @@ export default StyleSheet.create({
   thumbstickBackground: {
     backgroundColor: Colors.transparent,
     borderWidth: 0
+  }
+})
+
+export default StyleSheet.create(styles)
+
+export const stylesLightAndSmall = StyleSheet.create({
+  ...styles,
+  thumbstickView: {
+    ...styles.thumbstickView,
+    width: 120,
+    height: 120
+  },
+  thumbstickShadow: {
+    ...styles.thumbstickShadow,
+    top: 40,
+    left: 40,
+    width: 40,
+    height: 40
+  },
+  thumbstick: {
+    ...styles.thumbstick,
+    backgroundColor: Colors.white,
+    width: 40,
+    height: 40
   }
 })

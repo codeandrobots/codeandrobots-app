@@ -9,13 +9,13 @@ const sounds = [
 ]
 
 const calculateDirection = (touch) => {
-  if (touch.dy <= -40) {
+  if (touch.dy <= -30) {
     return 'up'
-  } else if (touch.dy >= 40) {
+  } else if (touch.dy >= 30) {
     return 'down'
-  } else if (touch.dx <= -40) {
+  } else if (touch.dx <= -30) {
     return 'left'
-  } else if (touch.dx >= 40) {
+  } else if (touch.dx >= 30) {
     return 'right'
   } else {
     return null

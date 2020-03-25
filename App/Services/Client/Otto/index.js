@@ -5,13 +5,13 @@ import Config, { Speed } from './Config'
 const DELAY = 600 // Delay between commands
 
 const cmdFromTouch = (touch) => {
-  if (touch.dy <= -40) {
+  if (touch.dy <= -30) {
     return Config.commands.walk.forwards
-  } else if (touch.dy >= 40) {
+  } else if (touch.dy >= 30) {
     return Config.commands.walk.backwards
-  } else if (touch.dx >= 40) {
+  } else if (touch.dx >= 30) {
     return Config.commands.walk.left
-  } else if (touch.dx <= -40) {
+  } else if (touch.dx <= -30) {
     return Config.commands.walk.right
   } else {
     return null
