@@ -34,3 +34,14 @@ export const stylesLight = StyleSheet.create({
     color: Colors.white
   }
 })
+
+export const stylesPrimary = StyleSheet.create({
+  ...styles,
+  tab_active: {
+    borderTopColor: Colors.primaryTranslucent
+  },
+  text: {
+    ...styles.text,
+    color: Colors.primary
+  }
+})

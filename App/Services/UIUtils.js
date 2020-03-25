@@ -1,14 +1,14 @@
 
 import _ from 'lodash'
 
-export const splitItemsByRow = (items, isIconType) => {
+export const splitItemsByRow = (items, isIconType, maxIconsByRow = 5, maxButtonsByRow = 3) => {
   if (!items || items.length === 0) {
     return []
   }
 
   // 5 items per row if isIconType is true
   // otherwise 3 items per row
-  const maxByRow = (isIconType) ? 5 : 3
+  const maxByRow = (isIconType) ? maxIconsByRow : maxButtonsByRow
   const itemsByRow = _.chunk(items, maxByRow)
 
   // Add empty skills to last chunk if last chunk has less than maxByRow

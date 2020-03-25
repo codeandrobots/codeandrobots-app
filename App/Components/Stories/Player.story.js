@@ -1,10 +1,11 @@
 import React from 'react'
+// import { View } from 'react-native'
 import { storiesOf } from '@storybook/react-native'
 import OttoConfig from 'App/Services/Client/Otto/Config'
 import NybbleConfig from 'App/Services/Client/Nybble/Config'
 import { FullScreenDecorator } from './Decorators'
 
-import { PlayerBottomNav } from '../Player'
+import { PlayerBottomNav, PlayerCenterNav } from '../Player'
 
 const slider = {
   default: {
@@ -73,5 +74,17 @@ storiesOf('Player', module)
       slider={slider.nybble}
       skills={skills.nybble}
       onSliderPress={() => {}}
+      onSkillPress={() => {}} />
+  ))
+  .add('Otto Center Nav', () => (
+    <PlayerCenterNav
+      theme='primary'
+      config={OttoConfig}
+      onSkillPress={() => {}} />
+  ))
+  .add('Nybble Right Nav', () => (
+    <PlayerCenterNav
+      theme='primary'
+      config={NybbleConfig}
       onSkillPress={() => {}} />
   ))

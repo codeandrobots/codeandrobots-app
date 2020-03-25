@@ -3,9 +3,9 @@ import { View, TouchableOpacity, Text } from 'react-native'
 import PropTypes from 'prop-types'
 import uuid from 'react-native-uuid'
 
-import styles, { stylesLight } from './Styles'
+import styles, { stylesLight, stylesPrimary } from './Styles'
 
-export default class BottomNav extends Component {
+export default class Tabs extends Component {
   static propTypes = {
     theme: PropTypes.string,
     tabs: PropTypes.arrayOf(PropTypes.string),
@@ -38,7 +38,11 @@ export default class BottomNav extends Component {
   render () {
     const { theme = 'default', tabs } = this.props
     const { activeTab } = this.state
-    const s = (theme === 'light') ? stylesLight : styles
+    const s = (theme === 'light')
+      ? stylesLight
+      : (theme === 'primary')
+        ? stylesPrimary
+        : styles
     const flexStyle = {
       flex: (tabs && tabs.length > 0) ? (1 / tabs.length) : 0
     }

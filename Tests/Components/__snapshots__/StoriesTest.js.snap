@@ -310,185 +310,6 @@ exports[`Storyshots BottomNav Default 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`Storyshots BottomTabs Default 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
-  style={
-    Object {
-      "backgroundColor": "#FAFAFA",
-      "height": "100%",
-    }
-  }
->
-  <View
-    style={
-      Array [
-        Object {
-          "backgroundColor": "#F9BC62",
-          "bottom": 0,
-          "left": 0,
-          "minHeight": 80,
-          "paddingBottom": 32,
-          "paddingTop": 32,
-          "position": "absolute",
-          "width": "100%",
-        },
-        undefined,
-      ]
-    }
-  >
-    <View
-      style={
-        Object {
-          "flexDirection": "row",
-        }
-      }
-    >
-      <View
-        accessible={true}
-        isTVSelectable={true}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "alignItems": "center",
-            "borderTopColor": "rgba(53, 64, 82, 0.5)",
-            "borderTopWidth": 1,
-            "display": "flex",
-            "flex": 0.25,
-            "justifyContent": "center",
-            "opacity": 1,
-            "paddingVertical": 8,
-            "width": "100%",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#354052",
-              "fontFamily": "Roboto-Medium",
-              "fontSize": 16,
-            }
-          }
-        >
-          MOVE
-        </Text>
-      </View>
-      <View
-        accessible={true}
-        isTVSelectable={true}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "alignItems": "center",
-            "borderTopColor": "transparent",
-            "borderTopWidth": 1,
-            "display": "flex",
-            "flex": 0.25,
-            "justifyContent": "center",
-            "opacity": 1,
-            "paddingVertical": 8,
-            "width": "100%",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#354052",
-              "fontFamily": "Roboto-Medium",
-              "fontSize": 16,
-            }
-          }
-        >
-          SKILLS
-        </Text>
-      </View>
-      <View
-        accessible={true}
-        isTVSelectable={true}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "alignItems": "center",
-            "borderTopColor": "transparent",
-            "borderTopWidth": 1,
-            "display": "flex",
-            "flex": 0.25,
-            "justifyContent": "center",
-            "opacity": 1,
-            "paddingVertical": 8,
-            "width": "100%",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#354052",
-              "fontFamily": "Roboto-Medium",
-              "fontSize": 16,
-            }
-          }
-        >
-          SOUNDS
-        </Text>
-      </View>
-      <View
-        accessible={true}
-        isTVSelectable={true}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "alignItems": "center",
-            "borderTopColor": "transparent",
-            "borderTopWidth": 1,
-            "display": "flex",
-            "flex": 0.25,
-            "justifyContent": "center",
-            "opacity": 1,
-            "paddingVertical": 8,
-            "width": "100%",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#354052",
-              "fontFamily": "Roboto-Medium",
-              "fontSize": 16,
-            }
-          }
-        >
-          MOODS
-        </Text>
-      </View>
-    </View>
-  </View>
-</RCTSafeAreaView>
-`;
-
 exports[`Storyshots Button Default 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
@@ -523,12 +344,14 @@ exports[`Storyshots Button Default 1`] = `
     >
       <Text
         style={
-          Object {
-            "color": "#354052",
-            "fontFamily": "Roboto-Medium",
-            "fontSize": 18,
-            "textAlign": "center",
-          }
+          Array [
+            Object {
+              "color": "#354052",
+              "fontFamily": "Roboto-Medium",
+              "fontSize": 18,
+              "textAlign": "center",
+            },
+          ]
         }
       >
         Click Me
@@ -603,12 +426,21 @@ exports[`Storyshots Button Player 1`] = `
 >
   <View
     style={
-      Object {
-        "opacity": 1,
-      }
+      Array [
+        Object {
+          "opacity": 1,
+        },
+        Object {},
+      ]
     }
   >
-    <View>
+    <View
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
       <View
         accessible={true}
         isTVSelectable={true}
@@ -675,12 +507,21 @@ exports[`Storyshots Button Player Light 1`] = `
   >
     <View
       style={
-        Object {
-          "opacity": 1,
-        }
+        Array [
+          Object {
+            "opacity": 1,
+          },
+          Object {},
+        ]
       }
     >
-      <View>
+      <View
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
         <View
           accessible={true}
           isTVSelectable={true}
@@ -1096,12 +937,14 @@ exports[`Storyshots Card Hello 1`] = `
       >
         <Text
           style={
-            Object {
-              "color": "#354052",
-              "fontFamily": "Roboto-Medium",
-              "fontSize": 18,
-              "textAlign": "center",
-            }
+            Array [
+              Object {
+                "color": "#354052",
+                "fontFamily": "Roboto-Medium",
+                "fontSize": 18,
+                "textAlign": "center",
+              },
+            ]
           }
         >
           Learn More
@@ -1296,12 +1139,14 @@ exports[`Storyshots Carousel Default 1`] = `
           >
             <Text
               style={
-                Object {
-                  "color": "#354052",
-                  "fontFamily": "Roboto-Medium",
-                  "fontSize": 18,
-                  "textAlign": "center",
-                }
+                Array [
+                  Object {
+                    "color": "#354052",
+                    "fontFamily": "Roboto-Medium",
+                    "fontSize": 18,
+                    "textAlign": "center",
+                  },
+                ]
               }
             >
               Next
@@ -1539,12 +1384,14 @@ exports[`Storyshots Carousel Dilbert 1`] = `
           >
             <Text
               style={
-                Object {
-                  "color": "#354052",
-                  "fontFamily": "Roboto-Medium",
-                  "fontSize": 18,
-                  "textAlign": "center",
-                }
+                Array [
+                  Object {
+                    "color": "#354052",
+                    "fontFamily": "Roboto-Medium",
+                    "fontSize": 18,
+                    "textAlign": "center",
+                  },
+                ]
               }
             >
               Next
@@ -1612,12 +1459,21 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
         >
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -1664,12 +1520,21 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -1716,12 +1581,21 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -1780,12 +1654,21 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
         >
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -1832,12 +1715,21 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 0.5,
-              }
+              Array [
+                Object {
+                  "opacity": 0.5,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -1887,12 +1779,21 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 0.5,
-              }
+              Array [
+                Object {
+                  "opacity": 0.5,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -1982,7 +1883,7 @@ exports[`Storyshots CodeLab Nav Default 1`] = `
             }
           }
         >
-          MOVE
+          MOVES
         </Text>
       </View>
       <View
@@ -4266,6 +4167,119 @@ exports[`Storyshots Joystick Default 1`] = `
         }
       }
     />
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`Storyshots Joystick Light theme and small size 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#F9BC62",
+      }
+    }
+  >
+    <View>
+      <Image
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "height": 120,
+            "left": 0,
+            "position": "absolute",
+            "top": 0,
+            "width": 120,
+            "zIndex": 9999,
+          }
+        }
+      >
+        <View>
+          <View
+            style={
+              Array [
+                Object {
+                  "borderColor": "black",
+                  "borderRadius": 40,
+                  "borderWidth": 1,
+                  "height": 80,
+                  "left": 20,
+                  "position": "absolute",
+                  "top": 20,
+                  "width": 80,
+                },
+                Object {
+                  "backgroundColor": "transparent",
+                  "borderWidth": 0,
+                },
+              ]
+            }
+          />
+          <View
+            style={
+              Object {
+                "left": 40,
+                "position": "absolute",
+                "top": 40,
+              }
+            }
+          >
+            <View
+              onMoveShouldSetResponder={[Function]}
+              onMoveShouldSetResponderCapture={[Function]}
+              onResponderEnd={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderReject={[Function]}
+              onResponderRelease={[Function]}
+              onResponderStart={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              onStartShouldSetResponderCapture={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "white",
+                  "borderRadius": 20,
+                  "height": 40,
+                  "left": 0,
+                  "top": 0,
+                  "width": 40,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#FCE2BA",
+            "borderRadius": 30,
+            "height": 40,
+            "left": 40,
+            "position": "absolute",
+            "top": 40,
+            "width": 40,
+            "zIndex": 9998,
+          }
+        }
+      />
+    </View>
   </View>
 </RCTSafeAreaView>
 `;
@@ -8733,12 +8747,14 @@ exports[`Storyshots ListItem Default 1`] = `
         >
           <Text
             style={
-              Object {
-                "color": "#354052",
-                "fontFamily": "Roboto-Medium",
-                "fontSize": 18,
-                "textAlign": "center",
-              }
+              Array [
+                Object {
+                  "color": "#354052",
+                  "fontFamily": "Roboto-Medium",
+                  "fontSize": 18,
+                  "textAlign": "center",
+                },
+              ]
             }
           >
             Play
@@ -10285,12 +10301,14 @@ exports[`Storyshots Modal Not Connected 1`] = `
             >
               <Text
                 style={
-                  Object {
-                    "color": "#354052",
-                    "fontFamily": "Roboto-Medium",
-                    "fontSize": 18,
-                    "textAlign": "center",
-                  }
+                  Array [
+                    Object {
+                      "color": "#354052",
+                      "fontFamily": "Roboto-Medium",
+                      "fontSize": 18,
+                      "textAlign": "center",
+                    },
+                  ]
                 }
               >
                 Connect
@@ -10495,12 +10513,14 @@ The good news is you can follow along as this Beta version of the app develops o
             >
               <Text
                 style={
-                  Object {
-                    "color": "#354052",
-                    "fontFamily": "Roboto-Medium",
-                    "fontSize": 18,
-                    "textAlign": "center",
-                  }
+                  Array [
+                    Object {
+                      "color": "#354052",
+                      "fontFamily": "Roboto-Medium",
+                      "fontSize": 18,
+                      "textAlign": "center",
+                    },
+                  ]
                 }
               >
                 Learn More
@@ -11037,12 +11057,21 @@ exports[`Storyshots Player Bottom Nav 1`] = `
         >
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -11089,12 +11118,21 @@ exports[`Storyshots Player Bottom Nav 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -11141,12 +11179,21 @@ exports[`Storyshots Player Bottom Nav 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -11205,12 +11252,21 @@ exports[`Storyshots Player Bottom Nav 1`] = `
         >
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -11257,12 +11313,21 @@ exports[`Storyshots Player Bottom Nav 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -11309,12 +11374,21 @@ exports[`Storyshots Player Bottom Nav 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -11373,12 +11447,21 @@ exports[`Storyshots Player Bottom Nav 1`] = `
         >
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -11425,12 +11508,21 @@ exports[`Storyshots Player Bottom Nav 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 0.5,
-              }
+              Array [
+                Object {
+                  "opacity": 0.5,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -11480,12 +11572,21 @@ exports[`Storyshots Player Bottom Nav 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 0.5,
-              }
+              Array [
+                Object {
+                  "opacity": 0.5,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -11813,12 +11914,21 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
         >
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -11865,12 +11975,21 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -11917,12 +12036,21 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -11981,12 +12109,21 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
         >
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -12033,12 +12170,21 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -12085,12 +12231,21 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -12149,12 +12304,21 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
         >
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -12201,12 +12365,21 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 0.5,
-              }
+              Array [
+                Object {
+                  "opacity": 0.5,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -12256,12 +12429,21 @@ exports[`Storyshots Player Bottom Nav Light 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 0.5,
-              }
+              Array [
+                Object {
+                  "opacity": 0.5,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -12589,12 +12771,21 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
         >
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -12641,12 +12832,21 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -12693,12 +12893,21 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -12757,12 +12966,21 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
         >
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -12809,12 +13027,21 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -12861,12 +13088,21 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -12925,12 +13161,21 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
         >
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -12977,12 +13222,21 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -13029,12 +13283,21 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -13077,6 +13340,638 @@ exports[`Storyshots Player Nybble Bottom Nav 1`] = `
                   Recover
                 </Text>
               </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`Storyshots Player Nybble Right Nav 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "backgroundColor": "#FAFAFA",
+      "height": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "marginVertical": 8,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "marginVertical": 8,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "marginHorizontal": 4,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#F9BC62",
+                  "borderColor": "#F9BC62",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "minWidth": 112,
+                  "opacity": 1,
+                  "paddingHorizontal": 0,
+                  "paddingVertical": 8,
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#354052",
+                      "fontFamily": "Roboto-Medium",
+                      "fontSize": 18,
+                      "textAlign": "center",
+                    },
+                    Object {
+                      "color": "white",
+                      "fontFamily": "Roboto-Medium",
+                      "fontSize": 14,
+                    },
+                  ]
+                }
+              >
+                Rest
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "marginHorizontal": 4,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#F9BC62",
+                  "borderColor": "#F9BC62",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "minWidth": 112,
+                  "opacity": 1,
+                  "paddingHorizontal": 0,
+                  "paddingVertical": 8,
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#354052",
+                      "fontFamily": "Roboto-Medium",
+                      "fontSize": 18,
+                      "textAlign": "center",
+                    },
+                    Object {
+                      "color": "white",
+                      "fontFamily": "Roboto-Medium",
+                      "fontSize": 14,
+                    },
+                  ]
+                }
+              >
+                Balance
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "marginHorizontal": 4,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#F9BC62",
+                  "borderColor": "#F9BC62",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "minWidth": 112,
+                  "opacity": 1,
+                  "paddingHorizontal": 0,
+                  "paddingVertical": 8,
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#354052",
+                      "fontFamily": "Roboto-Medium",
+                      "fontSize": 18,
+                      "textAlign": "center",
+                    },
+                    Object {
+                      "color": "white",
+                      "fontFamily": "Roboto-Medium",
+                      "fontSize": 14,
+                    },
+                  ]
+                }
+              >
+                Sit
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "marginVertical": 8,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "marginHorizontal": 4,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#F9BC62",
+                  "borderColor": "#F9BC62",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "minWidth": 112,
+                  "opacity": 1,
+                  "paddingHorizontal": 0,
+                  "paddingVertical": 8,
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#354052",
+                      "fontFamily": "Roboto-Medium",
+                      "fontSize": 18,
+                      "textAlign": "center",
+                    },
+                    Object {
+                      "color": "white",
+                      "fontFamily": "Roboto-Medium",
+                      "fontSize": 14,
+                    },
+                  ]
+                }
+              >
+                Hi
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "marginHorizontal": 4,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#F9BC62",
+                  "borderColor": "#F9BC62",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "minWidth": 112,
+                  "opacity": 1,
+                  "paddingHorizontal": 0,
+                  "paddingVertical": 8,
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#354052",
+                      "fontFamily": "Roboto-Medium",
+                      "fontSize": 18,
+                      "textAlign": "center",
+                    },
+                    Object {
+                      "color": "white",
+                      "fontFamily": "Roboto-Medium",
+                      "fontSize": 14,
+                    },
+                  ]
+                }
+              >
+                Stretch
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "marginHorizontal": 4,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#F9BC62",
+                  "borderColor": "#F9BC62",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "minWidth": 112,
+                  "opacity": 1,
+                  "paddingHorizontal": 0,
+                  "paddingVertical": 8,
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#354052",
+                      "fontFamily": "Roboto-Medium",
+                      "fontSize": 18,
+                      "textAlign": "center",
+                    },
+                    Object {
+                      "color": "white",
+                      "fontFamily": "Roboto-Medium",
+                      "fontSize": 14,
+                    },
+                  ]
+                }
+              >
+                Pee
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "marginVertical": 8,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "marginHorizontal": 4,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#F9BC62",
+                  "borderColor": "#F9BC62",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "minWidth": 112,
+                  "opacity": 1,
+                  "paddingHorizontal": 0,
+                  "paddingVertical": 8,
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#354052",
+                      "fontFamily": "Roboto-Medium",
+                      "fontSize": 18,
+                      "textAlign": "center",
+                    },
+                    Object {
+                      "color": "white",
+                      "fontFamily": "Roboto-Medium",
+                      "fontSize": 14,
+                    },
+                  ]
+                }
+              >
+                Push Up
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "marginHorizontal": 4,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#F9BC62",
+                  "borderColor": "#F9BC62",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "minWidth": 112,
+                  "opacity": 1,
+                  "paddingHorizontal": 0,
+                  "paddingVertical": 8,
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#354052",
+                      "fontFamily": "Roboto-Medium",
+                      "fontSize": 18,
+                      "textAlign": "center",
+                    },
+                    Object {
+                      "color": "white",
+                      "fontFamily": "Roboto-Medium",
+                      "fontSize": 14,
+                    },
+                  ]
+                }
+              >
+                Turbo
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "marginHorizontal": 4,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#F9BC62",
+                  "borderColor": "#F9BC62",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "minWidth": 112,
+                  "opacity": 1,
+                  "paddingHorizontal": 0,
+                  "paddingVertical": 8,
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#354052",
+                      "fontFamily": "Roboto-Medium",
+                      "fontSize": 18,
+                      "textAlign": "center",
+                    },
+                    Object {
+                      "color": "white",
+                      "fontFamily": "Roboto-Medium",
+                      "fontSize": 14,
+                    },
+                  ]
+                }
+              >
+                Recover
+              </Text>
             </View>
           </View>
         </View>
@@ -13362,12 +14257,21 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
         >
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -13397,11 +14301,13 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
                     }
                   }
                   style={
-                    Object {
-                      "height": 54,
-                      "marginHorizontal": 4,
-                      "width": 54,
-                    }
+                    Array [
+                      Object {
+                        "height": 54,
+                        "marginHorizontal": 4,
+                        "width": 54,
+                      },
+                    ]
                   }
                 />
               </View>
@@ -13409,12 +14315,21 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -13444,11 +14359,13 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
                     }
                   }
                   style={
-                    Object {
-                      "height": 54,
-                      "marginHorizontal": 4,
-                      "width": 54,
-                    }
+                    Array [
+                      Object {
+                        "height": 54,
+                        "marginHorizontal": 4,
+                        "width": 54,
+                      },
+                    ]
                   }
                 />
               </View>
@@ -13456,12 +14373,21 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -13491,11 +14417,13 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
                     }
                   }
                   style={
-                    Object {
-                      "height": 54,
-                      "marginHorizontal": 4,
-                      "width": 54,
-                    }
+                    Array [
+                      Object {
+                        "height": 54,
+                        "marginHorizontal": 4,
+                        "width": 54,
+                      },
+                    ]
                   }
                 />
               </View>
@@ -13503,12 +14431,21 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -13538,11 +14475,13 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
                     }
                   }
                   style={
-                    Object {
-                      "height": 54,
-                      "marginHorizontal": 4,
-                      "width": 54,
-                    }
+                    Array [
+                      Object {
+                        "height": 54,
+                        "marginHorizontal": 4,
+                        "width": 54,
+                      },
+                    ]
                   }
                 />
               </View>
@@ -13550,12 +14489,21 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -13585,261 +14533,13 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
                     }
                   }
                   style={
-                    Object {
-                      "height": 54,
-                      "marginHorizontal": 4,
-                      "width": 54,
-                    }
-                  }
-                />
-              </View>
-            </View>
-          </View>
-        </View>
-        <View
-          style={
-            Array [
-              Object {
-                "flexDirection": "row",
-                "justifyContent": "space-between",
-                "marginVertical": 8,
-              },
-              Object {
-                "marginVertical": 4,
-              },
-            ]
-          }
-        >
-          <View
-            style={
-              Object {
-                "opacity": 1,
-              }
-            }
-          >
-            <View>
-              <View
-                accessible={true}
-                isTVSelectable={true}
-                onResponderGrant={[Function]}
-                onResponderMove={[Function]}
-                onResponderRelease={[Function]}
-                onResponderTerminate={[Function]}
-                onResponderTerminationRequest={[Function]}
-                onStartShouldSetResponder={[Function]}
-                style={
-                  Object {
-                    "backgroundColor": "transparent",
-                    "borderColor": "white",
-                    "borderRadius": 8,
-                    "borderWidth": 1,
-                    "minWidth": 62,
-                    "opacity": 1,
-                    "paddingHorizontal": 0,
-                    "paddingVertical": 4,
-                  }
-                }
-              >
-                <Image
-                  source={
-                    Object {
-                      "process": [Function],
-                    }
-                  }
-                  style={
-                    Object {
-                      "height": 54,
-                      "marginHorizontal": 4,
-                      "width": 54,
-                    }
-                  }
-                />
-              </View>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "opacity": 1,
-              }
-            }
-          >
-            <View>
-              <View
-                accessible={true}
-                isTVSelectable={true}
-                onResponderGrant={[Function]}
-                onResponderMove={[Function]}
-                onResponderRelease={[Function]}
-                onResponderTerminate={[Function]}
-                onResponderTerminationRequest={[Function]}
-                onStartShouldSetResponder={[Function]}
-                style={
-                  Object {
-                    "backgroundColor": "transparent",
-                    "borderColor": "white",
-                    "borderRadius": 8,
-                    "borderWidth": 1,
-                    "minWidth": 62,
-                    "opacity": 1,
-                    "paddingHorizontal": 0,
-                    "paddingVertical": 4,
-                  }
-                }
-              >
-                <Image
-                  source={
-                    Object {
-                      "process": [Function],
-                    }
-                  }
-                  style={
-                    Object {
-                      "height": 54,
-                      "marginHorizontal": 4,
-                      "width": 54,
-                    }
-                  }
-                />
-              </View>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "opacity": 1,
-              }
-            }
-          >
-            <View>
-              <View
-                accessible={true}
-                isTVSelectable={true}
-                onResponderGrant={[Function]}
-                onResponderMove={[Function]}
-                onResponderRelease={[Function]}
-                onResponderTerminate={[Function]}
-                onResponderTerminationRequest={[Function]}
-                onStartShouldSetResponder={[Function]}
-                style={
-                  Object {
-                    "backgroundColor": "transparent",
-                    "borderColor": "white",
-                    "borderRadius": 8,
-                    "borderWidth": 1,
-                    "minWidth": 62,
-                    "opacity": 1,
-                    "paddingHorizontal": 0,
-                    "paddingVertical": 4,
-                  }
-                }
-              >
-                <Image
-                  source={
-                    Object {
-                      "process": [Function],
-                    }
-                  }
-                  style={
-                    Object {
-                      "height": 54,
-                      "marginHorizontal": 4,
-                      "width": 54,
-                    }
-                  }
-                />
-              </View>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "opacity": 1,
-              }
-            }
-          >
-            <View>
-              <View
-                accessible={true}
-                isTVSelectable={true}
-                onResponderGrant={[Function]}
-                onResponderMove={[Function]}
-                onResponderRelease={[Function]}
-                onResponderTerminate={[Function]}
-                onResponderTerminationRequest={[Function]}
-                onStartShouldSetResponder={[Function]}
-                style={
-                  Object {
-                    "backgroundColor": "transparent",
-                    "borderColor": "white",
-                    "borderRadius": 8,
-                    "borderWidth": 1,
-                    "minWidth": 62,
-                    "opacity": 1,
-                    "paddingHorizontal": 0,
-                    "paddingVertical": 4,
-                  }
-                }
-              >
-                <Image
-                  source={
-                    Object {
-                      "process": [Function],
-                    }
-                  }
-                  style={
-                    Object {
-                      "height": 54,
-                      "marginHorizontal": 4,
-                      "width": 54,
-                    }
-                  }
-                />
-              </View>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "opacity": 1,
-              }
-            }
-          >
-            <View>
-              <View
-                accessible={true}
-                isTVSelectable={true}
-                onResponderGrant={[Function]}
-                onResponderMove={[Function]}
-                onResponderRelease={[Function]}
-                onResponderTerminate={[Function]}
-                onResponderTerminationRequest={[Function]}
-                onStartShouldSetResponder={[Function]}
-                style={
-                  Object {
-                    "backgroundColor": "transparent",
-                    "borderColor": "white",
-                    "borderRadius": 8,
-                    "borderWidth": 1,
-                    "minWidth": 62,
-                    "opacity": 1,
-                    "paddingHorizontal": 0,
-                    "paddingVertical": 4,
-                  }
-                }
-              >
-                <Image
-                  source={
-                    Object {
-                      "process": [Function],
-                    }
-                  }
-                  style={
-                    Object {
-                      "height": 54,
-                      "marginHorizontal": 4,
-                      "width": 54,
-                    }
+                    Array [
+                      Object {
+                        "height": 54,
+                        "marginHorizontal": 4,
+                        "width": 54,
+                      },
+                    ]
                   }
                 />
               </View>
@@ -13862,12 +14562,21 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
         >
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -13897,11 +14606,13 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
                     }
                   }
                   style={
-                    Object {
-                      "height": 54,
-                      "marginHorizontal": 4,
-                      "width": 54,
-                    }
+                    Array [
+                      Object {
+                        "height": 54,
+                        "marginHorizontal": 4,
+                        "width": 54,
+                      },
+                    ]
                   }
                 />
               </View>
@@ -13909,12 +14620,21 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -13944,11 +14664,13 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
                     }
                   }
                   style={
-                    Object {
-                      "height": 54,
-                      "marginHorizontal": 4,
-                      "width": 54,
-                    }
+                    Array [
+                      Object {
+                        "height": 54,
+                        "marginHorizontal": 4,
+                        "width": 54,
+                      },
+                    ]
                   }
                 />
               </View>
@@ -13956,12 +14678,21 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -13991,11 +14722,13 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
                     }
                   }
                   style={
-                    Object {
-                      "height": 54,
-                      "marginHorizontal": 4,
-                      "width": 54,
-                    }
+                    Array [
+                      Object {
+                        "height": 54,
+                        "marginHorizontal": 4,
+                        "width": 54,
+                      },
+                    ]
                   }
                 />
               </View>
@@ -14003,12 +14736,21 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -14038,11 +14780,13 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
                     }
                   }
                   style={
-                    Object {
-                      "height": 54,
-                      "marginHorizontal": 4,
-                      "width": 54,
-                    }
+                    Array [
+                      Object {
+                        "height": 54,
+                        "marginHorizontal": 4,
+                        "width": 54,
+                      },
+                    ]
                   }
                 />
               </View>
@@ -14050,12 +14794,21 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
           </View>
           <View
             style={
-              Object {
-                "opacity": 1,
-              }
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
             }
           >
-            <View>
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
               <View
                 accessible={true}
                 isTVSelectable={true}
@@ -14085,11 +14838,318 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
                     }
                   }
                   style={
+                    Array [
+                      Object {
+                        "height": 54,
+                        "marginHorizontal": 4,
+                        "width": 54,
+                      },
+                    ]
+                  }
+                />
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "marginVertical": 8,
+              },
+              Object {
+                "marginVertical": 4,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
+            }
+          >
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderColor": "white",
+                    "borderRadius": 8,
+                    "borderWidth": 1,
+                    "minWidth": 62,
+                    "opacity": 1,
+                    "paddingHorizontal": 0,
+                    "paddingVertical": 4,
+                  }
+                }
+              >
+                <Image
+                  source={
                     Object {
-                      "height": 54,
-                      "marginHorizontal": 4,
-                      "width": 54,
+                      "process": [Function],
                     }
+                  }
+                  style={
+                    Array [
+                      Object {
+                        "height": 54,
+                        "marginHorizontal": 4,
+                        "width": 54,
+                      },
+                    ]
+                  }
+                />
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
+            }
+          >
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderColor": "white",
+                    "borderRadius": 8,
+                    "borderWidth": 1,
+                    "minWidth": 62,
+                    "opacity": 1,
+                    "paddingHorizontal": 0,
+                    "paddingVertical": 4,
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "process": [Function],
+                    }
+                  }
+                  style={
+                    Array [
+                      Object {
+                        "height": 54,
+                        "marginHorizontal": 4,
+                        "width": 54,
+                      },
+                    ]
+                  }
+                />
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
+            }
+          >
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderColor": "white",
+                    "borderRadius": 8,
+                    "borderWidth": 1,
+                    "minWidth": 62,
+                    "opacity": 1,
+                    "paddingHorizontal": 0,
+                    "paddingVertical": 4,
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "process": [Function],
+                    }
+                  }
+                  style={
+                    Array [
+                      Object {
+                        "height": 54,
+                        "marginHorizontal": 4,
+                        "width": 54,
+                      },
+                    ]
+                  }
+                />
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
+            }
+          >
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderColor": "white",
+                    "borderRadius": 8,
+                    "borderWidth": 1,
+                    "minWidth": 62,
+                    "opacity": 1,
+                    "paddingHorizontal": 0,
+                    "paddingVertical": 4,
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "process": [Function],
+                    }
+                  }
+                  style={
+                    Array [
+                      Object {
+                        "height": 54,
+                        "marginHorizontal": 4,
+                        "width": 54,
+                      },
+                    ]
+                  }
+                />
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "opacity": 1,
+                },
+                Object {},
+              ]
+            }
+          >
+            <View
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderColor": "white",
+                    "borderRadius": 8,
+                    "borderWidth": 1,
+                    "minWidth": 62,
+                    "opacity": 1,
+                    "paddingHorizontal": 0,
+                    "paddingVertical": 4,
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "process": [Function],
+                    }
+                  }
+                  style={
+                    Array [
+                      Object {
+                        "height": 54,
+                        "marginHorizontal": 4,
+                        "width": 54,
+                      },
+                    ]
                   }
                 />
               </View>
@@ -14215,6 +15275,1544 @@ exports[`Storyshots Player Otto Bottom Nav 1`] = `
 </RCTSafeAreaView>
 `;
 
+exports[`Storyshots Player Otto Center Nav 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "backgroundColor": "#FAFAFA",
+      "height": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "borderTopColor": "#FCE2BA",
+            "borderTopWidth": 1,
+            "display": "flex",
+            "flex": 0.3333333333333333,
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingVertical": 8,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#F9BC62",
+              "fontFamily": "Roboto-Medium",
+              "fontSize": 16,
+            }
+          }
+        >
+          SKILLS
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "borderTopColor": "transparent",
+            "borderTopWidth": 1,
+            "display": "flex",
+            "flex": 0.3333333333333333,
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingVertical": 8,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#F9BC62",
+              "fontFamily": "Roboto-Medium",
+              "fontSize": 16,
+            }
+          }
+        >
+          SOUNDS
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "borderTopColor": "transparent",
+            "borderTopWidth": 1,
+            "display": "flex",
+            "flex": 0.3333333333333333,
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingVertical": 8,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#F9BC62",
+              "fontFamily": "Roboto-Medium",
+              "fontSize": 16,
+            }
+          }
+        >
+          MOODS
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "marginVertical": 8,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "marginVertical": 8,
+            },
+            Object {
+              "marginVertical": 4,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "marginHorizontal": 4,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#F9BC62",
+                  "borderColor": "#F9BC62",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "minWidth": 62,
+                  "opacity": 1,
+                  "paddingHorizontal": 0,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "process": [Function],
+                  }
+                }
+                style={
+                  Array [
+                    Object {
+                      "height": 54,
+                      "marginHorizontal": 4,
+                      "width": 54,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "marginHorizontal": 4,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#F9BC62",
+                  "borderColor": "#F9BC62",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "minWidth": 62,
+                  "opacity": 1,
+                  "paddingHorizontal": 0,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "process": [Function],
+                  }
+                }
+                style={
+                  Array [
+                    Object {
+                      "height": 54,
+                      "marginHorizontal": 4,
+                      "width": 54,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "marginHorizontal": 4,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#F9BC62",
+                  "borderColor": "#F9BC62",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "minWidth": 62,
+                  "opacity": 1,
+                  "paddingHorizontal": 0,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "process": [Function],
+                  }
+                }
+                style={
+                  Array [
+                    Object {
+                      "height": 54,
+                      "marginHorizontal": 4,
+                      "width": 54,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "marginHorizontal": 4,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#F9BC62",
+                  "borderColor": "#F9BC62",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "minWidth": 62,
+                  "opacity": 1,
+                  "paddingHorizontal": 0,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "process": [Function],
+                  }
+                }
+                style={
+                  Array [
+                    Object {
+                      "height": 54,
+                      "marginHorizontal": 4,
+                      "width": 54,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "marginHorizontal": 4,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#F9BC62",
+                  "borderColor": "#F9BC62",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "minWidth": 62,
+                  "opacity": 1,
+                  "paddingHorizontal": 0,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "process": [Function],
+                  }
+                }
+                style={
+                  Array [
+                    Object {
+                      "height": 54,
+                      "marginHorizontal": 4,
+                      "width": 54,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "marginVertical": 8,
+            },
+            Object {
+              "marginVertical": 4,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "marginHorizontal": 4,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#F9BC62",
+                  "borderColor": "#F9BC62",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "minWidth": 62,
+                  "opacity": 1,
+                  "paddingHorizontal": 0,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "process": [Function],
+                  }
+                }
+                style={
+                  Array [
+                    Object {
+                      "height": 54,
+                      "marginHorizontal": 4,
+                      "width": 54,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "marginHorizontal": 4,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#F9BC62",
+                  "borderColor": "#F9BC62",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "minWidth": 62,
+                  "opacity": 1,
+                  "paddingHorizontal": 0,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "process": [Function],
+                  }
+                }
+                style={
+                  Array [
+                    Object {
+                      "height": 54,
+                      "marginHorizontal": 4,
+                      "width": 54,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "marginHorizontal": 4,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#F9BC62",
+                  "borderColor": "#F9BC62",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "minWidth": 62,
+                  "opacity": 1,
+                  "paddingHorizontal": 0,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "process": [Function],
+                  }
+                }
+                style={
+                  Array [
+                    Object {
+                      "height": 54,
+                      "marginHorizontal": 4,
+                      "width": 54,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "marginHorizontal": 4,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#F9BC62",
+                  "borderColor": "#F9BC62",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "minWidth": 62,
+                  "opacity": 1,
+                  "paddingHorizontal": 0,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "process": [Function],
+                  }
+                }
+                style={
+                  Array [
+                    Object {
+                      "height": 54,
+                      "marginHorizontal": 4,
+                      "width": 54,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "marginHorizontal": 4,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#F9BC62",
+                  "borderColor": "#F9BC62",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "minWidth": 62,
+                  "opacity": 1,
+                  "paddingHorizontal": 0,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "process": [Function],
+                  }
+                }
+                style={
+                  Array [
+                    Object {
+                      "height": 54,
+                      "marginHorizontal": 4,
+                      "width": 54,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "marginVertical": 8,
+            },
+            Object {
+              "marginVertical": 4,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "marginHorizontal": 4,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#F9BC62",
+                  "borderColor": "#F9BC62",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "minWidth": 62,
+                  "opacity": 1,
+                  "paddingHorizontal": 0,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "process": [Function],
+                  }
+                }
+                style={
+                  Array [
+                    Object {
+                      "height": 54,
+                      "marginHorizontal": 4,
+                      "width": 54,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "marginHorizontal": 4,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#F9BC62",
+                  "borderColor": "#F9BC62",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "minWidth": 62,
+                  "opacity": 1,
+                  "paddingHorizontal": 0,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "process": [Function],
+                  }
+                }
+                style={
+                  Array [
+                    Object {
+                      "height": 54,
+                      "marginHorizontal": 4,
+                      "width": 54,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "marginHorizontal": 4,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#F9BC62",
+                  "borderColor": "#F9BC62",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "minWidth": 62,
+                  "opacity": 1,
+                  "paddingHorizontal": 0,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "process": [Function],
+                  }
+                }
+                style={
+                  Array [
+                    Object {
+                      "height": 54,
+                      "marginHorizontal": 4,
+                      "width": 54,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "marginHorizontal": 4,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#F9BC62",
+                  "borderColor": "#F9BC62",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "minWidth": 62,
+                  "opacity": 1,
+                  "paddingHorizontal": 0,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "process": [Function],
+                  }
+                }
+                style={
+                  Array [
+                    Object {
+                      "height": 54,
+                      "marginHorizontal": 4,
+                      "width": 54,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "marginHorizontal": 4,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#F9BC62",
+                  "borderColor": "#F9BC62",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "minWidth": 62,
+                  "opacity": 1,
+                  "paddingHorizontal": 0,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "process": [Function],
+                  }
+                }
+                style={
+                  Array [
+                    Object {
+                      "height": 54,
+                      "marginHorizontal": 4,
+                      "width": 54,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`Storyshots Player Side Joystick Left Joystick 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "backgroundColor": "#FAFAFA",
+      "height": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#F9BC62",
+          "height": "100%",
+          "width": 152,
+        },
+        Object {
+          "borderBottomRightRadius": 16,
+          "borderTopRightRadius": 16,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <Image
+          source={
+            Object {
+              "process": [Function],
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "height": 120,
+              "left": 0,
+              "position": "absolute",
+              "top": 0,
+              "width": 120,
+              "zIndex": 9999,
+            }
+          }
+        >
+          <View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "borderColor": "black",
+                    "borderRadius": 40,
+                    "borderWidth": 1,
+                    "height": 80,
+                    "left": 20,
+                    "position": "absolute",
+                    "top": 20,
+                    "width": 80,
+                  },
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                ]
+              }
+            />
+            <View
+              style={
+                Object {
+                  "left": 40,
+                  "position": "absolute",
+                  "top": 40,
+                }
+              }
+            >
+              <View
+                onMoveShouldSetResponder={[Function]}
+                onMoveShouldSetResponderCapture={[Function]}
+                onResponderEnd={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderReject={[Function]}
+                onResponderRelease={[Function]}
+                onResponderStart={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                onStartShouldSetResponderCapture={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "white",
+                    "borderRadius": 20,
+                    "height": 40,
+                    "left": 0,
+                    "top": 0,
+                    "width": 40,
+                  }
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#FCE2BA",
+              "borderRadius": 30,
+              "height": 40,
+              "left": 40,
+              "position": "absolute",
+              "top": 40,
+              "width": 40,
+              "zIndex": 9998,
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`Storyshots Player Side Joystick Right Joystick 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "backgroundColor": "#FAFAFA",
+      "height": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "height": "100%",
+        "position": "relative",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "height": "100%",
+          "position": "absolute",
+          "right": 0,
+          "width": 152,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#F9BC62",
+              "height": "100%",
+              "width": 152,
+            },
+            Object {
+              "borderBottomLeftRadius": 16,
+              "borderTopLeftRadius": 16,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View>
+            <Image
+              source={
+                Object {
+                  "process": [Function],
+                }
+              }
+            />
+            <View
+              style={
+                Object {
+                  "height": 120,
+                  "left": 0,
+                  "position": "absolute",
+                  "top": 0,
+                  "width": 120,
+                  "zIndex": 9999,
+                }
+              }
+            >
+              <View>
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "borderColor": "black",
+                        "borderRadius": 40,
+                        "borderWidth": 1,
+                        "height": 80,
+                        "left": 20,
+                        "position": "absolute",
+                        "top": 20,
+                        "width": 80,
+                      },
+                      Object {
+                        "backgroundColor": "transparent",
+                        "borderWidth": 0,
+                      },
+                    ]
+                  }
+                />
+                <View
+                  style={
+                    Object {
+                      "left": 40,
+                      "position": "absolute",
+                      "top": 40,
+                    }
+                  }
+                >
+                  <View
+                    onMoveShouldSetResponder={[Function]}
+                    onMoveShouldSetResponderCapture={[Function]}
+                    onResponderEnd={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderReject={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderStart={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    onStartShouldSetResponderCapture={[Function]}
+                    style={
+                      Object {
+                        "backgroundColor": "white",
+                        "borderRadius": 20,
+                        "height": 40,
+                        "left": 0,
+                        "top": 0,
+                        "width": 40,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#FCE2BA",
+                  "borderRadius": 30,
+                  "height": 40,
+                  "left": 40,
+                  "position": "absolute",
+                  "top": 40,
+                  "width": 40,
+                  "zIndex": 9998,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`Storyshots Player Side Params Left Params 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "backgroundColor": "#FAFAFA",
+      "height": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#F9BC62",
+          "height": "100%",
+          "width": 152,
+        },
+        Object {
+          "borderBottomRightRadius": 16,
+          "borderTopRightRadius": 16,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "flex": 1,
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 16,
+            "margin": 8,
+          }
+        }
+      >
+        Speed
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#FCE2BA",
+          "height": 1,
+          "width": "100%",
+        }
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "marginLeft": 8,
+          },
+          Object {
+            "marginLeft": 8,
+          },
+        ]
+      }
+    >
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#FCE2BA",
+                "fontFamily": "Roboto-Medium",
+                "fontSize": 16,
+                "marginVertical": 8,
+              },
+            ]
+          }
+        >
+          Slow
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#FCE2BA",
+                "fontFamily": "Roboto-Medium",
+                "fontSize": 16,
+                "marginVertical": 8,
+              },
+              Object {
+                "color": "white",
+              },
+            ]
+          }
+        >
+          Normal
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#FCE2BA",
+                "fontFamily": "Roboto-Medium",
+                "fontSize": 16,
+                "marginVertical": 8,
+              },
+            ]
+          }
+        >
+          Fast
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
 exports[`Storyshots Separator Default 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
@@ -14233,6 +16831,525 @@ exports[`Storyshots Separator Default 1`] = `
       ]
     }
   />
+</RCTSafeAreaView>
+`;
+
+exports[`Storyshots Tabs Default 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "backgroundColor": "#FAFAFA",
+      "height": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#F9BC62",
+          "bottom": 0,
+          "left": 0,
+          "minHeight": 80,
+          "paddingBottom": 32,
+          "paddingTop": 32,
+          "position": "absolute",
+          "width": "100%",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "borderTopColor": "rgba(53, 64, 82, 0.5)",
+            "borderTopWidth": 1,
+            "display": "flex",
+            "flex": 0.25,
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingVertical": 8,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#354052",
+              "fontFamily": "Roboto-Medium",
+              "fontSize": 16,
+            }
+          }
+        >
+          MOVE
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "borderTopColor": "transparent",
+            "borderTopWidth": 1,
+            "display": "flex",
+            "flex": 0.25,
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingVertical": 8,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#354052",
+              "fontFamily": "Roboto-Medium",
+              "fontSize": 16,
+            }
+          }
+        >
+          SKILLS
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "borderTopColor": "transparent",
+            "borderTopWidth": 1,
+            "display": "flex",
+            "flex": 0.25,
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingVertical": 8,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#354052",
+              "fontFamily": "Roboto-Medium",
+              "fontSize": 16,
+            }
+          }
+        >
+          SOUNDS
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "borderTopColor": "transparent",
+            "borderTopWidth": 1,
+            "display": "flex",
+            "flex": 0.25,
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingVertical": 8,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#354052",
+              "fontFamily": "Roboto-Medium",
+              "fontSize": 16,
+            }
+          }
+        >
+          MOODS
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`Storyshots Tabs Light Theme 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "backgroundColor": "#FAFAFA",
+      "height": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#F9BC62",
+          "bottom": 0,
+          "left": 0,
+          "minHeight": 80,
+          "paddingBottom": 32,
+          "paddingTop": 32,
+          "position": "absolute",
+          "width": "100%",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "borderTopColor": "rgba(255, 255, 255, 0.8)",
+            "borderTopWidth": 1,
+            "display": "flex",
+            "flex": 0.25,
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingVertical": 8,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "white",
+              "fontFamily": "Roboto-Medium",
+              "fontSize": 16,
+            }
+          }
+        >
+          MOVE
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "borderTopColor": "transparent",
+            "borderTopWidth": 1,
+            "display": "flex",
+            "flex": 0.25,
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingVertical": 8,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "white",
+              "fontFamily": "Roboto-Medium",
+              "fontSize": 16,
+            }
+          }
+        >
+          SKILLS
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "borderTopColor": "transparent",
+            "borderTopWidth": 1,
+            "display": "flex",
+            "flex": 0.25,
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingVertical": 8,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "white",
+              "fontFamily": "Roboto-Medium",
+              "fontSize": 16,
+            }
+          }
+        >
+          SOUNDS
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "borderTopColor": "transparent",
+            "borderTopWidth": 1,
+            "display": "flex",
+            "flex": 0.25,
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingVertical": 8,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "white",
+              "fontFamily": "Roboto-Medium",
+              "fontSize": 16,
+            }
+          }
+        >
+          MOODS
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`Storyshots Tabs Primary Theme 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "backgroundColor": "#FAFAFA",
+      "height": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "borderTopColor": "#FCE2BA",
+          "borderTopWidth": 1,
+          "display": "flex",
+          "flex": 0.25,
+          "justifyContent": "center",
+          "opacity": 1,
+          "paddingVertical": 8,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#F9BC62",
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 16,
+          }
+        }
+      >
+        MOVE
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "borderTopColor": "transparent",
+          "borderTopWidth": 1,
+          "display": "flex",
+          "flex": 0.25,
+          "justifyContent": "center",
+          "opacity": 1,
+          "paddingVertical": 8,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#F9BC62",
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 16,
+          }
+        }
+      >
+        SKILLS
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "borderTopColor": "transparent",
+          "borderTopWidth": 1,
+          "display": "flex",
+          "flex": 0.25,
+          "justifyContent": "center",
+          "opacity": 1,
+          "paddingVertical": 8,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#F9BC62",
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 16,
+          }
+        }
+      >
+        SOUNDS
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "borderTopColor": "transparent",
+          "borderTopWidth": 1,
+          "display": "flex",
+          "flex": 0.25,
+          "justifyContent": "center",
+          "opacity": 1,
+          "paddingVertical": 8,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#F9BC62",
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 16,
+          }
+        }
+      >
+        MOODS
+      </Text>
+    </View>
+  </View>
 </RCTSafeAreaView>
 `;
 

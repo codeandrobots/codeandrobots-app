@@ -9164,6 +9164,11 @@ react-native-mock-render@^0.0.22:
     react-timer-mixin "^0.13.3"
     warning "^2.1.0"
 
+react-native-orientation-locker@^1.1.8:
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/react-native-orientation-locker/-/react-native-orientation-locker-1.1.8.tgz#45d1c9e002496b8d286ec8932d6e3e7d341f9c85"
+  integrity sha512-+Vd7x6O/3zGqYIMXpeDlaw3ma074Dtnocm8ryT9v5SvaiEcWSzII4frPgXaUcc/MiCq4OWZ1JtVoyw75mdomQw==
+
 react-native-safe-area-view@^0.7.0:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/react-native-safe-area-view/-/react-native-safe-area-view-0.7.0.tgz#38f5ab9368d6ef9e5d18ab64212938af3ec39421"

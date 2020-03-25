@@ -1,15 +1,18 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import Orientation from 'react-native-orientation-locker'
 
 import Client, { isConnected } from 'App/Services/Client'
 
-import Screen from './Screen'
+import PortraitScreen from './Portrait/Screen'
+import LandscapeScreen from './Landscape/Screen'
 
 export class PlayerContainer extends Component {
   constructor (props) {
     super(props)
     this.client = new Client()
     this.state = {
+      orientation: null,
       config: null,
       showNotConnectedModal: false,
       params: []
@@ -26,6 +29,34 @@ export class PlayerContainer extends Component {
       this.props.navigation.setParams({title: 'Player'})
       this.setState({showNotConnectedModal: true})
     }
+  }
+
+  componentDidMount () {
+    Orientation.unlockAllOrientations()
+    Orientation.getOrientation((orientation) => {
+      this.setOrientation(orientation)
+    })
+    Orientation.addOrientationListener(this.onOrientationDidChange)
+  }
+
+  componentWillUnmount () {
+    Orientation.lockToPortrait()
+    Orientation.removeOrientationListener(this.onOrientationDidChange)
+    setTimeout(() => {
+      // Dummy timeout
+    }, 500)
+  }
+
+  setOrientation = (orientation) => {
+    if (orientation === 'LANDSCAPE-LEFT' || orientation === 'LANDSCAPE-RIGHT') {
+      this.setState({ orientation: 'landscape' })
+    } else {
+      this.setState({ orientation: 'portrait' })
+    }
+  }
+
+  onOrientationDidChange = (orientation) => {
+    this.setOrientation(orientation)
   }
 
   onConnect = async () => {
@@ -83,9 +114,11 @@ export class PlayerContainer extends Component {
   }
 
   render () {
-    const { config } = this.state
+    const { config, orientation } = this.state
+    const PlayerScreen = (!orientation || orientation === 'portrait')
+      ? PortraitScreen : LandscapeScreen
     return (
-      <Screen
+      <PlayerScreen
         ref={(ref) => {
           this.screen = ref
         }}

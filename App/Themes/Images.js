@@ -19,6 +19,7 @@ export default {
   },
   joystick: {
     arrows: require('App/Images/Joystick/arrows.png'),
+    arrows_white_small: require('App/Images/Joystick/arrows_white_small.png'),
     joystick: require('App/Images/Joystick/joystick.png')
   },
   robots: {

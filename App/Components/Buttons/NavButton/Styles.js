@@ -1,8 +1,7 @@
-import { StyleSheet } from 'react-native'
 
 import { Metrics, Colors, Fonts } from 'App/Themes'
 
-export default StyleSheet.create({
+const styles = {
   view: {
     flex: 1,
     alignItems: 'center',
@@ -16,4 +15,20 @@ export default StyleSheet.create({
     ...Fonts.style.normalBold,
     color: Colors.primary
   }
-})
+}
+
+export default styles
+
+export const stylesLight = {
+  view: {
+    ...styles.view
+  },
+  button: {
+    ...styles.button,
+    borderColor: Colors.white
+  },
+  text: {
+    ...styles.text,
+    color: Colors.white
+  }
+}

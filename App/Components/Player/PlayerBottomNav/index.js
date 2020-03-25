@@ -3,7 +3,7 @@ import { View } from 'react-native'
 import PropTypes from 'prop-types'
 import uuid from 'react-native-uuid'
 
-import { LabelRangeSliderInput, PlayerButton, BottomTabs } from 'App/Components'
+import { LabelRangeSliderInput, PlayerButton, Tabs } from 'App/Components'
 import { Images } from 'App/Themes'
 import { splitItemsByRow } from 'App/Services/UIUtils'
 
@@ -61,7 +61,9 @@ export default class PlayerBottomNav extends Component {
       onSkillPress = () => {} } = this.props
 
     const skillCategories = skills.map(skill => (skill.category) ? skill.category : '?')
-    const activeSkills = skills[activeSkillCategoryIndex].items
+    const activeSkills = (skills.length > 0)
+      ? skills[activeSkillCategoryIndex].items
+      : []
     const skillsInRows = (skills.length > 0)
       ? splitItemsByRow(activeSkills, showSkillIcons)
       : []
@@ -110,7 +112,7 @@ export default class PlayerBottomNav extends Component {
           </View>
         </View>
         {skillCategories.length > 1 &&
-          <BottomTabs
+          <Tabs
             theme={theme}
             tabs={skillCategories.map(category => category.toUpperCase())}
             onTabPress={this.onCategoryPress} />

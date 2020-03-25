@@ -3,7 +3,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 
-import Screen from 'App/Modules/Play/Player/Portrait/Screen'
+import Screen from 'App/Modules/Play/Player/Landscape/Screen'
 
 import config from 'App/Services/Client/Otto/Config'
 

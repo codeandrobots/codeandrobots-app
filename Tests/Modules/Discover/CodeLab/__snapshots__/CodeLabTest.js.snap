@@ -31,6 +31,7 @@ exports[`CodeLab Component renders correctly 1`] = `
       Array [
         Object {
           "category": "Moves",
+          "id": "moves",
           "items": Array [
             Object {
               "cmd": "M 0",

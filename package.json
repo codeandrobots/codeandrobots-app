@@ -58,6 +58,7 @@
     "react-native-firebase": "5.2.5",
     "react-native-i18n": "1.0.0",
     "react-native-linear-gradient": "^2.5.3",
+    "react-native-orientation-locker": "^1.1.8",
     "react-native-sentry": "^0.43.2",
     "react-native-sortable-list": "^0.0.22",
     "react-native-splash-screen": "3.0.9",

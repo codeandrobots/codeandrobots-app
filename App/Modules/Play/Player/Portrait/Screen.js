@@ -14,7 +14,7 @@ import { splitItemsByRow } from 'App/Services/UIUtils'
 
 import s from './Styles'
 
-export default class Screen extends Component {
+export default class PortraitScreen extends Component {
   static propTypes = {
     config: PropTypes.any,
     message: PropTypes.string.isRequired,

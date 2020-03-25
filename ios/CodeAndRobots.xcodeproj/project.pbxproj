@@ -65,6 +65,7 @@
 		421AA6A993D5442F85067637 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC2063D680AA4BF49C7463F3 /* FontAwesome.ttf */; };
 		4989072B12E84232BA103EC3 /* libReactNativeConfig.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4FBB52EB724EEB8680F3C2 /* libReactNativeConfig.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
+		644975D809BD4F27A289EA5F /* libRCTOrientation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AC725AB0634E5DB22197BC /* libRCTOrientation.a */; };
 		686178080E9543A6AEE7B1BB /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A12421F8684296BC83C698 /* EvilIcons.ttf */; };
 		72076B6549534E7682E28AA0 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9FE5B898B0D407B8B6F7AC1 /* MaterialCommunityIcons.ttf */; };
 		7CF02086C8534962B98627C8 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 788EBE27BF4B4636AD85A925 /* SimpleLineIcons.ttf */; };
@@ -368,6 +369,20 @@
 			remoteGlobalIDString = 3D7682761D8E76B80014119E;
 			remoteInfo = SplashScreen;
 		};
+		23E97FC023D044E300AFA2CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 65D583D2A72144E0B256D636 /* RCTOrientation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52EA30B922DB68DA00018871;
+			remoteInfo = RCTOrientation;
+		};
+		23E97FC223D044E300AFA2CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 65D583D2A72144E0B256D636 /* RCTOrientation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52EA30C922DB69B600018871;
+			remoteInfo = "RCTOrientation-tvOS";
+		};
 		23EF8305229C1694002E8BB4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A3B43ED422314B5F8C83A1A6 /* BleClient.xcodeproj */;
@@ -586,7 +601,9 @@
 		59AAB9A4BCAC43C7ADD55200 /* libRNVersionNumber.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVersionNumber.a; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		652F9218FF3D4BD5A956C677 /* libRNOpenAppSettings.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNOpenAppSettings.a; sourceTree = "<group>"; };
+		65D583D2A72144E0B256D636 /* RCTOrientation.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTOrientation.xcodeproj; path = "../node_modules/react-native-orientation-locker/iOS/RCTOrientation.xcodeproj"; sourceTree = "<group>"; };
 		671610D992A242D2B577E4EA /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
+		70AC725AB0634E5DB22197BC /* libRCTOrientation.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTOrientation.a; sourceTree = "<group>"; };
 		7656FFF0A9494CBB993B55D5 /* RNSentry.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSentry.xcodeproj; path = "../node_modules/react-native-sentry/ios/RNSentry.xcodeproj"; sourceTree = "<group>"; };
 		788EBE27BF4B4636AD85A925 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
@@ -594,6 +611,7 @@
 		849F76DBA9424526AB3D9046 /* libcxxreact.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libcxxreact.a; sourceTree = "<group>"; };
 		88A12421F8684296BC83C698 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		8FBD1976DDDD4753A78F7ED2 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		90D59468B21345D492C86CA5 /* libRCTOrientation-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRCTOrientation-tvOS.a"; sourceTree = "<group>"; };
 		A3B43ED422314B5F8C83A1A6 /* BleClient.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = BleClient.xcodeproj; path = "../node_modules/react-native-ble-plx/ios/BleClient.xcodeproj"; sourceTree = "<group>"; };
 		AB68D73B6C7A415E812FCE04 /* BVLinearGradient.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = BVLinearGradient.xcodeproj; path = "../node_modules/react-native-linear-gradient/BVLinearGradient.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
@@ -669,6 +687,7 @@
 				235DDF7F2310AA9900F5B7BC /* Protobuf.framework in Frameworks */,
 				98DA2C183F04414290CE3B32 /* libRNCWebView.a in Frameworks */,
 				04E6CC0CA31C487284E3722B /* libRNCSlider.a in Frameworks */,
+				644975D809BD4F27A289EA5F /* libRCTOrientation.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -907,6 +926,8 @@
 				CF4D4EBAFBB04B4C8081C276 /* libRNFirebase.a */,
 				F3CC2150DBF44C559B64CC81 /* libRNCWebView.a */,
 				188A9296388E4F24A303EC5B /* libRNCSlider.a */,
+				70AC725AB0634E5DB22197BC /* libRCTOrientation.a */,
+				90D59468B21345D492C86CA5 /* libRCTOrientation-tvOS.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -1005,6 +1026,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		23E97FBC23D044E300AFA2CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23E97FC123D044E300AFA2CA /* libRCTOrientation.a */,
+				23E97FC323D044E300AFA2CA /* libRCTOrientation-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		23EF8302229C1694002E8BB4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -1093,6 +1123,7 @@
 				2CA17297A5554D1CB630F533 /* RNFirebase.xcodeproj */,
 				E2294FC5DA9944AAB42916F1 /* RNCWebView.xcodeproj */,
 				1A86C27E90834FFC969674A8 /* RNCSlider.xcodeproj */,
+				65D583D2A72144E0B256D636 /* RCTOrientation.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1307,6 +1338,10 @@
 				{
 					ProductGroup = 00C302D41ABCB9D200DB3ED1 /* Products */;
 					ProjectRef = 00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */;
+				},
+				{
+					ProductGroup = 23E97FBC23D044E300AFA2CA /* Products */;
+					ProjectRef = 65D583D2A72144E0B256D636 /* RCTOrientation.xcodeproj */;
 				},
 				{
 					ProductGroup = 139105B71AF99BAD00B5F7CC /* Products */;
@@ -1661,6 +1696,20 @@
 			remoteRef = 23D22F3D210669A20006833F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		23E97FC123D044E300AFA2CA /* libRCTOrientation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTOrientation.a;
+			remoteRef = 23E97FC023D044E300AFA2CA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		23E97FC323D044E300AFA2CA /* libRCTOrientation-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTOrientation-tvOS.a";
+			remoteRef = 23E97FC223D044E300AFA2CA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		23EF8306229C1694002E8BB4 /* libBleClient.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1978,12 +2027,15 @@
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
 					"$(SRCROOT)/../node_modules/@react-native-community/slider/ios",
+					"$(SRCROOT)/../node_modules/react-native-orientation-locker/iOS/RCTOrientation",
 				);
 				INFOPLIST_FILE = CodeAndRobotsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -2020,12 +2072,15 @@
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
 					"$(SRCROOT)/../node_modules/@react-native-community/slider/ios",
+					"$(SRCROOT)/../node_modules/react-native-orientation-locker/iOS/RCTOrientation",
 				);
 				INFOPLIST_FILE = CodeAndRobotsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -2076,6 +2131,7 @@
 					"$(SRCROOT)/Firebase/**",
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
 					"$(SRCROOT)/../node_modules/@react-native-community/slider/ios",
+					"$(SRCROOT)/../node_modules/react-native-orientation-locker/iOS/RCTOrientation",
 				);
 				INFOPLIST_FILE = CodeAndRobots/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -2131,6 +2187,7 @@
 					"$(SRCROOT)/Firebase/**",
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
 					"$(SRCROOT)/../node_modules/@react-native-community/slider/ios",
+					"$(SRCROOT)/../node_modules/react-native-orientation-locker/iOS/RCTOrientation",
 				);
 				INFOPLIST_FILE = CodeAndRobots/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -2223,6 +2280,7 @@
 					"$(SRCROOT)/Firebase/**",
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
 					"$(SRCROOT)/../node_modules/@react-native-community/slider/ios",
+					"$(SRCROOT)/../node_modules/react-native-orientation-locker/iOS/RCTOrientation",
 				);
 				INFOPLIST_FILE = CodeAndRobots/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -2267,12 +2325,15 @@
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
 					"$(SRCROOT)/../node_modules/@react-native-community/slider/ios",
+					"$(SRCROOT)/../node_modules/react-native-orientation-locker/iOS/RCTOrientation",
 				);
 				INFOPLIST_FILE = CodeAndRobotsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -2314,11 +2375,14 @@
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
 					"$(SRCROOT)/../node_modules/@react-native-community/slider/ios",
+					"$(SRCROOT)/../node_modules/react-native-orientation-locker/iOS/RCTOrientation",
 				);
 				INFOPLIST_FILE = "CodeAndRobots-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -2349,6 +2413,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -2389,11 +2455,14 @@
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
 					"$(SRCROOT)/../node_modules/@react-native-community/slider/ios",
+					"$(SRCROOT)/../node_modules/react-native-orientation-locker/iOS/RCTOrientation",
 				);
 				INFOPLIST_FILE = "CodeAndRobots-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -2438,11 +2507,14 @@
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
 					"$(SRCROOT)/../node_modules/@react-native-community/slider/ios",
+					"$(SRCROOT)/../node_modules/react-native-orientation-locker/iOS/RCTOrientation",
 				);
 				INFOPLIST_FILE = "CodeAndRobots-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -2475,6 +2547,8 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.CodeAndRobots-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2499,6 +2573,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);

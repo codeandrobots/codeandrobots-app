@@ -4,11 +4,12 @@ import { View } from 'react-native'
 
 import Button from '../Button'
 
-import styles, { stylesLight } from './Styles'
+import styles, { stylesLight, stylesPrimary } from './Styles'
 
 export default class PlayerButton extends Component {
   static propTypes = {
     theme: PropTypes.string,
+    size: PropTypes.string,
     text: PropTypes.string,
     image: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
     disabled: PropTypes.bool,
@@ -16,12 +17,29 @@ export default class PlayerButton extends Component {
   }
 
   render () {
-    const { theme = 'default', text = ' ', image, disabled = false, onPress = () => {} } = this.props
-    const s = (theme === 'light') ? stylesLight : styles
+    const {
+      theme = 'default',
+      style = {},
+      size = 'default',
+      text = ' ',
+      image,
+      disabled = false,
+      onPress = () => {} } = this.props
+    const s = (theme === 'light')
+      ? stylesLight
+      : (theme === 'primary')
+        ? stylesPrimary
+        : styles
     const opacity = (disabled) ? 0.5 : 1
     return (
-      <View style={{ opacity }}>
-        <Button style={s} text={text} image={image} disabled={disabled} onPress={onPress} />
+      <View style={[{ opacity }, style]}>
+        <Button
+          style={s}
+          size={size}
+          text={text}
+          image={image}
+          disabled={disabled}
+          onPress={onPress} />
       </View>
     )
   }
