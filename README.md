@@ -3,7 +3,7 @@
 
 ## The Code & Robots Open Source project
 
-- Control your robots using the Code & Robots Android and iOS apps
+- Control your robots using the Code & Robots [Android](https://play.google.com/store/apps/details?id=com.codeandrobots.beta&ah=fmxnGH-WXpRTFOPNCggRzlARIIk) and [iOS](https://itunes.apple.com/us/app/code-robots/id1462402633?mt=8) apps
    - Currently supports the [Otto](https://www.ottodiy.com) and [Nybble](https://www.indiegogo.com/projects/nybble-world-s-cutest-open-source-robotic-kitten) robots
    - More coming soon, including support for custom bluetooth & wifi operated robots
 - Design your own robot mobile app using the Code & Robots Figma design with 10+ ready made screens to get you started
