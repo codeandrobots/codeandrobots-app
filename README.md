@@ -1,5 +1,19 @@
-# Code & Robots
+# [Code & Robots - Open Source robot app + DIY kit](http://codeandrobots.com) ⚡
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
+
+## The Code & Robots Open Source project
+
+- Control your robots using the Code & Robots Android and iOS apps
+   - Currently supports the [Otto](https://www.ottodiy.com) and [Nybble](https://www.indiegogo.com/projects/nybble-world-s-cutest-open-source-robotic-kitten) robots
+   - More coming soon, including support for custom bluetooth & wifi operated robots
+- Design your own robot mobile app using the Code & Robots Figma design with 10+ ready made screens to get you started
+- Build your own robot mobile app based on the Code & Robots open source mobile app project
+- [Contact us](mailto:codeandrobotshq@gmail.com) if you'd like to contribute to this project or to discuss working together on your robot project
+
+# Android & iOS app
+
+- Download the Android app (Beta) on the [Google Play Store](https://play.google.com/store/apps/details?id=com.codeandrobots.beta&ah=fmxnGH-WXpRTFOPNCggRzlARIIk)
+- Download the iOS app on the [App Store](https://itunes.apple.com/us/app/code-robots/id1462402633?mt=8)
 
 ## Open Source
 
