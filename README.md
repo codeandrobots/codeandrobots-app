@@ -10,7 +10,7 @@
 - Build your own robot mobile app based on the Code & Robots open source mobile app project
 - [Contact us](mailto:codeandrobotshq@gmail.com) if you'd like to contribute to this project or to discuss working together on your robot project
 
-# Android & iOS app
+## Android & iOS app
 
 - Download the Android app (Beta) on the [Google Play Store](https://play.google.com/store/apps/details?id=com.codeandrobots.beta&ah=fmxnGH-WXpRTFOPNCggRzlARIIk)
 - Download the iOS app on the [App Store](https://itunes.apple.com/us/app/code-robots/id1462402633?mt=8)
