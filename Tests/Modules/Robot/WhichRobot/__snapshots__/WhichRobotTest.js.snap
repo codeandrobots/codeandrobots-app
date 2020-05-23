@@ -36,6 +36,16 @@ exports[`WhichRobot Component renders correctly 1`] = `
       text="No robot, no problem, simulator to the rescue"
       title="Robot Simulator"
     />
+    <CardListItem
+      image={
+        Object {
+          "process": [Function],
+        }
+      }
+      onPress={[Function]}
+      text="Let’s see if your robot has what it takes"
+      title="Custom Robot"
+    />
   </List>
   <Footer>
     <Card
