@@ -1,54 +1,37 @@
 
 import Bluetooth from 'App/Services/Bluetooth'
-import Config, { Speed } from './Config'
 
 const DELAY = 600 // Delay between commands
 
-const cmdFromTouch = (touch) => {
-  if (touch.dy <= -30) {
-    return Config.commands.walk.forwards
-  } else if (touch.dy >= 30) {
-    return Config.commands.walk.backwards
-  } else if (touch.dx >= 30) {
-    return Config.commands.walk.left
-  } else if (touch.dx <= -30) {
-    return Config.commands.walk.right
-  } else {
-    return null
-  }
-}
-
-export default class Otto {
+export default class Custom {
+  config = null
   lastCmdSent = null
-  speed = Speed.Normal
 
   setConfig = config => {
-    throw new Error('Not supported')
+    this.config = config
   }
 
   getConfig = () => {
-    return Config
-  }
-
-  getSounds = () => {
-    return Config.sounds
+    return this.config
   }
 
   setParam = (param, index) => {
-    if (param.title === 'Speed') {
-      switch (index) {
-        case 0:
-          this.speed = Speed.Slow
-          break
-        case 1:
-          this.speed = Speed.Normal
-          break
-        case 2:
-          this.speed = Speed.Fast
-          break
-        default:
-          this.speed = Speed.Normal
-      }
+    // TODO
+  }
+
+  cmdFromTouch = (touch) => {
+    console.log(this.getConfig()) // TODO REMOVE
+    if (touch.dy <= -30) {
+      console.log('--- FORWARDS') // TODO REMOVE
+      return this.getConfig().commands.forwards
+    } else if (touch.dy >= 30) {
+      return this.getConfig().commands.back
+    } else if (touch.dx <= -30) {
+      return this.getConfig().commands.left
+    } else if (touch.dx >= 30) {
+      return this.getConfig().commands.right
+    } else {
+      return null
     }
   }
 
@@ -63,18 +46,18 @@ export default class Otto {
 
   stop = (delay) => {
     if (!delay) {
-      this.sendCommand(Config.commands.stop)
+      this.sendCommand(this.getConfig().commands.stop)
     } else {
       setTimeout(() => { this.stop() }, delay)
     }
   }
 
   play = async (sound) => {
-    return this.sendCommand(Config.commands.sound + ' ' + sound.key)
+    // TODO
   }
 
   move = (touch) => {
-    const cmd = cmdFromTouch(touch) + ' ' + this.speed
+    const cmd = this.cmdFromTouch(touch)
     this.sendCommand(cmd, true)
   }
 
@@ -106,7 +89,7 @@ export default class Otto {
     })
     // Always finish with stop
     setTimeout(() => {
-      this.sendCommand(Config.commands.stop)
+      this.sendCommand(this.getConfig().commands.stop)
     }, delay)
   }
 }

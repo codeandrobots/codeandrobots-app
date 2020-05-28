@@ -2,10 +2,17 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import { Images } from 'App/Themes'
+import { RobotsActions } from 'App/Modules/Robot'
 import AddRobotScreen from './Screen'
+import config from './config'
 
 export class AddRobotContainer extends Component {
   onAddPress = () => {
+    this.props.addRobot({
+      id: 'test',
+      ...config,
+      name: 'Robot 1'
+    })
     this.props.navigation.goBack() // TODO fix
   }
 
@@ -32,6 +39,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    addRobot: (robot) => { dispatch(RobotsActions.saveRobot(robot)) }
   }
 }
 

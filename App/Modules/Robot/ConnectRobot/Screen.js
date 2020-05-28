@@ -16,7 +16,7 @@ export default class ConnectRobotScreen extends Component {
     image: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
     video: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
     title: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
+    text: PropTypes.string,
     links: PropTypes.arrayOf(PropTypes.shape({
       title: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired

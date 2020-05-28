@@ -5,12 +5,14 @@ import WebSocket from 'App/Services/WebSocket'
 import Simulator from './Simulator'
 import Otto from './Otto'
 import Nybble from './Nybble'
+import Custom from './Custom'
 
 const robot = { name: null }
 
 const simulator = new Simulator()
 const otto = new Otto()
 const nybble = new Nybble()
+const custom = new Custom()
 
 export const setRobot = async (robotName) => {
   if (robot.name !== robotName) {
@@ -44,6 +46,8 @@ export default class Client {
       return nybble
     } else if (robot.name === 'simulator') {
       return simulator
+    } else if (robot.name === 'test') {
+      return custom
     } else {
       // Get client based on connection if possible
       const connectedToBluetooth = await isConnectedToBluetooth()
@@ -59,6 +63,11 @@ export default class Client {
         return null
       }
     }
+  }
+
+  setConfig = async (config) => {
+    const client = await this.getClient()
+    if (client) { client.setConfig(config) }
   }
 
   getConfig = async () => {

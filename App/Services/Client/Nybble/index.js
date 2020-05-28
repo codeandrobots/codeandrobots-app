@@ -40,6 +40,10 @@ export default class Nybble {
   lastCmdSent = null
   gait = Config.params[0].defaultIndex
 
+  setConfig = config => {
+    throw new Error('Not supported')
+  }
+
   getConfig = () => {
     return Config
   }

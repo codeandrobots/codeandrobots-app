@@ -5,7 +5,22 @@ exports[`WhichRobot Component renders correctly 1`] = `
   <List
     linedRows={true}
     scrollable={true}
+    style={
+      Object {
+        "marginBottom": 132,
+      }
+    }
   >
+    <CardListItem
+      image={
+        Object {
+          "process": [Function],
+        }
+      }
+      key="0"
+      onPress={[Function]}
+      title="Test Robot"
+    />
     <CardListItem
       image={
         Object {
