@@ -6,10 +6,30 @@ import { Metrics, Colors } from 'App/Themes'
 
 import { PaddedDecorator } from './Decorators'
 
-import { LabelRangeSliderInput, SliderInput } from '../Inputs'
+import { TextInput, LabelRangeSliderInput, SliderInput } from '../Inputs'
 
 storiesOf('Inputs', module)
   .addDecorator(PaddedDecorator)
+  .add('Text Input With Default Value', () => (
+    <TextInput defaultValue='Text' />
+  ))
+  .add('Text Input Multiline', () => (
+    <TextInput
+      multiline
+      defaultValue={'Multline\nText'} />
+  ))
+  .add('Text Input With Label & Placeholder', () => (
+    <TextInput
+      label='Name'
+      placeholder='Enter your name' />
+  ))
+  .add('Text Input With Error', () => (
+    <TextInput
+      label='Email'
+      placeholder='Enter your email'
+      defaultValue='invalid'
+      error='Invalid email' />
+  ))
   .add('Range Slider with 3 Labels', () => (
     <LabelRangeSliderInput
       title='Speed'

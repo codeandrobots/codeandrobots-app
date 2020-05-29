@@ -3260,6 +3260,310 @@ exports[`Storyshots Inputs Slider Light Theme 1`] = `
 </RCTSafeAreaView>
 `;
 
+exports[`Storyshots Inputs Text Input Multiline 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "margin": 16,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "width": "100%",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "white",
+            "borderColor": "#9B9B9B",
+            "borderRadius": 8,
+            "borderWidth": 1,
+            "flexDirection": "row",
+            "overflow": "hidden",
+            "paddingHorizontal": 16,
+            "paddingVertical": 12,
+            "position": "relative",
+          },
+        ]
+      }
+    >
+      <TextInput
+        allowFontScaling={true}
+        defaultValue="Multline
+Text"
+        multiline={true}
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        rejectResponderTermination={true}
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#354052",
+            "flex": 1,
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 16,
+            "paddingTop": 0,
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`Storyshots Inputs Text Input With Default Value 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "margin": 16,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "width": "100%",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "white",
+            "borderColor": "#9B9B9B",
+            "borderRadius": 8,
+            "borderWidth": 1,
+            "flexDirection": "row",
+            "overflow": "hidden",
+            "paddingHorizontal": 16,
+            "paddingVertical": 12,
+            "position": "relative",
+          },
+        ]
+      }
+    >
+      <TextInput
+        allowFontScaling={true}
+        defaultValue="Text"
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        rejectResponderTermination={true}
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#354052",
+            "flex": 1,
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 16,
+            "paddingTop": 0,
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`Storyshots Inputs Text Input With Error 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "margin": 16,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "width": "100%",
+        },
+        undefined,
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#9B9B9B",
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 16,
+            "marginBottom": 4,
+            "width": "100%",
+          },
+          Object {
+            "color": "#E62117",
+          },
+        ]
+      }
+    >
+      Email
+    </Text>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "white",
+            "borderColor": "#9B9B9B",
+            "borderRadius": 8,
+            "borderWidth": 1,
+            "flexDirection": "row",
+            "overflow": "hidden",
+            "paddingHorizontal": 16,
+            "paddingVertical": 12,
+            "position": "relative",
+          },
+          Object {
+            "borderColor": "#E62117",
+          },
+        ]
+      }
+    >
+      <TextInput
+        allowFontScaling={true}
+        defaultValue="invalid"
+        error="Invalid email"
+        label="Email"
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        placeholder="Enter your email"
+        rejectResponderTermination={true}
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#354052",
+            "flex": 1,
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 16,
+            "paddingTop": 0,
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#9B9B9B",
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 16,
+            "marginTop": 4,
+            "width": "100%",
+          },
+          Object {
+            "color": "#E62117",
+          },
+        ]
+      }
+    >
+      Invalid email
+    </Text>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`Storyshots Inputs Text Input With Label & Placeholder 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "margin": 16,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "width": "100%",
+        },
+        undefined,
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#9B9B9B",
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 16,
+            "marginBottom": 4,
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      Name
+    </Text>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "white",
+            "borderColor": "#9B9B9B",
+            "borderRadius": 8,
+            "borderWidth": 1,
+            "flexDirection": "row",
+            "overflow": "hidden",
+            "paddingHorizontal": 16,
+            "paddingVertical": 12,
+            "position": "relative",
+          },
+        ]
+      }
+    >
+      <TextInput
+        allowFontScaling={true}
+        label="Name"
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        placeholder="Enter your name"
+        rejectResponderTermination={true}
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#354052",
+            "flex": 1,
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 16,
+            "paddingTop": 0,
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
 exports[`Storyshots Instruction Action 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
