@@ -83,6 +83,26 @@ export default class Screen extends Component {
     )
   }
 
+  renderConnectedToMark = () => {
+    const { onDone } = this.props
+    return (
+      <Container>
+        <Footer style={{paddingTop: 0}}>
+          <Card
+            title='YOU`RE CONNECTED TO THE MARK'
+            text='All hooked up & ready to go!'
+            button='Done'
+            textAlign='left'
+            onPress={onDone}
+            style={{textView: {marginBottom: Metrics.unit * 2}}} />
+        </Footer>
+        <Card
+          image={Images.bluetooth}
+          title='Good job 👍' />
+      </Container>
+    )
+  }
+
   renderTurnOnBluetooth = () => {
     const { onEnableBluetooth, onProblemsConnecting } = this.props
     return (
@@ -240,6 +260,10 @@ export default class Screen extends Component {
 
     if (connectTo === 'simulator') {
       return this.renderConnectedToSimulator()
+    }
+
+    if (connectTo === 'mark') {
+      return this.renderConnectedToMark()
     }
   }
 }

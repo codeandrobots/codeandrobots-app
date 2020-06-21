@@ -168,6 +168,8 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-network-info')
+    implementation project(':react-native-tcp-socket')
     implementation project(':react-native-orientation-locker')
     implementation project(':@react-native-community_slider')
     implementation project(':react-native-webview')

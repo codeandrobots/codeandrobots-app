@@ -5,7 +5,8 @@ import { connect } from 'react-redux'
 import Client, { setRobot } from 'App/Services/Client'
 import Bluetooth from 'App/Services/Bluetooth'
 import WebSocket from 'App/Services/WebSocket'
-import { isSimulator } from 'App/Services/Properties'
+import Socket from 'App/Services/Socket'
+import { ipAddress, isSimulator } from 'App/Services/Properties'
 import { notPossibleInSimulator } from 'App/Services/Alerts'
 
 import Screen from './Screen'
@@ -14,8 +15,9 @@ export class ConnectContainer extends Component {
   constructor (props) {
     super(props)
     this.client = new Client()
-    this.socket = WebSocket.getInstance()
-    const instructions = `To view the simulator, open the following link on another device (e.g. your laptop):\ncodeandrobots.com/simulator?room=${this.socket.room}`
+    this.websocket = WebSocket.getInstance()
+    this.socket = Socket.getInstance()
+    const instructions = `To view the simulator, open the following link on another device (e.g. your laptop):\ncodeandrobots.com/simulator?room=${this.websocket.room}`
     this.state = {
       robot: null,
       error: null,
@@ -45,12 +47,14 @@ export class ConnectContainer extends Component {
     const connectTo = (robot)
       ? (robot === 'simulator')
         ? 'simulator'
-        : 'device'
+        : (robot === 'mark')
+          ? 'mark'
+          : 'device'
       : null
     const { enabled, error } = await Bluetooth.isEnabled()
     this.onConnectTo(connectTo)
     this.setState({robot, enabled, error})
-    if (robot !== 'simulator' && enabled) {
+    if (robot !== 'simulator' && robot !== 'mark' && enabled) {
       this.setState({ scanning: true })
       this.showDevices()
     }
@@ -81,9 +85,16 @@ export class ConnectContainer extends Component {
     this.setState({scanning: false, devices: this.sortDevices(devices), error})
   }
 
-  onConnectTo = (connectTo) => {
+  onConnectTo = async (connectTo) => {
     if (connectTo === 'simulator') {
-      this.socket.connect()
+      this.websocket.connect()
+    } else if (connectTo === 'mark') {
+      const host = await ipAddress()
+      // TODO Get port from config
+      // TODO Await for socket to connect successfully or catch error?
+      this.socket.connect(host, 3456, ({host, port}) => {
+        console.log(`Connected ${host}:${port}`)
+      })
     }
     this.setState({ connectTo })
   }

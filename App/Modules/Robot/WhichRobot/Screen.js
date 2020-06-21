@@ -26,6 +26,11 @@ export default class WhichRobotScreen extends Component {
             text="The world's cutest open source robotic kitten"
             onPress={() => { onPress('nybble') }} />
           <CardListItem
+            image={Images.robots.mark}
+            title='MARK'
+            text='MARK (Make A Robot Kit), your hands on AI robot'
+            onPress={() => { onPress('mark') }} />
+          <CardListItem
             image={Images.robots.simulator}
             title='Robot Simulator'
             text='No robot, no problem, simulator to the rescue'

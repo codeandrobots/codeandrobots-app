@@ -1,6 +1,7 @@
 import { Platform, Dimensions } from 'react-native'
 import VersionNumber from 'react-native-version-number'
 import DeviceInfo from 'react-native-device-info'
+import { NetworkInfo } from 'react-native-network-info'
 import Config from 'react-native-config'
 
 export const appName = () => DeviceInfo.getApplicationName()
@@ -24,6 +25,11 @@ export const appInfo = () => `${appVersion()} (${appBuild()})`
 export const deviceInfo = () => `${manufacturer()} ${OS()} ${model()} ${OSVersion()}`
 
 export const bundleId = () => DeviceInfo.getBundleId()
+
+export const ipAddress = async () => {
+  const ip = await NetworkInfo.getIPAddress()
+  return ip
+}
 
 export const isSimulator = () => DeviceInfo.isEmulator()
 
