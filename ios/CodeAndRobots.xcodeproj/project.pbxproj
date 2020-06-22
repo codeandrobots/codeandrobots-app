@@ -85,7 +85,7 @@
 		F411788F3A03408DA04375E2 /* libRCTBluetoothSerial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7043272667B49B5941885D9 /* libRCTBluetoothSerial.a */; };
 		F97CCD46D3B9427A98096C92 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408BDF84B2A14BBA9FF4AB9F /* Octicons.ttf */; };
 		FC74D31C87254E3692E7F91B /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 117723CE7BB54684B689930C /* Foundation.ttf */; };
-		D007A6CBCA7D4A1BBA5D654F /* libTcpSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C3A286B08394EBA98A14861 /* libTcpSocket.a */; };
+		D007A6CBCA7D4A1BBA5D654F /* libTcpSockets.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C3A286B08394EBA98A14861 /* libTcpSockets.a */; };
 		E450C7FD1B06483C9007F25D /* libRNNetworkInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB20A39DCF4D4B1BB69AB0D8 /* libRNNetworkInfo.a */; };
 		B88ACB59C86444D8B2896525 /* libRNNetworkInfo-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6039179E86C450FA68336BA /* libRNNetworkInfo-tvOS.a */; };
 /* End PBXBuildFile section */
@@ -631,8 +631,8 @@
 		F3CC2150DBF44C559B64CC81 /* libRNCWebView.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNCWebView.a; sourceTree = "<group>"; };
 		F68BAD0B69AB4D6EA37B0369 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		F825B18C613A440E93F87FF7 /* libjschelpers.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libjschelpers.a; sourceTree = "<group>"; };
-		79D0A094DF92411F85A2C399 /* TcpSocket.xcodeproj */ = {isa = PBXFileReference; name = "TcpSocket.xcodeproj"; path = "../node_modules/react-native-tcp-socket/ios/TcpSocket.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		1C3A286B08394EBA98A14861 /* libTcpSocket.a */ = {isa = PBXFileReference; name = "libTcpSocket.a"; path = "libTcpSocket.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		79D0A094DF92411F85A2C399 /* TcpSockets.xcodeproj */ = {isa = PBXFileReference; name = "TcpSockets.xcodeproj"; path = "../node_modules/react-native-tcp-socket/ios/TcpSockets.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		1C3A286B08394EBA98A14861 /* libTcpSockets.a */ = {isa = PBXFileReference; name = "libTcpSockets.a"; path = "libTcpSockets.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		A5ED697061C9405692E8E8B8 /* RNNetworkInfo.xcodeproj */ = {isa = PBXFileReference; name = "RNNetworkInfo.xcodeproj"; path = "../node_modules/react-native-network-info/ios/RNNetworkInfo.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		AB20A39DCF4D4B1BB69AB0D8 /* libRNNetworkInfo.a */ = {isa = PBXFileReference; name = "libRNNetworkInfo.a"; path = "libRNNetworkInfo.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		B6039179E86C450FA68336BA /* libRNNetworkInfo-tvOS.a */ = {isa = PBXFileReference; name = "libRNNetworkInfo-tvOS.a"; path = "libRNNetworkInfo-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
@@ -695,7 +695,7 @@
 				98DA2C183F04414290CE3B32 /* libRNCWebView.a in Frameworks */,
 				04E6CC0CA31C487284E3722B /* libRNCSlider.a in Frameworks */,
 				644975D809BD4F27A289EA5F /* libRCTOrientation.a in Frameworks */,
-				D007A6CBCA7D4A1BBA5D654F /* libTcpSocket.a in Frameworks */,
+				D007A6CBCA7D4A1BBA5D654F /* libTcpSockets.a in Frameworks */,
 				E450C7FD1B06483C9007F25D /* libRNNetworkInfo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1134,7 +1134,7 @@
 				E2294FC5DA9944AAB42916F1 /* RNCWebView.xcodeproj */,
 				1A86C27E90834FFC969674A8 /* RNCSlider.xcodeproj */,
 				65D583D2A72144E0B256D636 /* RCTOrientation.xcodeproj */,
-				79D0A094DF92411F85A2C399 /* TcpSocket.xcodeproj */,
+				79D0A094DF92411F85A2C399 /* TcpSockets.xcodeproj */,
 				A5ED697061C9405692E8E8B8 /* RNNetworkInfo.xcodeproj */,
 			);
 			name = Libraries;
