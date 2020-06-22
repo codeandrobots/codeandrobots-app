@@ -50,6 +50,7 @@ exports[`Player Component renders correctly 1`] = `
           "features": Object {
             "beep": true,
             "drive": true,
+            "video": false,
           },
           "image": Object {
             "process": [Function],

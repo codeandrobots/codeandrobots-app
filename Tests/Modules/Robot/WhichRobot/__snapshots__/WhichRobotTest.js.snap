@@ -5,6 +5,11 @@ exports[`WhichRobot Component renders correctly 1`] = `
   <List
     linedRows={true}
     scrollable={true}
+    style={
+      Object {
+        "marginBottom": 132,
+      }
+    }
   >
     <CardListItem
       image={

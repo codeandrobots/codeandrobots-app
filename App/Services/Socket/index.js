@@ -26,7 +26,6 @@ export default class Socket {
   connect = (host, port, onConnect = () => {}) => {
     this.server = TcpSocket.createServer((socket) => {
       this.socket = socket
-
       socket.on('data', this.onData)
       socket.on('error', this.onError)
       socket.on('close', this.onClose)
@@ -48,8 +47,8 @@ export default class Socket {
     return this.isConnected
   }
 
-  setOnAdd = (onData) => {
-    this.onAdd = onData
+  setOnData = (onData) => {
+    this.onData = onData
   }
 
   setOnError = (onError) => {
