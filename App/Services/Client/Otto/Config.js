@@ -28,7 +28,8 @@ export default {
   features: {
     drive: true,
     beep: true,
-    video: false
+    video: false,
+    landscape: true
   },
   params: [
     {

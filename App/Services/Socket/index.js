@@ -1,4 +1,5 @@
 import TcpSocket from 'react-native-tcp-socket'
+import binaryToBase64 from 'binaryToBase64'
 const Buffer = (global.Buffer = global.Buffer || require('buffer').Buffer)
 
 export default class Socket {
@@ -8,12 +9,20 @@ export default class Socket {
   socket = null
   isConnected = false
 
+  // Image data
+  imageData = null
+  imageDataStart = false
+  lastImageUpdate = null
+
   // Default event functions
   onData = () => {}
+  onImageReceived = () => {}
   onError = (error) => {
     console.warn(error)
   }
-  onClose = () => {}
+  onClose = (error) => {
+    console.log('Socket server client connection closed ' + (error || ''))
+  }
 
   static getInstance () {
     if (Socket.myInstance == null) {
@@ -24,6 +33,10 @@ export default class Socket {
   }
 
   connect = (host, port, onConnect = () => {}) => {
+    if (this.isConnected) {
+      onConnect({host, port})
+      return
+    }
     this.server = TcpSocket.createServer((socket) => {
       this.socket = socket
       socket.on('data', this.onData)
@@ -51,12 +64,50 @@ export default class Socket {
     this.onData = onData
   }
 
+  setOnImageReceived = (onImageReceived) => {
+    this.resetImageData()
+    this.onData = this.onImageData
+    this.onImageReceived = onImageReceived
+  }
+
   setOnError = (onError) => {
     this.onError = onError
   }
 
   setOnClose = (onClose) => {
     this.onClose = onClose
+  }
+
+  resetImageData = () => {
+    this.imageData = null
+    this.imageDataStart = false
+    this.lastImageUpdate = null
+  }
+
+  onImageData = (chunk) => {
+    if (!this.imageDataStart) {
+      const startIndex = chunk.indexOf('\xFF\xD8', 0, 'binary')
+      if (startIndex >= 0) {
+        this.imageData = chunk.subarray(startIndex)
+        this.imageDataStart = true
+      }
+    } else {
+      const endIndex = chunk.indexOf('\xFF\xD9', 0, 'binary')
+      if (endIndex >= 0 || this.imageData.length > 2900) {
+        let imageBuffer = this.imageData
+        if (endIndex >= 0) {
+          imageBuffer = Buffer.concat([
+            this.imageData,
+            chunk.subarray(0, endIndex + 2)
+          ])
+        }
+        const encodedData = binaryToBase64(imageBuffer)
+        this.onImageReceived(encodedData)
+        this.imageDataStart = false
+      } else {
+        this.imageData = Buffer.concat([this.imageData, chunk])
+      }
+    }
   }
 
   write = (action) => {
