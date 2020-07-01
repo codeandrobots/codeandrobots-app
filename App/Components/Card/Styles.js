@@ -4,6 +4,10 @@ import { Styles, Metrics, Fonts } from 'App/Themes'
 
 export default StyleSheet.create({
   ...Styles,
+  qrView: {
+    ...Styles.centered,
+    marginVertical: Metrics.unit * 3
+  },
   imageView: {
     ...Styles.centered,
     marginVertical: Metrics.unit * 3

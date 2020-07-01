@@ -70,6 +70,22 @@ export const Styles = {
   },
   text_center: {
     textAlign: 'center'
+  },
+
+  // Form
+  formView: {
+    margin: Metrics.unit * 2
+  },
+  formTitle: {
+    ...Fonts.style.normal,
+    fontSize: Fonts.size.large,
+    color: Colors.text
+  },
+  form: {
+    marginVertical: Metrics.unit
+  },
+  input: {
+    marginVertical: Metrics.unit / 2
   }
 }
 

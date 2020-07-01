@@ -1,5 +1,6 @@
 import TcpSocket from 'react-native-tcp-socket'
 import binaryToBase64 from 'binaryToBase64'
+
 const Buffer = (global.Buffer = global.Buffer || require('buffer').Buffer)
 
 export default class Socket {
@@ -8,6 +9,8 @@ export default class Socket {
   server = null
   socket = null
   isConnected = false
+  host = null
+  port = null
 
   // Image data
   imageData = null
@@ -34,6 +37,8 @@ export default class Socket {
 
   connect = (host, port, onConnect = () => {}) => {
     if (this.isConnected) {
+      this.host = host
+      this.port = port
       onConnect({host, port})
       return
     }
@@ -50,6 +55,8 @@ export default class Socket {
           this.onError(error)
         } else {
           this.isConnected = true
+          this.host = host
+          this.port = port
           onConnect({host, port})
         }
       }
@@ -58,6 +65,13 @@ export default class Socket {
 
   isConnected = () => {
     return this.isConnected
+  }
+
+  getConnection = () => {
+    return {
+      host: this.host,
+      port: this.port
+    }
   }
 
   setOnData = (onData) => {
@@ -122,6 +136,8 @@ export default class Socket {
       this.server = null
       this.socket = null
       this.isConnected = false
+      this.host = null
+      this.port = null
     }
   }
 }

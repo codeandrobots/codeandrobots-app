@@ -4,6 +4,8 @@ import DeviceInfo from 'react-native-device-info'
 import { NetworkInfo } from 'react-native-network-info'
 import Config from 'react-native-config'
 
+import { getLocationAndroidPermission } from 'App/Services/Permissions'
+
 export const appName = () => DeviceInfo.getApplicationName()
 
 export const appVersion = () => (VersionNumber.appVersion != null) ? VersionNumber.appVersion : 'N/A'
@@ -29,6 +31,16 @@ export const bundleId = () => DeviceInfo.getBundleId()
 export const ipAddress = async () => {
   const ip = await NetworkInfo.getIPAddress()
   return ip
+}
+
+export const getSSID = async () => {
+  const locationPermissionGranted = (Platform.OS === 'android')
+    ? await getLocationAndroidPermission() : true
+  if (!locationPermissionGranted) {
+    return null
+  }
+  const ssid = await NetworkInfo.getSSID()
+  return ssid
 }
 
 export const isSimulator = () => DeviceInfo.isEmulator()

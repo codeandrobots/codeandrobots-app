@@ -6,7 +6,7 @@ import Client, { setRobot } from 'App/Services/Client'
 import Bluetooth from 'App/Services/Bluetooth'
 import WebSocket from 'App/Services/WebSocket'
 import Socket from 'App/Services/Socket'
-import { ipAddress, isSimulator } from 'App/Services/Properties'
+import { getSSID, ipAddress, isSimulator } from 'App/Services/Properties'
 import { notPossibleInSimulator } from 'App/Services/Alerts'
 
 import Screen from './Screen'
@@ -28,7 +28,12 @@ export class ConnectContainer extends Component {
       activeDevice: null,
       showProblemsConnectingModal: false,
       showIsYourDeviceSupportedModal: false,
-      instructions
+      instructions,
+      networkAdded: false,
+      ssid: null,
+      password: null,
+      host: null,
+      port: null
     }
   }
 
@@ -58,6 +63,16 @@ export class ConnectContainer extends Component {
       this.setState({ scanning: true })
       this.showDevices()
     }
+
+    // Set local network SSID and password
+    //
+    // TODO Test SSID works for iOS?
+    // TODO Set previously saved password for ssid?
+    const ssid = await getSSID()
+    this.setState({
+      ssid,
+      password: null
+    })
   }
 
   // TODO Better sorting of bluetooth devices
@@ -94,6 +109,7 @@ export class ConnectContainer extends Component {
       // TODO Await for socket to connect successfully or catch error?
       this.socket.connect(host, 3456, ({host, port}) => {
         console.log(`Connected ${host}:${port}`)
+        this.setState({ host, port })
       })
     }
     this.setState({ connectTo })
@@ -209,6 +225,19 @@ export class ConnectContainer extends Component {
     this.setState({showIsYourDeviceSupportedModal: false})
   }
 
+  onChangeText = (key, value) => {
+    this.setState({[key]: value})
+  }
+
+  onAddNetwork = () => {
+    const { ssid, password } = this.state
+    console.log(ssid) // TODO REMOVE
+    console.log(password) // TODO REMOVE
+    if (ssid && ssid.trim() !== '' && password && password.trim() !== '') {
+      this.setState({ networkAdded: true })
+    }
+  }
+
   render () {
     const {
       robot,
@@ -221,6 +250,11 @@ export class ConnectContainer extends Component {
       activeDevice,
       showProblemsConnectingModal,
       instructions,
+      networkAdded,
+      ssid,
+      password,
+      host,
+      port,
       showIsYourDeviceSupportedModal} = this.state
     return (
       <Screen
@@ -239,6 +273,11 @@ export class ConnectContainer extends Component {
         showProblemsConnectingModal={showProblemsConnectingModal}
         showIsYourDeviceSupportedModal={showIsYourDeviceSupportedModal}
         instructions={instructions}
+        networkAdded={networkAdded}
+        ssid={ssid}
+        password={password}
+        host={host}
+        port={port}
         onConnectTo={this.onConnectTo}
         onEnableBluetooth={this.onEnableBluetooth}
         onScan={this.onScan}
@@ -250,6 +289,8 @@ export class ConnectContainer extends Component {
         onIsYourDeviceSupported={this.onIsYourDeviceSupported}
         onHideProblemsConnectingModal={this.onHideProblemsConnectingModal}
         onHideIsYourDeviceSupportedModal={this.onHideIsYourDeviceSupportedModal}
+        onChangeText={this.onChangeText}
+        onAddNetwork={this.onAddNetwork}
       />
     )
   }
