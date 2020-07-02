@@ -1,5 +1,3 @@
-import binaryToBase64 from 'binaryToBase64'
-
 import Socket from 'App/Services/Socket'
 import Config from './Config'
 
@@ -21,83 +19,6 @@ const cmdFromTouch = (touch) => {
   } else {
     return null
   }
-}
-
-const onData = (chunk) => {
-  // this.updateChatter("Server Received: " + chunk.length);
-  // socket.write('Echo server\r\n');
-
-  // socket.write(new Buffer([this.action]));
-  // this.updateChatter("WRITE");
-
-  if (!this.imageDataStart) {
-    const startIndex = chunk.indexOf('\xFF\xD8', 0, 'binary')
-    if (startIndex >= 0) {
-      console.log('FOUND START INDEX ' + startIndex)
-      this.imageData = chunk.subarray(startIndex)
-      this.imageDataStart = true
-    }
-  } else {
-    const endIndex = chunk.indexOf('\xFF\xD9', 0, 'binary')
-    if (endIndex >= 0 || this.imageData.length > 2900) {
-      // console.log("FOUND END INDEX " + endIndex);
-      let imageBuffer = this.imageData
-      if (endIndex >= 0) {
-        // this.updateChatter("FOUND END INDEX " + endIndex);
-        imageBuffer = Buffer.concat([
-          this.imageData,
-          chunk.subarray(0, endIndex + 2)
-        ])
-      }
-      // savedImage = true;
-
-      // this.updateChatter("Image received: " + imageBuffer.length);
-
-      // const index = imageBuffer.lastIndexOf("\xFF\xD9", 0, "binary");
-
-      // this.updateChatter(
-      //   "FOUND END INDEX " +
-      //     endIndex +
-      //     " " +
-      //     imageBuffer.length +
-      //     " " +
-      //     index
-      // );
-
-      // this.updateChatter("------------ IMAGE DATA RECEIVED");
-
-      // this.updateChatter(imageBuffer.length);
-      const encodedData = binaryToBase64(imageBuffer)
-      // const now = new Date().getTime()
-      // if (!lastImageUpdate || now - lastImageUpdate > 1000) {
-      this.setState({ encodedData })
-      // lastImageUpdate = new Date().getTime();
-      // }
-      // this.updateChatter(base64Data);
-
-      // fs.writeFile("./test.jpg", imageBuffer, (err) => {
-      //   if (err) throw err;
-      //   console.log("The file has been saved!");
-      // });
-
-      this.imageDataStart = false
-    } else {
-      // console.log("CONCAT");
-      this.imageData = Buffer.concat([this.imageData, chunk])
-    }
-  }
-}
-
-onConnected = ({ host, port }) => {
-  console.log('Socket server listening on ' + host + ':' + port)
-}
-
-onError = (error) => {
-  console.log('server client error - ' + error)
-}
-
-onClose = (error) => {
-  console.log('server client closed ' + (error ? error : ''))
 }
 
 export default class Mark {
