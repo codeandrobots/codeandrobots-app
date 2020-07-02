@@ -92,77 +92,80 @@ export default class Screen extends Component {
     )
   }
 
-  renderConnectedToMark = () => {
+  renderAddNetwork = () => {
     const {
-      networkAdded,
+      ssid,
+      password,
+      onChangeText,
+      onAddNetwork } = this.props
+
+    return (
+      <Container>
+        <Footer style={{paddingTop: 0}}>
+          <Card
+            title='ADD WIFI NETWORK'
+            text='Add wifi network that this device is connected to'
+            button='Add'
+            textAlign='left'
+            onPress={onAddNetwork}
+            style={{textView: {marginBottom: Metrics.unit * 2}}} />
+        </Footer>
+        <View style={s.formView}>
+          <Text style={s.formTitle}>Add network</Text>
+          <View style={s.form}>
+            <TextInput
+              style={s.input}
+              name='SSID'
+              placeholder='SSID'
+              value={ssid}
+              onChangeText={(value) => { onChangeText('ssid', value) }}
+            />
+            <TextInput
+              style={s.input}
+              name='Password'
+              placeholder='Password'
+              value={password}
+              secureTextEntry
+              onChangeText={(value) => { onChangeText('password', value) }}
+            />
+          </View>
+        </View>
+      </Container>
+    )
+  }
+
+  renderConnectTheMark = () => {
+    const {
       ssid,
       password,
       host,
       port,
-      onChangeText,
-      onDone,
-      onAddNetwork } = this.props
+      onDone } = this.props
 
-    if (networkAdded) {
-      const qr = {
-        ssid,
-        password,
-        host,
-        port
-      }
-      return (
-        <Container>
-          <Footer style={{paddingTop: 0}}>
-            <Card
-              title='CONNECT THE MARK'
-              text='Tap done once connected'
-              button='Done'
-              textAlign='left'
-              onPress={onDone}
-              style={{textView: {marginBottom: Metrics.unit * 2}}} />
-          </Footer>
-          <Card
-            qr={JSON.stringify(qr)}
-            title='Scan this QR using the MARK camera'
-            text={`or connect to ${host}:${port}`}
-          />
-        </Container>
-      )
-    } else {
-      return (
-        <Container>
-          <Footer style={{paddingTop: 0}}>
-            <Card
-              title='ADD WIFI NETWORK'
-              text='Add wifi network that this device is connected to'
-              button='Add'
-              textAlign='left'
-              onPress={onAddNetwork}
-              style={{textView: {marginBottom: Metrics.unit * 2}}} />
-          </Footer>
-          <View style={s.formView}>
-            <Text style={s.formTitle}>Add network</Text>
-            <View style={s.form}>
-              <TextInput
-                style={s.input}
-                name='SSID'
-                placeholder='SSID'
-                value={ssid}
-                onChangeText={(value) => { onChangeText('ssid', value) }}
-              />
-              <TextInput
-                style={s.input}
-                name='Password'
-                placeholder='Password'
-                value={password}
-                secureTextEntry
-                onChangeText={(value) => { onChangeText('password', value) }}
-              />
-            </View>
-          </View>
-        </Container>
-      )
+    const qr = {
+      ssid,
+      password,
+      host,
+      port
     }
+    return (
+      <Container>
+        <Card
+          qr={JSON.stringify(qr)}
+          title='Scan this QR using the MARK camera'
+          text={`or connect to ${host}:${port}`}
+        />
+        <Footer style={{paddingTop: 0}}>
+          <Card
+            title='CONNECT THE MARK'
+            text='Tap done once connected'
+            button='Done'
+            textAlign='left'
+            onPress={onDone}
+            style={{textView: {marginBottom: Metrics.unit * 2}}} />
+        </Footer>
+      </Container>
+    )
   }
 
   renderTurnOnBluetooth = () => {
@@ -302,7 +305,8 @@ export default class Screen extends Component {
     const {
       connectTo,
       enabled,
-      activeDevice } = this.props
+      activeDevice,
+      networkAdded } = this.props
 
     if (!connectTo) {
       return this.renderConnectTo()
@@ -325,7 +329,11 @@ export default class Screen extends Component {
     }
 
     if (connectTo === 'mark') {
-      return this.renderConnectedToMark()
+      if (networkAdded) {
+        return this.renderConnectTheMark()
+      } else {
+        return this.renderAddNetwork()
+      }
     }
   }
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Linking } from 'react-native'
 import { connect } from 'react-redux'
+import Config from 'react-native-config'
 
 import Client, { setRobot } from 'App/Services/Client'
 import Bluetooth from 'App/Services/Bluetooth'
@@ -68,10 +69,17 @@ export class ConnectContainer extends Component {
     //
     // TODO Test SSID works for iOS?
     // TODO Set previously saved password for ssid?
-    const ssid = await getSSID()
+    let ssid = await getSSID()
+    let password = null
+    if (__DEV__) {
+      if (!ssid) {
+        ssid = Config.DEV_SSID
+      }
+      password = Config.DEV_SSID_PASSWORD
+    }
     this.setState({
       ssid,
-      password: null
+      password
     })
   }
 

@@ -76,6 +76,11 @@ exports[`Connect Component renders correctly for mark device & network NOT added
 
 exports[`Connect Component renders correctly for mark device & network added 1`] = `
 <Container>
+  <Card
+    qr="{\\"ssid\\":\\"TestSSID\\",\\"password\\":\\"TestPassword\\",\\"host\\":\\"TestHost\\",\\"port\\":1234}"
+    text="or connect to TestHost:1234"
+    title="Scan this QR using the MARK camera"
+  />
   <Footer
     style={
       Object {
@@ -98,11 +103,6 @@ exports[`Connect Component renders correctly for mark device & network added 1`]
       title="CONNECT THE MARK"
     />
   </Footer>
-  <Card
-    qr="{\\"ssid\\":\\"TestSSID\\",\\"password\\":\\"TestPassword\\",\\"host\\":\\"TestHost\\",\\"port\\":1234}"
-    text="or connect to TestHost:1234"
-    title="Scan this QR using the MARK camera"
-  />
 </Container>
 `;
 

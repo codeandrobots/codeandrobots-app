@@ -21,6 +21,7 @@ export default class Socket {
   onData = () => {}
   onImageReceived = () => {}
   onError = (error) => {
+    console.warn('Socker server error - ' + error)
     console.warn(error)
   }
   onClose = (error) => {
@@ -36,12 +37,7 @@ export default class Socket {
   }
 
   connect = (host, port, onConnect = () => {}) => {
-    if (this.isConnected) {
-      this.host = host
-      this.port = port
-      onConnect({host, port})
-      return
-    }
+    this.close() // Try to close if server was connected previously
     this.server = TcpSocket.createServer((socket) => {
       this.socket = socket
       socket.on('data', this.onData)

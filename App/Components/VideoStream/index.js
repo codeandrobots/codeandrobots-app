@@ -43,8 +43,6 @@ export default class VideoStream extends Component {
       style = {} } = this.props
     const { encodedData } = this.state
 
-    console.log(encodedData)
-
     const isSmall = (size === 'small')
 
     const styles = {
