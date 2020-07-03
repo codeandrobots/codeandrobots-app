@@ -27,3 +27,10 @@ storiesOf('Card', module)
         Linking.openURL('https://en.wikipedia.org/wiki/Atlas_(robot)')
       }} />
   ))
+  .add('QR', () => (
+    <Card
+      qr={'codeandrobots.com'}
+      title='HELLO'
+      text='Welcome to Code&Robots'
+    />
+  ))

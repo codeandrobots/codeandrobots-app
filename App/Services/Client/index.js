@@ -1,16 +1,19 @@
 
 import Bluetooth from 'App/Services/Bluetooth'
 import WebSocket from 'App/Services/WebSocket'
+import Socket from 'App/Services/Socket'
 
 import Simulator from './Simulator'
 import Otto from './Otto'
 import Nybble from './Nybble'
+import Mark from './Mark'
 
 const robot = { name: null }
 
 const simulator = new Simulator()
 const otto = new Otto()
 const nybble = new Nybble()
+const mark = new Mark()
 
 export const setRobot = async (robotName) => {
   if (robot.name !== robotName) {
@@ -23,8 +26,12 @@ export const setRobot = async (robotName) => {
   }
 }
 
-const isConnectedToSocket = () => {
+const isConnectedToWebSocket = () => {
   return WebSocket.getInstance().isConnected
+}
+
+const isConnectedToSocket = () => {
+  return isConnectedToWebSocket() || Socket.getInstance().isConnected
 }
 
 const isConnectedToBluetooth = async () => {
@@ -42,6 +49,8 @@ export default class Client {
       return otto
     } else if (robot.name === 'nybble') {
       return nybble
+    } else if (robot.name === 'mark') {
+      return mark
     } else if (robot.name === 'simulator') {
       return simulator
     } else {

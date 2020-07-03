@@ -25,7 +25,8 @@ const onProps = {
   onEmailInstructions: () => {},
   onIsYourDeviceSupported: () => {},
   onProblemsConnecting: () => {},
-  onHideProblemsConnectingModal: () => {}
+  onHideProblemsConnectingModal: () => {},
+  onChangeText: () => {}
 }
 
 describe('Connect', () => {
@@ -39,6 +40,7 @@ describe('Connect', () => {
         showProblemsConnectingModal={false}
         showIsYourDeviceSupportedModal={false}
         instructions={instructions}
+        networkAdded={false}
         {...onProps} />)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
@@ -53,6 +55,7 @@ describe('Connect', () => {
         showProblemsConnectingModal={false}
         showIsYourDeviceSupportedModal={false}
         instructions={instructions}
+        networkAdded={false}
         {...onProps} />)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
@@ -67,6 +70,7 @@ describe('Connect', () => {
         showProblemsConnectingModal={false}
         showIsYourDeviceSupportedModal={false}
         instructions={instructions}
+        networkAdded={false}
         {...onProps} />)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
@@ -81,6 +85,7 @@ describe('Connect', () => {
         showProblemsConnectingModal={false}
         showIsYourDeviceSupportedModal={false}
         instructions={instructions}
+        networkAdded={false}
         {...onProps} />)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
@@ -95,6 +100,7 @@ describe('Connect', () => {
         showProblemsConnectingModal={false}
         showIsYourDeviceSupportedModal={false}
         instructions={instructions}
+        networkAdded={false}
         {...onProps} />)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
@@ -110,6 +116,43 @@ describe('Connect', () => {
         showProblemsConnectingModal={false}
         showIsYourDeviceSupportedModal={false}
         instructions={instructions}
+        networkAdded={false}
+        {...onProps} />)
+    expect(toJson(wrapper)).toMatchSnapshot()
+  })
+  it('Component renders correctly for mark device & network NOT added', () => {
+    const wrapper = shallow(
+      <Screen
+        navigation={navigation}
+        connectTo='mark'
+        enabled
+        scanning={false}
+        devices={devices}
+        activeDevice={activeDevice}
+        showProblemsConnectingModal={false}
+        showIsYourDeviceSupportedModal={false}
+        instructions={instructions}
+        networkAdded={false}
+        {...onProps} />)
+    expect(toJson(wrapper)).toMatchSnapshot()
+  })
+  it('Component renders correctly for mark device & network added', () => {
+    const wrapper = shallow(
+      <Screen
+        navigation={navigation}
+        connectTo='mark'
+        enabled
+        scanning={false}
+        devices={devices}
+        activeDevice={activeDevice}
+        showProblemsConnectingModal={false}
+        showIsYourDeviceSupportedModal={false}
+        instructions={instructions}
+        networkAdded
+        ssid={'TestSSID'}
+        password={'TestPassword'}
+        host={'TestHost'}
+        port={1234}
         {...onProps} />)
     expect(toJson(wrapper)).toMatchSnapshot()
   })

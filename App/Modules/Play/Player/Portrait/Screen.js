@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import {
   Container,
   Joystick,
+  VideoStream,
   PlayerBottomNav,
   Footer,
   Card,
@@ -28,7 +29,7 @@ export default class PortraitScreen extends Component {
     onHideNotConnectedModal: PropTypes.func.isRequired
   }
 
-  render () {
+  renderDefault () {
     const {
       config,
       message,
@@ -90,5 +91,63 @@ export default class PortraitScreen extends Component {
           template='NotConnected' />
       </Container>
     )
+  }
+
+  renderWithVideo () {
+    const {
+      config,
+      showNotConnectedModal,
+      onConnect,
+      onDraggableMove,
+      onDraggableRelease,
+      onDraggableStart,
+      onHideNotConnectedModal
+    } = this.props
+
+    const { skills, showSkillIcons } = config || {}
+
+    const itemsByRow = (skills && skills.length > 0)
+      ? splitItemsByRow(skills[0].items, showSkillIcons)
+      : []
+    const skillRowHeight = (showSkillIcons) ? 40 : 20
+    const skillCategoryHeight = (skills && skills.length > 1) ? 40 : 0
+    const footerHeight =
+      200 + (itemsByRow.length * skillRowHeight) + skillCategoryHeight
+
+    return (
+      <Container style={s.containerView_video}>
+        <View style={[s.videoView, {marginBottom: footerHeight}]}>
+          <VideoStream />
+        </View>
+        <Footer>
+          <View style={s.center}>
+            <Joystick
+              theme='light'
+              size='small'
+              onDraggableMove={onDraggableMove}
+              onDraggableRelease={onDraggableRelease}
+              onDraggableStart={onDraggableStart} />
+          </View>
+        </Footer>
+        <Modal
+          navigation={this.props.navigation}
+          show={showNotConnectedModal}
+          onHidePress={onHideNotConnectedModal}
+          onBack={onConnect}
+          template='NotConnected' />
+      </Container>
+    )
+  }
+
+  render () {
+    const { config } = this.props
+    if (!config) {
+      return null
+    }
+    if (config.features && config.features.video === true) {
+      return this.renderWithVideo()
+    } else {
+      return this.renderDefault()
+    }
   }
 }

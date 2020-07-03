@@ -5,6 +5,11 @@ exports[`WhichRobot Component renders correctly 1`] = `
   <List
     linedRows={true}
     scrollable={true}
+    style={
+      Object {
+        "marginBottom": 132,
+      }
+    }
   >
     <CardListItem
       image={
@@ -25,6 +30,16 @@ exports[`WhichRobot Component renders correctly 1`] = `
       onPress={[Function]}
       text="The world's cutest open source robotic kitten"
       title="Nybble"
+    />
+    <CardListItem
+      image={
+        Object {
+          "process": [Function],
+        }
+      }
+      onPress={[Function]}
+      text="MARK (Make A Robot Kit), your hands on AI robot"
+      title="MARK"
     />
     <CardListItem
       image={

@@ -1,5 +1,111 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Connect Component renders correctly for mark device & network NOT added 1`] = `
+<Container>
+  <Footer
+    style={
+      Object {
+        "paddingTop": 0,
+      }
+    }
+  >
+    <Card
+      button="Add"
+      style={
+        Object {
+          "textView": Object {
+            "marginBottom": 16,
+          },
+        }
+      }
+      text="Add wifi network that this device is connected to"
+      textAlign="left"
+      title="ADD WIFI NETWORK"
+    />
+  </Footer>
+  <View
+    style={
+      Object {
+        "margin": 16,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#354052",
+          "fontFamily": "Roboto-Medium",
+          "fontSize": 18,
+        }
+      }
+    >
+      Add network
+    </Text>
+    <View
+      style={
+        Object {
+          "marginVertical": 8,
+        }
+      }
+    >
+      <TextInput
+        name="SSID"
+        onChangeText={[Function]}
+        placeholder="SSID"
+        style={
+          Object {
+            "marginVertical": 4,
+          }
+        }
+      />
+      <TextInput
+        name="Password"
+        onChangeText={[Function]}
+        placeholder="Password"
+        secureTextEntry={true}
+        style={
+          Object {
+            "marginVertical": 4,
+          }
+        }
+      />
+    </View>
+  </View>
+</Container>
+`;
+
+exports[`Connect Component renders correctly for mark device & network added 1`] = `
+<Container>
+  <Card
+    qr="{\\"ssid\\":\\"TestSSID\\",\\"password\\":\\"TestPassword\\",\\"host\\":\\"TestHost\\",\\"port\\":1234}"
+    text="or connect to TestHost:1234"
+    title="Scan this QR using the MARK camera"
+  />
+  <Footer
+    style={
+      Object {
+        "paddingTop": 0,
+      }
+    }
+  >
+    <Card
+      button="Done"
+      onPress={[Function]}
+      style={
+        Object {
+          "textView": Object {
+            "marginBottom": 16,
+          },
+        }
+      }
+      text="Tap done once connected"
+      textAlign="left"
+      title="CONNECT THE MARK"
+    />
+  </Footer>
+</Container>
+`;
+
 exports[`Connect Component renders correctly when bluetooth device is connected 1`] = `
 <Container>
   <List>

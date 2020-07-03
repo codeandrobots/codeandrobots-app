@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import { ScrollView } from 'react-native'
+import { View, ScrollView, Text } from 'react-native'
 import PropTypes from 'prop-types'
 
 import Types from 'App/Services/PropTypes'
 
 import {
   Container,
+  TextInput,
   Footer,
   Card,
   List,
@@ -13,6 +14,8 @@ import {
   Modal } from 'App/Components'
 
 import { Metrics, Images } from 'App/Themes'
+
+import s from './Styles'
 
 export default class Screen extends Component {
   static propTypes = {
@@ -26,6 +29,11 @@ export default class Screen extends Component {
     showProblemsConnectingModal: PropTypes.bool.isRequired,
     showIsYourDeviceSupportedModal: PropTypes.bool.isRequired,
     instructions: PropTypes.string.isRequired,
+    networkAdded: PropTypes.bool.isRequired,
+    ssid: PropTypes.string,
+    password: PropTypes.string,
+    host: PropTypes.string,
+    port: PropTypes.number,
     onEnableBluetooth: PropTypes.func.isRequired,
     onScan: PropTypes.func.isRequired,
     onConnect: PropTypes.func.isRequired,
@@ -34,7 +42,8 @@ export default class Screen extends Component {
     onEmailInstructions: PropTypes.func.isRequired,
     onIsYourDeviceSupported: PropTypes.func.isRequired,
     onProblemsConnecting: PropTypes.func.isRequired,
-    onHideProblemsConnectingModal: PropTypes.func.isRequired
+    onHideProblemsConnectingModal: PropTypes.func.isRequired,
+    onChangeText: PropTypes.func.isRequired
   }
 
   renderConnectTo = () => {
@@ -79,6 +88,82 @@ export default class Screen extends Component {
         <Card
           image={Images.bluetooth}
           title='Good job 👍' />
+      </Container>
+    )
+  }
+
+  renderAddNetwork = () => {
+    const {
+      ssid,
+      password,
+      onChangeText,
+      onAddNetwork } = this.props
+
+    return (
+      <Container>
+        <Footer style={{paddingTop: 0}}>
+          <Card
+            title='ADD WIFI NETWORK'
+            text='Add wifi network that this device is connected to'
+            button='Add'
+            textAlign='left'
+            onPress={onAddNetwork}
+            style={{textView: {marginBottom: Metrics.unit * 2}}} />
+        </Footer>
+        <View style={s.formView}>
+          <Text style={s.formTitle}>Add network</Text>
+          <View style={s.form}>
+            <TextInput
+              style={s.input}
+              name='SSID'
+              placeholder='SSID'
+              value={ssid}
+              onChangeText={(value) => { onChangeText('ssid', value) }}
+            />
+            <TextInput
+              style={s.input}
+              name='Password'
+              placeholder='Password'
+              value={password}
+              secureTextEntry
+              onChangeText={(value) => { onChangeText('password', value) }}
+            />
+          </View>
+        </View>
+      </Container>
+    )
+  }
+
+  renderConnectTheMark = () => {
+    const {
+      ssid,
+      password,
+      host,
+      port,
+      onDone } = this.props
+
+    const qr = {
+      ssid,
+      password,
+      host,
+      port
+    }
+    return (
+      <Container>
+        <Card
+          qr={JSON.stringify(qr)}
+          title='Scan this QR using the MARK camera'
+          text={`or connect to ${host}:${port}`}
+        />
+        <Footer style={{paddingTop: 0}}>
+          <Card
+            title='CONNECT THE MARK'
+            text='Tap done once connected'
+            button='Done'
+            textAlign='left'
+            onPress={onDone}
+            style={{textView: {marginBottom: Metrics.unit * 2}}} />
+        </Footer>
       </Container>
     )
   }
@@ -220,7 +305,8 @@ export default class Screen extends Component {
     const {
       connectTo,
       enabled,
-      activeDevice } = this.props
+      activeDevice,
+      networkAdded } = this.props
 
     if (!connectTo) {
       return this.renderConnectTo()
@@ -240,6 +326,14 @@ export default class Screen extends Component {
 
     if (connectTo === 'simulator') {
       return this.renderConnectedToSimulator()
+    }
+
+    if (connectTo === 'mark') {
+      if (networkAdded) {
+        return this.renderConnectTheMark()
+      } else {
+        return this.renderAddNetwork()
+      }
     }
   }
 }

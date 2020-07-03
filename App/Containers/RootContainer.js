@@ -10,6 +10,8 @@ import ReduxPersist from 'App/Config/ReduxPersist'
 import DeviceInfo from 'react-native-device-info'
 
 import Bluetooth from 'App/Services/Bluetooth'
+import Socket from 'App/Services/Socket'
+
 import { Events, trackEvent } from 'App/Services/Analytics'
 
 import Colors from 'App/Themes/Colors'
@@ -55,6 +57,7 @@ class RootContainer extends Component {
 
   componentWillUnmount () {
     Bluetooth.disconnect()
+    Socket.getInstance().close()
     // TODO Fix firebase code
     // if (!this.isSimulator()) {
     //   this.notificationOpenedListener()

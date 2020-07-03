@@ -6,7 +6,9 @@ export default {
   },
   features: {
     drive: true,
-    beep: true
+    beep: true,
+    video: false,
+    landscape: true
   },
   params: [],
   moves: [
