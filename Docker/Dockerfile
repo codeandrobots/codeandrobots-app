@@ -1,6 +1,4 @@
-# Can't use alpine since it can't run 32-bit binaries, and the SDK doesn't have
-# 64-bit binaries
-FROM ubuntu:18.04
+FROM debian:latest
 
 # ——————————
 # Installs base software packages
@@ -9,17 +7,8 @@ FROM ubuntu:18.04
 ENV LANG en_US.UTF-8
 
 RUN apt-get update && \
-    apt-get install -y apt-utils \
-    software-properties-common 
-
-RUN add-apt-repository main && \
-    add-apt-repository universe && \
-    add-apt-repository restricted && \
-    add-apt-repository multiverse
-
-RUN apt-get update && \
     apt-get install -y wget \
-    openjdk-8-jdk-headless \
+    software-properties-common \
     wget \
     curl \
     git \
@@ -28,6 +17,7 @@ RUN apt-get update && \
     libssl-dev \
     autoconf \
     automake \
+    build-essential \
     libtool \
     python-dev \
     ca-certificates \
@@ -44,8 +34,12 @@ RUN apt-get update && \
     libdouble-conversion1 \
     libxcb-xinerama0 \
     pulseaudio \
-    pkg-config && \
-    apt-get clean
+    pkg-config
+
+# Installing Java 8
+RUN apt-add-repository 'deb http://security.debian.org/debian-security stretch/updates main' && \
+    apt-get update && \
+    apt-get install -y openjdk-8-jdk
 
 ENV JAVA8_HOME /usr/lib/jvm/java-8-openjdk-amd64
 ENV JAVA_HOME $JAVA8_HOME
@@ -127,11 +121,12 @@ ARG NUM_JOBS=2
 # Downloading and compiling watchman from source
 RUN git clone https://github.com/facebook/watchman.git \
     && cd watchman \
-    && git checkout v4.9.0 \
+    && git checkout v4.7.0 \ 
     && ./autogen.sh \
-    && ./configure \
-    && make -j${NUM_JOBS}\
+    && ./configure --enable-lenient --enable-statedir=/tmp \
+    && make -j${NUM_JOBS} \
     && make install \
+    && mv watchman /usr/local/bin/watchman \
     && cd .. \
     && rm -rf watchman
 

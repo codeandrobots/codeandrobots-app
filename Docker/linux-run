@@ -10,7 +10,7 @@ IMAGE_NAME=${IMAGE_NAME#*=}
 # These settings must stay consistant with the values used in the dockerfile
 DOCKER_USERNAME=${RNDOCKER_DOCKER_USERNAME:-dev}
 DOCKER_PROJECT_MOUNT=${RNDOCKER_DOCKER_PROJECT_MOUNT:-/project}
-DOCKER_UID=${RNDOCKER_DOCKER_UID:-1000}
+DOCKER_UID=${RNDOCKER_DOCKER_UID:1000}
 
 # Arguments:
 ## --privileged -> needed to get acess for hardware acceleration
