@@ -75,5 +75,5 @@ ios/CodeAndRobots/GoogleService-Info.plist
 .env
 sentry.properties
 ios/index/
-Docker/utils/.env.Docker
+Docker/.env.Docker
 .env.*
