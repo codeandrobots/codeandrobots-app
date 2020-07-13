@@ -6,11 +6,8 @@ import Socket from 'App/Services/Socket'
 import Simulator from './Simulator'
 import Otto from './Otto'
 import Nybble from './Nybble'
-<<<<<<< HEAD
 import Custom from './Custom'
-=======
 import Mark from './Mark'
->>>>>>> master
 
 const robot = { name: null }
 
