@@ -50,7 +50,7 @@ const s = {
     alignSelf: 'center',
     flex: 1,
     ...Styles.text,
-    paddingTop: 0
+    paddingVertical: 0
   }
 }
 

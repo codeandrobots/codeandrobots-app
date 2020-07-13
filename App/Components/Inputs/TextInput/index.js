@@ -7,8 +7,7 @@ import s from './Styles'
 export default class TextInput extends Component {
   static propTypes = {
     label: PropTypes.string,
-    error: PropTypes.string,
-    onValueChange: PropTypes.func
+    error: PropTypes.string
   }
 
   constructor (props) {
@@ -30,8 +29,7 @@ export default class TextInput extends Component {
     const {
       style = undefined,
       label,
-      error,
-      onValueChange = () => {} } = this.props
+      error } = this.props
 
     const { focus } = this.state
 
@@ -52,11 +50,10 @@ export default class TextInput extends Component {
         {label && <Text style={labelStyle}>{label}</Text>}
         <View style={inputViewStyle}>
           <RNTextInput
+            {...this.props}
             style={s.input}
-            onChangeText={onValueChange}
             onFocus={this.onFocus}
             onBlur={this.onBlur}
-            {...this.props}
           />
         </View>
         {error && <Text style={helperTextStyle}>{error}</Text>}
