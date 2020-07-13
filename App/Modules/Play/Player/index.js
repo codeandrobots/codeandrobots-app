@@ -20,22 +20,29 @@ export class PlayerContainer extends Component {
   }
 
   async componentWillMount () {
+    // Support landscape by default
+    let supportLandscape = true
+
     const connected = await isConnected()
     if (connected) {
       const config = await this.client.getConfig()
       this.props.navigation.setParams({title: config.name})
       this.setState({ config })
+
+      if (config && config.features && config.features.landscape === false) {
+        supportLandscape = false
+      }
     } else {
       this.props.navigation.setParams({title: 'Player'})
       this.setState({showNotConnectedModal: true})
     }
-  }
 
-  componentDidMount () {
-    Orientation.unlockAllOrientations()
-    Orientation.getOrientation((orientation) => {
-      this.setOrientation(orientation)
-    })
+    if (supportLandscape) {
+      Orientation.unlockAllOrientations()
+      Orientation.getOrientation((orientation) => {
+        this.setOrientation(orientation)
+      })
+    }
     Orientation.addOrientationListener(this.onOrientationDidChange)
   }
 

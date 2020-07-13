@@ -27,7 +27,9 @@ export default {
   connection: { type: 'bluetooth' },
   features: {
     drive: true,
-    beep: false
+    beep: false,
+    video: false,
+    landscape: true
   },
   params: [
     {

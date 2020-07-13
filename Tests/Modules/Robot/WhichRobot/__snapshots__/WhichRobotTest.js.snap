@@ -48,6 +48,16 @@ exports[`WhichRobot Component renders correctly 1`] = `
         }
       }
       onPress={[Function]}
+      text="MARK (Make A Robot Kit), your hands on AI robot"
+      title="MARK"
+    />
+    <CardListItem
+      image={
+        Object {
+          "process": [Function],
+        }
+      }
+      onPress={[Function]}
       text="No robot, no problem, simulator to the rescue"
       title="Robot Simulator"
     />

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, Image, Text } from 'react-native'
 import PropTypes from 'prop-types'
+import QRCode from 'react-native-qrcode-svg'
 
 import { getImageSize } from 'App/Services/ImageUtils'
 
@@ -12,6 +13,7 @@ import s from './Styles'
 
 export default class Card extends Component {
   static propTypes = {
+    qr: PropTypes.string,
     image: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
     video: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
     title: PropTypes.string,
@@ -50,6 +52,7 @@ export default class Card extends Component {
   render () {
     const {
       style = {},
+      qr,
       image,
       video,
       title,
@@ -69,12 +72,19 @@ export default class Card extends Component {
 
     return (
       <View style={style.view}>
-        {image && (
+        {qr && (
+          <View style={s.qrView}>
+            <QRCode
+              value={qr}
+              size={250} />
+          </View>
+        )}
+        {!qr && image && (
           <View style={s.imageView}>
             <Image style={imageStyle} source={image} />
           </View>
         )}
-        {!image && video && (
+        {!qr && !image && video && (
           <Video video={video} />
         )}
         {title && (

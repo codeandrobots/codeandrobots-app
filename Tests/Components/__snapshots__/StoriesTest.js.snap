@@ -955,6 +955,169 @@ exports[`Storyshots Card Hello 1`] = `
 </RCTSafeAreaView>
 `;
 
+exports[`Storyshots Card QR 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+>
+  <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "justifyContent": "center",
+          "marginVertical": 24,
+          "width": "100%",
+        }
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        bbHeight={250}
+        bbWidth={250}
+        focusable={false}
+        height={250}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            Object {
+              "flex": 0,
+              "height": 250,
+              "width": 250,
+            },
+          ]
+        }
+        vbHeight={250}
+        vbWidth={250}
+        width={250}
+      >
+        <RNSVGGroup>
+          <RNSVGDefs>
+            <RNSVGLinearGradient
+              gradient={
+                Array [
+                  0,
+                  -65536,
+                  1,
+                  -16711681,
+                ]
+              }
+              gradientTransform={null}
+              gradientUnits={0}
+              name="grad"
+              x1="0%"
+              x2="100%"
+              y1="0%"
+              y2="100%"
+            />
+          </RNSVGDefs>
+          <RNSVGGroup>
+            <RNSVGRect
+              fill={4294967295}
+              height={250}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+              width={250}
+              x={-0}
+              y={-0}
+            />
+          </RNSVGGroup>
+          <RNSVGGroup>
+            <RNSVGPath
+              d="M0 5 L70 5 M100 5 L110 5 M120 5 L140 5 M150 5 L160 5 M180 5 L250 5 M0 15 L10 15 M60 15 L70 15 M90 15 L100 15 M130 15 L170 15 M180 15 L190 15 M240 15 L250 15 M0 25 L10 25 M20 25 L50 25 M60 25 L70 25 M80 25 L90 25 M100 25 L110 25 M120 25 L140 25 M150 25 L170 25 M180 25 L190 25 M200 25 L230 25 M240 25 L250 25 M0 35 L10 35 M20 35 L50 35 M60 35 L70 35 M80 35 L100 35 M110 35 L130 35 M140 35 L150 35 M180 35 L190 35 M200 35 L230 35 M240 35 L250 35 M0 45 L10 45 M20 45 L50 45 M60 45 L70 45 M80 45 L100 45 M120 45 L130 45 M160 45 L170 45 M180 45 L190 45 M200 45 L230 45 M240 45 L250 45 M0 55 L10 55 M60 55 L70 55 M80 55 L90 55 M120 55 L130 55 M150 55 L170 55 M180 55 L190 55 M240 55 L250 55 M0 65 L70 65 M80 65 L90 65 M100 65 L110 65 M120 65 L130 65 M140 65 L150 65 M160 65 L170 65 M180 65 L250 65 M80 75 L110 75 M140 75 L150 75 M160 75 L170 75 M0 85 L10 85 M20 85 L70 85 M90 85 L120 85 M180 85 L230 85 M50 95 L60 95 M80 95 L110 95 M130 95 L150 95 M160 95 L170 95 M190 95 L200 95 M10 105 L20 105 M30 105 L50 105 M60 105 L70 105 M100 105 L110 105 M130 105 L170 105 M180 105 L220 105 M230 105 L250 105 M30 115 L40 115 M70 115 L90 115 M120 115 L140 115 M190 115 L210 115 M230 115 L240 115 M40 125 L50 125 M60 125 L70 125 M120 125 L130 125 M140 125 L160 125 M170 125 L190 125 M200 125 L240 125 M0 135 L20 135 M30 135 L60 135 M90 135 L100 135 M160 135 L170 135 M190 135 L200 135 M0 145 L10 145 M20 145 L70 145 M110 145 L130 145 M150 145 L160 145 M170 145 L180 145 M200 145 L210 145 M230 145 L250 145 M0 155 L10 155 M20 155 L30 155 M50 155 L60 155 M70 155 L90 155 M100 155 L120 155 M140 155 L150 155 M160 155 L180 155 M230 155 L240 155 M0 165 L10 165 M20 165 L40 165 M50 165 L80 165 M100 165 L120 165 M160 165 L230 165 M240 165 L250 165 M80 175 L90 175 M100 175 L110 175 M120 175 L170 175 M200 175 L220 175 M0 185 L70 185 M130 185 L150 185 M160 185 L170 185 M180 185 L190 185 M200 185 L210 185 M230 185 L250 185 M0 195 L10 195 M60 195 L70 195 M80 195 L100 195 M120 195 L140 195 M150 195 L170 195 M200 195 L210 195 M230 195 L250 195 M0 205 L10 205 M20 205 L50 205 M60 205 L70 205 M80 205 L90 205 M100 205 L110 205 M120 205 L130 205 M140 205 L230 205 M240 205 L250 205 M0 215 L10 215 M20 215 L50 215 M60 215 L70 215 M80 215 L100 215 M160 215 L210 215 M220 215 L250 215 M0 225 L10 225 M20 225 L50 225 M60 225 L70 225 M80 225 L100 225 M110 225 L130 225 M150 225 L160 225 M170 225 L180 225 M190 225 L200 225 M210 225 L230 225 M240 225 L250 225 M0 235 L10 235 M60 235 L70 235 M90 235 L120 235 M140 235 L150 235 M160 235 L190 235 M240 235 L250 235 M0 245 L70 245 M80 245 L100 245 M110 245 L120 245 M180 245 L200 245 M210 245 L250 245 "
+              propList={
+                Array [
+                  "stroke",
+                  "strokeWidth",
+                ]
+              }
+              stroke={4278190080}
+              strokeWidth={10}
+            />
+          </RNSVGGroup>
+        </RNSVGGroup>
+      </RNSVGSvgView>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "marginTop": 16,
+          },
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#354052",
+              "fontFamily": "Roboto-Medium",
+              "fontSize": 18,
+            },
+            Object {
+              "textAlign": "center",
+            },
+          ]
+        }
+      >
+        HELLO
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "marginBottom": 24,
+            "marginTop": 8,
+          },
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#354052",
+              "fontFamily": "Roboto-Medium",
+              "fontSize": 16,
+            },
+            Object {
+              "textAlign": "center",
+            },
+          ]
+        }
+      >
+        Welcome to Code&Robots
+      </Text>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
 exports[`Storyshots Carousel Default 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
