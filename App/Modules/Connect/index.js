@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Linking } from 'react-native'
+import { Alert, Linking } from 'react-native'
 import { connect } from 'react-redux'
 import Config from 'react-native-config'
 
@@ -113,12 +113,8 @@ export class ConnectContainer extends Component {
       this.websocket.connect()
     } else if (connectTo === 'mark') {
       const host = await ipAddress()
-      // TODO Get port from config
-      // TODO Await for socket to connect successfully or catch error?
-      this.socket.connect(host, 3456, ({host, port}) => {
-        console.log(`Connected ${host}:${port}`)
-        this.setState({ host, port })
-      })
+      const port = 3456 // TODO Get port from config
+      this.setState({ host, port })
     }
     this.setState({ connectTo })
   }
@@ -238,11 +234,20 @@ export class ConnectContainer extends Component {
   }
 
   onAddNetwork = () => {
-    const { ssid, password } = this.state
-    console.log(ssid) // TODO REMOVE
-    console.log(password) // TODO REMOVE
-    if (ssid && ssid.trim() !== '' && password && password.trim() !== '') {
-      this.setState({ networkAdded: true })
+    const { ssid, password, host, port } = this.state
+    if (ssid && ssid.trim() !== '' &&
+        password && password.trim() !== '' &&
+        host && host.trim() !== '' &&
+        port !== null) {
+      // TODO Await for socket to connect successfully or catch error?
+      this.socket.connect(host, port, ({host, port}) => {
+        console.log(`Connected ${host}:${port}`)
+        this.setState({ networkAdded: true })
+      }, (error) => {
+        Alert.alert('Failed to connect', error.message, [
+          { text: 'Ok', onPress: () => {} }
+        ])
+      })
     }
   }
 

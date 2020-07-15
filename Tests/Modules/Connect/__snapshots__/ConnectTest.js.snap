@@ -69,6 +69,28 @@ exports[`Connect Component renders correctly for mark device & network NOT added
           }
         }
       />
+      <TextInput
+        name="IP Address"
+        onChangeText={[Function]}
+        placeholder="IP Address"
+        style={
+          Object {
+            "marginVertical": 4,
+          }
+        }
+      />
+      <TextInput
+        keyboardType="number-pad"
+        name="Port"
+        onChangeText={[Function]}
+        placeholder="Port"
+        style={
+          Object {
+            "marginVertical": 4,
+          }
+        }
+        value=""
+      />
     </View>
   </View>
 </Container>

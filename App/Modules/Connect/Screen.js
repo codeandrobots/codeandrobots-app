@@ -3,6 +3,7 @@ import { View, ScrollView, Text } from 'react-native'
 import PropTypes from 'prop-types'
 
 import Types from 'App/Services/PropTypes'
+import { toInt } from 'App/Services/TextUtils'
 
 import {
   Container,
@@ -96,6 +97,8 @@ export default class Screen extends Component {
     const {
       ssid,
       password,
+      host,
+      port,
       onChangeText,
       onAddNetwork } = this.props
 
@@ -127,6 +130,21 @@ export default class Screen extends Component {
               value={password}
               secureTextEntry
               onChangeText={(value) => { onChangeText('password', value) }}
+            />
+            <TextInput
+              style={s.input}
+              name='IP Address'
+              placeholder='IP Address'
+              value={host}
+              onChangeText={(value) => { onChangeText('host', value) }}
+            />
+            <TextInput
+              style={s.input}
+              name='Port'
+              placeholder='Port'
+              value={(port || port === 0) ? port.toString() : ''}
+              keyboardType={'number-pad'}
+              onChangeText={(value) => { onChangeText('port', toInt(value)) }}
             />
           </View>
         </View>

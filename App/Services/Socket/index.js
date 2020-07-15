@@ -36,7 +36,7 @@ export default class Socket {
     return Socket.myInstance
   }
 
-  connect = (host, port, onConnect = () => {}) => {
+  connect = (host, port, onConnect = () => {}, onConnectError = () => {}) => {
     this.close() // Try to close if server was connected previously
     this.server = TcpSocket.createServer((socket) => {
       this.socket = socket
@@ -49,6 +49,7 @@ export default class Socket {
         if (error) {
           console.warn(`Failed to connect to ${host}:${port} -` + error)
           this.onError(error)
+          onConnectError(error)
         } else {
           this.isConnected = true
           this.host = host
