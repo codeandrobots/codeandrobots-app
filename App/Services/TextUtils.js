@@ -12,3 +12,14 @@ export const capitalizeWords = (text) => {
   })
   return parts.join(' ')
 }
+
+export const toInt = (text) => {
+  if (!text) {
+    return null
+  }
+  const int = text.replace(/[^0-9]/g, '')
+  if (int.length < 1) {
+    return null
+  }
+  return parseInt(int, 10)
+}
