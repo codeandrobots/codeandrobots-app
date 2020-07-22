@@ -18,7 +18,6 @@ export default class Socket {
   lastImageUpdate = null
 
   // Default event functions
-  onData = () => {}
   onImageReceived = () => {}
   onError = (error) => {
     console.warn('Socker server error - ' + error)
@@ -40,7 +39,7 @@ export default class Socket {
     this.close() // Try to close if server was connected previously
     this.server = TcpSocket.createServer((socket) => {
       this.socket = socket
-      socket.on('data', this.onData)
+      socket.on('data', this.onImageData)
       socket.on('error', this.onError)
       socket.on('close', this.onClose)
     }).listen(
@@ -72,12 +71,11 @@ export default class Socket {
   }
 
   setOnData = (onData) => {
-    this.onData = onData
+    this.socket.on('data', onData)
   }
 
   setOnImageReceived = (onImageReceived) => {
     this.resetImageData()
-    this.onData = this.onImageData
     this.onImageReceived = onImageReceived
   }
 
