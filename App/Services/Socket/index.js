@@ -12,6 +12,9 @@ export default class Socket {
   host = null
   port = null
 
+  logs = []
+  lastLogTimestamp = null
+
   // Image data
   imageData = null
   imageDataStart = false
@@ -20,11 +23,15 @@ export default class Socket {
   // Default event functions
   onImageReceived = () => {}
   onError = (error) => {
-    console.warn('Socker server error - ' + error)
+    const msg = 'Socker server error - ' + error
+    this.addLog(msg)
+    console.warn(msg)
     console.warn(error)
   }
   onClose = (error) => {
-    console.log('Socket server client connection closed ' + (error || ''))
+    const msg = 'Socket server client connection closed ' + (error || '')
+    this.addLog(msg)
+    console.warn(msg)
   }
 
   static getInstance () {
@@ -36,6 +43,7 @@ export default class Socket {
   }
 
   connect = (host, port, onConnect = () => {}, onConnectError = () => {}) => {
+    this.addLog(`Connect ${host}:${port}`)
     this.close() // Try to close if server was connected previously
     this.server = TcpSocket.createServer((socket) => {
       this.socket = socket
@@ -46,10 +54,13 @@ export default class Socket {
       { host, port, reuseAddress: true },
       (error) => {
         if (error) {
-          console.warn(`Failed to connect to ${host}:${port} -` + error)
+          const msg = `Failed to connect to ${host}:${port} -` + error
+          this.addLog(msg)
+          console.warn(msg)
           this.onError(error)
           onConnectError(error)
         } else {
+          this.addLog(`Connected to ${host}:${port}`)
           this.isConnected = true
           this.host = host
           this.port = port
@@ -59,7 +70,7 @@ export default class Socket {
     )
   }
 
-  isConnected = () => {
+  getIsConnected = () => {
     return this.isConnected
   }
 
@@ -68,6 +79,19 @@ export default class Socket {
       host: this.host,
       port: this.port
     }
+  }
+
+  addLog = (log, checkLastLogTimestamp = false) => {
+    if (!checkLastLogTimestamp ||
+      !this.lastLogTimestamp ||
+      new Date().getTime() > this.lastLogTimestamp + 1000) {
+      this.logs.unshift(log)
+      this.lastLogTimestamp = new Date().getTime()
+    }
+  }
+
+  getLogs = () => {
+    return this.logs
   }
 
   setOnData = (onData) => {
@@ -94,6 +118,9 @@ export default class Socket {
   }
 
   onImageData = (chunk) => {
+    if (chunk) {
+      this.addLog(`Received ${encodeURI(chunk).split(/%..|./).length - 1} bytes`, true)
+    }
     if (!this.imageDataStart) {
       const startIndex = chunk.indexOf('\xFF\xD8', 0, 'binary')
       if (startIndex >= 0) {
@@ -120,12 +147,14 @@ export default class Socket {
   }
 
   write = (action) => {
+    this.addLog(`Wrote ${action} to client socket`)
     if (this.socket && this.isConnected) {
       this.socket.write(Buffer.from([action]))
     }
   }
 
   close = () => {
+    this.addLog(`Close server socket`)
     if (this.server) {
       this.server.close()
       this.server = null

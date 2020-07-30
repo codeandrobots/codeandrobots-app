@@ -6,6 +6,7 @@ import {
   Connect,
   Play,
   Player,
+  PlayerLogs,
   Drive,
   Beep,
   Discover,
@@ -64,6 +65,9 @@ export default {
   PlayerScreen: {
     screen: Player,
     navigationOptions: dynamicTitleNavigationOptions
+  },
+  PlayerLogsScreen: {
+    screen: PlayerLogs
   },
   DriveScreen: {
     screen: Drive,

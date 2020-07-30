@@ -4,10 +4,23 @@ import Orientation from 'react-native-orientation-locker'
 
 import Client, { isConnected } from 'App/Services/Client'
 
+import { NavButton } from 'App/Components'
 import PortraitScreen from './Portrait/Screen'
 import LandscapeScreen from './Landscape/Screen'
 
 export class PlayerContainer extends Component {
+  static navigationOptions = ({ navigation }) => {
+    const { params = {} } = navigation.state
+    if (params.showLogs) {
+      const { navigate } = navigation
+      const onLogsPress = () => navigate('PlayerLogsScreen')
+      const headerRight = <NavButton onPress={onLogsPress} text='Logs' />
+      return { headerRight }
+    } else {
+      return {}
+    }
+  }
+
   constructor (props) {
     super(props)
     this.client = new Client()
@@ -26,7 +39,10 @@ export class PlayerContainer extends Component {
     const connected = await isConnected()
     if (connected) {
       const config = await this.client.getConfig()
-      this.props.navigation.setParams({title: config.name})
+      this.props.navigation.setParams({
+        title: config.name,
+        showLogs: config.features && config.features.video === true
+      })
       this.setState({ config })
 
       if (config && config.features && config.features.landscape === false) {
