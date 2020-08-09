@@ -7,7 +7,8 @@ export default class Socket {
   static myInstance = null
 
   server = null
-  socket = null
+  sockets = []
+  nextSocketId = 0
   isConnected = false
   host = null
   port = null
@@ -22,16 +23,27 @@ export default class Socket {
 
   // Default event functions
   onImageReceived = () => {}
-  onError = (error) => {
-    const msg = 'Socker server error - ' + error
+  onError = (error, socket) => {
+    const msg = `Client socket #${socket.id} error - ` + error
     this.addLog(msg)
     console.warn(msg)
     console.warn(error)
   }
-  onClose = (error) => {
-    const msg = 'Socket server client connection closed ' + (error || '')
+  onEnd = (socket) => {
+    const msg = `Client socket #${socket.id} disconnected`
     this.addLog(msg)
-    console.warn(msg)
+
+    const index = this.sockets.indexOf(s => s.id === socket.id)
+    if (index >= 0) {
+      this.sockets.splice(index, 1)
+    }
+  }
+  onClose = (error, socket) => {
+    const msg = `Client socket #${socket.id} closed ` + (error || '')
+    this.addLog(msg)
+    if (error) {
+      console.warn(msg)
+    }
   }
 
   static getInstance () {
@@ -43,31 +55,73 @@ export default class Socket {
   }
 
   connect = (host, port, onConnect = () => {}, onConnectError = () => {}) => {
+    if (this.server) {
+      this.addLog(`Already connected to ${this.host}:${this.port}`)
+      return
+    }
     this.addLog(`Connect ${host}:${port}`)
-    this.close() // Try to close if server was connected previously
     this.server = TcpSocket.createServer((socket) => {
-      this.socket = socket
-      socket.on('data', this.onImageData)
-      socket.on('error', this.onError)
-      socket.on('close', this.onClose)
+      // TODO Seems that on android, no data is received if more than
+      // 3 or 4 socket clients are connected so destroying all sockets
+      // before accepting a new one. This is probably ok for now
+      // since it's likely the client has reconnected & the app only
+      // needs to process one data stream at a time
+      this.addLog(`${this.sockets.length} socket connected`)
+      this.sockets.forEach(socket => {
+        this.addLog(`Destroy socket #${socket.id}`)
+        socket.destroy()
+      })
+      this.sockets = []
+
+      this.sockets.push(socket)
+      socket.id = ++this.nextSocketId
+      if (socket._address) {
+        socket.name = `${socket._address.address}:${socket._address.port} (${socket._address.family})`
+      } else if (socket.localAddress) {
+        socket.name = `${socket.localAddress}:${socket.localPort} (${socket.remoteFamily})`
+      } else if (socket.localAddress) {
+        socket.name = `${socket.remoteAddress}:${socket.remotePort} (${socket.remoteFamily})`
+      } else {
+        socket.name = `Socket #${socket.id} (Unknown ip & port)`
+      }
+      this.addLog(`Socket #${socket.id} from ${socket.name} has connected`)
+      socket.on('data', (data) => { this.onImageData(data, socket) })
+      socket.on('error', (error) => { this.onError(error, socket) })
+      socket.on('end', () => { this.onEnd(socket) })
+      socket.on('close', (error) => { this.onClose(error, socket) })
     }).listen(
       { host, port, reuseAddress: true },
       (error) => {
         if (error) {
-          const msg = `Failed to connect to ${host}:${port} -` + error
+          const msg = `Failed to connect to ${host}:${port} - ` + error
           this.addLog(msg)
           console.warn(msg)
           this.onError(error)
           onConnectError(error)
         } else {
-          this.addLog(`Connected to ${host}:${port}`)
+          // this.addLog(`Connected to ${host}:${port}`)
+          this.addLog(`Connected to ${JSON.stringify(this.server.address())}`)
           this.isConnected = true
           this.host = host
           this.port = port
           onConnect({host, port})
         }
       }
-    )
+    ).on('error', (error) => {
+      console.log(error.message) // TODO REMOVE
+      if (error.message && error.message.indexOf('EADDRINUSE') >= 0) {
+        const msg = 'Server error, address in use!'
+        this.addLog(msg)
+        console.warn(msg)
+        // TODO Try to close & listen again?
+        // See https://nodejs.org/api/net.html#net_server_listen
+      } else {
+        const msg = 'Server error ' + (error || '')
+        this.addLog(msg)
+        console.warn(msg)
+        console.warn(error)
+      }
+    })
   }
 
   getIsConnected = () => {
@@ -117,9 +171,9 @@ export default class Socket {
     this.lastImageUpdate = null
   }
 
-  onImageData = (chunk) => {
+  onImageData = (chunk, socket) => {
     if (chunk) {
-      this.addLog(`Received ${encodeURI(chunk).split(/%..|./).length - 1} bytes`, true)
+      this.addLog(`Received ${encodeURI(chunk).split(/%..|./).length - 1} bytes from socket #${socket.id}`, true)
     }
     if (!this.imageDataStart) {
       const startIndex = chunk.indexOf('\xFF\xD8', 0, 'binary')
@@ -147,18 +201,25 @@ export default class Socket {
   }
 
   write = (action) => {
-    this.addLog(`Wrote ${action} to client socket`)
-    if (this.socket && this.isConnected) {
-      this.socket.write(Buffer.from([action]))
+    if (this.isConnected) {
+      this.sockets.forEach(socket => {
+        this.addLog(`Write ${action} to socket #${socket.id}`)
+        socket.write(Buffer.from([action]))
+      })
     }
   }
 
   close = () => {
     this.addLog(`Close server socket`)
     if (this.server) {
+      this.sockets.forEach(socket => {
+        this.addLog(`Destroy socket #${socket.id}`)
+        socket.destroy()
+      })
+      this.sockets = []
+      this.nextSocketId = 0
       this.server.close()
       this.server = null
-      this.socket = null
       this.isConnected = false
       this.host = null
       this.port = null

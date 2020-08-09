@@ -20,6 +20,7 @@ export default class PlayerLogsScreen extends Component {
       <ScrollView>
         <Text>Connection: {connection.host}:{connection.port}</Text>
         <Text>Connected: {isConnected ? 'Yes' : 'No'}</Text>
+        <Text>----------------</Text>
         {logs.map(log => <Text key={uuid.v4()}>{log}</Text>)}
       </ScrollView>
     )

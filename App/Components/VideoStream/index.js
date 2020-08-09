@@ -15,6 +15,7 @@ export default class VideoStream extends Component {
   constructor (props) {
     super(props)
     this.initSocket()
+    this.lastLogTimestamp = null
     this.state = {
       encodedData: null
     }
@@ -35,6 +36,12 @@ export default class VideoStream extends Component {
 
   onImageReceived = (encodedData) => {
     this.setState({ encodedData })
+
+    if (!this.lastLogTimestamp ||
+      new Date().getTime() > this.lastLogTimestamp + 1000) {
+      this.lastLogTimestamp = new Date().getTime()
+      this.socket.addLog(`Render image (${encodeURI(encodedData).split(/%..|./).length - 1} bytes)`)
+    }
   }
 
   render () {
