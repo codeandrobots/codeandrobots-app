@@ -175,22 +175,17 @@ export default class Socket {
     if (chunk) {
       this.addLog(`Received ${encodeURI(chunk).split(/%..|./).length - 1} bytes from socket #${socket.id}`, true)
     }
-    if (!this.imageDataStart) {
-      const startIndex = chunk.indexOf('\xFF\xD8', 0, 'binary')
-      if (startIndex >= 0) {
-        this.imageData = chunk.subarray(startIndex)
-        this.imageDataStart = true
-      }
-    } else {
+    const startIndex = chunk.indexOf('\xFF\xD8', 0, 'binary')
+    if (startIndex >= 0) {
+      this.imageData = chunk.subarray(startIndex)
+      this.imageDataStart = true
+    } else if (this.imageDataStart) {
       const endIndex = chunk.indexOf('\xFF\xD9', 0, 'binary')
-      if (endIndex >= 0 || this.imageData.length > 2900) {
-        let imageBuffer = this.imageData
-        if (endIndex >= 0) {
-          imageBuffer = Buffer.concat([
-            this.imageData,
-            chunk.subarray(0, endIndex + 2)
-          ])
-        }
+      if (endIndex >= 0) {
+        const imageBuffer = Buffer.concat([
+          this.imageData,
+          chunk.subarray(0, endIndex + 2)
+        ])
         const encodedData = binaryToBase64(imageBuffer)
         this.onImageReceived(encodedData)
         this.imageDataStart = false
