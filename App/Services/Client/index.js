@@ -95,14 +95,14 @@ export default class Client {
     if (client) { client.play(sound) }
   }
 
-  move = async (touch) => {
+  move = async (touch, joystick) => {
     const client = await this.getClient()
-    if (client) { client.move(touch) }
+    if (client) { client.move(touch, joystick) }
   }
 
-  moveAndStop = async (touch) => {
+  moveAndStop = async (touch, joystick) => {
     const client = await this.getClient()
-    if (client) { client.moveAndStop(touch) }
+    if (client) { client.moveAndStop(touch, joystick) }
   }
 
   doSkill = async (category, index) => {

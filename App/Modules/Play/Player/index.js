@@ -94,14 +94,14 @@ export class PlayerContainer extends Component {
     }
   }
 
-  onDraggableMove = (touch) => {
-    this.client.move(touch)
+  onDraggableMove = (touch, joystick) => {
+    this.client.move(touch, joystick)
   }
 
-  onDraggableRelease = async (touch) => {
+  onDraggableRelease = async (touch, joystick) => {
     const connected = await isConnected()
     if (connected) {
-      this.client.moveAndStop(touch)
+      this.client.moveAndStop(touch, joystick)
     } else {
       this.setState({showNotConnectedModal: true})
     }

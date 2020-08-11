@@ -33,6 +33,14 @@ export default {
       left: 2,
       right: 3,
       backwards: 4
+    },
+    pan: {
+      left: 9,
+      right: 8
+    },
+    tilt: {
+      up: 6,
+      down: 7
     }
   },
   moves: [
@@ -40,7 +48,11 @@ export default {
     { title: 'Forwards', cmd: 1, showDuration: true },
     { title: 'Back', cmd: 4, showDuration: true },
     { title: 'Left', cmd: 2, showDuration: true },
-    { title: 'Right', cmd: 3, showDuration: true }
+    { title: 'Right', cmd: 3, showDuration: true },
+    { title: 'Pan Left', cmd: 9, showDuration: true },
+    { title: 'Pan Right', cmd: 8, showDuration: true },
+    { title: 'Tilt Up', cmd: 6, showDuration: true },
+    { title: 'Tilt Down', cmd: 7, showDuration: true }
   ],
   skills: []
 }

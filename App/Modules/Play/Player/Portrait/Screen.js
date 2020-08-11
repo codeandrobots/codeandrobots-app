@@ -120,13 +120,29 @@ export default class PortraitScreen extends Component {
           <VideoStream />
         </View>
         <Footer>
-          <View style={s.center}>
-            <Joystick
-              theme='light'
-              size='small'
-              onDraggableMove={onDraggableMove}
-              onDraggableRelease={onDraggableRelease}
-              onDraggableStart={onDraggableStart} />
+          <View style={{flexDirection: 'row'}}>
+            <View style={{flex: 0.5}}>
+              <View style={s.center}>
+                <Joystick
+                  index={1}
+                  theme='light'
+                  size='small'
+                  onDraggableMove={onDraggableMove}
+                  onDraggableRelease={onDraggableRelease}
+                  onDraggableStart={onDraggableStart} />
+              </View>
+            </View>
+            <View style={{flex: 0.5}}>
+              <View style={s.center}>
+                <Joystick
+                  index={0}
+                  theme='light'
+                  size='small'
+                  onDraggableMove={onDraggableMove}
+                  onDraggableRelease={onDraggableRelease}
+                  onDraggableStart={onDraggableStart} />
+              </View>
+            </View>
           </View>
         </Footer>
         <Modal

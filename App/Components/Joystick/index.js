@@ -10,6 +10,7 @@ import styles, { stylesLightAndSmall } from './Styles'
 
 export default class Joystick extends Component {
   static propTypes = {
+    index: PropTypes.number,
     theme: PropTypes.string,
     size: PropTypes.string,
     onDraggableMove: PropTypes.func,
@@ -26,6 +27,7 @@ export default class Joystick extends Component {
   render () {
     const {
       style = undefined,
+      index = 0,
       theme = 'default',
       size = 'large',
       onDraggableMove,
@@ -55,18 +57,24 @@ export default class Joystick extends Component {
             onDraggableMove={
               (touch) => {
                 if (onDraggableMove) {
-                  onDraggableMove(this.copy(touch))
+                  onDraggableMove(this.copy(touch), index)
                 }
               }
             }
             onDraggableRelease={
               (touch) => {
                 if (onDraggableRelease) {
-                  onDraggableRelease(this.copy(touch))
+                  onDraggableRelease(this.copy(touch), index)
                 }
               }
             }
-            onDraggableStart={onDraggableStart} />
+            onDraggableStart={
+              () => {
+                if (onDraggableStart) {
+                  onDraggableStart(index)
+                }
+              }
+            } />
         </View>
         <View style={s.thumbstickShadow} />
       </View>
