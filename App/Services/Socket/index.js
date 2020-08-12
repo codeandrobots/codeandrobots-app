@@ -24,25 +24,22 @@ export default class Socket {
   // Default event functions
   onImageReceived = () => {}
   onError = (error, socket) => {
-    const msg = `Client socket #${socket.id} error - ` + error
-    this.addLog(msg)
-    console.warn(msg)
-    console.warn(error)
+    this.warn(`Client socket #${this.getSocketId(socket)} error - ` + error, error)
   }
   onEnd = (socket) => {
-    const msg = `Client socket #${socket.id} disconnected`
-    this.addLog(msg)
+    this.warn(`Client socket #${this.getSocketId(socket)} disconnected`)
 
-    const index = this.sockets.indexOf(s => s.id === socket.id)
+    const index = this.sockets.indexOf(s => this.getSocketId(s) === this.getSocketId(socket))
     if (index >= 0) {
       this.sockets.splice(index, 1)
     }
   }
   onClose = (error, socket) => {
-    const msg = `Client socket #${socket.id} closed ` + (error || '')
-    this.addLog(msg)
+    const msg = `Client socket #${this.getSocketId(socket)} closed ` + (error || '')
     if (error) {
-      console.warn(msg)
+      this.warn(msg, error)
+    } else {
+      this.addLog(msg)
     }
   }
 
@@ -68,7 +65,7 @@ export default class Socket {
       // needs to process one data stream at a time
       this.addLog(`${this.sockets.length} socket connected`)
       this.sockets.forEach(socket => {
-        this.addLog(`Destroy socket #${socket.id}`)
+        this.addLog(`Destroy socket #${this.getSocketId(socket)}`)
         socket.destroy()
       })
       this.sockets = []
@@ -82,9 +79,9 @@ export default class Socket {
       } else if (socket.localAddress) {
         socket.name = `${socket.remoteAddress}:${socket.remotePort} (${socket.remoteFamily})`
       } else {
-        socket.name = `Socket #${socket.id} (Unknown ip & port)`
+        socket.name = `Socket #${this.getSocketId(socket)} (Unknown ip & port)`
       }
-      this.addLog(`Socket #${socket.id} from ${socket.name} has connected`)
+      this.addLog(`Socket #${this.getSocketId(socket)} from ${socket.name} has connected`)
       socket.on('data', (data) => { this.onImageData(data, socket) })
       socket.on('error', (error) => { this.onError(error, socket) })
       socket.on('end', () => { this.onEnd(socket) })
@@ -93,9 +90,7 @@ export default class Socket {
       { host, port, reuseAddress: true },
       (error) => {
         if (error) {
-          const msg = `Failed to connect to ${host}:${port} - ` + error
-          this.addLog(msg)
-          console.warn(msg)
+          this.warn(`Failed to connect to ${host}:${port} - ` + error, error)
           this.onError(error)
           onConnectError(error)
         } else {
@@ -110,16 +105,11 @@ export default class Socket {
     ).on('error', (error) => {
       console.log(error.message) // TODO REMOVE
       if (error.message && error.message.indexOf('EADDRINUSE') >= 0) {
-        const msg = 'Server error, address in use!'
-        this.addLog(msg)
-        console.warn(msg)
+        this.warn('Server error, address in use!')
         // TODO Try to close & listen again?
         // See https://nodejs.org/api/net.html#net_server_listen
       } else {
-        const msg = 'Server error ' + (error || '')
-        this.addLog(msg)
-        console.warn(msg)
-        console.warn(error)
+        this.warn('Server error ' + (error || ''), error)
       }
     })
   }
@@ -132,6 +122,22 @@ export default class Socket {
     return {
       host: this.host,
       port: this.port
+    }
+  }
+
+  getSocketId = (socket) => {
+    return (socket && socket.id) ? socket.id : '?'
+  }
+
+  warn = (msg, error) => {
+    this.addLog(msg)
+    // Best to not call console warn as it sometimes crashes app
+    // See https://github.com/facebook/react-native/issues/14364
+    if (__DEV__) {
+      console.log(msg)
+      if (error) {
+        console.log(error)
+      }
     }
   }
 
@@ -173,7 +179,7 @@ export default class Socket {
 
   onImageData = (chunk, socket) => {
     if (chunk) {
-      this.addLog(`Received ${encodeURI(chunk).split(/%..|./).length - 1} bytes from socket #${socket.id}`, true)
+      this.addLog(`Received ${encodeURI(chunk).split(/%..|./).length - 1} bytes from socket #${this.getSocketId(socket)}`, true)
     }
     const startIndex = chunk.indexOf('\xFF\xD8', 0, 'binary')
     if (startIndex >= 0) {
@@ -198,8 +204,13 @@ export default class Socket {
   write = (action) => {
     if (this.isConnected) {
       this.sockets.forEach(socket => {
-        this.addLog(`Write ${action} to socket #${socket.id}`)
-        socket.write(Buffer.from([action]))
+        this.addLog(`Write ${action} to socket #${this.getSocketId(socket)}`)
+        if (socket && !socket.destroyed) {
+          const success = socket.write(Buffer.from([action]))
+          if (!success) {
+            this.warn(`Write returned false, some data was queued in memory`)
+          }
+        }
       })
     }
   }
@@ -208,7 +219,7 @@ export default class Socket {
     this.addLog(`Close server socket`)
     if (this.server) {
       this.sockets.forEach(socket => {
-        this.addLog(`Destroy socket #${socket.id}`)
+        this.addLog(`Destroy socket #${this.getSocketId(socket)}`)
         socket.destroy()
       })
       this.sockets = []

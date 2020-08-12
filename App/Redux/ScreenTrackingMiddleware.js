@@ -42,7 +42,9 @@ const screenTracking = ({ getState }) => next => (action) => {
       trackScreen({user, name: nextScreen})
       trackEvent({user, event: Events.NAVIGATED_TO, properties: {currentScreen, nextScreen}})
     } catch (e) {
-      console.warn(e)
+      if (__DEV__) {
+        console.log(e)
+      }
     }
   }
   return result

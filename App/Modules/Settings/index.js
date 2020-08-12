@@ -46,7 +46,11 @@ export class SettingsContainer extends Component {
     Linking.canOpenURL(mailtoURL)
       .then((supported) => {
         if (supported) {
-          return Linking.openURL(mailtoURL).catch((error) => { console.warn(error) })
+          return Linking.openURL(mailtoURL).catch((error) => {
+            if (__DEV__) {
+              console.log(error)
+            }
+          })
         }
       })
   }
@@ -65,7 +69,11 @@ export class SettingsContainer extends Component {
     Linking.canOpenURL(mailtoURL)
       .then((supported) => {
         if (supported) {
-          return Linking.openURL(mailtoURL).catch((error) => { console.warn(error) })
+          return Linking.openURL(mailtoURL).catch((error) => {
+            if (__DEV__) {
+              console.log(error)
+            }
+          })
         }
       })
   }

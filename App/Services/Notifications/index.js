@@ -65,8 +65,10 @@ export const configurePushNotifications = (credentials) => {
             })
             .catch(error => {
               // User has rejected notification permissions
-              console.log('User has rejected notification permissions')
-              console.warn(error)
+              if (__DEV__) {
+                console.log('User has rejected notification permissions')
+                console.log(error)
+              }
             })
         }
       })

@@ -71,7 +71,7 @@ export default class Mark {
     if (!this.lastCmdSentAt) {
       return true
     }
-    return (new Date().getTime() - this.lastCmdSentAt) >= 50
+    return (new Date().getTime() - this.lastCmdSentAt) >= 100
   }
 
   sendCommand = async (cmd) => {

@@ -33,8 +33,10 @@ export const resetUser = () => {
 }
 
 export const captureAPIError = (message, errorResponse) => {
-  console.warn(message)
-  console.warn(errorResponse)
+  if (__DEV__) {
+    console.warn(message)
+    console.log(errorResponse)
+  }
 
   if (!__DEV__) {
     const extra = (errorResponse)
@@ -48,8 +50,10 @@ export const captureAPIError = (message, errorResponse) => {
 }
 
 export const captureException = (message, e) => {
-  console.error(message)
-  console.error(e)
+  if (__DEV__) {
+    console.warn(message)
+    console.log(e)
+  }
 
   if (!__DEV__) {
     const extra = { message }

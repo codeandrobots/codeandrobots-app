@@ -9330,10 +9330,9 @@ react-native-tab-view@^0.0.74:
   dependencies:
     prop-types "^15.6.0"
 
-react-native-tcp-socket@1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/react-native-tcp-socket/-/react-native-tcp-socket-1.2.2.tgz#616c7306a22604e921f7744c95e0d086c28c4b75"
-  integrity sha512-31xyDbItbqb1alGV3eFhpX8iiU/VUZsAdqPbXl64EgR7EDak8RsA3BzW9m19Dsnxql0PEzSJ+C0PJhBieGt2cQ==
+"react-native-tcp-socket@git+https://github.com/chico/react-native-tcp-socket.git#v1.2.3":
+  version "1.2.3"
+  resolved "git+https://github.com/chico/react-native-tcp-socket.git#212f7c239019f4b1e284389320b6c6754e2c0c66"
   dependencies:
     buffer "^5.4.3"
     events "^3.0.0"
