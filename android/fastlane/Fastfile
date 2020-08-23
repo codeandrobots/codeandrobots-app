@@ -36,6 +36,9 @@ platform :android do
   lane :deploy do
     ENV["ENVFILE"] = ".env.production"
     gradle(task: "clean assembleRelease")
-    upload_to_play_store
+    upload_to_play_store(
+      package_name: 'com.codeandrobots',
+      track: 'internal'
+    )
   end
 end
