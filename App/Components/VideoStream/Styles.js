@@ -21,5 +21,19 @@ export default StyleSheet.create({
   videoPlayer_small: {
     width: 240,
     height: 320
+  },
+  videoPlayerLoading: {
+    position: 'absolute',
+    zIndex: 9999,
+    width: Metrics.screenWidth - (Metrics.unit * 10),
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  videoPlayerLoading_small: {
+    width: 240
+  },
+  videoPlayerLoadingText: {
+    ...Styles.text,
+    color: Colors.primary
   }
 })

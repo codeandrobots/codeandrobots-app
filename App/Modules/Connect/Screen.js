@@ -35,6 +35,7 @@ export default class Screen extends Component {
     password: PropTypes.string,
     host: PropTypes.string,
     port: PropTypes.number,
+    keyboardOpen: PropTypes.bool.isRequired,
     onEnableBluetooth: PropTypes.func.isRequired,
     onScan: PropTypes.func.isRequired,
     onConnect: PropTypes.func.isRequired,
@@ -100,11 +101,12 @@ export default class Screen extends Component {
       host,
       port,
       onChangeText,
-      onAddNetwork } = this.props
+      onAddNetwork,
+      keyboardOpen } = this.props
 
     return (
       <Container>
-        <Footer style={{paddingTop: 0}}>
+        {!keyboardOpen && <Footer style={{paddingTop: 0}}>
           <Card
             title='ADD WIFI NETWORK'
             text='Add wifi network that this device is connected to'
@@ -112,7 +114,7 @@ export default class Screen extends Component {
             textAlign='left'
             onPress={onAddNetwork}
             style={{textView: {marginBottom: Metrics.unit * 2}}} />
-        </Footer>
+        </Footer>}
         <View style={s.formView}>
           <Text style={s.formTitle}>Add network</Text>
           <View style={s.form}>

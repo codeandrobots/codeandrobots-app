@@ -53,8 +53,13 @@ export default class Socket {
 
   connect = (host, port, onConnect = () => {}, onConnectError = () => {}) => {
     if (this.server) {
-      this.addLog(`Already connected to ${this.host}:${this.port}`)
-      return
+      if (host === this.host && port === this.port) {
+        this.addLog(`Already connected to ${this.host}:${this.port}`)
+        onConnect({host, port})
+        return
+      } else {
+        this.close()
+      }
     }
     this.addLog(`Connect ${host}:${port}`)
     this.server = TcpSocket.createServer((socket) => {

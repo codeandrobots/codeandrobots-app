@@ -41,6 +41,7 @@ describe('Connect', () => {
         showIsYourDeviceSupportedModal={false}
         instructions={instructions}
         networkAdded={false}
+        keyboardOpen={false}
         {...onProps} />)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
@@ -56,6 +57,7 @@ describe('Connect', () => {
         showIsYourDeviceSupportedModal={false}
         instructions={instructions}
         networkAdded={false}
+        keyboardOpen={false}
         {...onProps} />)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
@@ -71,6 +73,7 @@ describe('Connect', () => {
         showIsYourDeviceSupportedModal={false}
         instructions={instructions}
         networkAdded={false}
+        keyboardOpen={false}
         {...onProps} />)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
@@ -86,6 +89,7 @@ describe('Connect', () => {
         showIsYourDeviceSupportedModal={false}
         instructions={instructions}
         networkAdded={false}
+        keyboardOpen={false}
         {...onProps} />)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
@@ -101,6 +105,7 @@ describe('Connect', () => {
         showIsYourDeviceSupportedModal={false}
         instructions={instructions}
         networkAdded={false}
+        keyboardOpen={false}
         {...onProps} />)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
@@ -117,6 +122,7 @@ describe('Connect', () => {
         showIsYourDeviceSupportedModal={false}
         instructions={instructions}
         networkAdded={false}
+        keyboardOpen={false}
         {...onProps} />)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
@@ -133,6 +139,7 @@ describe('Connect', () => {
         showIsYourDeviceSupportedModal={false}
         instructions={instructions}
         networkAdded={false}
+        keyboardOpen={false}
         {...onProps} />)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
@@ -153,6 +160,7 @@ describe('Connect', () => {
         password={'TestPassword'}
         host={'TestHost'}
         port={1234}
+        keyboardOpen={false}
         {...onProps} />)
     expect(toJson(wrapper)).toMatchSnapshot()
   })

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Alert, Linking } from 'react-native'
+import { Keyboard, Alert, Linking } from 'react-native'
 import { connect } from 'react-redux'
 import Config from 'react-native-config'
 
@@ -7,12 +7,22 @@ import Client, { setRobot } from 'App/Services/Client'
 import Bluetooth from 'App/Services/Bluetooth'
 import WebSocket from 'App/Services/WebSocket'
 import Socket from 'App/Services/Socket'
+import { NavButton } from 'App/Components'
 import { getSSID, ipAddress, isSimulator } from 'App/Services/Properties'
 import { notPossibleInSimulator } from 'App/Services/Alerts'
 
 import Screen from './Screen'
 
 export class ConnectContainer extends Component {
+  static navigationOptions = ({ navigation }) => {
+    const { params = {} } = navigation.state
+    if (params.headerRight) {
+      return { headerRight: params.headerRight }
+    } else {
+      return { headerRight: null }
+    }
+  }
+
   constructor (props) {
     super(props)
     this.client = new Client()
@@ -34,7 +44,8 @@ export class ConnectContainer extends Component {
       ssid: null,
       password: null,
       host: null,
-      port: null
+      port: null,
+      keyboardOpen: false
     }
   }
 
@@ -50,6 +61,9 @@ export class ConnectContainer extends Component {
     this.props.navigation.setParams({
       title: (config != null) ? `Connect ${config.name}` : 'Connect'}
     )
+
+    this.addListeners()
+
     const connectTo = (robot)
       ? (robot === 'simulator')
         ? 'simulator'
@@ -81,6 +95,40 @@ export class ConnectContainer extends Component {
       ssid,
       password
     })
+  }
+
+  componentDidUpdate (prevProps, prevState) {
+    const { keyboardOpen } = this.state
+    if (prevState.keyboardOpen !== keyboardOpen) {
+      const headerRight = (keyboardOpen)
+        ? <NavButton onPress={this.onAddNetwork} text='Add' />
+        : null
+      this.props.navigation.setParams({ headerRight })
+    }
+  }
+
+  componentWillUnmount () {
+    this.removeListeners()
+  }
+
+  setKeyboardOpen = keyboardOpen => () => {
+    this.setState({ keyboardOpen })
+  }
+
+  addListeners = () => {
+    this.keyboardShowListener = Keyboard.addListener(
+      'keyboardDidShow',
+      this.setKeyboardOpen(true)
+    )
+    this.keyboardHideListener = Keyboard.addListener(
+      'keyboardDidHide',
+      this.setKeyboardOpen(false)
+    )
+  }
+
+  removeListeners = () => {
+    this.keyboardHideListener && this.keyboardHideListener.remove()
+    this.keyboardShowListener && this.keyboardShowListener.remove()
   }
 
   // TODO Better sorting of bluetooth devices
@@ -272,7 +320,8 @@ export class ConnectContainer extends Component {
       password,
       host,
       port,
-      showIsYourDeviceSupportedModal} = this.state
+      showIsYourDeviceSupportedModal,
+      keyboardOpen } = this.state
     return (
       <Screen
         ref={(ref) => {
@@ -308,6 +357,7 @@ export class ConnectContainer extends Component {
         onHideIsYourDeviceSupportedModal={this.onHideIsYourDeviceSupportedModal}
         onChangeText={this.onChangeText}
         onAddNetwork={this.onAddNetwork}
+        keyboardOpen={keyboardOpen}
       />
     )
   }
