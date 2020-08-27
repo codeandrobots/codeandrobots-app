@@ -35,7 +35,7 @@ platform :android do
   desc "Deploy a new version to the Google Play"
   lane :deploy do
     ENV["ENVFILE"] = ".env.production"
-    gradle(task: "clean assembleRelease")
+    gradle(task: "clean assembleProductionRelease")
     upload_to_play_store(
       package_name: 'com.codeandrobots',
       track: 'internal'
