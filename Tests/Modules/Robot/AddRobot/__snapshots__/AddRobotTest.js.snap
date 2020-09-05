@@ -2,37 +2,32 @@
 
 exports[`AddRobot Component renders correctly 1`] = `
 <Container>
-  <ScrollView>
-    <Card
-      image={
-        Object {
-          "process": [Function],
-        }
-      }
-      style={
-        Object {
-          "textView": Object {
-            "marginBottom": 0,
-          },
-        }
-      }
-      text="Let’s see if your robot has what it takes."
-      textAlign="left"
-      title="Custom robot"
-    />
-    <Separator />
-  </ScrollView>
-  <Footer
+  <View
     style={
       Object {
-        "paddingTop": 34,
+        "margin": 16,
       }
     }
   >
-    <Card
-      button="Add Robot"
-      onPress={[Function]}
-    />
-  </Footer>
+    <View
+      style={
+        Object {
+          "marginVertical": 8,
+        }
+      }
+    >
+      <TextInput
+        name="Robot 1"
+        onChangeText={[Function]}
+        placeholder="Robot 1"
+        style={
+          Object {
+            "marginVertical": 4,
+          }
+        }
+        value="Robot 1"
+      />
+    </View>
+  </View>
 </Container>
 `;

@@ -16,6 +16,7 @@ import {
   WhichRobot,
   BuildRobot,
   ConnectRobot,
+  CustomRobot,
   AddRobot,
   Onboarding
 } from 'App/Modules'
@@ -123,6 +124,12 @@ export default {
   ConnectRobotScreen: {
     screen: ConnectRobot,
     navigationOptions: dynamicTitleNavigationOptions
+  },
+  CustomRobotScreen: {
+    screen: CustomRobot,
+    navigationOptions: ({navigation}) => ({
+      title: 'Custom robot'
+    })
   },
   AddRobotScreen: {
     screen: AddRobot,

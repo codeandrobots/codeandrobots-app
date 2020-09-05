@@ -2,17 +2,21 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 
-import Screen from 'App/Modules/Robot/AddRobot/Screen'
+import { Images } from 'App/Themes'
 
-describe('AddRobot', () => {
+import Screen from 'App/Modules/Robot/CustomRobot/Screen'
+
+describe('CustomRobot', () => {
   let wrapper
 
   beforeEach(() => {
     wrapper = shallow(
       <Screen
         navigation={{navigate: () => {}}}
-        name={'Robot 1'}
-        onChangeText={() => {}} />)
+        image={Images.robots.custom_robot}
+        title={'Custom robot'}
+        text={'Let’s see if your robot has what it takes.'}
+        onAddPress={() => {}} />)
   })
 
   it('Component renders correctly', () => {
