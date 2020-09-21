@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SetupRobotConnection Component renders correctly 1`] = `
+<Container>
+  <OptionListItem
+    onPress={[Function]}
+    selected={true}
+    title="Bluetooth"
+    value="bluetooth"
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "center",
+        "marginVertical": 16,
+        "width": "100%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#9B9B9B",
+          "fontFamily": "Roboto-Medium",
+          "fontSize": 16,
+          "textAlign": "center",
+        }
+      }
+    >
+      Wifi support coming soon
+    </Text>
+  </View>
+</Container>
+`;

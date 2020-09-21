@@ -8,6 +8,7 @@ import {
   SquareListItem,
   CompactListItem,
   FeaturedListItem,
+  OptionListItem,
   StatListItem,
   CardListItem
 } from '../ListItems'
@@ -41,11 +42,20 @@ storiesOf('ListItem', module)
   .add('Compact Disabled', () => (
     <CompactListItem icon='lock' title='Level 2 (Locked)' disabled onPress={() => {}} />
   ))
+  .add('Compact With Subtitle', () => (
+    <CompactListItem icon='circle-o' title='Connection' subtitle='bluetooth' onPress={() => {}} />
+  ))
   .add('Featured', () => (
     <FeaturedListItem image={Images.featured.led} title='Blink' onPress={() => {}} />
   ))
   .add('Featured Disabled', () => (
     <FeaturedListItem icon='lock' title='Pro Level' disabled onPress={() => {}} />
+  ))
+  .add('Option', () => (
+    <OptionListItem title='Option 1' value='1' selected onPress={() => {}} />
+  ))
+  .add('Option Unselected', () => (
+    <OptionListItem title='Option 2' value='2' onPress={() => {}} />
   ))
   .add('Stat', () => (
     <StatListItem icon='bluetooth' title='bluetooth' value='Connected' />

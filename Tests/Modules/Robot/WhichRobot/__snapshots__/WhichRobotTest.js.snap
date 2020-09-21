@@ -58,8 +58,8 @@ exports[`WhichRobot Component renders correctly 1`] = `
         }
       }
       onPress={[Function]}
-      text="No robot, no problem, simulator to the rescue"
-      title="Robot Simulator"
+      text="Let’s see if your robot has what it takes"
+      title="Custom Robot"
     />
     <CardListItem
       image={
@@ -68,8 +68,8 @@ exports[`WhichRobot Component renders correctly 1`] = `
         }
       }
       onPress={[Function]}
-      text="Let’s see if your robot has what it takes"
-      title="Custom Robot"
+      text="No robot, no problem, simulator to the rescue"
+      title="Robot Simulator"
     />
   </List>
   <Footer>

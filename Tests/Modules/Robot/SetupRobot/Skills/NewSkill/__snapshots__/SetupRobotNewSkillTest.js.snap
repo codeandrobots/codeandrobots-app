@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SetupRobotNewSkill Component renders correctly 1`] = `
+<Container>
+  <View
+    style={
+      Object {
+        "margin": 16,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#354052",
+          "fontFamily": "Roboto-Medium",
+          "fontSize": 18,
+        }
+      }
+    >
+      Name
+    </Text>
+    <View
+      style={
+        Object {
+          "marginVertical": 8,
+        }
+      }
+    >
+      <TextInput
+        name="Dance"
+        onChangeText={[Function]}
+        style={
+          Object {
+            "marginVertical": 4,
+          }
+        }
+        value="Dance"
+      />
+      <Text
+        style={
+          Object {
+            "color": "#354052",
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 18,
+          }
+        }
+      >
+        Bluetooth command
+      </Text>
+      <TextInput
+        name="D 1"
+        onChangeText={[Function]}
+        style={
+          Object {
+            "marginVertical": 4,
+          }
+        }
+        value="D 1"
+      />
+    </View>
+  </View>
+</Container>
+`;

@@ -9,10 +9,13 @@ import {
   Card,
   Link,
   Footer,
-  Links } from 'App/Components'
+  Links,
+  List,
+  CompactListItem } from 'App/Components'
 
 export default class ConnectRobotScreen extends Component {
   static propTypes = {
+    type: PropTypes.string,
     image: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
     video: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
     title: PropTypes.string.isRequired,
@@ -27,12 +30,14 @@ export default class ConnectRobotScreen extends Component {
 
   render () {
     const {
+      type,
       image,
       video,
       title,
       text,
       links,
       onLinkPress,
+      onSetupPress,
       onConnectPress
     } = this.props
 
@@ -74,6 +79,11 @@ export default class ConnectRobotScreen extends Component {
                 )
               })}
             </Links>
+          }
+          {type === 'custom' &&
+            <List style={{marginHorizontal: Metrics.unit}}>
+              <CompactListItem title='Setup' onPress={onSetupPress} />
+            </List>
           }
         </ScrollView>
         <Footer style={{ paddingTop: 34 }}>

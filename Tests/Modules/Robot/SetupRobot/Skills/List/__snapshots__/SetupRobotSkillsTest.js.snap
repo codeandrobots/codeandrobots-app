@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SetupRobotSkills Component renders correctly 1`] = `
+<Container>
+  <CompactListItem
+    key="Skills"
+    onPress={[Function]}
+    subtitle="0"
+    title="Skills"
+  />
+  <Footer
+    style={
+      Object {
+        "paddingTop": 34,
+      }
+    }
+  >
+    <Card
+      button="Add"
+      onPress={[Function]}
+    />
+  </Footer>
+</Container>
+`;

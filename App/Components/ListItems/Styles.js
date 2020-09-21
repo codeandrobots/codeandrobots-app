@@ -89,8 +89,8 @@ export default StyleSheet.create({
     margin: Metrics.unit
   },
   imageView_card: {
-    maxWidth: 165,
-    maxHeight: 112,
+    maxWidth: 118,
+    maxHeight: 80,
     padding: 40,
     justifyContent: 'center',
     alignItems: 'center',
@@ -109,8 +109,8 @@ export default StyleSheet.create({
     maxHeight: 55
   },
   image_card: {
-    maxWidth: 165,
-    maxHeight: 112,
+    maxWidth: 110,
+    maxHeight: 75,
     resizeMode: 'contain'
   },
   image_compact: {
@@ -142,6 +142,11 @@ export default StyleSheet.create({
   },
   text_card: {
     ...Styles.text
+  },
+  text_subtitle: {
+    ...Styles.text,
+    marginLeft: Metrics.unit,
+    color: Colors.grey
   },
   title_card: {
     ...Styles.text,

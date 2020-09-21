@@ -1,42 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AddRobot Component renders correctly 1`] = `
-<Container>
-  <ScrollView>
-    <Card
-      image={
-        Object {
-          "process": [Function],
-        }
-      }
-      style={
-        Object {
-          "textView": Object {
-            "marginBottom": 0,
-          },
-        }
-      }
-      text="Let’s see if your robot has what it takes."
-      textAlign="left"
-      title="Custom robot"
-    />
-    <Separator />
-  </ScrollView>
-  <Footer
-    style={
-      Object {
-        "paddingTop": 34,
-      }
-    }
-  >
-    <Card
-      button="Add Robot"
-      onPress={[Function]}
-    />
-  </Footer>
-</Container>
-`;
-
 exports[`CustomRobot Component renders correctly 1`] = `
 <Container>
   <ScrollView>

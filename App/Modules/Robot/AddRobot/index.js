@@ -4,7 +4,6 @@ import { connect } from 'react-redux'
 import { NavButton } from 'App/Components'
 import { RobotsActions } from 'App/Modules/Robot'
 import AddRobotScreen from './Screen'
-import config from './config'
 
 export class AddRobotContainer extends Component {
   static navigationOptions = ({ navigation }) => {
@@ -37,14 +36,9 @@ export class AddRobotContainer extends Component {
     if (name.trim().length < 1) {
       return
     }
-    this.props.addRobot({
-      id: 'test', // TODO fix
-      ...config,
-      name: name
-    })
 
-    // TODO fix, after which robot then navigate to connect screen
-    this.props.navigation.navigate('WhichRobotScreen', { hideBack: true })
+    const config = { name }
+    this.props.navigation.navigate('SetupRobotScreen', { config })
   }
 
   render () {

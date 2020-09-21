@@ -18,6 +18,15 @@ import {
   ConnectRobot,
   CustomRobot,
   AddRobot,
+  SetupRobot,
+  SetupRobotConnection,
+  SetupRobotMoves,
+  SetupRobotMove,
+  SetupRobotSkills,
+  SetupRobotSkill,
+  SetupRobotNewSkillCategory,
+  SetupRobotNewSkill,
+  SetupRobotUpdateSkill,
   Onboarding
 } from 'App/Modules'
 import {
@@ -136,6 +145,54 @@ export default {
     navigationOptions: ({navigation}) => ({
       title: 'Add robot'
     })
+  },
+  SetupRobotScreen: {
+    screen: SetupRobot,
+    navigationOptions: ({navigation}) => ({
+      title: 'Setup'
+    })
+  },
+  SetupRobotConnectionScreen: {
+    screen: SetupRobotConnection,
+    navigationOptions: ({navigation}) => ({
+      title: 'Connection'
+    })
+  },
+  SetupRobotMovesScreen: {
+    screen: SetupRobotMoves,
+    navigationOptions: ({navigation}) => ({
+      title: 'Moves'
+    })
+  },
+  SetupRobotMoveScreen: {
+    screen: SetupRobotMove,
+    navigationOptions: dynamicTitleNavigationOptions
+  },
+  SetupRobotSkillsScreen: {
+    screen: SetupRobotSkills,
+    navigationOptions: ({navigation}) => ({
+      title: 'Commands'
+    })
+  },
+  SetupRobotSkillScreen: {
+    screen: SetupRobotSkill,
+    navigationOptions: dynamicTitleNavigationOptions
+  },
+  SetupRobotNewSkillCategoryScreen: {
+    screen: SetupRobotNewSkillCategory,
+    navigationOptions: ({navigation}) => ({
+      title: 'Add command category'
+    })
+  },
+  SetupRobotNewSkillScreen: {
+    screen: SetupRobotNewSkill,
+    navigationOptions: ({navigation}) => ({
+      title: 'Add command'
+    })
+  },
+  SetupRobotUpdateSkillScreen: {
+    screen: SetupRobotUpdateSkill,
+    navigationOptions: dynamicTitleNavigationOptions
   },
   OnboardingScreen: {
     screen: Onboarding,

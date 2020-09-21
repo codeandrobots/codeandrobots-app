@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SetupRobotMoves Component renders correctly 1`] = `
+<Container>
+  <CompactListItem
+    key="stop-M 0"
+    onPress={[Function]}
+    subtitle="M 0"
+    title="Stop"
+  />
+  <CompactListItem
+    key="forwards-M 1"
+    onPress={[Function]}
+    subtitle="M 1"
+    title="Forwards"
+  />
+  <CompactListItem
+    key="back-M 2"
+    onPress={[Function]}
+    subtitle="M 2"
+    title="Back"
+  />
+  <CompactListItem
+    key="left-M 3"
+    onPress={[Function]}
+    subtitle="M 3"
+    title="Left"
+  />
+  <CompactListItem
+    key="right-M 4"
+    onPress={[Function]}
+    subtitle="M 4"
+    title="Right"
+  />
+</Container>
+`;

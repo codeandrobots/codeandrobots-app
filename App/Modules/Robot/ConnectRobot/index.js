@@ -42,6 +42,11 @@ export class ConnectRobotContainer extends Component {
     })
   }
 
+  onSetupPress = () => {
+    const { config } = this.state
+    this.props.navigation.navigate('SetupRobotScreen', { config, goBackOnDone: true })
+  }
+
   onLinkPress = (link) => {
     this.props.navigation.navigate('WebScreen', { source: link.url, title: link.title })
   }
@@ -57,10 +62,12 @@ export class ConnectRobotContainer extends Component {
         ref={(ref) => {
           this.screen = ref
         }}
+        type={config.type}
         image={config.image}
         title={config.name}
         text={config.description}
         links={config.links}
+        onSetupPress={this.onSetupPress}
         onLinkPress={this.onLinkPress}
         onConnectPress={this.onConnectPress}
         {...this.props}
