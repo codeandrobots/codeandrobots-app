@@ -9,7 +9,7 @@ import Nybble from './Nybble'
 import Custom from './Custom'
 import Mark from './Mark'
 
-const robot = { name: null }
+const robot = { name: null, config: null }
 
 const simulator = new Simulator()
 const otto = new Otto()
@@ -17,9 +17,10 @@ const nybble = new Nybble()
 const custom = new Custom()
 const mark = new Mark()
 
-export const setRobot = async (robotName) => {
+export const setRobot = async (robotName, robotConfig) => {
   if (robot.name !== robotName) {
     robot.name = robotName
+    robot.config = robotConfig
     const connectedToBluetooth = await isConnectedToBluetooth()
     if (connectedToBluetooth) {
       // Robot changed so best to disconnect
@@ -55,7 +56,7 @@ export default class Client {
       return mark
     } else if (robot.name === 'simulator') {
       return simulator
-    } else if (robot.name === 'test') {
+    } else if (robot.config && robot.config.type === 'custom') {
       return custom
     } else {
       // Get client based on connection if possible

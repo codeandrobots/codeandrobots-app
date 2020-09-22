@@ -43,7 +43,7 @@ export class ConnectContainer extends Component {
     const robot = state && state.params && state.params.robot
     const robotConfig = state && state.params && state.params.robotConfig
     if (robot) {
-      await setRobot(robot)
+      await setRobot(robot, robotConfig)
       if (robotConfig) {
         // Set client config but only generally needed for custom robots
         await this.client.setConfig(robotConfig)

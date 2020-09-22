@@ -36,7 +36,7 @@ export class SetupRobotSkillContainer extends Component {
   }
 
   onSkillPress = (command, value) => {
-    this.props.navigation.navigate('SetupRobotUpdateSkillScreen', {
+    this.props.navigation.navigate('SetupRobotEditSkillScreen', {
       command,
       value,
       onChange: this.onChangeSkill

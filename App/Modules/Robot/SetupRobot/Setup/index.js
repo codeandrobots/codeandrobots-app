@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import uuid from 'react-native-uuid'
 
 import { NavButton } from 'App/Components'
 import { RobotsActions } from 'App/Modules/Robot'
@@ -29,7 +30,7 @@ export class SetupRobotContainer extends Component {
     this.setState({
       setup: {
         ...JSON.parse(JSON.stringify(defaultConfig)),
-        ...config
+        ...JSON.parse(JSON.stringify(config))
       }
     })
 
@@ -39,12 +40,17 @@ export class SetupRobotContainer extends Component {
 
   onDonePress = () => {
     const { setup } = this.state
-    this.props.addRobot({
-      id: 'test', // TODO fix
-      ...setup
-    })
-
     const { state } = this.props.navigation
+    const config = state && state.params && state.params.config
+    if (config.id) {
+      this.props.updateRobot(setup)
+    } else {
+      this.props.addRobot({
+        id: uuid.v4(),
+        ...setup
+      })
+    }
+
     const goBackOnDone = state && state.params && state.params.goBackOnDone
     if (goBackOnDone) {
       this.props.navigation.goBack()
@@ -105,7 +111,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addRobot: (robot) => { dispatch(RobotsActions.saveRobot(robot)) }
+    addRobot: (robot) => { dispatch(RobotsActions.saveRobot(robot)) },
+    updateRobot: (robot) => { dispatch(RobotsActions.updateRobot(robot)) }
   }
 }
 

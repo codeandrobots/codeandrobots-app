@@ -18,6 +18,7 @@ import {
   ConnectRobot,
   CustomRobot,
   AddRobot,
+  EditRobotName,
   SetupRobot,
   SetupRobotConnection,
   SetupRobotMoves,
@@ -26,7 +27,7 @@ import {
   SetupRobotSkill,
   SetupRobotNewSkillCategory,
   SetupRobotNewSkill,
-  SetupRobotUpdateSkill,
+  SetupRobotEditSkill,
   Onboarding
 } from 'App/Modules'
 import {
@@ -146,6 +147,10 @@ export default {
       title: 'Add robot'
     })
   },
+  EditRobotNameScreen: {
+    screen: EditRobotName,
+    navigationOptions: dynamicTitleNavigationOptions
+  },
   SetupRobotScreen: {
     screen: SetupRobot,
     navigationOptions: ({navigation}) => ({
@@ -190,8 +195,8 @@ export default {
       title: 'Add command'
     })
   },
-  SetupRobotUpdateSkillScreen: {
-    screen: SetupRobotUpdateSkill,
+  SetupRobotEditSkillScreen: {
+    screen: SetupRobotEditSkill,
     navigationOptions: dynamicTitleNavigationOptions
   },
   OnboardingScreen: {

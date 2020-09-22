@@ -37,9 +37,14 @@ export default class ConnectRobotScreen extends Component {
       text,
       links,
       onLinkPress,
+      onNamePress,
       onSetupPress,
       onConnectPress
     } = this.props
+
+    const isCustomRobot = (type === 'custom')
+
+    const cardTitle = (!isCustomRobot) ? title : null
 
     return (
       <Container>
@@ -53,10 +58,10 @@ export default class ConnectRobotScreen extends Component {
             textAlign='left'
             image={image}
             video={video}
-            title={title}
+            title={cardTitle}
             text={text}
           />
-          <Separator />
+          {!isCustomRobot && <Separator />}
           {links &&
             <Links>
               {links.map((link, i) => {
@@ -80,8 +85,9 @@ export default class ConnectRobotScreen extends Component {
               })}
             </Links>
           }
-          {type === 'custom' &&
+          {isCustomRobot &&
             <List style={{marginHorizontal: Metrics.unit}}>
+              <CompactListItem title={title} onPress={onNamePress} />
               <CompactListItem title='Setup' onPress={onSetupPress} />
             </List>
           }

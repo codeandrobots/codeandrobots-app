@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SetupRobotUpdateSkill Component renders correctly 1`] = `
+exports[`SetupRobotEditSkill Component renders correctly 1`] = `
 <Container>
   <View
     style={

@@ -18,12 +18,28 @@ export class ConnectRobotContainer extends Component {
     const { state } = this.props.navigation
     const robot = state && state.params && state.params.robot
     const robotConfig = state && state.params && state.params.robotConfig
+    this.initRobot(robot, robotConfig)
+  }
+
+  componentWillReceiveProps (nextProps) {
+    const { state } = this.props.navigation
+    const robot = state && state.params && state.params.robot
     if (robot) {
-      await setRobot(robot)
+      if (nextProps.robots[robot] !== this.props.robots[robot]) {
+        this.initRobot(robot, nextProps.robots[robot])
+      }
+    }
+  }
+
+  initRobot = async (robot, robotConfig) => {
+    if (robot) {
+      await setRobot(robot, robotConfig)
+
       if (robotConfig) {
         // Set client config but only generally needed for custom robots
         await this.client.setConfig(robotConfig)
       }
+
       const config = await this.client.getConfig()
       this.props.navigation.setParams({title: config.name})
       this.setState({ robot, config })
@@ -40,6 +56,11 @@ export class ConnectRobotContainer extends Component {
       robot,
       onDone: this.onConnect
     })
+  }
+
+  onNamePress = () => {
+    const { config } = this.state
+    this.props.navigation.navigate('EditRobotNameScreen', { robot: config })
   }
 
   onSetupPress = () => {
@@ -67,6 +88,7 @@ export class ConnectRobotContainer extends Component {
         title={config.name}
         text={config.description}
         links={config.links}
+        onNamePress={this.onNamePress}
         onSetupPress={this.onSetupPress}
         onLinkPress={this.onLinkPress}
         onConnectPress={this.onConnectPress}
@@ -77,8 +99,8 @@ export class ConnectRobotContainer extends Component {
 }
 
 const mapStateToProps = (state) => {
-  return {
-  }
+  const { robots } = state.robots
+  return { robots }
 }
 
 const mapDispatchToProps = (dispatch) => {

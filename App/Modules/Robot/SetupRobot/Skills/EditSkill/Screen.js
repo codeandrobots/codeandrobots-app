@@ -7,7 +7,7 @@ import { capitalizeFirstLetter } from 'App/Services/TextUtils'
 
 import s from './Styles'
 
-export default class SetupRobotUpdateSkillScreen extends Component {
+export default class SetupRobotEditSkillScreen extends Component {
   static propTypes = {
     command: PropTypes.string.isRequired,
     value: PropTypes.string,

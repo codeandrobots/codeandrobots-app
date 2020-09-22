@@ -29,8 +29,7 @@ export class WhichRobotContainer extends Component {
       })
     } else if (robot === 'custom') {
       this.props.navigation.navigate('CustomRobotScreen', {
-        robot,
-        robotConfig
+        robot
         // onDone: this.onConnect // TODO
       })
     } else {

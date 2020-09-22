@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import SetupRobotUpdateSkillScreen from './Screen'
 import { capitalizeFirstLetter } from 'App/Services/TextUtils'
 
-export class SetupRobotUpdateSkillContainer extends Component {
+export class SetupRobotEditSkillContainer extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -52,4 +52,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SetupRobotUpdateSkillContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(SetupRobotEditSkillContainer)

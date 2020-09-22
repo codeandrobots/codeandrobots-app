@@ -2,9 +2,9 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 
-import Screen from 'App/Modules/Robot/SetupRobot/Skills/UpdateSkill/Screen'
+import Screen from 'App/Modules/Robot/SetupRobot/Skills/EditSkill/Screen'
 
-describe('SetupRobotUpdateSkill', () => {
+describe('SetupRobotEditSkill', () => {
   let wrapper
 
   beforeEach(() => {
