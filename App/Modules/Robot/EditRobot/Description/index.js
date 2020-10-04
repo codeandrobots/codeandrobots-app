@@ -3,9 +3,9 @@ import { connect } from 'react-redux'
 
 import { NavButton } from 'App/Components'
 import { RobotsActions } from 'App/Modules/Robot'
-import EditRobotNameScreen from './Screen'
+import EditRobotDescriptionScreen from './Screen'
 
-export class EditRobotNameContainer extends Component {
+export class EditRobotDescriptionContainer extends Component {
   static navigationOptions = ({ navigation }) => {
     const { params = {} } = navigation.state
     if (params.headerRight) {
@@ -18,28 +18,24 @@ export class EditRobotNameContainer extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      name: null
+      description: null
     }
   }
 
   componentWillMount () {
     const { state } = this.props.navigation
     const robot = state && state.params && state.params.robot
-    this.setState({ name: robot.name })
+    this.setState({ description: robot.description })
 
     const headerRight = <NavButton onPress={this.onDonePress} text='Done' />
     this.props.navigation.setParams({ headerRight })
   }
 
   onDonePress = () => {
-    const { name } = this.state
-    if (name.trim().length < 1) {
-      return
-    }
-
+    const { description } = this.state
     const { state } = this.props.navigation
     const robot = state && state.params && state.params.robot
-    this.props.updateRobot({id: robot.id, name})
+    this.props.updateRobot({id: robot.id, description})
 
     this.props.navigation.goBack()
   }
@@ -49,10 +45,10 @@ export class EditRobotNameContainer extends Component {
   }
 
   render () {
-    const { name } = this.state
+    const { description } = this.state
     return (
-      <EditRobotNameScreen
-        name={name}
+      <EditRobotDescriptionScreen
+        description={description}
         onChangeText={this.onChangeText}
         {...this.props}
       />
@@ -71,4 +67,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(EditRobotNameContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(EditRobotDescriptionContainer)

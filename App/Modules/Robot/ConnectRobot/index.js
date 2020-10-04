@@ -80,6 +80,11 @@ export class ConnectRobotContainer extends Component {
     this.props.navigation.navigate('EditRobotNameScreen', { robot: config })
   }
 
+  onDescriptionPress = () => {
+    const { config } = this.state
+    this.props.navigation.navigate('EditRobotDescriptionScreen', { robot: config })
+  }
+
   onChangePicturePress = () => {
     this.picker.open()
   }
@@ -111,6 +116,7 @@ export class ConnectRobotContainer extends Component {
         links={config.links}
         onLinkPress={this.onLinkPress}
         onNamePress={this.onNamePress}
+        onDescriptionPress={this.onDescriptionPress}
         onChangePicturePress={this.onChangePicturePress}
         onSetupPress={this.onSetupPress}
         onConnectPress={this.onConnectPress}

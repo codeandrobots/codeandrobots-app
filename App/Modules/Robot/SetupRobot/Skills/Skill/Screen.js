@@ -26,7 +26,7 @@ export default class SetupRobotSkillScreen extends Component {
         )}
         <Footer style={{ paddingTop: 34 }}>
           <Card
-            button='Add'
+            button={`Add command`}
             onPress={onAddPress}
           />
         </Footer>

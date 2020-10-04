@@ -26,6 +26,7 @@ export default class ConnectRobotScreen extends Component {
     })),
     onLinkPress: PropTypes.func.isRequired,
     onNamePress: PropTypes.func.isRequired,
+    onDescriptionPress: PropTypes.func.isRequired,
     onChangePicturePress: PropTypes.func.isRequired,
     onSetupPress: PropTypes.func.isRequired,
     onConnectPress: PropTypes.func.isRequired
@@ -41,6 +42,7 @@ export default class ConnectRobotScreen extends Component {
       links,
       onLinkPress,
       onNamePress,
+      onDescriptionPress,
       onChangePicturePress,
       onSetupPress,
       onConnectPress
@@ -49,6 +51,9 @@ export default class ConnectRobotScreen extends Component {
     const isCustomRobot = (type === 'custom')
 
     const cardTitle = (!isCustomRobot) ? title : null
+    const textTitle = (!isCustomRobot) ? text : null
+    const descriptionTitle = text && text.trim().length > 0 ? text : 'Description'
+    const onImagePress = isCustomRobot ? onChangePicturePress : null
 
     return (
       <Container>
@@ -63,7 +68,8 @@ export default class ConnectRobotScreen extends Component {
             image={image}
             video={video}
             title={cardTitle}
-            text={text}
+            text={textTitle}
+            onImagePress={onImagePress}
           />
           {!isCustomRobot && <Separator />}
           {links &&
@@ -92,6 +98,7 @@ export default class ConnectRobotScreen extends Component {
           {isCustomRobot &&
             <List style={{marginHorizontal: Metrics.unit}}>
               <CompactListItem title={title} onPress={onNamePress} />
+              <CompactListItem title={descriptionTitle} onPress={onDescriptionPress} />
               <CompactListItem title='Change picture' onPress={onChangePicturePress} />
               <CompactListItem title='Setup' onPress={onSetupPress} />
             </List>

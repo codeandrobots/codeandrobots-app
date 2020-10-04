@@ -9,6 +9,7 @@ exports[`ConnectRobot Component renders correctly 1`] = `
           "process": [Function],
         }
       }
+      onImagePress={null}
       style={
         Object {
           "textView": Object {

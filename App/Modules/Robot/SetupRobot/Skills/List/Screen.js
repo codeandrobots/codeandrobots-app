@@ -23,7 +23,7 @@ export default class SetupRobotSkillsScreen extends Component {
         )}
         <Footer style={{ paddingTop: 34 }}>
           <Card
-            button='Add'
+            button='Add category'
             onPress={onAddPress}
           />
         </Footer>

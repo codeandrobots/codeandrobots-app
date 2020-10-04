@@ -16,7 +16,7 @@ exports[`SetupRobotSkill Component renders correctly 1`] = `
     }
   >
     <Card
-      button="Add"
+      button="Add command"
       onPress={[Function]}
     />
   </Footer>

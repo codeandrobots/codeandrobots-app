@@ -19,6 +19,7 @@ import {
   CustomRobot,
   AddRobot,
   EditRobotName,
+  EditRobotDescription,
   SetupRobot,
   SetupRobotConnection,
   SetupRobotMoves,
@@ -149,6 +150,10 @@ export default {
   },
   EditRobotNameScreen: {
     screen: EditRobotName,
+    navigationOptions: dynamicTitleNavigationOptions
+  },
+  EditRobotDescriptionScreen: {
+    screen: EditRobotDescription,
     navigationOptions: dynamicTitleNavigationOptions
   },
   SetupRobotScreen: {

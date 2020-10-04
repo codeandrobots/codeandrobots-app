@@ -7,6 +7,11 @@ import { RobotsActions } from 'App/Modules/Robot'
 import SetupRobotScreen from './Screen'
 import defaultConfig from './config'
 
+const STATE_PARAMS = {
+  config: 'config',
+  goBackOnDone: 'goBackOnDone'
+}
+
 export class SetupRobotContainer extends Component {
   static navigationOptions = ({ navigation }) => {
     const { params = {} } = navigation.state
@@ -34,14 +39,23 @@ export class SetupRobotContainer extends Component {
       }
     })
 
-    const headerRight = <NavButton onPress={this.onDonePress} text='Done' />
-    this.props.navigation.setParams({ headerRight })
+    // Show Done right nav button if adding a new custom robot
+    // Note: For existing custom robots, setup changes are automatically saved
+    if (!config.id) {
+      const headerRight = <NavButton onPress={this.onDonePress} text='Done' />
+      this.props.navigation.setParams({ headerRight })
+    }
+  }
+
+  getStateParam = (key) => {
+    const { state } = this.props.navigation
+    const stateParam = state && state.params && state.params[key]
+    return stateParam
   }
 
   onDonePress = () => {
     const { setup } = this.state
-    const { state } = this.props.navigation
-    const config = state && state.params && state.params.config
+    const config = this.getStateParam(STATE_PARAMS.config)
     if (config.id) {
       this.props.updateRobot(setup)
     } else {
@@ -51,7 +65,7 @@ export class SetupRobotContainer extends Component {
       })
     }
 
-    const goBackOnDone = state && state.params && state.params.goBackOnDone
+    const goBackOnDone = this.getStateParam(STATE_PARAMS.goBackOnDone)
     if (goBackOnDone) {
       this.props.navigation.goBack()
     } else {
@@ -63,6 +77,15 @@ export class SetupRobotContainer extends Component {
   onChange = (setupChanges) => {
     this.setState({
       setup: { ...this.state.setup, ...setupChanges }
+    }, () => {
+      // TODO For existing custom robots, setup changes are automatically saved
+      // but NOT when adding a new custom robot
+      // Good idea?
+      const { setup } = this.state
+      const config = this.getStateParam(STATE_PARAMS.config)
+      if (config.id) {
+        this.props.updateRobot(setup)
+      }
     })
   }
 
