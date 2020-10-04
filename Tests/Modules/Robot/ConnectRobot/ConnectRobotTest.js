@@ -30,6 +30,9 @@ describe('ConnectRobot', () => {
         links={links}
         onLinkPress={() => {}}
         onConnectPress={() => {}}
+        onNamePress={() => {}}
+        onChangePicturePress={() => {}}
+        onSetupPress={() => {}}
         onPress={() => {}} />)
   })
 

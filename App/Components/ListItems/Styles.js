@@ -100,6 +100,21 @@ export default StyleSheet.create({
     flex: 1,
     flexDirection: 'row'
   },
+  customImageContainer_card: {
+    maxWidth: 118,
+    maxHeight: 80,
+    padding: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 1,
+    flexDirection: 'row'
+  },
+  customImageView_card: {
+    borderWidth: 1,
+    borderRadius: Metrics.unit,
+    borderColor: Colors.primary,
+    padding: Metrics.unit / 2
+  },
   videoView_card: {
     maxWidth: 165,
     maxHeight: 112
@@ -111,7 +126,11 @@ export default StyleSheet.create({
   image_card: {
     maxWidth: 110,
     maxHeight: 75,
-    resizeMode: 'contain'
+    resizeMode: 'contain',
+    borderRadius: Metrics.unit
+  },
+  customImage_card: {
+    borderRadius: Metrics.unit
   },
   image_compact: {
     maxWidth: 20,

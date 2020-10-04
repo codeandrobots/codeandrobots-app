@@ -36,17 +36,26 @@ export default class Card extends Component {
 
   async componentDidMount () {
     this._isMounted = true
-    const { image } = this.props
+    this.getAndSetImageSize(this.props.image)
+  }
+
+  async componentWillReceiveProps (nextProps) {
+    if (nextProps.image && this.props.image && nextProps.image.uri !== this.props.image.uri) {
+      this.getAndSetImageSize(nextProps.image)
+    }
+  }
+
+  componentWillUnmount () {
+    this._isMounted = false
+  }
+
+  getAndSetImageSize = async (image) => {
     if (image && image.uri) {
       const { width, height } = await getImageSize(image.uri)
       if (this._isMounted) {
         this.setState({ imageWidth: width, imageHeight: height })
       }
     }
-  }
-
-  componentWillUnmount () {
-    this._isMounted = false
   }
 
   render () {
@@ -81,7 +90,7 @@ export default class Card extends Component {
         )}
         {!qr && image && (
           <View style={s.imageView}>
-            <Image style={imageStyle} source={image} />
+            <Image style={[s.image, imageStyle]} source={image} />
           </View>
         )}
         {!qr && !image && video && (

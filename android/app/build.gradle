@@ -168,6 +168,7 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-image-picker')
     implementation project(':react-native-svg')
     implementation project(':react-native-network-info')
     implementation project(':react-native-tcp-socket')

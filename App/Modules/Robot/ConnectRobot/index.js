@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import Client, { setRobot } from 'App/Services/Client'
+import { RobotsActions } from 'App/Modules/Robot'
+import ImagePicker from 'App/Services/ImagePicker'
 import ConnectRobotScreen from './Screen'
 
 export class ConnectRobotContainer extends Component {
@@ -10,7 +12,8 @@ export class ConnectRobotContainer extends Component {
     this.client = new Client()
     this.state = {
       robot: null,
-      config: null
+      config: null,
+      image: null
     }
   }
 
@@ -19,6 +22,20 @@ export class ConnectRobotContainer extends Component {
     const robot = state && state.params && state.params.robot
     const robotConfig = state && state.params && state.params.robotConfig
     this.initRobot(robot, robotConfig)
+
+    this.picker = new ImagePicker({
+      onPick: data => {
+        this.setState({ image: {uri: data.uri} })
+      },
+      onUpload: url => {
+        this.props.updateRobot({
+          id: robotConfig.id,
+          image: {
+            uri: url
+          }
+        })
+      }
+    })
   }
 
   componentWillReceiveProps (nextProps) {
@@ -63,6 +80,10 @@ export class ConnectRobotContainer extends Component {
     this.props.navigation.navigate('EditRobotNameScreen', { robot: config })
   }
 
+  onChangePicturePress = () => {
+    this.picker.open()
+  }
+
   onSetupPress = () => {
     const { config } = this.state
     this.props.navigation.navigate('SetupRobotScreen', { config, goBackOnDone: true })
@@ -73,7 +94,7 @@ export class ConnectRobotContainer extends Component {
   }
 
   render () {
-    const { robot, config } = this.state
+    const { robot, config, image } = this.state
     if (!robot || !config) {
       return null
     }
@@ -84,13 +105,14 @@ export class ConnectRobotContainer extends Component {
           this.screen = ref
         }}
         type={config.type}
-        image={config.image}
+        image={image !== null ? image : config.image}
         title={config.name}
         text={config.description}
         links={config.links}
-        onNamePress={this.onNamePress}
-        onSetupPress={this.onSetupPress}
         onLinkPress={this.onLinkPress}
+        onNamePress={this.onNamePress}
+        onChangePicturePress={this.onChangePicturePress}
+        onSetupPress={this.onSetupPress}
         onConnectPress={this.onConnectPress}
         {...this.props}
       />
@@ -105,6 +127,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    updateRobot: (robot) => { dispatch(RobotsActions.updateRobot(robot)) }
   }
 }
 

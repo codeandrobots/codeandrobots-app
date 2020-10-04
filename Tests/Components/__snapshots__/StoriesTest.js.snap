@@ -831,6 +831,14 @@ exports[`Storyshots Card Hello 1`] = `
             "process": [Function],
           }
         }
+        style={
+          Array [
+            Object {
+              "borderRadius": 8,
+            },
+            undefined,
+          ]
+        }
       />
     </View>
     <View
@@ -1379,6 +1387,14 @@ exports[`Storyshots Carousel Dilbert 1`] = `
               Object {
                 "uri": "https://i.imgur.com/eMuml0e.png",
               }
+            }
+            style={
+              Array [
+                Object {
+                  "borderRadius": 8,
+                },
+                undefined,
+              ]
             }
           />
         </View>
@@ -6871,6 +6887,7 @@ exports[`Storyshots List Robot List 1`] = `
               }
               style={
                 Object {
+                  "borderRadius": 8,
                   "maxHeight": 75,
                   "maxWidth": 110,
                   "resizeMode": "contain",
@@ -7012,6 +7029,7 @@ exports[`Storyshots List Robot List 1`] = `
               }
               style={
                 Object {
+                  "borderRadius": 8,
                   "maxHeight": 75,
                   "maxWidth": 110,
                   "resizeMode": "contain",
@@ -7153,6 +7171,7 @@ exports[`Storyshots List Robot List 1`] = `
               }
               style={
                 Object {
+                  "borderRadius": 8,
                   "maxHeight": 75,
                   "maxWidth": 110,
                   "resizeMode": "contain",
@@ -8452,6 +8471,7 @@ exports[`Storyshots ListItem CardListItem Image 1`] = `
         }
         style={
           Object {
+            "borderRadius": 8,
             "maxHeight": 75,
             "maxWidth": 110,
             "resizeMode": "contain",
@@ -10971,6 +10991,14 @@ exports[`Storyshots Modal Is Your Device Supported 1`] = `
                   "process": [Function],
                 }
               }
+              style={
+                Array [
+                  Object {
+                    "borderRadius": 8,
+                  },
+                  undefined,
+                ]
+              }
             />
           </View>
           <View
@@ -11131,6 +11159,14 @@ exports[`Storyshots Modal Not Connected 1`] = `
                 Object {
                   "process": [Function],
                 }
+              }
+              style={
+                Array [
+                  Object {
+                    "borderRadius": 8,
+                  },
+                  undefined,
+                ]
               }
             />
           </View>
@@ -11341,6 +11377,14 @@ exports[`Storyshots Modal Not Ready 1`] = `
                 Object {
                   "process": [Function],
                 }
+              }
+              style={
+                Array [
+                  Object {
+                    "borderRadius": 8,
+                  },
+                  undefined,
+                ]
               }
             />
           </View>
@@ -11553,6 +11597,14 @@ exports[`Storyshots Modal Problems Connecting 1`] = `
                 Object {
                   "process": [Function],
                 }
+              }
+              style={
+                Array [
+                  Object {
+                    "borderRadius": 8,
+                  },
+                  undefined,
+                ]
               }
             />
           </View>

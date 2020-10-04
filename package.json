@@ -57,6 +57,7 @@
     "react-native-device-info": "0.26.3",
     "react-native-firebase": "5.2.5",
     "react-native-i18n": "1.0.0",
+    "react-native-image-picker": "0.28.1",
     "react-native-linear-gradient": "^2.5.3",
     "react-native-network-info": "^5.2.1",
     "react-native-no-flicker-image": "^1.0.2",

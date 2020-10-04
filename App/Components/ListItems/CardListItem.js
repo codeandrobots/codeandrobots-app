@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { View, Image, Text } from 'react-native'
 import PropTypes from 'prop-types'
 
-import { getImageSize } from 'App/Services/ImageUtils'
+import { getImageSize, scaleImageSize } from 'App/Services/ImageUtils'
 
 import { TouchableOpacity, Button, Icon, Video } from 'App/Components'
 
@@ -35,7 +35,20 @@ export default class CardListItem extends Component {
 
   async componentDidMount () {
     this._isMounted = true
-    const { image } = this.props
+    this.getAndSetImageSize(this.props.image)
+  }
+
+  async componentWillReceiveProps (nextProps) {
+    if (nextProps.image && this.props.image && nextProps.image.uri !== this.props.image.uri) {
+      this.getAndSetImageSize(nextProps.image)
+    }
+  }
+
+  componentWillUnmount () {
+    this._isMounted = false
+  }
+
+  getAndSetImageSize = async (image) => {
     if (image && image.uri) {
       const { width, height } = await getImageSize(image.uri)
       if (this._isMounted) {
@@ -44,11 +57,8 @@ export default class CardListItem extends Component {
     }
   }
 
-  componentWillUnmount () {
-    this._isMounted = false
-  }
-
   render () {
+    const { imageWidth, imageHeight } = this.state
     const {
       style = undefined,
       image,
@@ -65,11 +75,31 @@ export default class CardListItem extends Component {
     const titleStyle = (!disabled) ? s.title_card : [s.title_card, s.text_disabled]
     const buttonIconColor = (!disabled) ? Colors.icon_dark : Colors.icon_disabled
 
+    // maxWidth and maxHeight must match Styles.customImageContainer_card
+    const maxWidth = 118
+    const maxHeight = 80
+    const { width, height } = scaleImageSize(imageWidth, imageHeight, maxWidth, maxHeight)
+    const isCustomImage = (image && image instanceof Object && image.uri)
+
     return (
       <TouchableOpacity style={itemViewStyle} disabled={disabled} onPress={onPress}>
-        {image && (
+        {image && !isCustomImage && (
           <View style={s.imageView_card}>
             <Image style={s.image_card} source={image} />
+          </View>
+        )}
+        {image && isCustomImage && (
+          <View style={s.customImageContainer_card}>
+            {width > 0 && (
+              <View style={[s.customImageView_card, {width, height}]}>
+                <Image
+                  style={[
+                    s.customImage_card,
+                    {width: width - 9, height: height - 9}
+                  ]}
+                  source={image} />
+              </View>
+            )}
           </View>
         )}
         {!image && video && (

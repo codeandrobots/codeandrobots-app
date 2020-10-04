@@ -25,6 +25,9 @@ export default class ConnectRobotScreen extends Component {
       url: PropTypes.string.isRequired
     })),
     onLinkPress: PropTypes.func.isRequired,
+    onNamePress: PropTypes.func.isRequired,
+    onChangePicturePress: PropTypes.func.isRequired,
+    onSetupPress: PropTypes.func.isRequired,
     onConnectPress: PropTypes.func.isRequired
   }
 
@@ -38,6 +41,7 @@ export default class ConnectRobotScreen extends Component {
       links,
       onLinkPress,
       onNamePress,
+      onChangePicturePress,
       onSetupPress,
       onConnectPress
     } = this.props
@@ -88,6 +92,7 @@ export default class ConnectRobotScreen extends Component {
           {isCustomRobot &&
             <List style={{marginHorizontal: Metrics.unit}}>
               <CompactListItem title={title} onPress={onNamePress} />
+              <CompactListItem title='Change picture' onPress={onChangePicturePress} />
               <CompactListItem title='Setup' onPress={onSetupPress} />
             </List>
           }
