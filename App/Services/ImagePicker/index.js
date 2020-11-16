@@ -8,7 +8,7 @@ const CLOUDINARY_PRESET = 'fdlhzv7x'
 class ImagePicker {
   constructor ({ onPick, onUpload }) {
     this._onPickHandler = onPick || (() => {})
-    this._onUploadHandler = onUpload || (() => {})
+    this._onUploadHandler = onUpload
   }
 
   open () {
@@ -35,7 +35,10 @@ class ImagePicker {
       } else if (response.customButton) {
         // response.customButton
       } else {
-        if (this._onPickHandler(response) !== false) {
+        const pickHandlerResponse = this._onPickHandler(response)
+
+        // Only upload to cloudinary if onUpload is set & pick handler doesn't returns false
+        if (this._onUploadHandler && pickHandlerResponse !== false) {
           const uri = response.uri
           const type = response.type
           const name = response.fileName

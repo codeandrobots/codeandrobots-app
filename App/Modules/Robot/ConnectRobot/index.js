@@ -18,22 +18,25 @@ export class ConnectRobotContainer extends Component {
   }
 
   async componentWillMount () {
+    const { updateRobot } = this.props
     const { state } = this.props.navigation
     const robot = state && state.params && state.params.robot
     const robotConfig = state && state.params && state.params.robotConfig
+
     this.initRobot(robot, robotConfig)
 
+    // Note: At the moment relying on local URI instead of uploading to cloudinary
+    // If needing to enable uploading to cloudinary then add onUpload & move updateRobot to it
     this.picker = new ImagePicker({
       onPick: data => {
         this.setState({ image: {uri: data.uri} })
-      },
-      onUpload: url => {
-        this.props.updateRobot({
+        updateRobot({
           id: robotConfig.id,
           image: {
-            uri: url
+            uri: data.uri
           }
         })
+        return true
       }
     })
   }
