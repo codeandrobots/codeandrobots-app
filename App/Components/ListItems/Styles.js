@@ -113,7 +113,9 @@ export default StyleSheet.create({
     borderWidth: 1,
     borderRadius: Metrics.unit,
     borderColor: Colors.primary,
-    padding: Metrics.unit / 2
+    padding: Metrics.unit / 2,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   videoView_card: {
     maxWidth: 165,

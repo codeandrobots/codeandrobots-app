@@ -59,8 +59,12 @@ export class SetupRobotContainer extends Component {
     if (config.id) {
       this.props.updateRobot(setup)
     } else {
+      const id = uuid.v4()
+      // Use robohash to generate random robot pic
+      const image = {uri: `https://robohash.org/${id}`}
       this.props.addRobot({
-        id: uuid.v4(),
+        id,
+        image,
         ...setup
       })
     }

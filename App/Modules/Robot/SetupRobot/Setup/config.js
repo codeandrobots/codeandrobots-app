@@ -1,8 +1,5 @@
-import { Images } from 'App/Themes'
-
 export default {
   type: 'custom',
-  image: Images.robots.custom_robot,
   links: [],
   connection: { type: 'bluetooth' },
   params: [],

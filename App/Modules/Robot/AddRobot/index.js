@@ -18,7 +18,7 @@ export class AddRobotContainer extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      name: 'Robot 1'
+      name: ''
     }
   }
 
@@ -37,7 +37,10 @@ export class AddRobotContainer extends Component {
       return
     }
 
-    const config = { name }
+    const { state } = this.props.navigation
+    const config = state && state.params && state.params.config
+    config.name = name
+
     this.props.navigation.navigate('SetupRobotScreen', { config })
   }
 

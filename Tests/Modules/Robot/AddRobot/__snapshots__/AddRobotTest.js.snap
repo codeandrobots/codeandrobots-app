@@ -17,9 +17,9 @@ exports[`AddRobot Component renders correctly 1`] = `
       }
     >
       <TextInput
-        name="Robot 1"
+        name="Robot Name"
         onChangeText={[Function]}
-        placeholder="Robot 1"
+        placeholder="Robot Name"
         style={
           Object {
             "marginVertical": 4,

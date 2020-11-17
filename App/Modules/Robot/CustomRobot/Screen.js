@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { ScrollView } from 'react-native'
 import PropTypes from 'prop-types'
 
-import { Metrics, Fonts } from 'App/Themes'
+import { Metrics } from 'App/Themes'
 import {
   Container,
   Separator,
@@ -19,10 +19,9 @@ export default class CustomRobotScreen extends Component {
     text: PropTypes.string.isRequired,
     links: PropTypes.arrayOf(PropTypes.shape({
       title: PropTypes.string.isRequired,
-      url: PropTypes.string.isRequired
+      config: PropTypes.object.isRequired
     })),
-    onLinkPress: PropTypes.func,
-    onAddPress: PropTypes.func.isRequired
+    onLinkPress: PropTypes.func.isRequired
   }
 
   render () {
@@ -32,8 +31,7 @@ export default class CustomRobotScreen extends Component {
       title,
       text,
       links,
-      onLinkPress,
-      onAddPress
+      onLinkPress
     } = this.props
 
     return (
@@ -58,14 +56,6 @@ export default class CustomRobotScreen extends Component {
                 return (
                   <Link
                     key={i}
-                    style={{
-                      view: {
-                        marginVertical: Metrics.unit / 2
-                      },
-                      text: {
-                        fontSize: Fonts.size.regular
-                      }
-                    }}
                     text={link.title}
                     centered
                     uppercase={false}
@@ -78,9 +68,10 @@ export default class CustomRobotScreen extends Component {
         </ScrollView>
         <Footer style={{ paddingTop: 34 }}>
           <Card
-            button='Add Robot'
-            onPress={onAddPress}
-          />
+            title='ADD A CUSTOM ROBOT'
+            text={'Choose between adding a custom robot from scratch or based on the OttoDIY or Nybble robots.'}
+            textAlign='left'
+            style={{textView: {marginBottom: Metrics.unit}}} />
         </Footer>
       </Container>
     )

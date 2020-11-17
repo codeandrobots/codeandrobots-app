@@ -30,8 +30,16 @@ exports[`CustomRobot Component renders correctly 1`] = `
     }
   >
     <Card
-      button="Add Robot"
-      onPress={[Function]}
+      style={
+        Object {
+          "textView": Object {
+            "marginBottom": 8,
+          },
+        }
+      }
+      text="Choose between adding a custom robot from scratch or based on the OttoDIY or Nybble robots."
+      textAlign="left"
+      title="ADD A CUSTOM ROBOT"
     />
   </Footer>
 </Container>

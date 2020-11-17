@@ -1,12 +1,32 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import _ from 'lodash'
 
 import { Images } from 'App/Themes'
 import CustomRobotScreen from './Screen'
 
+import OttoConfig from 'App/Services/Client/Otto/Config'
+import NybbleConfig from 'App/Services/Client/Nybble/Config'
+
+// Only include config that is relevant to custom robots
+const pickConfig = (config) => {
+  const customConfig = _.pick(config, 'moves', 'skills')
+  customConfig.commands = {
+    stop: config.commands.stop,
+    ...config.commands.walk
+  }
+  return customConfig
+}
+
+const links = [
+  { title: 'Add custom robot', config: {} },
+  { title: 'Add custom OttoDIY robot', config: pickConfig(OttoConfig) },
+  { title: 'Add custom Nybble robot', config: pickConfig(NybbleConfig) }
+]
+
 export class CustomRobotContainer extends Component {
-  onAddPress = () => {
-    this.props.navigation.navigate('AddRobotScreen')
+  onLinkPress = (link) => {
+    this.props.navigation.navigate('AddRobotScreen', { config: link.config })
   }
 
   render () {
@@ -18,7 +38,8 @@ export class CustomRobotContainer extends Component {
         image={Images.robots.custom_robot}
         title={'Custom robot'}
         text={'Let’s see if your robot has what it takes.'}
-        onAddPress={this.onAddPress}
+        links={links}
+        onLinkPress={this.onLinkPress}
         {...this.props}
       />
     )

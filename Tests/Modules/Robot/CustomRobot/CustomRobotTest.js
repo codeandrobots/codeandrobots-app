@@ -16,7 +16,7 @@ describe('CustomRobot', () => {
         image={Images.robots.custom_robot}
         title={'Custom robot'}
         text={'Let’s see if your robot has what it takes.'}
-        onAddPress={() => {}} />)
+        onLinkPress={() => {}} />)
   })
 
   it('Component renders correctly', () => {

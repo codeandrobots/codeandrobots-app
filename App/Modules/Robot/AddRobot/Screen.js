@@ -25,8 +25,8 @@ export default class AddRobotScreen extends Component {
           <View style={s.form}>
             <TextInput
               style={s.input}
-              name='Robot 1'
-              placeholder='Robot 1'
+              name='Robot Name'
+              placeholder='Robot Name'
               value={name}
               onChangeText={(value) => { onChangeText('name', value) }}
             />

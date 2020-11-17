@@ -6,7 +6,7 @@ import { getImageSize, scaleImageSize } from 'App/Services/ImageUtils'
 
 import { TouchableOpacity, Button, Icon, Video } from 'App/Components'
 
-import { Colors } from 'App/Themes'
+import { Colors, Metrics } from 'App/Themes'
 
 import s from './Styles'
 
@@ -78,7 +78,13 @@ export default class CardListItem extends Component {
     // maxWidth and maxHeight must match Styles.customImageContainer_card
     const maxWidth = 118
     const maxHeight = 80
-    const { width, height } = scaleImageSize(imageWidth, imageHeight, maxWidth, maxHeight)
+    const paddingOffset = Metrics.unit
+    const { width, height } = scaleImageSize(
+      imageWidth,
+      imageHeight,
+      maxWidth - paddingOffset,
+      maxHeight - paddingOffset
+    )
     const isCustomImage = (image && image instanceof Object && image.uri)
 
     return (
@@ -91,7 +97,7 @@ export default class CardListItem extends Component {
         {image && isCustomImage && (
           <View style={s.customImageContainer_card}>
             {width > 0 && (
-              <View style={[s.customImageView_card, {width, height}]}>
+              <View style={[s.customImageView_card, {width: maxWidth, height: maxHeight}]}>
                 <Image
                   style={[
                     s.customImage_card,
