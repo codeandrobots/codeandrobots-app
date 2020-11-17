@@ -77,7 +77,7 @@ export default class CardListItem extends Component {
 
     // maxWidth and maxHeight must match Styles.customImageContainer_card
     const maxWidth = 118
-    const maxHeight = 80
+    const maxHeight = 118 / 1.3333
     const paddingOffset = Metrics.unit
     const { width, height } = scaleImageSize(
       imageWidth,

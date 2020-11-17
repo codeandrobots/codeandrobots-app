@@ -57,7 +57,7 @@ export default class ConnectRobotScreen extends Component {
 
     return (
       <Container>
-        <ScrollView>
+        <ScrollView style={{marginBottom: 120}}>
           <Card
             style={{
               textView: {
