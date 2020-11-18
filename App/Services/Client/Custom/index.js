@@ -20,12 +20,10 @@ export default class Custom {
   }
 
   cmdFromTouch = (touch) => {
-    console.log(this.getConfig()) // TODO REMOVE
     if (touch.dy <= -30) {
-      console.log('--- FORWARDS') // TODO REMOVE
       return this.getConfig().commands.forwards
     } else if (touch.dy >= 30) {
-      return this.getConfig().commands.back
+      return this.getConfig().commands.backwards
     } else if (touch.dx <= -30) {
       return this.getConfig().commands.left
     } else if (touch.dx >= 30) {

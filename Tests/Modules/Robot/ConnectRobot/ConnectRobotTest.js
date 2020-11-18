@@ -34,6 +34,7 @@ describe('ConnectRobot', () => {
         onDescriptionPress={() => {}}
         onChangePicturePress={() => {}}
         onSetupPress={() => {}}
+        onDeletePress={() => {}}
         onPress={() => {}} />)
   })
 

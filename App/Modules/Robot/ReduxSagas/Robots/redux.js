@@ -5,7 +5,8 @@ import Immutable from 'seamless-immutable'
 
 const { Types, Creators } = createActions({
   saveRobot: ['robot'],
-  updateRobot: ['robot']
+  updateRobot: ['robot'],
+  deleteRobot: ['robot']
 })
 
 export { Types }
@@ -53,6 +54,20 @@ export const update = (state, action) => {
   return state.merge({ robots })
 }
 
+export const deleteRobot = (state, action) => {
+  const robots = (state.robots) ? JSON.parse(JSON.stringify(state.robots)) : {}
+
+  const { robot } = action
+  if (!robot || !robot.id || !robots[robot.id]) {
+    console.warn('Invalid robot')
+    console.warn(robot)
+    return state
+  }
+  delete robots[robot.id]
+
+  return state.merge({ robots })
+}
+
 export const reset = (state, action) => {
   return state.merge(Immutable.asMutable(INITIAL_STATE))
 }
@@ -61,5 +76,6 @@ export const reset = (state, action) => {
 
 export const reducer = createReducer(INITIAL_STATE, {
   [Types.SAVE_ROBOT]: save,
-  [Types.UPDATE_ROBOT]: update
+  [Types.UPDATE_ROBOT]: update,
+  [Types.DELETE_ROBOT]: deleteRobot
 })

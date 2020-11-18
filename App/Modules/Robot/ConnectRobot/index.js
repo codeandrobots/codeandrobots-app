@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Alert } from 'react-native'
 import { connect } from 'react-redux'
 
 import Client, { setRobot } from 'App/Services/Client'
@@ -19,9 +20,7 @@ export class ConnectRobotContainer extends Component {
 
   async componentWillMount () {
     const { updateRobot } = this.props
-    const { state } = this.props.navigation
-    const robot = state && state.params && state.params.robot
-    const robotConfig = state && state.params && state.params.robotConfig
+    const { robot, robotConfig } = this.getRobotAndConfig()
 
     this.initRobot(robot, robotConfig)
 
@@ -51,6 +50,13 @@ export class ConnectRobotContainer extends Component {
     }
   }
 
+  getRobotAndConfig = () => {
+    const { state } = this.props.navigation
+    const robot = state && state.params && state.params.robot
+    const robotConfig = state && state.params && state.params.robotConfig
+    return { robot, robotConfig }
+  }
+
   initRobot = async (robot, robotConfig) => {
     if (robot) {
       await setRobot(robot, robotConfig)
@@ -64,6 +70,13 @@ export class ConnectRobotContainer extends Component {
       this.props.navigation.setParams({title: config.name})
       this.setState({ robot, config })
     }
+  }
+
+  deleteRobot = () => {
+    const { deleteRobot } = this.props
+    const { robotConfig } = this.getRobotAndConfig()
+    deleteRobot({ id: robotConfig.id })
+    this.props.navigation.goBack()
   }
 
   onConnect = () => {
@@ -97,6 +110,13 @@ export class ConnectRobotContainer extends Component {
     this.props.navigation.navigate('SetupRobotScreen', { config, goBackOnDone: true })
   }
 
+  onDeletePress = () => {
+    Alert.alert('', 'Are you sure you want to delete?', [
+      { text: 'Yes', onPress: () => { this.deleteRobot() } },
+      { text: 'Cancel', onPress: () => {}, style: 'cancel' }
+    ])
+  }
+
   onLinkPress = (link) => {
     this.props.navigation.navigate('WebScreen', { source: link.url, title: link.title })
   }
@@ -122,6 +142,7 @@ export class ConnectRobotContainer extends Component {
         onDescriptionPress={this.onDescriptionPress}
         onChangePicturePress={this.onChangePicturePress}
         onSetupPress={this.onSetupPress}
+        onDeletePress={this.onDeletePress}
         onConnectPress={this.onConnectPress}
         {...this.props}
       />
@@ -136,7 +157,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    updateRobot: (robot) => { dispatch(RobotsActions.updateRobot(robot)) }
+    updateRobot: (robot) => { dispatch(RobotsActions.updateRobot(robot)) },
+    deleteRobot: (robot) => { dispatch(RobotsActions.deleteRobot(robot)) }
   }
 }
 

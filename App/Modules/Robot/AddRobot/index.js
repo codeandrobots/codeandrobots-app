@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Keyboard } from 'react-native'
 import { connect } from 'react-redux'
 
 import { NavButton } from 'App/Components'
@@ -42,6 +43,7 @@ export class AddRobotContainer extends Component {
     config.name = name
 
     this.props.navigation.navigate('SetupRobotScreen', { config })
+    Keyboard.dismiss()
   }
 
   render () {

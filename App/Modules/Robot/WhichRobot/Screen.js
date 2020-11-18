@@ -20,7 +20,7 @@ export default class WhichRobotScreen extends Component {
     return (
       <Container>
         <List style={{ marginBottom: footerHeight }} linedRows scrollable>
-          {robots.map((robot) => {
+          {robots.reverse().map((robot) => {
             return (
               <CardListItem
                 key={uuid.v4()}

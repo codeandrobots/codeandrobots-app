@@ -6,7 +6,7 @@ export default {
   commands: {
     stop: 'M 0',
     forwards: 'M 1',
-    back: 'M 2',
+    backwards: 'M 2',
     left: 'M 3',
     right: 'M 4'
   },

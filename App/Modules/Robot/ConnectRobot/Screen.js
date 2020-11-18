@@ -29,7 +29,8 @@ export default class ConnectRobotScreen extends Component {
     onDescriptionPress: PropTypes.func.isRequired,
     onChangePicturePress: PropTypes.func.isRequired,
     onSetupPress: PropTypes.func.isRequired,
-    onConnectPress: PropTypes.func.isRequired
+    onConnectPress: PropTypes.func.isRequired,
+    onDeletePress: PropTypes.func.isRequired
   }
 
   render () {
@@ -45,6 +46,7 @@ export default class ConnectRobotScreen extends Component {
       onDescriptionPress,
       onChangePicturePress,
       onSetupPress,
+      onDeletePress,
       onConnectPress
     } = this.props
 
@@ -101,6 +103,7 @@ export default class ConnectRobotScreen extends Component {
               <CompactListItem title={descriptionTitle} onPress={onDescriptionPress} />
               <CompactListItem title='Change picture' onPress={onChangePicturePress} />
               <CompactListItem title='Setup' onPress={onSetupPress} />
+              <CompactListItem title='Delete' onPress={onDeletePress} />
             </List>
           }
         </ScrollView>

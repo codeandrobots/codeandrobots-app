@@ -12,7 +12,11 @@ export const getImageSize = (imageUri) => {
           : { width, height }
         resolve(size)
       },
-      reject)
+      (error) => {
+        console.log(`Failed to get image size for ${imageUri} - ${error.message}`)
+        console.log(error)
+        resolve({ width: 0, height: 0 })
+      })
   })
 }
 

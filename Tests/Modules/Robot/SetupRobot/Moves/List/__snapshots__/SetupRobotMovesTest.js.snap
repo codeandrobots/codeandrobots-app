@@ -15,10 +15,10 @@ exports[`SetupRobotMoves Component renders correctly 1`] = `
     title="Forwards"
   />
   <CompactListItem
-    key="back-M 2"
+    key="backwards-M 2"
     onPress={[Function]}
     subtitle="M 2"
-    title="Back"
+    title="Backwards"
   />
   <CompactListItem
     key="left-M 3"
