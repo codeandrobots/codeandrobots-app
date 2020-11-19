@@ -44,6 +44,9 @@ exports[`Player Component renders correctly 1`] = `
             },
           },
           "connection": Object {
+            "settings": Object {
+              "newLine": true,
+            },
             "type": "bluetooth",
           },
           "description": "The open source robot that you can build yourself",

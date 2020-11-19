@@ -10,7 +10,7 @@ import NybbleConfig from 'App/Services/Client/Nybble/Config'
 
 // Only include config that is relevant to custom robots
 const pickConfig = (config) => {
-  const customConfig = _.pick(config, 'moves', 'skills')
+  const customConfig = _.pick(config, 'connection', 'moves', 'skills')
   customConfig.commands = {
     stop: config.commands.stop,
     ...config.commands.walk

@@ -36,7 +36,11 @@ export default class Custom {
   sendCommand = async (cmd, checkLastCommand = false) => {
     if (cmd && (!checkLastCommand || !this.lastCmdSent || this.lastCmdSent !== cmd)) {
       this.lastCmdSent = cmd
-      return Bluetooth.writeln(cmd)
+      const { settings } = this.getConfig().connection
+      const includeNewLine = !!settings && settings.newLine
+      return includeNewLine
+        ? Bluetooth.writeln(cmd)
+        : Bluetooth.write(cmd)
     } else {
       return { ok: true }
     }

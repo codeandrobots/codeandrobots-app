@@ -1,7 +1,12 @@
 export default {
   type: 'custom',
   links: [],
-  connection: { type: 'bluetooth' },
+  connection: {
+    type: 'bluetooth',
+    settings: {
+      newLine: true
+    }
+  },
   params: [],
   commands: {
     stop: 'M 0',
