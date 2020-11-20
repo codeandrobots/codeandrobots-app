@@ -2,12 +2,17 @@
 
 exports[`SetupRobotConnection Component renders correctly 1`] = `
 <Container>
-  <OptionListItem
-    onPress={[Function]}
-    selected={true}
-    title="Bluetooth"
-    value="bluetooth"
-  />
+  <List>
+    <ListHeader
+      title="Bluetooth"
+    />
+    <OptionListItem
+      onPress={[Function]}
+      selected={true}
+      title="Include new line"
+      value={false}
+    />
+  </List>
   <View
     style={
       Object {

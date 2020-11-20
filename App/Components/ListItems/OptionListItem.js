@@ -11,7 +11,7 @@ import s from './Styles'
 export default class OptionListItem extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
+    value: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]).isRequired,
     selected: PropTypes.bool,
     onPress: PropTypes.func.isRequired
   }
