@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SetupRobotSkill Component renders correctly 1`] = `
+<Container>
+  <ScrollView
+    style={
+      Object {
+        "marginBottom": 130,
+      }
+    }
+  >
+    <CompactListItem
+      key="Dance-D 1"
+      onPress={[Function]}
+      subtitle="D 1"
+      title="Dance"
+    />
+  </ScrollView>
+  <Footer
+    style={
+      Object {
+        "paddingTop": 34,
+      }
+    }
+  >
+    <Card
+      button="Add command"
+      onPress={[Function]}
+    />
+  </Footer>
+</Container>
+`;

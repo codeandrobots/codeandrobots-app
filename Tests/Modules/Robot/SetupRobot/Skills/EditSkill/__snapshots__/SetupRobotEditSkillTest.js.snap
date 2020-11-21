@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SetupRobotEditSkill Component renders correctly 1`] = `
+<Container>
+  <View
+    style={
+      Object {
+        "margin": 16,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#354052",
+          "fontFamily": "Roboto-Medium",
+          "fontSize": 18,
+        }
+      }
+    >
+      Dance
+       Bluetooth command
+    </Text>
+    <View
+      style={
+        Object {
+          "marginVertical": 8,
+        }
+      }
+    >
+      <TextInput
+        name="Dance"
+        onChangeText={[Function]}
+        style={
+          Object {
+            "marginVertical": 4,
+          }
+        }
+        value="D 1"
+      />
+    </View>
+  </View>
+</Container>
+`;

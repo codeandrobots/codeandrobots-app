@@ -21,15 +21,21 @@ export class WhichRobotContainer extends Component {
     this.props.navigation.navigate('HomeScreen')
   }
 
-  onPress = (robot) => {
+  onPress = (robot, robotConfig) => {
     if (robot === 'simulator') {
       this.props.navigation.navigate('ConnectScreen', {
         robot,
         onDone: this.onConnect
       })
+    } else if (robot === 'custom') {
+      this.props.navigation.navigate('CustomRobotScreen', {
+        robot
+        // onDone: this.onConnect // TODO
+      })
     } else {
       this.props.navigation.navigate('ConnectRobotScreen', {
-        robot
+        robot,
+        robotConfig
       })
     }
   }
@@ -48,7 +54,9 @@ export class WhichRobotContainer extends Component {
 }
 
 const mapStateToProps = (state) => {
+  const { robots } = state.robots
   return {
+    robots: robots ? Object.keys(robots).map(k => robots[k]) : []
   }
 }
 

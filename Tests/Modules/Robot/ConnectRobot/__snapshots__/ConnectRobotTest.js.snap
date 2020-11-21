@@ -2,13 +2,20 @@
 
 exports[`ConnectRobot Component renders correctly 1`] = `
 <Container>
-  <ScrollView>
+  <ScrollView
+    style={
+      Object {
+        "marginBottom": 120,
+      }
+    }
+  >
     <Card
       image={
         Object {
           "process": [Function],
         }
       }
+      onImagePress={null}
       style={
         Object {
           "textView": Object {

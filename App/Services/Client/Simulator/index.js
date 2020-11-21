@@ -23,6 +23,10 @@ const calculateDirection = (touch) => {
 }
 
 export default class Simulator {
+  setConfig = config => {
+    throw new Error('Not supported')
+  }
+
   getConfig = () => {
     return Config
   }

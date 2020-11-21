@@ -17,6 +17,19 @@ import {
   WhichRobot,
   BuildRobot,
   ConnectRobot,
+  CustomRobot,
+  AddRobot,
+  EditRobotName,
+  EditRobotDescription,
+  SetupRobot,
+  SetupRobotConnection,
+  SetupRobotMoves,
+  SetupRobotMove,
+  SetupRobotSkills,
+  SetupRobotSkill,
+  SetupRobotNewSkillCategory,
+  SetupRobotNewSkill,
+  SetupRobotEditSkill,
   Onboarding
 } from 'App/Modules'
 import {
@@ -125,6 +138,74 @@ export default {
   },
   ConnectRobotScreen: {
     screen: ConnectRobot,
+    navigationOptions: dynamicTitleNavigationOptions
+  },
+  CustomRobotScreen: {
+    screen: CustomRobot,
+    navigationOptions: ({navigation}) => ({
+      title: 'Custom robot'
+    })
+  },
+  AddRobotScreen: {
+    screen: AddRobot,
+    navigationOptions: ({navigation}) => ({
+      title: 'Add robot'
+    })
+  },
+  EditRobotNameScreen: {
+    screen: EditRobotName,
+    navigationOptions: dynamicTitleNavigationOptions
+  },
+  EditRobotDescriptionScreen: {
+    screen: EditRobotDescription,
+    navigationOptions: dynamicTitleNavigationOptions
+  },
+  SetupRobotScreen: {
+    screen: SetupRobot,
+    navigationOptions: ({navigation}) => ({
+      title: 'Setup'
+    })
+  },
+  SetupRobotConnectionScreen: {
+    screen: SetupRobotConnection,
+    navigationOptions: ({navigation}) => ({
+      title: 'Connection'
+    })
+  },
+  SetupRobotMovesScreen: {
+    screen: SetupRobotMoves,
+    navigationOptions: ({navigation}) => ({
+      title: 'Moves'
+    })
+  },
+  SetupRobotMoveScreen: {
+    screen: SetupRobotMove,
+    navigationOptions: dynamicTitleNavigationOptions
+  },
+  SetupRobotSkillsScreen: {
+    screen: SetupRobotSkills,
+    navigationOptions: ({navigation}) => ({
+      title: 'Commands'
+    })
+  },
+  SetupRobotSkillScreen: {
+    screen: SetupRobotSkill,
+    navigationOptions: dynamicTitleNavigationOptions
+  },
+  SetupRobotNewSkillCategoryScreen: {
+    screen: SetupRobotNewSkillCategory,
+    navigationOptions: ({navigation}) => ({
+      title: 'Add command category'
+    })
+  },
+  SetupRobotNewSkillScreen: {
+    screen: SetupRobotNewSkill,
+    navigationOptions: ({navigation}) => ({
+      title: 'Add command'
+    })
+  },
+  SetupRobotEditSkillScreen: {
+    screen: SetupRobotEditSkill,
     navigationOptions: dynamicTitleNavigationOptions
   },
   OnboardingScreen: {

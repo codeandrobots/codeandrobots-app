@@ -3,6 +3,7 @@ package com.codeandrobots;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.imagepicker.ImagePickerPackage;
 import com.horcrux.svg.SvgPackage;
 import com.pusherman.networkinfo.RNNetworkInfoPackage;
 import com.asterinet.react.tcpsocket.TcpSocketPackage;
@@ -45,6 +46,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new ImagePickerPackage(),
             new SvgPackage(),
             new RNNetworkInfoPackage(),
             new TcpSocketPackage(),

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditRobotName Component renders correctly 1`] = `
+<Container>
+  <View
+    style={
+      Object {
+        "margin": 16,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "marginVertical": 8,
+        }
+      }
+    >
+      <TextInput
+        name="Robot Name"
+        onChangeText={[Function]}
+        placeholder="Robot Name"
+        style={
+          Object {
+            "marginVertical": 4,
+          }
+        }
+        value="Robot 1"
+      />
+    </View>
+  </View>
+</Container>
+`;

@@ -9,6 +9,10 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE" tools:node="remove" />
 
+    <!-- CAMERA and WRITE_EXTERNAL_STORAGE are needed for image picker -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <!-- ACCESS_COARSE_LOCATION and ACCESS_FINE_LOCATION are needed to scan unpaired devices -->
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />

@@ -5,11 +5,13 @@ import rootSaga from './RootSaga'
 import ReduxPersist from '../Config/ReduxPersist'
 
 import { reducer as StartupReducer } from './StartupRedux'
+import { RobotsReducer } from 'App/Modules/Robot'
 
 /* ------------- Assemble The Reducers ------------- */
 export const reducers = combineReducers({
   startup: StartupReducer,
-  nav: require('./NavigationRedux').reducer
+  nav: require('./NavigationRedux').reducer,
+  robots: RobotsReducer
 })
 
 const loadSagas = (sagasManager, sagaMiddleware) => {

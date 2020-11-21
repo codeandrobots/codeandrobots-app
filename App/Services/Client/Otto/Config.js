@@ -24,7 +24,12 @@ export default {
       url: 'https://www.ottodiy.com'
     }
   ],
-  connection: { type: 'bluetooth' },
+  connection: {
+    type: 'bluetooth',
+    settings: {
+      newLine: true
+    }
+  },
   features: {
     drive: true,
     beep: true,

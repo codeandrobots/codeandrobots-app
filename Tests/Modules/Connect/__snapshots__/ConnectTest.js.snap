@@ -192,32 +192,31 @@ exports[`Connect Component renders correctly when bluetooth is enabled 1`] = `
       title="GET CONNECTED"
     />
   </Footer>
-  <ScrollView
+  <List
+    scrollable={true}
     style={
       Object {
-        "marginBottom": 210,
+        "marginBottom": 235,
       }
     }
   >
-    <List>
-      <DefaultListItem
-        buttonIcon="bluetooth-b"
-        buttonIconSize={22}
-        key="1"
-        onPress={[Function]}
-        text={null}
-        title="HC-06"
-      />
-      <DefaultListItem
-        buttonIcon="bluetooth-b"
-        buttonIconSize={22}
-        key="2"
-        onPress={[Function]}
-        text={null}
-        title="Laptop"
-      />
-    </List>
-  </ScrollView>
+    <DefaultListItem
+      buttonIcon="bluetooth-b"
+      buttonIconSize={22}
+      key="1"
+      onPress={[Function]}
+      text={null}
+      title="HC-06"
+    />
+    <DefaultListItem
+      buttonIcon="bluetooth-b"
+      buttonIconSize={22}
+      key="2"
+      onPress={[Function]}
+      text={null}
+      title="Laptop"
+    />
+  </List>
   <Modal
     navigation={
       Object {
@@ -391,32 +390,31 @@ exports[`Connect Component renders correctly when scanning 1`] = `
       title="GET CONNECTED"
     />
   </Footer>
-  <ScrollView
+  <List
+    scrollable={true}
     style={
       Object {
-        "marginBottom": 210,
+        "marginBottom": 235,
       }
     }
   >
-    <List>
-      <DefaultListItem
-        buttonIcon="bluetooth-b"
-        buttonIconSize={22}
-        key="1"
-        onPress={[Function]}
-        text={null}
-        title="HC-06"
-      />
-      <DefaultListItem
-        buttonIcon="bluetooth-b"
-        buttonIconSize={22}
-        key="2"
-        onPress={[Function]}
-        text={null}
-        title="Laptop"
-      />
-    </List>
-  </ScrollView>
+    <DefaultListItem
+      buttonIcon="bluetooth-b"
+      buttonIconSize={22}
+      key="1"
+      onPress={[Function]}
+      text={null}
+      title="HC-06"
+    />
+    <DefaultListItem
+      buttonIcon="bluetooth-b"
+      buttonIconSize={22}
+      key="2"
+      onPress={[Function]}
+      text={null}
+      title="Laptop"
+    />
+  </List>
   <Modal
     navigation={
       Object {

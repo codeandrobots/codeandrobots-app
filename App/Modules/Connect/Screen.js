@@ -268,31 +268,29 @@ export default class Screen extends Component {
             style={{textView: {marginBottom: Metrics.unit * 2}}} />
         </Footer>
         {enabled && (
-          <ScrollView style={{ marginBottom: 210 }}>
-            <List>
-              {devices.map(device => {
-                let text = null
-                if (activeDevice && activeDevice.id === device.id) {
-                  if (activeDevice.isConnecting) {
-                    text = 'Connecting...'
-                  } else if (activeDevice.isConnected) {
-                    text = 'Connected, tap to disconnect'
-                  } else if (activeDevice.error) {
-                    text = 'Failed to connect, tap to try again'
-                  }
+          <List style={{ marginBottom: 235 }} scrollable>
+            {devices.map(device => {
+              let text = null
+              if (activeDevice && activeDevice.id === device.id) {
+                if (activeDevice.isConnecting) {
+                  text = 'Connecting...'
+                } else if (activeDevice.isConnected) {
+                  text = 'Connected, tap to disconnect'
+                } else if (activeDevice.error) {
+                  text = 'Failed to connect, tap to try again'
                 }
-                return (
-                  <ListItem
-                    key={device.id}
-                    title={device.name}
-                    text={text}
-                    buttonIcon='bluetooth-b'
-                    buttonIconSize={22}
-                    onPress={() => { onConnect(device) }} />
-                )
-              })}
-            </List>
-          </ScrollView>
+              }
+              return (
+                <ListItem
+                  key={device.id}
+                  title={device.name}
+                  text={text}
+                  buttonIcon='bluetooth-b'
+                  buttonIconSize={22}
+                  onPress={() => { onConnect(device) }} />
+              )
+            })}
+          </List>
         )}
         {this.renderProblemsConnectingModal()}
       </Container>

@@ -12,6 +12,9 @@ export default StyleSheet.create({
     ...Styles.centered,
     marginVertical: Metrics.unit * 3
   },
+  image: {
+    borderRadius: Metrics.unit
+  },
   videoView: {
     ...Styles.centered,
     marginVertical: Metrics.unit * 3

@@ -9,36 +9,57 @@ import {
   Card,
   Link,
   Footer,
-  Links } from 'App/Components'
+  Links,
+  List,
+  CompactListItem } from 'App/Components'
 
 export default class ConnectRobotScreen extends Component {
   static propTypes = {
+    type: PropTypes.string,
     image: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
     video: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
     title: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
+    text: PropTypes.string,
     links: PropTypes.arrayOf(PropTypes.shape({
       title: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired
     })),
     onLinkPress: PropTypes.func.isRequired,
-    onConnectPress: PropTypes.func.isRequired
+    onNamePress: PropTypes.func.isRequired,
+    onDescriptionPress: PropTypes.func.isRequired,
+    onChangePicturePress: PropTypes.func.isRequired,
+    onSetupPress: PropTypes.func.isRequired,
+    onConnectPress: PropTypes.func.isRequired,
+    onDeletePress: PropTypes.func.isRequired
   }
 
   render () {
     const {
+      type,
       image,
       video,
       title,
       text,
       links,
       onLinkPress,
+      onNamePress,
+      onDescriptionPress,
+      onChangePicturePress,
+      onSetupPress,
+      onDeletePress,
       onConnectPress
     } = this.props
 
+    const isCustomRobot = (type === 'custom')
+
+    const cardTitle = (!isCustomRobot) ? title : null
+    const textTitle = (!isCustomRobot) ? text : null
+    const descriptionTitle = text && text.trim().length > 0 ? text : 'Description'
+    const onImagePress = isCustomRobot ? onChangePicturePress : null
+
     return (
       <Container>
-        <ScrollView>
+        <ScrollView style={{marginBottom: 120}}>
           <Card
             style={{
               textView: {
@@ -48,10 +69,11 @@ export default class ConnectRobotScreen extends Component {
             textAlign='left'
             image={image}
             video={video}
-            title={title}
-            text={text}
+            title={cardTitle}
+            text={textTitle}
+            onImagePress={onImagePress}
           />
-          <Separator />
+          {!isCustomRobot && <Separator />}
           {links &&
             <Links>
               {links.map((link, i) => {
@@ -74,6 +96,15 @@ export default class ConnectRobotScreen extends Component {
                 )
               })}
             </Links>
+          }
+          {isCustomRobot &&
+            <List style={{marginHorizontal: Metrics.unit}}>
+              <CompactListItem title={title} onPress={onNamePress} />
+              <CompactListItem title={descriptionTitle} onPress={onDescriptionPress} />
+              <CompactListItem title='Change picture' onPress={onChangePicturePress} />
+              <CompactListItem title='Setup' onPress={onSetupPress} />
+              <CompactListItem title='Delete' onPress={onDeletePress} />
+            </List>
           }
         </ScrollView>
         <Footer style={{ paddingTop: 34 }}>
