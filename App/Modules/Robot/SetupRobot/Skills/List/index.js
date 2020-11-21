@@ -31,10 +31,19 @@ export class SetupRobotSkillsContainer extends Component {
     this.onChange(skills)
   }
 
+  onRemoveSkill = (skillToRemove) => {
+    const { skills } = this.state
+    const index = skills.findIndex(skill => skill.category === skillToRemove.category)
+    skills.splice(index, 1)
+    this.setState({ skills })
+    this.onChange(skills)
+  }
+
   onSkillPress = (skill) => {
     this.props.navigation.navigate('SetupRobotSkillScreen', {
       skill,
-      onChange: this.onChangeSkill
+      onChange: this.onChangeSkill,
+      onRemove: this.onRemoveSkill
     })
   }
 

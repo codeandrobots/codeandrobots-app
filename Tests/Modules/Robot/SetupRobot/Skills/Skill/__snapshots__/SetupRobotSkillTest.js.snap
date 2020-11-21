@@ -2,12 +2,20 @@
 
 exports[`SetupRobotSkill Component renders correctly 1`] = `
 <Container>
-  <CompactListItem
-    key="Dance-D 1"
-    onPress={[Function]}
-    subtitle="D 1"
-    title="Dance"
-  />
+  <ScrollView
+    style={
+      Object {
+        "marginBottom": 130,
+      }
+    }
+  >
+    <CompactListItem
+      key="Dance-D 1"
+      onPress={[Function]}
+      subtitle="D 1"
+      title="Dance"
+    />
+  </ScrollView>
   <Footer
     style={
       Object {
