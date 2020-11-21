@@ -62,7 +62,7 @@
 	<key>NSContactsUsageDescription</key>
 	<string>Making it quick and easy to share with your friends</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2019 Code and Robots. All rights reserved.</string>
+	<string>Copyright © 2020 Code and Robots. All rights reserved.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>This app might use your location if required</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
@@ -73,6 +73,12 @@
 	<string>This app uses bluetooth to connect to devices.</string>
 	<key>NSBluetoothAlwaysUsageDescription</key>
 	<string>This app uses bluetooth to connect to devices.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+  <string>This app would like access to your photo gallery</string>
+  <key>NSCameraUsageDescription</key>
+  <string>This app would like to use your camera</string>
+  <key>NSPhotoLibraryAddUsageDescription</key>
+  <string>This app would like to save photos to your photo gallery</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Helvetica.ttc</string>

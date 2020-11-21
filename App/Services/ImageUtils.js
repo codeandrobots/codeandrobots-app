@@ -12,6 +12,22 @@ export const getImageSize = (imageUri) => {
           : { width, height }
         resolve(size)
       },
-      reject)
+      (error) => {
+        console.log(`Failed to get image size for ${imageUri} - ${error.message}`)
+        console.log(error)
+        resolve({ width: 0, height: 0 })
+      })
   })
+}
+
+export const scaleImageSize = (width, height, maxWidth, maxHeight) => {
+  if (width > height) {
+    return (maxWidth < width)
+      ? { width: maxWidth, height: Math.floor(height * (maxWidth / width)) }
+      : { width: width, height: height }
+  } else {
+    return (maxHeight < height)
+      ? { width: Math.floor(width * (maxHeight / height)), height: maxHeight }
+      : { width: width, height: height }
+  }
 }

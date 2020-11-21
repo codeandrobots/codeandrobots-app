@@ -22,6 +22,10 @@ export default class Otto {
   lastCmdSent = null
   speed = Speed.Normal
 
+  setConfig = config => {
+    throw new Error('Not supported')
+  }
+
   getConfig = () => {
     return Config
   }

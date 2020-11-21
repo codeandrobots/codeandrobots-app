@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditRobotDescription Component renders correctly 1`] = `
+<Container>
+  <View
+    style={
+      Object {
+        "margin": 16,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "marginVertical": 8,
+        }
+      }
+    >
+      <TextInput
+        multiline={true}
+        name="Robot Description"
+        numberOfLines={3}
+        onChangeText={[Function]}
+        placeholder="Robot Description"
+        style={
+          Object {
+            "marginVertical": 4,
+          }
+        }
+        value="Robot description"
+      />
+    </View>
+  </View>
+</Container>
+`;

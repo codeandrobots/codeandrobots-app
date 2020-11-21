@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SetupRobot Component renders correctly 1`] = `
+<Container>
+  <CompactListItem
+    onPress={[Function]}
+    subtitle="Bluetooth"
+    title="Connection"
+  />
+  <CompactListItem
+    key="moves-5"
+    onPress={[Function]}
+    subtitle="5"
+    title="Moves"
+  />
+  <CompactListItem
+    key="commands-1"
+    onPress={[Function]}
+    subtitle="1"
+    title="Commands"
+  />
+</Container>
+`;

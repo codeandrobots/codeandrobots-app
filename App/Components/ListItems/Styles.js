@@ -4,6 +4,10 @@ import { Styles, Metrics, Colors, Fonts } from 'App/Themes'
 
 export default StyleSheet.create({
   ...Styles,
+  text: {
+    ...Styles.text,
+    height: 22
+  },
   itemView: {
     flexDirection: 'row',
     margin: Metrics.unit,
@@ -89,8 +93,8 @@ export default StyleSheet.create({
     margin: Metrics.unit
   },
   imageView_card: {
-    maxWidth: 165,
-    maxHeight: 112,
+    maxWidth: 118,
+    maxHeight: 80,
     padding: 40,
     justifyContent: 'center',
     alignItems: 'center',
@@ -99,6 +103,23 @@ export default StyleSheet.create({
     borderColor: Colors.primary,
     flex: 1,
     flexDirection: 'row'
+  },
+  customImageContainer_card: {
+    maxWidth: 118,
+    maxHeight: 80,
+    padding: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 1,
+    flexDirection: 'row'
+  },
+  customImageView_card: {
+    borderWidth: 1,
+    borderRadius: Metrics.unit,
+    borderColor: Colors.primary,
+    padding: Metrics.unit / 2,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   videoView_card: {
     maxWidth: 165,
@@ -109,9 +130,13 @@ export default StyleSheet.create({
     maxHeight: 55
   },
   image_card: {
-    maxWidth: 165,
-    maxHeight: 112,
-    resizeMode: 'contain'
+    maxWidth: 110,
+    maxHeight: 75,
+    resizeMode: 'contain',
+    borderRadius: Metrics.unit
+  },
+  customImage_card: {
+    borderRadius: Metrics.unit
   },
   image_compact: {
     maxWidth: 20,
@@ -142,6 +167,11 @@ export default StyleSheet.create({
   },
   text_card: {
     ...Styles.text
+  },
+  text_subtitle: {
+    ...Styles.text,
+    marginLeft: Metrics.unit,
+    color: Colors.grey
   },
   title_card: {
     ...Styles.text,

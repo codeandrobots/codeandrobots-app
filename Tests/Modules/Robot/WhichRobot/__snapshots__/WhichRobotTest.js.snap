@@ -17,6 +17,16 @@ exports[`WhichRobot Component renders correctly 1`] = `
           "process": [Function],
         }
       }
+      key="0"
+      onPress={[Function]}
+      title="Test Robot"
+    />
+    <CardListItem
+      image={
+        Object {
+          "process": [Function],
+        }
+      }
       onPress={[Function]}
       text="The open source robot that you can build yourself"
       title="Otto DIY"
@@ -40,6 +50,16 @@ exports[`WhichRobot Component renders correctly 1`] = `
       onPress={[Function]}
       text="MARK (Make A Robot Kit), your hands on AI robot"
       title="MARK"
+    />
+    <CardListItem
+      image={
+        Object {
+          "process": [Function],
+        }
+      }
+      onPress={[Function]}
+      text="Let’s see if your robot has what it takes"
+      title="Custom Robot"
     />
     <CardListItem
       image={

@@ -24,7 +24,12 @@ export default {
       url: 'https://www.petoi.com'
     }
   ],
-  connection: { type: 'bluetooth' },
+  connection: {
+    type: 'bluetooth',
+    settings: {
+      newLine: false
+    }
+  },
   features: {
     drive: true,
     beep: false,

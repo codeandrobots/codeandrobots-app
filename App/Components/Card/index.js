@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { StyleSheet, View, Image, Text } from 'react-native'
+import { StyleSheet, View, Image, Text, TouchableOpacity } from 'react-native'
 import PropTypes from 'prop-types'
 import QRCode from 'react-native-qrcode-svg'
 
@@ -23,6 +23,7 @@ export default class Card extends Component {
     link: PropTypes.string,
     textAlign: PropTypes.string,
     onPress: PropTypes.func,
+    onImagePress: PropTypes.func,
     onLinkPress: PropTypes.func
   }
 
@@ -36,17 +37,26 @@ export default class Card extends Component {
 
   async componentDidMount () {
     this._isMounted = true
-    const { image } = this.props
+    this.getAndSetImageSize(this.props.image)
+  }
+
+  async componentWillReceiveProps (nextProps) {
+    if (nextProps.image && this.props.image && nextProps.image.uri !== this.props.image.uri) {
+      this.getAndSetImageSize(nextProps.image)
+    }
+  }
+
+  componentWillUnmount () {
+    this._isMounted = false
+  }
+
+  getAndSetImageSize = async (image) => {
     if (image && image.uri) {
       const { width, height } = await getImageSize(image.uri)
       if (this._isMounted) {
         this.setState({ imageWidth: width, imageHeight: height })
       }
     }
-  }
-
-  componentWillUnmount () {
-    this._isMounted = false
   }
 
   render () {
@@ -62,6 +72,7 @@ export default class Card extends Component {
       link,
       textAlign = 'center',
       onPress = () => {},
+      onImagePress,
       onLinkPress = () => {}
     } = this.props
 
@@ -79,10 +90,15 @@ export default class Card extends Component {
               size={250} />
           </View>
         )}
-        {!qr && image && (
+        {!qr && !onImagePress && image && (
           <View style={s.imageView}>
-            <Image style={imageStyle} source={image} />
+            <Image style={[s.image, imageStyle]} source={image} />
           </View>
+        )}
+        {!qr && onImagePress && image && (
+          <TouchableOpacity style={s.imageView} onPress={onImagePress}>
+            <Image style={[s.image, imageStyle]} source={image} />
+          </TouchableOpacity>
         )}
         {!qr && !image && video && (
           <Video video={video} />

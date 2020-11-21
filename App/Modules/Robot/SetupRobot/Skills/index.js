@@ -1,0 +1,5 @@
+export { default as SetupRobotSkills } from './List'
+export { default as SetupRobotSkill } from './Skill'
+export { default as SetupRobotNewSkillCategory } from './NewSkillCategory'
+export { default as SetupRobotNewSkill } from './NewSkill'
+export { default as SetupRobotEditSkill } from './EditSkill'

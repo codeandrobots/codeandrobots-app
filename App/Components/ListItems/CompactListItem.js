@@ -16,6 +16,7 @@ export default class CompactListItem extends Component {
     iconSize: PropTypes.number,
     iconColor: PropTypes.string,
     title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string,
     disabled: PropTypes.bool,
     onPress: PropTypes.func.isRequired
   }
@@ -30,6 +31,7 @@ export default class CompactListItem extends Component {
       iconSize = 24,
       iconColor = Colors.icon_primary,
       title,
+      subtitle,
       disabled = false,
       onPress } = this.props
 
@@ -51,7 +53,12 @@ export default class CompactListItem extends Component {
         )}
         <View style={[s.itemView, s.itemView_compact]}>
           <View style={[s.textView, s.textView_compact]}>
-            <Text style={textStyle}>{title}</Text>
+            <View style={{flex: 1, flexDirection: 'row'}}>
+              <Text style={textStyle}>{title}</Text>
+              {subtitle &&
+                <Text style={[s.text, s.text_subtitle]}>{subtitle}</Text>
+              }
+            </View>
           </View>
           <Icon set='SimpleLine' name='arrow-right' size={16} color={buttonIconColor} />
         </View>
