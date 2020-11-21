@@ -22,6 +22,10 @@ export default class Simulator {
     {
       id: '4',
       name: 'Echo'
+    },
+    {
+      id: '5',
+      name: 'Clicbot'
     }
   ]
 }
