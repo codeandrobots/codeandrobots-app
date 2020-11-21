@@ -4983,6 +4983,7 @@ exports[`Storyshots List Default 1`] = `
                 "color": "#354052",
                 "fontFamily": "Roboto-Medium",
                 "fontSize": 16,
+                "height": 22,
               }
             }
           >
@@ -4995,6 +4996,7 @@ exports[`Storyshots List Default 1`] = `
                   "color": "#354052",
                   "fontFamily": "Roboto-Medium",
                   "fontSize": 16,
+                  "height": 22,
                 },
                 Object {
                   "fontSize": 14,
@@ -5183,6 +5185,7 @@ exports[`Storyshots List Default 1`] = `
                 "color": "#354052",
                 "fontFamily": "Roboto-Medium",
                 "fontSize": 16,
+                "height": 22,
               }
             }
           >
@@ -5195,6 +5198,7 @@ exports[`Storyshots List Default 1`] = `
                   "color": "#354052",
                   "fontFamily": "Roboto-Medium",
                   "fontSize": 16,
+                  "height": 22,
                 },
                 Object {
                   "fontSize": 14,
@@ -5446,6 +5450,7 @@ exports[`Storyshots List Featured 1`] = `
                 "color": "#354052",
                 "fontFamily": "Roboto-Medium",
                 "fontSize": 16,
+                "height": 22,
               }
             }
           >
@@ -5566,6 +5571,7 @@ exports[`Storyshots List Featured 1`] = `
                 "color": "#354052",
                 "fontFamily": "Roboto-Medium",
                 "fontSize": 16,
+                "height": 22,
               }
             }
           >
@@ -5694,6 +5700,7 @@ exports[`Storyshots List Featured 1`] = `
                 "color": "#354052",
                 "fontFamily": "Roboto-Medium",
                 "fontSize": 16,
+                "height": 22,
               }
             }
           >
@@ -5784,6 +5791,7 @@ exports[`Storyshots List Games 1`] = `
                 "color": "#354052",
                 "fontFamily": "Roboto-Medium",
                 "fontSize": 16,
+                "height": 22,
               }
             }
           >
@@ -5795,6 +5803,7 @@ exports[`Storyshots List Games 1`] = `
                 "color": "#354052",
                 "fontFamily": "Roboto-Medium",
                 "fontSize": 16,
+                "height": 22,
               }
             }
           >
@@ -5951,6 +5960,7 @@ exports[`Storyshots List Games 1`] = `
                 "color": "#354052",
                 "fontFamily": "Roboto-Medium",
                 "fontSize": 16,
+                "height": 22,
               }
             }
           >
@@ -5962,6 +5972,7 @@ exports[`Storyshots List Games 1`] = `
                 "color": "#354052",
                 "fontFamily": "Roboto-Medium",
                 "fontSize": 16,
+                "height": 22,
               }
             }
           >
@@ -6127,6 +6138,7 @@ exports[`Storyshots List Games 1`] = `
                   "color": "#354052",
                   "fontFamily": "Roboto-Medium",
                   "fontSize": 16,
+                  "height": 22,
                 },
                 Object {
                   "color": "#9B9B9B",
@@ -6143,6 +6155,7 @@ exports[`Storyshots List Games 1`] = `
                   "color": "#354052",
                   "fontFamily": "Roboto-Medium",
                   "fontSize": 16,
+                  "height": 22,
                 },
                 Object {
                   "color": "#9B9B9B",
@@ -6480,6 +6493,7 @@ exports[`Storyshots List Lessons 1`] = `
                     "color": "#354052",
                     "fontFamily": "Roboto-Medium",
                     "fontSize": 16,
+                    "height": 22,
                   }
                 }
               >
@@ -6624,6 +6638,7 @@ exports[`Storyshots List Lessons 1`] = `
                     "color": "#354052",
                     "fontFamily": "Roboto-Medium",
                     "fontSize": 16,
+                    "height": 22,
                   }
                 }
               >
@@ -6769,6 +6784,7 @@ exports[`Storyshots List Lessons 1`] = `
                       "color": "#354052",
                       "fontFamily": "Roboto-Medium",
                       "fontSize": 16,
+                      "height": 22,
                     },
                     Object {
                       "color": "#9B9B9B",
@@ -8297,6 +8313,7 @@ exports[`Storyshots ListItem Beep 1`] = `
             "color": "#354052",
             "fontFamily": "Roboto-Medium",
             "fontSize": 16,
+            "height": 22,
           }
         }
       >
@@ -8309,6 +8326,7 @@ exports[`Storyshots ListItem Beep 1`] = `
               "color": "#354052",
               "fontFamily": "Roboto-Medium",
               "fontSize": 16,
+              "height": 22,
             },
             Object {
               "fontSize": 14,
@@ -8903,6 +8921,7 @@ exports[`Storyshots ListItem Compact 1`] = `
                 "color": "#354052",
                 "fontFamily": "Roboto-Medium",
                 "fontSize": 16,
+                "height": 22,
               }
             }
           >
@@ -9046,6 +9065,7 @@ exports[`Storyshots ListItem Compact Disabled 1`] = `
                   "color": "#354052",
                   "fontFamily": "Roboto-Medium",
                   "fontSize": 16,
+                  "height": 22,
                 },
                 Object {
                   "color": "#9B9B9B",
@@ -9157,6 +9177,7 @@ exports[`Storyshots ListItem Compact No Icon 1`] = `
                 "color": "#354052",
                 "fontFamily": "Roboto-Medium",
                 "fontSize": 16,
+                "height": 22,
               }
             }
           >
@@ -9299,6 +9320,7 @@ exports[`Storyshots ListItem Compact With Subtitle 1`] = `
                 "color": "#354052",
                 "fontFamily": "Roboto-Medium",
                 "fontSize": 16,
+                "height": 22,
               }
             }
           >
@@ -9311,6 +9333,7 @@ exports[`Storyshots ListItem Compact With Subtitle 1`] = `
                   "color": "#354052",
                   "fontFamily": "Roboto-Medium",
                   "fontSize": 16,
+                  "height": 22,
                 },
                 Object {
                   "color": "#9B9B9B",
@@ -9390,6 +9413,7 @@ exports[`Storyshots ListItem Default 1`] = `
             "color": "#354052",
             "fontFamily": "Roboto-Medium",
             "fontSize": 16,
+            "height": 22,
           }
         }
       >
@@ -9402,6 +9426,7 @@ exports[`Storyshots ListItem Default 1`] = `
               "color": "#354052",
               "fontFamily": "Roboto-Medium",
               "fontSize": 16,
+              "height": 22,
             },
             Object {
               "fontSize": 14,
@@ -9505,6 +9530,7 @@ exports[`Storyshots ListItem Disabled 1`] = `
               "color": "#354052",
               "fontFamily": "Roboto-Medium",
               "fontSize": 16,
+              "height": 22,
             },
             Object {
               "color": "#9B9B9B",
@@ -9522,6 +9548,7 @@ exports[`Storyshots ListItem Disabled 1`] = `
                 "color": "#354052",
                 "fontFamily": "Roboto-Medium",
                 "fontSize": 16,
+                "height": 22,
               },
               Object {
                 "color": "#9B9B9B",
@@ -9654,6 +9681,7 @@ exports[`Storyshots ListItem Drive 1`] = `
             "color": "#354052",
             "fontFamily": "Roboto-Medium",
             "fontSize": 16,
+            "height": 22,
           }
         }
       >
@@ -9666,6 +9694,7 @@ exports[`Storyshots ListItem Drive 1`] = `
               "color": "#354052",
               "fontFamily": "Roboto-Medium",
               "fontSize": 16,
+              "height": 22,
             },
             Object {
               "fontSize": 14,
@@ -9885,6 +9914,7 @@ exports[`Storyshots ListItem Featured 1`] = `
             "color": "#354052",
             "fontFamily": "Roboto-Medium",
             "fontSize": 16,
+            "height": 22,
           }
         }
       >
@@ -10013,6 +10043,7 @@ exports[`Storyshots ListItem Featured Disabled 1`] = `
               "color": "#354052",
               "fontFamily": "Roboto-Medium",
               "fontSize": 16,
+              "height": 22,
             },
             Object {
               "color": "#9B9B9B",
@@ -10129,6 +10160,7 @@ exports[`Storyshots ListItem Option 1`] = `
               "color": "#354052",
               "fontFamily": "Roboto-Medium",
               "fontSize": 16,
+              "height": 22,
             }
           }
         >
@@ -10242,6 +10274,7 @@ exports[`Storyshots ListItem Option Unselected 1`] = `
               "color": "#354052",
               "fontFamily": "Roboto-Medium",
               "fontSize": 16,
+              "height": 22,
             }
           }
         >
@@ -10301,6 +10334,7 @@ exports[`Storyshots ListItem Square 1`] = `
             "color": "#354052",
             "fontFamily": "Roboto-Medium",
             "fontSize": 16,
+            "height": 22,
           }
         }
       >
@@ -10312,6 +10346,7 @@ exports[`Storyshots ListItem Square 1`] = `
             "color": "#354052",
             "fontFamily": "Roboto-Medium",
             "fontSize": 16,
+            "height": 22,
           }
         }
       >
@@ -10476,6 +10511,7 @@ exports[`Storyshots ListItem Square Disabled 1`] = `
               "color": "#354052",
               "fontFamily": "Roboto-Medium",
               "fontSize": 16,
+              "height": 22,
             },
             Object {
               "color": "#9B9B9B",
@@ -10492,6 +10528,7 @@ exports[`Storyshots ListItem Square Disabled 1`] = `
               "color": "#354052",
               "fontFamily": "Roboto-Medium",
               "fontSize": 16,
+              "height": 22,
             },
             Object {
               "color": "#9B9B9B",

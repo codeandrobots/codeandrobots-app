@@ -4,6 +4,10 @@ import { Styles, Metrics, Colors, Fonts } from 'App/Themes'
 
 export default StyleSheet.create({
   ...Styles,
+  text: {
+    ...Styles.text,
+    height: 22
+  },
   itemView: {
     flexDirection: 'row',
     margin: Metrics.unit,
