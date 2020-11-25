@@ -44,7 +44,9 @@ export class ConnectRobotContainer extends Component {
     const { state } = this.props.navigation
     const robot = state && state.params && state.params.robot
     if (robot) {
-      if (nextProps.robots[robot] !== this.props.robots[robot]) {
+      if (nextProps.robots &&
+        this.props.robots &&
+        nextProps.robots[robot] !== this.props.robots[robot]) {
         this.initRobot(robot, nextProps.robots[robot])
       }
     }
@@ -151,7 +153,7 @@ export class ConnectRobotContainer extends Component {
 }
 
 const mapStateToProps = (state) => {
-  const { robots } = state.robots
+  const { robots } = state.robots || {}
   return { robots }
 }
 

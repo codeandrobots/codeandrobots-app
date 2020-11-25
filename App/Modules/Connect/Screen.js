@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, ScrollView, Text } from 'react-native'
+import { View, Text } from 'react-native'
 import PropTypes from 'prop-types'
 
 import Types from 'App/Services/PropTypes'
