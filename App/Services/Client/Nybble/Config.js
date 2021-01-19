@@ -46,7 +46,7 @@ export default {
   commands: {
     stop: 'kbalance',
     walk: {
-      forwards: 'kwk',
+      forwards: 'kwkF',
       right: 'kwkR',
       left: 'kwkL',
       backwards: 'kbk'
@@ -56,26 +56,26 @@ export default {
       left: 'kbkL'
     },
     crawl: {
-      forwards: 'kcr',
+      forwards: 'kcrF',
       right: 'kcrR',
       left: 'kcrL'
     },
     trot: {
-      forwards: 'ktr'
+      forwards: 'ktrF'
     }
   },
   moves: [
     { title: 'Wait', cmd: 'kbalance', showDuration: true },
-    { title: 'Forwards', cmd: 'kwk', showDuration: true },
+    { title: 'Forwards', cmd: 'kwkF', showDuration: true },
     { title: 'Back', cmd: 'kwkR', showDuration: true },
     { title: 'Fwd Left', cmd: 'kwkL', showDuration: true },
     { title: 'Fwd Right', cmd: 'kbk', showDuration: true },
     { title: 'Back Left', cmd: 'kbkR', showDuration: true },
     { title: 'Back Right', cmd: 'kbkL', showDuration: true },
-    { title: 'Crawl Fwd', cmd: 'kcr', showDuration: true },
+    { title: 'Crawl Fwd', cmd: 'kcrF', showDuration: true },
     { title: 'Crawl Left', cmd: 'kcrR', showDuration: true },
     { title: 'Crawl Right', cmd: 'kcrL', showDuration: true },
-    { title: 'Trot Fwd', cmd: 'ktr', showDuration: true }
+    { title: 'Trot Fwd', cmd: 'ktrF', showDuration: true }
   ],
   skills: [
     {
